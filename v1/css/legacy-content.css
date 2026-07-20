@@ -1,0 +1,232 @@
+/* ==========================================================================
+   V1 legacy content — 原站內頁內容在 V1 版型內的呈現樣式
+   （搭配 legacy-inline.css 的 .tiri-inline-N 版面資訊）
+   ========================================================================== */
+
+.legacy-body {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--ink-80);
+}
+
+/* 標題 */
+.legacy-body h2,
+.legacy-body .wsite-content-title {
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 1.8em 0 0.6em;
+}
+.legacy-body > h2:first-child,
+.legacy-body > div:first-child h2:first-child { margin-top: 0; }
+.legacy-body h2 + h2 { margin-top: 0.4em; }
+
+/* 段落 */
+.legacy-body p,
+.legacy-body div.paragraph {
+  margin: 0 0 1em;
+  max-width: 52em;
+}
+.legacy-body blockquote {
+  margin: 1.5em 0;
+  padding: 4px 0 4px 20px;
+  border-left: 2px solid var(--purple);
+  color: var(--ink-64);
+}
+.legacy-body strong { font-weight: 600; color: var(--ink); }
+.legacy-body em { font-style: normal; }
+.legacy-body font { color: inherit !important; }
+
+/* 連結 */
+.legacy-body a {
+  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-color: rgba(108, 31, 147, 0.35);
+  text-underline-offset: 3px;
+  transition: color var(--t-link) var(--ease), text-decoration-color var(--t-link) var(--ease);
+}
+.legacy-body a:hover { text-decoration-color: var(--purple); }
+
+/* 圖片 */
+.legacy-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+.legacy-body .wsite-image { margin: 1.2em 0; }
+.legacy-body .wsite-caption,
+.legacy-body .galleryCaptionInnerText {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-45);
+  padding-top: 8px;
+}
+
+/* 分隔線與間隔 */
+.legacy-body hr,
+.legacy-body .wsite-divider {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2em 0;
+}
+.legacy-body .wsite-spacer { display: block; }
+
+/* 相簿（Weebly gallery：欄寬由 legacy-inline.css 的 .tiri-inline-N 提供） */
+.legacy-body .imageGallery { margin: 1.2em -8px; }
+.legacy-body .imageGallery::after { content: ""; display: block; clear: both; }
+.legacy-body .imageGallery > div { float: left; padding: 8px; box-sizing: border-box; }
+.legacy-body .imageGallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* 多欄版面（Weebly multicol 以 table 呈現） */
+.legacy-body .wsite-multicol { margin: 0.6em 0; }
+.legacy-body .wsite-multicol-table-wrap { margin: 0 -12px; }
+.legacy-body .wsite-multicol-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.legacy-body .wsite-multicol-col { vertical-align: top; padding: 0 12px; }
+
+/* 一般表格 */
+.legacy-body table:not(.wsite-multicol-table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 1.2em 0;
+}
+.legacy-body table:not(.wsite-multicol-table) td,
+.legacy-body table:not(.wsite-multicol-table) th {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* 清單 */
+.legacy-body ul { list-style: disc; padding-left: 1.4em; margin: 0 0 1em; }
+.legacy-body ol { list-style: decimal; padding-left: 1.4em; margin: 0 0 1em; }
+.legacy-body li { margin-bottom: 0.35em; }
+
+/* Weebly 按鈕 → V1 按鈕語彙（左至右填色） */
+.legacy-body .wsite-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 24px;
+  margin: 6px 8px 6px 0;
+  background-color: var(--ink);
+  background-image: linear-gradient(var(--purple), var(--purple));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  border-radius: var(--radius);
+  text-decoration: none !important;
+  transition: background-size var(--t-btn) var(--ease);
+}
+.legacy-body .wsite-button:hover { background-size: 100% 100%; }
+.legacy-body .wsite-button .wsite-button-inner {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.legacy-body .wsite-button-highlight {
+  background-color: var(--purple);
+  background-image: linear-gradient(var(--ink), var(--ink));
+}
+
+/* 表單（原站表單保留為示意） */
+.legacy-body form { max-width: 640px; }
+.legacy-body .wsite-form-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-80);
+  margin: 14px 0 6px;
+}
+.legacy-body .form-required { color: var(--purple); }
+.legacy-body input[type="text"],
+.legacy-body input[type="email"],
+.legacy-body input[type="tel"],
+.legacy-body input[type="url"],
+.legacy-body select,
+.legacy-body textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.legacy-body textarea { padding: 12px 14px; min-height: 110px; }
+.legacy-body input:focus-visible,
+.legacy-body select:focus-visible,
+.legacy-body textarea:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.legacy-body .wsite-form-sublabel { font-size: 12px; color: var(--ink-45); }
+.legacy-body .wsite-form-input-container { margin-bottom: 4px; }
+.legacy-body .formlist { margin: 0; padding: 0; list-style: none; }
+
+/* 內嵌 iframe（YouTube／地圖等需連線） */
+.legacy-body iframe {
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* 文件連結列 */
+.legacy-body .wsite-com-category-product-group,
+.legacy-body .file-thumb { display: inline-block; }
+
+/* 行動版：多欄與相簿收合為單欄 */
+@media (max-width: 760px) {
+  .legacy-body .wsite-multicol-table,
+  .legacy-body .wsite-multicol-table > tbody,
+  .legacy-body .wsite-multicol-table > tbody > tr,
+  .legacy-body .wsite-multicol-table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    padding: 0;
+  }
+  .legacy-body .wsite-multicol-col { margin-bottom: 16px; }
+  .legacy-body .imageGallery > div {
+    width: 50% !important;
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  .legacy-body .imageGallery > div { width: 100% !important; }
+}
+
+
+/* 帶背景圖的區塊：以白色混合淡化底圖，維持文字可讀（原站遮罩由主題 CSS 提供，此處以混合重現） */
+.legacy-body .tiri-inline-117,
+.legacy-body .tiri-inline-135,
+.legacy-body .tiri-inline-137,
+.legacy-body .tiri-inline-138,
+.legacy-body .tiri-inline-142,
+.legacy-body .tiri-inline-145,
+.legacy-body .tiri-inline-146,
+.legacy-body .tiri-inline-149,
+.legacy-body .tiri-inline-174,
+.legacy-body .tiri-inline-2,
+.legacy-body .tiri-inline-212,
+.legacy-body .tiri-inline-213,
+.legacy-body .tiri-inline-220,
+.legacy-body .tiri-inline-24,
+.legacy-body .tiri-inline-261,
+.legacy-body .tiri-inline-287,
+.legacy-body .tiri-inline-82,
+.legacy-body .tiri-inline-87 {
+  background-color: rgba(251, 250, 248, 0.92) !important;
+  background-blend-mode: lighten;
+  border-radius: var(--radius);
+}

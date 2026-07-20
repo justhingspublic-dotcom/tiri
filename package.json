@@ -1,0 +1,11 @@
+{
+  "name": "tiri-static-redesign-baseline",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "mirror": "python3 scripts/mirror_tiri.py",
+    "dev": "python3 scripts/dev_server.py",
+    "organize": "python3 scripts/organize_static.py && python3 scripts/clean_markup.py",
+    "check": "python3 scripts/check_static_site.py"
+  }
+}

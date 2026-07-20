@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIRI 官網改版專案｜版本入口</title>
+<style>
+  :root {
+    --ink: #17141f;
+    --paper: #fbfaf8;
+    --purple: #6c1f93;
+    --purple-soft: #8640ae;
+    --line: rgba(23, 20, 31, 0.14);
+    --mono: "Roboto Mono", "SF Mono", Menlo, monospace;
+    --sans: "Archivo", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: min(960px, calc(100% - 48px)); margin: 0 auto; }
+  header { padding: 48px 0 0; }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand strong { font-size: 28px; letter-spacing: 0.02em; }
+  .brand strong span { color: var(--purple); }
+  .brand small { font-size: 13px; color: rgba(23,20,31,0.62); letter-spacing: 0.04em; }
+  main { flex: 1; display: flex; align-items: center; padding: 56px 0 64px; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--purple);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 500; line-height: 1.25; margin-bottom: 12px; }
+  .lede { color: rgba(23,20,31,0.66); font-size: 16px; line-height: 1.7; margin-bottom: 48px; }
+  .versions { list-style: none; border-top: 1px solid var(--line); }
+  .versions li { border-bottom: 1px solid var(--line); }
+  .versions a {
+    display: grid;
+    grid-template-columns: 88px 1fr auto;
+    gap: 24px;
+    align-items: baseline;
+    padding: 28px 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.25s ease;
+  }
+  .versions a:hover, .versions a:focus-visible { background: rgba(108, 31, 147, 0.05); }
+  .versions a:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+  .vcode { font-family: var(--mono); font-size: 13px; letter-spacing: 0.12em; color: rgba(23,20,31,0.55); }
+  .vname { font-size: 20px; font-weight: 500; margin-bottom: 6px; }
+  .vdesc { font-size: 14px; color: rgba(23,20,31,0.6); line-height: 1.6; }
+  .varrow { font-family: var(--mono); font-size: 14px; color: var(--purple); }
+  .versions .pending { opacity: 0.5; }
+  .versions .pending .varrow { color: rgba(23,20,31,0.4); }
+  footer { padding: 24px 0 40px; font-family: var(--mono); font-size: 12px; color: rgba(23,20,31,0.45); letter-spacing: 0.06em; }
+  @media (max-width: 640px) {
+    .versions a { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="brand"><strong>TI<span>RI</span></strong><small>台灣投資人關係協會｜官網改版專案</small></p>
+</header>
+<main class="wrap">
+  <div style="width:100%">
+    <p class="eyebrow">UI Redesign — Version Index</p>
+    <h1>選擇要瀏覽的網站版本</h1>
+    <p class="lede">原版為 tiri.tw 的靜態封存基準；新版版型各自獨立於 v1、v2 資料夾，互不影響。</p>
+    <ul class="versions">
+      <li>
+        <a href="original/html/index.html">
+          <span class="vcode">ORIGINAL</span>
+          <span>
+            <span class="vname">原版靜態封存</span><br>
+            <span class="vdesc">tiri.tw 公開網站現況基準，126 頁完整封存，供比對與內容盤點。</span>
+          </span>
+          <span class="varrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="v1/html/index.html">
+          <span class="vcode">V1</span>
+          <span>
+            <span class="vname">精緻歐美專業協會版</span><br>
+            <span class="vdesc">精品編輯風：Swiss IR Club 精緻度 × NIRI 資訊架構 × AIR 留白 × AERI 敘事節奏。</span>
+          </span>
+          <span class="varrow">→</span>
+        </a>
+      </li>
+      <li class="pending">
+        <a href="v2/html/index.html">
+          <span class="vcode">V2</span>
+          <span>
+            <span class="vname">第二版版型（規劃中）</span><br>
+            <span class="vdesc">資料夾已建立，風格方向待定調。</span>
+          </span>
+          <span class="varrow">…</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</main>
+<footer class="wrap">© TIRI 社團法人台灣投資人關係協會 — INTERNAL DESIGN DEMO</footer>
+</body>
+</html>

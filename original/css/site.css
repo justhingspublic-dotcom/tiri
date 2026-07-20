@@ -1,0 +1,223 @@
+:root {
+  --tiri-purple: #7d2da8;
+  --tiri-purple-dark: #342044;
+  --tiri-purple-light: #f4edf8;
+  --tiri-ink: #3f3f43;
+  --tiri-muted: #73737a;
+  --tiri-line: #e4e1e7;
+  --tiri-surface: #ffffff;
+  --tiri-radius: 4px;
+  --tiri-content: 1120px;
+  --tiri-shadow: 0 10px 30px rgba(52, 32, 68, 0.08);
+  --tiri-note-height: 30px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--tiri-ink);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body.tiri-menu-open {
+  overflow: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(125, 45, 168, 0.32);
+  outline-offset: 3px;
+}
+
+#tiri-offline-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--tiri-note-height);
+  padding: 0 16px;
+  background: var(--tiri-purple-dark);
+  color: #fff;
+  font: 12px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: center;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 999999;
+  white-space: normal;
+}
+
+.tiri-skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000000;
+  padding: 10px 14px;
+  background: var(--tiri-purple-dark);
+  color: #fff;
+  transform: translateY(-150%);
+  transition: transform 160ms ease;
+}
+
+.tiri-skip-link:focus {
+  transform: translateY(0);
+}
+
+.hamburger,
+.mobile-nav-toggle {
+  cursor: pointer;
+}
+
+.mobile-nav .wsite-menu-wrap.tiri-submenu-open {
+  display: block !important;
+}
+
+.dusk-header {
+  opacity: 1;
+}
+
+body.sticky-nav-on .dusk-header {
+  top: var(--tiri-note-height);
+}
+
+.dusk-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  height: 90px;
+  margin-inline: auto;
+}
+
+.dusk-header .logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex: 0 0 150px;
+  width: 150px;
+  height: 70px;
+  min-width: 150px;
+  margin-right: 24px;
+}
+
+.dusk-header .logo .wsite-logo,
+.dusk-header .logo a {
+  position: static;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin: 0;
+  transform: none;
+}
+
+.dusk-header .logo img {
+  width: 120px;
+  height: 70px;
+  margin: 0;
+  object-fit: contain;
+  transform: none;
+}
+
+.desktop-nav {
+  position: relative;
+  min-width: 0;
+  flex: 1 1 auto;
+  margin-right: 18px;
+}
+
+.desktop-nav > .wsite-menu-default {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: none;
+  gap: 0;
+}
+
+.desktop-nav .wsite-menu-item {
+  margin-inline: 0;
+  padding: 20px 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tiri-language-duplicate {
+  display: none !important;
+}
+
+.tiri-language-switch {
+  flex: 0 0 auto;
+  margin-left: 10px;
+  color: var(--tiri-ink);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.tiri-language-switch:hover {
+  color: var(--tiri-purple);
+}
+
+@media (min-width: 768px) {
+  .header-page .banner-wrap .wsite-section-wrap,
+  .header-page .banner-wrap .wsite-header-section {
+    height: 320px !important;
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --tiri-note-height: 26px;
+  }
+
+  #tiri-offline-note {
+    padding-inline: 12px;
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  body.tiri-menu-open .mobile-nav {
+    display: block;
+  }
+
+  .wsite-section-elements,
+  .container,
+  .wsite-content-title,
+  .paragraph {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .tiri-language-switch {
+    display: none;
+  }
+}
