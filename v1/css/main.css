@@ -1689,6 +1689,138 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 .team-block li strong { font-weight: 500; }
 .team-block li span { color: var(--ink-64); font-size: 14px; }
 
+/* ---- 理監事名冊頁（team2018/2022/2026、board） ---- */
+
+/* 首長 spotlight：左肖像右職稱。肖像原檔僅 272×408，故上限 240px 不放大 */
+.board-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  gap: clamp(24px, 3.5vw, 56px);
+  align-items: center;
+  padding-block: clamp(28px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.board-lead:first-child { border-top: 0; }
+.board-lead > figure { margin: 0; }
+.board-lead img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--purple-tint);
+}
+.board-lead .role {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--purple);
+}
+.board-lead .name {
+  margin-top: 10px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 450;
+  line-height: 1.25;
+}
+.board-lead .title {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-64);
+  max-width: 34em;
+}
+/* 沒有肖像可用時保留肖像欄寬，讓文字與上一位首長對齊 */
+.board-lead.no-photo::before { content: ""; }
+
+/* 分組名冊 */
+.board-group { padding-block: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
+.board-group > h2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--purple);
+  margin-bottom: 18px;
+}
+.board-people {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(20px, 2.5vw, 40px);
+  border-top: 1px solid var(--line);
+}
+.board-people > li {
+  padding: 16px 2px;
+  border-bottom: 1px solid var(--line);
+}
+.board-people .name { font-size: 16px; font-weight: 500; }
+.board-people .title {
+  margin-top: 5px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-64);
+}
+/* 兼任標記：理事長／副理事長依章程亦為常務理事，重複列出時標明 */
+.board-people .also {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink-45);
+}
+/* 僅有姓名、無職稱資料者（不臆造頭銜） */
+.board-people .title:empty { display: none; }
+
+/* 合照／現場照：原檔最寬 617px，受控寬度呈現避免放大失真 */
+.board-figure { margin: 0; padding-block: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
+.board-figure img {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  border-radius: var(--radius);
+}
+.board-figure figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-45);
+  max-width: 620px;
+}
+.board-figure.is-set { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 900px; }
+.board-figure.is-set img { max-width: 100%; }
+
+/* 歷屆沿革索引 */
+.board-terms { border-top: 1px solid var(--line); }
+.board-terms > li { border-bottom: 1px solid var(--line); }
+.board-terms a {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  gap: clamp(16px, 2.5vw, 40px);
+  align-items: baseline;
+  padding: 26px 4px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.4s var(--ease), padding-inline 0.4s var(--ease);
+}
+.board-terms a:hover { background: var(--purple-tint); padding-inline: 14px 10px; }
+.board-terms .term { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: var(--purple); }
+.board-terms .who { font-size: clamp(18px, 2vw, 22px); font-weight: 450; }
+.board-terms .who span { display: block; margin-top: 6px; font-size: 13.5px; font-weight: 400; color: var(--ink-64); }
+.board-terms .meta { font-size: 13px; color: var(--ink-45); white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .board-people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .board-terms a { grid-template-columns: 1fr; gap: 10px; padding-block: 22px; }
+  .board-terms a:hover { padding-inline: 4px; }
+}
+@media (max-width: 620px) {
+  .board-lead, .board-lead.no-photo { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .board-lead.no-photo::before { display: none; }
+  .board-lead img { max-width: 180px; }
+  .board-people { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* 功能委員會 */
 .committee-grid {
   display: grid;

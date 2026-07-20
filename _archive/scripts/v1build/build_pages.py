@@ -131,7 +131,8 @@ def shell(title, desc, active, content):
         <h3>關於 TIRI</h3>
         <ul>
           <li><a href="about.html">協會使命</a></li>
-          <li><a href="about.html#team">第三屆理監事成員</a></li>
+          <li><a href="team2026.html">第三屆理監事成員</a></li>
+          <li><a href="board.html">歷屆理監事</a></li>
           <li><a href="about.html#committee">功能委員會</a></li>
           <li><a href="about.html#duns">鄧白氏企業認證™雙標章</a></li>
         </ul>
