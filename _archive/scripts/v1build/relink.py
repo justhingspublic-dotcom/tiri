@@ -262,3 +262,25 @@ s = s.replace('<h2>會員專屬優惠</h2>', '<h2>會員專屬優惠</h2><p clas
 s = s.replace('<h2>董事會績效評估<br>外部評估服務</h2>', '<h2>董事會績效評估<br>外部評估服務</h2><p class="note" style="margin-top:8px"><a class="u-link" href="bodperform.html">董事會績效評估 →</a>　<a class="u-link" href="corpperform.html">提升公司治理服務 →</a></p>')
 (OUT/"membership.html").write_text(s, encoding="utf-8")
 print("membership.html relinked")
+
+# ---------- 手動補丁（relink 規則涵蓋不到，之前每次重跑都得手動回補，改在此自動化） ----------
+# 1. knowledge.html：第一張雙月刊卡指向真實文章頁
+s = (OUT/"knowledge.html").read_text(encoding="utf-8")
+old = '<a class="insight-card reveal" href="news-387131.html" data-category="bimonthly">'
+new = '<a class="insight-card reveal" href="191118.html" data-category="bimonthly">'
+if old in s:
+    s = s.replace(old, new, 1)
+    (OUT/"knowledge.html").write_text(s, encoding="utf-8")
+    print("knowledge.html patched (bimonthly → 191118.html)")
+
+# 2. news.html：5/30 雙主題講座改為可點連結
+s = (OUT/"news.html").read_text(encoding="utf-8")
+title = "【5/30 雙主題講座】新媒體時代的思維／成功發言系列"
+old = ('<div class="event-item reveal"><span class="date">05.30<span class="yr">2019</span></span>'
+       f'<span><h3>{title}</h3></span><span></span></div>')
+new = ('<a class="event-item reveal" href="news-121049.html"><span class="date">05.30<span class="yr">2019</span></span>'
+       f'<span><h3>{title}</h3></span><span class="go" aria-hidden="true">→</span></a>')
+if old in s:
+    s = s.replace(old, new, 1)
+    (OUT/"news.html").write_text(s, encoding="utf-8")
+    print("news.html patched (5/30 講座 → news-121049.html)")

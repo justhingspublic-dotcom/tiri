@@ -5,7 +5,12 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 
 class DemoHandler(SimpleHTTPRequestHandler):
-    pass
+    def end_headers(self):
+        # 開發用：關閉快取，避免改了 css/js 卻看到舊版
+        self.send_header("Cache-Control", "no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
+        super().end_headers()
 
 
 if __name__ == "__main__":

@@ -36,6 +36,8 @@
   /* shape */
   --radius: 2px; /* 精品編輯風：0–4px */
   --btn-h: 50px;
+  --nav-row-h: 78px;   /* header 下排（主選單）列高 */
+  --header-h: 124px;   /* 厚版 header 總高＝上排 46 ＋ 下排 78 */
 
   /* motion */
   --ease: cubic-bezier(0.25, 1, 0.33, 1);
@@ -51,6 +53,64 @@
 
 html { scroll-behavior: smooth; }
 
+/* Desktop overlay scrollbar：不佔版面寬度，滑塊浮在內容上。
+   JS 建立成功後才隱藏原生 scrollbar，因此仍有失效 fallback。 */
+html.has-overlay-scrollbar { scrollbar-width: none; }
+html.has-overlay-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.site-scrollbar {
+  position: fixed;
+  inset-block-start: var(--header-h);
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  z-index: 1000;
+  width: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s var(--ease);
+}
+.site-scrollbar.is-visible { opacity: 1; }
+.site-scrollbar[hidden] { display: none; }
+.site-scrollbar__thumb {
+  --scroll-thumb-y: 0px;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  width: 24px;
+  min-height: 44px;
+  transform: translate3d(0, var(--scroll-thumb-y), 0);
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  will-change: transform;
+}
+.site-scrollbar__thumb::before {
+  content: "";
+  position: absolute;
+  inset-block: 2px;
+  inset-inline-end: 3px;
+  width: 5px;
+  border-radius: 999px;
+  background: var(--purple);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.48);
+  opacity: 0.82;
+  transition: width 0.2s var(--ease), opacity 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+/* 深色照片首屏使用淡色滑塊；nav 滾動填色時同步切回品牌紫。 */
+html:has(.hero-photo):not(.is-nav-filled) .site-scrollbar__thumb::before {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(23, 20, 31, 0.26);
+}
+.site-scrollbar__thumb:hover::before,
+.site-scrollbar__thumb.is-dragging::before {
+  width: 7px;
+  opacity: 1;
+}
+.site-scrollbar__thumb.is-dragging { cursor: grabbing; }
+
 body {
   font-family: var(--sans);
   font-size: var(--fs-body);
@@ -60,6 +120,49 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+/* ==========================================================================
+   跨頁轉場
+   主線：View Transitions（Chrome / Safari）。瀏覽器會保留舊頁快照，
+   舊頁淡出與新頁淡入同時發生，中間不會出現白畫面。
+   備援：不支援的瀏覽器才用 JS 淡出＋淡入（見下方 @supports 區塊）。
+   ========================================================================== */
+@view-transition { navigation: auto; }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.42s;
+  animation-timing-function: var(--ease);
+}
+/* header 不參與淡出淡入，導覽列在換頁時保持穩定 */
+.site-header { view-transition-name: site-header; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+}
+
+/* 備援：沒有 View Transitions 時才用淡出／淡入 */
+@supports not (view-transition-name: none) {
+  /* 淡出時露出的是 html 底色，設成紙色才不會閃白 */
+  html { background: var(--paper); }
+  body { animation: page-in 0.55s var(--ease) both; }
+  @keyframes page-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* 離站淡出（由 main.js 加上 .is-leaving） */
+  html.is-leaving body {
+    opacity: 0;
+    animation: none;
+    transition: opacity 0.34s var(--ease);
+  }
+}
+
+/* Icon sprite（Lucide UI 圖示＋品牌 glyph 的 symbol 定義） */
+.icon-sprite { display: none; }
+.icon { display: block; flex: none; }
 
 img { display: block; max-width: 100%; height: auto; }
 ul, ol { list-style: none; }
@@ -78,7 +181,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   margin-inline: auto;
 }
 
-section { scroll-margin-top: 96px; }
+/* 錨點捲動要讓開 sticky header：不只 section，任何帶 id 的錨點目標都要 */
+section,
+[id] { scroll-margin-top: calc(var(--header-h) + 28px); }
+/* page-split 有 border-top：讓分隔線收進 header 後方，只留內容（其自身 padding 提供留白） */
+.page-split[id] { scroll-margin-top: calc(var(--header-h) - 20px); }
 
 /* ---- Utility type ---- */
 .eyebrow {
@@ -189,52 +296,56 @@ section { scroll-margin-top: 96px; }
 .skip-link:focus-visible { top: 12px; }
 
 /* ==========================================================================
-   1. Utility bar
+   1. Header 上排工具列（原深色 utility bar 已併入 header）
    ========================================================================== */
-.utility {
-  background: var(--ink);
-  color: rgba(255, 255, 255, 0.75);
-}
-.utility .container {
+.header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 40px;
-  gap: 16px;
-}
-.utility-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.utility-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  gap: 18px;
+  height: 46px;
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.08em;
+  color: var(--ink-64);
 }
-.utility-nav a {
+.header-top a,
+.header-top button.search-toggle {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 40px;
-  color: rgba(255, 255, 255, 0.75);
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--ink-64);
   transition: color var(--t-link) var(--ease);
 }
-.utility-nav a:hover,
-.utility-nav a:focus-visible { color: var(--white); }
-.utility-nav .lang [aria-current="true"] { color: var(--white); }
-.utility-nav .divider {
+.header-top a:hover,
+.header-top a:focus-visible,
+.header-top button.search-toggle:hover,
+.header-top button.search-toggle:focus-visible { color: var(--ink); }
+.header-top .lang [aria-current="true"] { color: var(--ink); }
+.header-top .divider {
   width: 1px;
-  height: 14px;
-  background: var(--line-dark);
+  height: 12px;
+  background: var(--line);
 }
+/* 社群 icon（自 footer 移入）：hover 走吃角子老虎滾輪——上一顆捲出、下一顆捲入，離開反向 */
+.header-top .social-icons { display: flex; align-items: center; gap: 16px; }
+.header-top .social-icons a { min-height: 40px; display: inline-flex; align-items: center; }
+.header-top .social-icons svg { display: block; width: 16px; height: 16px; }
+.header-top .social-icons .roll {
+  display: flex;
+  flex-direction: column;
+  gap: 9px; /* 兩顆之間留間隔，滾動時看得出上下切換 */
+  height: 16px;
+  overflow: hidden;
+}
+/* 位移量＝icon 高 ＋ 間隔，確保第二顆精準落位 */
+.header-top .social-icons .roll svg {
+  flex: none;
+  transition: transform 0.52s var(--ease);
+}
+.header-top .social-icons a:hover .roll svg,
+.header-top .social-icons a:focus-visible .roll svg { transform: translateY(calc(-100% - 9px)); }
 
 /* ==========================================================================
    2. Header
@@ -246,17 +357,47 @@ section { scroll-margin-top: 96px; }
   z-index: 100;
   background: var(--paper);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--t-link) var(--ease);
+  /* 背景要快（0.3s）：半透明空窗期越長，下方內容與分隔線越容易透出來；
+     文字色留在 0.55s，維持滾動時的優雅感 */
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--line);
 }
+/* 滿寬下拉展開時：header 轉實色（沉浸式讓位，見 §沉浸式頂部），
+   且底線收掉——nav 與面板要是同一張紙，中間不能有分隔線 */
+.site-header.is-menuopen {
+  background: var(--paper);
+  border-bottom-color: transparent;
+}
+/* 跳躍捲動：略過漸變，避免半透明空窗期讓內容透出 */
+.site-header.no-anim,
+.site-header.no-anim .wordmark .mark,
+.site-header.no-anim .wordmark .name,
+.site-header.no-anim .main-nav a,
+.site-header.no-anim .header-top,
+.site-header.no-anim .header-top a,
+.site-header.no-anim .header-top button.search-toggle,
+.site-header.no-anim .header-actions .btn { transition: none !important; }
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  min-height: 76px;
+  justify-content: flex-start;
+  gap: clamp(20px, 2.4vw, 36px);
+  min-height: var(--header-h);
+}
+/* 右側兩排：上排工具列、下排主選單＋CTA（logo 靠左跨兩排） */
+.header-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.4vw, 36px);
+  height: var(--nav-row-h);
 }
 
 /* 字標（CSS 重刻，比 169px 點陣 logo 銳利） */
@@ -266,16 +407,16 @@ section { scroll-margin-top: 96px; }
   line-height: 1.1;
 }
 .wordmark .mark {
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #6e6a75;
 }
 .wordmark .mark span { color: var(--purple); }
 .wordmark .name {
-  margin-top: 3px;
-  font-size: 11px;
-  letter-spacing: 0.32em;
+  margin-top: 4px;
+  font-size: 12px;
+  letter-spacing: 0.3em;
   color: var(--ink-64);
 }
 
@@ -288,14 +429,14 @@ section { scroll-margin-top: 96px; }
   position: relative;
   display: flex;
   align-items: center;
-  height: 76px;
+  height: var(--nav-row-h);
 }
 /* 主導覽：底線由左至右展開（保留原始動態） */
 .main-nav a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--ink-80);
   padding-bottom: 2px;
@@ -303,63 +444,259 @@ section { scroll-margin-top: 96px; }
   background-repeat: no-repeat;
   background-position: left calc(100% - 10px);
   background-size: 0% 2px;
-  transition: color var(--t-link) var(--ease), background-size var(--t-link) var(--ease);
+  transition: color 0.55s var(--ease), background-size var(--t-link) var(--ease);
 }
 .main-nav a:hover,
 .main-nav a:focus-visible {
   color: var(--ink);
   background-size: 100% 2px;
 }
+/* 面板開著時該選單標題保持底線：滑鼠移到 CTA 或搜尋時，
+   仍看得出開著的面板屬於哪個選單 */
+.main-nav li.is-menu-active > a,
 .main-nav a[aria-current="page"] {
   color: var(--ink);
   background-size: 100% 2px;
 }
 
-/* 下拉選單（原站多層導覽的 V1 版）：手風琴式展開，面板左緣對齊選單標題 */
+/* 下拉選單：滿寬 mega panel（irclub 式）——面板自 header 直接延伸下來。
+   刻意不畫上邊框：nav 與面板同為紙白，中間有線就會斷成兩塊（使用者裁決）。
+   展開動畫沿用手風琴式 clip-path 由上往下摺疊。 */
+.main-nav { position: static; }
+.main-nav > ul > li { position: static; }
 .menu-panel {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 252px;
-  padding: 10px 0;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-top: 0;
-  border-radius: 0 0 var(--radius) var(--radius);
+  right: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
   clip-path: inset(0 0 100% 0);
   visibility: hidden;
   z-index: 110;
-  transition: clip-path 0.32s var(--ease), visibility 0s linear 0.32s;
+  /* 換選單時 JS 會暫時鎖 height 做高度補間，內容要跟著裁掉 */
+  overflow: hidden;
+  /* 收起比展開快：關閉要俐落，0.32s 收會拖 */
+  transition: clip-path 0.2s var(--ease), visibility 0s linear 0.2s;
 }
-.main-nav li:hover > .menu-panel,
+/* 哪個面板開著由 main.js 的 .is-menu-active 決定，不用 li:hover——
+   否則滑到 header 其他區域（CTA、社群 icon、搜尋）面板就會掉下去 */
+.main-nav li.is-menu-active > .menu-panel,
 .main-nav li:focus-within > .menu-panel {
   clip-path: inset(0 0 0 0);
   visibility: visible;
   transition: clip-path 0.32s var(--ease);
 }
-.menu-panel a {
+/* 面板已經開著時再換選單：不重播手風琴（收起又展開會很混亂），
+   面板視為同一張留在原地的紙，只把內容換掉。
+   直接切換不做交叉淡入──兩張面板同時半透明時會透出底下頁面，那就是「閃一下」。
+   is-menusettled 由 main.js 在展開動畫跑完後才加。 */
+.site-header.is-menusettled .menu-panel {
+  clip-path: inset(0 0 0 0);
+  transition: none;
+}
+.site-header.is-menusettled .main-nav li.is-menu-active > .menu-panel,
+.site-header.is-menusettled .main-nav li:focus-within > .menu-panel {
+  visibility: visible;
+  transition: none;
+}
+.mega-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 34px var(--gutter) 38px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 380px;
+  gap: 0 56px;
+  align-items: start;
+}
+.mega-overline {
+  display: block;
+  margin-bottom: 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-45);
+}
+/* 整列可點：熱區到欄寬，不再只有文字本身 */
+.main-nav .mega-item {
   display: block;
   min-height: 0;
-  padding: 9px 24px 9px 18px;
-  font-size: 14.5px;
-  font-weight: 400;
-  color: var(--ink-80);
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
   background-image: none;
-  transition: color var(--t-link) var(--ease), background-color var(--t-link) var(--ease);
 }
-.menu-panel a:hover,
-.menu-panel a:focus-visible {
+.main-nav .mega-item:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.mega-item .t {
+  /* inline-block：底線要收在文字寬度，不可跟著欄寬拉滿 */
+  display: inline-block;
+  padding-bottom: 2px;
+  font-size: 16.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background-image: linear-gradient(var(--purple), var(--purple));
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 0% 2px;
+  transition: background-size var(--t-link) var(--ease);
+}
+/* is-last-hover：滑鼠移到 header 其他區域（CTA、搜尋）時，
+   面板內原本 hover 的子項要保持底線，狀態不能斷掉 */
+.mega-item:hover .t,
+.mega-item:focus-visible .t,
+.mega-item.is-last-hover .t { background-size: 100% 2px; }
+.mega-item .d {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-64);
+}
+/* 精選卡：每個選單右欄固定一張，避免子項少的選單右側開天窗 */
+.main-nav .mega-figure {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  background-image: none;
+}
+.mega-figure img {
+  display: block;
+  width: 100%;
+  height: 176px;
+  object-fit: cover;
+}
+.mega-figure .cap {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-64);
+}
+.mega-figure .cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
   color: var(--purple);
-  background-color: var(--purple-tint);
+  background-image: linear-gradient(var(--purple), var(--purple));
+  background-repeat: no-repeat;
+  background-position: left 100%;
+  background-size: 0% 2px;
+  transition: background-size var(--t-link) var(--ease);
 }
-.menu-panel .panel-divider {
-  height: 1px;
-  margin: 8px 0;
-  background: var(--line);
-}
+.mega-figure:hover .cta,
+.mega-figure:focus-visible .cta { background-size: 100% 2px; }
 
 .header-actions { display: flex; align-items: center; gap: 16px; }
-.header-actions .btn { height: 44px; padding: 0 22px; font-size: 14.5px; }
+/* header CTA 例外走膠囊（對齊 irclub），全站其他按鈕維持直角 */
+.header-actions .btn {
+  height: 44px;
+  padding: 0 28px;
+  font-size: 15px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+/* hover＝文字滾輪（同上排社群 icon），膠囊底色不變、不做填色 */
+.header-actions .btn-primary { background-image: none; }
+.header-actions .btn .roll {
+  display: flex;
+  flex-direction: column;
+  gap: 9px; /* 與社群 icon 滾輪同節奏、同間隔 */
+  height: 21px;
+  overflow: hidden;
+}
+.header-actions .btn .roll > span {
+  flex: none;
+  height: 21px;
+  line-height: 21px;
+  transition: transform 0.52s var(--ease);
+}
+.header-actions .btn:hover .roll > span,
+.header-actions .btn:focus-visible .roll > span { transform: translateY(calc(-100% - 9px)); }
+
+/* 搜尋全域層（irclub 式）：白色面板自視窗頂滑下蓋掉 nav，其餘頁面壓暗 */
+.search-drop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.6s;
+}
+.search-drop .search-backdrop {
+  position: absolute;
+  inset: 0;
+  /* 中性純黑遮罩（對齊 irclub）：品牌墨色 #17141f 帶紫，壓在紙白上會偏紫偏暗 */
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease);
+}
+.search-drop .search-sheet {
+  position: relative;
+  background: var(--paper);
+  transform: translateY(-100%);
+  transition: transform 0.6s var(--ease);
+}
+.search-drop.is-open {
+  visibility: visible;
+  pointer-events: auto;
+  transition: none;
+}
+.search-drop.is-open .search-backdrop { opacity: 1; }
+.search-drop.is-open .search-sheet { transform: translateY(0); }
+.search-drop .search-sheet .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: clamp(32px, 4vw, 52px);
+}
+.search-drop form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-drop input[type="search"] {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  padding: 10px 0;
+  font-family: var(--sans);
+  font-size: clamp(20px, 2.2vw, 28px);
+  color: var(--ink);
+  outline: none;
+  transition: border-color var(--t-link) var(--ease);
+}
+.search-drop input[type="search"]:focus { border-bottom-color: var(--purple); }
+.search-drop input[type="search"]::placeholder { color: var(--ink-45); }
+.search-drop .btn { height: 48px; padding: 0 28px; }
+.search-drop input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* 關閉鈕：淺灰圓底＋深色叉，hover 微放大（使用者指定樣式） */
+.search-drop .search-close {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(23, 20, 31, 0.08);
+  color: var(--ink);
+  transition: transform var(--t-link) var(--ease), background-color var(--t-link) var(--ease);
+}
+.search-drop .search-close:hover,
+.search-drop .search-close:focus-visible {
+  transform: scale(1.12);
+  background: rgba(23, 20, 31, 0.12);
+}
 
 /* 漢堡（行動版） */
 .nav-toggle {
@@ -393,7 +730,7 @@ section { scroll-margin-top: 96px; }
 .drawer .drawer-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(23, 20, 31, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.32s var(--ease);
 }
@@ -442,6 +779,25 @@ section { scroll-margin-top: 96px; }
    3. Hero
    ========================================================================== */
 .hero { padding-top: clamp(56px, 9vw, 120px); }
+
+/* 首頁沉浸式 photo hero（irclub 式）：滿版照片、白字、nav 透明疊圖 */
+.hero.hero-photo {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: calc(120px + var(--header-h));
+  padding-bottom: clamp(48px, 6vw, 84px);
+  background-image:
+    linear-gradient(180deg, rgba(23, 20, 31, 0.46) 0%, rgba(23, 20, 31, 0.56) 55%, rgba(23, 20, 31, 0.86) 100%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+.hero-figure-band { padding-top: 8px; }
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
@@ -473,6 +829,19 @@ section { scroll-margin-top: 96px; }
   max-width: 30em;
 }
 .hero-cta { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+
+/* 沉浸式一律純白：深色照片上不用品牌紫（對比不足、髒）
+   ——必須排在 .hero h1 em 之後，且特異性要高過它 */
+.hero.hero-photo .eyebrow { color: rgba(255, 255, 255, 0.8); }
+.hero.hero-photo h1,
+.hero.hero-photo h1 em { color: var(--white); }
+.hero.hero-photo .hero-side p { color: rgba(255, 255, 255, 0.84); }
+.hero.hero-photo .hero-cta .btn-primary {
+  background-color: var(--white);
+  background-image: linear-gradient(var(--white), var(--white));
+  color: var(--ink);
+}
+.hero.hero-photo .hero-cta .u-link { color: var(--white); }
 
 .hero-figure { margin-top: clamp(40px, 6vw, 72px); }
 .hero-figure .frame {
@@ -814,6 +1183,9 @@ section { scroll-margin-top: 96px; }
 }
 .band p { max-width: 38em; color: rgba(255, 255, 255, 0.82); font-size: 16px; }
 .band .mono-meta { color: rgba(255, 255, 255, 0.55); margin-top: 12px; }
+.band-actions { display: flex; align-items: center; gap: 28px; margin-top: 8px; }
+.band-cta img { object-position: center 60%; }
+.band-link { color: var(--white); }
 
 /* ==========================================================================
    8. Membership
@@ -825,7 +1197,7 @@ section { scroll-margin-top: 96px; }
   gap: clamp(32px, 5vw, 72px);
   align-items: start;
 }
-.membership-intro { position: sticky; top: 120px; }
+.membership-intro { position: sticky; top: calc(var(--header-h) + 28px); }
 .membership-intro h2 {
   margin-top: 14px;
   font-size: var(--fs-h2);
@@ -1116,6 +1488,76 @@ section { scroll-margin-top: 96px; }
 }
 .footer-bottom .mono-meta { font-size: 11.5px; }
 
+/* 語言切換（自 header 移入 footer）：向上展開的下拉，沿用手風琴語言 */
+.lang-switch { position: relative; order: -1; }
+/* 觸發鈕＝主導覽連結語言：無邊框、底線由左至右展開 */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding-bottom: 2px;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--ink-80);
+  background-image: linear-gradient(var(--purple), var(--purple));
+  background-repeat: no-repeat;
+  background-position: left calc(100% - 10px);
+  background-size: 0% 2px;
+  transition: color var(--t-link) var(--ease), background-size var(--t-link) var(--ease);
+}
+.lang-toggle:hover,
+.lang-toggle:focus-visible,
+.lang-toggle[aria-expanded="true"] {
+  color: var(--ink);
+  background-size: 100% 2px;
+}
+.lang-toggle .chev { transition: transform var(--t-link) var(--ease); }
+.lang-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+/* 面板＝menu-panel 的向上版本 */
+.lang-menu {
+  position: absolute;
+  bottom: calc(100% - 14px);
+  left: 0;
+  min-width: 172px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius) var(--radius) 0 0;
+  clip-path: inset(0 0 100% 0);
+  visibility: hidden;
+  z-index: 20;
+  transition: clip-path 0.32s var(--ease), visibility 0s linear 0.32s;
+}
+.lang-menu.is-open {
+  clip-path: inset(0 0 0 0);
+  visibility: visible;
+  transition: clip-path 0.32s var(--ease);
+}
+.lang-menu a {
+  display: inline-flex;
+  margin: 0 24px 0 18px;
+  padding: 8px 0;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: var(--ink-80);
+  background-image: linear-gradient(var(--purple), var(--purple));
+  background-repeat: no-repeat;
+  background-position: left calc(100% - 4px);
+  background-size: 0% 2px;
+  transition: color var(--t-link) var(--ease), background-size var(--t-link) var(--ease);
+}
+.lang-menu a:hover,
+.lang-menu a:focus-visible,
+.lang-menu a[aria-current="true"] {
+  color: var(--ink);
+  background-size: 100% 2px;
+}
+
 /* ==========================================================================
    內頁共用元件
    ========================================================================== */
@@ -1138,6 +1580,66 @@ section { scroll-margin-top: 96px; }
 }
 .page-hero .lede + .lede { margin-top: 8px; }
 
+/* photo header：滿版底圖＋壓暗＋白字（Swiss 式氣氛、V1 左對齊編輯語言） */
+.page-hero.has-photo {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(440px, 60vh, 720px);
+  padding-top: clamp(96px, 14vw, 160px);
+  padding-bottom: clamp(36px, 5vw, 60px);
+  border-bottom: 0;
+  background-image:
+    linear-gradient(180deg, rgba(23, 20, 31, 0.38) 0%, rgba(23, 20, 31, 0.52) 55%, rgba(23, 20, 31, 0.84) 100%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+.page-hero.has-photo .eyebrow { color: rgba(255, 255, 255, 0.82); }
+.page-hero.has-photo h1 { color: var(--white); }
+.page-hero.has-photo .lede { color: rgba(255, 255, 255, 0.8); }
+
+/* 沉浸式頂部（irclub 式）：photo 頁在頁首時 nav 透明疊在照片上，滾動後恢復實色 */
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top { color: rgba(255, 255, 255, 0.78); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top a,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button.search-toggle { color: rgba(255, 255, 255, 0.78); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top a:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button.search-toggle:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang [aria-current="true"] { color: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .divider { background: rgba(255, 255, 255, 0.28); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .page-hero.has-photo {
+  margin-top: calc(-1 * var(--header-h));
+  min-height: calc(clamp(440px, 60vh, 720px) + var(--header-h));
+  padding-top: calc(clamp(48px, 6vw, 88px) + var(--header-h));
+}
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) {
+  background: transparent;
+}
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .mark,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .mark span { color: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .name { color: rgba(255, 255, 255, 0.72); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a {
+  color: rgba(255, 255, 255, 0.85);
+  background-image: linear-gradient(var(--white), var(--white));
+}
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a:focus-visible,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a[aria-current="page"] { color: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .nav-toggle .bar { background: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-actions .btn-primary {
+  background-color: var(--white);
+  background-image: none;
+  color: var(--ink);
+}
+.wordmark .mark,
+.wordmark .name,
+.header-top,
+.header-top a,
+.header-top button.search-toggle,
+.header-top .divider { transition: color 0.55s var(--ease), background-color 0.55s var(--ease); }
+.header-actions .btn { transition: background-color 0.55s var(--ease), color 0.55s var(--ease), background-size var(--t-btn) var(--ease); }
+
 .page-section { padding-block: clamp(40px, 6vw, 80px); }
 .page-section + .page-section { padding-top: 0; }
 
@@ -1151,7 +1653,8 @@ section { scroll-margin-top: 96px; }
   border-top: 1px solid var(--line);
 }
 .page-split:first-of-type { border-top: 0; }
-.page-split > .side { position: sticky; top: 120px; }
+/* sticky 側欄要讓開 sticky header，否則捲動時會貼上 nav */
+.page-split > .side { position: sticky; top: calc(var(--header-h) + 28px); }
 .page-split .side h2 {
   margin-top: 12px;
   font-size: clamp(24px, 2.6vw, 30px);
@@ -1325,15 +1828,14 @@ section { scroll-margin-top: 96px; }
 /* ==========================================================================
    Reveal on scroll
    ========================================================================== */
+/* 只做淡入，不做上移（使用者裁決）：位移在滿版照片與大量卡片的頁面上太吵 */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+  transition: opacity 0.55s var(--ease);
   transition-delay: var(--reveal-delay, 0s);
 }
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -1347,6 +1849,7 @@ section { scroll-margin-top: 96px; }
 @media (max-width: 1080px) {
   .main-nav { display: none; }
   .nav-toggle { display: inline-flex; }
+  .header-actions { margin-left: auto; }
   .header-actions .btn-cta-desktop { display: none; }
   .membership-intro { position: static; }
 }
@@ -1377,13 +1880,14 @@ section { scroll-margin-top: 96px; }
 }
 
 @media (max-width: 640px) {
-  section { scroll-margin-top: 80px; }
+  :root { --nav-row-h: 64px; --header-h: 104px; }
+  .wordmark .mark { font-size: 28px; }
+  .wordmark .name { font-size: 11px; }
   .hero h1 br { display: none; }
   .hero h1 { font-size: 36px; }
   .services-list { grid-template-columns: 1fr; }
   .recap-strip a:not(:last-child)::after { margin-inline: 10px; }
-  .utility-label { display: none; }
-  .utility .container { justify-content: flex-end; }
+  .header-top .social-icons { display: none; }
   .insights-grid { grid-template-columns: 1fr; }
   .event-item { grid-template-columns: 80px 1fr auto; gap: 14px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -1399,6 +1903,8 @@ section { scroll-margin-top: 96px; }
    Reduced motion：停用位移、縮放、視差與數字動畫
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
+  body { animation: none !important; }
+  html.is-leaving body { opacity: 1 !important; }
   html { scroll-behavior: auto; }
   *,
   *::before,
