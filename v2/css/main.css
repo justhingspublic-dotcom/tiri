@@ -19,6 +19,7 @@
   --purple-soft: #9a4d82;
   --purple-active: #5c2249; /* hover/press 深端 */
   --purple-tint: rgba(126, 50, 104, 0.06);
+  --purple-tint-10: rgba(126, 50, 104, 0.1); /* segment 選中膠囊底 */
   --line: #eceaef;
   --line-dark: rgba(255, 255, 255, 0.18);
   /* sticker 柔色跳色（取自 notion，去暖橘） */
@@ -280,6 +281,18 @@ section,
 .btn-outline-light:focus-visible { background-color: var(--white); color: var(--ink); border-color: var(--white); }
 
 /* ---- Skip link ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -48px;
@@ -1078,29 +1091,59 @@ section,
 }
 .filter-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   margin-bottom: clamp(28px, 4vw, 44px);
 }
-.filter-btn {
+
+/* ---- Segment 膠囊切換（共用元件）----
+   單一膠囊外框，內部 .segment-thumb 由 main.js 注入並滑動到選中項。
+   窄螢幕不換行，改為容器內橫向捲動（捲軸隱藏）。 */
+.segment {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-btn);
+  background: var(--paper);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.segment::-webkit-scrollbar { display: none; }
+.segment-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--radius-btn);
+  background: var(--purple-tint-10);
+}
+/* 「全部」類主項（data-thumb="solid"）選中：實色茄紫＋白字 */
+.segment.is-thumb-solid .segment-thumb { background: var(--purple); }
+.segment.is-ready .segment-thumb {
+  transition:
+    transform 0.35s var(--ease),
+    width 0.35s var(--ease),
+    background-color 0.35s var(--ease);
+}
+.segment-btn {
+  position: relative;
+  z-index: 1;
+  flex: none;
   min-height: 40px;
   padding: 0 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-btn);
   font-size: 14px;
   font-weight: 500;
   color: var(--ink-64);
-  background: transparent;
-  transition:
-    background-color var(--t-link) var(--ease),
-    color var(--t-link) var(--ease),
-    border-color var(--t-link) var(--ease);
+  white-space: nowrap;
+  transition: color var(--t-link) var(--ease);
 }
-.filter-btn:hover { border-color: var(--ink); color: var(--ink); }
-.filter-btn[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--white);
+.segment-btn:not([aria-pressed="true"]):hover { color: var(--ink); }
+.segment-btn[aria-pressed="true"] { color: var(--purple); }
+.segment-btn[data-thumb="solid"][aria-pressed="true"] { color: var(--white); }
+@media (prefers-reduced-motion: reduce) {
+  .segment.is-ready .segment-thumb { transition: none; }
 }
 
 .insights-grid {
@@ -1114,10 +1157,15 @@ section,
   gap: 14px;
   padding-top: 20px;
   border-top: 1px solid var(--ink);
-  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  transition: opacity 0.2s var(--ease);
 }
-.insight-card.is-hiding { opacity: 0; transform: translateY(8px); }
+.insight-card.is-hiding { opacity: 0; }
 .insight-card.is-hidden { display: none; }
+/* 篩選切換時鎖住格線高度補間，避免下方內容瞬跳 */
+.insights-grid.is-resizing {
+  overflow: hidden;
+  transition: height 0.28s var(--ease);
+}
 .insight-card .meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .insight-card h3 {
   font-size: 19px;
@@ -1214,18 +1262,14 @@ section,
   padding: 24px 4px;
   border-bottom: 1px solid var(--line);
 }
+/* icon 裸放不加外框（使用者裁決：icon 不要外匡） */
 .value-item .icon {
-  width: 44px;
-  height: 44px;
   display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  place-items: start;
+  padding-top: 2px;
   color: var(--purple);
-  background: var(--white);
-  transition: background-color var(--t-link) var(--ease), border-color var(--t-link) var(--ease), color var(--t-link) var(--ease);
 }
-.value-item:hover .icon { background: var(--purple); border-color: var(--purple); color: var(--white); }
+.value-item .icon svg { width: 26px; height: 26px; }
 .value-item h3 { font-size: 17px; font-weight: 500; }
 .value-item p { margin-top: 4px; font-size: 14.5px; color: var(--ink-64); }
 
@@ -2023,8 +2067,6 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }
   .hero-figure .frame { aspect-ratio: 4 / 3; }
   .hero-figure figcaption { flex-direction: column; gap: 4px; }
-  .newsletter-form { flex-direction: column; }
-  .newsletter-form .btn { width: 100%; }
   .footer-grid { grid-template-columns: 1fr; }
   .partners-wall { justify-content: flex-start; }
 }
@@ -2072,8 +2114,9 @@ h1, h2, h3 { font-weight: 650; letter-spacing: -0.02em; }
 .stats { background: var(--paper); }
 
 /* 卡片圓角＋hairline（只套在「有完整外框」的卡片；
-   單邊框的帳本式元件不可加圓角——上邊框會彎成弧線） */
-.fee-card, .committee-card, .value-item, .auth-card {
+   單邊框的帳本式元件不可加圓角——上邊框會彎成弧線。
+   .value-item 是 border-bottom 帳本列，曾誤列於此造成邊線彎弧，勿加回 */
+.fee-card, .committee-card, .auth-card {
   border-radius: var(--radius-lg);
 }
 
@@ -2141,6 +2184,11 @@ h1, h2, h3 { font-weight: 650; letter-spacing: -0.02em; }
 .login-link { font-size: 14.5px; font-weight: 500; color: var(--ink-64); transition: color var(--t-link) var(--ease); }
 .login-link:hover, .login-link:focus-visible { color: var(--ink); }
 
+@media (max-width: 640px) {
+  .header-actions { gap: 8px; }
+  .login-link { display: none; }
+}
+
 /* ---- 2. 內頁頭：白底大標＋圓角照片橫幅卡（取代滿版沉浸照） ---- */
 .page-hero.has-banner {
   position: static;
@@ -2207,12 +2255,27 @@ h1, h2, h3 { font-weight: 650; letter-spacing: -0.02em; }
 .closing .contact-list a { color: var(--ink-80); }
 .closing .btn-invert { background-color: var(--purple); color: var(--white); }
 .closing .btn-invert:hover, .closing .btn-invert:focus-visible { background-color: var(--purple-active); }
-.newsletter-form input {
+/* 訂閱表單＝一體式大膠囊（使用者指定）：外框一顆大膠囊，
+   左＝透明輸入區、右＝訂閱膠囊鈕；focus 時只亮外框 */
+.newsletter-form {
+  gap: 6px;
+  padding: 6px;
   background: var(--white);
   border: 1px solid var(--line);
+  border-radius: var(--radius-btn);
+  transition: border-color var(--t-link) var(--ease);
+}
+.newsletter-form:focus-within { border-color: var(--purple-soft); }
+.newsletter-form input {
+  height: 46px;
+  background: transparent;
+  border: 0;
   color: var(--ink);
   border-radius: var(--radius-btn);
+  padding: 0 12px 0 16px;
 }
+.newsletter-form input:focus-visible { outline: none; border-color: transparent; }
+.newsletter-form .btn { height: 46px; flex: none; }
 .newsletter-form input::placeholder { color: var(--ink-45); }
 .newsletter-note { color: var(--ink-45); }
 /* closing 底色改淡後，聯絡清單與按鈕的白字全部跟上（否則看不見） */
@@ -2229,6 +2292,7 @@ h1, h2, h3 { font-weight: 650; letter-spacing: -0.02em; }
 /* ---- 6. footer：淡面＋社群 icon ---- */
 .site-footer { background: var(--paper); }
 .footer-social { display: inline-flex; align-items: center; gap: 16px; }
+.footer-brand .footer-social { margin-top: 18px; }
 .footer-social a { color: var(--ink-45); transition: color var(--t-link) var(--ease); }
 .footer-social a:hover, .footer-social a:focus-visible { color: var(--purple); }
 

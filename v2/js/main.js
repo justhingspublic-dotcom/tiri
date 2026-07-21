@@ -583,10 +583,71 @@
     });
   }
 
-  /* ---- 洞察分類篩選（淡出→切換→淡入，約 350ms） ---- */
-  var filterButtons = document.querySelectorAll(".filter-btn");
+  /* ---- Segment 膠囊切換（共用元件）----
+     用法：<div class="segment"><button class="segment-btn" data-value="…"
+     aria-pressed="true|false">…</button>…</div>
+     指示膠囊由此注入並滑動到選中項；切換時對 .segment 發
+     CustomEvent "segment:change"（detail.value＝選中的 data-value）。 */
+  document.querySelectorAll(".segment").forEach(function (segment) {
+    var buttons = Array.prototype.slice.call(segment.querySelectorAll(".segment-btn"));
+    if (!buttons.length) return;
+
+    var thumb = document.createElement("span");
+    thumb.className = "segment-thumb";
+    thumb.setAttribute("aria-hidden", "true");
+    segment.insertBefore(thumb, segment.firstChild);
+
+    function activeButton() {
+      return segment.querySelector('.segment-btn[aria-pressed="true"]') || buttons[0];
+    }
+
+    function moveThumb(button) {
+      thumb.style.width = button.offsetWidth + "px";
+      thumb.style.height = button.offsetHeight + "px";
+      thumb.style.transform =
+        "translate(" + button.offsetLeft + "px, " + button.offsetTop + "px)";
+      segment.classList.toggle(
+        "is-thumb-solid",
+        button.getAttribute("data-thumb") === "solid"
+      );
+    }
+
+    /* 先定位再開啟 transition（.is-ready），初始定位才不會播滑動動畫 */
+    moveThumb(activeButton());
+    window.requestAnimationFrame(function () {
+      segment.classList.add("is-ready");
+    });
+    window.addEventListener("resize", function () {
+      moveThumb(activeButton());
+    });
+
+    segment.addEventListener("click", function (event) {
+      var button = event.target.closest(".segment-btn");
+      if (!button || button.getAttribute("aria-pressed") === "true") return;
+      buttons.forEach(function (other) {
+        other.setAttribute("aria-pressed", String(other === button));
+      });
+      moveThumb(button);
+      if (button.scrollIntoView) {
+        button.scrollIntoView({
+          behavior: reduceMotion ? "auto" : "smooth",
+          block: "nearest",
+          inline: "nearest",
+        });
+      }
+      segment.dispatchEvent(
+        new CustomEvent("segment:change", {
+          detail: { value: button.getAttribute("data-value") },
+        })
+      );
+    });
+  });
+
+  /* ---- 洞察分類篩選（淡出→切換→淡入，約 350ms）：訂閱 filter-bar 的 segment ---- */
   var insightCards = document.querySelectorAll(".insight-card");
+  var insightGrid = document.querySelector(".insights-grid");
   var filterTimer = null;
+  var gridResizeTimer = null;
 
   function applyFilter(category) {
     function swap() {
@@ -605,7 +666,24 @@
     }
     insightCards.forEach(function (card) { card.classList.add("is-hiding"); });
     window.clearTimeout(filterTimer);
-    filterTimer = window.setTimeout(swap, 200);
+    filterTimer = window.setTimeout(function () {
+      /* 卡片數改變會讓格線高度瞬跳、下方內容抖動→鎖高補間 0.28s */
+      var startHeight = insightGrid ? insightGrid.offsetHeight : 0;
+      swap();
+      if (!insightGrid) return;
+      window.clearTimeout(gridResizeTimer);
+      insightGrid.style.height = "";
+      var endHeight = insightGrid.offsetHeight;
+      if (endHeight === startHeight) return;
+      insightGrid.classList.add("is-resizing");
+      insightGrid.style.height = startHeight + "px";
+      void insightGrid.offsetHeight; /* 強制 reflow，讓起點高度生效 */
+      insightGrid.style.height = endHeight + "px";
+      gridResizeTimer = window.setTimeout(function () {
+        insightGrid.classList.remove("is-resizing");
+        insightGrid.style.height = "";
+      }, 320);
+    }, 200);
   }
 
   /* ---- 示意表單：阻止送出跳頁 ---- */
@@ -615,13 +693,9 @@
     });
   });
 
-  filterButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      if (button.getAttribute("aria-pressed") === "true") return;
-      filterButtons.forEach(function (other) {
-        other.setAttribute("aria-pressed", String(other === button));
-      });
-      applyFilter(button.getAttribute("data-filter"));
+  document.querySelectorAll(".filter-bar .segment").forEach(function (segment) {
+    segment.addEventListener("segment:change", function (event) {
+      applyFilter(event.detail.value);
     });
   });
 })();

@@ -1,7 +1,7 @@
 # TIRI 官網 UI 改版專案
 
 以 `https://www.tiri.tw` 的靜態封存為基準，進行 UI/UX 改版。原版與各新版版型以資料夾完全區隔，
-每個版型資料夾內都有自己的 `html/`、`css/`、`js/`、`images/`，互不影響。
+每個版型資料夾內都有自己的 `html/`、`css/`、`js/`、`images/`；V1、V2 的導覽資料與標記共用 `shared/navbar.js`，以 `variant` 保留各版外觀。
 
 客戶提供的原始文件位於上層 `../ref/`；研究與專案文件位於 `Files/`。
 
@@ -30,12 +30,17 @@ WEB DEMO/
 ├── original/    # 原版靜態封存（html/css/js/images/documents）
 ├── v1/          # 新版 V1 精品風（html/css/js/images/fonts）
 ├── v2/          # 新版 V2 骨架（html/css/js/images）
+├── shared/      # V1/V2 共用元件（navbar 選單資料、桌面 mega menu、行動抽屜）
 ├── Files/       # 專案背景、研究、設計規範、design-qa 文件
 ├── scripts/     # 同步、整理、檢查與本地預覽工具（含 requirements.txt）
 ├── _archive/    # 無法分類的暫存檔
 ├── README.md
 └── package.json
 ```
+
+## 共用導覽
+
+V1、V2 的每個 HTML 頁面只保留 `<tiri-navbar variant="v1|v2">`。要調整選單名稱、連結、說明文字、圖片或行動版項目，統一編輯 `shared/navbar.js`，不再逐頁修改。
 
 ## V1 設計依據
 

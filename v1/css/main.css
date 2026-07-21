@@ -282,6 +282,18 @@ section,
 .btn-outline-light:focus-visible { color: var(--ink); border-color: var(--white); }
 
 /* ---- Skip link ---- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -48px;
