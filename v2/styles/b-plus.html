@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B＋｜Friendly × 清爽（Notion × Stripe）── TIRI V2 風格樣張</title>
+<style>
+  /* ── B＋：以 notion 為骨架（圓潤粗體 sans、xl 圓角卡、pill、sticker 跳色），
+       注入 stripe 的清爽（純白＋hairline、頂部茄紫漸層、浮卡、字重收斂）。
+       全無襯線、去黃中性底、滿寬窄邊距、品牌茄紫 ── */
+  :root{
+    --canvas:#ffffff;
+    --soft:#f7f6f8;           /* 極淡中性，僅點綴用 */
+    --ink:#1a1820;
+    --ink-2:#38343f;
+    --muted:#615d69;
+    --faint:#a09ba8;
+    --hairline:#eceaef;
+    --plum:#7e3268;
+    --plum-2:#a13d95;
+    --plum-active:#5c2249;
+    --st-lilac:#efe4f8;
+    --st-sky:#e0edfb;
+    --st-mint:#dcf0e8;
+    --content-max:1760px;
+    --gutter:clamp(24px,3.2vw,64px);
+    --sans:"PingFang TC","Noto Sans TC","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--canvas);color:var(--ink-2);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{width:min(var(--content-max),calc(100% - var(--gutter) * 2));margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--plum)}
+  h1,h2,h3{font-weight:650;letter-spacing:-.03em;color:var(--ink)}
+  a{color:inherit}
+
+  header.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-size:23px;font-weight:800;letter-spacing:-.02em}
+  .logo i{font-style:normal;color:var(--plum)}
+  nav ul{display:flex;gap:30px;list-style:none;font-size:14.5px;font-weight:500}
+  nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+  nav a:hover{color:var(--ink)}
+  .nav-cta{font-size:14px;font-weight:600;background:var(--plum);color:#fff;padding:10px 20px;border-radius:999px;text-decoration:none;transition:.2s}
+  .nav-cta:hover{background:var(--plum-active)}
+
+  /* hero — 純白扁平＋圓潤粗字（來自 B）＋人像柔角框 */
+  .hero{padding:72px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .hero .eyebrow{margin-bottom:22px}
+  .hero h1{font-size:clamp(40px,5.6vw,66px);font-weight:700;line-height:1.08;letter-spacing:-.04em}
+  .hero h1 em{font-style:normal;color:var(--plum)}
+  .hero p.lede{margin-top:26px;color:var(--muted);font-size:17.5px;max-width:46ch}
+  .hero-cta{display:flex;gap:14px;align-items:center;margin-top:34px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15.5px;font-weight:600;text-decoration:none;padding:14px 26px;border-radius:999px;transition:.2s}
+  .btn-primary{background:var(--plum);color:#fff}
+  .btn-primary:hover{background:var(--plum-active)}
+  .btn-ghost{background:var(--canvas);color:var(--ink);border:1px solid var(--hairline)}
+  .btn-ghost:hover{border-color:var(--faint)}
+  .hero-figure{border-radius:24px;overflow:hidden;aspect-ratio:4/4.2;background:var(--soft)}
+  .hero-figure img{width:100%;height:100%;object-fit:cover}
+
+  /* stats — 扁平：hairline 邊框＋圓角，無陰影／無浮起；sticker 圓點（來自 B） */
+  .stats{padding:34px 0 84px}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--canvas);border:1px solid var(--hairline);border-radius:22px;overflow:hidden}
+  .stat{padding:30px 30px}
+  .stat + .stat{border-left:1px solid var(--hairline)}
+  .stat .dot{width:11px;height:11px;border-radius:50%;margin-bottom:16px}
+  .stat .n{font-size:44px;font-weight:650;line-height:1;letter-spacing:-.04em;color:var(--ink);font-variant-numeric:tabular-nums}
+  .stat .n sup{font-size:17px;color:var(--plum)}
+  .stat .l{margin-top:11px;font-size:14px;color:var(--muted)}
+  .stat .l span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.8px;color:var(--faint);margin-top:4px;text-transform:uppercase}
+
+  /* feature — 白卡＋hairline（清爽）＋xl 圓角（B）；右側漸層點題卡（C） */
+  .feature{padding:20px 0 88px}
+  .feat-card{background:var(--canvas);border:1px solid var(--hairline);border-radius:28px;padding:12px;display:grid;grid-template-columns:1.35fr 1fr;gap:0;overflow:hidden}
+  .feat-main{padding:44px}
+  .feat-main .eyebrow{margin-bottom:14px}
+  .feat-main h3{font-size:33px;font-weight:700;letter-spacing:-.035em;margin-bottom:20px;line-height:1.2}
+  .feat-main .desc{color:var(--muted);font-size:16px}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 32px}
+  .tags span{font-size:13px;font-weight:500;background:var(--soft);color:var(--ink);padding:9px 15px;border-radius:999px}
+  .feat-side{background:var(--plum);border-radius:20px;padding:38px;color:#fff;display:flex;flex-direction:column;justify-content:center}
+  .feat-side ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .feat-side li{display:flex;gap:15px;align-items:flex-start;padding:16px 0}
+  .feat-side li + li{border-top:1px solid rgba(255,255,255,.18)}
+  .feat-side .no{width:34px;height:34px;flex:none;border-radius:11px;background:rgba(255,255,255,.16);font-weight:700;font-size:14px;display:grid;place-items:center;color:#fff}
+  .feat-side b{font-weight:600;font-size:16px;display:block;margin-bottom:3px}
+  .feat-side small{color:rgba(255,255,255,.76);font-size:13px}
+
+  /* about — 淡紫 sticker band（B 的親近，收乾淨） */
+  .about{padding:20px 0 96px}
+  .about-in{background:var(--st-lilac);border-radius:28px;padding:72px 64px}
+  .about-in .eyebrow{color:var(--plum-active);margin-bottom:24px}
+  .about-in h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;line-height:1.28;letter-spacing:-.03em;max-width:28ch;color:var(--ink)}
+  .about-in h2 .hl{color:var(--plum)}
+  .about-in .meta{font-family:var(--mono);font-size:12px;color:var(--plum-active);opacity:.7;margin-top:32px}
+
+  footer{padding:60px 0 46px}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+  .foot-top .logo{font-size:26px}
+  .foot-links{display:flex;gap:52px}
+  .foot-col h4{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
+  .foot-col a{display:block;text-decoration:none;color:var(--muted);font-size:14px;margin-bottom:9px;transition:color .2s}
+  .foot-col a:hover{color:var(--plum)}
+  .foot-base{margin-top:46px;padding-top:22px;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--faint);flex-wrap:wrap;gap:8px}
+
+  @media(max-width:860px){
+    nav ul{display:none}
+    .hero-grid,.feat-card{grid-template-columns:1fr}
+    .hero-grid{gap:34px}
+    .feat-main{padding:32px}
+    .feat-side{margin:0 12px 12px}
+    .about-in{padding:48px 34px}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat:nth-child(3){border-left:0}
+    .stat:nth-child(n+3){border-top:1px solid var(--hairline)}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#">TI<i>RI</i></a>
+    <nav><ul>
+      <li><a href="#">關於協會</a></li>
+      <li><a href="#feature">活動與課程</a></li>
+      <li><a href="#">知識分享</a></li>
+      <li><a href="#">會員</a></li>
+      <li><a href="#">合作夥伴</a></li>
+    </ul></nav>
+    <a class="nav-cta" href="#">加入我們</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Taiwan Investor Relations Institute — Since 2018</p>
+      <h1>推進台灣 IR 實踐，<br>接軌<em>國際資本市場</em>。</h1>
+      <p class="lede">為台灣上市櫃、興櫃、公開發行與創櫃公司，打造連結經營團隊、股東、分析師與主管機關的專業協會，推進投資人關係實踐與成員的專業地位。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#">探索課程與活動 →</a>
+        <a class="btn btn-ghost" href="#">了解會員價值</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <img src="../../v1/images/hero-community.jpg" alt="TIRI 社群交流現場">
+    </figure>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat"><span class="dot" style="background:#7e3268"></span><p class="n">2018</p><p class="l">協會成立年份<span>Established</span></p></div>
+      <div class="stat"><span class="dot" style="background:#62aef0"></span><p class="n">8<sup>屆</sup></p><p class="l">年度大會 2018–2025<span>Conferences</span></p></div>
+      <div class="stat"><span class="dot" style="background:#2a9d99"></span><p class="n">60<sup>hr</sup></p><p class="l">團體會員免費公開班<span>Free Training</span></p></div>
+      <div class="stat"><span class="dot" style="background:#dd7ac0"></span><p class="n">10<sup>+</sup></p><p class="l">會員專屬合作優惠<span>Benefits</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="feature">
+  <div class="wrap">
+    <div class="feat-card">
+      <div class="feat-main">
+        <p class="eyebrow">TIRIC IR 專業實戰班</p>
+        <h3>引領變革，成就頂尖 IR 領袖</h3>
+        <p class="desc">採用經美國國家投資人關係協會（NIRI）正式授權的《Investor Relations Body of Knowledge》第二版繁體中文版教材——全球首本 NIRI 授權中文教材，結合業界實務師資，聚焦投資人關係、財務分析、法規遵循、公司治理、永續發展與對外溝通。</p>
+        <div class="tags">
+          <span>2026.08.21 起・週五全日 5 堂</span>
+          <span>台北・忠孝東路二段 88 號 10 樓</span>
+          <span>定價 NT$120,000・早鳥 NT$76,000</span>
+        </div>
+        <a class="btn btn-primary" href="#">了解課程與報名 →</a>
+      </div>
+      <div class="feat-side">
+        <ul>
+          <li><span class="no">1</span><div><b>NIRI 授權繁中教材</b><small>IRBOK 第二版，2025 波士頓 NIRI 年會正式授權</small></div></li>
+          <li><span class="no">2</span><div><b>10 位資深業界師資</b><small>理事長、發言人、財務長與資深合夥律師共同授課</small></div></li>
+          <li><span class="no">3</span><div><b>TIRIC 專屬結業證書</b><small>彰顯專業認可與學習成果</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="about-in">
+      <p class="eyebrow">About TIRI — Since 2018</p>
+      <h2>1962 年臺灣證券交易所開業，56 年來台灣始終沒有一個正式的投資人關係協會。TIRI 由一群資本市場的<span class="hl">有志之士</span>共同成立，期望改善現況。</h2>
+      <p class="meta">法定名稱：社團法人台灣投資人關係協會・統一編號 72976985</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="logo" href="#">TI<i>RI</i></a>
+      <div class="foot-links">
+        <div class="foot-col"><h4>協會</h4><a href="#">關於 TIRI</a><a href="#">理監事名冊</a><a href="#">合作夥伴</a></div>
+        <div class="foot-col"><h4>專業發展</h4><a href="#">年度大會</a><a href="#">TIRIC 實戰班</a><a href="#">IRC 證照</a></div>
+        <div class="foot-col"><h4>會員</h4><a href="#">會員類別</a><a href="#">會員優惠</a><a href="#">加入我們</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 社團法人台灣投資人關係協會</span>
+      <span>STYLE B＋ — FRIENDLY × CLEAN · notion × stripe</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

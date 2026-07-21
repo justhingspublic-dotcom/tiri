@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A｜Precision（Vercel 規範）── TIRI V2 風格樣張</title>
+<style>
+  /* ── 依 getdesign「vercel」規範：Geist/Inter 無襯線 weight 600＋重負字距、
+       純白/near-white 畫布、hairline #ebebeb、near-black 深色段、銳利精準。
+       brand black 保留、violet/link accent→品牌茄紫。全程無襯線 ── */
+  :root{
+    --canvas:#ffffff;
+    --canvas-soft:#fafafa;
+    --canvas-soft-2:#f4f4f4;
+    --ink:#171717;
+    --body:#4d4d4d;
+    --mute:#888888;
+    --hairline:#ebebeb;
+    --hairline-strong:#d4d4d4;
+    --dark:#111111;
+    --plum:#7a2e64;           /* 取代 vercel violet / link */
+    --plum-active:#5a2049;
+    --content-max:1760px;
+    --gutter:clamp(24px,3.2vw,64px);
+    --sans:"PingFang TC","Noto Sans TC","Inter","Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"Geist Mono","SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--canvas);color:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{width:min(var(--content-max),calc(100% - var(--gutter) * 2));margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:var(--plum)}
+  h1,h2,h3{font-weight:600;color:var(--ink);letter-spacing:-.04em}
+  a{color:inherit}
+
+  header.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-size:22px;font-weight:700;letter-spacing:-.03em}
+  .logo i{font-style:normal;color:var(--plum)}
+  nav ul{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:500}
+  nav a{text-decoration:none;color:var(--mute);transition:color .2s}
+  nav a:hover{color:var(--ink)}
+  .nav-cta{font-size:14px;font-weight:500;background:var(--ink);color:#fff;padding:9px 18px;border-radius:8px;text-decoration:none;transition:.2s}
+  .nav-cta:hover{background:var(--plum)}
+
+  /* hero — 重負字距 */
+  .hero{padding:92px 0 80px;border-bottom:1px solid var(--hairline)}
+  .hero .eyebrow{margin-bottom:24px}
+  .hero h1{font-size:clamp(44px,6.4vw,80px);line-height:1.02;letter-spacing:-.055em;max-width:15ch}
+  .hero h1 em{font-style:normal;color:var(--plum)}
+  .hero-foot{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;margin-top:48px;align-items:end}
+  .hero-foot p{color:var(--body);font-size:17px;line-height:1.6;max-width:54ch}
+  .hero-actions{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;text-decoration:none;padding:0 22px;height:44px;border-radius:8px;transition:.2s}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{background:var(--plum)}
+  .link-text{text-decoration:none;color:var(--plum);font-size:15px;border-bottom:1px solid transparent;transition:border-color .2s;padding-bottom:2px}
+  .link-text:hover{border-color:var(--plum)}
+
+  /* stats — 帳本，sans 600 數字＋重負字距 */
+  .stats{padding:56px 0;border-bottom:1px solid var(--hairline)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding-right:28px}
+  .stat + .stat{border-left:1px solid var(--hairline);padding-left:40px}
+  .stat .n{font-size:52px;font-weight:600;line-height:1;letter-spacing:-.05em;color:var(--ink)}
+  .stat .n sup{font-size:19px;color:var(--plum);letter-spacing:0}
+  .stat .l{margin-top:14px;font-size:14px;color:var(--body)}
+  .stat .l span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.4px;color:var(--mute);margin-top:4px;text-transform:uppercase}
+
+  /* feature */
+  .feature{padding:92px 0;border-bottom:1px solid var(--hairline)}
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px}
+  .feat-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:72px}
+  .feat-main .eyebrow{margin-bottom:14px}
+  .feat-main h3{font-size:36px;letter-spacing:-.045em;margin-bottom:22px;line-height:1.12}
+  .feat-main .desc{color:var(--body);font-size:16px;line-height:1.6;max-width:60ch}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 32px}
+  .tags span{font-family:var(--mono);font-size:12px;color:var(--ink);border:1px solid var(--hairline);background:var(--canvas-soft);padding:8px 13px;border-radius:8px}
+  .points{list-style:none;border-top:1px solid var(--hairline)}
+  .points li{display:grid;grid-template-columns:40px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--hairline)}
+  .points .no{font-family:var(--mono);font-size:13px;color:var(--plum)}
+  .points b{font-weight:600;font-size:16px;display:block;margin-bottom:4px;color:var(--ink);letter-spacing:-.02em}
+  .points small{color:var(--body);font-size:14px;line-height:1.5}
+
+  /* about — near-black 精準深色段 */
+  .about-in{background:var(--dark);color:#ededed;padding:100px 0}
+  .about-in .eyebrow{color:#c98fb4;margin-bottom:26px}
+  .about-in h2{font-size:clamp(28px,3.6vw,46px);line-height:1.16;letter-spacing:-.045em;max-width:24ch;color:#fff}
+  .about-in h2 .hl{color:#d9a9c9}
+  .about-in .meta{font-family:var(--mono);font-size:12px;letter-spacing:.4px;color:#8a8a8a;margin-top:38px}
+
+  footer{padding:68px 0 50px;background:var(--canvas)}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+  .foot-top .logo{font-size:24px}
+  .foot-links{display:flex;gap:64px}
+  .foot-col h4{font-family:var(--mono);font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
+  .foot-col a{display:block;text-decoration:none;color:var(--body);font-size:14px;margin-bottom:10px;transition:color .2s}
+  .foot-col a:hover{color:var(--ink)}
+  .foot-base{margin-top:52px;padding-top:24px;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;letter-spacing:.3px;color:var(--mute);flex-wrap:wrap;gap:8px}
+
+  @media(max-width:860px){
+    nav ul{display:none}
+    .hero-foot,.feat-grid{grid-template-columns:1fr;gap:36px}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:36px 0}
+    .stat + .stat{border-left:0;padding-left:0}
+    .stat:nth-child(even){border-left:1px solid var(--hairline);padding-left:32px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#">TI<i>RI</i></a>
+    <nav><ul>
+      <li><a href="#">關於協會</a></li>
+      <li><a href="#feature">活動與課程</a></li>
+      <li><a href="#">知識分享</a></li>
+      <li><a href="#">會員</a></li>
+      <li><a href="#">合作夥伴</a></li>
+    </ul></nav>
+    <a class="nav-cta" href="#">加入我們</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Taiwan Investor Relations Institute — Since 2018</p>
+    <h1>推進台灣 IR 實踐，<br>接軌<em>國際資本市場</em>。</h1>
+    <div class="hero-foot">
+      <p>TIRI 是專為台灣上市櫃、興櫃、公開發行與創櫃公司，負責經營團隊、股東、證券分析師與主管機關之間溝通的企業經理人而設的專業協會，致力推進台灣投資人關係的實踐及其成員的專業能力與地位。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#">探索課程與活動 →</a>
+        <a class="link-text" href="#">了解會員價值</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><p class="n">2018</p><p class="l">協會成立年份<span>Established</span></p></div>
+    <div class="stat"><p class="n">8<sup>屆</sup></p><p class="l">年度大會 2018–2025<span>Annual Conferences</span></p></div>
+    <div class="stat"><p class="n">60<sup>hr</sup></p><p class="l">團體會員免費公開班<span>Free Training</span></p></div>
+    <div class="stat"><p class="n">10<sup>+</sup></p><p class="l">會員專屬合作優惠<span>Member Benefits</span></p></div>
+  </div>
+</section>
+
+<section class="feature" id="feature">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Professional Development</p>
+      <a class="link-text" href="#">查看全部課程</a>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-main">
+        <p class="eyebrow">TIRIC IR 專業實戰班</p>
+        <h3>引領變革，成就頂尖 IR 領袖</h3>
+        <p class="desc">採用經美國國家投資人關係協會（NIRI）正式授權的《Investor Relations Body of Knowledge》第二版繁體中文版教材——全球首本 NIRI 授權中文教材，結合業界實務師資，聚焦投資人關係、財務分析、法規遵循、公司治理、永續發展與對外溝通。</p>
+        <div class="tags">
+          <span>2026.08.21 起・週五全日 5 堂</span>
+          <span>台北市中正區忠孝東路二段 88 號 10 樓</span>
+          <span>定價 NT$120,000・早鳥 NT$76,000</span>
+        </div>
+        <a class="btn btn-primary" href="#">了解課程與報名 →</a>
+      </div>
+      <ul class="points">
+        <li><span class="no">01</span><span><b>NIRI 授權繁中教材</b><small>IRBOK 第二版，2025 波士頓 NIRI 年會正式授權</small></span></li>
+        <li><span class="no">02</span><span><b>10 位資深業界師資</b><small>理事長、發言人、財務長與資深合夥律師共同授課</small></span></li>
+        <li><span class="no">03</span><span><b>TIRIC 專屬結業證書</b><small>彰顯專業認可與學習成果</small></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-in">
+    <div class="wrap">
+      <p class="eyebrow">About TIRI — Since 2018</p>
+      <h2>1962 年臺灣證券交易所開業，56 年來台灣始終沒有一個正式的投資人關係協會。TIRI 由一群資本市場的<span class="hl">有志之士</span>共同成立，期望改善現況。</h2>
+      <p class="meta">法定名稱：社團法人台灣投資人關係協會・統一編號 72976985</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="logo" href="#">TI<i>RI</i></a>
+      <div class="foot-links">
+        <div class="foot-col"><h4>協會</h4><a href="#">關於 TIRI</a><a href="#">理監事名冊</a><a href="#">合作夥伴</a></div>
+        <div class="foot-col"><h4>專業發展</h4><a href="#">年度大會</a><a href="#">TIRIC 實戰班</a><a href="#">IRC 證照</a></div>
+        <div class="foot-col"><h4>會員</h4><a href="#">會員類別</a><a href="#">會員優惠</a><a href="#">加入我們</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 社團法人台灣投資人關係協會</span>
+      <span>STYLE A — PRECISION · grounded in getdesign/vercel</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

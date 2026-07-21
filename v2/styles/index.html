@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V2 風格定調｜A / B / C 三版對照（依 getdesign 規範）</title>
+<style>
+  :root{
+    --canvas:#ffffff;--soft:#fafafa;--ink:#171717;--body:#4d4d4d;--mute:#888;
+    --hairline:#ebebeb;--plum:#7c2d76;
+    --sans:"PingFang TC","Noto Sans TC","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);background:var(--canvas);color:var(--body);line-height:1.6}
+  .wrap{width:min(1120px,calc(100% - 48px));margin:0 auto}
+  header{padding:64px 0 8px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--plum);margin-bottom:16px}
+  h1{font-weight:600;font-size:clamp(30px,4.4vw,48px);line-height:1.1;letter-spacing:-.04em;color:var(--ink)}
+  .lede{color:var(--body);font-size:16.5px;max-width:64ch;margin-top:18px}
+  .note{margin-top:14px;font-size:13.5px;color:var(--mute)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:20px 0 24px}
+  .card{position:relative;display:flex;flex-direction:column;border:1px solid var(--hairline);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:border-color .2s,background .2s}
+  .card:hover{border-color:var(--plum);background:var(--soft)}
+  .card.rec{grid-column:1/-1;border-color:var(--plum)}
+  .card.rec .swatch{height:96px}
+  .rec-flag{position:absolute;top:14px;right:14px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;background:var(--plum);color:#fff;padding:5px 11px;border-radius:999px}
+  .rec .card-body{padding:24px}
+  .swatch{height:120px;display:flex;align-items:flex-end;padding:14px;gap:7px;border-bottom:1px solid var(--hairline)}
+  .sw-a{background:#ffffff}.sw-b{background:#f6f5f4}.sw-c{background:linear-gradient(150deg,#ffffff,#f3e6f1)}
+  .dot{width:26px;height:26px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
+  .card-body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.8px;color:var(--mute);text-transform:uppercase}
+  .card h2{font-weight:600;font-size:22px;letter-spacing:-.03em;margin:8px 0 4px;color:var(--ink)}
+  .ref{font-family:var(--mono);font-size:11px;color:var(--plum);margin-bottom:10px}
+  .card p{font-size:13.5px;color:var(--body);line-height:1.6}
+  .go{margin-top:16px;font-size:13.5px;color:var(--plum);font-weight:500}
+  .feels{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .feels span{font-size:11.5px;color:var(--body);border:1px solid var(--hairline);border-radius:999px;padding:4px 10px}
+  .legend{margin:8px 0 40px;padding:20px 22px;background:var(--soft);border:1px solid var(--hairline);border-radius:12px;font-size:13.5px;color:var(--body)}
+  .legend b{color:var(--ink)}
+  footer{padding:24px 0 56px;font-family:var(--mono);font-size:11.5px;color:var(--mute);letter-spacing:.3px;border-top:1px solid var(--hairline);margin-top:20px}
+  @media(max-width:800px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="eyebrow">TIRI V2 — Style Direction</p>
+  <h1>V2 風格定調：三版並排對照</h1>
+  <p class="lede">同一套真實內容（hero／量化成果／TIRIC 實戰班／創會緣起），三種歐美風格骨架，各自依 getdesign.md 的真實網站規範打造。全程無襯線、去黃中性底、滿寬窄邊距，品牌紫統一調成茄紫取代各家原色——品牌不斷、風格全新。</p>
+  <p class="note">※ 樣張為靜態示意，尚未接互動與內頁；定案後再全站展開。</p>
+</header>
+
+<div class="wrap">
+  <div class="legend">三版共同規則：<b>字體全無襯線</b>・<b>底色去黃中性</b>（純白／近白）・<b>滿寬窄邊距</b>（沿用 V1 的 1760px／gutter 64px）・<b>品牌茄紫</b>為唯一 brand 色。差異只在各自參照的真實規範。</div>
+</div>
+
+<div class="wrap grid">
+  <a class="card rec" href="b-plus.html">
+    <span class="rec-flag">你的傾向 · 推薦</span>
+    <div class="swatch sw-b" style="background:#ffffff">
+      <span class="dot" style="background:#ffffff"></span>
+      <span class="dot" style="background:#7e3268"></span>
+      <span class="dot" style="background:#efe4f8"></span>
+      <span class="dot" style="background:#dcf0e8"></span>
+    </div>
+    <div class="card-body">
+      <span class="tag">Style B＋</span>
+      <h2>友善 × 清爽 Friendly × Clean</h2>
+      <p class="ref">notion 骨架 × 扁平清爽</p>
+      <p>以你偏好的 B 為底（圓潤粗體 sans、xl 圓角、pill、sticker 跳色、右側人像），做成純白扁平：hairline 邊框取代浮卡、實色茄紫、無陰影無漸層、字重收斂。和 V1 區別最大。</p>
+      <div class="feels"><span>友善</span><span>清爽</span><span>圓潤</span><span>扁平</span></div>
+      <span class="go">看完整首頁 →</span>
+    </div>
+  </a>
+
+  <a class="card" href="a-editorial.html">
+    <div class="swatch sw-a">
+      <span class="dot" style="background:#ffffff"></span>
+      <span class="dot" style="background:#171717"></span>
+      <span class="dot" style="background:#7a2e64"></span>
+    </div>
+    <div class="card-body">
+      <span class="tag">Style A</span>
+      <h2>精準 Precision</h2>
+      <p class="ref">grounded in getdesign / vercel</p>
+      <p>黑白精準：Geist 式 sans、重負字距、hairline 分隔、near-black 深色段。最銳利、最有權威與可信度。</p>
+      <div class="feels"><span>精準</span><span>權威</span><span>銳利</span></div>
+      <span class="go">看完整首頁 →</span>
+    </div>
+  </a>
+
+  <a class="card" href="b-warm.html">
+    <div class="swatch sw-b">
+      <span class="dot" style="background:#f6f5f4"></span>
+      <span class="dot" style="background:#7e3268"></span>
+      <span class="dot" style="background:#ece0f7"></span>
+    </div>
+    <div class="card-body">
+      <span class="tag">Style B</span>
+      <h2>友善 Friendly</h2>
+      <p class="ref">grounded in getdesign / notion</p>
+      <p>粗體圓潤 sans、xl 圓角卡、full-pill 按鈕、單一主色＋一抹柔和跳色。最親近、最好讀、最不冷。</p>
+      <div class="feels"><span>友善</span><span>圓潤</span><span>好讀</span></div>
+      <span class="go">看完整首頁 →</span>
+    </div>
+  </a>
+
+  <a class="card" href="c-fintech.html">
+    <div class="swatch sw-c">
+      <span class="dot" style="background:#ffffff"></span>
+      <span class="dot" style="background:#7c2d76"></span>
+      <span class="dot" style="background:#a13d95"></span>
+    </div>
+    <div class="card-body">
+      <span class="tag">Style C</span>
+      <h2>金融科技 Fintech</h2>
+      <p class="ref">grounded in getdesign / stripe</p>
+      <p>weight 300 極細 sans＋負字距、頂部漸層網格、pill 按鈕、tabular 數字浮卡。最現代、最精緻俐落。</p>
+      <div class="feels"><span>精緻</span><span>現代</span><span>科技</span></div>
+      <span class="go">看完整首頁 →</span>
+    </div>
+  </a>
+</div>
+
+<footer class="wrap">TIRI — INTERNAL DESIGN DEMO ・ V2 STYLE COMPARISON ・ <a href="../../index.html" style="color:var(--plum)">← 回版本入口</a></footer>
+</body>
+</html>
