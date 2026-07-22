@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.tiri.tw/"
 SITEMAP_URL = urllib.parse.urljoin(BASE_URL, "sitemap.xml")
-OUTPUT = Path(__file__).resolve().parents[1] / "original"
+OUTPUT = Path(__file__).resolve().parents[2] / "original"
 USER_AGENT = "Mozilla/5.0 (compatible; TIRI-Static-Archive/1.0)"
 MAX_ASSET_BYTES = 30 * 1024 * 1024
 REQUEST_DELAY = 0.04
@@ -196,27 +196,15 @@ def rewrite_html(
         if tag.has_attr("style"):
             tag["style"] = rewrite_css(tag["style"], page_url, page_file, asset_queue)
 
-    offline_note = soup.new_tag("div", id="tiri-offline-note")
-    offline_note.string = "TIRI 官網靜態封存版本｜部分第三方功能需網路連線"
-    body = soup.body
-    if body:
-        body.insert(0, offline_note)
-        style = soup.new_tag("style")
-        style.string = """
-#tiri-offline-note {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 7px 16px;
-  background: #342044;
-  color: #fff;
-  font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  text-align: center;
-  letter-spacing: .02em;
-  position: relative;
-  z-index: 999999;
-}
-"""
-        (soup.head or soup).append(style)
+    for banner in soup.select(".banner"):
+        has_content = banner.get_text(strip=True) or banner.select_one(
+            ".wsite-section-elements > *"
+        )
+        if not has_content:
+            banner_classes = list(banner.get("class", []))
+            if "banner-empty" not in banner_classes:
+                banner_classes.append("banner-empty")
+                banner["class"] = banner_classes
 
     return str(soup)
 

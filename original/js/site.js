@@ -36,11 +36,17 @@
 
   const desktopNav = document.querySelector(".desktop-nav");
   if (desktopNav && !document.querySelector(".tiri-language-switch")) {
+    const isEnglishPage = document.documentElement.lang
+      .toLowerCase()
+      .startsWith("en");
     const language = document.createElement("a");
     language.className = "tiri-language-switch";
-    language.href = "en.html";
-    language.textContent = "English";
-    language.setAttribute("aria-label", "Switch to English");
+    language.href = isEnglishPage ? "index.html" : "en.html";
+    language.textContent = isEnglishPage ? "中文繁體" : "English";
+    language.setAttribute(
+      "aria-label",
+      isEnglishPage ? "切換至繁體中文" : "Switch to English"
+    );
     desktopNav.after(language);
   }
 

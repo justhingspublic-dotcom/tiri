@@ -3,9 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "mirror": "python3 scripts/mirror_tiri.py",
-    "dev": "python3 scripts/dev_server.py",
-    "organize": "python3 scripts/organize_static.py && python3 scripts/clean_markup.py",
+    "mirror": "python3 _archive/scripts/mirror_tiri.py",
+    "dev": "python3 _archive/scripts/dev_server.py",
+    "organize": "python3 _archive/scripts/organize_static.py && python3 _archive/scripts/clean_markup.py",
+    "localize": "python3 _archive/scripts/localize_tiri_content.py",
     "check": "python3 _archive/scripts/check_static_site.py"
   }
 }

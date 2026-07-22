@@ -13,7 +13,7 @@ from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 
 
-ROOT = Path(__file__).resolve().parents[1] / "original"
+ROOT = Path(__file__).resolve().parents[2] / "original"
 HTML_DIR = ROOT / "html"
 INLINE_CSS = ROOT / "css" / "legacy-inline.css"
 CSS_URL_RE = re.compile(r"url\(\s*(['\"]?)(.*?)\1\s*\)", re.I)
@@ -73,7 +73,7 @@ def rewrite_css_urls(css: str, output_css: Path) -> str:
         target = organized_target(value)
         if target:
             return f"url('{relative_url(output_css, target)}')"
-        return f"url('https://www.tiri.tw/{urlsplit(value).path.lstrip('/')}')"
+        raise FileNotFoundError(f"Unresolved CSS reference: {value}")
 
     return CSS_URL_RE.sub(replace, css)
 
@@ -118,13 +118,23 @@ def main() -> None:
         # The original Weebly runtime is not required for this static archive.
         # Shared interactions are provided by js/site.js.
         for script in list(soup.find_all("script")):
-            if script.get("src") == "../js/site.js":
+            source = script.get("src")
+            if isinstance(source, str) and urlsplit(source).path == "../js/site.js":
                 continue
             script.decompose()
 
-        if soup.head and not soup.find("link", href="../css/legacy-inline.css"):
+        has_inline_stylesheet = soup.find(
+            "link",
+            href=lambda value: isinstance(value, str)
+            and urlsplit(value).path == "../css/legacy-inline.css",
+        )
+        if soup.head and not has_inline_stylesheet:
             link = soup.new_tag("link", rel="stylesheet", href="../css/legacy-inline.css")
-            existing_site = soup.find("link", href="../css/site.css")
+            existing_site = soup.find(
+                "link",
+                href=lambda value: isinstance(value, str)
+                and urlsplit(value).path == "../css/site.css",
+            )
             if existing_site:
                 existing_site.insert_before(link)
             else:

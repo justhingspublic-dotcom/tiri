@@ -13,7 +13,7 @@ from urllib.parse import unquote, urlsplit
 from bs4 import BeautifulSoup
 
 
-ROOT = Path(__file__).resolve().parents[1] / "original"
+ROOT = Path(__file__).resolve().parents[2] / "original"
 STAGING = ROOT / ".organize-staging"
 
 FOLDER_BY_SUFFIX = {
@@ -138,13 +138,9 @@ def main() -> None:
                 if new_target:
                     tag[attr] = relative_url(destination, new_target, parsed.fragment)
                 elif parsed.path:
-                    # If the mirror does not contain the target, preserve functionality
-                    # by pointing to the original public site.
-                    tag[attr] = f"https://www.tiri.tw/{parsed.path.lstrip('/')}"
-                    if parsed.query:
-                        tag[attr] += f"?{parsed.query}"
-                    if parsed.fragment:
-                        tag[attr] += f"#{parsed.fragment}"
+                    raise FileNotFoundError(
+                        f"Unresolved local reference in {source.relative_to(ROOT)}: {value}"
+                    )
 
             if tag.has_attr("srcset"):
                 rewritten = []
@@ -183,7 +179,9 @@ def main() -> None:
             old_target = resolve_old_reference(source, value)
             new_target = mapping.get(old_target)
             if not new_target:
-                return f"url('https://www.tiri.tw/{urlsplit(value).path.lstrip('/')}')"
+                raise FileNotFoundError(
+                    f"Unresolved CSS reference in {source.relative_to(ROOT)}: {value}"
+                )
             return f"url('{relative_url(STAGING / 'css' / 'legacy.css', new_target)}')"
 
         css = CSS_URL_RE.sub(replace_css_url, css)

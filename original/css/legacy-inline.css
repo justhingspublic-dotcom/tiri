@@ -82,19 +82,6 @@
 		}
 	}
 
-#tiri-offline-note {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 7px 16px;
-  background: #342044;
-  color: #fff;
-  font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  text-align: center;
-  letter-spacing: .02em;
-  position: relative;
-  z-index: 999999;
-}
-
 /* Extracted style attributes, deduplicated across all pages. */
 
 .tiri-inline-1 {display:none}
