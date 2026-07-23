@@ -144,15 +144,17 @@ textarea:focus-visible {
 }
 
 .tiri-language-switch {
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  z-index: 14;
-  margin: 0 5px;
+  position: static;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: center;
+  align-items: center;
+  min-height: 44px;
+  margin-inline: 10px 8px;
   color: var(--tiri-ink);
   font-size: 16px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1;
   letter-spacing: 1.5px;
   text-decoration: underline;
 }
@@ -210,4 +212,19 @@ textarea:focus-visible {
     word-break: break-word;
   }
 
+}
+
+@media (max-width: 1024px) {
+  .dusk-header .container {
+    position: relative;
+  }
+
+  .tiri-language-switch {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: 20px;
+    z-index: 14;
+    margin: 0;
+    transform: translateY(-50%);
+  }
 }
