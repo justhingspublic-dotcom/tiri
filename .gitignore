@@ -7,3 +7,4 @@ venv/
 _nav-mockups/
 server/.env
 server/submissions.db
+server/server.log
