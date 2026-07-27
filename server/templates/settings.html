@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+{% block title %}郵件設定{% endblock %}
+{% block page_title %}郵件設定{% endblock %}
+
+{# 固定高＋頁級分頁（照 kit slots 頁模式）：整頁不捲，捲動只發生在當前 panel 內 #}
+{% block main_modifier %}is-settings-fixed{% endblock %}
+
+{% block page_actions %}
+{# 儲存鈕移到 page-header：固定不捲、任何 tab 都能按；form 屬性關聯同一張表單（欄位/payload 不變） #}
+<button id="save-btn" form="settings-form" class="b-btn b-btn-text" type="submit" disabled>儲存設定</button>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── 固定高模型（比照 .is-slots-fixed）── */
+    .main-content.is-settings-fixed {
+        height: calc(100vh - var(--header-height));
+        display: flex; flex-direction: column;
+        overflow: hidden;                       /* 外層整頁不捲 */
+    }
+    .main-content.is-settings-fixed > .page-header { flex: 0 0 auto; }
+    .main-content.is-settings-fixed > form {
+        flex: 1 1 auto; min-height: 0;
+        display: flex; flex-direction: column;
+    }
+    .settings-tabs { flex: 0 0 auto; margin-bottom: 16px; }
+    .set-panel[hidden] { display: none !important; }    /* Tailwind display 蓋 hidden 的坑 */
+    .set-panel:not([hidden]) { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+
+    /* ── Tab 2：左清單右表單 master-detail ── */
+    .set-panel[data-panel="copy"]:not([hidden]) { display: flex; overflow: hidden; }
+    .copy-card { flex: 1 1 auto; min-height: 0; display: flex; overflow: hidden; }
+    .tpl-list {
+        flex: 0 0 220px; min-height: 0; overflow-y: auto;
+        display: flex; flex-direction: column; gap: 2px;
+        padding: 14px; border-right: 1px solid var(--border-default);
+    }
+    .tpl-item {
+        display: block; width: 100%; text-align: left;
+        padding: 9px 12px; border: 0; border-radius: var(--radius-md);
+        background: transparent; font: inherit; font-size: 14px;
+        color: var(--text-body); cursor: pointer;
+        transition: background .15s, color .15s;
+    }
+    .tpl-item:hover { background: var(--neutral-secondary-medium); color: var(--text-heading); }
+    .tpl-item.active { background: var(--brand-softer); color: var(--fg-brand); font-weight: 500; }
+    [data-color-mode="dark"] .tpl-item.active { background: var(--brand); color: var(--b-on-primary); }
+    .tpl-detail { flex: 1 1 auto; min-width: 0; min-height: 0; overflow-y: auto; padding: 20px; }
+    .tpl-panel[hidden] { display: none !important; }
+
+    /* ── 欄位共用 ── */
+    .set-field .b-label { display: block; margin-bottom: 5px; }
+    .set-field .hint { margin-top: 5px; font-size: 12.5px; color: var(--text-body-subtle); }
+    .b-check { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--text-body); cursor: pointer; }
+    .b-check input {
+        appearance: none; width: 16px; height: 16px; flex: none; margin: 0;
+        border: 1px solid var(--border-default); border-radius: 4px;
+        background: var(--neutral-primary-soft); cursor: pointer;
+        display: grid; place-content: center;
+        transition: background .15s ease, border-color .15s ease;
+    }
+    .b-check input:checked { background: var(--brand); border-color: var(--brand); }
+    .b-check input:checked::before {
+        content: ''; width: 9px; height: 9px; background: var(--b-on-primary);
+        clip-path: polygon(14% 44%, 0 65%, 40% 100%, 100% 18%, 82% 2%, 40% 66%);
+    }
+    .b-check input:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--brand-medium); }
+    .b-btn.b-btn-text:disabled { background: transparent; color: var(--fg-disabled, var(--text-body-subtle)); cursor: default; }
+    .pw-wrap { position: relative; }
+    .pw-wrap .b-input { padding-right: 42px; }
+    .pw-eye {
+        position: absolute; right: 5px; top: 50%; transform: translateY(-50%);
+        width: 30px; height: 30px; display: grid; place-content: center;
+        border: 0; background: transparent; border-radius: 6px;
+        color: var(--text-body-subtle); cursor: pointer;
+    }
+    .pw-eye:hover { color: var(--text-heading); background: var(--neutral-secondary-medium); }
+    .pw-eye:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--brand-medium); }
+    .pw-eye svg { width: 16px; height: 16px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<form id="settings-form" method="post" action="/admin/settings">
+    <div class="b-tabs settings-tabs" role="tablist">
+        <button type="button" class="b-tab b-tab-active" data-set-tab="mail">寄信設定</button>
+        <button type="button" class="b-tab" data-set-tab="copy">通知信文案</button>
+    </div>
+
+    {# ══ Tab 1：寄信設定（原兩卡並排；欄位 name 不變） ══ #}
+    <div class="set-panel" data-panel="mail">
+        <div class="grid grid-cols-2 gap-6">
+            <section class="b-card flex flex-col" style="overflow:hidden;">
+                <div class="b-card-head"><h2 class="b-card-title">SMTP 寄信</h2></div>
+                <div class="b-card-body flex-1 grid grid-cols-2 gap-x-4 gap-y-5 content-start">
+                    <div class="set-field col-span-2">
+                        <label class="b-label" for="MAIL_FROM">寄件人顯示信箱</label>
+                        <input type="text" id="MAIL_FROM" name="MAIL_FROM" class="b-input" value="{{ values['MAIL_FROM'] }}">
+                        <div class="hint">留空＝用 SMTP 帳號</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-label" for="SMTP_HOST">SMTP 主機</label>
+                        <input type="text" id="SMTP_HOST" name="SMTP_HOST" class="b-input" value="{{ values['SMTP_HOST'] }}">
+                        <div class="hint">Gmail 是 smtp.gmail.com</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-label" for="SMTP_PORT">埠號</label>
+                        <input type="text" id="SMTP_PORT" name="SMTP_PORT" class="b-input" value="{{ values['SMTP_PORT'] }}">
+                        <div class="hint">通常是 587</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-label" for="SMTP_USER">SMTP 帳號</label>
+                        <input type="text" id="SMTP_USER" name="SMTP_USER" class="b-input" value="{{ values['SMTP_USER'] }}">
+                        <div class="hint">寄信用的信箱帳號</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-label" for="SMTP_PASS">SMTP 密碼</label>
+                        <div class="pw-wrap">
+                            <input type="password" id="SMTP_PASS" name="SMTP_PASS" class="b-input" value=""
+                                   placeholder="{{ '••••••••' if pw_set else '輸入密碼' }}">
+                            <button type="button" class="pw-eye" data-eye="SMTP_PASS" aria-label="顯示密碼" aria-pressed="false">
+                                <i data-lucide="eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="hint">{{ pw_hint }}</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="b-card flex flex-col" style="overflow:hidden;">
+                <div class="b-card-head"><h2 class="b-card-title">通知信與測試</h2></div>
+                <div class="b-card-body flex-1 grid gap-y-5 content-start">
+                    <div class="set-field">
+                        <label class="b-label" for="MAIL_TO">通知信收件人</label>
+                        <input type="text" id="MAIL_TO" name="MAIL_TO" class="b-input" value="{{ values['MAIL_TO'] }}">
+                        <div class="hint">有人填表單時要通知誰。多個信箱用逗號分隔，例：judy@tiri.tw, office@tiri.tw</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-check">
+                            <input type="checkbox" name="MAIL_DRY_RUN" {{ 'checked' if dry }}>
+                            測試模式
+                        </label>
+                        <div class="hint">開啟時不真的寄信，通知內容只記錄在伺服器（上線前記得關閉）</div>
+                    </div>
+                    <div class="b-alert brand"><div>
+                        <p class="b-alert-title">關於測試信</p>
+                        會先套用你目前填的內容再真的寄出（即使開著測試模式）；收件信箱有收到即代表通知功能正常。
+                    </div></div>
+                </div>
+                <div class="flex justify-end" style="padding: 0 20px 20px;">
+                    <button class="b-btn b-btn-ghost" type="submit" formaction="/admin/settings/test">
+                        <i data-lucide="send" aria-hidden="true"></i> 寄一封測試信
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    {# ══ Tab 2：通知信文案（左清單右表單；全部欄位常駐 DOM，切換只藏顯示） ══ #}
+    <div class="set-panel" data-panel="copy" hidden>
+        <section class="b-card copy-card">
+            <aside class="tpl-list" role="tablist" aria-label="表單範本">
+                {% for c in mail_copy %}
+                <button type="button" class="tpl-item{{ ' active' if loop.first }}" data-tpl="{{ c.slug }}">{{ c.name }}</button>
+                {% endfor %}
+            </aside>
+            <div class="tpl-detail">
+                {% for c in mail_copy %}
+                <div class="tpl-panel grid gap-y-5" data-tpl-panel="{{ c.slug }}" {{ 'hidden' if not loop.first }}>
+                    <div class="set-field">
+                        <label class="b-label" for="MAIL_SUBJ_{{ c.slug }}">信件主旨</label>
+                        <input type="text" id="MAIL_SUBJ_{{ c.slug }}" name="MAIL_SUBJ_{{ c.slug }}"
+                               class="b-input" value="{{ c.subj }}" placeholder="{{ c.default_subj }}">
+                        <div class="hint">留空＝用預設：{{ c.default_subj }}</div>
+                    </div>
+                    <div class="set-field">
+                        <label class="b-label" for="MAIL_INTRO_{{ c.slug }}">信件開頭文字</label>
+                        <textarea id="MAIL_INTRO_{{ c.slug }}" name="MAIL_INTRO_{{ c.slug }}"
+                                  class="b-textarea" rows="4"
+                                  placeholder="例：有企業填寫了{{ c.name }}表單，請儘速處理。">{{ c.intro }}</textarea>
+                        <div class="hint">會放在信件最上方；填寫的欄位資料一律自動附在下方，不用自己寫</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    (function () {
+        var form = document.getElementById('settings-form');
+        var save = document.getElementById('save-btn');
+
+        /* ── 儲存鈕：有改過才可以按 ── */
+        function snap() {
+            return Array.prototype.filter.call(form.elements, function (el) { return el.name; })
+                .map(function (el) { return el.name + '=' + (el.type === 'checkbox' ? el.checked : el.value); })
+                .join('&');
+        }
+        var baseline = snap();
+        function update() { save.disabled = (snap() === baseline); }
+        form.addEventListener('input', update);
+        form.addEventListener('change', update);
+
+        /* ── 頁級 tab ＋ 範本清單：狀態進 URL query（?tab=、?tpl=），重整停在原位 ── */
+        var curTab = 'mail', curTpl = document.querySelector('.tpl-item').getAttribute('data-tpl');
+
+        function syncUrl() {
+            var q = new URLSearchParams(location.search);
+            q.set('tab', curTab);
+            if (curTab === 'copy') q.set('tpl', curTpl); else q.delete('tpl');
+            history.replaceState({}, '', '/admin/settings?' + q.toString());
+        }
+        function setTab(tab) {
+            curTab = tab;
+            document.querySelectorAll('[data-set-tab]').forEach(function (t) {
+                t.classList.toggle('b-tab-active', t.getAttribute('data-set-tab') === tab);
+            });
+            document.querySelectorAll('.set-panel').forEach(function (p) {
+                p.hidden = p.getAttribute('data-panel') !== tab;
+            });
+        }
+        function setTpl(slug) {
+            curTpl = slug;
+            document.querySelectorAll('.tpl-item').forEach(function (b) {
+                b.classList.toggle('active', b.getAttribute('data-tpl') === slug);
+            });
+            document.querySelectorAll('.tpl-panel').forEach(function (p) {
+                p.hidden = p.getAttribute('data-tpl-panel') !== slug;
+            });
+        }
+        document.querySelectorAll('[data-set-tab]').forEach(function (t) {
+            t.addEventListener('click', function () { setTab(t.getAttribute('data-set-tab')); syncUrl(); });
+        });
+        document.querySelectorAll('.tpl-item').forEach(function (b) {
+            b.addEventListener('click', function () { setTpl(b.getAttribute('data-tpl')); syncUrl(); });
+        });
+
+        /* 初始：讀 URL 還原位置 */
+        var q = new URLSearchParams(location.search);
+        if (q.get('tab') === 'copy') setTab('copy');
+        var tpl = q.get('tpl');
+        if (tpl && document.querySelector('.tpl-item[data-tpl="' + tpl + '"]')) setTpl(tpl);
+    })();
+
+    /* 密碼欄眼睛：切換顯示/隱藏（動態換 icon 後要重呼 lucide — kit 已知坑） */
+    document.querySelectorAll('[data-eye]').forEach(function (btn) {
+        var input = document.getElementById(btn.getAttribute('data-eye'));
+        if (!input) return;
+        btn.addEventListener('click', function () {
+            var show = input.type === 'password';
+            input.type = show ? 'text' : 'password';
+            btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+            btn.setAttribute('aria-label', show ? '隱藏密碼' : '顯示密碼');
+            btn.innerHTML = '<i data-lucide="' + (show ? 'eye-off' : 'eye') + '" aria-hidden="true"></i>';
+            window.renderLucideIcons();
+        });
+    });
+</script>
+{% endblock %}

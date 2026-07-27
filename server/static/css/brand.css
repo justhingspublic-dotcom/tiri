@@ -1,0 +1,33 @@
+/* TIRI 收件後台品牌色（依 backend-design uikit 規範，全站唯一色來源） */
+:root {
+  --b-primary: #7e3268;
+  --b-chrome:  #7e3268;
+  --b-on-primary: #ffffff;
+}
+
+/* ── 專案皮膚：全後台扁平化（V2 定調＝無陰影）──
+   蓋掉 b_tokens 的 elevation 陰影 token；focus 光圈與表頭分隔線是另寫的 box-shadow，不受影響 */
+:root, :root[data-color-mode="dark"] {
+  --shadow-2xs: none; --shadow-xs: none; --shadow-sm: none;
+  --shadow-md: none; --shadow-lg: none; --shadow-xl: none; --shadow-2xl: none;
+}
+
+/* ── 深色模式收斂 ──
+   kit 預設的深色 brand 家族把彩度乘 1.5（配他們低彩度深綠剛好），
+   茄紫本身彩度高、乘完會變螢光刺眼 → 這裡改用降彩度/收亮度的相對色。
+   選擇器加 html 墊高特異度，蓋過 b_admin.css 的 :root[data-color-mode="dark"]（載入順序在後）。 */
+/* 錨點＝使用者定案的 #5e3a52（--brand），全家族帶灰調：彩度一律壓低，避免深底螢光感。
+   ⚠️ 寫死 hex 而非 oklch 相對色：Safari 對 oklch(from … calc(c*n) h) 支援不全，
+   無效值會整段跌回原始飽和紫（實測踩過）。以下值由公式預先算出：
+   oklch(from #7e3268 L calc(c*倍率) h)，L/倍率標在各行註解，改品牌色時重算一次。 */
+html:root[data-color-mode="dark"] {
+  --brand: #5e3a52;                 /* L .40  c*.50  定案暗梅 */
+  --brand-strong: #6d4760;          /* L .45  c*.50  hover 亮一階 */
+  --brand-medium: #472f3f;          /* L .34  c*.35 */
+  --brand-soft: #35212f;            /* L .28  c*.30 */
+  --brand-softer: #291a24;          /* L .24  c*.24  淡底：近中性帶紫味 */
+  --fg-brand: #bfa5b5;              /* L .75  c*.30  紫字：灰紫、不粉 */
+  --fg-brand-strong: #d1beca;       /* L .82  c*.22 */
+  --border-brand: #694f60;          /* L .46  c*.35 */
+  --border-brand-subtle: #3e2c38;   /* L .32  c*.26 */
+}

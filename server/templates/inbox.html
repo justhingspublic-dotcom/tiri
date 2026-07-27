@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}收件匣{% endblock %}
+{% block page_title %}收件匣{% endblock %}
+
+{% block main_modifier %}is-fixed-h{% endblock %}
+
+{% block page_actions %}
+<a id="export-btn" class="b-btn b-btn-quiet" href="/admin/export.csv?form={{ slug }}">
+    <i data-lucide="download" aria-hidden="true"></i> 匯出 CSV
+</a>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* 內容欄：label/value 兩層排列（頁內樣式，全部吃 token） */
+    .sub-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 6px 20px; }
+    .sub-fields > div { min-width: 0; overflow-wrap: anywhere; }
+    .sub-fields b { display: block; font-size: 12px; font-weight: 500; color: var(--text-body-subtle); }
+    .sub-fields span { font-size: 13.5px; color: var(--text-body); }
+</style>
+{% endblock %}
+
+{% block content %}
+{# 表單篩選：b-seg is-pill 膠囊滑塊；切換在前端過濾（不重載頁面，滑塊平滑滑動），URL 同步 ?form= #}
+<div style="margin-bottom: 16px;">
+    <div class="b-seg is-pill" id="inbox-seg">
+        <span class="b-seg-thumb" aria-hidden="true"></span>
+        {% for f in filters %}
+        <a href="/admin/inbox{{ '?form=' + f.slug if f.slug }}" data-filter="{{ f.slug }}"
+           {{ 'data-thumb-solid' if not f.slug }} class="{{ 'active' if f.slug == slug }}">{{ f.name }}
+            <span style="opacity:.65;font-size:12.5px">{{ f.count }}</span></a>
+        {% endfor %}
+    </div>
+</div>
+{# uikit 內滾機制：.b-tbl-scroll 為 .main-content.is-fixed-h 直接子項，吃剩餘高、thead sticky #}
+<div class="b-tbl-scroll" id="inbox-scroll" {{ 'hidden' if not rows }}>
+    <table class="b-tbl">
+        <thead>
+            <tr><th style="width:150px">時間</th><th style="width:140px">表單</th><th>內容</th><th style="width:110px">通知信</th></tr>
+        </thead>
+        <tbody>
+            {% for r in rows %}
+            <tr data-slug="{{ r.form_slug.split('-')[0] }}">
+                <td class="num">#{{ r.id }}<br>{{ r.submitted_at }}</td>
+                <td><span class="b-badge brand">{{ r.form_name }}</span></td>
+                <td>
+                    <div class="sub-fields">
+                        {% for f in r.fields %}
+                        <div><b>{{ f.label }}</b><span>{{ f.value or '—' }}</span></div>
+                        {% endfor %}
+                    </div>
+                </td>
+                <td>
+                    {% if r.mail_status == 'sent' %}
+                    <span class="b-badge ok"><span class="dot"></span>已寄出</span>
+                    {% elif r.mail_status == 'dry-run' %}
+                    <span class="b-badge neutral"><span class="dot"></span>測試(未寄)</span>
+                    {% else %}
+                    <span class="b-badge bad"><span class="dot"></span>失敗</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<section class="b-card" id="inbox-empty" {{ 'hidden' if rows }}>
+    <div class="b-empty">
+        <span class="b-empty-icon"><i data-lucide="inbox"></i></span>
+        <p class="b-empty-title">目前沒有資料</p>
+        <p class="b-empty-desc">有人填寫表單後，資料會出現在這裡。</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    (function () {
+        var seg = document.getElementById('inbox-seg');
+        var scroll = document.getElementById('inbox-scroll');
+        var empty = document.getElementById('inbox-empty');
+        var exportBtn = document.getElementById('export-btn');
+        var rows = Array.prototype.slice.call(document.querySelectorAll('tr[data-slug]'));
+
+        function applyFilter(slug, push) {
+            var visible = 0;
+            rows.forEach(function (tr) {
+                var show = !slug || tr.getAttribute('data-slug') === slug;
+                tr.hidden = !show;
+                if (show) visible++;
+            });
+            scroll.hidden = visible === 0;
+            empty.hidden = visible !== 0;
+            exportBtn.href = '/admin/export.csv?form=' + slug;
+            if (push) history.pushState({}, '', '/admin/inbox' + (slug ? '?form=' + slug : ''));
+            if (scroll.scrollTop) scroll.scrollTop = 0;
+        }
+
+        seg.querySelectorAll('a[data-filter]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                seg.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a === link); });
+                window.bSegThumb(seg, true);          /* 滑塊滑過去 */
+                applyFilter(link.getAttribute('data-filter'), true);
+            });
+        });
+
+        /* 初始：依 ?form= 過濾並定位滑塊（不播動畫） */
+        window.bSegThumb(seg, false);
+        applyFilter({{ slug|tojson }}, false);
+    })();
+</script>
+{% endblock %}

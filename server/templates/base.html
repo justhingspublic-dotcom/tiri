@@ -1,0 +1,422 @@
+{# TIRI 收件後台外殼 — 依 backend-design uikit（typeui Dashboard）base.html 移植 #}
+<!DOCTYPE html>
+<html lang="zh-Hant" data-color-mode="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>{% block title %}後台{% endblock %} - TIRI 台灣投資人關係協會</title>
+    <script>
+        /* 深淺色 + 字級偏好：首繪前套用，避免載入閃色/閃字級（uikit 規範） */
+        (function () {
+            try {
+                if (localStorage.getItem('bAdminColorMode') === 'dark') document.documentElement.setAttribute('data-color-mode', 'dark');
+                var fs = localStorage.getItem('bAdminFontSize');
+                if (fs === 'sm' || fs === 'lg') document.documentElement.setAttribute('data-fs', fs);
+            } catch (e) { }
+        })();
+    </script>
+    <link rel="stylesheet" href="/static/css/cms/base.css?v=20260727b">
+    <link rel="stylesheet" href="/static/css/cms/b_tokens.css?v=20260727b">
+    <link rel="stylesheet" href="/static/css/brand.css?v=20260727g">
+    <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260727d">
+    <link rel="stylesheet" href="/static/css/b/dropdown.css?v=20260727a">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        /* tailwind.config.snippet.js 內聯（typeui：圓角/陰影/語意色全指向 b_tokens 變數） */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    borderRadius: {
+                        none: '0', sm: '4px', DEFAULT: '8px', md: '8px',
+                        lg: '8px', xl: '8px', '2xl': '8px', '3xl': '12px', full: '9999px'
+                    },
+                    boxShadow: {
+                        none: 'none',
+                        '2xs': 'var(--shadow-2xs)', xs: 'var(--shadow-xs)', sm: 'var(--shadow-sm)',
+                        DEFAULT: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)',
+                        xl: 'var(--shadow-xl)', '2xl': 'var(--shadow-2xl)'
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: 'var(--brand)', soft: 'var(--brand-soft)', softer: 'var(--brand-softer)',
+                            medium: 'var(--brand-medium)', strong: 'var(--brand-strong)'
+                        },
+                        heading: 'var(--text-heading)',
+                        body: 'var(--text-body)',
+                        'body-subtle': 'var(--text-body-subtle)',
+                        'fg-brand': 'var(--fg-brand)',
+                        surface: 'var(--neutral-primary-soft)',
+                        'surface-soft': 'var(--neutral-secondary-soft)',
+                        'surface-muted': 'var(--neutral-tertiary)',
+                        'border-default': 'var(--border-default)',
+                        success: { DEFAULT: 'var(--success)', soft: 'var(--success-soft)' },
+                        danger: { DEFAULT: 'var(--danger)', soft: 'var(--danger-soft)' },
+                        warning: { DEFAULT: 'var(--warning)', soft: 'var(--warning-soft)' }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="/static/js/b/dropdown.js?v=20260727a" defer></script>
+    <style>
+        [v-cloak] { display: none !important; }
+        /* base.css 給 .logo-icon 設了 flex-basis 132px，b_admin 只蓋 width 沒蓋 flex → 窄 logo 兩側留白；這裡歸零 */
+        .header-logo .logo-icon { flex: 0 0 auto; }
+        /* 深色模式：wordmark 轉純白 */
+        [data-color-mode="dark"] .header-logo .logo-icon img { filter: brightness(0) invert(1); }
+        /* 登出項 hover：danger 紅字＋淡紅底（kit 無 .is-logout 樣式，依鐵則以 token 補） */
+        .header-user-menu .header-user-item.is-logout:hover { background: var(--danger-soft); color: var(--danger); }
+        .header-user-menu .header-user-item.is-logout:hover :where(i, .lucide, svg) { color: var(--danger); }
+        /* Safari：sticky thead 在 border-collapse:collapse 下會失效 → 內滾表格改 separate（視覺不變） */
+        .b-tbl-scroll .b-tbl, .is-dashboard .b-tbl-wrap .b-tbl { border-collapse: separate; border-spacing: 0; }
+        /* 對比調整：輸入框改白底（跟頁面灰底、hover 灰區隔開）、列 hover 加深一階 */
+        .b-input, .b-select, .b-textarea { background: var(--neutral-primary-soft); }
+        .b-tbl tbody tr:hover td, .main-content tbody tr:hover { background: var(--neutral-tertiary); }
+        /* segment 造型：白底圓角矩形（後台用膠囊太軟——使用者裁決），容器 8px、滑塊 6px */
+        .b-seg.is-pill {
+            background: var(--neutral-primary-soft); border: 1px solid var(--border-default);
+            border-radius: var(--radius-md); padding: 5px;
+        }
+        .b-seg.is-pill a, .b-seg.is-pill button { border-radius: 6px; padding: 7px 18px; }
+        .b-seg.is-pill .b-seg-thumb { border-radius: 6px; top: 5px; bottom: 5px; left: 5px; }
+        /* 選中狀態比照 V2：一般小項＝淡紫滑塊＋紫字；「全部」類主項（data-thumb-solid）＝實色茄紫＋白字 */
+        .b-seg.is-pill .b-seg-thumb { background: var(--brand-softer); }
+        .b-seg.is-pill.is-thumb-solid .b-seg-thumb { background: var(--brand); }
+        .b-seg.is-pill .active, .b-seg.is-pill .active:hover { color: var(--fg-brand); }
+        .b-seg.is-pill.is-thumb-solid .active, .b-seg.is-pill.is-thumb-solid .active:hover { color: var(--b-on-primary); }
+        /* 深色模式：segment 選中統一用定案實色＋白字（不分主項/小項——使用者裁決） */
+        [data-color-mode="dark"] .b-seg.is-pill .b-seg-thumb { background: var(--brand); }
+        [data-color-mode="dark"] .b-seg.is-pill .active,
+        [data-color-mode="dark"] .b-seg.is-pill .active:hover { color: var(--b-on-primary); }
+        /* 深色模式：側欄選中與 brand 徽章改用定案實色（--brand ＝ #5e3a52 暗梅），不用淡紫底 */
+        [data-color-mode="dark"] .sidebar .menu-item.active,
+        [data-color-mode="dark"] .cms-flyout-item.active {
+            background: var(--brand); color: var(--b-on-primary);
+        }
+        [data-color-mode="dark"] .sidebar .menu-item.active :where(i, .lucide, svg) { color: var(--b-on-primary); }
+        [data-color-mode="dark"] .b-badge.brand {
+            background: var(--brand); border-color: transparent; color: var(--b-on-primary);
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="app">
+        <header class="top-header" role="banner">
+            <div class="header-logo">
+                <button class="mobile-menu-btn" @click="toggleSidebar" title="開啟選單">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                    <span class="sr-only">Open menu</span>
+                </button>
+                {# 前台同款 wordmark（已含協會中英文名，不再放 logo-text 重複） #}
+                <div class="logo-icon" aria-hidden="true">
+                    <img src="/static/tiri-logo.png?v=20260727b" alt="">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-fs-wrap" v-cloak @click.stop>
+                    <button type="button" class="header-icon-btn" @click="toggleFsPanel" title="字體大小" aria-label="字體大小"
+                            aria-haspopup="true" :aria-expanded="fsOpen ? 'true' : 'false'">
+                        <i data-lucide="a-large-small" aria-hidden="true"></i>
+                    </button>
+                    <transition name="hdr-user">
+                        <div v-if="fsOpen" class="header-fs-panel">
+                            <div class="header-fs-title">字體大小</div>
+                            <input type="range" class="header-fs-range" min="0" max="2" step="1"
+                                   :value="fontLevel" @input="onFsInput" aria-label="字體大小（中/大/特大）">
+                            <div class="header-fs-marks">
+                                <span :class="{ on: fontLevel === 0 }">中</span>
+                                <span :class="{ on: fontLevel === 1 }">大</span>
+                                <span :class="{ on: fontLevel === 2 }">特大</span>
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+                <button type="button" class="header-icon-btn header-mode-btn" v-cloak
+                        :class="{ 'is-dark': colorMode === 'dark' }" @click="toggleColorMode"
+                        :title="colorMode === 'dark' ? '切換淺色模式' : '切換深色模式'"
+                        :aria-label="colorMode === 'dark' ? '切換淺色模式' : '切換深色模式'">
+                    <span class="mode-ic mode-ic-moon"><i data-lucide="moon" aria-hidden="true"></i></span>
+                    <span class="mode-ic mode-ic-sun"><i data-lucide="sun" aria-hidden="true"></i></span>
+                </button>
+                <span class="header-sep" aria-hidden="true"></span>
+                <a href="https://justhingspublic-dotcom.github.io/tiri/" target="_blank" rel="noopener"
+                   class="header-icon-btn" title="前往前台" aria-label="前往前台">
+                    <i data-lucide="external-link" aria-hidden="true"></i>
+                </a>
+                <div class="header-user-wrap" v-cloak @click.stop>
+                    <button type="button" class="header-user-btn" @click="toggleHeaderUser"
+                            :aria-expanded="headerUserOpen ? 'true' : 'false'" aria-haspopup="menu">
+                        <span class="header-user-avatar" aria-hidden="true"><i data-lucide="user-round"></i></span>
+                        <span class="header-user-name">{{ nickname }}</span>
+                        <i data-lucide="chevron-down" class="header-user-caret" :class="{ open: headerUserOpen }" aria-hidden="true"></i>
+                    </button>
+                    <transition name="hdr-user">
+                        <div v-if="headerUserOpen" class="header-user-menu" role="menu">
+                            <div class="header-user-head">
+                                <div class="header-user-head-name">{{ nickname }}</div>
+                                <div class="header-user-head-email">{{ session.get('admin', '') }}</div>
+                            </div>
+                            <div class="header-user-sep"></div>
+                            <form method="post" action="/admin/logout" class="header-user-logout-form">
+                                <button type="submit" class="header-user-item is-logout" role="menuitem">
+                                    <i data-lucide="log-out" aria-hidden="true"></i><span>登出</span>
+                                </button>
+                            </form>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </header>
+
+        <nav id="cms-sidebar" v-cloak class="sidebar" :class="{ open: sidebarOpen, collapsed: sidebarCollapsed }" aria-label="後台選單">
+            <div class="sidebar-nav">
+                <template v-for="(menu, idx) in navMenu" :key="idx">
+                    <template v-if="menu.sub && menu.sub.length">
+                        {# 子項展開可見時只亮子項;收合(手風琴閉合或側欄折疊)才亮母項,避免子母同時選中 #}
+                        <button @click="onGroupClick(idx, menu, $event)" type="button"
+                                :class="['menu-item', 'submenu-toggle', isMenuOpen(idx) ? 'open' : '', (isGroupActive(menu) && (sidebarCollapsed || !isMenuOpen(idx))) ? 'active' : '']">
+                            <span class="menu-left">
+                                <i :data-lucide="menu.icon" aria-hidden="true"></i>
+                                <span class="menu-text">[[ menu.title ]]</span>
+                            </span>
+                            <i data-lucide="chevron-down" class="menu-caret" aria-hidden="true"></i>
+                        </button>
+                        <div :class="['submenu', isMenuOpen(idx) ? 'show' : '']">
+                            <div class="submenu-inner">
+                                <a v-for="sub in menu.sub" :key="sub.key" :href="sub.url"
+                                   :class="['menu-item', 'submenu-item', sub.key === activeKey ? 'active' : '']">
+                                    <span class="menu-text">[[ sub.title ]]</span>
+                                </a>
+                            </div>
+                        </div>
+                    </template>
+                    <a v-else :href="menu.url"
+                       :class="['menu-item', menu.key === activeKey ? 'active' : '']">
+                        <i :data-lucide="menu.icon" aria-hidden="true"></i>
+                        <span class="menu-text">[[ menu.title ]]</span>
+                    </a>
+                </template>
+            </div>
+            <div class="sidebar-toggle">
+                <button class="toggle-btn" @click="toggleCollapse" :title="sidebarCollapsed ? '展開側邊欄' : '收合側邊欄'">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <rect class="panel-left-fill" x="3" y="3" width="6" height="18" rx="2" fill="currentColor" stroke="none"/>
+                        <path d="M9 3v18"/>
+                    </svg>
+                    <span class="sr-only">Toggle sidebar</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="sidebar-overlay" :class="{ show: sidebarOpen }" @click="closeSidebar" aria-hidden="true"></div>
+
+        <!-- 收合時：點群組圖示跳出子項浮窗（uikit cms-flyout） -->
+        <transition name="flyout">
+            <div v-if="flyout.open" v-cloak class="cms-flyout" :style="{ top: flyout.top + 'px', left: flyout.left + 'px' }">
+                <div class="cms-flyout-title">[[ flyout.title ]]</div>
+                <a v-for="sub in flyout.items" :key="sub.key" :href="sub.url"
+                   :class="['cms-flyout-item', sub.key === activeKey ? 'active' : '']">
+                    <span>[[ sub.title ]]</span>
+                </a>
+            </div>
+        </transition>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div id="bm-flash" class="b-toast-wrap" role="status" aria-live="polite">
+            {% for category, message in messages %}
+            <div class="b-toast b-toast-{{ 'success' if category == 'success' else ('warning' if category == 'warning' else 'danger') }}">
+                <span class="b-toast-icon" aria-hidden="true">
+                    <i data-lucide="{{ 'circle-check' if category == 'success' else ('triangle-alert' if category == 'warning' else 'circle-x') }}"></i>
+                </span>
+                <span class="b-toast-msg">{{ message }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        <script>
+            (function () {
+                var wrap = document.getElementById('bm-flash');
+                if (!wrap) return;
+                var toasts = wrap.querySelectorAll('.b-toast');
+                Array.prototype.forEach.call(toasts, function (t, i) {
+                    t.style.animationDelay = (i * 0.12) + 's';
+                    t.addEventListener('animationend', function () {
+                        t.remove();
+                        if (!wrap.children.length) wrap.remove();
+                    });
+                });
+                function paintIcons() { if (window.renderLucideIcons) window.renderLucideIcons(); }
+                if (window.renderLucideIcons) paintIcons();
+                else window.addEventListener('load', paintIcons);
+            })();
+        </script>
+        {% endif %}
+        {% endwith %}
+
+        <main id="main-content" class="main-content {% block main_modifier %}{% endblock %}" tabindex="-1">
+            <div class="page-header">
+                <h1 class="page-title">{% block page_title %}後台管理{% endblock %}</h1>
+                <div class="page-actions">{% block page_actions %}{% endblock %}</div>
+            </div>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        window.__NAV = {{ nav_items|tojson }};
+        window.__ACTIVE = {{ active|tojson }};
+        window.renderLucideIcons = function () {
+            if (!window.lucide || !window.lucide.createIcons) return;
+            window.lucide.createIcons({ attrs: { 'stroke-width': 2.2, 'aria-hidden': 'true' } });
+        };
+
+        /* b-seg.is-pill 滑塊定位（kit pageInit.billing 的做法：量 active 選項實寬設 --thumb-w/--thumb-x） */
+        window.bSegThumb = function (seg, animate) {
+            if (!seg) return;
+            var thumb = seg.querySelector('.b-seg-thumb');
+            var activeEl = seg.querySelector('.active');
+            if (!thumb || !activeEl) return;
+            if (!animate) seg.classList.add('no-anim');
+            /* thumb 自帶 left 基準，位移只補「選項 offsetLeft 與基準的差」（kit 原式多算 4px，左右上下留白才會不一致） */
+            var baseLeft = parseFloat(getComputedStyle(thumb).left) || 0;
+            seg.style.setProperty('--thumb-w', activeEl.offsetWidth + 'px');
+            seg.style.setProperty('--thumb-x', (activeEl.offsetLeft - baseLeft) + 'px');
+            /* V2 規則：主項（data-thumb-solid）實色滑塊白字，其餘淡紫滑塊紫字 */
+            seg.classList.toggle('is-thumb-solid', activeEl.hasAttribute('data-thumb-solid'));
+            if (!animate) {
+                void thumb.offsetWidth;   /* 強制 reflow，首次定位不滑動 */
+                requestAnimationFrame(function () { seg.classList.remove('no-anim'); });
+            }
+        };
+        window.addEventListener('resize', function () {
+            document.querySelectorAll('.b-seg.is-pill').forEach(function (seg) { window.bSegThumb(seg, false); });
+        });
+
+        Vue.createApp({
+            delimiters: ['[[', ']]'],
+            data() {
+                return {
+                    sidebarOpen: false,
+                    sidebarCollapsed: localStorage.getItem('sidebarCollapsed') === 'true',
+                    headerUserOpen: false,
+                    colorMode: document.documentElement.getAttribute('data-color-mode') === 'dark' ? 'dark' : 'light',
+                    fontLevel: ({ sm: 0, lg: 2 })[document.documentElement.getAttribute('data-fs')] ?? 1,
+                    fsOpen: false,
+                    navMenu: window.__NAV || [],
+                    activeKey: window.__ACTIVE || '',
+                    openMenus: {},
+                    flyout: { open: false, idx: null, title: '', items: [], top: 0, left: 0 }
+                };
+            },
+            created() {
+                /* 含當前頁的群組預設展開（手風琴 single-open） */
+                var self = this;
+                this.navMenu.forEach(function (m, i) {
+                    if (m.sub && m.sub.some(function (s) { return s.key === self.activeKey; })) {
+                        self.openMenus = {}; self.openMenus[i] = true;
+                    }
+                });
+                document.addEventListener('click', this.onDocClick);
+            },
+            mounted() {
+                this.refreshIcons();
+            },
+            methods: {
+                refreshIcons() { this.$nextTick(function () { window.renderLucideIcons(); }); },
+                toggleSidebar() { this.sidebarOpen = !this.sidebarOpen; },
+                closeSidebar() { this.sidebarOpen = false; },
+                toggleCollapse() {
+                    this.sidebarCollapsed = !this.sidebarCollapsed;
+                    this.flyout.open = false;
+                    localStorage.setItem('sidebarCollapsed', String(this.sidebarCollapsed));
+                },
+                isMenuOpen(idx) { return !!this.openMenus[idx]; },
+                isGroupActive(menu) {
+                    var self = this;
+                    return (menu.sub || []).some(function (s) { return s.key === self.activeKey; });
+                },
+                onGroupClick(idx, menu, e) {
+                    /* uikit 註記：stopPropagation 避免 lucide 重繪讓 document click 的 closest() 失效 */
+                    e.stopPropagation();
+                    if (this.sidebarCollapsed && !this.sidebarOpen) {
+                        if (this.flyout.open && this.flyout.idx === idx) { this.flyout.open = false; return; }
+                        var r = e.currentTarget.getBoundingClientRect();
+                        this.flyout = {
+                            open: true, idx: idx, title: menu.title, items: menu.sub,
+                            top: Math.min(r.top, window.innerHeight - 200), left: r.right + 10
+                        };
+                        return;
+                    }
+                    var next = {};
+                    if (!this.openMenus[idx]) next[idx] = true;   /* single-open 手風琴 */
+                    this.openMenus = next;
+                },
+                toggleHeaderUser() {
+                    this.headerUserOpen = !this.headerUserOpen;
+                    /* 下拉是動態出現的，lucide 要重呼才會渲染（kit 已知坑） */
+                    if (this.headerUserOpen) this.$nextTick(function () { window.renderLucideIcons(); });
+                },
+                toggleFsPanel() { this.fsOpen = !this.fsOpen; },
+                /* 柔和過場（kit softApply）：暫掛 .b-mode-anim 開全域 transition，500ms 後移除；尊重減少動態偏好 */
+                softApply(fn) {
+                    const root = document.documentElement;
+                    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                        fn();
+                    } else {
+                        root.classList.add('b-mode-anim');
+                        clearTimeout(this._modeAnimT);
+                        const apply = () => {
+                            fn();
+                            this._modeAnimT = setTimeout(() => root.classList.remove('b-mode-anim'), 500);
+                        };
+                        if (window.requestAnimationFrame) {
+                            requestAnimationFrame(() => requestAnimationFrame(apply));
+                        } else {
+                            apply();
+                        }
+                    }
+                },
+                onFsInput(e) {
+                    var level = Number(e.target.value);
+                    this.fontLevel = level;
+                    var val = ({ 0: 'sm', 2: 'lg' })[level];
+                    this.softApply(function () {
+                        if (val) {
+                            document.documentElement.setAttribute('data-fs', val);
+                            localStorage.setItem('bAdminFontSize', val);
+                        } else {
+                            document.documentElement.removeAttribute('data-fs');
+                            localStorage.removeItem('bAdminFontSize');
+                        }
+                    });
+                },
+                toggleColorMode() {
+                    var self = this;
+                    this.softApply(function () {
+                        self.colorMode = self.colorMode === 'dark' ? 'light' : 'dark';
+                        if (self.colorMode === 'dark') {
+                            document.documentElement.setAttribute('data-color-mode', 'dark');
+                        } else {
+                            document.documentElement.removeAttribute('data-color-mode');
+                        }
+                        localStorage.setItem('bAdminColorMode', self.colorMode);
+                    });
+                },
+                onDocClick(e) {
+                    /* uikit 註記：面板容器要 @click.stop，避免 lucide 重繪讓 closest() 失效 */
+                    this.headerUserOpen = false;
+                    this.fsOpen = false;
+                    this.flyout.open = false;
+                }
+            }
+        }).mount('#app');
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

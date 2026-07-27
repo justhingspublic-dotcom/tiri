@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}儀表板{% endblock %}
+{% block page_title %}儀表板{% endblock %}
+{% block main_modifier %}is-dashboard{% endblock %}
+
+{% block content %}
+<div class="b-kpi-grid">
+    <div class="b-kpi">
+        <div class="b-kpi-head"><span class="b-kpi-label">累計收件</span>
+            <span class="b-kpi-icon"><i data-lucide="inbox" aria-hidden="true"></i></span></div>
+        <div class="b-kpi-value num">{{ total }}</div>
+    </div>
+    <div class="b-kpi">
+        <div class="b-kpi-head"><span class="b-kpi-label">今日收件</span>
+            <span class="b-kpi-icon"><i data-lucide="calendar-check" aria-hidden="true"></i></span></div>
+        <div class="b-kpi-value num">{{ today_n }}</div>
+    </div>
+    <div class="b-kpi">
+        <div class="b-kpi-head"><span class="b-kpi-label">近 7 日收件</span>
+            <span class="b-kpi-icon"><i data-lucide="calendar-range" aria-hidden="true"></i></span></div>
+        <div class="b-kpi-value num">{{ week_n }}</div>
+    </div>
+    <div class="b-kpi">
+        <div class="b-kpi-head"><span class="b-kpi-label">通知信失敗</span>
+            <span class="b-kpi-icon"><i data-lucide="mail-x" aria-hidden="true"></i></span></div>
+        <div class="b-kpi-value num">{{ fail_n }}</div>
+    </div>
+</div>
+
+<div class="b-dash-grid">
+    <section class="b-card b-dash-main" style="overflow:hidden;">
+        <div class="b-card-head">
+            <h2 class="b-card-title">最近收件</h2>
+            <a href="/admin/inbox" class="b-btn b-btn-ghost b-btn-sm">
+                查看全部 <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        {% if recent %}
+        <div class="b-tbl-wrap" style="border:0;border-radius:0;box-shadow:none;">
+            <table class="b-tbl">
+                <thead>
+                    <tr><th style="width:150px">時間</th><th style="width:130px">表單</th><th>摘要</th><th style="width:110px">通知信</th></tr>
+                </thead>
+                <tbody>
+                    {% for r in recent %}
+                    <tr>
+                        <td class="num">{{ r.submitted_at }}</td>
+                        <td><span class="b-badge brand">{{ r.form_name }}</span></td>
+                        <td>{{ r.fields[:2] | map(attribute='value') | select | join('・') or '—' }}</td>
+                        <td>
+                            {% if r.mail_status == 'sent' %}
+                            <span class="b-badge ok"><span class="dot"></span>已寄出</span>
+                            {% elif r.mail_status == 'dry-run' %}
+                            <span class="b-badge neutral"><span class="dot"></span>測試(未寄)</span>
+                            {% else %}
+                            <span class="b-badge bad"><span class="dot"></span>失敗</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="b-empty">
+            <span class="b-empty-icon"><i data-lucide="inbox" aria-hidden="true"></i></span>
+            <p class="b-empty-title">還沒有收件</p>
+            <p class="b-empty-sub">前台表單有人填寫後，最新資料會列在這裡。</p>
+        </div>
+        {% endif %}
+    </section>
+
+    <aside class="b-dash-side">
+        <section class="b-card" style="overflow:hidden;">
+            <div class="b-card-head"><h2 class="b-card-title">各表單收件</h2></div>
+            <div class="b-occ">
+                {% for f in form_stats %}
+                <div class="b-occ-row">
+                    <div class="b-occ-head">
+                        <span class="b-occ-name">{{ f.name }}</span>
+                        <span class="b-occ-val num">{{ f.count }} 筆（{{ f.pct }}%）</span>
+                    </div>
+                    <div class="b-occ-track">
+                        <div class="b-occ-fill" style="width: {{ f.pct }}%;"></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="b-card" style="overflow:hidden;">
+            <div class="b-card-head"><h2 class="b-card-title">通知信狀態</h2></div>
+            <div class="b-todo {{ 'is-alert' if dry else 'is-zero' }}">
+                <span class="b-todo-label"><i data-lucide="flask-conical" aria-hidden="true"></i>測試模式</span>
+                <span class="b-todo-num">{{ '開' if dry else '關' }}</span>
+            </div>
+            <div class="b-todo {{ 'is-alert' if not mail_to else 'is-zero' }}">
+                <span class="b-todo-label"><i data-lucide="mail-check" aria-hidden="true"></i>通知收件人</span>
+                <span class="b-todo-num" style="font-size:13px">{{ mail_to or '未設定' }}</span>
+            </div>
+            <div class="b-todo {{ 'is-alert' if fail_n else 'is-zero' }}">
+                <span class="b-todo-label"><i data-lucide="mail-x" aria-hidden="true"></i>寄送失敗</span>
+                <span class="b-todo-num">{{ fail_n }}</span>
+            </div>
+        </section>
+    </aside>
+</div>
+{% endblock %}
