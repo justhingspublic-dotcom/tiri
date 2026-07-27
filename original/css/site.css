@@ -228,3 +228,20 @@ textarea:focus-visible {
     transform: translateY(-50%);
   }
 }
+
+/* 表單提交按鈕：theme.css 經 @import 先載，legacy.css 的舊灰色雪碧圖規則
+   會蓋掉紫色背景（變成白字透明底而隱形），在此還原 Weebly 主題按鈕外觀 */
+.wsite-button,
+.wsite-button-normal {
+  background: #8640ae;
+  transition: background-color 0.2s ease-out;
+  display: inline-block;
+  height: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.wsite-button:hover,
+.wsite-button:active {
+  background: #693289;
+}
