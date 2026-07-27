@@ -5,10 +5,7 @@
 {# 固定高＋頁級分頁（照 kit slots 頁模式）：整頁不捲，捲動只發生在當前 panel 內 #}
 {% block main_modifier %}is-settings-fixed{% endblock %}
 
-{% block page_actions %}
-{# 儲存鈕移到 page-header：固定不捲、任何 tab 都能按；form 屬性關聯同一張表單（欄位/payload 不變） #}
-<button id="save-btn" form="settings-form" class="b-btn b-btn-text" type="submit" disabled>儲存設定</button>
-{% endblock %}
+{# 儲存鈕放在各 tab 對應卡片的右下角（使用者裁決）；兩顆都送同一張表單 #}
 
 {% block extra_css %}
 <style>
@@ -27,11 +24,11 @@
     .set-panel[hidden] { display: none !important; }    /* Tailwind display 蓋 hidden 的坑 */
     .set-panel:not([hidden]) { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 
-    /* ── Tab 2：左清單右表單 master-detail ── */
-    .set-panel[data-panel="copy"]:not([hidden]) { display: flex; overflow: hidden; }
-    .copy-card { flex: 1 1 auto; min-height: 0; display: flex; overflow: hidden; }
+    /* ── Tab 2：左清單右表單 master-detail（卡片自然高度、不撐滿；超高時整卡在 panel 內捲） ── */
+    .copy-card { display: flex; flex-direction: column; }
+    .copy-body { display: flex; }
     .tpl-list {
-        flex: 0 0 220px; min-height: 0; overflow-y: auto;
+        flex: 0 0 220px;
         display: flex; flex-direction: column; gap: 2px;
         padding: 14px; border-right: 1px solid var(--border-default);
     }
@@ -45,7 +42,7 @@
     .tpl-item:hover { background: var(--neutral-secondary-medium); color: var(--text-heading); }
     .tpl-item.active { background: var(--brand-softer); color: var(--fg-brand); font-weight: 500; }
     [data-color-mode="dark"] .tpl-item.active { background: var(--brand); color: var(--b-on-primary); }
-    .tpl-detail { flex: 1 1 auto; min-width: 0; min-height: 0; overflow-y: auto; padding: 20px; }
+    .tpl-detail { flex: 1 1 auto; min-width: 0; padding: 20px; }
     .tpl-panel[hidden] { display: none !important; }
 
     /* ── 欄位共用 ── */
@@ -125,6 +122,9 @@
                         <div class="hint">{{ pw_hint }}</div>
                     </div>
                 </div>
+                <div class="flex justify-end" style="padding: 0 20px 20px;">
+                    <button class="b-btn b-btn-text save-btn" type="submit" disabled>儲存設定</button>
+                </div>
             </section>
 
             <section class="b-card flex flex-col" style="overflow:hidden;">
@@ -159,6 +159,7 @@
     {# ══ Tab 2：通知信文案（左清單右表單；全部欄位常駐 DOM，切換只藏顯示） ══ #}
     <div class="set-panel" data-panel="copy" hidden>
         <section class="b-card copy-card">
+            <div class="copy-body">
             <aside class="tpl-list" role="tablist" aria-label="表單範本">
                 {% for c in mail_copy %}
                 <button type="button" class="tpl-item{{ ' active' if loop.first }}" data-tpl="{{ c.slug }}">{{ c.name }}</button>
@@ -183,6 +184,10 @@
                 </div>
                 {% endfor %}
             </div>
+            </div>
+            <div class="flex justify-end" style="padding: 0 20px 20px;">
+                <button class="b-btn b-btn-text save-btn" type="submit" disabled>儲存設定</button>
+            </div>
         </section>
     </div>
 </form>
@@ -192,16 +197,19 @@
 <script>
     (function () {
         var form = document.getElementById('settings-form');
-        var save = document.getElementById('save-btn');
+        var saves = document.querySelectorAll('.save-btn');
 
-        /* ── 儲存鈕：有改過才可以按 ── */
+        /* ── 儲存鈕（兩顆同步）：有改過才可以按 ── */
         function snap() {
             return Array.prototype.filter.call(form.elements, function (el) { return el.name; })
                 .map(function (el) { return el.name + '=' + (el.type === 'checkbox' ? el.checked : el.value); })
                 .join('&');
         }
         var baseline = snap();
-        function update() { save.disabled = (snap() === baseline); }
+        function update() {
+            var clean = (snap() === baseline);
+            saves.forEach(function (b) { b.disabled = clean; });
+        }
         form.addEventListener('input', update);
         form.addEventListener('change', update);
 
