@@ -12,6 +12,41 @@
   --shadow-md: none; --shadow-lg: none; --shadow-xl: none; --shadow-2xl: none;
 }
 
+/* ── 例外：浮層（面板/下拉）帶一點點陰影（使用者裁決 2026-07-28）──
+   卡片/按鈕維持全平；只有「浮在內容上方」的層級給極輕陰影撐出前後關係。 */
+:root { --float-shadow: 0 6px 20px rgba(23, 20, 31, .08), 0 1px 4px rgba(23, 20, 31, .05); }
+html:root[data-color-mode="dark"] { --float-shadow: 0 6px 20px rgba(0, 0, 0, .40), 0 1px 4px rgba(0, 0, 0, .30); }
+.b-pop-panel,          /* 篩選等頁首下拉面板 */
+.b-menu,               /* 動作菜單 */
+.b-dd-menu,            /* 自訂下拉選單 */
+.b-ctxmenu,            /* 指標旁 context menu */
+.header-user-menu,     /* 右上帳號/登出選單 */
+.header-fs-panel,      /* Aa 字級面板 */
+.cms-flyout {          /* 側欄收合浮窗 */
+  box-shadow: var(--float-shadow) !important;
+}
+
+/* ── 文字類按鈕 hover＝文字亮起主題色、不加底色（使用者裁決 2026-07-28，全後台統一）──
+   蓋掉 kit 的 hover 淡紫/淡灰底。選擇器用 .b-btn 前綴墊特異度（brand.css 載入在 b_admin.css 之前）。 */
+.b-btn.b-btn-text:hover { background: transparent; color: var(--fg-brand-strong); }
+.b-btn.b-btn-text-danger:hover { background: transparent; }
+.b-btn.b-btn-ghost:hover { background: transparent; color: var(--fg-brand); }
+.b-btn.b-btn-ghost:hover :where(i, .lucide, svg) { color: var(--fg-brand); }
+.b-btn.b-btn-quiet:hover { background: transparent; color: var(--fg-brand); }
+.b-btn.b-btn-quiet:hover :where(i, .lucide, svg) { color: var(--fg-brand); }
+
+/* ── 深色模式：modal 補一圈淺外框（深底上白卡變深卡、與遮罩融在一起 → 需要輪廓）── */
+html:root[data-color-mode="dark"] .b-modal { border: 1px solid rgba(255, 255, 255, .12); }
+
+/* ── iOS 平滑圓角（使用者裁決 2026-07-28）──
+   corner-shape: squircle＝連續曲率圓角（同 iOS app icon）。漸進增強：
+   新版 Chromium 生效，Safari 尚未支援則維持標準圓角。圓形元素排除，避免變成方圓形。 */
+@supports (corner-shape: squircle) {
+  *, *::before, *::after { corner-shape: squircle; }
+  .header-user-avatar, .gm-dot, .b-badge .dot,
+  input[type="radio"], input[type="checkbox"] { corner-shape: round; }
+}
+
 /* ── 深色模式收斂 ──
    kit 預設的深色 brand 家族把彩度乘 1.5（配他們低彩度深綠剛好），
    茄紫本身彩度高、乘完會變螢光刺眼 → 這裡改用降彩度/收亮度的相對色。

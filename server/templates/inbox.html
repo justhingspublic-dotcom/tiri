@@ -4,7 +4,45 @@
 
 {% block main_modifier %}is-fixed-h{% endblock %}
 
+{# 頁首動作槽（kit 模式）：搜尋＋篩選面板＋匯出，全在標題同一行 #}
 {% block page_actions %}
+<div class="tool-search">
+    <i data-lucide="search" class="search-ico" aria-hidden="true"></i>
+    <input type="search" id="inbox-q" placeholder="搜尋收件內容" aria-label="搜尋收件內容">
+</div>
+<div class="b-pop" id="filter-pop">
+    <button type="button" class="b-btn" id="filter-btn" aria-haspopup="true" aria-expanded="false">
+        <i data-lucide="sliders-horizontal" aria-hidden="true"></i> 篩選
+        <i data-lucide="chevron-down" class="b-pop-caret" aria-hidden="true"></i>
+    </button>
+    <div class="b-pop-panel" role="group" aria-label="篩選條件">
+        <p class="b-pop-panel-title">篩選條件</p>
+        <div class="grid gap-y-4">
+            <div class="set-field">
+                <label class="b-label" for="filter-status">通知信狀態</label>
+                <select id="filter-status">
+                    <option value="">全部狀態</option>
+                    <option value="sent">已寄出</option>
+                    <option value="dry-run">測試(未寄)</option>
+                    <option value="error">寄送失敗</option>
+                </select>
+            </div>
+            <div class="set-field">
+                <label class="b-label" for="filter-date">日期範圍</label>
+                <select id="filter-date">
+                    <option value="">全部時間</option>
+                    <option value="today">今天</option>
+                    <option value="7">近 7 天</option>
+                    <option value="30">近 30 天</option>
+                </select>
+            </div>
+            <div class="flex justify-between items-center">
+                <button type="button" class="b-btn b-btn-ghost" id="filter-clear">清除</button>
+                <button type="button" class="b-btn b-btn-primary" id="filter-apply">套用</button>
+            </div>
+        </div>
+    </div>
+</div>
 <a id="export-btn" class="b-btn b-btn-quiet" href="/admin/export.csv?form={{ slug }}">
     <i data-lucide="download" aria-hidden="true"></i> 匯出 CSV
 </a>
@@ -12,102 +50,379 @@
 
 {% block extra_css %}
 <style>
-    /* 內容欄：label/value 兩層排列（頁內樣式，全部吃 token） */
-    .sub-fields { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 6px 20px; }
-    .sub-fields > div { min-width: 0; overflow-wrap: anywhere; }
-    .sub-fields b { display: block; font-size: 12px; font-weight: 500; color: var(--text-body-subtle); }
-    .sub-fields span { font-size: 13.5px; color: var(--text-body); }
+    /* ── 分類 segment：釘在列表卡頂端，捲動時不消失 ──
+       使用者裁決：去掉 segment 自己的外框底盒（卡框＋分隔線已夠，框線太多）、
+       選項均分整寬、選中滑塊高度/圓角對齊工具列（36px / --field-radius）。 */
+    .gm-tabs {
+        position: sticky; top: 0; z-index: 5;
+        padding: 8px 10px;
+        background: var(--neutral-primary-soft);
+        border-bottom: 1px solid var(--border-default);
+    }
+    .gm-tabs .b-seg.is-pill {
+        display: flex; width: 100%; box-sizing: border-box;
+        padding: 0; border: 0; background: transparent; gap: 4px;
+    }
+    .gm-tabs .b-seg.is-pill a {
+        flex: 1 1 0; min-width: 0; height: 36px; padding: 0 8px;
+        border-radius: var(--field-radius);
+        font-size: calc(14px + var(--b-fs-boost, 0px));
+        font-weight: 600;   /* 分類標題用粗體（使用者裁決） */
+    }
+    .gm-tabs .b-seg.is-pill .b-seg-thumb {
+        top: 0; bottom: 0; left: 0;
+        border-radius: var(--field-radius);
+    }
+
+    /* 空狀態在卡片內：hidden 要贏過 kit 對 .b-empty 的 display 設定 */
+    #inbox-empty { padding: 40px 20px; }
+    #inbox-empty[hidden] { display: none !important; }
+
+    /* ── Gmail 式列表（.b-tbl-scroll 提供卡框＋內滾；這裡只管列） ── */
+    .gm-row {
+        display: flex; align-items: center; gap: 14px;
+        width: 100%; padding: 0 18px; height: 52px; box-sizing: border-box;
+        border: 0; border-top: 1px solid var(--border-default);
+        background: transparent; font: inherit; text-align: left; cursor: pointer;
+    }
+    /* 頂線由 JS 標記「第一個可見列」移除——:first-child 在篩選藏列後會跟卡框頂線疊成粗線 */
+    .gm-row.is-first { border-top: 0; }
+    .gm-row:hover { background: var(--neutral-secondary-medium); }
+    .gm-row:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--brand-medium); }
+    .gm-row[hidden] { display: none; }
+    .gm-badge { flex: 0 0 122px; }
+    .gm-name {
+        flex: 0 0 150px; min-width: 0;
+        font-size: calc(14px + var(--b-fs-boost, 0px)); font-weight: 600; color: var(--text-heading);
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .gm-snip {
+        flex: 1 1 auto; min-width: 0;
+        font-size: calc(13.5px + var(--b-fs-boost, 0px)); color: var(--text-body-subtle);
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .gm-snip .pair { margin-right: 14px; }
+    .gm-snip b { font-weight: 600; color: var(--text-body); }   /* 欄位標題粗體（使用者裁決） */
+    /* 通知信狀態只在「寄送失敗」時亮紅點（使用者裁決：正常不顯示，紅點才醒目）；完整狀態在 modal */
+    .gm-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--danger); }
+
+    /* ── 頁首動作槽的搜尋框（篩選鈕＋匯出沿用 kit .b-btn） ── */
+    .tool-search { position: relative; }
+    /* ⚠️ 特異度要壓過 kit 的 .main-content input[type=search]（padding 帶 !important）——
+       用 .page-actions 前綴墊高，否則放大鏡會疊到 placeholder。白底＝本專案輸入框裁決。 */
+    .page-actions .tool-search input[type="search"] {
+        width: 210px;
+        padding-left: 34px !important;
+        background: var(--neutral-primary-soft);
+    }
+    .tool-search .search-ico {
+        position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+        width: 15px; height: 15px; color: var(--text-body-subtle); pointer-events: none;
+    }
+    /* 篩選啟用中：按鈕 icon＋文字變 brand 色（不用數字徽章——使用者裁決） */
+    #filter-btn.is-active { color: var(--fg-brand); }
+    #filter-btn.is-active :where(i, .lucide, svg) { color: var(--fg-brand); }
+    .set-field .b-label { display: block; margin-bottom: 5px; }
+    .b-btn.b-btn-text:disabled { background: transparent; color: var(--fg-disabled, var(--text-body-subtle)); cursor: default; }
+    .gm-time {
+        flex: 0 0 88px; text-align: right;
+        font-size: calc(12.5px + var(--b-fs-boost, 0px)); color: var(--text-body-subtle);
+        font-variant-numeric: tabular-nums;
+    }
+
+    /* ── 詳情 modal：橫扁版（kit 最寬 is-wide=640，這裡加頁級修飾拉到 880 貼合電腦螢幕） ── */
+    .b-modal.is-inbox { max-width: 880px; }
+
+    /* 開闔動畫改 @keyframes（kit #b-cell-modal 同款做法）：動畫綁在 display 切換瞬間自動播放，
+       不靠兩段式 class——transition 版在真瀏覽器首次開啟會直接跳終態（display 與 opacity 同幀）。 */
+    #inbox-modal.is-visible { opacity: 1; animation: im-overlay-in .15s ease-out both; }
+    #inbox-modal.is-visible .b-modal { animation: im-modal-in .15s ease-out both; }
+    #inbox-modal.is-visible.is-closing { animation: im-overlay-out .12s ease-in both; }
+    #inbox-modal.is-visible.is-closing .b-modal { animation: none; }
+    @keyframes im-overlay-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes im-modal-in { from { opacity: 0; transform: scale(.98); } to { opacity: 1; transform: scale(1); } }
+    @keyframes im-overlay-out { from { opacity: 1; } to { opacity: 0; } }
+    .im-status { display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+                 font-size: calc(13.5px + var(--b-fs-boost, 0px)); color: var(--text-body-subtle); }
+    /* 欄位改兩欄並排壓低高度（與通知信同語言：名稱淡底在左、內容在右） */
+    .im-grid {
+        display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+        border: 1px solid var(--border-default); border-radius: 8px; overflow: hidden;
+        font-size: calc(14px + var(--b-fs-boost, 0px)); line-height: 1.6;
+    }
+    .im-cell { display: flex; min-width: 0; border-top: 1px solid var(--border-default); }
+    .im-cell:nth-child(-n+2) { border-top: 0; }
+    .im-cell:nth-child(2n) { border-left: 1px solid var(--border-default); }
+    .im-cell:last-child:nth-child(odd) { grid-column: 1 / -1; }   /* 奇數個時最後一格跨滿 */
+    .im-cell b {
+        flex: 0 0 118px; padding: 8px 12px; box-sizing: border-box;
+        background: var(--neutral-secondary-medium);
+        border-right: 1px solid var(--border-default);
+        font-size: calc(13px + var(--b-fs-boost, 0px)); font-weight: 600; color: var(--text-body-subtle);
+    }
+    .im-cell span {
+        flex: 1 1 auto; min-width: 0; padding: 8px 12px;
+        color: var(--text-body); overflow-wrap: anywhere; white-space: pre-wrap;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
-{# 表單篩選：b-seg is-pill 膠囊滑塊；切換在前端過濾（不重載頁面，滑塊平滑滑動），URL 同步 ?form= #}
-<div style="margin-bottom: 16px;">
-    <div class="b-seg is-pill" id="inbox-seg">
-        <span class="b-seg-thumb" aria-hidden="true"></span>
-        {% for f in filters %}
-        <a href="/admin/inbox{{ '?form=' + f.slug if f.slug }}" data-filter="{{ f.slug }}"
-           {{ 'data-thumb-solid' if not f.slug }} class="{{ 'active' if f.slug == slug }}">{{ f.name }}
-            <span style="opacity:.65;font-size:12.5px">{{ f.count }}</span></a>
-        {% endfor %}
-    </div>
-</div>
-{# uikit 內滾機制：.b-tbl-scroll 為 .main-content.is-fixed-h 直接子項，吃剩餘高、thead sticky #}
-<div class="b-tbl-scroll" id="inbox-scroll" {{ 'hidden' if not rows }}>
-    <table class="b-tbl">
-        <thead>
-            <tr><th style="width:150px">時間</th><th style="width:140px">表單</th><th>內容</th><th style="width:110px">通知信</th></tr>
-        </thead>
-        <tbody>
-            {% for r in rows %}
-            <tr data-slug="{{ r.form_slug.split('-')[0] }}">
-                <td class="num">#{{ r.id }}<br>{{ r.submitted_at }}</td>
-                <td><span class="b-badge brand">{{ r.form_name }}</span></td>
-                <td>
-                    <div class="sub-fields">
-                        {% for f in r.fields %}
-                        <div><b>{{ f.label }}</b><span>{{ f.value or '—' }}</span></div>
-                        {% endfor %}
-                    </div>
-                </td>
-                <td>
-                    {% if r.mail_status == 'sent' %}
-                    <span class="b-badge ok"><span class="dot"></span>已寄出</span>
-                    {% elif r.mail_status == 'dry-run' %}
-                    <span class="b-badge neutral"><span class="dot"></span>測試(未寄)</span>
-                    {% else %}
-                    <span class="b-badge bad"><span class="dot"></span>失敗</span>
-                    {% endif %}
-                </td>
-            </tr>
+{# uikit 內滾機制：.b-tbl-scroll 為 .main-content.is-fixed-h 直接子項，吃剩餘高（卡框由它提供） #}
+<div class="b-tbl-scroll" id="inbox-scroll">
+    {# 表單分類 segment：貼在列表頂端（Gmail 分頁同位置）、sticky 捲動不消失；互動與樣式沿用 kit #}
+    <div class="gm-tabs">
+        <div class="b-seg is-pill" id="inbox-seg">
+            <span class="b-seg-thumb" aria-hidden="true"></span>
+            {% for f in filters %}
+            <a href="/admin/inbox{{ '?form=' + f.slug if f.slug }}" data-filter="{{ f.slug }}"
+               {{ 'data-thumb-solid' if not f.slug }} class="{{ 'active' if f.slug == slug }}">{{ f.name }}
+                <span style="opacity:.65;font-size:12.5px">{{ f.count }}</span></a>
             {% endfor %}
-        </tbody>
-    </table>
-</div>
-<section class="b-card" id="inbox-empty" {{ 'hidden' if rows }}>
-    <div class="b-empty">
+        </div>
+    </div>
+    {% for r in rows %}
+    <button type="button" class="gm-row" data-slug="{{ r.form_slug.split('-')[0] }}" data-row="{{ loop.index0 }}"
+            data-status="{{ r.mail_status }}" data-date="{{ r.submitted_at[:10] }}"
+            aria-haspopup="dialog" aria-label="{{ r.form_name }}：{{ r.display_name }}">
+        <span class="gm-badge"><span class="b-badge brand">{{ r.form_name }}</span></span>
+        <span class="gm-name">{{ r.display_name }}</span>
+        <span class="gm-snip">
+            {%- for f in r.snippet -%}
+            <span class="pair"><b>{{ f.label }}</b>：{{ f.value }}</span>
+            {%- endfor -%}
+        </span>
+        {% if r.mail_status not in ('sent', 'dry-run') %}
+        <span class="gm-dot" title="通知信寄送失敗"></span>
+        {% endif %}
+        <span class="gm-time">{{ r.submitted_at[5:16] }}</span>
+    </button>
+    {# 詳情內容：伺服器端先渲染好（Jinja 處理跳脫），點列時複製進 modal。
+       ⚠️ 不能用 <template>——整頁在 Vue 掛載範圍內，in-DOM 編譯會把它解包，改用 hidden div #}
+    <div hidden data-detail="{{ loop.index0 }}"
+         data-title="{{ r.form_name }}"
+         data-sub="#{{ r.id }}｜{{ r.submitted_at }}">
+        <div class="im-status">通知信：
+            {% if r.mail_status == 'sent' %}
+            <span class="b-badge ok"><span class="dot"></span>已寄出</span>
+            {% elif r.mail_status == 'dry-run' %}
+            <span class="b-badge neutral"><span class="dot"></span>測試(未寄)</span>
+            {% else %}
+            <span class="b-badge bad"><span class="dot"></span>失敗</span>
+            {% endif %}
+        </div>
+        <div class="im-grid">
+            {% for f in r.fields %}
+            <div class="im-cell"><b>{{ f.label }}</b><span>{{ f.value or '—' }}</span></div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    {# 空狀態放卡片內（segment 下方）：篩到 0 筆時仍是一體的一張卡，不會斷成兩塊 #}
+    <div class="b-empty" id="inbox-empty" {{ 'hidden' if rows }}>
         <span class="b-empty-icon"><i data-lucide="inbox"></i></span>
         <p class="b-empty-title">目前沒有資料</p>
         <p class="b-empty-desc">有人填寫表單後，資料會出現在這裡。</p>
     </div>
-</section>
+</div>
+
+{# 詳情 modal（kit .b-modal 兩段式淡入；標題/副標/內容由 JS 依列填入） #}
+<div class="b-modal-overlay" id="inbox-modal">
+    <div class="b-modal is-inbox" role="dialog" aria-modal="true" aria-labelledby="im-title">
+        <div class="b-modal-head">
+            <div>
+                <h3 class="b-modal-title" id="im-title"></h3>
+                <p class="b-modal-sub" id="im-sub"></p>
+            </div>
+            <button type="button" class="b-modal-close" id="im-close" aria-label="關閉">
+                <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="b-modal-body" id="im-body"></div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
     (function () {
-        var seg = document.getElementById('inbox-seg');
+        /* ── 統一篩選：表單類型（URL 同步）＋搜尋＋狀態＋日期，條件全部交集 ── */
         var scroll = document.getElementById('inbox-scroll');
         var empty = document.getElementById('inbox-empty');
         var exportBtn = document.getElementById('export-btn');
-        var rows = Array.prototype.slice.call(document.querySelectorAll('tr[data-slug]'));
+        var rows = Array.prototype.slice.call(document.querySelectorAll('.gm-row[data-slug]'));
+        /* 每列可搜尋全文＝列上文字＋詳情內容（含所有欄位值） */
+        var texts = rows.map(function (row) {
+            var det = document.querySelector('[data-detail="' + row.getAttribute('data-row') + '"]');
+            return (row.textContent + ' ' + (det ? det.textContent : '')).toLowerCase();
+        });
 
-        function applyFilter(slug, push) {
+        var state = { slug: {{ slug|tojson }}, q: '', status: '', date: '' };
+
+        function dateCutoff(days) {
+            var d = new Date();
+            d.setDate(d.getDate() - (days - 1));   /* 近 7 天＝含今天往回 7 天 */
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0')
+                 + '-' + String(d.getDate()).padStart(2, '0');
+        }
+        function todayStr() { return dateCutoff(1); }
+
+        function matches(row, i) {
+            if (state.slug && row.getAttribute('data-slug') !== state.slug) return false;
+            var st = row.getAttribute('data-status');
+            if (state.status === 'error' && (st === 'sent' || st === 'dry-run')) return false;
+            if (state.status && state.status !== 'error' && st !== state.status) return false;
+            var d = row.getAttribute('data-date');
+            if (state.date === 'today' && d !== todayStr()) return false;
+            if (state.date && state.date !== 'today' && d < dateCutoff(+state.date)) return false;
+            if (state.q && texts[i].indexOf(state.q) === -1) return false;
+            return true;
+        }
+
+        function applyFilter(push) {
             var visible = 0;
-            rows.forEach(function (tr) {
-                var show = !slug || tr.getAttribute('data-slug') === slug;
-                tr.hidden = !show;
+            rows.forEach(function (row, i) {
+                var show = matches(row, i);
+                row.hidden = !show;
+                row.classList.toggle('is-first', show && visible === 0);  /* 第一個可見列去頂線 */
                 if (show) visible++;
             });
-            scroll.hidden = visible === 0;
+            /* 0 筆時卡片照樣顯示（segment 在卡內，藏掉會沒辦法切分類），空狀態卡出現在下方 */
             empty.hidden = visible !== 0;
-            exportBtn.href = '/admin/export.csv?form=' + slug;
-            if (push) history.pushState({}, '', '/admin/inbox' + (slug ? '?form=' + slug : ''));
+            /* 空狀態文案：整個收件匣空 vs 篩選後沒有符合 */
+            var filtering = state.q || state.status || state.date || state.slug;
+            empty.querySelector('.b-empty-title').textContent =
+                filtering ? '沒有符合條件的資料' : '目前沒有資料';
+            empty.querySelector('.b-empty-desc').textContent =
+                filtering ? '換個關鍵字或放寬篩選條件試試。' : '有人填寫表單後，資料會出現在這裡。';
+            exportBtn.href = '/admin/export.csv?form=' + state.slug;
+            if (push) history.pushState({}, '', '/admin/inbox' + (state.slug ? '?form=' + state.slug : ''));
             if (scroll.scrollTop) scroll.scrollTop = 0;
         }
 
+        /* 搜尋：邊打邊過濾（150ms 防抖） */
+        var qInput = document.getElementById('inbox-q');
+        var qTimer = null;
+        qInput.addEventListener('input', function () {
+            clearTimeout(qTimer);
+            qTimer = setTimeout(function () {
+                state.q = qInput.value.trim().toLowerCase();
+                applyFilter(false);
+            }, 150);
+        });
+
+        /* ── 篩選面板（kit .b-pop）：開闔、外點關閉、條件數徽章、清除 ── */
+        /* ── 分類 segment（列表卡頂端）：原互動——點擊滑塊滑動、前端過濾、URL 同步 ── */
+        var seg = document.getElementById('inbox-seg');
         seg.querySelectorAll('a[data-filter]').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
                 seg.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a === link); });
                 window.bSegThumb(seg, true);          /* 滑塊滑過去 */
-                applyFilter(link.getAttribute('data-filter'), true);
+                state.slug = link.getAttribute('data-filter');
+                applyFilter(true);
             });
         });
+        window.bSegThumb(seg, false);                 /* 首次定位不播動畫 */
 
-        /* 初始：依 ?form= 過濾並定位滑塊（不播動畫） */
-        window.bSegThumb(seg, false);
-        applyFilter({{ slug|tojson }}, false);
+        var pop = document.getElementById('filter-pop');
+        var popBtn = document.getElementById('filter-btn');
+        var clearBtn = document.getElementById('filter-clear');
+        var applyBtn = document.getElementById('filter-apply');
+        var statusSel = document.getElementById('filter-status');
+        var dateSel = document.getElementById('filter-date');
+
+        /* 面板內選擇＝「暫定值」，按「套用」才真的過濾；開面板時把下拉還原成已套用的狀態 */
+        function syncSelectsToState() {
+            statusSel.value = state.status;
+            dateSel.value = state.date;
+            if (window.BDropdown) {
+                window.BDropdown.refresh(statusSel);
+                window.BDropdown.refresh(dateSel);
+            }
+        }
+        function closePop() {
+            pop.classList.remove('is-open');
+            popBtn.setAttribute('aria-expanded', 'false');
+        }
+        popBtn.addEventListener('click', function () {
+            var open = pop.classList.toggle('is-open');
+            popBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (open) syncSelectsToState();
+        });
+        document.addEventListener('click', function (e) {
+            if (pop.classList.contains('is-open') && !e.target.closest('#filter-pop')) closePop();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && pop.classList.contains('is-open')) closePop();
+        });
+
+        function syncFilterUi() {
+            /* 表單分類歸 segment 管，篩選鈕亮起只看面板內的兩個條件 */
+            var active = !!(state.status || state.date);
+            popBtn.classList.toggle('is-active', active);   /* 啟用中：icon＋文字變 brand 色 */
+        }
+        applyBtn.addEventListener('click', function () {
+            state.status = statusSel.value;
+            state.date = dateSel.value;
+            syncFilterUi();
+            applyFilter(false);
+            closePop();
+        });
+        clearBtn.addEventListener('click', function () {
+            statusSel.value = '';
+            dateSel.value = '';
+            if (window.BDropdown) {
+                window.BDropdown.refresh(statusSel);
+                window.BDropdown.refresh(dateSel);
+            }
+            state.status = '';
+            state.date = '';
+            syncFilterUi();
+            applyFilter(false);
+        });
+
+        /* 初始：依 ?form= 過濾（表單類型下拉已由伺服器端 selected 還原） */
+        syncFilterUi();
+        applyFilter(false);
+
+        /* ── 詳情 modal（kit 兩段式：is-visible 進場 → is-open 淡入；關閉反向） ── */
+        var overlay = document.getElementById('inbox-modal');
+        var modal = overlay.querySelector('.b-modal');
+        var lastFocus = null;
+
+        function openModal(idx, trigger) {
+            var det = document.querySelector('[data-detail="' + idx + '"]');
+            if (!det) return;
+            document.getElementById('im-title').textContent = det.getAttribute('data-title');
+            document.getElementById('im-sub').textContent = det.getAttribute('data-sub');
+            document.getElementById('im-body').innerHTML = det.innerHTML;
+            lastFocus = trigger;
+            overlay.classList.remove('is-closing');
+            overlay.classList.add('is-visible');   /* @keyframes 於顯示瞬間自動播放淡入 */
+            document.body.classList.add('b-modal-lock');
+            document.getElementById('im-close').focus();
+        }
+        function closeModal() {
+            overlay.classList.add('is-closing');   /* 淡出 keyframes */
+            setTimeout(function () {
+                overlay.classList.remove('is-visible', 'is-closing');
+                document.body.classList.remove('b-modal-lock');
+                if (lastFocus) lastFocus.focus();
+            }, 130);
+        }
+
+        rows.forEach(function (row) {
+            row.addEventListener('click', function () {
+                openModal(row.getAttribute('data-row'), row);
+            });
+        });
+        document.getElementById('im-close').addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) { if (!modal.contains(e.target)) closeModal(); });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closeModal();
+        });
     })();
 </script>
 {% endblock %}

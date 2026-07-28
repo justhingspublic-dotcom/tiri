@@ -310,13 +310,19 @@ def query_rows(slug):
 
 
 def row_dict(r):
+    fields = [f for f in json.loads(r["fields_json"]) if isinstance(f, dict)]
+    # Gmail 式列表：第一個有值的欄位當「寄件人」（通常是姓名/公司名稱），其餘進摘要
+    idx = next((i for i, f in enumerate(fields) if str(f.get("value", "")).strip()), None)
     return {
         "id": r["id"],
         "submitted_at": r["submitted_at"],
         "form_name": r["form_name"],
         "form_slug": r["form_slug"],
         "mail_status": (r["mail_status"] or "").split(":")[0].strip(),
-        "fields": json.loads(r["fields_json"]),
+        "fields": fields,
+        "display_name": fields[idx]["value"] if idx is not None else "（未填）",
+        "snippet": [f for i, f in enumerate(fields)
+                    if i != idx and str(f.get("value", "")).strip()],
     }
 
 
