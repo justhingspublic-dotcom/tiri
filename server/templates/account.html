@@ -6,6 +6,8 @@
 <style>
     .set-field .b-label { display: block; margin-bottom: 5px; }
     .set-field .hint { margin-top: 5px; font-size: 12.5px; color: var(--text-body-subtle); }
+    .set-field .field-err { margin-top: 5px; font-size: 12.5px; color: var(--fg-danger, #b42318); }
+    .field-err[hidden] { display: none !important; }
     .b-btn.b-btn-text:disabled { background: transparent; color: var(--fg-disabled, var(--text-body-subtle)); cursor: default; }
     .pw-wrap { position: relative; }
     .pw-wrap .b-input { padding-right: 42px; }
@@ -22,70 +24,127 @@
 {% endblock %}
 
 {% block content %}
-<form method="post" action="/admin/account">
-    <div class="grid grid-cols-2 gap-6">
+{# 兩張卡＝兩張獨立表單：基本資料自己存、變更密碼自己驗自己送（fetch 不重整） #}
+<div class="grid grid-cols-2 gap-6">
 
-        <section class="b-card flex flex-col" style="overflow:hidden;">
-            <div class="b-card-head"><h2 class="b-card-title">基本資料</h2></div>
-            <div class="b-card-body flex-1 grid gap-y-5 content-start">
-                <div class="set-field">
-                    <label class="b-label" for="acc-email">帳號 Email</label>
-                    <input type="text" id="acc-email" class="b-input" value="{{ admin_email }}" disabled>
-                    <div class="hint">登入帳號，不可變更</div>
-                </div>
-                <div class="set-field">
-                    <label class="b-label" for="nickname">暱稱</label>
-                    <input type="text" id="nickname" name="nickname" class="b-input" value="{{ nickname }}">
-                    <div class="hint">顯示在右上角帳號選單</div>
+    <form class="b-card flex flex-col" id="form-profile" method="post" action="/admin/account" style="overflow:hidden;">
+        <input type="hidden" name="section" value="profile">
+        <div class="b-card-head"><h2 class="b-card-title">基本資料</h2></div>
+        <div class="b-card-body flex-1 grid gap-y-5 content-start">
+            <div class="set-field">
+                <label class="b-label" for="acc-email">帳號 Email</label>
+                <input type="text" id="acc-email" class="b-input" value="{{ admin_email }}" disabled>
+                <div class="hint">登入帳號，不可變更</div>
+            </div>
+            <div class="set-field">
+                <label class="b-label" for="nickname">暱稱</label>
+                <input type="text" id="nickname" name="nickname" class="b-input" value="{{ nickname }}">
+                <div class="hint">顯示在右上角帳號選單</div>
+            </div>
+        </div>
+        <div class="flex justify-end" style="padding: 0 20px 20px;">
+            <button class="b-btn b-btn-text" id="profile-save" type="submit" disabled>儲存變更</button>
+        </div>
+    </form>
+
+    <form class="b-card flex flex-col" id="form-password" method="post" action="/admin/account" style="overflow:hidden;">
+        <input type="hidden" name="section" value="password">
+        <div class="b-card-head"><h2 class="b-card-title">變更密碼</h2></div>
+        <div class="b-card-body flex-1 grid gap-y-5 content-start">
+            <div class="set-field">
+                <label class="b-label" for="new_password">新密碼</label>
+                <div class="pw-wrap">
+                    <input type="password" id="new_password" name="new_password" class="b-input"
+                           value="" placeholder="至少 8 個字元" autocomplete="new-password">
+                    <button type="button" class="pw-eye" data-eye="new_password" aria-label="顯示密碼" aria-pressed="false"><i data-lucide="eye" aria-hidden="true"></i></button>
                 </div>
             </div>
-        </section>
-
-        <section class="b-card" style="overflow:hidden;">
-            <div class="b-card-head"><h2 class="b-card-title">變更密碼</h2></div>
-            <div class="b-card-body grid gap-y-5">
-                <div class="set-field">
-                    <label class="b-label" for="new_password">新密碼</label>
-                    <div class="pw-wrap">
-                        <input type="password" id="new_password" name="new_password" class="b-input"
-                               value="" placeholder="至少 8 個字元" autocomplete="new-password">
-                        <button type="button" class="pw-eye" data-eye="new_password" aria-label="顯示密碼" aria-pressed="false"><i data-lucide="eye" aria-hidden="true"></i></button>
-                    </div>
-                    <div class="hint">留空＝不變更密碼</div>
+            <div class="set-field">
+                <label class="b-label" for="new_password2">確認新密碼</label>
+                <div class="pw-wrap">
+                    <input type="password" id="new_password2" name="new_password2" class="b-input"
+                           value="" autocomplete="new-password">
+                    <button type="button" class="pw-eye" data-eye="new_password2" aria-label="顯示密碼" aria-pressed="false"><i data-lucide="eye" aria-hidden="true"></i></button>
                 </div>
-                <div class="set-field">
-                    <label class="b-label" for="new_password2">確認新密碼</label>
-                    <div class="pw-wrap">
-                        <input type="password" id="new_password2" name="new_password2" class="b-input"
-                               value="" autocomplete="new-password">
-                        <button type="button" class="pw-eye" data-eye="new_password2" aria-label="顯示密碼" aria-pressed="false"><i data-lucide="eye" aria-hidden="true"></i></button>
-                    </div>
-                </div>
+                <div class="field-err" id="pw-err" role="alert" hidden></div>
             </div>
-        </section>
+        </div>
+        <div class="flex justify-end" style="padding: 0 20px 20px;">
+            <button class="b-btn b-btn-text" id="pw-save" type="submit" disabled>變更</button>
+        </div>
+    </form>
 
-    </div>
-    {# 兩張卡同屬一張表單：儲存鈕放整個表單右下角，一顆存全部（暱稱＋密碼） #}
-    <div class="flex justify-end" style="margin-top: 16px;">
-        <button id="save-btn" class="b-btn b-btn-text" type="submit" disabled>儲存變更</button>
-    </div>
-</form>
+</div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
+    /* ── 基本資料：獨立儲存（有改才可按；成功後同步右上角暱稱、不重整） ── */
     (function () {
-        var form = document.querySelector('form[action="/admin/account"]');
-        var save = document.getElementById('save-btn');
-        function snap() {
-            return Array.prototype.filter.call(form.elements, function (el) { return el.name; })
-                .map(function (el) { return el.name + '=' + el.value; })
-                .join('&');
-        }
-        var baseline = snap();
-        function update() { save.disabled = (snap() === baseline); }
+        var form = document.getElementById('form-profile');
+        var save = document.getElementById('profile-save');
+        var nick = document.getElementById('nickname');
+        var baseline = nick.value;
+
+        function update() { save.disabled = (nick.value === baseline); }
         form.addEventListener('input', update);
-        form.addEventListener('change', update);
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            save.disabled = true;
+            fetch(form.action, {
+                method: 'POST', body: new FormData(form),
+                headers: { 'X-Requested-With': 'fetch' }
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                if (res.ok) {
+                    baseline = nick.value;
+                    /* 右上角暱稱即時同步（header 兩處） */
+                    document.querySelectorAll('.header-user-name, .header-user-head-name')
+                        .forEach(function (el) { el.textContent = res.nickname; });
+                } else { save.disabled = false; }
+                window.bToast(res.message, res.ok ? 'success' : 'danger');
+            }).catch(function () {
+                save.disabled = false;
+                window.bToast('儲存失敗，請稍後再試', 'danger');
+            });
+        });
+    })();
+
+    /* ── 變更密碼：邊打邊驗（不重整）；規則符合才能按「變更」 ── */
+    (function () {
+        var form = document.getElementById('form-password');
+        var save = document.getElementById('pw-save');
+        var pw1 = document.getElementById('new_password');
+        var pw2 = document.getElementById('new_password2');
+        var err = document.getElementById('pw-err');
+
+        function validate() {
+            var msg = '';
+            if (pw1.value && pw1.value.length < 8) msg = '新密碼至少 8 個字元';
+            else if (pw2.value && pw1.value !== pw2.value) msg = '兩次輸入的新密碼不一致';
+            err.textContent = msg;
+            err.hidden = !msg;
+            save.disabled = !(pw1.value.length >= 8 && pw1.value === pw2.value);
+        }
+        form.addEventListener('input', validate);
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            save.disabled = true;
+            fetch(form.action, {
+                method: 'POST', body: new FormData(form),
+                headers: { 'X-Requested-With': 'fetch' }
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                if (res.ok) {
+                    pw1.value = ''; pw2.value = '';
+                    err.hidden = true;
+                } else { save.disabled = false; }
+                window.bToast(res.message, res.ok ? 'success' : 'danger');
+            }).catch(function () {
+                save.disabled = false;
+                window.bToast('儲存失敗，請稍後再試', 'danger');
+            });
+        });
     })();
 
     /* 密碼欄眼睛：切換顯示/隱藏（動態換 icon 後要重呼 lucide — kit 已知坑） */

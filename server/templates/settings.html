@@ -5,7 +5,7 @@
 {# 固定高＋頁級分頁（照 kit slots 頁模式）：整頁不捲，捲動只發生在當前 panel 內 #}
 {% block main_modifier %}is-settings-fixed{% endblock %}
 
-{# 儲存鈕放在各 tab 對應卡片的右下角（使用者裁決）；兩顆都送同一張表單 #}
+{# 每張卡＝一張獨立表單，各自儲存自己的欄位（fetch 不重整；儲存鈕在各卡右下角） #}
 
 {% block extra_css %}
 <style>
@@ -16,7 +16,7 @@
         overflow: hidden;                       /* 外層整頁不捲 */
     }
     .main-content.is-settings-fixed > .page-header { flex: 0 0 auto; }
-    .main-content.is-settings-fixed > form {
+    .main-content.is-settings-fixed > .settings-wrap {
         flex: 1 1 auto; min-height: 0;
         display: flex; flex-direction: column;
     }
@@ -63,6 +63,17 @@
     }
     .b-check input:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--brand-medium); }
     .b-btn.b-btn-text:disabled { background: transparent; color: var(--fg-disabled, var(--text-body-subtle)); cursor: default; }
+
+    /* ── 收件人輸入框內嵌實心儲存鈕（輸入框 36px、鈕 28px：四邊 4px 對稱） ── */
+    .input-save-wrap { position: relative; }
+    .input-save-wrap .b-input { padding-right: 64px; }   /* 文字不鑽到按鈕下面 */
+    .input-save-wrap .b-btn-primary {
+        position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+        /* 巢狀圓角：外框 10px − 內縮 4px，貼合輸入框弧度 */
+        border-radius: calc(var(--field-radius) - 4px);
+    }
+    .input-save-wrap .b-btn-primary:disabled { opacity: .45; cursor: default; }
+
     .pw-wrap { position: relative; }
     .pw-wrap .b-input { padding-right: 42px; }
     .pw-eye {
@@ -78,16 +89,17 @@
 {% endblock %}
 
 {% block content %}
-<form id="settings-form" method="post" action="/admin/settings">
+<div class="settings-wrap">
     <div class="b-tabs settings-tabs" role="tablist">
         <button type="button" class="b-tab b-tab-active" data-set-tab="mail">寄信設定</button>
         <button type="button" class="b-tab" data-set-tab="copy">通知信文案</button>
     </div>
 
-    {# ══ Tab 1：寄信設定（原兩卡並排；欄位 name 不變） ══ #}
+    {# ══ Tab 1：寄信設定（兩張卡＝兩張獨立表單，各存各的） ══ #}
     <div class="set-panel" data-panel="mail">
         <div class="grid grid-cols-2 gap-6">
-            <section class="b-card flex flex-col" style="overflow:hidden;">
+            <form class="b-card flex flex-col" id="form-smtp" method="post" action="/admin/settings" style="overflow:hidden;">
+                <input type="hidden" name="section" value="smtp">
                 <div class="b-card-head"><h2 class="b-card-title">SMTP 寄信</h2></div>
                 <div class="b-card-body flex-1 grid grid-cols-2 gap-x-4 gap-y-5 content-start">
                     <div class="set-field col-span-2">
@@ -119,46 +131,51 @@
                                 <i data-lucide="eye" aria-hidden="true"></i>
                             </button>
                         </div>
-                        <div class="hint">{{ pw_hint }}</div>
+                        <div class="hint" id="pw-hint">{{ pw_hint }}</div>
                     </div>
                 </div>
                 <div class="flex justify-end" style="padding: 0 20px 20px;">
                     <button class="b-btn b-btn-text save-btn" type="submit" disabled>儲存設定</button>
                 </div>
-            </section>
+            </form>
 
-            <section class="b-card flex flex-col" style="overflow:hidden;">
+            <form class="b-card flex flex-col" id="form-notify" method="post" action="/admin/settings" style="overflow:hidden;">
+                <input type="hidden" name="section" value="mailto">
                 <div class="b-card-head"><h2 class="b-card-title">通知信與測試</h2></div>
                 <div class="b-card-body flex-1 grid gap-y-5 content-start">
                     <div class="set-field">
                         <label class="b-label" for="MAIL_TO">通知信收件人</label>
-                        <input type="text" id="MAIL_TO" name="MAIL_TO" class="b-input" value="{{ values['MAIL_TO'] }}">
+                        <div class="input-save-wrap">
+                            <input type="text" id="MAIL_TO" name="MAIL_TO" class="b-input" value="{{ values['MAIL_TO'] }}">
+                            <button class="b-btn b-btn-primary b-btn-xs" id="mailto-save" type="submit" disabled>儲存</button>
+                        </div>
                         <div class="hint">有人填表單時要通知誰。多個信箱用逗號分隔，例：judy@tiri.tw, office@tiri.tw</div>
                     </div>
                     <div class="set-field">
                         <label class="b-check">
-                            <input type="checkbox" name="MAIL_DRY_RUN" {{ 'checked' if dry }}>
+                            <input type="checkbox" name="MAIL_DRY_RUN" id="dry-toggle" {{ 'checked' if dry }}>
                             測試模式
                         </label>
-                        <div class="hint">開啟時不真的寄信，通知內容只記錄在伺服器（上線前記得關閉）</div>
+                        <div class="hint">勾選或取消會立即套用，不用另外儲存。開啟時不真的寄信，通知內容只記錄在伺服器（上線前記得關閉）</div>
                     </div>
                     <div class="b-alert brand"><div>
                         <p class="b-alert-title">關於測試信</p>
-                        會先套用你目前填的內容再真的寄出（即使開著測試模式）；收件信箱有收到即代表通知功能正常。
+                        會先套用本頁目前填的內容（含左側 SMTP 設定）再真的寄出（即使開著測試模式）；收件信箱有收到即代表通知功能正常。
                     </div></div>
                 </div>
                 <div class="flex justify-end" style="padding: 0 20px 20px;">
-                    <button class="b-btn b-btn-ghost" type="submit" formaction="/admin/settings/test">
+                    <button class="b-btn b-btn-ghost" type="button" id="test-btn">
                         <i data-lucide="send" aria-hidden="true"></i> 寄一封測試信
                     </button>
                 </div>
-            </section>
+            </form>
         </div>
     </div>
 
     {# ══ Tab 2：通知信文案（左清單右表單；全部欄位常駐 DOM，切換只藏顯示） ══ #}
     <div class="set-panel" data-panel="copy" hidden>
-        <section class="b-card copy-card">
+        <form class="b-card copy-card" id="form-copy" method="post" action="/admin/settings">
+            <input type="hidden" name="section" value="copy">
             <div class="copy-body">
             <aside class="tpl-list" role="tablist" aria-label="表單範本">
                 {% for c in mail_copy %}
@@ -188,30 +205,138 @@
             <div class="flex justify-end" style="padding: 0 20px 20px;">
                 <button class="b-btn b-btn-text save-btn" type="submit" disabled>儲存設定</button>
             </div>
-        </section>
+        </form>
     </div>
-</form>
+</div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
     (function () {
-        var form = document.getElementById('settings-form');
-        var saves = document.querySelectorAll('.save-btn');
-
-        /* ── 儲存鈕（兩顆同步）：有改過才可以按 ── */
-        function snap() {
-            return Array.prototype.filter.call(form.elements, function (el) { return el.name; })
+        /* ── 共用：表單快照（有改過才可儲存）── */
+        function snap(form) {
+            return Array.prototype.filter.call(form.elements, function (el) { return el.name && el.name !== 'section'; })
                 .map(function (el) { return el.name + '=' + (el.type === 'checkbox' ? el.checked : el.value); })
                 .join('&');
         }
-        var baseline = snap();
-        function update() {
-            var clean = (snap() === baseline);
-            saves.forEach(function (b) { b.disabled = clean; });
+
+        /* ── SMTP 卡與文案卡：獨立表單 fetch 儲存、不重整、成功後重設基準 ── */
+        var forms = {};
+        ['form-smtp', 'form-copy'].forEach(function (id) {
+            var form = document.getElementById(id);
+            var save = form.querySelector('.save-btn');
+            var state = { form: form, save: save, baseline: snap(form) };
+            forms[id] = state;
+
+            function update() { save.disabled = (snap(form) === state.baseline); }
+            form.addEventListener('input', update);
+            form.addEventListener('change', update);
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                save.disabled = true;
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'X-Requested-With': 'fetch' }
+                }).then(function (r) { return r.json(); }).then(function (res) {
+                    if (res.ok) { markSaved(state, res); }
+                    else { save.disabled = false; }
+                    window.bToast(res.message || (res.ok ? '設定已儲存' : '儲存失敗'), res.ok ? 'success' : 'danger');
+                }).catch(function () {
+                    save.disabled = false;
+                    window.bToast('儲存失敗，請稍後再試', 'danger');
+                });
+            });
+        });
+
+        /* 儲存成功：密碼欄清空（已存進後端）、提示改「已設定」、重設快照基準 */
+        function markSaved(state, res) {
+            var pw = state.form.querySelector('#SMTP_PASS');
+            if (pw && pw.value) {
+                pw.value = '';
+                if (res.pw_set) {
+                    pw.placeholder = '••••••••';
+                    document.getElementById('pw-hint').textContent = '已設定，留空＝維持不變';
+                }
+            }
+            state.baseline = snap(state.form);
+            state.save.disabled = true;
         }
-        form.addEventListener('input', update);
-        form.addEventListener('change', update);
+
+        /* ── 通知卡：收件人＝輸入框內嵌實心儲存鈕（只存收件人） ── */
+        var notifyForm = document.getElementById('form-notify');
+        var mailtoInput = document.getElementById('MAIL_TO');
+        var mailtoSave = document.getElementById('mailto-save');
+        var mailtoBase = mailtoInput.value;
+        mailtoInput.addEventListener('input', function () {
+            mailtoSave.disabled = (mailtoInput.value === mailtoBase);
+        });
+        notifyForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            mailtoSave.disabled = true;
+            var fd = new FormData();
+            fd.append('section', 'mailto');
+            fd.append('MAIL_TO', mailtoInput.value);
+            fetch('/admin/settings', {
+                method: 'POST', body: fd, headers: { 'X-Requested-With': 'fetch' }
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                if (res.ok) { mailtoBase = mailtoInput.value; }
+                else { mailtoSave.disabled = false; }
+                window.bToast(res.ok ? '收件人已儲存' : (res.message || '儲存失敗'), res.ok ? 'success' : 'danger');
+            }).catch(function () {
+                mailtoSave.disabled = false;
+                window.bToast('儲存失敗，請稍後再試', 'danger');
+            });
+        });
+
+        /* ── 測試模式勾勾：勾/取消立即套用，失敗時勾回原狀 ── */
+        var dryToggle = document.getElementById('dry-toggle');
+        dryToggle.addEventListener('change', function () {
+            var want = dryToggle.checked;
+            dryToggle.disabled = true;
+            var fd = new FormData();
+            fd.append('section', 'dry');
+            if (want) fd.append('MAIL_DRY_RUN', '1');
+            fetch('/admin/settings', {
+                method: 'POST', body: fd, headers: { 'X-Requested-With': 'fetch' }
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                dryToggle.disabled = false;
+                if (res.ok) {
+                    window.bToast(want ? '測試模式已開啟：暫停寄送通知信' : '測試模式已關閉：恢復真的寄信', 'success');
+                } else {
+                    dryToggle.checked = !want;
+                    window.bToast(res.message || '儲存失敗', 'danger');
+                }
+            }).catch(function () {
+                dryToggle.disabled = false;
+                dryToggle.checked = !want;
+                window.bToast('儲存失敗，請稍後再試', 'danger');
+            });
+        });
+
+        /* ── 寄測試信：合併 SMTP 卡＋通知卡目前的內容一起送（後端先存再寄）── */
+        var testBtn = document.getElementById('test-btn');
+        testBtn.addEventListener('click', function () {
+            var fd = new FormData(forms['form-smtp'].form);
+            fd.set('section', 'notify');            /* 後端以 notify 一次套用收件人＋測試模式 */
+            fd.append('MAIL_TO', mailtoInput.value);
+            if (dryToggle.checked) fd.append('MAIL_DRY_RUN', '1');
+            testBtn.disabled = true;
+            fetch('/admin/settings/test', {
+                method: 'POST', body: fd, headers: { 'X-Requested-With': 'fetch' }
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                testBtn.disabled = false;
+                /* 後端已把兩張卡目前內容都存了：視同儲存成功 */
+                markSaved(forms['form-smtp'], res);
+                mailtoBase = mailtoInput.value;
+                mailtoSave.disabled = true;
+                window.bToast(res.message, res.ok ? 'success' : 'danger');
+            }).catch(function () {
+                testBtn.disabled = false;
+                window.bToast('寄送失敗，請稍後再試', 'danger');
+            });
+        });
 
         /* ── 頁級 tab ＋ 範本清單：狀態進 URL query（?tab=、?tpl=），重整停在原位 ── */
         var curTab = 'mail', curTpl = document.querySelector('.tpl-item').getAttribute('data-tpl');

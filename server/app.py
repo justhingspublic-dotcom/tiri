@@ -9,7 +9,9 @@ import smtplib
 import sqlite3
 from datetime import datetime, timezone, timedelta
 from email.header import Header
+from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from html import escape
 from functools import wraps
 from pathlib import Path
 from urllib.parse import quote
@@ -123,7 +125,7 @@ def add_cors(resp):
 
 # ---------- Mail ----------
 
-def send_mail(subject, body, force_real=False):
+def send_mail(subject, body, html=None, force_real=False):
     """回傳狀態字串；force_real=True 時忽略測試模式真的寄（給「寄測試信」用）"""
     to_raw = get_setting("MAIL_TO", "")
     to_addrs = [a.strip() for a in to_raw.split(",") if a.strip()]
@@ -139,7 +141,12 @@ def send_mail(subject, body, force_real=False):
     if not to_addrs:
         return "error: 尚未設定通知信收件人"
 
-    msg = MIMEText(body, "plain", "utf-8")
+    if html:  # multipart/alternative：純文字給不吃 HTML 的客戶端當備援
+        msg = MIMEMultipart("alternative")
+        msg.attach(MIMEText(body, "plain", "utf-8"))
+        msg.attach(MIMEText(html, "html", "utf-8"))
+    else:
+        msg = MIMEText(body, "plain", "utf-8")
     msg["Subject"] = Header(subject, "utf-8")
     msg["From"] = get_setting("MAIL_FROM") or user
     msg["To"] = ", ".join(to_addrs)
@@ -151,18 +158,49 @@ def send_mail(subject, body, force_real=False):
     return "sent"
 
 
+def notification_html(form_name, fields, page_url, when, intro):
+    """通知信 HTML 版：填寫內容以表格呈現（樣式全內聯，遷就信件客戶端）"""
+    def esc(s):
+        return escape(str(s), quote=True)
+
+    td = "border:1px solid #e3e6ea;padding:9px 12px;vertical-align:top;"
+    rows = "".join(
+        f'<tr><td style="{td}width:132px;background:#f6f7f9;color:#57606a;'
+        f'font-weight:600;white-space:nowrap;">{esc(f.get("label", ""))}</td>'
+        f'<td style="{td}color:#1f2328;">{esc(f.get("value", "")).replace(chr(10), "<br>") or "—"}</td></tr>'
+        for f in fields if isinstance(f, dict) and f.get("label")
+    )
+    intro_html = (
+        f'<p style="margin:0 0 16px;font-size:14px;line-height:1.7;color:#1f2328;">'
+        f'{esc(intro).replace(chr(10), "<br>")}</p>' if intro else ""
+    )
+    return (
+        '<div style="font-family:-apple-system,\'PingFang TC\',\'Noto Sans TC\','
+        "'Microsoft JhengHei',sans-serif;max-width:640px;\">"
+        f"{intro_html}"
+        f'<h2 style="margin:0 0 4px;font-size:16px;color:#7e3268;">{esc(form_name)}</h2>'
+        f'<p style="margin:0 0 14px;font-size:12.5px;line-height:1.7;color:#6b7280;">'
+        f'{esc(when)}<br><a href="{esc(page_url)}" style="color:#6b7280;">{esc(page_url)}</a></p>'
+        f'<table cellpadding="0" cellspacing="0" '
+        f'style="border-collapse:collapse;width:100%;font-size:14px;line-height:1.6;">{rows}</table>'
+        '<p style="margin:16px 0 0;font-size:12px;color:#9aa1a9;">'
+        "此信由 TIRI 網站表單系統自動寄出</p></div>"
+    )
+
+
 def send_notification(form_name, fields, page_url, when, base_slug=""):
     # 每表單可自訂主旨與開頭文字（設定頁「通知信文案」），留空用預設
     subject = get_setting(f"MAIL_SUBJ_{base_slug}", "") or f"[TIRI 網站] {form_name} — 新的表單填寫"
     intro = get_setting(f"MAIL_INTRO_{base_slug}", "") or ""
 
-    lines = []
+    lines = []  # 純文字版：給不顯示 HTML 的客戶端當備援
     if intro:
         lines += [intro, ""]
     lines += [f"表單：{form_name}", f"時間:{when}", f"頁面:{page_url}", ""]
     for f in fields:
         lines.append(f"{f.get('label', '')}:{f.get('value', '')}")
-    return send_mail(subject, "\n".join(lines))
+    html = notification_html(form_name, fields, page_url, when, intro)
+    return send_mail(subject, "\n".join(lines), html=html)
 
 
 # ---------- 表單收件 API ----------
@@ -360,24 +398,47 @@ SETTING_FIELDS = [
 ]
 
 
-def save_settings_from_form():
-    for key, _, _ in SETTING_FIELDS:
-        set_setting(key, request.form.get(key, "").strip())
-    if request.form.get("SMTP_PASS", "").strip():  # 密碼留空＝不變更
-        # Google 應用程式密碼顯示為「xxxx xxxx xxxx xxxx」帶空格，SMTP 登入要去掉
-        set_setting("SMTP_PASS", request.form.get("SMTP_PASS").replace(" ", "").strip())
-    set_setting("MAIL_DRY_RUN", "1" if request.form.get("MAIL_DRY_RUN") else "0")
-    # 各表單通知信文案（主旨＋開頭文字；留空＝用預設）
-    for slug in FORM_NAMES:
-        set_setting(f"MAIL_SUBJ_{slug}", request.form.get(f"MAIL_SUBJ_{slug}", "").strip())
-        set_setting(f"MAIL_INTRO_{slug}", request.form.get(f"MAIL_INTRO_{slug}", "").strip())
+def is_fetch():
+    """前端 fetch 儲存（不重整頁面）帶這個標頭；回 JSON 而非 redirect"""
+    return request.headers.get("X-Requested-With") == "fetch"
+
+
+def save_settings_section(section):
+    """各卡片獨立儲存：只動自己那一區的鍵，避免互相洗掉"""
+    f = request.form
+    if section == "smtp":
+        for key in ("MAIL_FROM", "SMTP_HOST", "SMTP_PORT", "SMTP_USER"):
+            set_setting(key, f.get(key, "").strip())
+        if f.get("SMTP_PASS", "").strip():  # 密碼留空＝不變更
+            # Google 應用程式密碼顯示為「xxxx xxxx xxxx xxxx」帶空格，SMTP 登入要去掉
+            set_setting("SMTP_PASS", f.get("SMTP_PASS").replace(" ", "").strip())
+    elif section == "notify":  # 寄測試信用：一次套用通知卡整卡內容
+        set_setting("MAIL_TO", f.get("MAIL_TO", "").strip())
+        set_setting("MAIL_DRY_RUN", "1" if f.get("MAIL_DRY_RUN") else "0")
+    elif section == "mailto":  # 收件人輸入框內嵌儲存鈕：只存收件人
+        set_setting("MAIL_TO", f.get("MAIL_TO", "").strip())
+    elif section == "dry":     # 測試模式勾勾：勾/取消即時套用
+        set_setting("MAIL_DRY_RUN", "1" if f.get("MAIL_DRY_RUN") else "0")
+    elif section == "copy":
+        # 各表單通知信文案（主旨＋開頭文字；留空＝用預設）
+        for slug in FORM_NAMES:
+            set_setting(f"MAIL_SUBJ_{slug}", f.get(f"MAIL_SUBJ_{slug}", "").strip())
+            set_setting(f"MAIL_INTRO_{slug}", f.get(f"MAIL_INTRO_{slug}", "").strip())
 
 
 @app.route("/admin/settings", methods=["GET", "POST"])
 @require_auth
 def settings():
     if request.method == "POST":
-        save_settings_from_form()
+        section = request.form.get("section", "")
+        if section in ("smtp", "notify", "copy", "mailto", "dry"):
+            save_settings_section(section)
+        else:  # 沒帶 section 的舊式整頁提交：全存
+            for s in ("smtp", "notify", "copy"):
+                save_settings_section(s)
+        if is_fetch():
+            return jsonify(ok=True, message="設定已儲存",
+                           pw_set=bool(get_setting("SMTP_PASS")))
         flash("設定已儲存", "success")
         return redirect("/admin/settings")
 
@@ -409,7 +470,9 @@ def settings():
 @app.route("/admin/settings/test", methods=["POST"])
 @require_auth
 def settings_test():
-    save_settings_from_form()  # 先存目前表單內容，讓「填完直接按測試」也能生效
+    # 先存兩張寄信相關卡片目前的內容，讓「填完直接按測試」也能生效
+    save_settings_section("smtp")
+    save_settings_section("notify")
     when = datetime.now(TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
     body = (f"這是一封測試信（{when}）。\n\n"
             "收到這封信代表 TIRI 網站表單的通知功能設定成功，"
@@ -419,10 +482,12 @@ def settings_test():
     except Exception as e:
         app.logger.exception("測試信寄送失敗")
         status = f"{e}"
-    if status == "sent":
-        flash("測試信已寄出！請到收件信箱確認（沒看到的話檢查垃圾信件匣）", "success")
-    else:
-        flash(f"寄送失敗：{status.replace('error: ', '')}", "danger")
+    ok = status == "sent"
+    message = ("測試信已寄出！請到收件信箱確認（沒看到的話檢查垃圾信件匣）" if ok
+               else f"寄送失敗：{str(status).replace('error: ', '')}")
+    if is_fetch():
+        return jsonify(ok=ok, message=message, pw_set=bool(get_setting("SMTP_PASS")))
+    flash(message, "success" if ok else "danger")
     return redirect("/admin/settings")
 
 
@@ -430,20 +495,26 @@ def settings_test():
 @require_auth
 def account():
     if request.method == "POST":
-        set_setting("ADMIN_NICKNAME", request.form.get("nickname", "").strip())
-        pw = request.form.get("new_password", "")
-        pw2 = request.form.get("new_password2", "")
-        if pw or pw2:
-            if pw != pw2:
-                flash("兩次輸入的新密碼不一致，密碼未變更", "danger")
-                return redirect("/admin/account")
-            if len(pw) < 8:
-                flash("新密碼至少 8 個字元，密碼未變更", "danger")
-                return redirect("/admin/account")
-            set_setting("ADMIN_PASS", pw)
-            flash("暱稱與密碼已更新", "success")
-        else:
-            flash("帳號設定已儲存", "success")
+        section = request.form.get("section", "")
+
+        if section == "password":
+            pw = request.form.get("new_password", "")
+            pw2 = request.form.get("new_password2", "")
+            if not pw or pw != pw2:
+                msg, ok = "兩次輸入的新密碼不一致，密碼未變更", False
+            elif len(pw) < 8:
+                msg, ok = "新密碼至少 8 個字元，密碼未變更", False
+            else:
+                set_setting("ADMIN_PASS", pw)
+                msg, ok = "密碼已更新，下次登入請用新密碼", True
+        else:  # profile：只存基本資料，與密碼互不相干
+            set_setting("ADMIN_NICKNAME", request.form.get("nickname", "").strip())
+            msg, ok = "基本資料已儲存", True
+
+        if is_fetch():
+            return jsonify(ok=ok, message=msg,
+                           nickname=get_setting("ADMIN_NICKNAME", "秘書處") or "秘書處")
+        flash(msg, "success" if ok else "danger")
         return redirect("/admin/account")
 
     return render_template("account.html", nav_items=nav_items(), active="account")
@@ -478,6 +549,12 @@ def export_csv():
         mimetype="text/csv",
         headers={"Content-Disposition": f"attachment; filename={name}"},
     )
+
+
+@app.route("/")
+def index():
+    # 這台伺服器只有收件 API 與後台，根目錄一律導向後台（未登入會再轉登入頁）
+    return redirect("/admin")
 
 
 @app.route("/favicon.ico")

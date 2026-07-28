@@ -276,6 +276,32 @@
             window.lucide.createIcons({ attrs: { 'stroke-width': 2.2, 'aria-hidden': 'true' } });
         };
 
+        /* 前端動態 toast（AJAX 儲存用）：沿用 flash 的 b-toast 樣式與動畫，動畫結束自動移除 */
+        window.bToast = function (message, category) {
+            category = category === 'success' ? 'success' : (category === 'warning' ? 'warning' : 'danger');
+            var wrap = document.getElementById('bm-flash');
+            if (!wrap) {
+                wrap = document.createElement('div');
+                wrap.id = 'bm-flash';
+                wrap.className = 'b-toast-wrap';
+                wrap.setAttribute('role', 'status');
+                wrap.setAttribute('aria-live', 'polite');
+                document.body.appendChild(wrap);
+            }
+            var icons = { success: 'circle-check', warning: 'triangle-alert', danger: 'circle-x' };
+            var t = document.createElement('div');
+            t.className = 'b-toast b-toast-' + category;
+            t.innerHTML = '<span class="b-toast-icon" aria-hidden="true"><i data-lucide="' + icons[category] + '"></i></span>' +
+                          '<span class="b-toast-msg"></span>';
+            t.querySelector('.b-toast-msg').textContent = message;
+            t.addEventListener('animationend', function () {
+                t.remove();
+                if (!wrap.children.length) wrap.remove();
+            });
+            wrap.appendChild(t);
+            window.renderLucideIcons();
+        };
+
         /* b-seg.is-pill 滑塊定位（kit pageInit.billing 的做法：量 active 選項實寬設 --thumb-w/--thumb-x） */
         window.bSegThumb = function (seg, animate) {
             if (!seg) return;
