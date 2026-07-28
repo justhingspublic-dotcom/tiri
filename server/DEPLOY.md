@@ -178,12 +178,8 @@ var API_BASE = window.TIRI_FORMS_API || 'http://localhost:8000';
   （要多人收就逗號分隔，例：`judy@tiri.tw, office@tiri.tw`）
 - [ ] **關測試模式**：同頁「測試模式」勾勾拿掉 → 儲存 → 回儀表板確認「測試模式」卡顯示**關**
 - [ ] **寄測試信**：按「寄測試信」→ 確認 **Judy 真的收到**（請她回報，順便確認沒進垃圾信）
-- [ ] **移除快速登入鈕**：編輯 `server/templates/login.html`，刪掉三段
-  （都有註解標記，搜尋「快速登入」）：
-  1. CSS：`/* 現階段測試用：快速登入鈕… */` 到 `.quick-login-btn svg { … }` 那幾行
-  2. 按鈕：`<button type="button" class="quick-login-btn" id="quick-login">…</button>` 整塊
-  3. JS：`/* 快速登入：帶入測試帳密直接送出 */` 開始的 `document.getElementById('quick-login')…` 整段
-  改完上傳覆蓋 → Web 頁 Reload → 重開登入頁確認按鈕不見了
+- [x] **移除快速登入鈕**：已於 2026-07-28 從 `server/templates/login.html` 移除
+  （若部署的是更早的版本，開登入頁確認沒有「快速登入」按鈕即可）
 - [ ] **後台密碼換正式的**：現在還是 `tiri1234`。後台「帳號設定」改一組 8 字以上的正式密碼，
   記在安全的地方（給 Judy 的話用安全管道傳）
 - [ ] **正式流程全跑一次**：用手機**行動網路**（不要連 Wi-Fi，模擬真實訪客）開正式前台網址 →

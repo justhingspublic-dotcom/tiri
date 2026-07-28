@@ -20,16 +20,6 @@
     <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260727d">
     <link rel="stylesheet" href="/static/css/cms/login.css?v=20260727a">
     <style>
-        /* 現階段測試用：快速登入鈕（正式上線移除此按鈕即可） */
-        .quick-login-btn {
-            width: 100%; margin-top: 10px; display: inline-flex; align-items: center;
-            justify-content: center; gap: 8px; padding: 11px 16px; border-radius: 10px;
-            border: 1px solid var(--border-brand); background: var(--brand-softer);
-            color: var(--fg-brand); font-size: 14px; font-weight: 600; cursor: pointer;
-            font-family: inherit; transition: background .15s ease;
-        }
-        .quick-login-btn:hover { background: var(--brand-soft); }
-        .quick-login-btn svg { width: 16px; height: 16px; }
         /* 前台同款橫式 wordmark：放寬 kit 預設的 60px 方形 mark */
         .login-mark { width: auto; flex-basis: auto; height: 54px; }
         .login-mark img { height: 100%; width: auto; }
@@ -103,10 +93,6 @@
                         <span>登入</span>
                     </button>
 
-                    <button type="button" class="quick-login-btn" id="quick-login">
-                        <i data-lucide="zap" aria-hidden="true"></i>
-                        <span>快速登入（office@tiri.tw）</span>
-                    </button>
                 </form>
             </section>
         </main>
@@ -133,13 +119,6 @@
                 button.innerHTML = '<i data-lucide="' + (show ? 'eye-off' : 'eye') + '" aria-hidden="true"></i>';
                 refreshLoginIcons();
             });
-        });
-
-        /* 快速登入：帶入測試帳密直接送出 */
-        document.getElementById('quick-login').addEventListener('click', function () {
-            document.getElementById('login-email').value = 'office@tiri.tw';
-            document.getElementById('login-password').value = 'tiri1234';
-            document.querySelector('.login-form').submit();
         });
 
         refreshLoginIcons();
