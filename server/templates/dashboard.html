@@ -106,3 +106,32 @@
     </aside>
 </div>
 {% endblock %}
+
+{% block extra_js %}
+<script>
+    /* 最近收件不內滾:桌機鎖屏下依卡片可用高度只顯示放得下的完整列(超出的 hidden)。
+       平板/手機(≤1024)整頁捲動,全數顯示。resize 重算;監聽帶 PageSignal,SPA 換頁自動解除。 */
+    (function () {
+        var wrap = document.querySelector('.b-dash-main .b-tbl-wrap');
+        if (!wrap) return;
+        var tbl = wrap.querySelector('.b-tbl');
+        var rows = Array.prototype.slice.call(wrap.querySelectorAll('tbody tr'));
+        if (!rows.length) return;
+        function fit() {
+            tbl.style.height = '';
+            rows.forEach(function (r) { r.hidden = false; });
+            if (window.innerWidth <= 1024) return;
+            var bottom = wrap.getBoundingClientRect().bottom;
+            rows.forEach(function (r) {
+                if (r.getBoundingClientRect().bottom > bottom + 1) r.hidden = true;
+            });
+            /* 均分高度:表格撐滿卡片可用高,剩餘空間平均分給可見列
+               (thead tr 鎖 1px = 只吃內容高,多的全給 tbody;td 已 vertical-align:middle) */
+            tbl.style.height = wrap.clientHeight + 'px';
+        }
+        fit();
+        window.addEventListener('resize', fit, { signal: window.PageSignal });
+        window.addEventListener('load', fit, { once: true });   /* 字型載入後列高可能微變,再校一次 */
+    })();
+</script>
+{% endblock %}

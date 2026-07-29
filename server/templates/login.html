@@ -17,8 +17,8 @@
     </script>
     <link rel="stylesheet" href="/static/css/cms/b_tokens.css?v=20260727a">
     <link rel="stylesheet" href="/static/css/brand.css?v=20260729a">
-    <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260727d">
-    <link rel="stylesheet" href="/static/css/cms/login.css?v=20260727a">
+    <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260729f">
+    <link rel="stylesheet" href="/static/css/cms/login.css?v=20260729b">
     <style>
         /* 前台同款橫式 wordmark：放寬 kit 預設的 60px 方形 mark */
         .login-mark { width: auto; flex-basis: auto; height: 54px; }
@@ -39,15 +39,6 @@
                         <p class="login-brand-sub">表單收件後台</p>
                     </div>
                 </div>
-
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                {% for category, message in messages %}
-                <div class="login-alert" role="alert">
-                    <i data-lucide="circle-alert" aria-hidden="true"></i>
-                    <span>{{ message }}</span>
-                </div>
-                {% endfor %}
-                {% endwith %}
 
                 <form method="post" action="/admin/login" class="login-form">
                     <div class="form-group">
@@ -100,6 +91,22 @@
         <p class="login-copyright">&copy; 2026 台灣投資人關係協會</p>
     </div>
 
+    {# 伺服器 flash（no-JS fallback 用）：沿用 b_admin.css 的右下角 b-toast #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div id="login-flash" class="b-toast-wrap" role="status" aria-live="polite">
+        {% for category, message in messages %}
+        <div class="b-toast b-toast-{{ 'success' if category == 'success' else ('warning' if category == 'warning' else 'danger') }}">
+            <span class="b-toast-icon" aria-hidden="true">
+                <i data-lucide="{{ 'circle-check' if category == 'success' else ('triangle-alert' if category == 'warning' else 'circle-x') }}"></i>
+            </span>
+            <span class="b-toast-msg">{{ message }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         function refreshLoginIcons() {
@@ -107,6 +114,85 @@
                 window.lucide.createIcons({ attrs: { 'stroke-width': 2.2, 'aria-hidden': 'true' } });
             }
         }
+
+        /* 右下角 toast：沿用後台 b-toast 的純 CSS 生命週期（滑入→停留→滑出），動畫結束自動移除 */
+        function loginToast(message, category) {
+            category = category === 'success' ? 'success' : (category === 'warning' ? 'warning' : 'danger');
+            var wrap = document.getElementById('login-flash');
+            if (!wrap) {
+                wrap = document.createElement('div');
+                wrap.id = 'login-flash';
+                wrap.className = 'b-toast-wrap';
+                wrap.setAttribute('role', 'status');
+                wrap.setAttribute('aria-live', 'polite');
+                document.body.appendChild(wrap);
+            }
+            var icons = { success: 'circle-check', warning: 'triangle-alert', danger: 'circle-x' };
+            var t = document.createElement('div');
+            t.className = 'b-toast b-toast-' + category;
+            t.innerHTML = '<span class="b-toast-icon" aria-hidden="true"><i data-lucide="' + icons[category] + '"></i></span>' +
+                          '<span class="b-toast-msg"></span>';
+            t.querySelector('.b-toast-msg').textContent = message;
+            t.addEventListener('animationend', function () {
+                t.remove();
+                if (!wrap.children.length) wrap.remove();
+            });
+            wrap.appendChild(t);
+            refreshLoginIcons();
+        }
+
+        /* 伺服器 flash toast（no-JS fallback 送出後 redirect 回來）：播完自動移除 */
+        (function () {
+            var wrap = document.getElementById('login-flash');
+            if (!wrap) return;
+            wrap.querySelectorAll('.b-toast').forEach(function (t, i) {
+                t.style.animationDelay = (i * 0.12) + 's';
+                t.addEventListener('animationend', function () {
+                    t.remove();
+                    if (!wrap.children.length) wrap.remove();
+                });
+            });
+        })();
+
+        /* fetch 送出＋按鈕填色：is-loading 填到 55% 等回應；成功 is-success 補滿再跳轉；失敗移除 class 縮回 */
+        (function () {
+            var form = document.querySelector('.login-form');
+            var btn = form.querySelector('.btn-login');
+            var label = btn.querySelector('span');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (btn.classList.contains('is-loading')) return;
+                btn.classList.add('is-loading');
+                label.textContent = '登入中…';
+                var started = Date.now();
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    /* 至少讓填色爬行 500ms，本機回應太快時動畫才看得到 */
+                    var wait = Math.max(0, 500 - (Date.now() - started));
+                    setTimeout(function () {
+                        if (data.ok) {
+                            btn.classList.add('is-success');
+                            setTimeout(function () {
+                                window.location.href = data.redirect || '/admin';
+                            }, 350);
+                        } else {
+                            fail(data.error || '帳號或密碼錯誤');
+                        }
+                    }, wait);
+                })
+                .catch(function () { fail('連線失敗，請稍後再試'); });
+            });
+            function fail(msg) {
+                btn.classList.remove('is-loading');   /* 回基準 scaleX(0)，自帶縮回過渡 */
+                label.textContent = '登入';
+                loginToast(msg, 'danger');
+            }
+        })();
 
         document.querySelectorAll('[data-password-toggle]').forEach(function (button) {
             var input = document.getElementById(button.getAttribute('data-password-toggle'));

@@ -283,10 +283,18 @@ def login():
     if request.method == "POST":
         email = request.form.get("email", "").strip().lower()
         password = request.form.get("password", "")
+        # 前端 fetch 送出時帶 Accept: application/json → 回 JSON 給按鈕填色動畫用；
+        # 無 JS 時維持傳統 redirect + flash fallback
+        wants_json = "application/json" in (request.headers.get("Accept") or "")
         # 密碼可在後台「帳號設定」變更（存 settings 表，蓋過 .env 預設）
         if email == ADMIN_EMAIL.lower() and password == get_setting("ADMIN_PASS", ADMIN_PASSWORD):
             session["admin"] = email
+            flash("登入成功", "success")   # 跳轉後由 base.html 的右下角 toast 顯示
+            if wants_json:
+                return jsonify(ok=True, redirect="/admin")
             return redirect("/admin")
+        if wants_json:
+            return jsonify(ok=False, error="帳號或密碼錯誤"), 401
         flash("帳號或密碼錯誤", "danger")
         return redirect("/admin/login")
     if session.get("admin"):

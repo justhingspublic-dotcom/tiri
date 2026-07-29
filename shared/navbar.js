@@ -187,15 +187,18 @@
   }
 
   function renderHeaderTop() {
+    /* 會員登入先隱藏（暫時用不到）；要還原時在搜尋後補回：
+       '<span class="divider" aria-hidden="true"></span><a href="login.html">會員登入</a>' */
     return '<nav class="header-top" aria-label="工具列">' +
       '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel">' + icon("i-search", 15) + '搜尋</button>' +
-      '<span class="divider" aria-hidden="true"></span><a href="login.html">會員登入</a>' +
       '<span class="divider" aria-hidden="true"></span><span class="social-icons">' + renderSocialIcons() + '</span></nav>';
   }
 
   function renderActions(variant) {
+    /* 登入先隱藏（暫時用不到）；要還原時在搜尋鈕後補回：
+       '<a class="login-link" href="login.html">登入</a>' */
     var tools = variant === "v2"
-      ? '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel" aria-label="搜尋">' + icon("i-search", 17) + '</button><a class="login-link" href="login.html">登入</a>'
+      ? '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel" aria-label="搜尋">' + icon("i-search", 17) + '</button>'
       : "";
     return '<div class="header-actions">' + tools +
       '<a class="btn btn-primary btn-cta-desktop" href="join.html"><span class="roll"><span>加入會員</span><span aria-hidden="true">加入會員</span></span></a>' +
@@ -211,7 +214,9 @@
       '<form data-demo-form role="search" aria-label="站內搜尋"><label class="sr-only" for="site-search-input">關鍵字</label><input id="site-search-input" type="search" name="q" placeholder="搜尋課程、活動、文章…"><button class="search-close" type="button" data-search-close aria-label="關閉搜尋">' + icon("i-x", 14) + '</button><button class="btn btn-primary" type="submit">搜尋</button></form>' +
       '</div></div></div></header>' +
       '<div class="drawer" id="drawer"><div class="drawer-backdrop" data-drawer-close></div><div class="drawer-panel" role="dialog" aria-modal="true" aria-label="行動選單"><nav aria-label="行動導覽"><ul>' + renderDrawer() + '</ul></nav>' +
-      '<div class="drawer-cta"><a class="btn btn-primary" href="join.html">加入會員</a><a class="btn btn-outline" href="login.html">會員登入</a></div></div></div>';
+      /* 抽屜的「會員登入」outline 鈕先隱藏（暫時用不到）；要還原時在加入會員後補回：
+         '<a class="btn btn-outline" href="login.html">會員登入</a>' */
+      '<div class="drawer-cta"><a class="btn btn-primary" href="join.html">加入會員</a></div></div></div>';
   }
 
   function markCurrentPage(root) {

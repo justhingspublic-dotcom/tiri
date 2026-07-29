@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/static/css/cms/base.css?v=20260727b">
     <link rel="stylesheet" href="/static/css/cms/b_tokens.css?v=20260727b">
     <link rel="stylesheet" href="/static/css/brand.css?v=20260729a">
-    <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260727d">
+    <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260729f">
     <link rel="stylesheet" href="/static/css/b/dropdown.css?v=20260727a">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -61,6 +61,8 @@
     <script src="/static/js/b/dropdown.js?v=20260727a" defer></script>
     {# kit 對話框（BDialog.confirm/alert/prompt＋BToast）：收件匣刪除確認用，全站可用 #}
     <script src="/static/js/cms/dialogs.js?v=20260729" defer></script>
+    {# SPA 殼層：攔截後台連結、只抽換 #main-content（側欄/header 不重建、不整頁重載） #}
+    <script src="/static/js/cms/spa.js?v=20260729a" defer></script>
     <style>
         [v-cloak] { display: none !important; }
         /* 側欄項目右端筆數（收件匣總數）：低調灰字、表格數字；收合側欄時隨文字一起藏 */
@@ -104,7 +106,10 @@
             background: var(--brand); border-color: transparent; color: var(--b-on-primary);
         }
     </style>
+    {# 標記註解＝SPA 換頁時「頁專屬 CSS」的抽換範圍（spa.js 掃描用，勿改動） #}
+    <!-- b-spa-extra-css-start -->
     {% block extra_css %}{% endblock %}
+    <!-- b-spa-extra-css-end -->
 </head>
 <body>
     {# Tailwind CDN 預熱：它的 observer 一看到「沒見過的 class 名」就整份重編譯樣式表，
@@ -281,9 +286,18 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    {# 側欄資料改走 JSON 標籤：SPA 換頁時 spa.js 從新頁抽出來更新 active／收件數 #}
+    <script id="nav-data" type="application/json">{{ {'nav': nav_items, 'active': active}|tojson }}</script>
     <script>
-        window.__NAV = {{ nav_items|tojson }};
-        window.__ACTIVE = {{ active|tojson }};
+        (function () {
+            var navData = JSON.parse(document.getElementById('nav-data').textContent);
+            window.__NAV = navData.nav;
+            window.__ACTIVE = navData.active;
+        })();
+        /* 頁生命週期 signal：頁面腳本的 document 層級監聽器帶 { signal: window.PageSignal } 註冊，
+           SPA 換頁時 spa.js abort 舊的、換新的 → 舊頁監聽器一刀解除，不跨頁殘留 */
+        window.__pageCtl = new AbortController();
+        window.PageSignal = window.__pageCtl.signal;
         window.renderLucideIcons = function () {
             if (!window.lucide || !window.lucide.createIcons) return;
             if (document.querySelector('i[data-lucide]')) {
@@ -343,7 +357,7 @@
             document.querySelectorAll('.b-seg.is-pill').forEach(function (seg) { window.bSegThumb(seg, false); });
         });
 
-        Vue.createApp({
+        window.__vueShell = Vue.createApp({
             delimiters: ['[[', ']]'],
             data() {
                 return {
@@ -460,8 +474,12 @@
                     this.flyout.open = false;
                 }
             }
-        }).mount('#app');
+        });
+        window.__aApp = window.__vueShell.mount('#app');   /* SPA 換頁時 spa.js 用它更新側欄 active／收件數 */
     </script>
+    {# 標記註解＝SPA 換頁時「頁專屬 JS」的重新執行範圍（spa.js 掃描用，勿改動） #}
+    <!-- b-spa-extra-js-start -->
     {% block extra_js %}{% endblock %}
+    <!-- b-spa-extra-js-end -->
 </body>
 </html>

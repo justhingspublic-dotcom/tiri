@@ -1,163 +1,148 @@
-// [JustGolf A] 模擬器後台 SPA 殼層:移植自 js/b/spa.js(球場後台),攔截後台連結 → fetch 整頁 → 抽換 #main-content,
-// 側邊欄/header/選中狀態永不重建,URL 用 history.pushState 同步。route 不改(仍回整頁,前端抽 #main-content)。
+// TIRI 收件後台 SPA 殼層（改寫自 JustGolf kit spa.js）：攔截 /admin 頁面連結 → fetch 整頁
+// → 抽換 #main-content，側邊欄/header 永不重建，URL 用 history.pushState 同步。
+// route 不改（伺服器仍回整頁），換頁淡入用既有 .is-spa-entered（b_admin.css）。
 //
-// 與 B 版差異:
-//   1. 前綴 = /cms/(不帶 course_code);預設頁名 'index'(/cms、/cms/ 都算首頁)。
-//   2. A 頁面內容是 Vue app(base.html 的 pageInit 註冊表負責 mount/unmount),
-//      pageInit 讀 location.search 初始化篩選 → pushState 提前到 applyMain 之前執行。
-//   3. A 沒有 filter.js;同 path 僅 query 變的連結不接管(交給原生整頁導航)。
+// 與 kit 版差異：
+//   1. 本後台頁面 JS 全在 {% block extra_js %} 內聯（IIFE＋var，重跑安全），沒有 pageInit 註冊表
+//      → 抽換後直接重新執行新頁 extra_js 區的 <script>（base.html 以註解標記包住該區塊）。
+//   2. document 層級監聽器由 window.PageSignal（AbortController）管理：
+//      換頁前 abort 舊頁、執行新頁 script 前換新 signal，頁面腳本自行帶 { signal } 註冊。
+//   3. 側欄 active／收件數：讀取新頁 #nav-data JSON 更新 Vue 殼層（window.__aApp）。
 (function () {
   var MAIN = '#main-content';
-  var EXTRA_CSS_START = 'b-spa-extra-css-start';
-  var EXTRA_CSS_END = 'b-spa-extra-css-end';
-  var EXTRA_CSS_ATTR = 'data-spa-extra-css';
+  var PREFIX = '/admin';
+  var CSS_START = 'b-spa-extra-css-start';
+  var CSS_END = 'b-spa-extra-css-end';
+  var JS_START = 'b-spa-extra-js-start';
+  var JS_END = 'b-spa-extra-js-end';
+  var MANAGED_ATTR = 'data-spa-managed';
 
-  // spa.js 自己追蹤「目前 DOM 載入的 path」(不依賴 Vue/DOM 競態),用於 popstate 判斷是否換了 path。
+  // spa.js 自己追蹤「目前 DOM 載入的 path」，popstate 用來判斷是否真的換了頁（僅 query 變不算）
   var lastPath = location.pathname;
 
-  // 目前頁面的「頁名」(路徑尾段),決定要跑哪個 pageInit、是否同頁
-  function pageNameFromPath(path) {
-    var name = String(path || '')
-      .split('?')[0].split('#')[0]
-      .replace(/\/+$/, '')
-      .split('/').pop()
-      .toLowerCase();
-    if (!name || name === 'cms') return 'index';   // /cms、/cms/ → 首頁
-    return name;
+  function normPath(p) {
+    return String(p || '').split('?')[0].split('#')[0].replace(/\/+$/, '');
   }
-  function samePath(a, b) {
-    var na = (a || '').split('?')[0].split('#')[0].replace(/\/+$/, '');
-    var nb = (b || '').split('?')[0].split('#')[0].replace(/\/+$/, '');
-    return na === nb;
-  }
+  function samePath(a, b) { return normPath(a) === normPath(b); }
 
-  // ---- 頁專屬 JS 生命週期 ----
-  // base.html 的註冊表把每頁掛成 window.pageInit.<name> = function(){ mount page app; return cleanupFn }
-  window.pageInit = window.pageInit || {};
-  var currentCleanup = null;
-
-  function runCleanup() {
-    if (typeof currentCleanup === 'function') {
-      try { currentCleanup(); } catch (e) { console.error('[spa] page cleanup error', e); }
-    }
-    currentCleanup = null;
-  }
-
-  function runPageInit(name, root) {
-    var fn = window.pageInit[name];
-    if (typeof fn !== 'function') return;
-    try {
-      var ret = fn(root || document);
-      if (typeof ret === 'function') currentCleanup = ret;
-    } catch (e) {
-      console.error('[spa] pageInit[' + name + '] error', e);
-    }
-  }
-
-  // ---- 殼層增強重綁(頁面 app mount 完成後對新內容跑一次) ----
-  function reEnhance(main) {
-    if (window.renderLucideIcons) window.renderLucideIcons();
-    if (window.BDropdown) window.BDropdown.init(main || document);
-    if (window.BRequireFill) window.BRequireFill.refreshAll(main || document);
-    if (window.BModalWatch) window.BModalWatch.refresh(main || document);   // 新頁 modal 節點重新 observe
-  }
-
-  function isManagedCssNode(node) {
-    if (!node || node.nodeType !== 1) return false;
-    if (node.tagName === 'STYLE') return true;
-    if (node.tagName === 'LINK') {
-      return (node.getAttribute('rel') || '').toLowerCase() === 'stylesheet';
-    }
-    return false;
-  }
-
-  function extraCssNodes(head) {
+  // ---- 標記區塊掃描：回傳 head/body 中夾在 <!-- start -->…<!-- end --> 間的元素 ----
+  function nodesBetweenMarkers(root, startMark, endMark) {
     var nodes = [];
     var inBlock = false;
-    Array.prototype.forEach.call((head && head.childNodes) || [], function (node) {
+    Array.prototype.forEach.call((root && root.childNodes) || [], function (node) {
       if (node.nodeType === 8) {
         var marker = (node.nodeValue || '').trim();
-        if (marker === EXTRA_CSS_START) { inBlock = true; return; }
-        if (marker === EXTRA_CSS_END) { inBlock = false; return; }
+        if (marker === startMark) { inBlock = true; return; }
+        if (marker === endMark) { inBlock = false; return; }
       }
-      if (inBlock && isManagedCssNode(node)) nodes.push(node);
+      if (inBlock && node.nodeType === 1) nodes.push(node);
     });
     return nodes;
   }
 
+  // ---- 頁專屬 CSS（extra_css）：初載標記，換頁時整批移除再從新頁複製 ----
   function markInitialExtraCss() {
-    extraCssNodes(document.head).forEach(function (node) {
-      node.setAttribute(EXTRA_CSS_ATTR, 'true');
+    nodesBetweenMarkers(document.head, CSS_START, CSS_END).forEach(function (node) {
+      node.setAttribute(MANAGED_ATTR, 'css');
     });
   }
-
   function syncExtraCss(doc) {
-    document.head.querySelectorAll('[' + EXTRA_CSS_ATTR + '="true"]').forEach(function (node) {
-      node.remove();
-    });
-    extraCssNodes(doc.head).forEach(function (node) {
+    document.head.querySelectorAll('[' + MANAGED_ATTR + '="css"]').forEach(function (n) { n.remove(); });
+    nodesBetweenMarkers(doc.head, CSS_START, CSS_END).forEach(function (node) {
       var clone = node.cloneNode(true);
-      clone.setAttribute(EXTRA_CSS_ATTR, 'true');
+      clone.setAttribute(MANAGED_ATTR, 'css');
       document.head.appendChild(clone);
     });
   }
 
-  // ---- 更新殼層側邊欄 active 高亮(不重建 DOM) ----
-  function syncActive(path) {
-    var app = window.__aApp;
-    if (!app) return;
-    app.currentPath = (path || '').split('#')[0];
-    app.currentPage = pageNameFromPath(path);
+  // ---- 頁專屬 JS（extra_js）：移除上一頁注入的，逐一以新 <script> 重建執行 ----
+  function runExtraJs(doc) {
+    document.body.querySelectorAll('[' + MANAGED_ATTR + '="js"]').forEach(function (n) { n.remove(); });
+    nodesBetweenMarkers(doc.body, JS_START, JS_END).forEach(function (node) {
+      if (node.tagName !== 'SCRIPT') return;
+      var s = document.createElement('script');
+      if (node.src) s.src = node.src;
+      s.textContent = node.textContent;
+      s.setAttribute(MANAGED_ATTR, 'js');
+      document.body.appendChild(s);   // 內聯 script 附加即同步執行
+    });
   }
 
-  // ---- 核心:抽換 #main-content ----
+  // ---- 頁生命週期：document 層級監聽器全帶 window.PageSignal 註冊，換頁前一刀 abort ----
+  function resetPageSignal() {
+    if (window.__pageCtl) { try { window.__pageCtl.abort(); } catch (e) {} }
+    window.__pageCtl = new AbortController();
+    window.PageSignal = window.__pageCtl.signal;
+  }
+
+  // ---- 殼層增強（新內容進 DOM 後）：icon 重繪＋kit 下拉重掛 ----
+  function reEnhance(main) {
+    if (window.renderLucideIcons) window.renderLucideIcons();
+    if (window.BDropdown) window.BDropdown.init(main || document);
+  }
+
+  // ---- 側欄同步：讀新頁 #nav-data（nav 連同收件數、active key）更新 Vue 殼層 ----
+  function syncNav(doc) {
+    var app = window.__aApp;
+    var dataEl = doc.getElementById('nav-data');
+    if (!app || !dataEl) return;
+    var data;
+    try { data = JSON.parse(dataEl.textContent); } catch (e) { return; }
+    app.navMenu = data.nav || [];
+    app.activeKey = data.active || '';
+    // 比照整頁載入的 created()：只展開含當前頁的群組（手風琴 single-open）
+    var open = {};
+    app.navMenu.forEach(function (m, i) {
+      if (m.sub && m.sub.some(function (s) { return s.key === app.activeKey; })) open[i] = true;
+    });
+    app.openMenus = open;
+    app.flyout.open = false;
+  }
+
+  // ---- 核心：抽換 #main-content ----
   function applyMain(html, url) {
     var doc = new DOMParser().parseFromString(html, 'text/html');
     var fresh = doc.querySelector(MAIN);
     var current = document.querySelector(MAIN);
-    if (!fresh || !current) return false;
+    if (!fresh || !current || !doc.getElementById('nav-data')) return false;   // 非後台頁（如被導去登入）→ 降級
 
-    // 離開舊頁:先 cleanup(unmount 頁面 app → 停相機/清計時器/解監聽、銷毀 DataTables)
-    runCleanup();
+    // 離開舊頁：解除 document 層級監聽、清掉可能殘留的 modal 鎖捲動
+    resetPageSignal();
+    document.body.classList.remove('b-modal-lock');
+
     syncExtraCss(doc);
-
-    // main_modifier class 一起更新(index 的 is-index-fill 等);innerHTML 換成新頁
     current.className = fresh.className;
     current.innerHTML = fresh.innerHTML;
 
-    // 換好淡入(克制過場):加動畫 class,結束後移除以免影響後續
+    // 換好淡入（克制過場）：加動畫 class，結束後移除以免影響後續
     current.classList.add('is-spa-entered');
     current.addEventListener('animationend', function onEnd() {
       current.classList.remove('is-spa-entered');
       current.removeEventListener('animationend', onEnd);
     });
 
-    // title 一起換(瀏覽器分頁標題)
     var freshTitle = doc.querySelector('title');
     if (freshTitle) document.title = freshTitle.textContent;
 
-    // active 高亮 → 新頁 app mount → 殼層增強(BDropdown 等要等 mount 後的 DOM)
-    syncActive(url);
-    runPageInit(pageNameFromPath(url), current);
-    current.classList.add('is-page-ready');   // 無註冊頁(manual 等)也要解除防閃隱藏;註冊頁已在 pageInit 加過,重複無妨
+    // 側欄 active／收件數 → 新頁 extra_js 執行（會讀 location.search，pushState 已先行）→ 殼層增強
+    syncNav(doc);
+    runExtraJs(doc);
     reEnhance(current);
 
-    // 捲回頂端(換頁語意)
+    // 捲回頂端（換頁語意）＋焦點移到主內容（無障礙；main 已 tabindex=-1）
     current.scrollTop = 0;
     try { window.scrollTo(0, 0); } catch (e) {}
-    // 焦點移到主內容(無障礙):新內容已 tabindex=-1
     try { current.focus({ preventScroll: true }); } catch (e) {}
-    // 一律存 pathname(點擊導航進來的 url 是絕對網址,直接存會讓 popstate 的同 path 判斷永遠不成立)
     try { lastPath = new URL(url || location.pathname, window.location.origin).pathname; }
     catch (e) { lastPath = location.pathname; }
     return true;
   }
 
-  var navSeq = 0;   // 導航序號:慢的舊回應不得覆蓋使用者後來選的頁(點兩下/Back 競態)
+  var navSeq = 0;   // 導航序號：慢的舊回應不得覆蓋使用者後來選的頁（點兩下/Back 競態）
 
   function navigate(url, push) {
     var seq = ++navSeq;
-    // 延遲顯示「載入態」(變灰):fetch 多半很快,180ms 內回來就完全不變灰 → 俐落、無停頓感。
+    // 延遲顯示載入態（變灰）：fetch 多半很快，180ms 內回來就完全不變灰 → 俐落無停頓感
     var loadingTimer = setTimeout(function () {
       var m = document.querySelector(MAIN);
       if (m) m.classList.add('is-spa-loading');
@@ -169,25 +154,20 @@
     }
     fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' }, credentials: 'same-origin' })
       .then(function (r) {
-        // 被重導到登入頁等非預期回應 → 整頁導航(讓瀏覽器處理)
-        if (r.redirected && !sameOrigin(r.url)) { window.location.href = url; return null; }
+        // 被重導（如 session 過期導去登入頁）→ 整頁導航讓瀏覽器處理
+        var target = new URL(url, window.location.origin);
+        if (r.redirected && !samePath(new URL(r.url).pathname, target.pathname)) { window.location.href = url; return null; }
         return r.text();
       })
       .then(function (html) {
         if (html == null) return;
-        if (seq !== navSeq) return;   // 已有更新的導航 → 丟棄這筆舊回應
-        // A 版:pushState 先於 applyMain —— 頁面 app 的 pageInit 會讀 location.search 初始化篩選,
-        // 必須先把 URL 換成目標網址(B 版順序相反,因 B 頁面不在 init 時讀 URL)。
+        if (seq !== navSeq) return;   // 已有更新的導航 → 丟棄舊回應
+        // pushState 先於 applyMain：新頁 extra_js 會讀 location.search（如收件匣 ?form=）初始化
         if (push) history.pushState({ spa: true }, '', url);
-        if (!applyMain(html, url)) { window.location.reload(); return; }  // 抽換失敗 → 降級整頁(URL 已更新)
+        if (!applyMain(html, url)) { window.location.reload(); return; }  // 抽換失敗 → 降級整頁（URL 已更新）
       })
       .catch(function () { if (seq === navSeq) window.location.href = url; })  // 網路錯 → 降級
       .finally(clearLoading);
-  }
-
-  function sameOrigin(u) {
-    try { return new URL(u, window.location.origin).origin === window.location.origin; }
-    catch (e) { return true; }
   }
 
   // ---- 判斷一個連結是否該由 SPA 接管 ----
@@ -200,17 +180,15 @@
     if (a.dataset.noSpa !== undefined) return false;                              // 明確退出 SPA
     var href = a.getAttribute('href') || '';
     if (!href || href.charAt(0) === '#' || href.indexOf('javascript:') === 0) return false;
-    // 同源 + 模擬器後台路徑(/cms/…)才接管
     var url;
     try { url = new URL(a.href, window.location.origin); } catch (e) { return false; }
     if (url.origin !== window.location.origin) return false;
-    var prefix = (window.BASE_URL || '') + '/cms';
-    if (url.pathname !== prefix && url.pathname.indexOf(prefix + '/') !== 0) return false;
-    // 非頁面路徑不接管:登入/登出/驗證碼、檔案下載與上傳資源(/cms/upload/*)
-    if (url.pathname.indexOf(prefix + '/upload/') === 0) return false;
-    var tail = pageNameFromPath(url.pathname);
-    if (tail === 'login' || tail === 'logout' || tail === 'captcha') return false;
-    // 同 path 僅 query 不同(篩選)→ 不接管(原生整頁導航)
+    // 同源 + 後台頁面路徑（/admin…）才接管
+    if (url.pathname !== PREFIX && url.pathname.indexOf(PREFIX + '/') !== 0) return false;
+    // 非頁面路徑不接管：登入/登出、CSV 下載等帶副檔名的資源
+    var tail = normPath(url.pathname).split('/').pop().toLowerCase();
+    if (tail === 'login' || tail === 'logout' || tail.indexOf('.') !== -1) return false;
+    // 同 path 僅 query 不同（頁內篩選）→ 不接管（頁面腳本自己處理）
     if (samePath(url.pathname, window.location.pathname) && url.search) return false;
     return true;
   }
@@ -220,36 +198,18 @@
     if (!shouldHandle(a, ev)) return;
     ev.preventDefault();
     var url = new URL(a.href, window.location.origin);
-    // 點到目前頁本身(同 path 無 query)→ 只有當前網址也沒 query 才略過;
-    // 當前帶著篩選 query(例如首頁待辦連進來的 ?status=…)時,點側欄同頁 = 清除篩選,要真的導航。
+    // 點到目前頁本身（雙方都無 query）→ 略過；當前帶篩選 query 時點同頁 = 清除篩選，要真的導航
     if (samePath(url.pathname, location.pathname) && !url.search && !location.search) return;
     navigate(a.href, true);
   });
 
-  // ---- 上一頁/下一頁 ----
-  // path 改變 → SPA 換整頁;path 不變(僅 query,例如頁面 replaceState 的篩選)→ 不處理。
-  window.addEventListener('popstate', function (ev) {
+  // ---- 上一頁/下一頁：path 改變 → SPA 換頁；path 不變（僅 query，如篩選 pushState）→ 不處理 ----
+  window.addEventListener('popstate', function () {
     if (!document.querySelector(MAIN)) return;
-    if (samePath(location.pathname, lastPath)) return;   // path 沒變(只 query)→ 不動作
-    if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+    if (samePath(location.pathname, lastPath)) return;
     navigate(location.pathname + location.search, false);
-  }, true);
+  });
 
-  // ---- 首次載入:把當前頁的 pageInit 跑起來 ----
   markInitialExtraCss();
-
-  function bootCurrentPage() {
-    var main = document.querySelector(MAIN);
-    if (!main) return;
-    runPageInit(pageNameFromPath(location.pathname), main);
-    main.classList.add('is-page-ready');   // 首載 mount 完成 → 解除防閃隱藏(manual 等無註冊頁也適用)
-    reEnhance(main);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bootCurrentPage);
-  } else {
-    bootCurrentPage();
-  }
-
   window.ASpa = { navigate: navigate };
 })();

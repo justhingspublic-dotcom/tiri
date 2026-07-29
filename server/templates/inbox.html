@@ -548,12 +548,13 @@
             popBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
             if (open) syncSelectsToState();
         });
+        /* document 層級監聽帶 PageSignal：SPA 換頁時由 spa.js abort 解除，不跨頁殘留 */
         document.addEventListener('click', function (e) {
             if (pop.classList.contains('is-open') && !e.target.closest('#filter-pop')) closePop();
-        });
+        }, { signal: window.PageSignal });
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && pop.classList.contains('is-open')) closePop();
-        });
+        }, { signal: window.PageSignal });
 
         function syncFilterUi() {
             /* 收件匣：表單分類歸 segment 管，亮起只看面板兩條件；垃圾桶：表單類型也在面板內一起算 */
@@ -639,7 +640,7 @@
         overlay.addEventListener('click', function (e) { if (!modal.contains(e.target)) closeModal(); });
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closeModal();
-        });
+        }, { signal: window.PageSignal });
 
         /* ── 勾選刪除：選取工具列＋kit 對話框確認（BDialog.confirm，base.html 載入 dialogs.js） ── */
         var selBar = document.getElementById('sel-bar');

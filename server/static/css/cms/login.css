@@ -376,6 +376,8 @@ select:focus-visible {
 }
 
 .btn-login {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 42px;
     display: inline-flex;
@@ -413,6 +415,47 @@ select:focus-visible {
     box-shadow: none;
     cursor: not-allowed;
     transform: none;
+}
+
+/* ── 登入中填色動畫：::before 以 --brand-strong 由左至右填色。
+   送出 → is-loading 慢速填到 55% 等待回應；
+   成功 → is-success 快速補滿後跳轉；
+   失敗 → 移除 is-loading，回到基準 scaleX(0)（自帶縮回過渡）。 ── */
+.btn-login::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--brand-strong);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+    pointer-events: none;
+}
+
+.btn-login > * {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-login.is-loading {
+    background: var(--brand);      /* 鎖住底色，避免 hover 的 --brand-strong 蓋掉填色對比 */
+    pointer-events: none;
+}
+
+.btn-login.is-loading::before {
+    transform: scaleX(.55);
+    transition-duration: 1.1s;     /* 慢速爬行，營造「處理中」感 */
+}
+
+.btn-login.is-success::before {
+    transform: scaleX(1);
+    transition-duration: .3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-login::before {
+        transition-duration: .01s !important;
+    }
 }
 
 .login-panel-foot {

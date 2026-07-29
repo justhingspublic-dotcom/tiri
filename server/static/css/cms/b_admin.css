@@ -287,7 +287,26 @@ body {
   overflow-x: hidden;
   transition: width .3s cubic-bezier(.22, 1, .36, 1), transform .3s ease;
 }
-.sidebar::-webkit-scrollbar-thumb { background: var(--neutral-quaternary); }
+.sidebar::-webkit-scrollbar-thumb { background: transparent; }   /* 蓋掉 base.css 的 #ccc,平時隱形,hover 由下方全域規則浮現 */
+
+/* ── 後台全域捲軸:平時全透明(看起來會消失),滑鼠移到滾動區上才浮現灰 thumb
+   (滾輪/觸控板捲動時游標必在容器上,等同「捲動時出現、停下移開就消失」),
+   近似 macOS overlay 捲軸但各 OS/瀏覽器長相一致。
+   sidebar 維持 4px 細版(base.css 的寬度規則勝出),同樣 hover 才浮現。 ── */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: transparent; border-radius: var(--radius-full); }
+::-webkit-scrollbar-track { background: transparent; }
+:hover::-webkit-scrollbar-thumb { background: var(--neutral-quaternary); }
+
+/* ── 鎖一屏頁面(桌機儀表板、is-fixed-h 內滾頁):文件層完全不捲,
+   Safari 觸控板也不做整頁橡皮筋 —— 滾動只發生在內部容器。 ── */
+@media (min-width: 1025px) {
+  html:has(.main-content.is-dashboard),
+  html:has(.main-content.is-fixed-h) {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
 .sidebar-nav { padding: 8px 0; }
 
 /* 導覽項:沿用原本間距/尺寸(base.css 的 padding 12/16、margin 4/12;icon 18px/14px、字 14px);
@@ -503,9 +522,6 @@ body {
   min-height: 0;
   overflow-y: auto;
 }
-.b-billing-orders-scroll::-webkit-scrollbar { width: 10px; }
-.b-billing-orders-scroll::-webkit-scrollbar-thumb { background: var(--neutral-quaternary); border-radius: var(--radius-full); }
-.b-billing-orders-scroll::-webkit-scrollbar-track { background: transparent; }
 /* 框內訂單卡:貼滿外框寬(去左右圓角/邊框/自帶陰影),上下堆疊;卡間 8px 細縫露外框淡灰底。
    外框的圓角+邊框負責整體收邊 —— 與排程設定 tab 的 .b-card 規則一致。 */
 .b-billing-orders-scroll > .b-card {
@@ -530,9 +546,6 @@ body {
   border-bottom: 0;                                    /* 改用下方 box-shadow 畫線,避免 sticky 雙線 */
   box-shadow: inset 0 -1px 0 var(--border-default);
 }
-.b-tbl-scroll::-webkit-scrollbar { width: 10px; height: 10px; }
-.b-tbl-scroll::-webkit-scrollbar-thumb { background: var(--neutral-quaternary); border-radius: var(--radius-full); }
-.b-tbl-scroll::-webkit-scrollbar-track { background: transparent; }
 
 /* ── 時段管理(slots)固定高佈局 ──────────────────────────────────────
    需求:整頁外層不捲,捲動只在容器內。但 slots 有 3 個 tab,「排程設定」是長表單。
@@ -650,10 +663,6 @@ body {
   background: var(--brand-softer);
   color: var(--fg-brand);
 }
-
-.b-grid-scroll::-webkit-scrollbar { width: 10px; height: 10px; }
-.b-grid-scroll::-webkit-scrollbar-thumb { background: var(--neutral-quaternary); border-radius: var(--radius-full); }
-.b-grid-scroll::-webkit-scrollbar-track { background: transparent; }
 
 /* 時段格子彈窗(#b-cell-modal)開關動畫:與「新增」modal 一致 = 純 opacity 淡入/淡出 .12s。
    slots JS 以 .flex 顯示、.is-closing 觸發淡出(非全域 modal 的 is-open 兩段式),
@@ -1763,7 +1772,8 @@ html.b-mode-anim, html.b-mode-anim *, html.b-mode-anim *::before, html.b-mode-an
 /* ── 儀表板:「最近收件」最後一列保留底線(蓋過 .b-tbl 的 last-child 去線) ── */
 .b-dash-main .b-tbl tbody tr:last-child td { border-bottom: 1px solid var(--border-default); }
 
-/* ── 儀表板:桌機鎖在一屏內,超出的「最近收件」改在卡片內部捲動 ── */
+/* ── 儀表板:桌機鎖在一屏內。「最近收件」不內滾 —— 只顯示放得下的完整列
+   (dashboard.html 的 extra_js 依卡片高度裁列),超出部分 overflow:hidden 保底。 ── */
 @media (min-width: 1025px) {
   .main-content.is-dashboard {
     height: calc(100vh - var(--header-height));
@@ -1774,7 +1784,10 @@ html.b-mode-anim, html.b-mode-anim *, html.b-mode-anim *::before, html.b-mode-an
   }
   .main-content.is-dashboard .b-dash-grid { flex: 1; min-height: 0; }
   .main-content.is-dashboard .b-dash-main { min-height: 0; display: flex; flex-direction: column; }
-  .main-content.is-dashboard .b-dash-main .b-tbl-wrap { flex: 1; min-height: 0; overflow-y: auto; }
+  .main-content.is-dashboard .b-dash-main .b-tbl-wrap { flex: 1; min-height: 0; overflow: hidden; }
+  /* 均分高度用:extra_js 把表格撐到卡片可用高後,thead 列鎖內容高(1px=最小),
+     多出來的高度由瀏覽器平均分給沒指定高的 tbody 列 */
+  .main-content.is-dashboard .b-dash-main .b-tbl thead tr { height: 1px; }
   /* 卡內捲動時表頭釘住（比照 .b-tbl-scroll 的 sticky 規則） */
   .main-content.is-dashboard .b-dash-main .b-tbl-wrap .b-tbl thead th {
     position: sticky;
@@ -1797,16 +1810,10 @@ html.b-mode-anim, html.b-mode-anim *, html.b-mode-anim *::before, html.b-mode-an
   .main-content.is-dashboard .b-dash-side > .b-card:last-child { flex: 0 0 auto; }
 }
 
-/* ── 頁面間過渡:跨頁 view transition;header/sidebar 各自具名(內容不變就不動),只有主內容淡切 ── */
-@view-transition { navigation: auto; }
-.top-header { view-transition-name: cms-header; }
-.sidebar { view-transition-name: cms-sidebar; }
-::view-transition-old(root), ::view-transition-new(root) { animation-duration: .18s; }
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
-}
-/* 不支援 view transition 的瀏覽器:主內容輕淡入 */
-@supports not (view-transition-name: none) {
-  .main-content { animation: cms-page-in .18s ease-out; }
-  @keyframes cms-page-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-}
+/* ── 頁面間過渡:整頁導航(登入→後台、登出→登入、降級重載)進場輕淡入(只動 opacity)。
+   後台內部換頁由 SPA(spa.js)抽換 #main-content 處理,不走這裡。
+   原本的跨文件 @view-transition 已移除:Chrome 觸發條件太挑(常被跳過)、只有 Safari 穩定,
+   改純 CSS 動畫兩邊一致;body 動畫只在文件建立時播一次,SPA 抽換內容不會重播。 ── */
+body { animation: cms-page-in .18s ease-out; }
+@keyframes cms-page-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { body { animation: none; } }
