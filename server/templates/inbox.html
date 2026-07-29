@@ -80,16 +80,18 @@
     .gm-tabcheck { flex: none; margin-left: 8px; }
     /* 滾輪區：segment（或垃圾桶說明列）與選取動作列在此互捲，勾勾留在外面不動 */
     .gm-roll { position: relative; flex: 1 1 auto; min-width: 0; overflow: hidden; }
+    /* 滾輪上層：segment（或說明列）＋重整鈕同一層，選取時整層一起捲出 */
+    .gm-rolltop { display: flex; align-items: center; gap: 12px; }
     .gm-tabs .b-seg.is-pill {
-        display: flex; width: 100%; box-sizing: border-box;
+        display: flex; flex: 1 1 auto; min-width: 0; box-sizing: border-box;
         padding: 0; border: 0; background: transparent; gap: 4px;
     }
     /* 選取模式：滾輪區上層往上捲出（吃角子老虎滾輪，V1 社群 icon 同語言） */
-    .gm-roll :is(.b-seg.is-pill, .gm-notice) { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
-    .gm-tabs.is-selmode :is(.b-seg.is-pill, .gm-notice) { transform: translateY(calc(-100% - 8px)); }
+    .gm-roll .gm-rolltop { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+    .gm-tabs.is-selmode .gm-rolltop { transform: translateY(calc(-100% - 8px)); }
     /* 垃圾桶說明列：量體對齊 segment（36px），資訊層級低、置中排 */
     .gm-notice {
-        display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px;
+        display: flex; flex: 1 1 auto; align-items: center; gap: 8px; height: 36px; padding: 0 8px;
         font-size: calc(13px + var(--b-fs-boost, 0px)); color: var(--text-body-subtle);
     }
     .gm-notice :where(i, svg) { width: 15px; height: 15px; flex: none; }
@@ -103,6 +105,20 @@
         top: 0; bottom: 0; left: 0;
         border-radius: var(--field-radius);
     }
+    /* 重整鈕：量體對齊 segment 選項（36px）、灰字 ghost；載入中 icon 旋轉並鎖點擊 */
+    .gm-refreshbtn {
+        flex: none; width: 36px; height: 36px; padding: 0; border: 0;
+        display: inline-flex; align-items: center; justify-content: center;
+        border-radius: var(--field-radius); background: transparent;
+        color: var(--text-body-subtle); cursor: pointer;
+        transition: background .15s ease, color .15s ease;
+    }
+    .gm-refreshbtn:hover { background: var(--neutral-secondary-medium); color: var(--text-body); }
+    .gm-refreshbtn:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--neutral-tertiary); }
+    .gm-refreshbtn :where(i, svg) { width: 16px; height: 16px; stroke-width: 2.75; }   /* 全站 lucide 預設 2.2，這顆加粗 */
+    .gm-refreshbtn.is-loading { pointer-events: none; }
+    .gm-refreshbtn.is-loading :where(i, svg) { animation: gm-refresh-spin .7s linear infinite; }
+    @keyframes gm-refresh-spin { to { transform: rotate(360deg); } }
 
     /* Gmail 式固定滿版（使用者裁決）：列表卡吃滿剩餘高，少列與空狀態都撐滿、不隨內容縮
        （kit 預設 flex: 0 1 auto＝貼合內容高） */
@@ -303,6 +319,8 @@
             <input type="checkbox" id="sel-all">
         </label>
         <div class="gm-roll">
+        {# 上層＝segment（或垃圾桶說明列）＋重整鈕包成一層，選取時整層跟滾輪一起捲出 #}
+        <div class="gm-rolltop">
         {% if mode == 'trash' %}
         <div class="gm-notice">
             <i data-lucide="info" aria-hidden="true"></i>
@@ -318,6 +336,11 @@
             {% endfor %}
         </div>
         {% endif %}
+        {# 重整鈕：釘在 segment 右端，fetch 重抓列表、不整頁重載 #}
+        <button type="button" class="gm-refreshbtn" id="inbox-refresh" title="重新整理" aria-label="重新整理列表">
+            <i data-lucide="refresh-cw" aria-hidden="true"></i>
+        </button>
+        </div>{# /gm-rolltop #}
         <div class="gm-selbar" id="sel-bar" aria-hidden="true">
             <span id="sel-count">已選 0 筆</span>
             {# 按鈕序（使用者裁決）：取消（灰）→ 破壞性動作 → 還原壓最右（主要安全動作）；同家族扁鈕、緊靠成一組 #}
@@ -594,7 +617,8 @@
             }, 130);
         }
 
-        rows.forEach(function (row) {
+        /* 列的事件（開詳情＋勾選）統一在 bindRow 綁：初次與重整鈕換新列後都走這裡 */
+        function bindRow(row) {
             row.addEventListener('click', function (e) {
                 if (e.target.closest('.gm-check')) return;   /* 點勾選框不開詳情 */
                 openModal(row.getAttribute('data-row'), row);
@@ -607,7 +631,10 @@
                     openModal(row.getAttribute('data-row'), row);
                 }
             });
-        });
+            var box = row.querySelector('.gm-check input');
+            if (box) box.addEventListener('change', updateSelbar);
+        }
+        rows.forEach(bindRow);
         document.getElementById('im-close').addEventListener('click', closeModal);
         overlay.addEventListener('click', function (e) { if (!modal.contains(e.target)) closeModal(); });
         document.addEventListener('keydown', function (e) {
@@ -636,10 +663,6 @@
             selAll.checked = n > 0 && n === visibleBoxes;
         }
 
-        rows.forEach(function (row) {
-            var box = row.querySelector('.gm-check input');
-            if (box) box.addEventListener('change', updateSelbar);
-        });
         selAll.addEventListener('change', function () {
             var on = selAll.checked;
             rows.forEach(function (row) {   /* 全選＝只選目前顯示（篩選後）的列 */
@@ -778,6 +801,62 @@
         if (imRestore) imRestore.addEventListener('click', function () {
             var id = imDelete.getAttribute('data-id');
             if (id) doAction('/admin/trash/restore', [id], closeModal);
+        });
+
+        /* ── 重整鈕：fetch 同頁重抓、DOMParser 取新列換舊列，不整頁重載 ── */
+        var refreshBtn = document.getElementById('inbox-refresh');
+        /* 停轉不瞬跳：等動畫把當圈轉完（轉回 0°）的 animationiteration 才移除 class；
+           1s 防呆＝動畫沒在跑（如 reduced motion）時也一定會解鎖 */
+        function stopSpin() {
+            var icon = refreshBtn.querySelector('svg');
+            var timer = setTimeout(finish, 1000);
+            function finish() {
+                clearTimeout(timer);
+                if (icon) icon.removeEventListener('animationiteration', finish);
+                refreshBtn.classList.remove('is-loading');
+            }
+            if (icon) icon.addEventListener('animationiteration', finish);
+        }
+        refreshBtn.addEventListener('click', function () {
+            if (refreshBtn.classList.contains('is-loading')) return;   /* 鍵盤觸發不吃 pointer-events 鎖 */
+            refreshBtn.classList.add('is-loading');
+            var minSpin = new Promise(function (r) { setTimeout(r, 450); });   /* 至少轉一小圈，太快像沒反應 */
+            Promise.all([
+                fetch(BASE, { headers: { 'X-Requested-With': 'fetch' } }).then(function (r) {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.text();
+                }),
+                minSpin
+            ]).then(function (out) {
+                var doc = new DOMParser().parseFromString(out[0], 'text/html');
+                var fresh = doc.getElementById('inbox-scroll');
+                if (!fresh) throw new Error('unexpected response');
+                /* 換列＋詳情；頂列（segment/選取列）與空狀態卡留在原地 */
+                scroll.querySelectorAll('.gm-row, [data-detail]').forEach(function (el) { el.remove(); });
+                var frag = document.createDocumentFragment();
+                fresh.querySelectorAll('.gm-row, [data-detail]').forEach(function (el) { frag.appendChild(el); });
+                scroll.insertBefore(frag, empty);
+                /* segment 筆數同步（垃圾桶無 segment） */
+                if (seg) {
+                    var freshSeg = doc.getElementById('inbox-seg');
+                    if (freshSeg) seg.querySelectorAll('a[data-filter]').forEach(function (a) {
+                        var src = freshSeg.querySelector('a[data-filter="' + a.getAttribute('data-filter') + '"] .seg-count');
+                        var dst = a.querySelector('.seg-count');
+                        if (src && dst) dst.textContent = src.textContent;
+                    });
+                }
+                /* 重建 rows/texts（closure 都讀這兩個 var）並重綁事件，再套回現有搜尋/篩選/分類 */
+                rows = Array.prototype.slice.call(document.querySelectorAll('.gm-row[data-slug]'));
+                texts = rows.map(function (row) {
+                    var det = document.querySelector('[data-detail="' + row.getAttribute('data-row') + '"]');
+                    return (row.textContent + ' ' + (det ? det.textContent : '')).toLowerCase();
+                });
+                rows.forEach(bindRow);
+                applyFilter(false);
+                updateSelbar();
+            }).catch(function () {
+                window.bToast('重新整理失敗，請稍後再試', 'danger');
+            }).then(stopSpin);
         });
 
         /* ── 自製 overlay 卷軸指示條：捲動浮現、700ms 淡出、可拖曳（原生卷軸已藏） ── */

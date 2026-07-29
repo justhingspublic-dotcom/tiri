@@ -248,6 +248,19 @@ section,
 .btn:hover,
 .btn:focus-visible { background-size: 100% 100%; }
 
+/* 表單送出中：細環 spinner（精品風＝1.5px 細線、currentColor），鎖住填色互動 */
+.btn.is-loading { pointer-events: none; }
+.btn .btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 0.8s linear infinite;
+}
+@keyframes btn-spin { to { transform: rotate(360deg); } }
+
 .btn-primary {
   background-color: var(--ink);
   background-image: linear-gradient(var(--purple), var(--purple));

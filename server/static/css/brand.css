@@ -62,11 +62,18 @@ html:root[data-color-mode="dark"] .b-modal { border: 1px solid rgba(255, 255, 25
 
 /* ── iOS 平滑圓角（使用者裁決 2026-07-28）──
    corner-shape: squircle＝連續曲率圓角（同 iOS app icon）。漸進增強：
-   新版 Chromium 生效，Safari 尚未支援則維持標準圓角。圓形元素排除，避免變成方圓形。 */
+   新版 Chromium 生效，Safari 尚未支援則維持標準圓角。
+   ⚠️ 圓形與膠囊（radius-full）元素一律排除：squircle 疊上全圓角會被壓成方圓形，
+   支援的瀏覽器（Chrome）上看起來就不是膠囊/正圓。新增 radius-full 元素時記得補進這串。 */
 @supports (corner-shape: squircle) {
   *, *::before, *::after { corner-shape: squircle; }
   .header-user-avatar, .gm-dot, .b-badge .dot,
-  input[type="radio"], input[type="checkbox"] { corner-shape: round; }
+  input[type="radio"], input[type="checkbox"],
+  .header-user-btn, .header-icon-btn, .logo-env,
+  .b-badge:not(.square), .b-alert-pill, .b-ish-circle,
+  .b-avatar:not(.b-avatar-square), .b-occ-track, .b-occ-fill,
+  .b-checkin-done-icon, .b-theme-preview-tag, .b-manual-step-n,
+  .rounded-full { corner-shape: round; }
 }
 
 /* ── 深色模式收斂 ──

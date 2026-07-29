@@ -1760,6 +1760,9 @@ html.b-mode-anim, html.b-mode-anim *, html.b-mode-anim *::before, html.b-mode-an
 .header-fs-marks { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--text-body-subtle); }
 .header-fs-marks .on { color: var(--fg-brand); font-weight: 600; }
 
+/* ── 儀表板:「最近收件」最後一列保留底線(蓋過 .b-tbl 的 last-child 去線) ── */
+.b-dash-main .b-tbl tbody tr:last-child td { border-bottom: 1px solid var(--border-default); }
+
 /* ── 儀表板:桌機鎖在一屏內,超出的「最近收件」改在卡片內部捲動 ── */
 @media (min-width: 1025px) {
   .main-content.is-dashboard {

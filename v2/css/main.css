@@ -259,6 +259,20 @@ section,
 .btn-primary:hover,
 .btn-primary:focus-visible { background-color: var(--purple-active); }
 
+/* 表單送出中：粗一點的環形 spinner（配 weight 600 的友善 pill），半透明軌道＋實色轉頭 */
+.btn.is-loading { pointer-events: none; }
+.btn .btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-color: currentColor currentColor currentColor transparent;
+  opacity: 0.9;
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+}
+@keyframes btn-spin { to { transform: rotate(360deg); } }
+
 .btn-outline {
   background-color: var(--white);
   color: var(--ink);

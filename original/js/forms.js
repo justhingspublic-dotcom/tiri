@@ -75,9 +75,62 @@
                : 'color:#1b5e20;border-color:#1b5e20;background:#f1f8f2;');
   }
 
+  /* ---- 送出中的按鈕 loading 態（V1/V2 的 <button.btn>＋原版的 a.wsite-button 各自適配） ---- */
+
+  function setLoading(form, on) {
+    form.classList.toggle('is-submitting', on);
+
+    var btn = form.querySelector('button[type="submit"], input[type="submit"]');
+    if (btn) btn.disabled = on;
+
+    if (btn && btn.tagName === 'BUTTON') {
+      if (on) {
+        btn.setAttribute('data-tiri-label', btn.innerHTML);
+        btn.style.minWidth = btn.offsetWidth + 'px'; /* 換字後寬度不跳 */
+        btn.classList.add('is-loading');
+        btn.innerHTML = '送出中<span class="btn-spinner" aria-hidden="true"></span>';
+      } else if (btn.hasAttribute('data-tiri-label')) {
+        btn.innerHTML = btn.getAttribute('data-tiri-label');
+        btn.removeAttribute('data-tiri-label');
+        btn.style.minWidth = '';
+        btn.classList.remove('is-loading');
+      }
+    }
+
+    var fancy = form.querySelector('a.wsite-button');
+    if (fancy) {
+      var inner = fancy.querySelector('.wsite-button-inner') || fancy;
+      if (on) {
+        fancy.setAttribute('data-tiri-label', inner.innerHTML);
+        fancy.style.minWidth = fancy.offsetWidth + 'px';
+        fancy.style.pointerEvents = 'none';
+        inner.innerHTML = '送出中<span class="tiri-wsite-spinner" aria-hidden="true"></span>';
+      } else if (fancy.hasAttribute('data-tiri-label')) {
+        inner.innerHTML = fancy.getAttribute('data-tiri-label');
+        fancy.removeAttribute('data-tiri-label');
+        fancy.style.minWidth = '';
+        fancy.style.pointerEvents = '';
+      }
+    }
+  }
+
+  /* 原版（Weebly）按鈕的 spinner 樣式由 JS 注入，不動匯出的舊 CSS；V1/V2 的 .btn-spinner 定義在各自 main.css */
+  function injectWsiteSpinnerCss() {
+    if (document.getElementById('tiri-forms-css')) return;
+    var style = document.createElement('style');
+    style.id = 'tiri-forms-css';
+    style.textContent =
+      '.tiri-wsite-spinner{display:inline-block;vertical-align:-2px;width:13px;height:13px;margin-left:8px;' +
+      'border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;' +
+      'animation:tiri-spin .7s linear infinite}' +
+      '@keyframes tiri-spin{to{transform:rotate(360deg)}}';
+    document.head.appendChild(style);
+  }
+
   function bind(form, collect) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (form.classList.contains('is-submitting')) return;
 
       var data = collect(form);
       if (data.missing.length) {
@@ -85,8 +138,7 @@
         return;
       }
 
-      var submitBtn = form.querySelector('input[type="submit"], button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+      setLoading(form, true);
 
       fetch(API_BASE + '/api/submit/' + encodeURIComponent(slug), {
         method: 'POST',
@@ -98,10 +150,11 @@
         })
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
+        setLoading(form, false);
         form.style.display = 'none';
         showMessage(form, '已收到您的填寫，我們會盡快與您聯繫，謝謝!');
       }).catch(function () {
-        if (submitBtn) submitBtn.disabled = false;
+        setLoading(form, false);
         showMessage(form, '送出失敗，請稍後再試，或直接來信 office@tiri.tw', true);
       });
     });
@@ -118,6 +171,7 @@
   }
 
   document.querySelectorAll('form[action*="formSubmit"]').forEach(function (form) {
+    injectWsiteSpinnerCss();
     bind(form, collectWsite);
   });
 
