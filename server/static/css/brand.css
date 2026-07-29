@@ -29,6 +29,12 @@ html:root[data-color-mode="dark"] { --float-shadow: 0 6px 20px rgba(0, 0, 0, .40
 /* ── 文字類按鈕 hover＝文字亮起主題色、不加底色（使用者裁決 2026-07-28，全後台統一）──
    蓋掉 kit 的 hover 淡紫/淡灰底。選擇器用 .b-btn 前綴墊特異度（brand.css 載入在 b_admin.css 之前）。 */
 .b-btn.b-btn-text:hover { background: transparent; color: var(--fg-brand-strong); }
+/* danger 文字鈕（BDialog 確認鈕）例外：hover＝半透明紅底＋紅字（使用者裁決 2026-07-29），
+   特異度墊三層蓋過上一條的亮紫 */
+.b-btn.b-btn-text.b-btn-text-danger:hover {
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+  color: var(--fg-danger-strong, var(--fg-danger));
+}
 .b-btn.b-btn-text-danger:hover { background: transparent; }
 .b-btn.b-btn-ghost:hover { background: transparent; color: var(--fg-brand); }
 .b-btn.b-btn-ghost:hover :where(i, .lucide, svg) { color: var(--fg-brand); }
@@ -37,6 +43,22 @@ html:root[data-color-mode="dark"] { --float-shadow: 0 6px 20px rgba(0, 0, 0, .40
 
 /* ── 深色模式：modal 補一圈淺外框（深底上白卡變深卡、與遮罩融在一起 → 需要輪廓）── */
 html:root[data-color-mode="dark"] .b-modal { border: 1px solid rgba(255, 255, 255, .12); }
+
+/* ── modal 遮罩去 blur ──
+   kit 遮罩帶 backdrop-filter: blur(1px)：遮罩顯示瞬間整頁像素同時被模糊「抖」一下，
+   看起來就是「開 alert 畫面閃爍」（backdrop-filter 顯隱不可漸變——V2 nav 同族坑）。
+   只保留 rgba 壓暗。!important＝brand.css 載在 b_admin.css 之前，同特異度會被蓋回。 */
+.b-modal-overlay { backdrop-filter: none !important; }
+
+/* ── BDialog（dialogs.js 動態對話框）首開淡入 ──
+   kit 的兩段式 transition（is-visible → reflow → is-open）在真瀏覽器首開會直接跳終態
+   （節點剛 append、display 與 opacity 同幀——與 #b-cell-modal、收件匣 modal 同一坑），
+   改用綁 display 切換自動播放的 @keyframes。不填 fill：動畫跑完回歸 is-open 的 opacity:1，
+   關閉時 is-open 移除仍走原本 transition 淡出，兩頭都有動畫。 */
+/* ⚠️ 只動 opacity、不縮放（kit 鐵則）：scale 版試過——文字先以縮小尺寸柵格化、
+   動畫結束重新柵格化，真螢幕上「糊→利」跳一下就是被回報的閃爍 */
+.b-modal-overlay[data-modal-vue].is-visible { animation: bdlg-overlay-in .18s ease-out; }
+@keyframes bdlg-overlay-in { from { opacity: 0; } to { opacity: 1; } }
 
 /* ── iOS 平滑圓角（使用者裁決 2026-07-28）──
    corner-shape: squircle＝連續曲率圓角（同 iOS app icon）。漸進增強：

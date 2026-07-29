@@ -59,8 +59,13 @@
         };
     </script>
     <script src="/static/js/b/dropdown.js?v=20260727a" defer></script>
+    {# kit 對話框（BDialog.confirm/alert/prompt＋BToast）：收件匣刪除確認用，全站可用 #}
+    <script src="/static/js/cms/dialogs.js?v=20260729" defer></script>
     <style>
         [v-cloak] { display: none !important; }
+        /* 側欄項目右端筆數（收件匣總數）：低調灰字、表格數字；收合側欄時隨文字一起藏 */
+        .menu-count { margin-left: auto; font-size: 12.5px; color: var(--text-body-subtle); font-variant-numeric: tabular-nums; }
+        .sidebar.collapsed .menu-count { display: none; }
         /* base.css 給 .logo-icon 設了 flex-basis 132px，b_admin 只蓋 width 沒蓋 flex → 窄 logo 兩側留白；這裡歸零 */
         .header-logo .logo-icon { flex: 0 0 auto; }
         /* 深色模式：wordmark 轉純白 */
@@ -102,6 +107,13 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
+    {# Tailwind CDN 預熱：它的 observer 一看到「沒見過的 class 名」就整份重編譯樣式表，
+       全頁樣式重算＝畫面閃一下。BDialog／toast／lucide icon 的 class 都是動態才進 DOM，
+       首次開啟必觸發——先在這裡全部亮相，讓首次編譯就涵蓋，之後開對話框 head 零變動（實測驗證）。 #}
+    {# ⚠️ 這顆同時掛著多個「會被渲染」的 class（gm-sbthumb＋is-visible 疊起來就是一條可見小灰條），
+       必須用 inline display:none 強制隱形——class 規則蓋不過 inline !important #}
+    <div hidden aria-hidden="true" style="display:none !important"
+         class="b-modal-overlay b-modal is-alert is-wide b-alert-body b-alert-icon b-alert-icon-danger b-alert-icon-warn b-alert-title b-alert-desc b-alert-foot b-btn b-btn-quiet b-btn-text b-btn-text-danger b-input b-modal-lock is-visible is-open is-closing b-toast-wrap b-toast b-toast-success b-toast-danger b-toast-warning b-toast-icon b-toast-msg is-armed is-leaving is-selmode is-enter is-swap is-loading gm-sbthumb lucide lucide-triangle-alert lucide-circle-check lucide-circle-x"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="app">
         <header class="top-header" role="banner">
@@ -197,6 +209,7 @@
                        :class="['menu-item', menu.key === activeKey ? 'active' : '']">
                         <i :data-lucide="menu.icon" aria-hidden="true"></i>
                         <span class="menu-text">[[ menu.title ]]</span>
+                        <span v-if="menu.count != null" class="menu-count">[[ menu.count ]]</span>
                     </a>
                 </template>
             </div>
@@ -273,7 +286,13 @@
         window.__ACTIVE = {{ active|tojson }};
         window.renderLucideIcons = function () {
             if (!window.lucide || !window.lucide.createIcons) return;
-            window.lucide.createIcons({ attrs: { 'stroke-width': 2.2, 'aria-hidden': 'true' } });
+            if (document.querySelector('i[data-lucide]')) {
+                window.lucide.createIcons({ attrs: { 'stroke-width': 2.2, 'aria-hidden': 'true' } });
+            }
+            /* 轉換完「立刻」拔掉 svg 殘留的 data-lucide：留著會讓下次呼叫整頁重畫 icon；
+               而「開 dialog 時才拔」= 首開瞬間大量屬性變動 → Tailwind CDN observer 重生成樣式
+               → 首次開 alert 整頁閃爍。改在同一次呼叫內拔，大量變動只發生在頁面載入那一刻 */
+            document.querySelectorAll('svg[data-lucide]').forEach(function (s) { s.removeAttribute('data-lucide'); });
         };
 
         /* 前端動態 toast（AJAX 儲存用）：沿用 flash 的 b-toast 樣式與動畫，動畫結束自動移除 */

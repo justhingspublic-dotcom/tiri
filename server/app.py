@@ -81,6 +81,20 @@ def init_db():
             )"""
         )
         db.execute("CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)")
+        # 垃圾桶（軟刪除）：deleted_at 非 NULL＝在垃圾桶，7 天後由 purge_trash 永久清除
+        cols = [r[1] for r in db.execute("PRAGMA table_info(submissions)")]
+        if "deleted_at" not in cols:
+            db.execute("ALTER TABLE submissions ADD COLUMN deleted_at TEXT")
+
+
+TRASH_KEEP_DAYS = 7
+
+
+def purge_trash(db):
+    """垃圾桶逾期清除：進垃圾桶超過 7 天的永久刪除（每次開後台列表時順手清）"""
+    cutoff = (datetime.now(TAIPEI) - timedelta(days=TRASH_KEEP_DAYS)).strftime("%Y-%m-%d %H:%M:%S")
+    db.execute("DELETE FROM submissions WHERE deleted_at IS NOT NULL AND deleted_at < ?", (cutoff,))
+    db.commit()
 
 
 def get_setting(key, default=None):
@@ -289,9 +303,17 @@ def logout():
 # ---------- 後台：頁面 ----------
 
 def nav_items():
+    # 收件匣右端顯示總數（不含垃圾桶）
+    try:
+        inbox_n = get_db().execute(
+            "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL"
+        ).fetchone()[0]
+    except Exception:
+        inbox_n = None
     return [
         {"key": "dashboard", "title": "儀表板", "url": "/admin", "icon": "gauge"},
-        {"key": "inbox", "title": "收件匣", "url": "/admin/inbox", "icon": "inbox"},
+        {"key": "inbox", "title": "收件匣", "url": "/admin/inbox", "icon": "inbox", "count": inbox_n},
+        {"key": "trash", "title": "垃圾桶", "url": "/admin/trash", "icon": "trash-2"},
         {"title": "設定", "icon": "settings", "sub": [
             {"key": "settings", "title": "郵件設定", "url": "/admin/settings"},
             {"key": "account", "title": "帳號設定", "url": "/admin/account"},
@@ -299,21 +321,24 @@ def nav_items():
     ]
 
 
-def query_rows(slug):
+def query_rows(slug, deleted=False):
+    """deleted=False＝收件匣（未刪），True＝垃圾桶"""
     db = get_db()
+    cond = "deleted_at IS NOT NULL" if deleted else "deleted_at IS NULL"
+    order = "deleted_at DESC" if deleted else "id DESC"
     if slug:
         return db.execute(
-            "SELECT * FROM submissions WHERE form_slug LIKE ? ORDER BY id DESC LIMIT 500",
+            f"SELECT * FROM submissions WHERE {cond} AND form_slug LIKE ? ORDER BY {order} LIMIT 500",
             (slug + "%",),
         ).fetchall()
-    return db.execute("SELECT * FROM submissions ORDER BY id DESC LIMIT 500").fetchall()
+    return db.execute(f"SELECT * FROM submissions WHERE {cond} ORDER BY {order} LIMIT 500").fetchall()
 
 
 def row_dict(r):
     fields = [f for f in json.loads(r["fields_json"]) if isinstance(f, dict)]
     # Gmail 式列表：第一個有值的欄位當「寄件人」（通常是姓名/公司名稱），其餘進摘要
     idx = next((i for i, f in enumerate(fields) if str(f.get("value", "")).strip()), None)
-    return {
+    d = {
         "id": r["id"],
         "submitted_at": r["submitted_at"],
         "form_name": r["form_name"],
@@ -324,28 +349,36 @@ def row_dict(r):
         "snippet": [f for i, f in enumerate(fields)
                     if i != idx and str(f.get("value", "")).strip()],
     }
+    if r["deleted_at"]:  # 垃圾桶列：算剩幾天永久刪除（至少顯示 1 天）
+        deleted = datetime.strptime(r["deleted_at"], "%Y-%m-%d %H:%M:%S")
+        expire = deleted + timedelta(days=TRASH_KEEP_DAYS)
+        d["deleted_at"] = r["deleted_at"]
+        d["days_left"] = max(1, (expire.date() - datetime.now(TAIPEI).date()).days)
+    return d
 
 
 @app.route("/admin")
 @require_auth
 def dashboard():
     db = get_db()
+    purge_trash(db)
     now = datetime.now(TAIPEI)
-    total = db.execute("SELECT COUNT(*) FROM submissions").fetchone()[0]
+    # 所有統計都不含垃圾桶（deleted_at IS NULL）
+    total = db.execute("SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL").fetchone()[0]
     today_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE submitted_at LIKE ?",
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at LIKE ?",
         (now.strftime("%Y-%m-%d") + "%",),
     ).fetchone()[0]
     week_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE submitted_at >= ?",
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at >= ?",
         ((now - timedelta(days=7)).strftime("%Y-%m-%d"),),
     ).fetchone()[0]
     fail_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE mail_status LIKE 'error%'"
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND mail_status LIKE 'error%'"
     ).fetchone()[0]
 
     counts = dict(
-        db.execute("SELECT form_slug, COUNT(*) FROM submissions GROUP BY form_slug").fetchall()
+        db.execute("SELECT form_slug, COUNT(*) FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug").fetchall()
     )
     form_stats = []
     for s, n in FORM_NAMES.items():
@@ -356,7 +389,7 @@ def dashboard():
         })
 
     recent = [row_dict(r) for r in db.execute(
-        "SELECT * FROM submissions ORDER BY id DESC LIMIT 8"
+        "SELECT * FROM submissions WHERE deleted_at IS NULL ORDER BY id DESC LIMIT 8"
     ).fetchall()]
 
     return render_template(
@@ -374,11 +407,13 @@ def dashboard():
 @app.route("/admin/inbox")
 @require_auth
 def inbox():
+    db = get_db()
+    purge_trash(db)
     slug = request.args.get("form", "")
     # 一次載入全部（每列帶 data-slug），篩選在前端做：segment 滑塊才有滑動切換、不用整頁重載
     rows = [row_dict(r) for r in query_rows("")]
     counts = dict(
-        get_db().execute("SELECT form_slug, COUNT(*) FROM submissions GROUP BY form_slug").fetchall()
+        db.execute("SELECT form_slug, COUNT(*) FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug").fetchall()
     )
     filters = [{"slug": "", "name": "全部", "count": sum(counts.values())}]
     for s, n in FORM_NAMES.items():
@@ -388,11 +423,84 @@ def inbox():
         "inbox.html",
         nav_items=nav_items(),
         active="inbox",
+        mode="inbox",
         slug=slug,
         page_name=FORM_NAMES.get(slug, ""),
         filters=filters,
         rows=rows,
     )
+
+
+@app.route("/admin/trash")
+@require_auth
+def trash():
+    db = get_db()
+    purge_trash(db)
+    # 垃圾桶不做 segment（使用者裁決）：表單類型改放篩選面板，filters 只給面板下拉用
+    rows = [row_dict(r) for r in query_rows("", deleted=True)]
+    filters = [{"slug": s, "name": n} for s, n in FORM_NAMES.items()]
+    return render_template(
+        "inbox.html",
+        nav_items=nav_items(),
+        active="trash",
+        mode="trash",
+        slug="",
+        page_name="",
+        filters=filters,
+        rows=rows,
+    )
+
+
+def _post_ids():
+    data = request.get_json(silent=True) or {}
+    return [int(i) for i in data.get("ids", []) if str(i).isdigit()]
+
+
+@app.route("/admin/inbox/delete", methods=["POST"])
+@require_auth
+def inbox_delete():
+    # 軟刪除＝移至垃圾桶（deleted_at 蓋時間戳），7 天內可還原
+    ids = _post_ids()
+    if not ids:
+        return jsonify(ok=False, message="沒有選取任何資料"), 400
+    db = get_db()
+    now = datetime.now(TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
+    cur = db.execute(
+        f"UPDATE submissions SET deleted_at = ? WHERE deleted_at IS NULL AND id IN ({','.join('?' * len(ids))})",
+        [now] + ids,
+    )
+    db.commit()
+    return jsonify(ok=True, deleted=cur.rowcount, message=f"已將 {cur.rowcount} 筆收件移至垃圾桶")
+
+
+@app.route("/admin/trash/restore", methods=["POST"])
+@require_auth
+def trash_restore():
+    ids = _post_ids()
+    if not ids:
+        return jsonify(ok=False, message="沒有選取任何資料"), 400
+    db = get_db()
+    cur = db.execute(
+        f"UPDATE submissions SET deleted_at = NULL WHERE deleted_at IS NOT NULL AND id IN ({','.join('?' * len(ids))})",
+        ids,
+    )
+    db.commit()
+    return jsonify(ok=True, restored=cur.rowcount, message=f"已還原 {cur.rowcount} 筆收件")
+
+
+@app.route("/admin/trash/delete", methods=["POST"])
+@require_auth
+def trash_delete():
+    ids = _post_ids()
+    if not ids:
+        return jsonify(ok=False, message="沒有選取任何資料"), 400
+    db = get_db()
+    cur = db.execute(
+        f"DELETE FROM submissions WHERE deleted_at IS NOT NULL AND id IN ({','.join('?' * len(ids))})",
+        ids,
+    )
+    db.commit()
+    return jsonify(ok=True, deleted=cur.rowcount, message=f"已永久刪除 {cur.rowcount} 筆收件")
 
 
 SETTING_FIELDS = [

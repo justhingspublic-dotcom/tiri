@@ -1,6 +1,8 @@
 {% extends "base.html" %}
-{% block title %}收件匣{% endblock %}
-{% block page_title %}收件匣{% endblock %}
+{# 本模板雙模式共用：mode='inbox'（收件匣）/ 'trash'（垃圾桶，7 天保留可還原）——
+   列表/搜尋/篩選/勾選/滾輪/modal 全套沿用，僅資料來源與動作不同 #}
+{% block title %}{{ '垃圾桶' if mode == 'trash' else '收件匣' }}{% endblock %}
+{% block page_title %}{{ '垃圾桶' if mode == 'trash' else '收件匣' }}{% endblock %}
 
 {% block main_modifier %}is-fixed-h{% endblock %}
 
@@ -18,6 +20,18 @@
     <div class="b-pop-panel" role="group" aria-label="篩選條件">
         <p class="b-pop-panel-title">篩選條件</p>
         <div class="grid gap-y-4">
+            {% if mode == 'trash' %}
+            {# 垃圾桶不做 segment（使用者裁決）：表單類型放進篩選面板 #}
+            <div class="set-field">
+                <label class="b-label" for="filter-form">表單類型</label>
+                <select id="filter-form">
+                    <option value="">全部表單</option>
+                    {% for f in filters %}
+                    <option value="{{ f.slug }}">{{ f.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
             <div class="set-field">
                 <label class="b-label" for="filter-status">通知信狀態</label>
                 <select id="filter-status">
@@ -43,9 +57,11 @@
         </div>
     </div>
 </div>
+{% if mode != 'trash' %}
 <a id="export-btn" class="b-btn b-btn-quiet" href="/admin/export.csv?form={{ slug }}">
     <i data-lucide="download" aria-hidden="true"></i> 匯出 CSV
 </a>
+{% endif %}
 {% endblock %}
 
 {% block extra_css %}
@@ -55,14 +71,28 @@
        選項均分整寬、選中滑塊高度/圓角對齊工具列（36px / --field-radius）。 */
     .gm-tabs {
         position: sticky; top: 0; z-index: 5;
+        display: flex; align-items: center; gap: 12px;
         padding: 8px 10px;
-        background: var(--neutral-primary-soft);
+        background: var(--neutral-primary-soft);   /* 淡紫版試過被退：維持與卡片同底 */
         border-bottom: 1px solid var(--border-default);
     }
+    /* 固定全選勾勾：不進滾輪、與列的勾選框同一直欄（10＋8＝列的 18px 內距） */
+    .gm-tabcheck { flex: none; margin-left: 8px; }
+    /* 滾輪區：segment（或垃圾桶說明列）與選取動作列在此互捲，勾勾留在外面不動 */
+    .gm-roll { position: relative; flex: 1 1 auto; min-width: 0; overflow: hidden; }
     .gm-tabs .b-seg.is-pill {
         display: flex; width: 100%; box-sizing: border-box;
         padding: 0; border: 0; background: transparent; gap: 4px;
     }
+    /* 選取模式：滾輪區上層往上捲出（吃角子老虎滾輪，V1 社群 icon 同語言） */
+    .gm-roll :is(.b-seg.is-pill, .gm-notice) { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+    .gm-tabs.is-selmode :is(.b-seg.is-pill, .gm-notice) { transform: translateY(calc(-100% - 8px)); }
+    /* 垃圾桶說明列：量體對齊 segment（36px），資訊層級低、置中排 */
+    .gm-notice {
+        display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px;
+        font-size: calc(13px + var(--b-fs-boost, 0px)); color: var(--text-body-subtle);
+    }
+    .gm-notice :where(i, svg) { width: 15px; height: 15px; flex: none; }
     .gm-tabs .b-seg.is-pill a {
         flex: 1 1 0; min-width: 0; height: 36px; padding: 0 8px;
         border-radius: var(--field-radius);
@@ -74,19 +104,39 @@
         border-radius: var(--field-radius);
     }
 
-    /* 空狀態在卡片內：hidden 要贏過 kit 對 .b-empty 的 display 設定 */
-    #inbox-empty { padding: 40px 20px; }
+    /* Gmail 式固定滿版（使用者裁決）：列表卡吃滿剩餘高，少列與空狀態都撐滿、不隨內容縮
+       （kit 預設 flex: 0 1 auto＝貼合內容高） */
+    #inbox-scroll { flex: 1 1 auto; }
+
+    /* 空狀態在卡片內：滿版卡置中（min-height＝卡高減頂列 53px，grid 置中）；
+       hidden 要贏過 kit 對 .b-empty 的 display 設定 */
+    #inbox-empty {
+        min-height: calc(100% - 53px); box-sizing: border-box;
+        display: grid; place-content: center; justify-items: center; padding: 20px;
+    }
     #inbox-empty[hidden] { display: none !important; }
+
+    /* ── 內滾卷軸＝自製 overlay 懸浮指示條（使用者裁決：完全不佔內容寬度＋停止捲動自動消失）──
+       原生卷軸藏掉（原生 overlay 與否取決於系統設定：接滑鼠時 macOS 會常駐實體卷軸、吃掉內容寬，
+       行為無法保證）；JS 在卡片右緣疊一條 fixed 小拇指，捲動時浮現、700ms 後淡出、可拖曳。 */
+    #inbox-scroll { scrollbar-width: none; }
+    #inbox-scroll::-webkit-scrollbar { display: none; }
+    .gm-sbthumb {
+        position: fixed; width: 6px; border-radius: 999px; z-index: 20;
+        background: var(--neutral-quaternary);
+        opacity: 0; transition: opacity .25s ease;
+    }
+    .gm-sbthumb.is-visible { opacity: 1; }
 
     /* ── Gmail 式列表（.b-tbl-scroll 提供卡框＋內滾；這裡只管列） ── */
     .gm-row {
         display: flex; align-items: center; gap: 14px;
         width: 100%; padding: 0 18px; height: 52px; box-sizing: border-box;
-        border: 0; border-top: 1px solid var(--border-default);
+        /* 分隔線改「下緣」（使用者裁決）：滿版卡少列時最後一列也有線收尾；
+           上緣不畫＝第一列頂線交給 gm-tabs 的 border-bottom，篩選藏列也不會疊粗線 */
+        border: 0; border-bottom: 1px solid var(--border-default);
         background: transparent; font: inherit; text-align: left; cursor: pointer;
     }
-    /* 頂線由 JS 標記「第一個可見列」移除——:first-child 在篩選藏列後會跟卡框頂線疊成粗線 */
-    .gm-row.is-first { border-top: 0; }
     .gm-row:hover { background: var(--neutral-secondary-medium); }
     .gm-row:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--brand-medium); }
     .gm-row[hidden] { display: none; }
@@ -105,6 +155,82 @@
     .gm-snip b { font-weight: 600; color: var(--text-body); }   /* 欄位標題粗體（使用者裁決） */
     /* 通知信狀態只在「寄送失敗」時亮紅點（使用者裁決：正常不顯示，紅點才醒目）；完整狀態在 modal */
     .gm-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--danger); }
+
+    /* ── 勾選刪除 ── */
+    /* 方形 checkbox（token 自製，與設定頁 .b-check 同款；kit 無此元件） */
+    .b-check { display: inline-flex; align-items: center; gap: 8px; font-size: calc(14px + var(--b-fs-boost, 0px)); font-weight: 500; color: var(--text-body); cursor: pointer; }
+    .b-check input {
+        appearance: none; width: 16px; height: 16px; flex: none; margin: 0;
+        border: 1px solid var(--border-default); border-radius: 4px;
+        background: var(--neutral-primary-soft); cursor: pointer;
+        display: grid; place-content: center;
+        transition: background .15s ease, border-color .15s ease;
+    }
+    .b-check input:checked { background: var(--brand); border-color: var(--brand); }
+    .b-check input:checked::before {
+        content: ''; width: 9px; height: 9px; background: var(--b-on-primary);
+        clip-path: polygon(14% 44%, 0 65%, 40% 100%, 100% 18%, 82% 2%, 40% 66%);
+    }
+    .b-check input:focus-visible { outline: none; box-shadow: 0 0 0 4px var(--brand-medium); }
+    .gm-check { flex: none; padding: 4px; margin: -4px; }   /* 撐大點擊範圍，不動列高 */
+
+    /* 選取動作列（滾輪下層）：勾選時從下方捲上來接替 segment、取消反向捲回（同一條 transition 自動反向）；
+       visibility 延遲切換＝收合動畫跑完才隱藏（同時擋掉隱藏時的 Tab 焦點） */
+    .gm-selbar {
+        position: absolute; inset: 0; z-index: 6;
+        display: flex; align-items: center; justify-content: space-between;
+        box-sizing: border-box;
+        background: var(--neutral-primary-soft);
+        transform: translateY(100%); visibility: hidden;
+        transition: transform .45s cubic-bezier(.22, 1, .36, 1), visibility 0s .45s;
+    }
+    #sel-count { font-size: calc(14px + var(--b-fs-boost, 0px)); font-weight: 500; color: var(--text-body); }
+    .gm-tabs.is-selmode .gm-selbar {
+        transform: none; visibility: visible;
+        transition: transform .45s cubic-bezier(.22, 1, .36, 1);
+    }
+    .gm-selbar-actions { display: flex; align-items: center; gap: 6px; }   /* 同組動作靠攏（使用者裁決） */
+
+    /* 刪除鈕（使用者裁決）：半透明紅底＋紅字的扁圓角矩形（b-btn-xs＝28px），
+       hover 翻實色紅底白字；二段確認只換文字不換型 */
+    .b-btn.gm-delbtn {
+        border: 0; font-weight: 600; font-size: 13px;
+        background: color-mix(in srgb, var(--danger) 12%, transparent);
+        color: var(--fg-danger);
+    }
+    .b-btn.gm-delbtn:hover { background: var(--danger); color: #fff; }
+    .b-btn.gm-delbtn:focus-visible { box-shadow: 0 0 0 4px var(--danger-medium); }
+    /* 還原鈕（垃圾桶）：與刪除鈕同型、換主題紫家族 */
+    .b-btn.gm-restorebtn {
+        border: 0; font-weight: 600; font-size: 13px;
+        background: color-mix(in srgb, var(--brand) 12%, transparent);
+        color: var(--fg-brand);
+    }
+    .b-btn.gm-restorebtn:hover { background: var(--brand); color: var(--b-on-primary, #fff); }
+    .b-btn.gm-restorebtn:focus-visible { box-shadow: 0 0 0 4px var(--brand-medium); }
+    /* 取消鈕：同家族扁鈕、灰字無底；hover 灰底灰字（使用者裁決——不走文字鈕亮紫慣例） */
+    .b-btn.gm-cancelbtn { border: 0; font-weight: 600; font-size: 13px; background: transparent; color: var(--text-body-subtle); }
+    .b-btn.gm-cancelbtn:hover { background: var(--neutral-secondary-medium); color: var(--text-body); }
+    .b-btn.gm-cancelbtn:focus-visible { box-shadow: 0 0 0 4px var(--neutral-tertiary); }
+    .im-foot { display: flex; justify-content: flex-end; gap: 6px; padding: 0 20px 16px; }
+
+    /* modal 單筆刪除＝按鈕原地二段確認（使用者裁決：dialog 疊 modal 太重，改回原本作法＋變形過渡）：
+       寬度由 JS 量測後補間、文字淡出淡入、armed 態翻實色紅底白字——三者同步，不生硬跳字。
+       armed 後不自動退回（使用者裁決）：左側分裂出「取消」鈕退回，比倒數計時直覺 */
+    .b-btn.gm-delbtn {
+        position: relative; white-space: nowrap; overflow: hidden;
+        /* 減速曲線＋較長時值：寬度像「撐開」而不是「跳到」；底色/字色同步轉場 */
+        transition: width .32s cubic-bezier(.22, 1, .36, 1), background-color .22s ease, color .22s ease;
+    }
+    .b-btn.gm-delbtn .lbl { display: inline-block; transition: opacity .1s ease, transform .1s ease; }
+    .b-btn.gm-delbtn .lbl.is-swap { opacity: 0; transform: translateY(-4px); }    /* 舊字上移淡出 */
+    .b-btn.gm-delbtn .lbl.is-enter { opacity: 0; transform: translateY(4px); transition: none; }  /* 新字下方起跑 */
+    .b-btn.gm-delbtn.is-armed { background: var(--danger); color: #fff; }
+    /* 取消鈕：armed 時從刪除鈕左側「分裂」滑出，離場反向縮回（keyframes 綁 display 切換） */
+    #im-cancel:not([hidden]) { animation: im-cancel-in .22s cubic-bezier(.22, 1, .36, 1); }
+    #im-cancel.is-leaving { animation: im-cancel-out .15s ease-in both; }
+    @keyframes im-cancel-in { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+    @keyframes im-cancel-out { from { opacity: 1; } to { opacity: 0; transform: translateX(14px); } }
 
     /* ── 頁首動作槽的搜尋框（篩選鈕＋匯出沿用 kit .b-btn） ── */
     .tool-search { position: relative; }
@@ -170,21 +296,52 @@
 {% block content %}
 {# uikit 內滾機制：.b-tbl-scroll 為 .main-content.is-fixed-h 直接子項，吃剩餘高（卡框由它提供） #}
 <div class="b-tbl-scroll" id="inbox-scroll">
-    {# 表單分類 segment：貼在列表頂端（Gmail 分頁同位置）、sticky 捲動不消失；互動與樣式沿用 kit #}
+    {# 頂列＝固定全選勾勾（最左、不參與滾輪，Gmail 同位）＋右側滾輪區：
+       收件匣＝表單分類 segment／垃圾桶＝7 天說明列，勾選時捲出、選取動作列從下方捲入 #}
     <div class="gm-tabs">
+        <label class="b-check gm-tabcheck" aria-label="全選目前顯示的收件">
+            <input type="checkbox" id="sel-all">
+        </label>
+        <div class="gm-roll">
+        {% if mode == 'trash' %}
+        <div class="gm-notice">
+            <i data-lucide="info" aria-hidden="true"></i>
+            垃圾桶裡的收件會在 7 天後永久刪除。
+        </div>
+        {% else %}
         <div class="b-seg is-pill" id="inbox-seg">
             <span class="b-seg-thumb" aria-hidden="true"></span>
             {% for f in filters %}
             <a href="/admin/inbox{{ '?form=' + f.slug if f.slug }}" data-filter="{{ f.slug }}"
                {{ 'data-thumb-solid' if not f.slug }} class="{{ 'active' if f.slug == slug }}">{{ f.name }}
-                <span style="opacity:.65;font-size:12.5px">{{ f.count }}</span></a>
+                <span class="seg-count" style="opacity:.65;font-size:12.5px">{{ f.count }}</span></a>
             {% endfor %}
         </div>
+        {% endif %}
+        <div class="gm-selbar" id="sel-bar" aria-hidden="true">
+            <span id="sel-count">已選 0 筆</span>
+            {# 按鈕序（使用者裁決）：取消（灰）→ 破壞性動作 → 還原壓最右（主要安全動作）；同家族扁鈕、緊靠成一組 #}
+            <div class="gm-selbar-actions">
+                <button type="button" class="b-btn b-btn-xs gm-cancelbtn" id="sel-cancel">取消</button>
+                {% if mode == 'trash' %}
+                <button type="button" class="b-btn b-btn-xs gm-delbtn" id="sel-delete">永久刪除</button>
+                <button type="button" class="b-btn b-btn-xs gm-restorebtn" id="sel-restore">還原</button>
+                {% else %}
+                <button type="button" class="b-btn b-btn-xs gm-delbtn" id="sel-delete">移至垃圾桶</button>
+                {% endif %}
+            </div>
+        </div>
+        </div>{# /gm-roll #}
     </div>
     {% for r in rows %}
-    <button type="button" class="gm-row" data-slug="{{ r.form_slug.split('-')[0] }}" data-row="{{ loop.index0 }}"
-            data-status="{{ r.mail_status }}" data-date="{{ r.submitted_at[:10] }}"
-            aria-haspopup="dialog" aria-label="{{ r.form_name }}：{{ r.display_name }}">
+    {# 列容器從 <button> 改 div[role=button]：勾選框是 input，不能巢在 button 裡（無效 HTML） #}
+    <div role="button" tabindex="0" class="gm-row" data-id="{{ r.id }}"
+         data-slug="{{ r.form_slug.split('-')[0] }}" data-row="{{ loop.index0 }}"
+         data-status="{{ r.mail_status }}" data-date="{{ r.submitted_at[:10] }}"
+         aria-haspopup="dialog" aria-label="{{ r.form_name }}：{{ r.display_name }}">
+        <label class="b-check gm-check" aria-label="選取這筆收件">
+            <input type="checkbox" data-id="{{ r.id }}">
+        </label>
         <span class="gm-badge"><span class="b-badge brand">{{ r.form_name }}</span></span>
         <span class="gm-name">{{ r.display_name }}</span>
         <span class="gm-snip">
@@ -196,12 +353,12 @@
         <span class="gm-dot" title="通知信寄送失敗"></span>
         {% endif %}
         <span class="gm-time">{{ r.submitted_at[5:16] }}</span>
-    </button>
+    </div>
     {# 詳情內容：伺服器端先渲染好（Jinja 處理跳脫），點列時複製進 modal。
        ⚠️ 不能用 <template>——整頁在 Vue 掛載範圍內，in-DOM 編譯會把它解包，改用 hidden div #}
     <div hidden data-detail="{{ loop.index0 }}"
          data-title="{{ r.form_name }}"
-         data-sub="#{{ r.id }}｜{{ r.submitted_at }}">
+         data-sub="#{{ r.id }}｜{{ r.submitted_at }}{% if mode == 'trash' %}｜{{ r.days_left }} 天後永久刪除{% endif %}">
         <div class="im-status">通知信：
             {% if r.mail_status == 'sent' %}
             <span class="b-badge ok"><span class="dot"></span>已寄出</span>
@@ -221,9 +378,9 @@
 
     {# 空狀態放卡片內（segment 下方）：篩到 0 筆時仍是一體的一張卡，不會斷成兩塊 #}
     <div class="b-empty" id="inbox-empty" {{ 'hidden' if rows }}>
-        <span class="b-empty-icon"><i data-lucide="inbox"></i></span>
-        <p class="b-empty-title">目前沒有資料</p>
-        <p class="b-empty-desc">有人填寫表單後，資料會出現在這裡。</p>
+        <span class="b-empty-icon"><i data-lucide="{{ 'trash-2' if mode == 'trash' else 'inbox' }}"></i></span>
+        <p class="b-empty-title">{{ '垃圾桶是空的' if mode == 'trash' else '還沒有任何收件' }}</p>
+        <p class="b-empty-desc">{{ '移至垃圾桶的收件會在這裡保留 7 天。' if mode == 'trash' else '有人送出表單後，收件會顯示在這裡。' }}</p>
     </div>
 </div>
 
@@ -240,6 +397,13 @@
             </button>
         </div>
         <div class="b-modal-body" id="im-body"></div>
+        <div class="im-foot">
+            <button type="button" class="b-btn b-btn-xs gm-cancelbtn" id="im-cancel" hidden>取消</button>
+            <button type="button" class="b-btn b-btn-xs gm-delbtn" id="im-delete"><span class="lbl">{{ '永久刪除' if mode == 'trash' else '移至垃圾桶' }}</span></button>
+            {% if mode == 'trash' %}
+            <button type="button" class="b-btn b-btn-xs gm-restorebtn" id="im-restore">還原</button>
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -247,10 +411,16 @@
 {% block extra_js %}
 <script>
     (function () {
+        /* 雙模式：inbox＝收件匣（軟刪除進垃圾桶）、trash＝垃圾桶（還原／永久刪除） */
+        var MODE = {{ mode|tojson }};
+        var BASE = MODE === 'trash' ? '/admin/trash' : '/admin/inbox';
+        var DELETE_URL = MODE === 'trash' ? '/admin/trash/delete' : '/admin/inbox/delete';
+        var DEL_LABEL = MODE === 'trash' ? '永久刪除' : '移至垃圾桶';
+
         /* ── 統一篩選：表單類型（URL 同步）＋搜尋＋狀態＋日期，條件全部交集 ── */
         var scroll = document.getElementById('inbox-scroll');
         var empty = document.getElementById('inbox-empty');
-        var exportBtn = document.getElementById('export-btn');
+        var exportBtn = document.getElementById('export-btn');   /* 垃圾桶無匯出鈕 */
         var rows = Array.prototype.slice.call(document.querySelectorAll('.gm-row[data-slug]'));
         /* 每列可搜尋全文＝列上文字＋詳情內容（含所有欄位值） */
         var texts = rows.map(function (row) {
@@ -285,19 +455,18 @@
             rows.forEach(function (row, i) {
                 var show = matches(row, i);
                 row.hidden = !show;
-                row.classList.toggle('is-first', show && visible === 0);  /* 第一個可見列去頂線 */
                 if (show) visible++;
             });
             /* 0 筆時卡片照樣顯示（segment 在卡內，藏掉會沒辦法切分類），空狀態卡出現在下方 */
             empty.hidden = visible !== 0;
             /* 空狀態文案：整個收件匣空 vs 篩選後沒有符合 */
             var filtering = state.q || state.status || state.date || state.slug;
-            empty.querySelector('.b-empty-title').textContent =
-                filtering ? '沒有符合條件的資料' : '目前沒有資料';
-            empty.querySelector('.b-empty-desc').textContent =
-                filtering ? '換個關鍵字或放寬篩選條件試試。' : '有人填寫表單後，資料會出現在這裡。';
-            exportBtn.href = '/admin/export.csv?form=' + state.slug;
-            if (push) history.pushState({}, '', '/admin/inbox' + (state.slug ? '?form=' + state.slug : ''));
+            empty.querySelector('.b-empty-title').textContent = filtering ? '沒有符合條件的收件'
+                : (MODE === 'trash' ? '垃圾桶是空的' : '還沒有任何收件');
+            empty.querySelector('.b-empty-desc').textContent = filtering ? '試試更換關鍵字，或放寬篩選條件。'
+                : (MODE === 'trash' ? '移至垃圾桶的收件會在這裡保留 7 天。' : '有人送出表單後，收件會顯示在這裡。');
+            if (exportBtn) exportBtn.href = '/admin/export.csv?form=' + state.slug;
+            if (push) history.pushState({}, '', BASE + (state.slug ? '?form=' + state.slug : ''));
             if (scroll.scrollTop) scroll.scrollTop = 0;
         }
 
@@ -313,18 +482,20 @@
         });
 
         /* ── 篩選面板（kit .b-pop）：開闔、外點關閉、條件數徽章、清除 ── */
-        /* ── 分類 segment（列表卡頂端）：原互動——點擊滑塊滑動、前端過濾、URL 同步 ── */
+        /* ── 分類 segment（收件匣限定；垃圾桶改用篩選面板的表單類型下拉）── */
         var seg = document.getElementById('inbox-seg');
-        seg.querySelectorAll('a[data-filter]').forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                seg.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a === link); });
-                window.bSegThumb(seg, true);          /* 滑塊滑過去 */
-                state.slug = link.getAttribute('data-filter');
-                applyFilter(true);
+        if (seg) {
+            seg.querySelectorAll('a[data-filter]').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    seg.querySelectorAll('a').forEach(function (a) { a.classList.toggle('active', a === link); });
+                    window.bSegThumb(seg, true);      /* 滑塊滑過去 */
+                    state.slug = link.getAttribute('data-filter');
+                    applyFilter(true);
+                });
             });
-        });
-        window.bSegThumb(seg, false);                 /* 首次定位不播動畫 */
+            window.bSegThumb(seg, false);             /* 首次定位不播動畫 */
+        }
 
         var pop = document.getElementById('filter-pop');
         var popBtn = document.getElementById('filter-btn');
@@ -332,14 +503,17 @@
         var applyBtn = document.getElementById('filter-apply');
         var statusSel = document.getElementById('filter-status');
         var dateSel = document.getElementById('filter-date');
+        var formSel = document.getElementById('filter-form');   /* 垃圾桶限定：表單類型下拉 */
 
         /* 面板內選擇＝「暫定值」，按「套用」才真的過濾；開面板時把下拉還原成已套用的狀態 */
         function syncSelectsToState() {
             statusSel.value = state.status;
             dateSel.value = state.date;
+            if (formSel) formSel.value = state.slug;
             if (window.BDropdown) {
                 window.BDropdown.refresh(statusSel);
                 window.BDropdown.refresh(dateSel);
+                if (formSel) window.BDropdown.refresh(formSel);
             }
         }
         function closePop() {
@@ -359,13 +533,14 @@
         });
 
         function syncFilterUi() {
-            /* 表單分類歸 segment 管，篩選鈕亮起只看面板內的兩個條件 */
-            var active = !!(state.status || state.date);
+            /* 收件匣：表單分類歸 segment 管，亮起只看面板兩條件；垃圾桶：表單類型也在面板內一起算 */
+            var active = !!(state.status || state.date || (formSel && state.slug));
             popBtn.classList.toggle('is-active', active);   /* 啟用中：icon＋文字變 brand 色 */
         }
         applyBtn.addEventListener('click', function () {
             state.status = statusSel.value;
             state.date = dateSel.value;
+            if (formSel) state.slug = formSel.value;
             syncFilterUi();
             applyFilter(false);
             closePop();
@@ -373,12 +548,15 @@
         clearBtn.addEventListener('click', function () {
             statusSel.value = '';
             dateSel.value = '';
+            if (formSel) formSel.value = '';
             if (window.BDropdown) {
                 window.BDropdown.refresh(statusSel);
                 window.BDropdown.refresh(dateSel);
+                if (formSel) window.BDropdown.refresh(formSel);
             }
             state.status = '';
             state.date = '';
+            if (formSel) state.slug = '';
             syncFilterUi();
             applyFilter(false);
         });
@@ -399,6 +577,9 @@
             document.getElementById('im-sub').textContent = det.getAttribute('data-sub');
             document.getElementById('im-body').innerHTML = det.innerHTML;
             lastFocus = trigger;
+            /* 單筆刪除鈕記住目前這筆的 id，並歸位成未確認狀態 */
+            document.getElementById('im-delete').setAttribute('data-id', trigger.getAttribute('data-id') || '');
+            resetIm();
             overlay.classList.remove('is-closing');
             overlay.classList.add('is-visible');   /* @keyframes 於顯示瞬間自動播放淡入 */
             document.body.classList.add('b-modal-lock');
@@ -414,8 +595,17 @@
         }
 
         rows.forEach(function (row) {
-            row.addEventListener('click', function () {
+            row.addEventListener('click', function (e) {
+                if (e.target.closest('.gm-check')) return;   /* 點勾選框不開詳情 */
                 openModal(row.getAttribute('data-row'), row);
+            });
+            /* 列已從 <button> 改 div[role=button]，鍵盤開啟要自己補 */
+            row.addEventListener('keydown', function (e) {
+                if (e.target.closest('.gm-check')) return;   /* 空白鍵留給 checkbox 原生切換 */
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(row.getAttribute('data-row'), row);
+                }
             });
         });
         document.getElementById('im-close').addEventListener('click', closeModal);
@@ -423,6 +613,218 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closeModal();
         });
+
+        /* ── 勾選刪除：選取工具列＋kit 對話框確認（BDialog.confirm，base.html 載入 dialogs.js） ── */
+        var selBar = document.getElementById('sel-bar');
+        var selAll = document.getElementById('sel-all');
+        var selCountEl = document.getElementById('sel-count');
+        var selDelete = document.getElementById('sel-delete');
+        var imDelete = document.getElementById('im-delete');
+
+        function checkedBoxes() {
+            return rows.map(function (row) { return row.querySelector('.gm-check input'); })
+                       .filter(function (c) { return c && c.checked; });
+        }
+        var tabsWrap = document.querySelector('.gm-tabs');
+        function updateSelbar() {
+            var n = checkedBoxes().length;
+            var on = n > 0;
+            tabsWrap.classList.toggle('is-selmode', on);   /* 滾輪切換：segment 捲出、選取列捲入 */
+            selBar.setAttribute('aria-hidden', on ? 'false' : 'true');
+            if (n) selCountEl.textContent = '已選 ' + n + ' 筆';   /* 歸零時保留文字，捲出過程不跳字 */
+            var visibleBoxes = rows.filter(function (r) { return !r.hidden; }).length;
+            selAll.checked = n > 0 && n === visibleBoxes;
+        }
+
+        rows.forEach(function (row) {
+            var box = row.querySelector('.gm-check input');
+            if (box) box.addEventListener('change', updateSelbar);
+        });
+        selAll.addEventListener('change', function () {
+            var on = selAll.checked;
+            rows.forEach(function (row) {   /* 全選＝只選目前顯示（篩選後）的列 */
+                var box = row.querySelector('.gm-check input');
+                if (box) box.checked = on && !row.hidden;
+            });
+            updateSelbar();
+        });
+        document.getElementById('sel-cancel').addEventListener('click', function () {
+            rows.forEach(function (row) {
+                var box = row.querySelector('.gm-check input');
+                if (box) box.checked = false;
+            });
+            updateSelbar();
+        });
+
+        function decCount(slug) {
+            if (!seg) return;   /* 垃圾桶無 segment 筆數 */
+            var span = seg.querySelector('a[data-filter="' + slug + '"] .seg-count');
+            if (span) span.textContent = Math.max(0, +span.textContent - 1);
+        }
+        function removeRows(ids) {
+            ids.forEach(function (id) {
+                var row = document.querySelector('.gm-row[data-id="' + id + '"]');
+                if (!row) return;
+                var det = document.querySelector('[data-detail="' + row.getAttribute('data-row') + '"]');
+                var i = rows.indexOf(row);
+                if (i > -1) { rows.splice(i, 1); texts.splice(i, 1); }   /* texts 與 rows 同步索引 */
+                decCount(row.getAttribute('data-slug'));
+                decCount('');                                            /* 「全部」的筆數 */
+                row.remove();
+                if (det) det.remove();
+            });
+            applyFilter(false);
+            updateSelbar();
+        }
+        /* 刪除/還原共用：成功＝前端同步移列＋toast（訊息吃伺服器回傳） */
+        function doAction(url, ids, after) {
+            fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'fetch' },
+                body: JSON.stringify({ ids: ids })
+            }).then(function (r) { return r.json(); }).then(function (res) {
+                if (res.ok) {
+                    removeRows(ids);
+                    window.bToast(res.message, 'success');
+                    if (after) after();
+                } else {
+                    window.bToast(res.message || '操作失敗', 'danger');
+                }
+            }).catch(function () { window.bToast('操作失敗，請稍後再試', 'danger'); });
+        }
+
+        selDelete.addEventListener('click', function () {
+            var ids = checkedBoxes().map(function (c) { return c.getAttribute('data-id'); });
+            if (!ids.length) return;
+            /* 文案走 HIG：標題＝完整問句講清楚動作與範圍、說明只補後果、按鈕動詞重述動作 */
+            window.BDialog.confirm(MODE === 'trash' ? {
+                title: '要永久刪除 ' + ids.length + ' 筆收件嗎？',
+                desc: '這個動作無法還原。',
+                variant: 'danger',
+                confirmText: '永久刪除'
+            } : {
+                title: '要將 ' + ids.length + ' 筆收件移至垃圾桶嗎？',
+                desc: '7 天內可以從垃圾桶還原。',
+                variant: 'danger',
+                confirmText: '移至垃圾桶'
+            }).then(function (ok) { if (ok) doAction(DELETE_URL, ids); });
+        });
+
+        /* 垃圾桶限定：批次還原（安全動作，不需確認） */
+        var selRestore = document.getElementById('sel-restore');
+        if (selRestore) selRestore.addEventListener('click', function () {
+            var ids = checkedBoxes().map(function (c) { return c.getAttribute('data-id'); });
+            if (ids.length) doAction('/admin/trash/restore', ids);
+        });
+        /* modal 單筆刪除＝按鈕原地二段確認＋變形過渡。
+           不用「淡出→等→淡入」的序列（會有死拍、顯得生硬）：寬度補間即刻起跑，
+           舊字上移淡出與新字下方淡入交叉進行；armed 不自動退回，由左側分裂的取消鈕退回 */
+        var imCancel = document.getElementById('im-cancel');
+        function morphIm(text, armed) {
+            var lbl = imDelete.querySelector('.lbl');
+            /* 量尺 span 量新字目標寬（不動 .lbl，避免換字閃現）；padding＝現寬減字寬 */
+            var probe = document.createElement('span');
+            probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font:inherit;';
+            probe.textContent = text;
+            imDelete.appendChild(probe);
+            var w0 = imDelete.offsetWidth;
+            var w1 = probe.offsetWidth + (w0 - lbl.offsetWidth);
+            probe.remove();
+
+            imDelete.classList.toggle('is-armed', armed);
+            imDelete.style.width = w0 + 'px';
+            void imDelete.offsetWidth;                   /* 強制 reflow，讓補間從 w0 起跑 */
+            imDelete.style.width = w1 + 'px';            /* 寬度與底色同幀開跑 */
+            lbl.classList.add('is-swap');                /* 舊字上移淡出 */
+            setTimeout(function () {
+                lbl.textContent = text;
+                lbl.classList.remove('is-swap');
+                lbl.classList.add('is-enter');           /* 新字從下方 4px 起跑 */
+                void lbl.offsetWidth;
+                lbl.classList.remove('is-enter');
+            }, 100);
+            setTimeout(function () { imDelete.style.width = ''; }, 340);
+        }
+        function resetIm() {                             /* 開 modal 時無動畫歸位 */
+            imDelete.classList.remove('is-armed');
+            imDelete.style.width = '';
+            var lbl = imDelete.querySelector('.lbl');
+            lbl.classList.remove('is-swap', 'is-enter');
+            lbl.textContent = DEL_LABEL;
+            imCancel.hidden = true;
+            imCancel.classList.remove('is-leaving');
+        }
+        imDelete.addEventListener('click', function () {
+            var id = imDelete.getAttribute('data-id');
+            if (!id) return;
+            if (imDelete.classList.contains('is-armed')) {
+                doAction(DELETE_URL, [id], closeModal);
+                return;
+            }
+            morphIm(MODE === 'trash' ? '確認永久刪除？' : '確認移至垃圾桶？', true);
+            imCancel.hidden = false;                     /* keyframes 進場：左側分裂滑出 */
+        });
+        imCancel.addEventListener('click', function () {
+            imCancel.classList.add('is-leaving');
+            setTimeout(function () {
+                imCancel.classList.remove('is-leaving');
+                imCancel.hidden = true;
+            }, 150);
+            morphIm(DEL_LABEL, false);
+        });
+
+        /* 垃圾桶限定：modal 內單筆還原（安全動作，直接執行並關窗） */
+        var imRestore = document.getElementById('im-restore');
+        if (imRestore) imRestore.addEventListener('click', function () {
+            var id = imDelete.getAttribute('data-id');
+            if (id) doAction('/admin/trash/restore', [id], closeModal);
+        });
+
+        /* ── 自製 overlay 卷軸指示條：捲動浮現、700ms 淡出、可拖曳（原生卷軸已藏） ── */
+        var thumb = document.createElement('div');
+        thumb.className = 'gm-sbthumb';
+        thumb.id = 'inbox-sbthumb';
+        document.body.appendChild(thumb);
+        var sbTimer = null, sbDragging = false, sbStartY = 0, sbStartTop = 0;
+        function sbLayout() {
+            var r = scroll.getBoundingClientRect();
+            if (scroll.scrollHeight <= scroll.clientHeight + 1) return false;
+            var track = r.height - 8;
+            var h = Math.max(32, track * scroll.clientHeight / scroll.scrollHeight);
+            var top = r.top + 4 + (track - h) * (scroll.scrollTop / (scroll.scrollHeight - scroll.clientHeight));
+            thumb.style.height = h + 'px';
+            thumb.style.top = top + 'px';
+            thumb.style.left = (r.right - 10) + 'px';
+            return true;
+        }
+        function sbShow() {
+            if (!sbLayout()) { thumb.classList.remove('is-visible'); return; }
+            thumb.classList.add('is-visible');
+            clearTimeout(sbTimer);
+            sbTimer = setTimeout(function () { if (!sbDragging) thumb.classList.remove('is-visible'); }, 700);
+        }
+        scroll.addEventListener('scroll', sbShow, { passive: true });
+        window.addEventListener('resize', function () { if (thumb.classList.contains('is-visible')) sbLayout(); });
+        function sbMove(e) {
+            var r = scroll.getBoundingClientRect();
+            var track = r.height - 8 - parseFloat(thumb.style.height || '32');
+            if (track > 0) scroll.scrollTop = sbStartTop +
+                (e.clientY - sbStartY) * (scroll.scrollHeight - scroll.clientHeight) / track;
+        }
+        function sbUp() {
+            sbDragging = false;
+            document.removeEventListener('mousemove', sbMove);
+            document.removeEventListener('mouseup', sbUp);
+            sbShow();
+        }
+        thumb.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            sbDragging = true; sbStartY = e.clientY; sbStartTop = scroll.scrollTop;
+            document.addEventListener('mousemove', sbMove);
+            document.addEventListener('mouseup', sbUp);
+        });
+        thumb.addEventListener('mouseenter', function () { clearTimeout(sbTimer); });
+        thumb.addEventListener('mouseleave', function () { if (!sbDragging) sbShow(); });
     })();
 </script>
 {% endblock %}
