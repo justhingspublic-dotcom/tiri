@@ -245,3 +245,11 @@ textarea:focus-visible {
 .wsite-button:active {
   background: #693289;
 }
+
+/* 會員登入先隱藏（2026-07-29 使用者要求，暫時用不到）：
+   header 右上人形 icon 鈕（.header-login，內含 #member-login 透明點擊層）
+   與行動選單登入項（.mobile-login）。要還原時刪掉這條即可。 */
+.header-login,
+.mobile-login {
+  display: none !important;
+}
