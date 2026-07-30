@@ -109,3 +109,10 @@ html:root[data-color-mode="dark"] {
 #cms-sidebar .submenu-toggle:not(.active):hover :where(i, .lucide, svg) { color: var(--fg-brand); }
 /* 收合側欄的子項浮窗同規則 */
 .cms-flyout .cms-flyout-item:not(.active):hover { background: transparent; color: var(--fg-brand); }
+
+/* ── 後台字型定調 Noto Sans TC（使用者裁決 2026-07-30）──
+   kit 的 --font-admin 指向 "PingFang TC Admin" webfont，但字型檔從未入庫：
+   每頁 404 三發後 Mac 退系統蘋方（看不出異狀）、Windows 退微軟正黑（跑版感）。
+   改指 Noto（base.html/login.html 掛 Google Fonts），不再引用 PingFang webfont → 404 一併消失。
+   html:root 墊特異度：brand.css 載在 b_admin.css 之前，同特異度會被蓋回。 */
+html:root { --font-admin: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; }
