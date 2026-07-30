@@ -6,6 +6,8 @@
 import json
 import os
 import smtplib
+import socket
+import ssl
 from datetime import datetime, timezone, timedelta
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
@@ -262,6 +264,35 @@ def add_cors(resp):
 
 
 # ---------- Mail ----------
+
+def mail_error_human(exc):
+    """SMTP 例外 → 使用者看得懂的中文。原始錯誤只進 log（app.logger.exception），
+    不進 toast／畫面——smtplib 的 (535, b'5.7.8 ...') 對非技術使用者是天書。"""
+    if isinstance(exc, smtplib.SMTPAuthenticationError):
+        return "SMTP 帳號或密碼不正確。請確認帳號是完整信箱、密碼是「應用程式密碼」（不是信箱的一般登入密碼）"
+    if isinstance(exc, smtplib.SMTPRecipientsRefused):
+        return "收件信箱被拒收，請確認「通知信收件人」的信箱地址正確"
+    if isinstance(exc, (socket.timeout, TimeoutError)):
+        return "連線寄信主機逾時，請確認 SMTP 主機與埠號，或稍後再試"
+    if isinstance(exc, (socket.gaierror, ConnectionError, smtplib.SMTPConnectError)):
+        return "連不上寄信主機，請確認 SMTP 主機與埠號是否正確"
+    if isinstance(exc, ssl.SSLError):
+        return "加密連線失敗，請確認埠號是否正確（Gmail 請用 587）"
+    if isinstance(exc, smtplib.SMTPException):
+        return "寄信伺服器回報錯誤，請檢查 SMTP 設定後再試一次"
+    return "寄送失敗，請檢查 SMTP 設定後再試一次"
+
+
+def mail_status_human(status):
+    """DB 的 mail_status（sent/dry-run/error: ...）→ 匯出、畫面用的中文標籤。
+    error 的原始內容留在 DB 供除錯，但任何給使用者看的地方一律轉譯。"""
+    s = (status or "").strip()
+    if s == "sent":
+        return "已寄出"
+    if s == "dry-run":
+        return "測試模式（未寄）"
+    return "寄送失敗" if s else ""
+
 
 def send_mail(subject, body, html=None, force_real=False):
     """回傳狀態字串；force_real=True 時忽略測試模式真的寄（給「寄測試信」用）"""
@@ -723,11 +754,12 @@ def settings_test():
     try:
         status = send_mail("[TIRI 網站] 通知信測試", body, force_real=True)
     except Exception as e:
+        # 原始例外只進 log；toast 一律給使用者看得懂的中文（使用者裁決 2026-07-30）
         app.logger.exception("測試信寄送失敗")
-        status = f"{e}"
+        status = f"error: {mail_error_human(e)}"
     ok = status == "sent"
     message = ("測試信已寄出！請到收件信箱確認（沒看到的話檢查垃圾信件匣）" if ok
-               else f"寄送失敗：{str(status).replace('error: ', '')}")
+               else f"寄送失敗：{str(status).replace('error: ', '', 1)}")
     if is_fetch():
         return jsonify(ok=ok, message=message, pw_set=bool(mail_get("SMTP_PASS")))
     flash(message, "success" if ok else "danger")
@@ -796,7 +828,7 @@ def export_csv():
     for r in rows:
         values = {f.get("label"): f.get("value", "") for f in json.loads(r["fields_json"])}
         w.writerow([r["id"], r["submitted_at"], r["form_name"]]
-                   + [values.get(l, "") for l in labels] + [r["mail_status"]])
+                   + [values.get(l, "") for l in labels] + [mail_status_human(r["mail_status"])])
 
     name = (slug or "all") + "-submissions.csv"
     return Response(
