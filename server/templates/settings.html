@@ -9,23 +9,20 @@
 
 {% block extra_css %}
 <style>
-    /* ── 寄測試信鈕＝登入鈕同款填色進度（使用者裁決 2026-07-30，參數照抄 login.css .btn-login）：
-       ::before 由左向右填 --brand-strong；is-loading 1.1s 爬到 55% 等回應、
-       成功 is-success .3s 補滿、失敗移除 class 自帶縮回 ── */
+    /* ── 寄測試信鈕＝登入鈕同款填色進度（時間曲線照抄 login.css .btn-login）：
+       is-loading 1.1s 爬到 55% 等回應、成功 is-success .3s 補滿、失敗移除 class 自帶縮回。
+       差異（使用者裁決 2026-07-30 二輪）：底色不變、只有填色層——填色用 --brand-softer 淡紫，
+       文字維持原色全程可讀（登入鈕的「鎖底色實色版」被退） ── */
     #test-btn { position: relative; overflow: hidden; }
     #test-btn::before {
         content: ""; position: absolute; inset: 0;
-        background: var(--brand-strong);
+        background: var(--brand-softer);
         transform: scaleX(0); transform-origin: left center;
         transition: transform .45s cubic-bezier(.22, 1, .36, 1);
         pointer-events: none;
     }
     #test-btn > * { position: relative; z-index: 1; }   /* icon＋文字浮在填色層上（文字要包 span） */
-    #test-btn.is-loading, #test-btn.is-success {
-        background: var(--brand); color: var(--b-on-primary);   /* 鎖底色＝填色對比基準（同登入鈕） */
-        pointer-events: none;
-    }
-    #test-btn.is-loading :where(i, svg), #test-btn.is-success :where(i, svg) { color: var(--b-on-primary); }
+    #test-btn.is-loading, #test-btn.is-success { pointer-events: none; }
     #test-btn.is-loading::before { transform: scaleX(.55); transition-duration: 1.1s; }
     #test-btn.is-success::before { transform: scaleX(1); transition-duration: .3s; }
 
