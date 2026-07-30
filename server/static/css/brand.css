@@ -55,10 +55,14 @@ html:root[data-color-mode="dark"] .b-modal { border: 1px solid rgba(255, 255, 25
    （節點剛 append、display 與 opacity 同幀——與 #b-cell-modal、收件匣 modal 同一坑），
    改用綁 display 切換自動播放的 @keyframes。不填 fill：動畫跑完回歸 is-open 的 opacity:1，
    關閉時 is-open 移除仍走原本 transition 淡出，兩頭都有動畫。 */
-/* ⚠️ 只動 opacity、不縮放（kit 鐵則）：scale 版試過——文字先以縮小尺寸柵格化、
-   動畫結束重新柵格化，真螢幕上「糊→利」跳一下就是被回報的閃爍 */
-.b-modal-overlay[data-modal-vue].is-visible { animation: bdlg-overlay-in .18s ease-out; }
+/* 進場規格＝全站 modal 統一對齊收件匣詳情視窗（使用者裁決 2026-07-30）：
+   overlay .15s 淡入＋本體 .15s 淡入 + scale(.98→1)。
+   ⚠️ 歷史：scale(.96) 版曾因縮放幅度大、文字重柵格化「糊→利」跳一下被退；
+   .98 幅度小（收件匣 modal 同參數已長期使用無回報），若再出現文字閃爍先查這裡。 */
+.b-modal-overlay[data-modal-vue].is-visible { animation: bdlg-overlay-in .15s ease-out; }
+.b-modal-overlay[data-modal-vue].is-visible .b-modal { animation: bdlg-modal-in .15s ease-out; }
 @keyframes bdlg-overlay-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bdlg-modal-in { from { opacity: 0; transform: scale(.98); } to { opacity: 1; transform: scale(1); } }
 
 /* ── iOS 平滑圓角（使用者裁決 2026-07-28）──
    corner-shape: squircle＝連續曲率圓角（同 iOS app icon）。漸進增強：
@@ -95,3 +99,13 @@ html:root[data-color-mode="dark"] {
   --border-brand: #694f60;          /* L .46  c*.35 */
   --border-brand-subtle: #3e2c38;   /* L .32  c*.26 */
 }
+
+/* ── 側欄 hover（使用者裁決 2026-07-30）：比照全站文字類鈕＝不加底、文字/icon 亮 brand ──
+   kit 預設 hover 是文字變深灰（b_admin.css 344-347，載入順序在本檔之後）→ 用 #cms-sidebar id 墊特異度蓋過。
+   用 --fg-brand（深色模式有專屬可讀灰紫），與 b-btn-ghost/quiet hover 同 token。 */
+#cms-sidebar .menu-item:not(.active):hover,
+#cms-sidebar .submenu-toggle:not(.active):hover { background: transparent; color: var(--fg-brand); }
+#cms-sidebar .menu-item:not(.active):hover :where(i, .lucide, svg),
+#cms-sidebar .submenu-toggle:not(.active):hover :where(i, .lucide, svg) { color: var(--fg-brand); }
+/* 收合側欄的子項浮窗同規則 */
+.cms-flyout .cms-flyout-item:not(.active):hover { background: transparent; color: var(--fg-brand); }

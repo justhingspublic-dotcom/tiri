@@ -18,9 +18,11 @@
     </script>
     <link rel="stylesheet" href="/static/css/cms/base.css?v=20260727b">
     <link rel="stylesheet" href="/static/css/cms/b_tokens.css?v=20260727b">
-    <link rel="stylesheet" href="/static/css/brand.css?v=20260729a">
+    <link rel="stylesheet" href="/static/css/brand.css?v=20260730a">
     <link rel="stylesheet" href="/static/css/cms/b_admin.css?v=20260729f">
     <link rel="stylesheet" href="/static/css/b/dropdown.css?v=20260727a">
+    {# 使用說明 modal（shell 層級元件） #}
+    <link rel="stylesheet" href="/static/css/guide.css?v=20260730e">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         /* tailwind.config.snippet.js 內聯（typeui：圓角/陰影/語意色全指向 b_tokens 變數） */
@@ -163,6 +165,10 @@
                    class="header-icon-btn" title="前往前台" aria-label="前往前台">
                     <i data-lucide="external-link" aria-hidden="true"></i>
                 </a>
+                <button type="button" class="header-icon-btn" @click="openGuide"
+                        title="使用說明" aria-label="使用說明">
+                    <i data-lucide="circle-help" aria-hidden="true"></i>
+                </button>
                 <div class="header-user-wrap" v-cloak @click.stop>
                     <button type="button" class="header-user-btn" @click="toggleHeaderUser"
                             :aria-expanded="headerUserOpen ? 'true' : 'false'" aria-haspopup="menu">
@@ -284,6 +290,127 @@
         </main>
     </div>
 
+    {# ══ 使用說明 modal（shell 層級：SPA 換頁不重建、任何頁都能開）══
+       放在 #app 之外——Vue in-DOM 編譯會解包 <template> 等標籤，殼層外最安全。
+       markup 隨首繪進 DOM（Tailwind CDN 首次編譯就涵蓋所有 gd-* class，開啟不觸發重編譯閃爍）。 #}
+    <div class="b-modal-overlay" id="guide-modal">
+        <div class="b-modal is-guide" role="dialog" aria-modal="true" aria-labelledby="gd-title">
+            <div class="b-modal-head">
+                <div>
+                    <h3 class="b-modal-title" id="gd-title">使用說明</h3>
+                    <p class="b-modal-sub">後台各項功能的使用方式。</p>
+                </div>
+                <button type="button" class="b-modal-close" id="gd-close" aria-label="關閉">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="gd-body">
+                <nav class="gd-nav" aria-label="說明章節">
+                    <button type="button" data-gd-sec="start" class="active"><i data-lucide="compass" aria-hidden="true"></i>開始使用</button>
+                    <button type="button" data-gd-sec="inbox"><i data-lucide="inbox" aria-hidden="true"></i>收件匣</button>
+                    <button type="button" data-gd-sec="trash"><i data-lucide="trash-2" aria-hidden="true"></i>垃圾桶</button>
+                    <button type="button" data-gd-sec="mail"><i data-lucide="mail" aria-hidden="true"></i>郵件設定</button>
+                    <button type="button" data-gd-sec="smtp"><i data-lucide="key-round" aria-hidden="true"></i>更換寄件帳號</button>
+                    <button type="button" data-gd-sec="account"><i data-lucide="user-round" aria-hidden="true"></i>帳號與密碼</button>
+                </nav>
+                <div class="gd-content" id="gd-scroll">
+                    <section id="gd-sec-start">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="compass" aria-hidden="true"></i></span>
+                            <h4>開始使用</h4>
+                        </div>
+                        <p class="gd-lead">後台是官網表單的收件中心。有人在官網送出表單時，這裡會新增一筆收件，並同時寄出通知信。</p>
+                        <div class="gd-tbl">
+                            <div class="gd-row"><b>儀表板</b><span>登入後的第一個畫面。查看累計、今日與近 7 日的收件數，以及各表單的佔比。</span></div>
+                            <div class="gd-row"><b>通知失敗</b><span>數字大於 0，表示有通知信未送出；收件內容仍會保留。前往<span class="gd-ui">郵件設定</span>檢查設定，並寄出測試信確認。</span></div>
+                            <div class="gd-row"><b>介面調整</b><span>從右上角切換深淺色與字體大小。左側選單可以收合。</span></div>
+                        </div>
+                        <div class="gd-tip"><i data-lucide="lightbulb" aria-hidden="true"></i><span>通知信可能被歸類為垃圾郵件。定期打開後台，就不會漏掉任何收件。</span></div>
+                    </section>
+                    <section id="gd-sec-inbox">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="inbox" aria-hidden="true"></i></span>
+                            <h4>收件匣</h4>
+                        </div>
+                        <p class="gd-lead">操作方式與 Gmail 相似：一列代表一筆收件，粗體是填寫人，後面是內容摘要。</p>
+                        <div class="gd-tbl">
+                            <div class="gd-row"><b>查看內容</b><span>點一下任一列，即可開啟完整內容。</span></div>
+                            <div class="gd-row"><b>分類</b><span>在列表上方切換「全部」或各表單類型。</span></div>
+                            <div class="gd-row"><b>搜尋</b><span>在右上角輸入關鍵字，結果會即時顯示，並包含詳細內容中的文字。</span></div>
+                            <div class="gd-row"><b>篩選</b><span>按一下<span class="gd-ui">篩選</span>，依通知信狀態與日期範圍縮小結果。</span></div>
+                            <div class="gd-row"><b>匯出</b><span>按一下<span class="gd-ui">匯出 CSV</span>，將目前分類的收件下載為表格檔，可用 Excel 開啟。</span></div>
+                            <div class="gd-row"><b>刪除</b><span>勾選一或多列，再按<span class="gd-ui">移至垃圾桶</span>。收件會保留 7 天，隨時可以還原。</span></div>
+                        </div>
+                    </section>
+                    <section id="gd-sec-trash">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="trash-2" aria-hidden="true"></i></span>
+                            <h4>垃圾桶</h4>
+                        </div>
+                        <p class="gd-lead">從收件匣刪除的收件會先移到這裡，保留 7 天。</p>
+                        <div class="gd-tbl">
+                            <div class="gd-row"><b>還原</b><span>勾選收件並按<span class="gd-ui">還原</span>，收件會回到收件匣。</span></div>
+                            <div class="gd-row"><b>永久刪除</b><span>按<span class="gd-ui">永久刪除</span>，或等 7 天後自動清除。永久刪除後無法復原。</span></div>
+                        </div>
+                        <div class="gd-tip"><i data-lucide="lightbulb" aria-hidden="true"></i><span>還不確定是否要刪除的收件，留在收件匣即可；收件匣沒有數量限制。</span></div>
+                    </section>
+                    <section id="gd-sec-mail">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="mail" aria-hidden="true"></i></span>
+                            <h4>郵件設定</h4>
+                        </div>
+                        <p class="gd-lead">在這裡決定通知信寄給誰，以及信件的內容。</p>
+                        <div class="gd-tbl">
+                            <div class="gd-row"><b>通知信收件人</b><span>收到新表單時要通知的信箱。多個信箱以逗號分隔，例如 judy@tiri.tw, office@tiri.tw。</span></div>
+                            <div class="gd-row"><b>測試模式</b><span>開啟後會暫停寄信，僅供網站測試使用。平常保持關閉。</span></div>
+                            <div class="gd-row"><b>寄一封測試信</b><span>修改設定後按一下。收到信，就表示設定正確。</span></div>
+                            <div class="gd-row"><b>通知信文案</b><span>在<span class="gd-ui">通知信文案</span>分頁為每種表單自訂主旨與開頭文字。留空則使用預設內容。</span></div>
+                        </div>
+                    </section>
+                    <section id="gd-sec-smtp">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="key-round" aria-hidden="true"></i></span>
+                            <h4>更換寄件帳號（SMTP）</h4>
+                        </div>
+                        <p class="gd-lead">通知信的寄件者，就是<span class="gd-ui">SMTP 寄信</span>卡片中填寫的帳號。建議改用協會自己的信箱寄信，不要長期使用廠商的測試帳號。</p>
+                        <p class="gd-sub">方式一（建議）：使用協會的網域信箱</p>
+                        <p>例如 office@tiri.tw。向信箱服務商或資訊窗口取得 SMTP 主機、埠號、帳號與密碼，填入後儲存，再寄一封測試信確認。</p>
+                        <p class="gd-sub">方式二：使用 Gmail 帳號</p>
+                        <ol class="gd-steps">
+                            <li>登入要用來寄信的 Google 帳號。</li>
+                            <li>前往 <a class="gd-link" href="https://myaccount.google.com/security" target="_blank" rel="noopener">Google 帳戶的「安全性」頁面</a>，找到「兩步驟驗證」並開啟。開啟時需要手機驗證，依畫面指示完成即可。</li>
+                            <li>前往 <a class="gd-link" href="https://myaccount.google.com/apppasswords" target="_blank" rel="noopener">「應用程式密碼」頁面</a>，輸入一個名稱（例如「TIRI 後台」），按「建立」。畫面會顯示一組 16 個字母的密碼——<b>它只會顯示這一次</b>，請先複製起來。</li>
+                            <li>回到<span class="gd-ui">郵件設定</span>，填入：SMTP 主機 <b>smtp.gmail.com</b>、埠號 <b>587</b>、SMTP 帳號＝完整的 Gmail 地址、SMTP 密碼＝剛複製的 16 個字母（帶著空格直接貼上也可以，儲存時會自動處理），然後按<span class="gd-ui">儲存設定</span>。</li>
+                            <li>按一下<span class="gd-ui">寄一封測試信</span>。收到信，就完成了。之後的通知信都會以這個 Gmail 作為寄件者。</li>
+                        </ol>
+                        <figure class="gd-shot">
+                            <img src="/static/guide/smtp-card.png?v=20260730" alt="SMTP 寄信卡片的填寫範例" loading="lazy">
+                            <figcaption class="gd-shot-cap">步驟 4：「SMTP 寄信」卡片的填寫範例。</figcaption>
+                        </figure>
+                        <figure class="gd-shot">
+                            <img src="/static/guide/test-card.png?v=20260730" alt="通知信與測試卡片，寄一封測試信按鈕在右下角" loading="lazy">
+                            <figcaption class="gd-shot-cap">步驟 5：「寄一封測試信」在「通知信與測試」卡片的右下角。</figcaption>
+                        </figure>
+                        <div class="gd-tip"><i data-lucide="lightbulb" aria-hidden="true"></i><span>寄信必須使用「應用程式密碼」，不能使用一般登入密碼。如果打不開「應用程式密碼」頁面，通常是兩步驟驗證還沒開啟——先完成步驟 2。</span></div>
+                    </section>
+                    <section id="gd-sec-account">
+                        <div class="gd-h">
+                            <span class="gd-h-ic"><i data-lucide="user-round" aria-hidden="true"></i></span>
+                            <h4>帳號與密碼</h4>
+                        </div>
+                        <p class="gd-lead">管理登入資訊，以及交接時的注意事項。</p>
+                        <div class="gd-tbl">
+                            <div class="gd-row"><b>暱稱與密碼</b><span>前往「設定」>「帳號設定」修改。密碼至少 8 個字元，下次登入時生效。</span></div>
+                            <div class="gd-row"><b>登出</b><span>點一下右上角的名字，再選擇<span class="gd-ui">登出</span>。</span></div>
+                            <div class="gd-row"><b>忘記密碼</b><span>密碼無法自行重設。請聯絡網站維護窗口協助處理。</span></div>
+                        </div>
+                        <div class="gd-tip"><i data-lucide="lightbulb" aria-hidden="true"></i><span>交接時，記得更改密碼，並到「郵件設定」更新通知信收件人。</span></div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     {# 側欄資料改走 JSON 標籤：SPA 換頁時 spa.js 從新頁抽出來更新 active／收件數 #}
@@ -400,6 +527,9 @@
                     var self = this;
                     return (menu.sub || []).some(function (s) { return s.key === self.activeKey; });
                 },
+                openGuide() {
+                    if (window.openGuideModal) window.openGuideModal();
+                },
                 onGroupClick(idx, menu, e) {
                     /* uikit 註記：stopPropagation 避免 lucide 重繪讓 document click 的 closest() 失效 */
                     e.stopPropagation();
@@ -476,6 +606,88 @@
             }
         });
         window.__aApp = window.__vueShell.mount('#app');   /* SPA 換頁時 spa.js 用它更新側欄 active／收件數 */
+    </script>
+    <script>
+        /* ── 使用說明 modal：開闔＋章節導覽（scroll-spy） ──
+           shell 層級元件：監聽器只在整頁載入時綁一次、不帶 PageSignal（SPA 換頁 abort 的是「頁腳本」，
+           殼層元件要跨頁存活）。開闔動畫比照 #inbox-modal 的 keyframes-綁-display 做法。 */
+        (function () {
+            var overlay = document.getElementById('guide-modal');
+            if (!overlay) return;
+            var modal = overlay.querySelector('.b-modal');
+            var content = document.getElementById('gd-scroll');
+            var closeBtn = document.getElementById('gd-close');
+            var navBtns = Array.prototype.slice.call(overlay.querySelectorAll('.gd-nav button'));
+            var secs = navBtns.map(function (b) {
+                return document.getElementById('gd-sec-' + b.getAttribute('data-gd-sec'));
+            });
+            var lastFocus = null;
+            var spyLockUntil = 0;   /* 點章節的平滑捲動播放中，scroll-spy 先不搶 active */
+
+            function setActive(key) {
+                navBtns.forEach(function (b) {
+                    b.classList.toggle('active', b.getAttribute('data-gd-sec') === key);
+                });
+            }
+
+            content.addEventListener('scroll', function () {
+                if (Date.now() < spyLockUntil) return;
+                /* 捲到底時直接亮最後一章（末章太短時 offsetTop 永遠到不了判定線） */
+                if (content.scrollTop + content.clientHeight >= content.scrollHeight - 4) {
+                    setActive(navBtns[navBtns.length - 1].getAttribute('data-gd-sec'));
+                    return;
+                }
+                var line = content.scrollTop + 32;
+                var cur = secs[0];
+                secs.forEach(function (s) { if (s && s.offsetTop <= line) cur = s; });
+                setActive(cur.id.replace('gd-sec-', ''));
+            }, { passive: true });
+
+            navBtns.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var key = b.getAttribute('data-gd-sec');
+                    var sec = document.getElementById('gd-sec-' + key);
+                    if (!sec) return;
+                    setActive(key);
+                    spyLockUntil = Date.now() + 650;
+                    content.scrollTo({ top: Math.max(0, sec.offsetTop - 16) });   /* CSS scroll-behavior:smooth 補間 */
+                });
+            });
+
+            window.openGuideModal = function (sectionKey) {
+                lastFocus = document.activeElement;
+                overlay.classList.remove('is-closing');
+                overlay.classList.add('is-visible');
+                document.body.classList.add('b-modal-lock');
+                if (window.renderLucideIcons) window.renderLucideIcons();
+                /* 起始章節：定位不播平滑捲動（開場就在該章，不是「捲過去」） */
+                var target = sectionKey ? document.getElementById('gd-sec-' + sectionKey) : null;
+                spyLockUntil = Date.now() + 250;
+                content.style.scrollBehavior = 'auto';
+                content.scrollTop = target ? Math.max(0, target.offsetTop - 16) : 0;
+                content.style.scrollBehavior = '';
+                setActive(sectionKey || navBtns[0].getAttribute('data-gd-sec'));
+                if (closeBtn) closeBtn.focus();
+            };
+
+            function closeGuide() {
+                if (!overlay.classList.contains('is-visible') || overlay.classList.contains('is-closing')) return;
+                overlay.classList.add('is-closing');
+                overlay.addEventListener('animationend', function h(e) {
+                    if (e.target !== overlay) return;
+                    overlay.removeEventListener('animationend', h);
+                    overlay.classList.remove('is-visible', 'is-closing');
+                    document.body.classList.remove('b-modal-lock');
+                });
+                if (lastFocus && lastFocus.focus) lastFocus.focus();
+            }
+
+            closeBtn.addEventListener('click', closeGuide);
+            overlay.addEventListener('click', function (e) { if (!modal.contains(e.target)) closeGuide(); });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closeGuide();
+            });
+        })();
     </script>
     {# 標記註解＝SPA 換頁時「頁專屬 JS」的重新執行範圍（spa.js 掃描用，勿改動） #}
     <!-- b-spa-extra-js-start -->

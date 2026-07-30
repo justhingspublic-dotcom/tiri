@@ -129,7 +129,12 @@
                         <div class="hint" id="pw-hint">{{ pw_hint }}</div>
                     </div>
                 </div>
-                <div class="flex justify-end" style="padding: 0 20px 20px;">
+                <div class="flex justify-between items-center" style="padding: 0 20px 20px;">
+                    {# 情境求助：直接開使用說明 modal 的 SMTP 章節（openGuideModal 掛在 base.html 殼層，inline onclick 不用管 SPA 重綁） #}
+                    <button type="button" class="b-btn b-btn-ghost b-btn-xs"
+                            onclick="window.openGuideModal && window.openGuideModal('smtp')">
+                        <i data-lucide="circle-help" aria-hidden="true"></i> 如何申請寄件帳號？
+                    </button>
                     <button class="b-btn b-btn-text save-btn" type="submit" disabled>儲存設定</button>
                 </div>
             </form>
