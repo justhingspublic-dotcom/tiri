@@ -1,12 +1,11 @@
-# TIRI 過渡期表單收件後端
-# 收前台表單 POST -> 存 SQLite -> 寄 email 通知
+# TIRI 表單收件後端
+# 收前台表單 POST -> 存公司 SQL Server（192.168.1.92 / TIRI 庫）-> 寄 email 通知
 # 後台 UI 依 backend-design uikit（typeui Dashboard）規範
-# 執行: python app.py  (預設 http://0.0.0.0:8000)
+# 執行: python app.py  (預設 http://0.0.0.0:8000)；DB 連線資訊在 .env
 
 import json
 import os
 import smtplib
-import sqlite3
 from datetime import datetime, timezone, timedelta
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
@@ -16,13 +15,19 @@ from functools import wraps
 from pathlib import Path
 from urllib.parse import quote
 
+import pymssql
 from dotenv import load_dotenv
 from flask import (Flask, Response, flash, g, jsonify, redirect,
                    render_template, request, send_file, session)
+from werkzeug.security import check_password_hash, generate_password_hash
 
 load_dotenv(Path(__file__).parent / ".env")
 
-DB_PATH = Path(__file__).parent / "submissions.db"
+DB_SERVER = os.environ.get("DB_SERVER", "192.168.1.92")
+DB_USER = os.environ.get("DB_USER", "sa")
+DB_PASS = os.environ.get("DB_PASS", "")
+DB_NAME = os.environ.get("DB_NAME", "TIRI")
+
 TAIPEI = timezone(timedelta(hours=8))
 
 FORM_NAMES = {
@@ -43,19 +48,26 @@ NAV_ICONS = {
     "contact": "mail",
 }
 
-ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "office@tiri.tw")
-ADMIN_PASSWORD = os.environ.get("ADMIN_PASS", "tiri1234")
+# 僅作首次啟動的播種預設；啟動後帳密以 users 表為準（後台「帳號設定」可改）
+DEFAULT_ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "office@tiri.tw")
+DEFAULT_ADMIN_PASSWORD = os.environ.get("ADMIN_PASS", "tiri1234")
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "tiri-transitional-backend")
 
 
-# ---------- DB ----------
+# ---------- DB（SQL Server，pymssql）----------
+
+def _connect(database=DB_NAME):
+    return pymssql.connect(
+        server=DB_SERVER, user=DB_USER, password=DB_PASS,
+        database=database, timeout=15, login_timeout=10, charset="UTF-8",
+    )
+
 
 def get_db():
     if "db" not in g:
-        g.db = sqlite3.connect(DB_PATH)
-        g.db.row_factory = sqlite3.Row
+        g.db = _connect()
     return g.db
 
 
@@ -66,53 +78,165 @@ def close_db(_exc):
         db.close()
 
 
+def q(sql, params=()):
+    """SELECT -> list[dict]"""
+    cur = get_db().cursor(as_dict=True)
+    cur.execute(sql, tuple(params))
+    return cur.fetchall()
+
+
+def q1(sql, params=()):
+    rows = q(sql, params)
+    return rows[0] if rows else None
+
+
+def scalar(sql, params=()):
+    cur = get_db().cursor()
+    cur.execute(sql, tuple(params))
+    row = cur.fetchone()
+    return row[0] if row else None
+
+
+def execute(sql, params=()):
+    """INSERT/UPDATE/DELETE，自動 commit，回傳影響筆數"""
+    db = get_db()
+    cur = db.cursor()
+    cur.execute(sql, tuple(params))
+    db.commit()
+    return cur.rowcount
+
+
 def init_db():
-    with sqlite3.connect(DB_PATH) as db:
-        db.execute(
-            """CREATE TABLE IF NOT EXISTS submissions (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                form_slug TEXT NOT NULL,
-                form_name TEXT,
-                page_url TEXT,
-                fields_json TEXT NOT NULL,
-                ip TEXT,
-                submitted_at TEXT NOT NULL,
-                mail_status TEXT
-            )"""
+    """首次啟動建四張表（submissions / mail_settings / mail_copy / users）並播種"""
+    conn = _connect()
+    cur = conn.cursor()
+    cur.execute("""
+        IF OBJECT_ID('submissions', 'U') IS NULL
+        CREATE TABLE submissions (
+            id INT IDENTITY(1,1) PRIMARY KEY,
+            form_slug NVARCHAR(100) NOT NULL,
+            form_name NVARCHAR(200) NULL,
+            page_url NVARCHAR(500) NULL,
+            fields_json NVARCHAR(MAX) NOT NULL,
+            ip NVARCHAR(100) NULL,
+            submitted_at NVARCHAR(19) NOT NULL,
+            mail_status NVARCHAR(500) NULL,
+            deleted_at NVARCHAR(19) NULL
+        )""")
+    cur.execute("""
+        IF OBJECT_ID('mail_settings', 'U') IS NULL
+        CREATE TABLE mail_settings (
+            id INT PRIMARY KEY,
+            smtp_host NVARCHAR(200) NULL,
+            smtp_port NVARCHAR(10) NULL,
+            smtp_user NVARCHAR(255) NULL,
+            smtp_pass NVARCHAR(255) NULL,
+            mail_to NVARCHAR(500) NULL,
+            dry_run BIT NOT NULL DEFAULT 0,
+            updated_at NVARCHAR(19) NULL
+        )""")
+    cur.execute("""
+        IF OBJECT_ID('mail_copy', 'U') IS NULL
+        CREATE TABLE mail_copy (
+            form_slug NVARCHAR(50) PRIMARY KEY,
+            form_name NVARCHAR(100) NULL,
+            copy_json NVARCHAR(MAX) NULL,
+            updated_at NVARCHAR(19) NULL
+        )""")
+    cur.execute("""
+        IF OBJECT_ID('users', 'U') IS NULL
+        CREATE TABLE users (
+            id INT IDENTITY(1,1) PRIMARY KEY,
+            email NVARCHAR(255) NOT NULL UNIQUE,
+            password_hash NVARCHAR(500) NOT NULL,
+            nickname NVARCHAR(100) NULL,
+            created_at NVARCHAR(19) NULL
+        )""")
+    now = datetime.now(TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
+    # 播種：郵件設定固定一列（id=1）、文案一表單一列、管理員一筆
+    cur.execute("SELECT COUNT(*) FROM mail_settings")
+    if cur.fetchone()[0] == 0:
+        cur.execute("INSERT INTO mail_settings (id, dry_run, updated_at) VALUES (1, 0, %s)", (now,))
+    for slug, name in FORM_NAMES.items():
+        cur.execute("IF NOT EXISTS (SELECT 1 FROM mail_copy WHERE form_slug = %s)"
+                    " INSERT INTO mail_copy (form_slug, form_name, updated_at) VALUES (%s, %s, %s)",
+                    (slug, slug, name, now))
+    cur.execute("SELECT COUNT(*) FROM users")
+    if cur.fetchone()[0] == 0:
+        cur.execute(
+            "INSERT INTO users (email, password_hash, nickname, created_at) VALUES (%s, %s, %s, %s)",
+            (DEFAULT_ADMIN_EMAIL.strip().lower(),
+             generate_password_hash(DEFAULT_ADMIN_PASSWORD),
+             "秘書處", now),
         )
-        db.execute("CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT)")
-        # 垃圾桶（軟刪除）：deleted_at 非 NULL＝在垃圾桶，7 天後由 purge_trash 永久清除
-        cols = [r[1] for r in db.execute("PRAGMA table_info(submissions)")]
-        if "deleted_at" not in cols:
-            db.execute("ALTER TABLE submissions ADD COLUMN deleted_at TEXT")
+    conn.commit()
+    conn.close()
 
 
 TRASH_KEEP_DAYS = 7
 
 
-def purge_trash(db):
+def purge_trash():
     """垃圾桶逾期清除：進垃圾桶超過 7 天的永久刪除（每次開後台列表時順手清）"""
     cutoff = (datetime.now(TAIPEI) - timedelta(days=TRASH_KEEP_DAYS)).strftime("%Y-%m-%d %H:%M:%S")
-    db.execute("DELETE FROM submissions WHERE deleted_at IS NOT NULL AND deleted_at < ?", (cutoff,))
-    db.commit()
+    execute("DELETE FROM submissions WHERE deleted_at IS NOT NULL AND deleted_at < %s", (cutoff,))
 
 
-def get_setting(key, default=None):
-    """後台設定優先，其次 .env，最後預設值"""
-    row = get_db().execute("SELECT value FROM settings WHERE key = ?", (key,)).fetchone()
-    if row is not None and row[0] != "":
-        return row[0]
+# ---------- 郵件設定（mail_settings 一列式）與通知信文案（mail_copy） ----------
+
+# 表單欄位名（.env 命名）→ mail_settings 欄位名
+MAIL_COLS = {
+    "SMTP_HOST": "smtp_host", "SMTP_PORT": "smtp_port", "SMTP_USER": "smtp_user",
+    "SMTP_PASS": "smtp_pass", "MAIL_TO": "mail_to",
+}
+
+
+def _now():
+    return datetime.now(TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _mail_row():
+    return q1("SELECT TOP 1 * FROM mail_settings ORDER BY id") or {}
+
+
+def mail_get(key, default=None):
+    """DB 值優先，空值退 .env，最後預設值（key 用 SMTP_HOST 這種 .env 命名）"""
+    v = _mail_row().get(MAIL_COLS[key])
+    if v not in (None, ""):
+        return v
     return os.environ.get(key, default)
 
 
-def set_setting(key, value):
-    db = get_db()
-    db.execute(
-        "INSERT INTO settings (key, value) VALUES (?, ?)"
-        " ON CONFLICT(key) DO UPDATE SET value = excluded.value",
-        (key, value),
-    )
-    db.commit()
+def mail_update(**cols):
+    """更新 mail_settings 指定欄位（用資料庫欄位名；dry_run 傳 0/1）"""
+    cols["updated_at"] = _now()
+    sets = ", ".join(f"{k} = %s" for k in cols)
+    execute(f"UPDATE mail_settings SET {sets} WHERE id = 1", list(cols.values()))
+
+
+def mail_dry():
+    v = _mail_row().get("dry_run")
+    if v is None:
+        return os.environ.get("MAIL_DRY_RUN", "0") == "1"
+    return bool(v)
+
+
+def get_copy(slug):
+    """該表單的通知信文案 {"subject": ..., "intro": ...}；沒設定＝空 dict"""
+    row = q1("SELECT copy_json FROM mail_copy WHERE form_slug = %s", (slug,))
+    try:
+        return json.loads(row["copy_json"]) if row and row["copy_json"] else {}
+    except ValueError:
+        return {}
+
+
+def set_copy(slug, subject, intro):
+    payload = json.dumps({"subject": subject, "intro": intro}, ensure_ascii=False)
+    if execute("UPDATE mail_copy SET copy_json = %s, updated_at = %s WHERE form_slug = %s",
+               (payload, _now(), slug)) == 0:
+        execute("INSERT INTO mail_copy (form_slug, form_name, copy_json, updated_at)"
+                " VALUES (%s, %s, %s, %s)",
+                (slug, FORM_NAMES.get(slug, slug), payload, _now()))
 
 
 # ---------- CORS ----------
@@ -141,15 +265,15 @@ def add_cors(resp):
 
 def send_mail(subject, body, html=None, force_real=False):
     """回傳狀態字串；force_real=True 時忽略測試模式真的寄（給「寄測試信」用）"""
-    to_raw = get_setting("MAIL_TO", "")
+    to_raw = mail_get("MAIL_TO", "")
     to_addrs = [a.strip() for a in to_raw.split(",") if a.strip()]
 
-    if not force_real and get_setting("MAIL_DRY_RUN", "0") == "1":
-        app.logger.warning("MAIL_DRY_RUN=1，僅顯示不寄出（收件人:%s）:\n%s\n%s", to_raw, subject, body)
+    if not force_real and mail_dry():
+        app.logger.warning("測試模式，僅顯示不寄出（收件人:%s）:\n%s\n%s", to_raw, subject, body)
         return "dry-run"
 
-    host = get_setting("SMTP_HOST")
-    user = get_setting("SMTP_USER")
+    host = mail_get("SMTP_HOST")
+    user = mail_get("SMTP_USER")
     if not host or not user:
         return "error: 尚未設定 SMTP 主機/帳號"
     if not to_addrs:
@@ -162,12 +286,12 @@ def send_mail(subject, body, html=None, force_real=False):
     else:
         msg = MIMEText(body, "plain", "utf-8")
     msg["Subject"] = Header(subject, "utf-8")
-    msg["From"] = get_setting("MAIL_FROM") or user
+    msg["From"] = user  # Gmail 會強制寄件人＝登入帳號；要換顯示帳號就換整組 SMTP
     msg["To"] = ", ".join(to_addrs)
 
-    with smtplib.SMTP(host, int(get_setting("SMTP_PORT", "587")), timeout=15) as s:
+    with smtplib.SMTP(host, int(mail_get("SMTP_PORT", "587")), timeout=15) as s:
         s.starttls()
-        s.login(user, get_setting("SMTP_PASS", ""))
+        s.login(user, mail_get("SMTP_PASS", ""))
         s.sendmail(msg["From"], to_addrs, msg.as_string())
     return "sent"
 
@@ -203,9 +327,10 @@ def notification_html(form_name, fields, page_url, when, intro):
 
 
 def send_notification(form_name, fields, page_url, when, base_slug=""):
-    # 每表單可自訂主旨與開頭文字（設定頁「通知信文案」），留空用預設
-    subject = get_setting(f"MAIL_SUBJ_{base_slug}", "") or f"[TIRI 網站] {form_name} — 新的表單填寫"
-    intro = get_setting(f"MAIL_INTRO_{base_slug}", "") or ""
+    # 每表單可自訂主旨與開頭文字（設定頁「通知信文案」，存 mail_copy），留空用預設
+    copy = get_copy(base_slug)
+    subject = copy.get("subject") or f"[TIRI 網站] {form_name} — 新的表單填寫"
+    intro = copy.get("intro") or ""
 
     lines = []  # 純文字版：給不顯示 HTML 的客戶端當備援
     if intro:
@@ -247,14 +372,12 @@ def submit(slug):
         app.logger.exception("寄信失敗")
         mail_status = f"error: {e}"
 
-    db = get_db()
-    db.execute(
+    execute(
         "INSERT INTO submissions (form_slug, form_name, page_url, fields_json, ip, submitted_at, mail_status)"
-        " VALUES (?, ?, ?, ?, ?, ?, ?)",
+        " VALUES (%s, %s, %s, %s, %s, %s, %s)",
         (slug, form_name, page_url, json.dumps(fields, ensure_ascii=False),
          request.headers.get("X-Forwarded-For", request.remote_addr), when, mail_status),
     )
-    db.commit()
     return jsonify(ok=True)
 
 
@@ -269,13 +392,20 @@ def require_auth(fn):
     return wrapper
 
 
+def get_admin():
+    """單一管理員：users 表第一筆（將來要多帳號直接多筆）"""
+    return q1("SELECT TOP 1 id, email, password_hash, nickname FROM users ORDER BY id")
+
+
 @app.context_processor
 def inject_account():
     try:
-        nickname = get_setting("ADMIN_NICKNAME", "秘書處") or "秘書處"
+        u = get_admin() or {}
+        nickname = u.get("nickname") or "秘書處"
+        email = u.get("email") or DEFAULT_ADMIN_EMAIL
     except Exception:
-        nickname = "秘書處"
-    return {"nickname": nickname, "admin_email": ADMIN_EMAIL}
+        nickname, email = "秘書處", DEFAULT_ADMIN_EMAIL
+    return {"nickname": nickname, "admin_email": email}
 
 
 @app.route("/admin/login", methods=["GET", "POST"])
@@ -286,8 +416,9 @@ def login():
         # 前端 fetch 送出時帶 Accept: application/json → 回 JSON 給按鈕填色動畫用；
         # 無 JS 時維持傳統 redirect + flash fallback
         wants_json = "application/json" in (request.headers.get("Accept") or "")
-        # 密碼可在後台「帳號設定」變更（存 settings 表，蓋過 .env 預設）
-        if email == ADMIN_EMAIL.lower() and password == get_setting("ADMIN_PASS", ADMIN_PASSWORD):
+        # 帳密存 users 表（後台「帳號設定」可改）；密碼只存雜湊
+        u = q1("SELECT TOP 1 * FROM users WHERE email = %s", (email,))
+        if u and check_password_hash(u["password_hash"], password):
             session["admin"] = email
             flash("登入成功", "success")   # 跳轉後由 base.html 的右下角 toast 顯示
             if wants_json:
@@ -313,9 +444,7 @@ def logout():
 def nav_items():
     # 收件匣右端顯示總數（不含垃圾桶）
     try:
-        inbox_n = get_db().execute(
-            "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL"
-        ).fetchone()[0]
+        inbox_n = scalar("SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL")
     except Exception:
         inbox_n = None
     return [
@@ -331,15 +460,14 @@ def nav_items():
 
 def query_rows(slug, deleted=False):
     """deleted=False＝收件匣（未刪），True＝垃圾桶"""
-    db = get_db()
     cond = "deleted_at IS NOT NULL" if deleted else "deleted_at IS NULL"
     order = "deleted_at DESC" if deleted else "id DESC"
     if slug:
-        return db.execute(
-            f"SELECT * FROM submissions WHERE {cond} AND form_slug LIKE ? ORDER BY {order} LIMIT 500",
+        return q(
+            f"SELECT TOP 500 * FROM submissions WHERE {cond} AND form_slug LIKE %s ORDER BY {order}",
             (slug + "%",),
-        ).fetchall()
-    return db.execute(f"SELECT * FROM submissions WHERE {cond} ORDER BY {order} LIMIT 500").fetchall()
+        )
+    return q(f"SELECT TOP 500 * FROM submissions WHERE {cond} ORDER BY {order}")
 
 
 def row_dict(r):
@@ -368,26 +496,26 @@ def row_dict(r):
 @app.route("/admin")
 @require_auth
 def dashboard():
-    db = get_db()
-    purge_trash(db)
+    purge_trash()
     now = datetime.now(TAIPEI)
     # 所有統計都不含垃圾桶（deleted_at IS NULL）
-    total = db.execute("SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL").fetchone()[0]
-    today_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at LIKE ?",
+    total = scalar("SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL")
+    today_n = scalar(
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at LIKE %s",
         (now.strftime("%Y-%m-%d") + "%",),
-    ).fetchone()[0]
-    week_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at >= ?",
-        ((now - timedelta(days=7)).strftime("%Y-%m-%d"),),
-    ).fetchone()[0]
-    fail_n = db.execute(
-        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND mail_status LIKE 'error%'"
-    ).fetchone()[0]
-
-    counts = dict(
-        db.execute("SELECT form_slug, COUNT(*) FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug").fetchall()
     )
+    week_n = scalar(
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND submitted_at >= %s",
+        ((now - timedelta(days=7)).strftime("%Y-%m-%d"),),
+    )
+    fail_n = scalar(
+        "SELECT COUNT(*) FROM submissions WHERE deleted_at IS NULL AND mail_status LIKE %s",
+        ("error%",),
+    )
+
+    counts = {r["form_slug"]: r["n"] for r in q(
+        "SELECT form_slug, COUNT(*) AS n FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug"
+    )}
     form_stats = []
     for s, n in FORM_NAMES.items():
         c = sum(v for k, v in counts.items() if k.startswith(s))
@@ -396,9 +524,9 @@ def dashboard():
             "pct": round(c * 100 / total) if total else 0,
         })
 
-    recent = [row_dict(r) for r in db.execute(
-        "SELECT * FROM submissions WHERE deleted_at IS NULL ORDER BY id DESC LIMIT 8"
-    ).fetchall()]
+    recent = [row_dict(r) for r in q(
+        "SELECT TOP 8 * FROM submissions WHERE deleted_at IS NULL ORDER BY id DESC"
+    )]
 
     return render_template(
         "dashboard.html",
@@ -407,22 +535,21 @@ def dashboard():
         total=total, today_n=today_n, week_n=week_n, fail_n=fail_n,
         form_stats=form_stats,
         recent=recent,
-        dry=get_setting("MAIL_DRY_RUN", "0") == "1",
-        mail_to=get_setting("MAIL_TO", "") or "",
+        dry=mail_dry(),
+        mail_to=mail_get("MAIL_TO", "") or "",
     )
 
 
 @app.route("/admin/inbox")
 @require_auth
 def inbox():
-    db = get_db()
-    purge_trash(db)
+    purge_trash()
     slug = request.args.get("form", "")
     # 一次載入全部（每列帶 data-slug），篩選在前端做：segment 滑塊才有滑動切換、不用整頁重載
     rows = [row_dict(r) for r in query_rows("")]
-    counts = dict(
-        db.execute("SELECT form_slug, COUNT(*) FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug").fetchall()
-    )
+    counts = {r["form_slug"]: r["n"] for r in q(
+        "SELECT form_slug, COUNT(*) AS n FROM submissions WHERE deleted_at IS NULL GROUP BY form_slug"
+    )}
     filters = [{"slug": "", "name": "全部", "count": sum(counts.values())}]
     for s, n in FORM_NAMES.items():
         filters.append({"slug": s, "name": n,
@@ -442,8 +569,7 @@ def inbox():
 @app.route("/admin/trash")
 @require_auth
 def trash():
-    db = get_db()
-    purge_trash(db)
+    purge_trash()
     # 垃圾桶不做 segment（使用者裁決）：表單類型改放篩選面板，filters 只給面板下拉用
     rows = [row_dict(r) for r in query_rows("", deleted=True)]
     filters = [{"slug": s, "name": n} for s, n in FORM_NAMES.items()]
@@ -471,14 +597,12 @@ def inbox_delete():
     ids = _post_ids()
     if not ids:
         return jsonify(ok=False, message="沒有選取任何資料"), 400
-    db = get_db()
     now = datetime.now(TAIPEI).strftime("%Y-%m-%d %H:%M:%S")
-    cur = db.execute(
-        f"UPDATE submissions SET deleted_at = ? WHERE deleted_at IS NULL AND id IN ({','.join('?' * len(ids))})",
+    n = execute(
+        f"UPDATE submissions SET deleted_at = %s WHERE deleted_at IS NULL AND id IN ({','.join(['%s'] * len(ids))})",
         [now] + ids,
     )
-    db.commit()
-    return jsonify(ok=True, deleted=cur.rowcount, message=f"已將 {cur.rowcount} 筆收件移至垃圾桶")
+    return jsonify(ok=True, deleted=n, message=f"已將 {n} 筆收件移至垃圾桶")
 
 
 @app.route("/admin/trash/restore", methods=["POST"])
@@ -487,13 +611,11 @@ def trash_restore():
     ids = _post_ids()
     if not ids:
         return jsonify(ok=False, message="沒有選取任何資料"), 400
-    db = get_db()
-    cur = db.execute(
-        f"UPDATE submissions SET deleted_at = NULL WHERE deleted_at IS NOT NULL AND id IN ({','.join('?' * len(ids))})",
+    n = execute(
+        f"UPDATE submissions SET deleted_at = NULL WHERE deleted_at IS NOT NULL AND id IN ({','.join(['%s'] * len(ids))})",
         ids,
     )
-    db.commit()
-    return jsonify(ok=True, restored=cur.rowcount, message=f"已還原 {cur.rowcount} 筆收件")
+    return jsonify(ok=True, restored=n, message=f"已還原 {n} 筆收件")
 
 
 @app.route("/admin/trash/delete", methods=["POST"])
@@ -502,18 +624,15 @@ def trash_delete():
     ids = _post_ids()
     if not ids:
         return jsonify(ok=False, message="沒有選取任何資料"), 400
-    db = get_db()
-    cur = db.execute(
-        f"DELETE FROM submissions WHERE deleted_at IS NOT NULL AND id IN ({','.join('?' * len(ids))})",
+    n = execute(
+        f"DELETE FROM submissions WHERE deleted_at IS NOT NULL AND id IN ({','.join(['%s'] * len(ids))})",
         ids,
     )
-    db.commit()
-    return jsonify(ok=True, deleted=cur.rowcount, message=f"已永久刪除 {cur.rowcount} 筆收件")
+    return jsonify(ok=True, deleted=n, message=f"已永久刪除 {n} 筆收件")
 
 
 SETTING_FIELDS = [
     ("MAIL_TO", "通知信收件人", "有人填表單時要通知誰。多個信箱用逗號分隔，例：judy@tiri.tw, office@tiri.tw"),
-    ("MAIL_FROM", "寄件人顯示信箱", "留空＝用 SMTP 帳號"),
     ("SMTP_HOST", "SMTP 主機", "Gmail 是 smtp.gmail.com"),
     ("SMTP_PORT", "SMTP 埠號", "通常是 587"),
     ("SMTP_USER", "SMTP 帳號", "寄信用的信箱帳號"),
@@ -526,26 +645,27 @@ def is_fetch():
 
 
 def save_settings_section(section):
-    """各卡片獨立儲存：只動自己那一區的鍵，避免互相洗掉"""
+    """各卡片獨立儲存：只動自己那一區的欄位，避免互相洗掉"""
     f = request.form
     if section == "smtp":
-        for key in ("MAIL_FROM", "SMTP_HOST", "SMTP_PORT", "SMTP_USER"):
-            set_setting(key, f.get(key, "").strip())
+        cols = {MAIL_COLS[k]: f.get(k, "").strip()
+                for k in ("SMTP_HOST", "SMTP_PORT", "SMTP_USER")}
         if f.get("SMTP_PASS", "").strip():  # 密碼留空＝不變更
             # Google 應用程式密碼顯示為「xxxx xxxx xxxx xxxx」帶空格，SMTP 登入要去掉
-            set_setting("SMTP_PASS", f.get("SMTP_PASS").replace(" ", "").strip())
+            cols["smtp_pass"] = f.get("SMTP_PASS").replace(" ", "").strip()
+        mail_update(**cols)
     elif section == "notify":  # 寄測試信用：一次套用通知卡整卡內容
-        set_setting("MAIL_TO", f.get("MAIL_TO", "").strip())
-        set_setting("MAIL_DRY_RUN", "1" if f.get("MAIL_DRY_RUN") else "0")
+        mail_update(mail_to=f.get("MAIL_TO", "").strip(),
+                    dry_run=1 if f.get("MAIL_DRY_RUN") else 0)
     elif section == "mailto":  # 收件人輸入框內嵌儲存鈕：只存收件人
-        set_setting("MAIL_TO", f.get("MAIL_TO", "").strip())
+        mail_update(mail_to=f.get("MAIL_TO", "").strip())
     elif section == "dry":     # 測試模式勾勾：勾/取消即時套用
-        set_setting("MAIL_DRY_RUN", "1" if f.get("MAIL_DRY_RUN") else "0")
+        mail_update(dry_run=1 if f.get("MAIL_DRY_RUN") else 0)
     elif section == "copy":
         # 各表單通知信文案（主旨＋開頭文字；留空＝用預設）
         for slug in FORM_NAMES:
-            set_setting(f"MAIL_SUBJ_{slug}", f.get(f"MAIL_SUBJ_{slug}", "").strip())
-            set_setting(f"MAIL_INTRO_{slug}", f.get(f"MAIL_INTRO_{slug}", "").strip())
+            set_copy(slug, f.get(f"MAIL_SUBJ_{slug}", "").strip(),
+                     f.get(f"MAIL_INTRO_{slug}", "").strip())
 
 
 @app.route("/admin/settings", methods=["GET", "POST"])
@@ -560,18 +680,19 @@ def settings():
                 save_settings_section(s)
         if is_fetch():
             return jsonify(ok=True, message="設定已儲存",
-                           pw_set=bool(get_setting("SMTP_PASS")))
+                           pw_set=bool(mail_get("SMTP_PASS")))
         flash("設定已儲存", "success")
         return redirect("/admin/settings")
 
-    values = {key: get_setting(key, "") or "" for key, _, _ in SETTING_FIELDS}
-    pw_set = bool(get_setting("SMTP_PASS"))
+    values = {key: mail_get(key, "") or "" for key, _, _ in SETTING_FIELDS}
+    pw_set = bool(mail_get("SMTP_PASS"))
     pw_hint = "已設定，留空＝維持不變" if pw_set else "尚未設定。Gmail 請用「應用程式密碼」"
+    copies = {s: get_copy(s) for s in FORM_NAMES}
     mail_copy = [
         {
             "slug": s, "name": n,
-            "subj": get_setting(f"MAIL_SUBJ_{s}", "") or "",
-            "intro": get_setting(f"MAIL_INTRO_{s}", "") or "",
+            "subj": copies[s].get("subject") or "",
+            "intro": copies[s].get("intro") or "",
             "default_subj": f"[TIRI 網站] {n} — 新的表單填寫",
         }
         for s, n in FORM_NAMES.items()
@@ -585,7 +706,7 @@ def settings():
         pw_set=pw_set,
         pw_hint=pw_hint,
         mail_copy=mail_copy,
-        dry=get_setting("MAIL_DRY_RUN", "0") == "1",
+        dry=mail_dry(),
     )
 
 
@@ -608,7 +729,7 @@ def settings_test():
     message = ("測試信已寄出！請到收件信箱確認（沒看到的話檢查垃圾信件匣）" if ok
                else f"寄送失敗：{str(status).replace('error: ', '')}")
     if is_fetch():
-        return jsonify(ok=ok, message=message, pw_set=bool(get_setting("SMTP_PASS")))
+        return jsonify(ok=ok, message=message, pw_set=bool(mail_get("SMTP_PASS")))
     flash(message, "success" if ok else "danger")
     return redirect("/admin/settings")
 
@@ -627,15 +748,27 @@ def account():
             elif len(pw) < 8:
                 msg, ok = "新密碼至少 8 個字元，密碼未變更", False
             else:
-                set_setting("ADMIN_PASS", pw)
+                execute("UPDATE users SET password_hash = %s WHERE id = %s",
+                        (generate_password_hash(pw), get_admin()["id"]))
                 msg, ok = "密碼已更新，下次登入請用新密碼", True
-        else:  # profile：只存基本資料，與密碼互不相干
-            set_setting("ADMIN_NICKNAME", request.form.get("nickname", "").strip())
-            msg, ok = "基本資料已儲存", True
+        else:  # profile：基本資料（登入 Email＋暱稱），與密碼互不相干
+            email = request.form.get("email", "").strip().lower()
+            if not email or "@" not in email or "." not in email.split("@")[-1]:
+                msg, ok = "Email 格式看起來不正確，未儲存", False
+            else:
+                u = get_admin()
+                email_changed = email != u["email"]
+                execute("UPDATE users SET email = %s, nickname = %s WHERE id = %s",
+                        (email, request.form.get("nickname", "").strip(), u["id"]))
+                session["admin"] = email  # 換帳號後這次登入維持有效
+                msg, ok = ("基本資料已儲存，下次登入請用新 Email" if email_changed
+                           else "基本資料已儲存"), True
 
         if is_fetch():
+            u = get_admin() or {}
             return jsonify(ok=ok, message=msg,
-                           nickname=get_setting("ADMIN_NICKNAME", "秘書處") or "秘書處")
+                           nickname=u.get("nickname") or "秘書處",
+                           admin_email=u.get("email") or DEFAULT_ADMIN_EMAIL)
         flash(msg, "success" if ok else "danger")
         return redirect("/admin/account")
 

@@ -33,8 +33,9 @@
         <div class="b-card-body flex-1 grid gap-y-5 content-start">
             <div class="set-field">
                 <label class="b-label" for="acc-email">帳號 Email</label>
-                <input type="text" id="acc-email" class="b-input" value="{{ admin_email }}" disabled>
-                <div class="hint">登入帳號，不可變更</div>
+                <input type="email" id="acc-email" name="email" class="b-input" value="{{ admin_email }}"
+                       autocomplete="username" spellcheck="false">
+                <div class="hint">登入後台用的帳號，改了之後下次登入請用新 Email</div>
             </div>
             <div class="set-field">
                 <label class="b-label" for="nickname">暱稱</label>
@@ -84,9 +85,12 @@
         var form = document.getElementById('form-profile');
         var save = document.getElementById('profile-save');
         var nick = document.getElementById('nickname');
-        var baseline = nick.value;
+        var email = document.getElementById('acc-email');
+        var baseline = { nick: nick.value, email: email.value };
 
-        function update() { save.disabled = (nick.value === baseline); }
+        function update() {
+            save.disabled = (nick.value === baseline.nick && email.value === baseline.email);
+        }
         form.addEventListener('input', update);
 
         form.addEventListener('submit', function (e) {
@@ -97,7 +101,8 @@
                 headers: { 'X-Requested-With': 'fetch' }
             }).then(function (r) { return r.json(); }).then(function (res) {
                 if (res.ok) {
-                    baseline = nick.value;
+                    baseline = { nick: nick.value, email: res.admin_email || email.value };
+                    email.value = baseline.email;  /* 後端已正規化（去空白、轉小寫） */
                     /* 右上角暱稱即時同步（header 兩處） */
                     document.querySelectorAll('.header-user-name, .header-user-head-name')
                         .forEach(function (el) { el.textContent = res.nickname; });

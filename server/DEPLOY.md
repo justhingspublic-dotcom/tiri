@@ -1,5 +1,10 @@
 # TIRI 表單後端 — 部署指南
 
+> **⚠️ 2026-07-30 起本文件已過時**：資料層已從 SQLite 檔案改為**公司內部 SQL Server**
+> （192.168.1.92，正式庫 `TIRI`、開發庫 `TIRI_dev`，連線資訊在 `.env` 的 `DB_*`），
+> 不再需要 PythonAnywhere 等外部主機方案，部署＝公司伺服器跑 Flask＋pip 裝 requirements。
+> 資料不存在程式資料夾內，**覆蓋更新資料夾不會再弄丟資料**。以下內容僅供歷史參考。
+
 > 目標：把 `server/`（Flask ＋ submissions.db）從本機搬上雲端，
 > 前台（GitHub Pages 靜態頁）改打正式 API。
 > 本文四部分：方案比較 → 部署教學 → 部署後要改的東西 → 上線前 checklist。

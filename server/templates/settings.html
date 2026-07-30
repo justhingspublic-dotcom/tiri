@@ -102,11 +102,6 @@
                 <input type="hidden" name="section" value="smtp">
                 <div class="b-card-head"><h2 class="b-card-title">SMTP 寄信</h2></div>
                 <div class="b-card-body flex-1 grid grid-cols-2 gap-x-4 gap-y-5 content-start">
-                    <div class="set-field col-span-2">
-                        <label class="b-label" for="MAIL_FROM">寄件人顯示信箱</label>
-                        <input type="text" id="MAIL_FROM" name="MAIL_FROM" class="b-input" value="{{ values['MAIL_FROM'] }}">
-                        <div class="hint">留空＝用 SMTP 帳號</div>
-                    </div>
                     <div class="set-field">
                         <label class="b-label" for="SMTP_HOST">SMTP 主機</label>
                         <input type="text" id="SMTP_HOST" name="SMTP_HOST" class="b-input" value="{{ values['SMTP_HOST'] }}">

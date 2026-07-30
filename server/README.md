@@ -1,8 +1,19 @@
-# TIRI 過渡期表單收件後端
+# TIRI 表單收件後端
 
 前台六個報名表單（加入會員 join、董監事課程 trainbod、TIRIC 課程 tiric、
 董事會績效評估 bodperform、公司治理評估 corpperform、聯絡我們 contact）
-送出後由這個服務接收：存進 SQLite（`submissions.db`），並寄 email 通知。
+送出後由這個服務接收：存進**公司 SQL Server**（192.168.1.92），並寄 email 通知。
+
+## 資料庫（2026-07-30 起）
+
+- 資料一律存 SQL Server，**不在程式資料夾裡**——更新網站（覆蓋 server/ 資料夾）不會動到任何資料。
+- 四張表：`submissions`（表單收件）、`mail_settings`（SMTP／收件人／測試模式，一列式）、
+  `mail_copy`（通知信文案，一表單一筆，主旨＋開頭存 `copy_json`）、`users`（管理員帳號，密碼存雜湊）。
+- 連線資訊在 `.env` 的 `DB_SERVER / DB_USER / DB_PASS / DB_NAME`；
+  **本機開發 `DB_NAME=TIRI_dev`、正式站 `DB_NAME=TIRI`**，開發測試資料與正式資料完全隔離。
+- 表不存在時程式首次啟動會自動建立並播種預設管理員（`migrate_to_mssql.py` 是一次性遷移工具，跑多次安全）。
+- **忘記後台密碼**：`.venv/bin/python reset_password.py 新密碼`（重設 .env 指到的庫；
+  重設正式站加 `--db TIRI`）。密碼庫裡只存雜湊，任何人（包含工程師）都看不到原文，只能重設。
 
 ## 本機啟動
 
@@ -15,7 +26,7 @@ cp .env.example .env        # 填入 SMTP 帳密與收件人
 ```
 
 - `MAIL_DRY_RUN=1` 時不真的寄信，只印在終端機（測試用）；上線改成 `0`。
-- 收件列表：`http://localhost:8000/admin`（帳密在 .env 的 ADMIN_USER / ADMIN_PASS）。
+- 收件列表：`http://localhost:8000/admin`（預設帳密 office@tiri.tw / tiri1234；帳密存在資料庫，可在後台「帳號設定」修改，密碼以雜湊儲存）。
 
 ## 前端串接
 
