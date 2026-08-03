@@ -36,6 +36,11 @@ hero 轉 `has-banner`。另在 main.css 檔尾加「B＋ 內容區差異化層�
   sticker 色籤（lilac/sky/mint 輪替）；event-item 改 hover 淡面圓卡；article-meta 改 pill 徽章
 - 此層作用於全站共用 class，V2 原有 18 頁重設計頁（about/membership/knowledge…）同步變成卡片語言
 
+## 自足部署（2026-08-03）
+
+navbar/forms JS、favicon、原站圖檔與 PDF（`documents/`）全部收在資料夾內，
+無任何 `../../` 外部引用——把 v2/ 內容直接放到網站根目錄即可獨立部署。
+
 ## 待辦（使用者驗收後）
 
 - 細節微調與微互動（入場、hover、選單節奏）

@@ -41,7 +41,10 @@ v1/
 ```
 
 導覽與卡片皆連到真實內頁：文章卡→雙月刊／NIRI 文章頁、精彩回顧→各屆大會頁（含相簿）、
-課程區→tiric／trainbod／certification 完整頁。大型 PDF 連 `original/documents/` 或 tiri.tw 原始連結。
+課程區→tiric／trainbod／certification 完整頁。
+
+**本資料夾完全自足（2026-08-03）**：navbar/forms JS、favicon、原站圖檔與 PDF（`documents/`）
+全部收在資料夾內，無任何 `../../` 外部引用——把 v1/ 內容直接放到網站根目錄即可獨立部署。
 
 ## 內容來源
 
