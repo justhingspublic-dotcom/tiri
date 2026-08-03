@@ -6,6 +6,17 @@
 <link rel="icon" href="favicon.ico?v=20260724" type="image/x-icon">
 <title>TIRI｜網站版本</title>
 <style>
+  /* 與 splash／站內同步的跨頁 crossfade */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.42s;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.33, 1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation: none !important; }
+  }
   :root {
     --ink: #17141f;
     --paper: #fbfaf8;

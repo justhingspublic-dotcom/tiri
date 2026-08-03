@@ -7,7 +7,20 @@
 <title>TIRI 台灣投資人關係協會</title>
 <meta name="robots" content="noindex">
 <style>
-  html, body { height: 100%; }
+  /* 跨頁轉場主線：與站內同為 View Transitions，splash 淡出後由瀏覽器
+     crossfade 進首頁內容，中間不落白畫面；不支援的瀏覽器走首頁的 page-in 備援 */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.42s;
+    animation-timing-function: cubic-bezier(0.25, 1, 0.33, 1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) { animation: none !important; }
+  }
+  html { background: #fbfaf8; height: 100%; }
+  body { height: 100%; }
   body {
     margin: 0;
     background: #fbfaf8;
