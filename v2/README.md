@@ -24,6 +24,18 @@
 
 mega 選單、搜尋層、抽屜、View Transitions 沿用 V1 行為（微互動待下一輪調整）。
 
+## 內容區重排（2026-07-31，第一二波 36 頁）
+
+與 V1 同步重排 36 頁（tiric×3、certification×2、certificate、mission/獎項×8、services×2、
+benefit×2、membership 子頁×3、contact×2、news×13），內容標記與 V1 共用 snippet，
+hero 轉 `has-banner`。另在 main.css 檔尾加「B＋ 內容區差異化層」，讓 V2 不再與 V1 同貌：
+
+- **V1＝左欄 sticky＋hairline 編輯列；V2＝Notion 式堆疊區段＋扁平圓卡**
+- page-split 改單欄堆疊（side 不再 sticky）；benefit-rows／step-list／services-list／
+  fee-card／info-block／download-row 全改 `--soft` 淡面圓卡；roster 名單卡組名帶
+  sticker 色籤（lilac/sky/mint 輪替）；event-item 改 hover 淡面圓卡；article-meta 改 pill 徽章
+- 此層作用於全站共用 class，V2 原有 18 頁重設計頁（about/membership/knowledge…）同步變成卡片語言
+
 ## 待辦（使用者驗收後）
 
 - 細節微調與微互動（入場、hover、選單節奏）

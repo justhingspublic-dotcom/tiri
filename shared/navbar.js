@@ -207,7 +207,7 @@
 
   function renderComponent(variant) {
     return '<header class="site-header" id="site-header"><div class="container">' +
-      '<a class="wordmark" href="index.html" aria-label="TIRI 台灣投資人關係協會 首頁"><span class="mark" aria-hidden="true">TI<span>RI</span></span><span class="name">台灣投資人關係協會</span></a>' +
+      '<a class="wordmark" href="index.html" aria-label="TIRI 台灣投資人關係協會 首頁"><img src="../images/tiri-logo.png" alt="" width="169" height="100"></a>' +
       '<div class="header-right">' + (variant === "v1" ? renderHeaderTop() : "") +
       '<div class="header-main"><nav class="main-nav" aria-label="主導覽"><ul>' + renderDesktopNav() + '</ul></nav>' + renderActions(variant) + '</div></div></div>' +
       '<div class="search-drop" id="search-panel"><div class="search-backdrop" data-search-close></div><div class="search-sheet"><div class="container">' +

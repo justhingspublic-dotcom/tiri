@@ -397,8 +397,7 @@ section,
 }
 /* 跳躍捲動：略過漸變，避免半透明空窗期讓內容透出 */
 .site-header.no-anim,
-.site-header.no-anim .wordmark .mark,
-.site-header.no-anim .wordmark .name,
+.site-header.no-anim .wordmark img,
 .site-header.no-anim .main-nav a,
 .site-header.no-anim .header-top,
 .site-header.no-anim .header-top a,
@@ -428,21 +427,14 @@ section,
 /* 字標（CSS 重刻，比 169px 點陣 logo 銳利） */
 .wordmark {
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+  align-items: center;
 }
-.wordmark .mark {
-  font-size: 34px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #6e6a75;
-}
-.wordmark .mark span { color: var(--purple); }
-.wordmark .name {
-  margin-top: 4px;
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  color: var(--ink-64);
+/* 與後台同款 wordmark 圖（tiri-logo.png，含中英文協會名） */
+.wordmark img {
+  display: block;
+  height: 52px;
+  width: auto;
+  transition: filter 0.55s var(--ease);
 }
 
 .main-nav ul {
@@ -1504,14 +1496,19 @@ section,
   margin-top: clamp(40px, 5vw, 64px);
   padding-top: 24px;
   border-top: 1px solid var(--line);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   gap: 12px;
   font-size: 13px;
   color: var(--ink-45);
 }
+.footer-bottom > span { grid-column: 2; text-align: center; }
 .footer-bottom .mono-meta { font-size: 11.5px; }
+@media (max-width: 640px) {
+  .footer-bottom { grid-template-columns: 1fr; justify-items: center; }
+  .footer-bottom > span { grid-column: auto; }
+}
 
 /* 語言切換（自 header 移入 footer）：向上展開的下拉，沿用手風琴語言 */
 .lang-switch { position: relative; order: -1; }
@@ -1641,9 +1638,8 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .page-hero.has-photo {
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) {
   background: transparent;
 }
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .mark,
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .mark span { color: var(--white); }
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark .name { color: rgba(255, 255, 255, 0.72); }
+/* 沉浸式深照片 hero：logo 圖轉純白（同後台深色模式作法） */
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .wordmark img { filter: brightness(0) invert(1); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a {
   color: rgba(255, 255, 255, 0.85);
   background-image: linear-gradient(var(--white), var(--white));
@@ -1657,8 +1653,6 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   background-image: none;
   color: var(--ink);
 }
-.wordmark .mark,
-.wordmark .name,
 .header-top,
 .header-top a,
 .header-top button.search-toggle,
@@ -1996,6 +1990,123 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 }
 
 /* ==========================================================================
+   Content pages（第一波內頁重排：課程／證照／獎項／服務／優惠／聯絡／文章）
+   ========================================================================== */
+/* 講師／人物牆 */
+.lecturer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: clamp(24px, 3vw, 40px) clamp(16px, 2vw, 28px);
+}
+.lecturer-grid figure { margin: 0; }
+.lecturer-grid img { width: 100%; height: auto; display: block; }
+.lecturer-grid figcaption { margin-top: 12px; font-size: 13.5px; color: var(--ink-64); line-height: 1.55; }
+.lecturer-grid figcaption .topic {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.lecturer-grid figcaption strong { display: block; color: var(--ink); font-weight: 500; font-size: 14.5px; }
+
+/* 名單欄（獎項入圍／入選名單） */
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(28px, 3vw, 44px);
+}
+.roster h3 { font-size: 15px; font-weight: 500; line-height: 1.5; }
+.roster h3 small {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  color: var(--ink-45);
+}
+.roster ul { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+.roster li { padding: 3.5px 0; font-size: 14px; color: var(--ink-80); }
+.roster li .code {
+  display: inline-block;
+  min-width: 44px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-45);
+  margin-right: 8px;
+}
+
+/* 影音格（證照經驗分享等） */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 2.5vw, 32px);
+}
+.video-grid .frame { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
+.video-grid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-grid figure { margin: 0; }
+.video-grid figcaption { margin-top: 10px; font-size: 13.5px; color: var(--ink-64); }
+
+/* 步驟列（評選流程／報名方式） */
+.step-list { border-top: 1px solid var(--line); counter-reset: step; }
+.step-list li {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-80);
+}
+.step-list li::before {
+  counter-increment: step;
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+}
+
+/* 文章頁（news 內文） */
+.article-body { max-width: 720px; }
+.article-body p { margin-bottom: 1em; color: var(--ink-80); line-height: 1.8; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body h2 {
+  margin: 2em 0 0.8em;
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.article-body ul { margin-bottom: 1em; padding-left: 1.2em; list-style: disc; }
+.article-body li { margin-bottom: 0.4em; color: var(--ink-80); line-height: 1.7; }
+.article-body figure { margin: 28px 0; }
+.article-body img { width: 100%; height: auto; display: block; }
+.article-body figcaption { margin-top: 10px; font-size: 13px; color: var(--ink-45); }
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: clamp(24px, 3vw, 36px);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* 相簿格（活動花絮） */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.photo-grid img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 2; display: block; }
+
+/* 地圖框（聯絡我們） */
+.map-frame { border: 1px solid var(--line); aspect-ratio: 4 / 3; position: relative; }
+.map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (min-width: 1560px) {
@@ -2038,8 +2149,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 
 @media (max-width: 640px) {
   :root { --nav-row-h: 64px; --header-h: 104px; }
-  .wordmark .mark { font-size: 28px; }
-  .wordmark .name { font-size: 11px; }
+  .wordmark img { height: 42px; }
   .hero h1 br { display: none; }
   .hero h1 { font-size: 36px; }
   .services-list { grid-template-columns: 1fr; }

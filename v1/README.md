@@ -25,7 +25,12 @@ v1/
 │   ├── index.html           # 首頁（11 段式骨架）
 │   ├── about/events/knowledge/membership/news/partners.html  # 6 大重新設計內頁
 │   ├── join/login/search.html                                # 功能頁
-│   └── （其餘 122 頁）       # 原站全部內頁套入 V1 外殼（含英文版），檔名與原站相同、互鏈保持
+│   ├── （第一波重排 23 頁）  # tiric×3、certification×2、certificate、mission/獎項×8、
+│   │                        # services×2、benefit×2、membership 子頁×3、contact×2
+│   │                        # 全部改用 page-split／benefit-rows／step-list／roster／lecturer-grid
+│   ├── （第二波重排 13 頁）  # news-* 全部：8 頁日期列表（event-list）＋5 頁文章版型（article-body）
+│   └── （其餘 80 頁）        # 原站內頁套 V1 外殼（歷屆大會相簿、雙月刊文章、seminar 樹等），
+│                            # 檔名與原站相同、互鏈保持
 ├── css/
 │   ├── main.css             # design tokens＋全部樣式
 │   ├── legacy-content.css   # 原站內容元素在 V1 內的樣式（標題/相簿/多欄/表單/按鈕）
