@@ -8,7 +8,14 @@
 <meta name="robots" content="noindex">
 <style>
   html, body { height: 100%; }
-  body { margin: 0; background: #ffffff; display: grid; place-items: center; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    display: grid;
+    place-items: center;
+    transition: opacity 0.34s cubic-bezier(0.25, 1, 0.33, 1);
+  }
+  html.is-leaving body { opacity: 0; }
   img {
     width: min(190px, 44vw);
     height: auto;
@@ -17,14 +24,23 @@
     animation: logo-in 0.5s cubic-bezier(0.25, 1, 0.33, 1) 0.08s forwards;
   }
   @keyframes logo-in { to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce) { img { animation: none; opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    img { animation: none; opacity: 1; transform: none; }
+    body { transition: none; }
+  }
   .skip { position: absolute; left: -9999px; }
 </style>
 <noscript><meta http-equiv="refresh" content="1; url=html/index.html"></noscript>
 </head>
 <body>
-<img src="images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="169" height="100">
+<img src="images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="1100" height="649">
 <a class="skip" href="html/index.html">進入網站</a>
-<script>setTimeout(function () { location.replace("html/index.html"); }, 1050);</script>
+<script>
+  setTimeout(function () { document.documentElement.classList.add("is-leaving"); }, 900);
+  setTimeout(function () { location.replace("html/index.html"); }, 1240);
+  window.addEventListener("pageshow", function () {
+    document.documentElement.classList.remove("is-leaving");
+  });
+</script>
 </body>
 </html>
