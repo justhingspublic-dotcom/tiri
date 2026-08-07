@@ -8,3 +8,5 @@ _nav-mockups/
 server/.env
 server/submissions.db
 server/server.log
+tiri-key
+tiri-key.pub
