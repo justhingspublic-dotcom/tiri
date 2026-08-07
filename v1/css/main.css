@@ -1291,14 +1291,13 @@ section,
    9. Courses
    ========================================================================== */
 .courses {
+  /* 淡紫底：區塊內沿用 --line-dark 的框線全部轉深 */
+  --line-dark: rgba(23, 20, 31, 0.16);
   padding-block: var(--section-y);
-  background: var(--ink);
-  color: var(--white);
+  background: #ece4f2;
+  color: var(--ink);
 }
-.courses .eyebrow { color: var(--purple-soft); }
-.courses .section-head h2 { color: var(--white); }
-.courses .section-head .head-link { color: rgba(255, 255, 255, 0.8); }
-.courses .section-head .head-link:hover { color: var(--white); }
+.courses .section-head .head-link:hover { color: var(--purple); }
 
 /* TIRIC 實戰班（原站 tiric 頁內容） */
 .tiric-feature {
@@ -1311,9 +1310,9 @@ section,
   margin-bottom: clamp(40px, 5vw, 64px);
 }
 .tiric-feature h3 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 500; margin-top: 12px; }
-.tiric-feature .desc { margin-top: 14px; font-size: 15px; color: rgba(255, 255, 255, 0.72); max-width: 36em; }
+.tiric-feature .desc { margin-top: 14px; font-size: 15px; color: var(--ink-80); max-width: 36em; }
 .tiric-feature .tf-meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
-.tiric-feature .tag { background: transparent; border-color: var(--line-dark); color: rgba(255, 255, 255, 0.75); }
+.tiric-feature .tag { background: transparent; border-color: var(--line-dark); color: var(--ink-80); }
 .tiric-feature .cta { margin-top: 28px; }
 .tf-points { align-self: center; }
 .tf-points li {
@@ -1329,17 +1328,17 @@ section,
   font-family: var(--mono);
   font-size: 11.5px;
   letter-spacing: 0.1em;
-  color: var(--purple-soft);
+  color: var(--purple);
   padding-top: 3px;
 }
-.tf-points small { display: block; margin-top: 2px; font-size: 13px; color: rgba(255, 255, 255, 0.55); }
+.tf-points small { display: block; margin-top: 2px; font-size: 13px; color: var(--ink-64); }
 
 .course-note {
   margin-top: 28px;
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ink-64);
 }
 
 .course-rows { border-top: 1px solid var(--line-dark); }
@@ -1353,21 +1352,21 @@ section,
   transition: background-color var(--t-link) var(--ease);
 }
 .course-row:hover,
-.course-row:focus-visible { background: rgba(255, 255, 255, 0.045); }
+.course-row:focus-visible { background: rgba(255, 255, 255, 0.4); }
 .course-row .no {
   font-family: var(--mono);
   font-size: 13px;
   letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--ink-45);
 }
 .course-row h3 { font-size: 20px; font-weight: 500; transition: color var(--t-link) var(--ease); }
-.course-row:hover h3 { color: var(--purple-soft); }
-.course-row p { font-size: 14.5px; color: rgba(255, 255, 255, 0.62); }
+.course-row:hover h3 { color: var(--purple); }
+.course-row p { font-size: 14.5px; color: var(--ink-64); }
 .course-row .go {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--ink-45);
   transition: color var(--t-link) var(--ease);
 }
-.course-row:hover .go { color: var(--white); }
+.course-row:hover .go { color: var(--purple); }
 
 /* ==========================================================================
    10. Partners
