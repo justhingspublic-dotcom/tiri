@@ -1407,8 +1407,10 @@ section,
    11. Newsletter + Contact
    ========================================================================== */
 .closing {
-  background: var(--ink);
-  color: var(--white);
+  /* 淡紫底：與 .courses 同一套處理，框線沿用 --line-dark 轉深 */
+  --line-dark: rgba(23, 20, 31, 0.16);
+  background: #ece4f2;
+  color: var(--ink);
   padding-block: var(--section-y);
 }
 .closing-grid {
@@ -1417,8 +1419,7 @@ section,
   gap: clamp(40px, 6vw, 96px);
 }
 .closing h2 { margin-top: 14px; font-size: var(--fs-h2); font-weight: 450; line-height: 1.3; }
-.closing .eyebrow { color: var(--purple-soft); }
-.closing p.lede { margin-top: 16px; color: rgba(255, 255, 255, 0.7); font-size: 16px; max-width: 30em; }
+.closing p.lede { margin-top: 16px; color: var(--ink-80); font-size: 16px; max-width: 30em; }
 
 .newsletter-form { margin-top: 32px; display: flex; gap: 12px; max-width: 480px; }
 .newsletter-form input {
@@ -1428,19 +1429,19 @@ section,
   padding: 0 18px;
   font: inherit;
   font-size: 15px;
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  background: var(--white);
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
   transition: border-color var(--t-link) var(--ease), background-color var(--t-link) var(--ease);
 }
-.newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.4); }
+.newsletter-form input::placeholder { color: var(--ink-45); }
 .newsletter-form input:focus-visible {
-  outline: 2px solid var(--purple-soft);
+  outline: 2px solid var(--purple);
   outline-offset: 2px;
   border-color: transparent;
 }
-.newsletter-note { margin-top: 14px; font-size: 13px; color: rgba(255, 255, 255, 0.45); }
+.newsletter-note { margin-top: 14px; font-size: 13px; color: var(--ink-45); }
 
 .contact-list { margin-top: 8px; border-top: 1px solid var(--line-dark); }
 .contact-list div {
@@ -1456,11 +1457,11 @@ section,
   font-size: 11.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--ink-45);
   padding-top: 4px;
 }
-.contact-list dd { color: rgba(255, 255, 255, 0.85); }
-.contact-list dd small { display: block; margin-top: 2px; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
+.contact-list dd { color: var(--ink-80); }
+.contact-list dd small { display: block; margin-top: 2px; color: var(--ink-64); font-size: 13px; }
 .closing .contact-cta { margin-top: 28px; }
 
 /* ==========================================================================
