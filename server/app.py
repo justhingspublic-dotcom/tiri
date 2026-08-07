@@ -20,7 +20,8 @@ from urllib.parse import quote
 import pymssql
 from dotenv import load_dotenv
 from flask import (Flask, Response, flash, g, jsonify, redirect,
-                   render_template, request, send_file, session)
+                   render_template, request, send_file, send_from_directory,
+                   session)
 from werkzeug.security import check_password_hash, generate_password_hash
 
 load_dotenv(Path(__file__).parent / ".env")
@@ -838,6 +839,30 @@ def export_csv():
     )
 
 
+# ---------- 前台靜態站 ----------
+# 正式機：前台網域（tiri.justhings.com.tw / www.tiri.tw）與後台共用同一個服務，
+# nginx 全數反代進來，由這裡依 Host 分流——前台網域只出靜態檔，後台/API 一概不露出
+
+FRONTEND_DIR = os.environ.get("FRONTEND_DIR", "")
+FRONTEND_HOSTS = {h.strip().lower() for h in
+                  os.environ.get("FRONTEND_HOSTS", "").split(",") if h.strip()}
+
+
+@app.before_request
+def frontend_by_host():
+    if not FRONTEND_DIR:
+        return None
+    if request.host.split(":")[0].lower() not in FRONTEND_HOSTS:
+        return None
+    path = request.path.lstrip("/") or "index.html"
+    if (Path(FRONTEND_DIR) / path).is_dir():
+        path = path.rstrip("/") + "/index.html"
+    try:
+        return send_from_directory(FRONTEND_DIR, path)
+    except Exception:
+        return "404 Not Found", 404
+
+
 @app.route("/")
 def index():
     # 這台伺服器只有收件 API 與後台，根目錄一律導向後台（未登入會再轉登入頁）
@@ -851,6 +876,7 @@ def favicon():
 
 
 @app.route("/healthz")
+@app.route("/health")  # 正式機工程師的監控走 /health，兩個路徑都回應
 def healthz():
     return "ok"
 

@@ -1,7 +1,11 @@
 /* TIRI 過渡期表單串接：把報名表單改送自建後端（原版 Weebly 表單＋V1/V2 改版表單通用） */
 (function () {
   var IS_LOCAL = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
-  var API_BASE = window.TIRI_FORMS_API || (IS_LOCAL ? 'http://localhost:8000' : 'https://tiribackend.justhings.com.tw');
+  /* 測試站（tiri-test.justhings.com.tw）送測試後端，避免測試資料混進正式庫 */
+  var IS_TEST = location.hostname.indexOf('-test.') !== -1;
+  var API_BASE = window.TIRI_FORMS_API || (IS_LOCAL ? 'http://localhost:8000'
+    : IS_TEST ? 'https://tiribackend-test.justhings.com.tw'
+    : 'https://tiribackend.justhings.com.tw');
 
   /* 只有這六種表單是真的要收件的；其他 data-demo-form（訂閱/登入/搜尋）維持示意 */
   var REAL_FORMS = ['join', 'trainbod', 'tiric', 'bodperform', 'corpperform', 'contact'];

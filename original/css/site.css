@@ -253,3 +253,10 @@ textarea:focus-visible {
 .mobile-login {
   display: none !important;
 }
+
+/* 2026-08-06：Weebly「捲動進場」區塊（wsite-section-effect-reveal）的內容
+   原本由平台 JS 在捲入視窗時揭示；封存站已無該 JS，內容會永遠 visibility:hidden
+   （症狀＝en.html 影片區、首頁部分區塊整段空白但佔高度）。直接恆常顯示。 */
+.wsite-section-effect-reveal .wsite-section-content > * {
+  visibility: visible !important;
+}
