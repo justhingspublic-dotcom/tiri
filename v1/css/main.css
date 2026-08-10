@@ -334,7 +334,7 @@ section,
   color: var(--ink-64);
 }
 .header-top a,
-.header-top button.search-toggle {
+.header-top button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -345,9 +345,8 @@ section,
 }
 .header-top a:hover,
 .header-top a:focus-visible,
-.header-top button.search-toggle:hover,
-.header-top button.search-toggle:focus-visible { color: var(--ink); }
-.header-top .lang [aria-current="true"] { color: var(--ink); }
+.header-top button:hover,
+.header-top button:focus-visible { color: var(--ink); }
 .header-top .divider {
   width: 1px;
   height: 12px;
@@ -401,7 +400,7 @@ section,
 .site-header.no-anim .main-nav a,
 .site-header.no-anim .header-top,
 .site-header.no-anim .header-top a,
-.site-header.no-anim .header-top button.search-toggle,
+.site-header.no-anim .header-top button,
 .site-header.no-anim .header-actions .btn { transition: none !important; }
 .site-header .container {
   display: flex;
@@ -1510,38 +1509,19 @@ section,
   .footer-bottom > span { grid-column: auto; }
 }
 
-/* 語言切換（自 header 移入 footer）：向上展開的下拉，沿用手風琴語言 */
-.lang-switch { position: relative; order: -1; }
-/* 觸發鈕＝主導覽連結語言：無邊框、底線由左至右展開 */
-.lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding-bottom: 2px;
-  font-size: 15.5px;
-  font-weight: 500;
-  color: var(--ink-80);
-  background-image: linear-gradient(var(--purple), var(--purple));
-  background-repeat: no-repeat;
-  background-position: left calc(100% - 10px);
-  background-size: 0% 2px;
-  transition: color var(--t-link) var(--ease), background-size var(--t-link) var(--ease);
-}
-.lang-toggle:hover,
-.lang-toggle:focus-visible,
-.lang-toggle[aria-expanded="true"] {
-  color: var(--ink);
-  background-size: 100% 2px;
-}
+/* 語言切換（自 footer 移回 header-top，社群 icon 右側）：向下展開的下拉 */
+.lang-switch { position: relative; }
+/* 觸發鈕沿用工具列語言（mono 12px、色彩過渡見 .header-top button） */
+.lang-toggle { min-height: 40px; }
+.lang-toggle[aria-expanded="true"] { color: var(--ink); }
 .lang-toggle .chev { transition: transform var(--t-link) var(--ease); }
 .lang-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
 
-/* 面板＝menu-panel 的向上版本 */
+/* 面板＝menu-panel 的向下縮小版：白紙、細框、無陰影 */
 .lang-menu {
   position: absolute;
-  bottom: calc(100% - 14px);
-  left: 0;
+  top: calc(100% + 3px);
+  right: 0;
   min-width: 172px;
   display: flex;
   flex-direction: column;
@@ -1549,7 +1529,9 @@ section,
   padding: 10px 0;
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: var(--radius) var(--radius) 0 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-family: var(--sans);
+  letter-spacing: 0;
   clip-path: inset(0 0 100% 0);
   visibility: hidden;
   z-index: 20;
@@ -1625,11 +1607,16 @@ section,
 /* 沉浸式頂部（irclub 式）：photo 頁在頁首時 nav 透明疊在照片上，滾動後恢復實色 */
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top { color: rgba(255, 255, 255, 0.78); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top a,
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button.search-toggle { color: rgba(255, 255, 255, 0.78); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button { color: rgba(255, 255, 255, 0.78); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top a:hover,
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button.search-toggle:hover,
-body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang [aria-current="true"] { color: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top button[aria-expanded="true"] { color: var(--white); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .divider { background: rgba(255, 255, 255, 0.28); }
+/* 語言下拉面板是白紙：沉浸式時面板內連結維持墨色 */
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang-menu a { color: var(--ink-80); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang-menu a:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang-menu a:focus-visible,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-top .lang-menu a[aria-current="true"] { color: var(--ink); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .page-hero.has-photo {
   margin-top: calc(-1 * var(--header-h));
   min-height: calc(clamp(440px, 60vh, 720px) + var(--header-h));
@@ -1655,8 +1642,10 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 }
 .header-top,
 .header-top a,
-.header-top button.search-toggle,
+.header-top button,
 .header-top .divider { transition: color 0.55s var(--ease), background-color 0.55s var(--ease); }
+/* 面板內連結不吃上面的 0.55s：維持底線展開動畫 */
+.header-top .lang-menu a { transition: color var(--t-link) var(--ease), background-size var(--t-link) var(--ease); }
 .header-actions .btn { transition: background-color 0.55s var(--ease), color 0.55s var(--ease), background-size var(--t-btn) var(--ease); }
 
 .page-section { padding-block: clamp(40px, 6vw, 80px); }
@@ -2155,6 +2144,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   .services-list { grid-template-columns: 1fr; }
   .recap-strip a:not(:last-child)::after { margin-inline: 10px; }
   .header-top .social-icons { display: none; }
+  .header-top .divider:has(+ .social-icons) { display: none; }
   .insights-grid { grid-template-columns: 1fr; }
   .event-item { grid-template-columns: 80px 1fr auto; gap: 14px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }

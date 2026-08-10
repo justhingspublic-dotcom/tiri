@@ -186,12 +186,25 @@
     }).join("");
   }
 
+  function renderLangSwitch() {
+    return '<div class="lang-switch">' +
+      '<button class="lang-toggle" type="button" aria-expanded="false" aria-controls="lang-menu">' +
+      icon("i-globe", 14) + '<span class="lang-current">中文</span>' +
+      '<svg class="icon chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-down"></use></svg>' +
+      '</button>' +
+      '<div class="lang-menu" id="lang-menu">' +
+      '<a href="index.html" aria-current="true">中文</a>' +
+      '<a href="en.html">English</a>' +
+      '</div></div>';
+  }
+
   function renderHeaderTop() {
     /* 會員登入先隱藏（暫時用不到）；要還原時在搜尋後補回：
        '<span class="divider" aria-hidden="true"></span><a href="login.html">會員登入</a>' */
     return '<nav class="header-top" aria-label="工具列">' +
       '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel">' + icon("i-search", 15) + '搜尋</button>' +
-      '<span class="divider" aria-hidden="true"></span><span class="social-icons">' + renderSocialIcons() + '</span></nav>';
+      '<span class="divider" aria-hidden="true"></span><span class="social-icons">' + renderSocialIcons() + '</span>' +
+      '<span class="divider" aria-hidden="true"></span>' + renderLangSwitch() + '</nav>';
   }
 
   function renderActions(variant) {

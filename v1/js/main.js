@@ -168,6 +168,11 @@
     showOverlayScrollbar();
   }
 
+  /* 語言下拉、滿寬面板、搜尋都掛在 header 上，同時開會疊在一起——
+     透過這兩個掛勾互收（實作在各自的區塊內指定） */
+  var closeLangMenu = function () {};
+  var closeMegaPanels = function () {};
+
   /* ---- 滿寬下拉：展開時 header 轉實色 ----
      沉浸式（photo 頁）頂部本來是透明的，面板卻是紙白，兩塊貼在一起會斷掉；
      加 is-menuopen 讓沉浸式規則讓位，同時收掉 header 底線 */
@@ -246,6 +251,7 @@
       });
       clearLastHover();   // 換選單或關閉都要重置
       setMenuOpen(Boolean(li));
+      if (li) closeLangMenu();
 
       if (settled && prev && next && prev !== next && !lessMotion.matches) {
         tweenHeight(prev, next);
@@ -283,6 +289,8 @@
       clearTimeout(openTimer);
       setActive(null);
     });
+
+    closeMegaPanels = function () { setActive(null); };
 
     // 鍵盤：焦點離開整個 header 才收（面板由 :focus-within 顯示）
     header.addEventListener("focusin", function (e) {
@@ -325,6 +333,7 @@
 
   function setSearch(open) {
     if (!searchDrop) return;
+    if (open) closeLangMenu();
     searchDrop.classList.toggle("is-open", open);
     if (searchToggle) searchToggle.setAttribute("aria-expanded", String(open));
     document.body.style.overflow = open ? "hidden" : "";
@@ -382,7 +391,7 @@
     setTimeout(function () { document.documentElement.classList.remove("is-leaving"); }, 2500);
   });
 
-  /* ---- 語言切換下拉（footer，向上展開） ---- */
+  /* ---- 語言切換下拉（header-top 工具列，navbar.js 注入，向下展開） ---- */
   var langToggle = document.querySelector(".lang-toggle");
   var langMenu = document.getElementById("lang-menu");
 
@@ -391,9 +400,12 @@
       langMenu.classList.toggle("is-open", open);
       langToggle.setAttribute("aria-expanded", String(open));
     };
+    closeLangMenu = function () { setLang(false); };
     langToggle.addEventListener("click", function (event) {
       event.stopPropagation();
-      setLang(!langMenu.classList.contains("is-open"));
+      var willOpen = !langMenu.classList.contains("is-open");
+      if (willOpen) closeMegaPanels();   // 語言下拉開啟時收掉滿寬面板，兩者不同時開
+      setLang(willOpen);
     });
     document.addEventListener("click", function (event) {
       if (!event.target.closest(".lang-switch")) setLang(false);
