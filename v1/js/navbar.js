@@ -1,7 +1,12 @@
 (function () {
   "use strict";
 
+  /* 第一層 1~8 對應共用資料夾「1首頁～8年刊下載」，分組沿用原站架構 */
   var navigation = [
+    {
+      href: "index.html",
+      label: "首頁"
+    },
     {
       href: "about.html",
       label: "關於 TIRI",
@@ -16,50 +21,89 @@
           ]
         },
         {
-          label: "服務與認證",
+          label: "服務與聯繫",
           links: [
             ["services.html", "功能與服務", "培訓、證照、評鑑、研究調查等 12 項服務"],
-            ["certificate.html", "鄧白氏企業認證™", "D-U-N-S® 環球編碼 65-851-5060"]
+            ["certificate.html", "鄧白氏企業認證™", "D-U-N-S® 環球編碼 65-851-5060"],
+            ["partners.html", "合作夥伴", "年度大會贊助單位與會員優惠夥伴"],
+            ["contact.html", "聯絡我們", "(02) 2381-9248・台北市中正區重慶南路一段 57 號"]
           ]
         }
       ],
       figure: ["about.html", "../images/hero-annual-forum.jpg", "專為上市櫃、興櫃、公開發行與創櫃公司經理人而設的專業協會，致力推進台灣投資人關係的實踐。", "認識協會"]
     },
     {
-      href: "events.html",
-      label: "活動課程",
+      href: "news.html",
+      label: "活動訊息",
       columns: [
         {
-          label: "活動與獎項",
+          label: "消息與活動",
           links: [
-            ["events.html", "焦點與近期課程", "年度大會、專業課程與國際證照總覽"],
-            ["news-971146.html", "精彩回顧", "歷屆年度大會與活動紀錄"],
-            ["mission-206783.html", "TIRI Awards", "第五屆投票啟動，邀請投資圈與媒體參與"],
-            ["mission-206783-766399.html", "TIRI 潛力進展獎", "表揚中小型企業的 IR 進步標竿"]
+            ["news.html", "協會消息", "協會公告、課程講座與產業參與紀錄"],
+            ["events.html", "近期活動", "即將登場的大會、課程與講座"]
           ]
         },
         {
-          label: "專業課程與證照",
+          label: "回顧",
           links: [
-            ["tiric.html", "TIRIC IR 專業實戰班", "採 NIRI 授權教材繁體中文版"],
-            ["trainbod.html", "董監事進修課程", "可折抵董監事與公司治理主管進修時數"],
-            ["certification.html", "IRC 國際證照", "NIRI 專業證照，會員報名省 200 美元"],
-            ["scholarshipirc.html", "IRC 贊助獎學金", "填寫申請表取得贊助資格"]
+            ["news-971146.html", "精彩回顧", "歷屆年度大會與活動現場紀錄"]
           ]
         }
       ],
-      figure: ["news-971146.html", "../images/event-2025-conference.jpg", "2025 年度大會以「智慧驅動未來，IR 共創新時代」為題，呼應數位轉型與 AI 對資本市場的影響。", "查看年度大會"]
+      figure: ["news-971146.html", "../images/hero-recap.jpg", "2025/10/23　2025 年度大會暨引領 IR 智慧新時代", "看活動回顧"]
+    },
+    {
+      href: "trainbod.html",
+      label: "課程與服務",
+      columns: [
+        {
+          label: "進修課程",
+          links: [
+            ["trainbod.html", "董監事進修課程", "可折抵董監事與公司治理主管進修時數"],
+            ["trainbod-384680.html", "會計主管進修班", "會計主管繼續進修課程分享"]
+          ]
+        },
+        {
+          label: "治理服務",
+          links: [
+            ["bodperform.html", "董事會績效評估", "外部評估服務，團體會員享 85 折"],
+            ["corpperform.html", "提升公司治理服務", "團體會員享 8 折優惠"]
+          ]
+        }
+      ],
+      figure: ["trainbod.html", "../images/seminar-room.jpg", "董監事進修、董事會績效評估與提升公司治理──協會的核心課程與治理服務。", "查看課程"]
+    },
+    {
+      href: "certification.html",
+      label: "證照獎項",
+      columns: [
+        {
+          label: "專業證照",
+          links: [
+            ["certification.html", "IRC 國際證照", "NIRI 專業證照，會員報名省 200 美元"],
+            ["scholarshipirc.html", "IRC 贊助獎學金", "填寫申請表取得贊助資格"],
+            ["tiric.html", "TIRIC IR 專業實戰班", "採 NIRI 授權教材繁體中文版"]
+          ]
+        },
+        {
+          label: "獎項",
+          links: [
+            ["mission-206783.html", "TIRI Awards", "第五屆投票啟動，邀請投資圈與媒體參與"],
+            ["mission-206783-766399.html", "TIRI 潛力進展獎", "表揚中小型企業的 IR 進步標竿"]
+          ]
+        }
+      ],
+      figure: ["certification.html", "../images/event-awards.jpg", "IRC 國際證照與 TIRI Awards──IR 專業能力與企業成就的雙重肯定。", "了解 IRC 證照"]
     },
     {
       href: "knowledge.html",
-      label: "知識資源",
+      label: "專業分享",
       columns: [
         {
           label: "刊物與專欄",
           links: [
             ["knowledge.html", "知識總覽", "專欄、精選文章與專訪的完整入口"],
-            ["news-387131-325944.html", "證券雙月刊專欄", "證交所「證券服務雙月刊」歷期專欄"],
-            ["5th_report-516844.html", "TIRI 年刊", "創始於 2024 年，每年出刊一次"]
+            ["news-387131-325944.html", "證券雙月刊專欄", "證交所「證券服務雙月刊」歷期專欄"]
           ]
         },
         {
@@ -71,11 +115,11 @@
           ]
         }
       ],
-      figure: ["knowledge.html", "../images/hero-talk.jpg", "證交所「證券服務雙月刊」專欄、NIRI IR Update 精選、專文與專訪──台灣 IR 的知識庫。", "前往知識資源"]
+      figure: ["knowledge.html", "../images/hero-talk.jpg", "證交所「證券服務雙月刊」專欄、NIRI IR Update 精選、專文與專訪──台灣 IR 的知識庫。", "前往專業分享"]
     },
     {
       href: "membership.html",
-      label: "會員服務",
+      label: "會員中心",
       columns: [
         {
           label: "會員",
@@ -86,55 +130,42 @@
           ]
         },
         {
-          label: "治理服務",
+          label: "贊助機制",
           links: [
-            ["bodperform.html", "董事會績效評估", "團體會員享 85 折優惠"],
-            ["corpperform.html", "提升公司治理服務", "團體會員享 8 折優惠"]
+            ["partners.html#sponsor", "贊助方案", "企業贊助方案說明"]
           ]
         }
       ],
       figure: ["join.html", "../images/hero-handshake.jpg", "個人首次入會 NT$8,000（入會費 2,000＋常年會費 6,000），隔年起每年 NT$6,000。", "加入會員"]
     },
     {
-      href: "news.html",
-      label: "最新消息",
+      href: "5th_report-516844.html",
+      label: "年刊下載",
       columns: [
         {
-          label: "消息",
+          label: "歷年年刊",
           links: [
-            ["news.html", "協會消息", "協會公告、課程講座與產業參與紀錄"],
-            ["news-971146.html", "精彩回顧", "歷屆年度大會與活動現場紀錄"]
+            ["5th_report-516844.html", "年刊簡介", "創始於 2024 年，每年出刊一次"],
+            ["5th_report.html", "5 周年年刊", "協會成立五周年年刊"],
+            ["5th_report-848158.html", "6 周年年刊", "協會成立六周年年刊"],
+            ["7th_report-848158-214091.html", "7 周年年刊", "協會成立七周年年刊"]
           ]
         },
         { label: "", links: [] }
       ],
-      figure: ["news-971146.html", "../images/hero-recap.jpg", "2025/10/23　2025 年度大會暨引領 IR 智慧新時代", "看活動回顧"]
-    },
-    {
-      href: "partners.html",
-      label: "合作夥伴",
-      columns: [
-        {
-          label: "夥伴與贊助",
-          links: [
-            ["partners.html", "合作夥伴總覽", "年度大會贊助單位與會員優惠夥伴"],
-            ["partners.html#sponsor", "贊助方案", "企業贊助方案說明"],
-            ["contact.html", "聯絡我們", "(02) 2381-9248・台北市中正區重慶南路一段 57 號"]
-          ]
-        },
-        { label: "", links: [] }
-      ],
-      figure: ["partners.html#sponsor", "../images/hero-networking.jpg", "年度大會贊助單位、會員專屬優惠合作夥伴，以及企業贊助方案。", "成為合作夥伴"]
+      figure: ["5th_report-516844.html", "../images/hero-chart.jpg", "TIRI 年刊收錄年度活動成果與 IR 觀點，線上閱覽與下載。", "下載年刊"]
     }
   ];
 
   var drawerLinks = [
-    ["關於 TIRI", "about.html", [["about.html", "協會使命"], ["team2026.html", "第三屆理監事成員"], ["board.html", "歷屆理監事"], ["about.html#committee", "功能委員會"], ["services.html", "功能與服務"], ["certificate.html", "鄧白氏企業認證™"]]],
-    ["活動課程", "events.html", [["events.html", "焦點與近期課程"], ["news-971146.html", "精彩回顧"], ["tiric.html", "TIRIC IR 專業實戰班"], ["trainbod.html", "董監事進修課程"], ["certification.html", "IRC 國際證照"], ["scholarshipirc.html", "IRC 贊助獎學金"], ["mission-206783.html", "TIRI Awards"], ["mission-206783-766399.html", "TIRI 潛力進展獎"]]],
-    ["知識資源", "knowledge.html", [["knowledge.html", "知識總覽"], ["news-387131-325944-831518.html", "專文分享"], ["news-387131-325944.html", "證券雙月刊專欄"], ["irupdatestc.html", "NIRI IR Update 精選"], ["2356035370-277843933339333297022010738263.html", "專訪 沈馥馥理事長"], ["5th_report-516844.html", "TIRI 年刊"]]],
-    ["會員服務", "membership.html", [["membership.html", "會員類別與會費"], ["benefit.html", "會員專屬優惠"], ["bodperform.html", "董事會績效評估"], ["corpperform.html", "提升公司治理服務"], ["join.html", "加入會員"]]],
-    ["最新消息", "news.html", [["news.html", "協會消息"], ["news-971146.html", "精彩回顧"]]],
-    ["合作夥伴", "partners.html", [["partners.html", "合作夥伴總覽"], ["partners.html#sponsor", "贊助方案"], ["contact.html", "聯絡我們"]]]
+    ["首頁", "index.html", []],
+    ["關於 TIRI", "about.html", [["about.html", "協會使命"], ["team2026.html", "第三屆理監事成員"], ["board.html", "歷屆理監事"], ["about.html#committee", "功能委員會"], ["services.html", "功能與服務"], ["certificate.html", "鄧白氏企業認證™"], ["partners.html", "合作夥伴"], ["contact.html", "聯絡我們"]]],
+    ["活動訊息", "news.html", [["news.html", "協會消息"], ["events.html", "近期活動"], ["news-971146.html", "精彩回顧"]]],
+    ["課程與服務", "trainbod.html", [["trainbod.html", "董監事進修課程"], ["trainbod-384680.html", "會計主管進修班"], ["bodperform.html", "董事會績效評估"], ["corpperform.html", "提升公司治理服務"]]],
+    ["證照獎項", "certification.html", [["certification.html", "IRC 國際證照"], ["scholarshipirc.html", "IRC 贊助獎學金"], ["tiric.html", "TIRIC IR 專業實戰班"], ["mission-206783.html", "TIRI Awards"], ["mission-206783-766399.html", "TIRI 潛力進展獎"]]],
+    ["專業分享", "knowledge.html", [["knowledge.html", "知識總覽"], ["news-387131-325944.html", "證券雙月刊專欄"], ["news-387131-325944-831518.html", "專文分享"], ["irupdatestc.html", "NIRI IR Update 精選"], ["2356035370-277843933339333297022010738263.html", "專訪 沈馥馥理事長"]]],
+    ["會員中心", "membership.html", [["membership.html", "會員類別與會費"], ["benefit.html", "會員專屬優惠"], ["join.html", "加入會員"], ["partners.html#sponsor", "贊助方案"]]],
+    ["年刊下載", "5th_report-516844.html", [["5th_report-516844.html", "年刊簡介"], ["5th_report.html", "5 周年年刊"], ["5th_report-848158.html", "6 周年年刊"], ["7th_report-848158-214091.html", "7 周年年刊"]]]
   ];
 
   function icon(id, size) {
@@ -153,6 +184,9 @@
 
   function renderDesktopNav() {
     return navigation.map(function (item) {
+      if (!item.columns) {
+        return '<li><a href="' + item.href + '">' + item.label + '</a></li>';
+      }
       var figure = item.figure;
       return '<li><a href="' + item.href + '">' + item.label + '</a>' +
         '<div class="menu-panel"><div class="mega-inner">' + renderColumns(item.columns) +
