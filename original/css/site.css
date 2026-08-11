@@ -260,3 +260,11 @@ textarea:focus-visible {
 .wsite-section-effect-reveal .wsite-section-content > * {
   visibility: visible !important;
 }
+
+/* 2026-08-11：語言別選單顯示。site.js 依 <html lang> 掛 body.tiri-english 並為
+   第一層選單項標 .tiri-lang-en / .tiri-lang-zh：中文頁藏英文項、英文頁藏中文項。
+   （取代舊的 .tiri-language-duplicate 永久隱藏——那會讓英文版 39 頁無入口。） */
+body:not(.tiri-english) .tiri-lang-en,
+body.tiri-english .tiri-lang-zh {
+  display: none !important;
+}

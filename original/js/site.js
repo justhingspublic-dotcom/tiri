@@ -16,6 +16,14 @@
     document.body.prepend(skip);
   }
 
+  /* 2026-08-11：原本英文項一律加 .tiri-language-duplicate 永久隱藏（英文頁只剩
+     en.html 可達）。改為語言別標記：中文頁藏英文項、英文頁藏中文項（CSS 在 site.css 檔尾）。
+     英文頁判定依 <html lang>（39 頁英文頁的 lang 已由 zh-Hant 更正為 en）。 */
+  const isEnglishPage = document.documentElement.lang
+    .toLowerCase()
+    .startsWith("en");
+  if (isEnglishPage) document.body.classList.add("tiri-english");
+
   const englishLabels = new Set([
     "Home",
     "ABOUT TIRI",
@@ -31,14 +39,11 @@
 
   document.querySelectorAll(".desktop-nav > .wsite-menu-default > li, .mobile-nav > .wsite-menu-default > li").forEach((item) => {
     const label = item.querySelector(":scope > a > span")?.textContent.trim();
-    if (englishLabels.has(label)) item.classList.add("tiri-language-duplicate");
+    item.classList.add(englishLabels.has(label) ? "tiri-lang-en" : "tiri-lang-zh");
   });
 
   const desktopNav = document.querySelector(".desktop-nav");
   if (desktopNav && !document.querySelector(".tiri-language-switch")) {
-    const isEnglishPage = document.documentElement.lang
-      .toLowerCase()
-      .startsWith("en");
     const language = document.createElement("a");
     language.className = "tiri-language-switch";
     language.href = isEnglishPage ? "index.html" : "en.html";
