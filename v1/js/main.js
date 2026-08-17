@@ -168,6 +168,127 @@
     showOverlayScrollbar();
   }
 
+  /* ---- 滾輪慣性捲動 ----
+     只接管滑鼠滾輪／觸控板的 wheel：把 delta 累積成目標值，
+     每幀以指數衰減逼近（幀率無關），放開後仍會滑行一小段再停。
+     觸控、鍵盤、拖捲軸、錨點、hash 都維持原生；一偵測到不是我們寫入的捲動
+     就立即讓位（可中斷、不鎖輸入）。reduced-motion 直接停用。 */
+  if (!reduceMotion && "requestAnimationFrame" in window) {
+    var TAU = 0.14;            /* 逼近時間常數（秒），越小越跟手、越大越飄 */
+    var STOP_EPS = 0.4;        /* 距目標小於此值即結束 */
+    var inertiaTarget = 0;
+    var inertiaCurrent = 0;
+    var inertiaApplied = -1;   /* 上一幀實際寫入後讀回的 scrollY，用來偵測外部捲動 */
+    var inertiaFrame = 0;
+    var inertiaLastTs = 0;
+
+    function maxScrollY() {
+      return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    }
+
+    function stopInertia() {
+      if (inertiaFrame) cancelAnimationFrame(inertiaFrame);
+      inertiaFrame = 0;
+      inertiaApplied = -1;
+      document.documentElement.classList.remove("is-wheel-scrolling");
+    }
+
+    function stepInertia(ts) {
+      inertiaFrame = 0;
+      /* 別人動了捲軸（拖原生捲軸、程式捲動、錨點）→ 讓位 */
+      if (inertiaApplied >= 0 && Math.abs(window.scrollY - inertiaApplied) > 1.5) { stopInertia(); return; }
+
+      var dt = inertiaLastTs ? Math.min(0.064, (ts - inertiaLastTs) / 1000) : 1 / 60;
+      inertiaLastTs = ts;
+      var max = maxScrollY();
+      if (inertiaTarget > max) inertiaTarget = max;
+      if (inertiaTarget < 0) inertiaTarget = 0;
+
+      var diff = inertiaTarget - inertiaCurrent;
+      if (Math.abs(diff) < STOP_EPS) {
+        window.scrollTo(0, Math.round(inertiaTarget));
+        inertiaCurrent = inertiaTarget;
+        stopInertia();
+        return;
+      }
+      inertiaCurrent += diff * (1 - Math.exp(-dt / TAU));
+      /* 只寫整數像素：小數位移會讓瀏覽器（尤其 Safari）整頁重新點陣化，是主執行緒捲動最常見的掉幀源 */
+      window.scrollTo(0, Math.round(inertiaCurrent));
+      inertiaApplied = window.scrollY;
+      inertiaFrame = requestAnimationFrame(stepInertia);
+    }
+
+    /* 事件路徑上有可捲動的容器（搜尋結果、下拉面板…）→ 交給原生。
+       觸控板一秒可發上百個 wheel，getComputedStyle 走訪只在 target 改變或超過 250ms 才重做，
+       其餘只讀 scrollTop 判斷該方向還能不能捲。 */
+    var scrollableCache = { target: null, until: 0, containers: [], locked: false };
+
+    function findScrollableContainers(node) {
+      var found = [];
+      while (node && node !== document.body && node !== document.documentElement && node.nodeType === 1) {
+        var oy = getComputedStyle(node).overflowY;
+        if ((oy === "auto" || oy === "scroll" || oy === "overlay") && node.scrollHeight > node.clientHeight + 1) found.push(node);
+        node = node.parentNode;
+      }
+      return found;
+    }
+
+    function refreshScrollableCache(target, now) {
+      scrollableCache.target = target;
+      scrollableCache.until = now + 250;
+      scrollableCache.containers = findScrollableContainers(target);
+      var h = getComputedStyle(document.documentElement).overflowY;
+      var b = getComputedStyle(document.body).overflowY;
+      scrollableCache.locked = h === "hidden" || b === "hidden" || h === "clip" || b === "clip";
+    }
+
+    function containerCanScroll(deltaY) {
+      var list = scrollableCache.containers;
+      for (var i = 0; i < list.length; i++) {
+        var node = list[i];
+        if (deltaY < 0 ? node.scrollTop > 0 : node.scrollTop + node.clientHeight < node.scrollHeight - 1) return true;
+      }
+      return false;
+    }
+
+    function onInertiaWheel(event) {
+      if (event.defaultPrevented || event.ctrlKey || event.metaKey) return;      /* 縮放手勢放行 */
+      if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;                /* 橫向留給原生 */
+      var now = event.timeStamp || performance.now();
+      if (event.target !== scrollableCache.target || now > scrollableCache.until) refreshScrollableCache(event.target, now);
+      if (scrollableCache.locked) return;
+      if (containerCanScroll(event.deltaY)) { stopInertia(); return; }
+
+      var dy = event.deltaY;
+      if (event.deltaMode === 1) dy *= 40;                       /* lines → px */
+      else if (event.deltaMode === 2) dy *= window.innerHeight;  /* pages → px */
+      if (!dy) return;
+
+      var max = maxScrollY();
+      var y = window.scrollY;
+      /* 已在邊界且還往外推：不攔，維持原生（不做假的 rubber-band） */
+      if ((dy < 0 && y <= 0) || (dy > 0 && y >= max - 0.5)) { stopInertia(); return; }
+
+      event.preventDefault();
+      if (!inertiaFrame) {                 /* 從「現在畫面上的值」起步，不會跳 */
+        inertiaCurrent = y;
+        inertiaTarget = y;
+        inertiaLastTs = 0;
+        document.documentElement.classList.add("is-wheel-scrolling");
+      }
+      inertiaTarget = Math.min(max, Math.max(0, inertiaTarget + dy));
+      if (!inertiaFrame) inertiaFrame = requestAnimationFrame(stepInertia);
+    }
+
+    window.addEventListener("wheel", onInertiaWheel, { passive: false });
+    /* 其他輸入一介入就交還控制權 */
+    window.addEventListener("keydown", stopInertia, true);
+    window.addEventListener("pointerdown", stopInertia, true);
+    window.addEventListener("click", stopInertia, true);
+    window.addEventListener("hashchange", stopInertia);
+    window.addEventListener("touchstart", stopInertia, { passive: true, capture: true });
+  }
+
   /* 語言下拉、滿寬面板、搜尋都掛在 header 上，同時開會疊在一起——
      透過這兩個掛勾互收（實作在各自的區塊內指定） */
   var closeLangMenu = function () {};

@@ -52,6 +52,8 @@
 *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+/* 滾輪慣性（js/main.js）逐幀寫入 scrollTo 時必須關掉平滑，否則每幀都會再起一段動畫 */
+html.is-wheel-scrolling { scroll-behavior: auto; }
 
 /* Desktop overlay scrollbar：不佔版面寬度，滑塊浮在內容上。
    JS 建立成功後才隱藏原生 scrollbar，因此仍有失效 fallback。 */
