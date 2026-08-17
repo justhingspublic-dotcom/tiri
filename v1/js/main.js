@@ -514,7 +514,7 @@
 
   /* ---- 洞察分類篩選（淡出→切換→淡入，約 350ms） ---- */
   var filterButtons = document.querySelectorAll(".filter-btn");
-  var insightCards = document.querySelectorAll(".insight-card");
+  var insightCards = document.querySelectorAll(".insight-card[data-category], .event-item[data-category]");
   var filterTimer = null;
 
   function applyFilter(category) {

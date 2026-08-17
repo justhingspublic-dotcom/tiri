@@ -1071,6 +1071,45 @@ section,
 .event-item:hover .go,
 .event-item:focus-visible .go { color: var(--purple); }
 .event-list .more { padding-top: 24px; border-top: 1px solid var(--line); }
+.event-item[data-category] { transition: opacity 0.2s var(--ease); }
+/* 時間軸變體（歷年活動紀錄／知識分享）：日期欄右側一條連線＋每筆一個節點 */
+.event-list.timeline { position: relative; }
+.event-list.timeline .event-item {
+  position: relative;
+  grid-template-columns: 96px 1fr auto;
+  border-top: 0;
+  padding-block: 20px;
+}
+.event-list.timeline .event-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 76px;
+  width: 1px;
+  background: var(--line);
+}
+.event-list.timeline .event-item::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 72px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--ink-45);
+  transition: background-color var(--t-link) var(--ease), border-color var(--t-link) var(--ease);
+}
+.event-list.timeline .event-item:first-child::before { top: 28px; }
+.event-list.timeline .event-item:last-child::before { bottom: auto; height: 28px; }
+.event-list.timeline .event-item .date { padding-right: 24px; }
+.event-list.timeline .event-item:hover::after,
+.event-list.timeline .event-item:focus-visible::after { background: var(--purple); border-color: var(--purple); }
+.event-list.timeline .event-item.is-hidden { display: none; }
+
+.event-item.is-hiding { opacity: 0; }
+.event-item.is-hidden { display: none; }
 
 .tag {
   display: inline-flex;
@@ -1473,9 +1512,26 @@ section,
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 4fr) repeat(4, minmax(0, 2fr));
+  grid-template-columns: minmax(0, 5fr) repeat(3, minmax(0, 2fr));
   gap: clamp(28px, 4vw, 48px);
 }
+.footer-brand .footer-contact {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-64);
+}
+.footer-brand .footer-brand-links { margin-top: 18px; display: flex; gap: 20px; }
+.footer-brand .footer-brand-links a {
+  font-size: 14px;
+  color: var(--ink-80);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-brand .footer-brand-links a:hover { color: var(--purple); }
 .footer-brand img { width: 120px; }
 .footer-brand p { margin-top: 16px; font-size: 13.5px; color: var(--ink-64); max-width: 22em; }
 .footer-brand .social { margin-top: 20px; display: flex; gap: 18px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; }

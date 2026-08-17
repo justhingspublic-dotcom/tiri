@@ -521,4 +521,102 @@
   if (!customElements.get("tiri-navbar")) {
     customElements.define("tiri-navbar", TiriNavbar);
   }
+
+  /* ---- 共用 footer（2026-08-13）----
+     對方「0天+地」規格三欄化（關於TIRI／相關資訊／會員服務＋品牌欄聯絡資訊），
+     單源化取代原本 134 頁各自內嵌的 footer 複本；lang 判定與 navbar 同一套。 */
+  var footerData = {
+    zh: {
+      brandName: "社團法人台灣投資人關係協會<br>Taiwan Investor Relations Institute",
+      contact: [
+        "電話：(02) 2381-9248",
+        "地址：台北市中正區重慶南路一段 57 號 13 樓之 13",
+        "信箱：office@tiri.tw"
+      ],
+      brandLinks: [["contact.html", "聯絡 TIRI"], ["join.html", "加入會員"]],
+      columns: [
+        { label: "關於 TIRI", links: [
+          ["about.html", "協會簡介"],
+          ["team2026.html", "理監事成員"],
+          ["about.html#committee", "功能委員會"]
+        ] },
+        { label: "相關資訊", links: [
+          ["news.html", "活動訊息"],
+          ["trainbod.html", "課程與服務"],
+          ["certification.html", "證照獎項"],
+          ["knowledge.html", "專業分享"]
+        ] },
+        { label: "會員服務", links: [
+          ["join.html", "加入會員"],
+          ["benefit.html", "會員專屬優惠"]
+        ] }
+      ],
+      copyright: 'Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a>'
+    },
+    en: {
+      brandName: "Taiwan Investor Relations Institute<br>社團法人台灣投資人關係協會",
+      contact: [
+        "Tel: (02) 2381-9248",
+        "13F-13, No. 57, Sec. 1, Chongqing S. Rd., Zhongzheng Dist., Taipei City",
+        "Email: office@tiri.tw"
+      ],
+      brandLinks: [["contact-197913.html", "Contact"], ["join-342161.html", "Join TIRI"]],
+      columns: [
+        { label: "About TIRI", links: [
+          ["mission_en.html", "About TIRI"],
+          ["team_en-2026.html", "Board of Directors"],
+          ["committee-817915.html", "Functional Committee"]
+        ] },
+        { label: "Information", links: [
+          ["news-971146-722067.html", "Event Recap"],
+          ["trainbod-329824.html", "Courses & Services"],
+          ["certification-388672.html", "Certification & Awards"],
+          ["news-387131-325944-831518-306343.html", "IR Library"]
+        ] },
+        { label: "Membership", links: [
+          ["join-342161.html", "Join TIRI"],
+          ["membership-567311.html", "Membership"]
+        ] }
+      ],
+      copyright: 'Copyright © 2026 Taiwan Investor Relations Institute. All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a>'
+    }
+  };
+
+  function renderFooter(lang) {
+    var d = footerData[lang];
+    var cols = d.columns.map(function (col) {
+      return '<div class="footer-col"><h3>' + col.label + '</h3><ul>' +
+        col.links.map(function (link) {
+          return '<li><a href="' + link[0] + '">' + link[1] + '</a></li>';
+        }).join("") + '</ul></div>';
+    }).join("");
+    return '<footer class="site-footer"><div class="container">' +
+      '<div class="footer-grid">' +
+      '<div class="footer-brand">' +
+      '<img src="../images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="120" height="71">' +
+      '<p>' + d.brandName + '</p>' +
+      '<ul class="footer-contact">' + d.contact.map(function (line) { return '<li>' + line + '</li>'; }).join("") + '</ul>' +
+      '<p class="footer-brand-links">' + d.brandLinks.map(function (link) {
+        return '<a href="' + link[0] + '">' + link[1] + '</a>';
+      }).join("") + '</p>' +
+      '</div>' + cols + '</div>' +
+      '<div class="footer-bottom"><span>' + d.copyright + '</span></div>' +
+      '</div></footer>';
+  }
+
+  class TiriFooter extends HTMLElement {
+    connectedCallback() {
+      if (this.dataset.ready === "true") return;
+      var current = window.location.pathname.split("/").pop() || "index.html";
+      var lang = englishPages[current] ? "en" : "zh";
+      this.style.display = "contents";
+      this.innerHTML = renderFooter(lang);
+      this.dataset.ready = "true";
+      markCurrentPage(this);
+    }
+  }
+
+  if (!customElements.get("tiri-footer")) {
+    customElements.define("tiri-footer", TiriFooter);
+  }
 })();

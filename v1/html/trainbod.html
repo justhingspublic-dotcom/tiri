@@ -6,11 +6,98 @@
 <title>董監事進修課程｜台灣投資人關係協會 TIRI</title>
 <meta name="description" content="董監事進修課程──台灣投資人關係協會。">
 <link rel="stylesheet" href="../fonts/fonts.css">
-<link rel="stylesheet" href="../css/main.css?v=20260729-loading">
-<script src="../js/navbar.js?v=20260811-en" defer></script>
+<link rel="stylesheet" href="../css/main.css?v=20260813">
+<script src="../js/navbar.js?v=20260813" defer></script>
 <link rel="stylesheet" href="../css/legacy-inline.css">
 <link rel="stylesheet" href="../css/legacy-content.css">
 <link rel="icon" href="../favicon.ico?v=20260724" type="image/x-icon">
+<style>/* page-specific */
+.member-note {
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--purple);
+  background: var(--white);
+  padding: 22px 26px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+.member-note p { margin-top: 10px; font-size: 15.5px; line-height: 1.8; color: var(--ink-80); max-width: 62em; }
+.member-note a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+
+.event-item.is-past h3 { color: var(--ink-45); font-weight: 450; }
+.event-item.is-past .date { color: var(--ink-45); }
+.open-more { padding-top: 28px; border-top: 1px solid var(--line); margin-top: 4px; }
+.open-note { margin: -20px 0 32px; font-size: 15px; color: var(--ink-64); }
+
+.inhouse-intro { font-size: 16.5px; line-height: 1.9; color: var(--ink-80); max-width: 46em; }
+.inhouse-intro strong { color: var(--purple); font-weight: 600; }
+.inhouse-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  margin: clamp(28px, 4vw, 40px) 0 0;
+  padding: 0;
+}
+.inhouse-features li { border-top: 2px solid var(--purple); padding-top: 16px; }
+.inhouse-features h3 { font-size: 16.5px; font-weight: 500; }
+.inhouse-features p { margin-top: 8px; font-size: 15px; line-height: 1.75; color: var(--ink-64); }
+
+.sub-head { margin: clamp(44px, 6vw, 64px) 0 12px; font-size: 22px; font-weight: 450; line-height: 1.3; }
+.sub-lede { font-size: 15.5px; line-height: 1.8; color: var(--ink-64); max-width: 52em; margin-bottom: clamp(24px, 3vw, 32px); }
+
+.course-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(24px, 3.5vw, 48px);
+  border-top: 1px solid var(--line);
+}
+.course-cat { padding: 22px 4px 26px; border-bottom: 1px solid var(--line); }
+.course-cat .cat-head { display: flex; align-items: baseline; gap: 12px; }
+.course-cat .no { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; color: var(--purple); }
+.course-cat h4 { font-size: 16.5px; font-weight: 500; }
+.course-cat ul { list-style: none; margin: 12px 0 0; padding: 0; }
+.course-cat li {
+  position: relative;
+  padding: 5px 0 5px 16px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-80);
+}
+.course-cat li::before { content: ""; position: absolute; left: 0; top: 0.95em; width: 7px; height: 1px; background: var(--purple); }
+
+.inhouse-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: clamp(32px, 4vw, 44px);
+}
+.inhouse-info .info { border: 1px solid var(--line); background: var(--white); padding: 20px 22px; }
+.inhouse-info h4 { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple); font-weight: 500; }
+.inhouse-info p { margin-top: 10px; font-size: 15.5px; line-height: 1.75; color: var(--ink-80); }
+.inhouse-info a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.inhouse-cta { margin-top: clamp(32px, 4vw, 44px); }
+
+.pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 3.5vw, 48px); margin-bottom: clamp(40px, 5vw, 56px); }
+.pay-grid .pay-col { border-top: 1px solid var(--line); padding-top: 18px; }
+.pay-grid h3 { font-size: 17px; font-weight: 500; }
+.pay-grid p { margin-top: 10px; font-size: 15px; line-height: 1.85; color: var(--ink-80); }
+.pay-grid a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.pay-bank { margin-top: 12px; font-family: var(--mono); font-size: 13px; line-height: 2; color: var(--ink-64); border: 1px solid var(--line); background: var(--white); padding: 14px 18px; }
+
+.contact-window { margin-top: clamp(40px, 5vw, 56px); border-top: 1px solid var(--line); padding-top: 24px; }
+.contact-window h3 { font-size: 17px; font-weight: 500; }
+.contact-window p { margin-top: 10px; font-size: 15.5px; line-height: 1.9; color: var(--ink-80); }
+.contact-window a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .course-cats { grid-template-columns: repeat(2, 1fr); }
+  .inhouse-info { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .inhouse-features { grid-template-columns: 1fr; }
+  .course-cats { grid-template-columns: 1fr; }
+  .pay-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
@@ -34,48 +121,225 @@
 <main id="main">
   <section class="page-hero has-photo" style="--hero-img: url('../images/hero-auditorium.jpg')">
     <div class="container">
-      <p class="eyebrow">Events & Programs</p>
-      <h1>董監事進修課程</h1>
+      <p class="eyebrow reveal">Events & Programs</p>
+      <h1 class="reveal">董監事進修課程</h1>
+      <p class="lede reveal">可申報上市上櫃公司董事、公司治理主管年度進修時數。</p>
     </div>
   </section>
 
-  <section class="page-section" style="padding-top: clamp(32px, 5vw, 56px);">
+  <section class="page-section" id="open">
     <div class="container">
-      <div class="legacy-body">
+      <div class="member-note reveal">
+        <p class="eyebrow">會員優惠</p>
+        <p>TIRI 團體會員，享董監事進修課程到府授課 2 次，或公開班課程 60 小時免費名額，額滿後享 5 折優惠；TIRI 個人會員，享 6 小時免費名額，滿額後享 9 折優惠。立即申請<a href="join.html">加入會員</a>，免費上課。</p>
+      </div>
 
-<div class="wsite-section-wrap">
-<div class="wsite-section wsite-body-section wsite-background-55">
-<div class="wsite-section-content">
-<div class="container">
-<div class="wsite-section-elements">
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
-<table class="wsite-multicol-table">
-<tbody class="wsite-multicol-tbody">
-<tr class="wsite-multicol-tr">
-<td class="wsite-multicol-col tiri-inline-443">
-<div class="wsite-spacer tiri-inline-5"></div>
-</td> <td class="wsite-multicol-col tiri-inline-444">
-<div class="wsite-spacer tiri-inline-5"></div>
-<div class="paragraph"><font color="#53068c" size="5"><strong>會員優惠</strong></font></div>
-<div class="paragraph">*  TIRI 團體會員，享董監事進修課程到府授課 2 次，或公開班課程 60 小時免費名額，額滿後享 5 折優惠<br/>*  TIRI 個人會員，享 6 小時免費名額，滿額後享 9 折優惠<br/>立即申請 <a href="join.html" target="_blank">加入會員</a>，免費上課</div>
-<h2 class="wsite-content-title"><font color="#53068c">最新系列課程－公開班</font></h2>
-<div class="paragraph"><a href="https://www.accupass.com/organizer/detail/1905200944211623899120" rel="noopener" target="_blank"><font size="5">公開課程列表與報名（點此觀看）</font></a></div>
-<div><div class="tiri-inline-140"></div>
-<hr class="styled-hr tiri-inline-141"/>
-<div class="tiri-inline-140"></div></div>
-<h2 class="wsite-content-title"><font color="#53068c">到府授課－企業專班</font></h2>
-<div class="paragraph"><font size="5"><a href="../documents/uploads-1-1-9-9-119925991-tiri_2026-__2026.05.11-bf14362.pdf" rel="noopener" target="_blank">專班課程列表（點此觀看）</a></font></div>
-<div class="paragraph"><font color="#2a2a2a">即日起開辦</font><strong class="tiri-inline-470">線上授課</strong>，在您的家裡或辦公室透過電腦上線，即可完成進修，歡迎洽詢本會。</div>
-<div class="paragraph"><ul><li><strong><font color="#53068c">內容多元  </font></strong></li></ul>除財務及法遵，亦包含投資人關係、資本市場解析、策略發展、ESG 議題等不同選擇。<ul><li><strong><font color="#53068c">到府服務  </font> </strong>   </li></ul> 可配合董監事方便，到指定的地點上課。<ul><li><strong><font color="#53068c">時間彈性 </font></strong>      </li></ul>可配合董監事時間，安排講師授課。</div>
-<h2 class="wsite-content-title"><strong><font color="#53068c">課程主題​</font></strong></h2>
-<div class="paragraph">本協會支持全球淨零轉型，為鼓勵各產業積極投入轉型，辦理相關課程如下，以下僅為基礎課程，可依需求設定不同講師及主題<ol><li><span>如何建構</span>投資人關係及對企業的正面影響</li><li>台灣資本市場現況及對企業的衝擊</li><li>董監事如何審查財報</li><li>董監事不可不知的智財風險門道</li><li>企業財務與投資規劃</li><li>董監事對外發言技巧與訓練</li><li>董事的法律義務與責任</li><li>ESG 企業社會責任對企業的影響</li><li>董事會的成員與架構</li><li>提升董事會績效</li><li>董事會成員和管理團隊之間的關係與合作</li><li>董事與股東會事務</li><li>產業趨勢、國際管理、企業併購等</li><li>財務報表、衍生性金融商品之解析、國際財務報導準則<span>等</span></li><li>企業風險管理、內控監督與內部稽核品質管理<span>等</span></li><li>企業社會責任/永續報告書架構、企業永續環保節能<span>等</span></li><li>企業形象及個人品牌塑造<span>等</span></li><li>其他公司治理、永續發展、財務、會計、內部控制等基本職能或公司治理、企業社會責任相關課程、相關案例分析<span>等</span></li></ol></div>
-<h2 class="wsite-content-title"><span><strong><span><font color="#53068c">費用</font></span></strong></span></h2>
-<div class="paragraph"><span><span>3小時<span>30,000</span>元；<span>6</span>小時6<span>0,000</span>元</span></span></div>
-<h2 class="wsite-content-title"><span><strong><span><font color="#53068c">時間／地點</font></span></strong></span></h2>
-<div class="paragraph">客製化，請於一個月前提出申請，以利與主管機關申報​</div>
-<h2 class="wsite-content-title"><font color="#53068c">繳費／退費</font></h2>
-<div class="paragraph"><ul><li>繳費</li></ul>最晚請於開課前一周匯款至以下帳戶，匯款後請將收據拍照或掃描，並email至 <a href="mailto:office@tiri.tw" rel="noopener" target="_blank"><span class="__cf_email__" data-cfemail="4d222b2b242e280d39243f2463393a">office@tiri.tw</span></a><br/><span>銀    行 ： 國泰世華商業銀行 中山分行</span><br/><span>戶    名 ： 社團法人台灣投資人關係協會</span><br/><span>帳    號 ： 042-03-500850-5</span><br/><span>銀行代號 ： 013</span><br/><span>銀行地址 ： 台北市中山北路三段47號</span><ul><li>退費</li></ul> 於開課前三天取消上課，可全額退費<br/>開課前一天取消上課，須酌收費用500元；當天取消上課，須酌收費用1000​元<br/><br/>*若透過活動通報名公開班課程講座，則<font color="#2a2a2a">依</font><a href="https://accupass.uservoice.com/knowledgebase/articles/152170" rel="noopener" target="_blank">平台規定</a>辦理。</div>
-<h2 class="wsite-content-title"><font color="#53068c">課程報名</font></h2>
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Open Courses</p>
+          <h2>最新系列課程－線上公開班</h2>
+        </div>
+      </div>
+      <p class="open-note reveal">近期公開課程場次，皆可申報上市上櫃公司董事、公司治理主管年度進修時數。</p>
+
+      <div class="event-list" data-reveal-group>
+        <a class="event-item reveal" href="https://www.accupass.com/event/2606090713505065155660" target="_blank" rel="noopener">
+          <span class="date">08.14<span class="yr">2026・五</span></span>
+          <span>
+            <h3>【TIRI 取締役ー講座（オンライン）】台湾日系企業における取締役・監査役の法的責任と税務リスクの実務</h3>
+            <span class="meta"><span class="tag is-members">報名中</span><span class="mono-meta">線上</span></span>
+          </span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="event-item reveal" href="https://www.accupass.com/event/2606090713311189619869" target="_blank" rel="noopener">
+          <span class="date">08.21<span class="yr">2026・五</span></span>
+          <span>
+            <h3>【TIRI 取締役ー講座（オンライン）】日系企業の台湾投資に関する法律要点</h3>
+            <span class="meta"><span class="tag is-members">報名中</span><span class="mono-meta">線上</span></span>
+          </span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="event-item reveal" href="https://www.accupass.com/event/2606090943198559132000" target="_blank" rel="noopener">
+          <span class="date">09.10<span class="yr">2026・四</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】職場霸凌防治新制簡介</h3>
+            <span class="meta"><span class="tag is-members">報名中</span><span class="mono-meta">線上</span></span>
+          </span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <div class="event-item is-past reveal">
+          <span class="date">08.07<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】AI 時代的領導人影響力建構：從個人聲量到全球信任資產</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+        <div class="event-item is-past reveal">
+          <span class="date">07.24<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】家族企業的治理與傳承：家族憲章、股權控制與家族信託的法律架構</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+        <div class="event-item is-past reveal">
+          <span class="date">07.17<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】台廠的歐盟數位供應鏈合規法遵挑戰與對策</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+        <div class="event-item is-past reveal">
+          <span class="date">07.09<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】從曝光到影響力：出海布局下的全球溝通策略與 AI 時代的企業價值塑造</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+        <div class="event-item is-past reveal">
+          <span class="date">06.12<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】證券不法案例與董監責任</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+        <div class="event-item is-past reveal">
+          <span class="date">06.09<span class="yr">2026</span></span>
+          <span>
+            <h3>【TIRI線上董事、公司治理主管進修課程】IFRS 18 新準則之影響與實務解析</h3>
+            <span class="meta"><span class="tag">已結束</span><span class="mono-meta">線上</span></span>
+          </span>
+        </div>
+      </div>
+      <div class="open-more reveal">
+        <a class="btn btn-outline" href="https://www.accupass.com/organizer/detail/1905200944211623899120" target="_blank" rel="noopener">更多場次與報名（Accupass） <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="inhouse" style="border-top: 1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">In-house Programs</p>
+          <h2>到府授課－企業專班</h2>
+        </div>
+        <a class="head-link u-link" href="../documents/uploads-1-1-9-9-119925991-tiri_2026-__2026.05.11-bf14362.pdf" target="_blank" rel="noopener">專班課程列表（PDF）→</a>
+      </div>
+      <p class="inhouse-intro reveal">即日起開辦<strong>線上授課</strong>，在您的家裡或辦公室透過電腦上線，即可完成進修，歡迎洽詢本會。</p>
+      <ul class="inhouse-features" data-reveal-group>
+        <li class="reveal">
+          <h3>內容多元</h3>
+          <p>除財務及法遵，亦包含投資人關係、資本市場解析、策略發展、ESG 議題等不同選擇。</p>
+        </li>
+        <li class="reveal">
+          <h3>到府服務</h3>
+          <p>可配合董監事方便，到指定的地點上課。</p>
+        </li>
+        <li class="reveal">
+          <h3>時間彈性</h3>
+          <p>可配合董監事時間，安排講師授課。</p>
+        </li>
+      </ul>
+
+      <h3 class="sub-head reveal">課程主題</h3>
+      <p class="sub-lede reveal">本協會支持全球淨零轉型，為鼓勵各產業積極投入轉型，辦理相關課程如下，以下僅為基礎課程，可依需求設定不同講師及主題。</p>
+      <div class="course-cats" data-reveal-group>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">01</span><h4>投資人關係與溝通</h4></div>
+          <ul>
+            <li>如何建構投資人關係及對企業的正面影響</li>
+            <li>董監事對外發言技巧與訓練</li>
+            <li>企業形象及個人品牌塑造等</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">02</span><h4>資本市場與財務</h4></div>
+          <ul>
+            <li>台灣資本市場現況及對企業的衝擊</li>
+            <li>董監事如何審查財報</li>
+            <li>企業財務與投資規劃</li>
+            <li>財務報表、衍生性金融商品之解析、國際財務報導準則等</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">03</span><h4>法遵與風險管理</h4></div>
+          <ul>
+            <li>董事的法律義務與責任</li>
+            <li>董監事不可不知的智財風險門道</li>
+            <li>企業風險管理、內控監督與內部稽核品質管理等</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">04</span><h4>董事會運作與治理</h4></div>
+          <ul>
+            <li>董事會的成員與架構</li>
+            <li>提升董事會績效</li>
+            <li>董事會成員和管理團隊之間的關係與合作</li>
+            <li>董事與股東會事務</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">05</span><h4>ESG 與永續發展</h4></div>
+          <ul>
+            <li>ESG 企業社會責任對企業的影響</li>
+            <li>企業社會責任／永續報告書架構、企業永續環保節能等</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">06</span><h4>策略發展</h4></div>
+          <ul>
+            <li>產業趨勢、國際管理、企業併購等</li>
+          </ul>
+        </div>
+        <div class="course-cat reveal">
+          <div class="cat-head"><span class="no">07</span><h4>其他</h4></div>
+          <ul>
+            <li>其他公司治理、永續發展、財務、會計、內部控制等基本職能或公司治理、企業社會責任相關課程、相關案例分析等</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="inhouse-info" data-reveal-group>
+        <div class="info reveal">
+          <h4>費用</h4>
+          <p>3小時30,000元；6小時60,000元</p>
+        </div>
+        <div class="info reveal">
+          <h4>時間／地點</h4>
+          <p>客製化，請於一個月前提出申請，以利與主管機關申報</p>
+        </div>
+        <div class="info reveal">
+          <h4>專班課程列表</h4>
+          <p><a href="../documents/uploads-1-1-9-9-119925991-tiri_2026-__2026.05.11-bf14362.pdf" target="_blank" rel="noopener">下載 2026 專班課程列表（PDF）</a></p>
+        </div>
+      </div>
+      <p class="inhouse-cta reveal"><a class="btn btn-primary" href="contact.html">洽詢開課 <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <section class="page-section" id="signup" style="border-top: 1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Registration</p>
+          <h2>課程報名</h2>
+        </div>
+      </div>
+
+      <div class="pay-grid" data-reveal-group>
+        <div class="pay-col reveal">
+          <h3>繳費</h3>
+          <p>最晚請於開課前一周匯款至以下帳戶，匯款後請將收據拍照或掃描，並 email 至 <a href="mailto:office@tiri.tw" rel="noopener">office@tiri.tw</a>。</p>
+          <p class="pay-bank">銀行：國泰世華商業銀行 中山分行<br>戶名：社團法人台灣投資人關係協會<br>帳號：042-03-500850-5<br>銀行代號：013<br>銀行地址：台北市中山北路三段47號</p>
+        </div>
+        <div class="pay-col reveal">
+          <h3>退費</h3>
+          <p>於開課前三天取消上課，可全額退費。<br>開課前一天取消上課，須酌收費用500元；當天取消上課，須酌收費用1000元。</p>
+          <p>＊若透過活動通報名公開班課程講座，則依<a href="https://accupass.uservoice.com/knowledgebase/articles/152170" target="_blank" rel="noopener">平台規定</a>辦理。</p>
+        </div>
+      </div>
+
+      <div class="legacy-body">
 <div>
 <form action="//www.weebly.com/weebly/apps/formSubmit.php" enctype="multipart/form-data" id="form-498543481695967161" method="POST">
 <div class="wsite-form-container tiri-inline-163" id="498543481695967161-form-parent">
@@ -191,89 +455,17 @@
 </form>
 <div class="recaptcha" data-recaptcha="1" data-sitekey="6Ldf5h8UAAAAAJFJhN6x2OfZqBvANPQcnPa8eb1C" data-size="invisible" id="g-recaptcha-498543481695967161"></div>
 </div>
-</td> <td class="wsite-multicol-col tiri-inline-453">
-<div class="wsite-spacer tiri-inline-5"></div>
-</td> </tr>
-</tbody>
-</table>
-</div></div></div>
-<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
-<table class="wsite-multicol-table">
-<tbody class="wsite-multicol-tbody">
-<tr class="wsite-multicol-tr">
-<td class="wsite-multicol-col tiri-inline-160">
-<div class="wsite-spacer tiri-inline-5"></div>
-</td> <td class="wsite-multicol-col tiri-inline-161">
-<h2 class="wsite-content-title"><span><strong><span><font color="#53068c">服務窗口</font></span></strong></span></h2>
-<div class="paragraph">許小姐<br/>(02)2381-9248<br/><a class="__cf_email__" data-cfemail="e9868f8f808a8ca99d809b80c79d9e" href="mailto:office@tiri.tw" rel="noopener" target="_blank">office@tiri.tw</a></div>
-</td> <td class="wsite-multicol-col tiri-inline-173">
-<div class="wsite-spacer tiri-inline-5"></div>
-</td> </tr>
-</tbody>
-</table>
-</div></div></div>
-<div class="wsite-spacer tiri-inline-5"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+      </div>
 
+      <div class="contact-window reveal">
+        <h3>服務窗口</h3>
+        <p>許小姐<br>(02)2381-9248<br><a href="mailto:office@tiri.tw" rel="noopener">office@tiri.tw</a></p>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="120" height="71">
-        <p>社團法人台灣投資人關係協會<br>Taiwan Investor Relations Institute</p>
-      </div>
-      <div class="footer-col">
-        <h3>關於 TIRI</h3>
-        <ul>
-          <li><a href="about.html">協會使命</a></li>
-          <li><a href="team2026.html">第三屆理監事成員</a></li>
-          <li><a href="board.html">歷屆理監事</a></li>
-          <li><a href="about.html#committee">功能委員會</a></li>
-          <li><a href="about.html#duns">鄧白氏企業認證™雙標章</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>課程與證照</h3>
-        <ul>
-          <li><a href="events.html#training">董監事進修課程</a></li>
-          <li><a href="events.html#tiric">TIRIC IR 專業實戰班</a></li>
-          <li><a href="events.html#irc">IRC 國際證照</a></li>
-          <li><a href="events.html#courses">2026 熱門課程</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>活動與知識</h3>
-        <ul>
-          <li><a href="events.html#recap">精彩回顧</a></li>
-          <li><a href="knowledge.html">知識分享</a></li>
-          <li><a href="knowledge.html#niri">NIRI IR Update 精選</a></li>
-          <li><a href="news.html">最新消息</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>會員服務</h3>
-        <ul>
-          <li><a href="membership.html">會員類別與會費</a></li>
-          <li><a href="membership.html#benefits">會員專屬優惠</a></li>
-          <li><a href="membership.html#governance">董事會績效評估服務</a></li>
-          <li><a href="join.html">加入會員</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a></span>
-    </div>
-  </div>
-</footer>
+<tiri-footer></tiri-footer>
 
 <script src="../js/main.js" defer></script>
 <script src="../js/forms.js?v=20260805-testapi" defer></script>

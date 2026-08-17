@@ -4,11 +4,89 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TIRI Awards｜台灣投資人關係協會 TIRI</title>
-<meta name="description" content="TIRI Awards──台灣投資人關係協會。">
+<meta name="description" content="TIRI Awards 台灣投資人關係大獎──歷屆得獎名單與第五屆投票資訊。">
 <link rel="stylesheet" href="../fonts/fonts.css">
-<link rel="stylesheet" href="../css/main.css">
-<script src="../js/navbar.js?v=20260811-en" defer></script>
+<link rel="stylesheet" href="../css/main.css?v=20260813">
+<script src="../js/navbar.js?v=20260813" defer></script>
 <link rel="icon" href="../favicon.ico?v=20260724" type="image/x-icon">
+<style>/* page-specific */
+.term-panel[hidden] { display: none; }
+.term-panel:not([hidden]) { animation: termFade 0.3s var(--ease, ease); }
+@keyframes termFade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .term-panel:not([hidden]) { animation: none; } }
+
+.award-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(14px, 2vw, 24px);
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+.award-photos figure { margin: 0; }
+.award-photos img { width: 100%; height: auto; display: block; }
+.award-photos figcaption {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-45);
+}
+
+.award-winners { border-top: 1px solid var(--line); }
+.award-winners > div {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 4.5fr) minmax(0, 4.5fr);
+  gap: 12px 28px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.award-winners .group {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  padding-top: 3px;
+}
+.award-winners .group small {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-45);
+}
+.award-winners .win .label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink-45);
+  margin-bottom: 7px;
+}
+.award-winners .win .label em {
+  font-style: normal;
+  margin-left: 8px;
+  color: var(--purple);
+}
+.award-winners .win strong {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.award-winners .win .org {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  color: var(--ink-64);
+}
+.award-winners .win strong + strong { margin-top: 10px; }
+
+@media (max-width: 860px) {
+  .award-winners > div { grid-template-columns: 1fr; gap: 14px; }
+  .award-winners .group { padding-top: 0; }
+}
+@media (max-width: 640px) {
+  .award-photos { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
@@ -33,45 +111,79 @@
   <section class="page-hero has-photo" style="--hero-img: url('../images/hero-taipei-night.jpg')">
     <div class="container">
       <p class="eyebrow reveal">About TIRI</p>
-      <h1 class="reveal">第五屆 TIRI Awards</h1>
-      <p class="lede reveal">機構法人與媒體投票正式啟動，一同為台灣資本市場的活躍與透明度盡一份力。</p>
+      <h1 class="reveal">TIRI Awards</h1>
+      <p class="lede reveal">台灣投資人關係大獎──自 2022 年舉辦第一屆以來，讚揚投資人關係表現良好的企業與 IR 專業人員，今年邁入第五屆。</p>
     </div>
   </section>
 
   <section class="page-section">
     <div class="container">
-
       <div class="page-split">
         <div class="side reveal">
-          <p class="eyebrow">Voting</p>
-          <h2>投票正式啟動</h2>
-          <p class="note">投票截止：2026 年 08 月 19 日</p>
+          <p class="eyebrow">The Awards</p>
+          <h2>台灣投資人關係大獎</h2>
+          <p class="note">自 2022 年起每年舉辦，今年邁入第五屆。</p>
         </div>
         <div class="reveal">
           <div class="prose">
             <p>TIRI 台灣投資人關係協會於 2022 年 12 月 14 日起舉辦第一屆台灣投資人關係大獎【TIRI Awards】，藉此提升台灣投資人關係（IR）專業、讚揚表現良好的企業及 IR Officer（IRO），並獲得熱烈迴響。</p>
-            <p>今年 TIRI Awards 邁入第五屆，我們依公司治理評鑑結果、平均周轉率、成交金額等指標篩選出入選企業及個人後，交由機構法人和媒體投票，選出您心中表現優良的企業。</p>
             <p>機構法人與媒體投票是評選過程中的重要環節，我們希望透過全面、獨立的投票調查，引導企業重視資訊透明度和公平揭露，並最終提高所有公司的股東價值。</p>
-            <p>誠懇邀請您撥冗十分鐘，投下神聖的一票，再次感謝您的參與！</p>
           </div>
-          <div class="benefit-rows" style="margin-top: 28px;">
-            <div><dt>投票資格</dt><dd>投資及研究台股的經理人、分析師；報導台灣產業、企業的財經媒體記者。</dd></div>
-            <div><dt>投票單位</dt><dd>以人為單位，每家投資機構及媒體只要符合上述資格的經理人、分析師、記者皆可投票。</dd></div>
-          </div>
-          <p style="margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
-            <a class="btn btn-primary" href="https://www.surveycake.com/s/grLGA" target="_blank" rel="noopener">前往投票表單 <span class="arrow" aria-hidden="true">→</span></a>
-            <a class="arrow-link u-link" href="mission-206783-396345.html">獎項與評選流程</a>
-          </p>
+          <figure style="margin: 28px 0 0;">
+            <img src="../images/awards/awards-trophy.jpg" alt="TIRI Awards 獎座" style="width: 100%; height: auto; display: block;" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Editions</p>
+          <h2>歷屆 TIRI Awards</h2>
         </div>
       </div>
 
-      <div class="page-split">
-        <div class="side reveal">
-          <p class="eyebrow">Nominees</p>
-          <h2>入圍企業名單</h2>
-          <p class="note">依上市／上櫃與市值分為五組，每組選出一家「最佳投資人關係企業」。</p>
+      <div class="filter-bar term-switch reveal" role="group" aria-label="TIRI Awards 屆別切換">
+        <button class="filter-btn" type="button" data-term="2026" aria-pressed="true">第五屆・2026</button>
+        <button class="filter-btn" type="button" data-term="2025" aria-pressed="false">第四屆・2025</button>
+        <button class="filter-btn" type="button" data-term="2024" aria-pressed="false">第三屆・2024</button>
+        <button class="filter-btn" type="button" data-term="2023" aria-pressed="false">第二屆・2023</button>
+        <button class="filter-btn" type="button" data-term="2022" aria-pressed="false">第一屆・2022</button>
+      </div>
+
+      <!-- ===== 第五屆・2026（投票進行中） ===== -->
+      <section class="term-panel" data-term="2026" id="edition-2026">
+        <div class="page-split">
+          <div class="side reveal">
+            <p class="eyebrow">5th Edition</p>
+            <h2>第五屆<br>投票正式啟動</h2>
+            <p class="note">投票截止：2026 年 08 月 19 日</p>
+          </div>
+          <div class="reveal">
+            <div class="prose">
+              <p>今年 TIRI Awards 邁入第五屆，我們依公司治理評鑑結果、平均周轉率、成交金額等指標篩選出入選企業及個人後，交由機構法人和媒體投票，選出您心中表現優良的企業。</p>
+              <p>誠懇邀請您撥冗十分鐘，投下神聖的一票，再次感謝您的參與！</p>
+            </div>
+            <div class="benefit-rows" style="margin-top: 28px;">
+              <div><dt>投票資格</dt><dd>投資及研究台股的經理人、分析師；報導台灣產業、企業的財經媒體記者。</dd></div>
+              <div><dt>投票單位</dt><dd>以人為單位，每家投資機構及媒體只要符合上述資格的經理人、分析師、記者皆可投票。</dd></div>
+            </div>
+            <p style="margin-top: 28px; display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+              <a class="btn btn-primary" href="https://www.surveycake.com/s/grLGA" target="_blank" rel="noopener">前往投票表單 <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="arrow-link u-link" href="mission-206783-396345.html">獎項與評選流程</a>
+            </p>
+          </div>
         </div>
-        <div style="display: grid; gap: clamp(32px, 4vw, 48px);">
+
+        <div class="page-split">
+          <div class="side reveal">
+            <p class="eyebrow">Nominees</p>
+            <h2>入圍企業名單</h2>
+            <p class="note">依上市／上櫃與市值分為五組，每組選出一家「最佳投資人關係企業」。</p>
+          </div>
           <div class="roster-grid">
     <div class="roster reveal">
       <h3>上市巨型股
@@ -242,67 +354,299 @@
       </ul>
     </div>
           </div>
-          <figure class="reveal" style="margin: 0;">
-            <img src="../images/uploads-1-1-9-9-119925991-published-2024-7-8240161d-86e2206.jpg" alt="TIRI Awards" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </figure>
         </div>
-      </div>
+      </section>
+
+      <!-- ===== 第四屆・2025 ===== -->
+      <section class="term-panel" data-term="2025" id="edition-2025" hidden>
+        <div class="page-split">
+          <div class="side">
+            <p class="eyebrow">4th Edition</p>
+            <h2>第四屆<br>TIRI Awards</h2>
+            <p class="note">2025 年・獲獎名單</p>
+          </div>
+          <div>
+            <div class="award-photos">
+              <figure>
+                <img src="../images/awards/awards-2025-twse.jpg" alt="第四屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2025-tpex.jpg" alt="第四屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+            </div>
+            <div class="award-winners">
+              <div>
+                <span class="group">上市巨型股<small>Listed giant-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>台達電子工業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>劉致遠 投資人關係經理</strong><span class="org">台達電子工業股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市大型股<small>Listed large-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>勤誠興業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蔡佩頴 投資人關係經理</strong><span class="org">勤誠興業股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市中小型股<small>Listed small and medium-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>全新光電科技股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蔣志青 財務處處長</strong><span class="org">全新光電科技股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃大型股<small>Large-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>雙鴻科技股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>陳玉玲 董事長室經理</strong><span class="org">雙鴻科技股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃中小型股<small>Small and medium-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>兆利科技工業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>廖奕竣 代理發言人</strong><span class="org">兆利科技工業股份有限公司</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-split">
+          <div class="side">
+            <p class="eyebrow">Progress Achievement</p>
+            <h2>TIRI 潛力進展獎</h2>
+            <p class="note" style="margin-top:8px"><a class="u-link" href="mission-206783-766399.html">了解潛力進展獎 →</a></p>
+          </div>
+          <div>
+            <div class="award-photos">
+              <figure>
+                <img src="../images/awards/awards-2025-progress-twse.jpg" alt="TIRI 潛力進展獎 上市中小型股組頒獎" loading="lazy">
+                <figcaption>上市中小型股組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2025-progress-tpex.jpg" alt="TIRI 潛力進展獎 上櫃中小型股組頒獎" loading="lazy">
+                <figcaption>上櫃中小型股組</figcaption>
+              </figure>
+            </div>
+            <div class="roster-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+              <div class="roster">
+                <h3>上市中小型股組</h3>
+                <ul>
+                <li><span class="code">6558</span>興能高科技股份有限公司 SYNergy ScienTech Corp.</li>
+                <li><span class="code">5234</span>達興材料股份有限公司 Daxin Materials Corporation</li>
+                <li><span class="code">4576</span>大銀微系統股份有限公司 HIWIN MIKROSYSTEM CORP.</li>
+                <li><span class="code">8028</span>昇陽國際半導體股份有限公司 Phoenix Silicon International Corporation</li>
+                <li><span class="code">2480</span>敦陽科技股份有限公司 STARK TECHNOLOGY, INC.</li>
+                <li><span class="code">6183</span>關貿網路股份有限公司 TRADE-VAN INFORMATION SERVICES CO.</li>
+                <li><span class="code">6206</span>飛捷科技股份有限公司 FLYTECH TECHNOLOGY CO.,LTD.</li>
+                </ul>
+              </div>
+              <div class="roster">
+                <h3>上櫃中小型股組</h3>
+                <ul>
+                <li><span class="code">4971</span>英特磊科技股份有限公司 IntelliEPI Inc.</li>
+                <li><span class="code">6728</span>上洋產業股份有限公司 UP YOUNG CORNERSTONE CORP.</li>
+                <li><span class="code">3663</span>鑫科材料科技股份有限公司 THINTECH MATERIALS TECHNOLOGY CO., LTD.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 第三屆・2024 ===== -->
+      <section class="term-panel" data-term="2024" id="edition-2024" hidden>
+        <div class="page-split">
+          <div class="side">
+            <p class="eyebrow">3rd Edition</p>
+            <h2>第三屆<br>TIRI Awards</h2>
+            <p class="note">2024 年・獲獎名單</p>
+          </div>
+          <div>
+            <div class="award-photos">
+              <figure>
+                <img src="../images/awards/awards-2024-twse-1.jpg" alt="第三屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2024-twse-2.jpg" alt="第三屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2024-tpex-1.jpg" alt="第三屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2024-tpex-2.jpg" alt="第三屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+            </div>
+            <div class="award-winners">
+              <div>
+                <span class="group">上市巨型股<small>Listed giant-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>台灣積體電路製造股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蘇志凱 處長</strong><span class="org">台灣積體電路製造股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市大型股<small>Listed large-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>勤誠興業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蔡佩頴 投資人關係經理</strong><span class="org">勤誠興業股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市中小型股<small>Listed small and medium-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>順德工業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>陳朝興 副總經理暨發言人</strong><span class="org">順德工業股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃大型股<small>Large-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>萬潤科技股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>盧慧萱 董事長特助暨發言人</strong><span class="org">萬潤科技股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃中小型股<small>Small and medium-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>霹靂國際多媒體股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>黃文章 董事長</strong><span class="org">霹靂國際多媒體股份有限公司</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 第二屆・2023 ===== -->
+      <section class="term-panel" data-term="2023" id="edition-2023" hidden>
+        <div class="page-split">
+          <div class="side">
+            <p class="eyebrow">2nd Edition</p>
+            <h2>第二屆<br>TIRI Awards</h2>
+            <p class="note">2023 年・獲獎名單</p>
+          </div>
+          <div>
+            <div class="award-photos">
+              <figure>
+                <img src="../images/awards/awards-2023-twse-1.jpg" alt="第二屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2023-twse-2.jpg" alt="第二屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2023-tpex-1.jpg" alt="第二屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2023-tpex-2.jpg" alt="第二屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+            </div>
+            <div class="award-winners">
+              <div>
+                <span class="group">上市巨型股<small>Listed giant-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>台灣積體電路製造股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蘇志凱 處長</strong><span class="org">台灣積體電路製造股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市大型股<small>Listed large-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>矽創電子股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>黃英記 永續發展處長暨發言人</strong><span class="org">矽創電子股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市中小型股<small>Listed small and medium-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>尖點科技股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>張啟訓 總經理特助</strong><span class="org">尖點科技股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃大型股<small>Large-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>昇佳電子股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>黃英記 投資人關係資深經理</strong><span class="org">昇佳電子股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃中小型股<small>Small and medium-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>陞達股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>許詩詮 財務長</strong><span class="org">陞達股份有限公司</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 第一屆・2022 ===== -->
+      <section class="term-panel" data-term="2022" id="edition-2022" hidden>
+        <div class="page-split">
+          <div class="side">
+            <p class="eyebrow">1st Edition</p>
+            <h2>第一屆<br>TIRI Awards</h2>
+            <p class="note">2022 年・獲獎名單</p>
+          </div>
+          <div>
+            <div class="award-photos">
+              <figure>
+                <img src="../images/awards/awards-2022-twse.jpg" alt="第一屆 TIRI Awards 上市公司組頒獎" loading="lazy">
+                <figcaption>上市公司組</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/awards/awards-2022-tpex.jpg" alt="第一屆 TIRI Awards 上櫃公司組頒獎" loading="lazy">
+                <figcaption>上櫃公司組</figcaption>
+              </figure>
+            </div>
+            <div class="award-winners">
+              <div>
+                <span class="group">上市巨型股<small>Listed giant-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>台灣積體電路製造股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>蘇志凱 處長</strong><span class="org">台灣積體電路製造股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市大型股<small>Listed large-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>創意電子股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>林新洲 副處長</strong><span class="org">創意電子股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上市中小型股<small>Listed small and medium-sized companies</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>雲品國際酒店股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>張啟訓 總經理特助</strong><span class="org">尖點科技股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃大型股<small>Large-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>元太科技工業股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員</span><strong>于紹庭 營運長暨發言人</strong><span class="org">群聯電子股份有限公司</span></div>
+              </div>
+              <div>
+                <span class="group">上櫃中小型股<small>Small and medium-sized companies listed on the OTC</small></span>
+                <div class="win"><span class="label">最佳投資人關係企業</span><strong>東生華製藥股份有限公司</strong></div>
+                <div class="win"><span class="label">最佳投資人關係專業人員<em>共兩位同列最高票</em></span><strong>王鵬程 財務長</strong><span class="org">擎亞電子股份有限公司</span><strong>黃淑平 經理</strong><span class="org">東生華製藥股份有限公司</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="120" height="71">
-        <p>社團法人台灣投資人關係協會<br>Taiwan Investor Relations Institute</p>
-      </div>
-      <div class="footer-col">
-        <h3>關於 TIRI</h3>
-        <ul>
-          <li><a href="about.html">協會使命</a></li>
-          <li><a href="team2026.html">第三屆理監事成員</a></li>
-          <li><a href="board.html">歷屆理監事</a></li>
-          <li><a href="about.html#committee">功能委員會</a></li>
-          <li><a href="about.html#duns">鄧白氏企業認證™雙標章</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>課程與證照</h3>
-        <ul>
-          <li><a href="events.html#training">董監事進修課程</a></li>
-          <li><a href="events.html#tiric">TIRIC IR 專業實戰班</a></li>
-          <li><a href="events.html#irc">IRC 國際證照</a></li>
-          <li><a href="events.html#courses">2026 熱門課程</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>活動與知識</h3>
-        <ul>
-          <li><a href="events.html#recap">精彩回顧</a></li>
-          <li><a href="knowledge.html">知識分享</a></li>
-          <li><a href="knowledge.html#niri">NIRI IR Update 精選</a></li>
-          <li><a href="news.html">最新消息</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>會員服務</h3>
-        <ul>
-          <li><a href="membership.html">會員類別與會費</a></li>
-          <li><a href="membership.html#benefits">會員專屬優惠</a></li>
-          <li><a href="membership.html#governance">董事會績效評估服務</a></li>
-          <li><a href="join.html">加入會員</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a></span>
-    </div>
-  </div>
-</footer>
+<tiri-footer></tiri-footer>
 
+<script>/* page-specific: TIRI Awards 屆別切換 */
+(function () {
+  var buttons = document.querySelectorAll(".term-switch .filter-btn");
+  var panels = document.querySelectorAll(".term-panel");
+
+  function showTerm(term) {
+    buttons.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", String(btn.getAttribute("data-term") === term));
+    });
+    panels.forEach(function (panel) {
+      panel.hidden = panel.getAttribute("data-term") !== term;
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      showTerm(btn.getAttribute("data-term"));
+    });
+  });
+
+  var match = /^#edition-(\d{4})$/.exec(window.location.hash || "");
+  if (match && document.getElementById("edition-" + match[1])) {
+    showTerm(match[1]);
+  }
+})();
+</script>
 <script src="../js/main.js" defer></script>
 </body>
 </html>

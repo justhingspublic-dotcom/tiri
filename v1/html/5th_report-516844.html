@@ -6,11 +6,39 @@
 <title>年刊簡介｜台灣投資人關係協會 TIRI</title>
 <meta name="description" content="年刊簡介──台灣投資人關係協會。">
 <link rel="stylesheet" href="../fonts/fonts.css">
-<link rel="stylesheet" href="../css/main.css">
-<script src="../js/navbar.js?v=20260811-en" defer></script>
+<link rel="stylesheet" href="../css/main.css?v=20260813">
+<script src="../js/navbar.js?v=20260813" defer></script>
 <link rel="stylesheet" href="../css/legacy-inline.css">
 <link rel="stylesheet" href="../css/legacy-content.css">
 <link rel="icon" href="../favicon.ico?v=20260724" type="image/x-icon">
+<style>/* page-specific */
+/* 歷年年刊：每年一列，年份 mono 大字＋動作區（動作區獨立容器，之後可換成站內 PDF 閱覽入口） */
+.archive-note { max-width: 68ch; color: var(--ink-64); margin-bottom: clamp(24px, 3.5vw, 40px); }
+.archive-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.archive-item {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr auto;
+  align-items: center;
+  gap: clamp(20px, 3vw, 48px);
+  padding: clamp(20px, 3vw, 32px) 4px;
+  border-bottom: 1px solid var(--line);
+}
+.archive-year {
+  font-family: var(--mono);
+  font-size: clamp(28px, 3.4vw, 44px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+.archive-info h3 { font-size: var(--fs-h3); font-weight: 450; line-height: 1.3; }
+.archive-info .mono-meta { display: block; margin-top: 6px; }
+.archive-actions { display: flex; align-items: center; gap: 12px; }
+@media (max-width: 720px) {
+  .archive-item { grid-template-columns: 1fr; gap: 12px; }
+  .archive-actions { margin-top: 4px; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
@@ -74,58 +102,56 @@
       </div>
     </div>
   </section>
+
+  <section class="page-section" id="archive">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Annual Reports</p>
+          <h2>歷年年刊</h2>
+        </div>
+      </div>
+      <p class="archive-note reveal">2023–2025 各年度年刊完整版可直接於瀏覽器線上閱讀，或下載 PDF 保存。各年度介紹頁：<a class="u-link" href="5th_report.html">5 周年（2023）</a>、<a class="u-link" href="5th_report-848158.html">6 周年（2024）</a>、<a class="u-link" href="7th_report-848158-214091.html">7 周年（2025）</a>，可由選單「年刊下載」進入。</p>
+      <ul class="archive-list" data-reveal-group>
+        <li class="archive-item reveal">
+          <span class="archive-year">2023</span>
+          <div class="archive-info">
+            <h3>2023 TIRI 年刊（5 周年年刊）</h3>
+            <span class="mono-meta">PDF・15 MB</span>
+          </div>
+          <div class="archive-actions">
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2023-5th-zh.pdf" target="_blank" rel="noopener">線上瀏覽</a>
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2023-5th-zh.pdf" download>下載 PDF</a>
+          </div>
+        </li>
+        <li class="archive-item reveal">
+          <span class="archive-year">2024</span>
+          <div class="archive-info">
+            <h3>2024 TIRI 年刊（6 周年年刊）</h3>
+            <span class="mono-meta">PDF・6.9 MB</span>
+          </div>
+          <div class="archive-actions">
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2024-6th-zh.pdf" target="_blank" rel="noopener">線上瀏覽</a>
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2024-6th-zh.pdf" download>下載 PDF</a>
+          </div>
+        </li>
+        <li class="archive-item reveal">
+          <span class="archive-year">2025</span>
+          <div class="archive-info">
+            <h3>2025 TIRI 年刊（7 周年年刊）</h3>
+            <span class="mono-meta">PDF・26 MB</span>
+          </div>
+          <div class="archive-actions">
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2025-7th-zh.pdf" target="_blank" rel="noopener">線上瀏覽</a>
+            <a class="btn btn-outline" href="../files/annual/tiri-annual-2025-7th-zh.pdf" download>下載 PDF</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="../images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="120" height="71">
-        <p>社團法人台灣投資人關係協會<br>Taiwan Investor Relations Institute</p>
-      </div>
-      <div class="footer-col">
-        <h3>關於 TIRI</h3>
-        <ul>
-          <li><a href="about.html">協會使命</a></li>
-          <li><a href="team2026.html">第三屆理監事成員</a></li>
-          <li><a href="board.html">歷屆理監事</a></li>
-          <li><a href="about.html#committee">功能委員會</a></li>
-          <li><a href="about.html#duns">鄧白氏企業認證™雙標章</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>課程與證照</h3>
-        <ul>
-          <li><a href="events.html#training">董監事進修課程</a></li>
-          <li><a href="events.html#tiric">TIRIC IR 專業實戰班</a></li>
-          <li><a href="events.html#irc">IRC 國際證照</a></li>
-          <li><a href="events.html#courses">2026 熱門課程</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>活動與知識</h3>
-        <ul>
-          <li><a href="events.html#recap">精彩回顧</a></li>
-          <li><a href="knowledge.html">知識分享</a></li>
-          <li><a href="knowledge.html#niri">NIRI IR Update 精選</a></li>
-          <li><a href="news.html">最新消息</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>會員服務</h3>
-        <ul>
-          <li><a href="membership.html">會員類別與會費</a></li>
-          <li><a href="membership.html#benefits">會員專屬優惠</a></li>
-          <li><a href="membership.html#governance">董事會績效評估服務</a></li>
-          <li><a href="join.html">加入會員</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a></span>
-    </div>
-  </div>
-</footer>
+<tiri-footer></tiri-footer>
 
 <script src="../js/main.js" defer></script>
 </body>
