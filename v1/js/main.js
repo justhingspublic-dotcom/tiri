@@ -357,6 +357,262 @@
     });
   }
 
+  /* ---- 站內搜尋（2026-08-17）----
+     前端索引：../search-index.json 由 _archive/scripts/v1build/build_search_index.py 掃 html/ 產出，
+     首次打開面板才載入。中文用子字串比對（多詞 AND），結果依八區分組、即時顯示在輸入框下方；
+     不跳頁、不另開結果頁。 */
+  (function initSiteSearch() {
+    var cfg = window.TIRI_SEARCH;
+    var results = document.getElementById("search-results");
+    var input = document.getElementById("site-search-input");
+    if (!cfg || !results || !input || !searchDrop) return;
+    var inner = results.querySelector(".search-results-inner");
+    var form = input.closest("form");
+    var t = cfg.strings;
+    var index = null, loading = null;
+    var currentHits = [], activeIndex = -1, debounce = 0;
+    var SNIPPET = 72;
+
+    function esc(str) {
+      return String(str).replace(/[&<>"]/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+      });
+    }
+    function fmt(str, map) {
+      return str.replace(/\{(\w+)\}/g, function (_, k) { return esc(map[k]); });
+    }
+
+    function loadIndex() {
+      if (index) return Promise.resolve(index);
+      if (loading) return loading;
+      loading = fetch("../search-index.json").then(function (r) { return r.json(); }).then(function (data) {
+        index = data.filter(function (e) { return e.l === cfg.lang; }).map(function (e) {
+          e.tl = e.t.toLowerCase();
+          e.bl = e.b.toLowerCase();
+          return e;
+        });
+        return index;
+      });
+      return loading;
+    }
+    /* 面板一打開就預抓索引，打字時已就緒 */
+    searchToggle.addEventListener("click", function () { loadIndex(); });
+
+    function terms(q) {
+      return q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    }
+    function search(q) {
+      var ts = terms(q);
+      if (!ts.length || !index) return [];
+      var hits = [];
+      index.forEach(function (e) {
+        var score = 0, ok = true;
+        for (var i = 0; i < ts.length; i++) {
+          var inTitle = e.tl.indexOf(ts[i]) > -1;
+          var bodyPos = e.bl.indexOf(ts[i]);
+          if (!inTitle && bodyPos < 0) { ok = false; break; }
+          /* 拉丁詞落在單字邊界才算完整命中（"IR" 命中 "IR Update" 給滿分，命中 "TIRI" 只給一半） */
+          if (inTitle) score += (/^[a-z0-9]+$/.test(ts[i]) && !new RegExp("(^|[^a-z0-9])" + ts[i]).test(e.tl)) ? 18 : 40;
+          if (bodyPos > -1) score += Math.min(6, e.bl.split(ts[i]).length - 1) * 2 + (bodyPos < 200 ? 4 : 0);
+        }
+        if (ok) hits.push({ e: e, score: score });
+      });
+      hits.sort(function (a, b) { return b.score - a.score; });
+      return hits;
+    }
+
+    /* 命中字反白：對已 escape 的純文字做，避免把標記本身當成內容 */
+    function highlight(text, ts) {
+      var out = "", lower = text.toLowerCase(), i = 0;
+      while (i < text.length) {
+        var best = -1, bestLen = 0;
+        for (var k = 0; k < ts.length; k++) {
+          if (lower.substr(i, ts[k].length) === ts[k] && ts[k].length > bestLen) { best = k; bestLen = ts[k].length; }
+        }
+        if (best > -1) { out += "<mark>" + esc(text.substr(i, bestLen)) + "</mark>"; i += bestLen; }
+        else { out += esc(text[i]); i++; }
+      }
+      return out;
+    }
+    function snippet(e, ts) {
+      var pos = -1;
+      for (var k = 0; k < ts.length; k++) {
+        var p = e.bl.indexOf(ts[k]);
+        if (p > -1 && (pos < 0 || p < pos)) pos = p;
+      }
+      var start = pos < 0 ? 0 : Math.max(0, pos - Math.floor(SNIPPET / 3));
+      var text = e.b.substr(start, SNIPPET * 2);
+      if (start > 0) text = "…" + text;
+      if (start + SNIPPET * 2 < e.b.length) text += "…";
+      return highlight(text, ts);
+    }
+
+    function render(q) {
+      var ts = terms(q);
+      activeIndex = -1;
+      if (!ts.length) {
+        currentHits = [];
+        inner.innerHTML = '<div class="search-hot"><span class="search-overline">' + esc(t.searchHot) + '</span>' +
+          t.searchHotTerms.map(function (w) { return '<button type="button" class="search-chip" data-term="' + esc(w) + '">' + esc(w) + '</button>'; }).join("") + '</div>';
+        settle();
+        return;
+      }
+      if (!index) {
+        inner.innerHTML = '<p class="search-note">' + esc(t.searchLoading) + '</p>';
+        settle();
+        return;
+      }
+      currentHits = search(q);
+      if (!currentHits.length) {
+        inner.innerHTML = '<p class="search-note">' + fmt(t.searchEmpty, { q: q.trim() }) + '</p>';
+        settle();
+        return;
+      }
+      /* 全部列出，依八區分組；組的先後＝該組最佳命中的分數（最相關的區塊排最前），同分照導覽順序 */
+      var groups = {}, best = {};
+      currentHits.forEach(function (h) {
+        (groups[h.e.s] = groups[h.e.s] || []).push(h.e);
+        best[h.e.s] = Math.max(best[h.e.s] || 0, h.score);
+      });
+      var order = Object.keys(groups).sort(function (a, b) {
+        return (best[b] - best[a]) || (cfg.sections.indexOf(a) - cfg.sections.indexOf(b));
+      });
+      var n = 0, html = "";
+      order.forEach(function (s) {
+        html += '<section class="search-group"><span class="search-overline">' + esc(s) + '</span><ul>';
+        groups[s].forEach(function (e) {
+          html += '<li><a class="search-hit" href="' + esc(e.u) + '" data-i="' + (n++) + '"><span class="t">' + highlight(e.t, ts) + '</span><span class="d">' + snippet(e, ts) + '</span></a></li>';
+        });
+        html += '</ul></section>';
+      });
+      html += '<div class="search-foot"><span>' + fmt(t.searchCount, { n: currentHits.length }) + '</span></div>';
+      inner.innerHTML = html;
+      settle();
+    }
+
+    /* 高度補間：結果數變化時面板底緣不能一幀瞬跳（同 mega panel 作法） */
+    function settle() {
+      var maxH = Math.max(200, window.innerHeight - results.getBoundingClientRect().top - 48);
+      var target = Math.min(inner.scrollHeight, maxH);
+      results.style.height = target + "px";
+      results.classList.toggle("is-scroll", inner.scrollHeight > maxH);
+      results.scrollTop = 0;
+    }
+
+    function setActive(i) {
+      var links = inner.querySelectorAll(".search-hit");
+      if (!links.length) return;
+      activeIndex = (i + links.length) % links.length;
+      links.forEach(function (a, k) { a.classList.toggle("is-active", k === activeIndex); });
+      var el = links[activeIndex];
+      var top = el.offsetTop, bottom = top + el.offsetHeight;
+      if (top < results.scrollTop) results.scrollTop = top;
+      else if (bottom > results.scrollTop + results.clientHeight) results.scrollTop = bottom - results.clientHeight;
+    }
+
+    input.addEventListener("input", function () {
+      window.clearTimeout(debounce);
+      debounce = window.setTimeout(function () {
+        loadIndex().then(function () { render(input.value); });
+        render(input.value);
+      }, 120);
+    });
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowDown") { event.preventDefault(); setActive(activeIndex + 1); }
+      else if (event.key === "ArrowUp") { event.preventDefault(); setActive(activeIndex - 1); }
+    });
+    /* 進入結果頁：先把面板收起（0.6s 上滑，主要位移在前 0.4s），再交給站內轉場——
+       支援 View Transitions 的瀏覽器由 @view-transition 交叉淡入；不支援的走 is-leaving 淡出備援。
+       輸入內容在面板收完後清掉，回上一頁（bfcache）再開時是乾淨狀態。 */
+    var navigating = false;
+    function goTo(href) {
+      if (navigating || !href) return;
+      navigating = true;
+      setSearch(false);
+      var useVT = typeof document.startViewTransition === "function" && window.CSS && CSS.supports("view-transition-name: none");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var wait = reduce ? 0 : 400;
+      window.setTimeout(function () {
+        if (!useVT && !reduce) {
+          document.documentElement.classList.add("is-leaving");
+          window.setTimeout(function () { window.location.href = href; }, 340);
+        } else {
+          window.location.href = href;
+        }
+      }, wait);
+      window.setTimeout(function () {
+        input.value = "";
+        render("");
+        navigating = false;
+        document.documentElement.classList.remove("is-leaving");
+      }, 2500);   /* 防呆：導航沒發生也要復原 */
+    }
+    if (form) {
+      form.addEventListener("submit", function () {
+        var links = inner.querySelectorAll(".search-hit");
+        var target = links[activeIndex > -1 ? activeIndex : 0];
+        if (target) goTo(target.getAttribute("href"));
+      });
+    }
+    /* 叉叉：有輸入內容＝先清除（回到熱門捷徑、焦點留在輸入框）；已是空的才關閉面板 */
+    var closeBtn = searchDrop.querySelector(".search-close");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function () {
+        if (input.value) {
+          input.value = "";
+          render("");
+          input.focus();
+        } else {
+          setSearch(false);
+          searchToggle.focus();
+        }
+      });
+    }
+
+    inner.addEventListener("click", function (event) {
+      var chip = event.target.closest(".search-chip");
+      if (chip) {
+        input.value = chip.getAttribute("data-term");
+        input.focus();
+        loadIndex().then(function () { render(input.value); });
+        return;
+      }
+      var hit = event.target.closest(".search-hit");
+      if (hit && event.button === 0 && !(event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)) {
+        event.preventDefault();
+        goTo(hit.getAttribute("href"));
+      }
+    });
+    inner.addEventListener("mousemove", function (event) {
+      var hit = event.target.closest(".search-hit");
+      if (hit) {
+        var i = Number(hit.getAttribute("data-i"));
+        if (i !== activeIndex) setActive(i);
+      }
+    });
+    window.addEventListener("resize", function () { if (searchDrop.classList.contains("is-open")) settle(); });
+
+    /* 開面板：顯示熱門捷徑並鎖定高度；關面板：清空 */
+    var observer = new MutationObserver(function () {
+      if (searchDrop.classList.contains("is-open")) {
+        results.style.transition = "none";
+        render(input.value);
+        void results.offsetHeight;
+        results.style.transition = "";
+      }
+    });
+    observer.observe(searchDrop, { attributes: true, attributeFilter: ["class"] });
+    render("");
+
+    /* ?q=關鍵字 直接開面板帶入查詢（可分享的搜尋連結） */
+    var preset = new URLSearchParams(window.location.search).get("q");
+    if (preset) {
+      input.value = preset;
+      setSearch(true);
+      loadIndex().then(function () { render(preset); });
+    }
+  })();
+
   /* ---- 跨頁轉場備援 ----
      支援 View Transitions 的瀏覽器由 CSS 的 @view-transition 接手（交叉淡入淡出、
      不會經過白畫面），JS 完全不攔截導航。只有不支援的瀏覽器才走下面的淡出流程。 */

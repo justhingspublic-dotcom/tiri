@@ -350,6 +350,11 @@
       searchPlaceholder: "搜尋課程、活動、文章…",
       searchClose: "關閉搜尋",
       searchSubmit: "搜尋",
+      searchHot: "熱門搜尋",
+      searchHotTerms: ["IR 課程", "IRC 證照", "年度大會", "會員", "ESG", "年刊"],
+      searchEmpty: "找不到「{q}」相關內容，試試其他關鍵字。",
+      searchCount: "共 {n} 筆結果",
+      searchLoading: "載入索引中…",
       joinLabel: "加入會員",
       joinHref: "join.html",
       navToggleLabel: "開啟選單",
@@ -368,6 +373,11 @@
       searchPlaceholder: "Search courses, events, articles…",
       searchClose: "Close search",
       searchSubmit: "Search",
+      searchHot: "Popular",
+      searchHotTerms: ["Course", "Certification", "Annual", "Membership", "ESG", "Board"],
+      searchEmpty: "No results for \u201c{q}\u201d. Try another keyword.",
+      searchCount: "{n} results",
+      searchLoading: "Loading index\u2026",
       joinLabel: "Join TIRI",
       joinHref: "join-342161.html",
       navToggleLabel: "Open menu",
@@ -489,7 +499,8 @@
       '<div class="header-right">' + (variant === "v1" ? renderHeaderTop(t, lang) : "") +
       '<div class="header-main"><nav class="main-nav" aria-label="' + t.mainNavLabel + '"><ul>' + renderDesktopNav(navItems) + '</ul></nav>' + renderActions(variant, t) + '</div></div></div>' +
       '<div class="search-drop" id="search-panel"><div class="search-backdrop" data-search-close></div><div class="search-sheet"><div class="container">' +
-      '<form data-demo-form role="search" aria-label="' + t.searchFormLabel + '"><label class="sr-only" for="site-search-input">' + t.searchKeyword + '</label><input id="site-search-input" type="search" name="q" placeholder="' + t.searchPlaceholder + '"><button class="search-close" type="button" data-search-close aria-label="' + t.searchClose + '">' + icon("i-x", 14) + '</button><button class="btn btn-primary" type="submit">' + t.searchSubmit + '</button></form>' +
+      '<form data-demo-form role="search" aria-label="' + t.searchFormLabel + '"><label class="sr-only" for="site-search-input">' + t.searchKeyword + '</label><input id="site-search-input" type="search" name="q" placeholder="' + t.searchPlaceholder + '"><button class="search-close" type="button" aria-label="' + t.searchClose + '">' + icon("i-x", 14) + '</button><button class="btn btn-primary" type="submit">' + t.searchSubmit + '</button></form>' +
+      '<div class="search-results" id="search-results" data-lang="' + lang + '"><div class="search-results-inner" role="region" aria-live="polite"></div></div>' +
       '</div></div></div></header>' +
       '<div class="drawer" id="drawer"><div class="drawer-backdrop" data-drawer-close></div><div class="drawer-panel" role="dialog" aria-modal="true" aria-label="' + t.drawerLabel + '"><nav aria-label="' + t.drawerNavLabel + '"><ul>' + renderDrawer(drawerItems) + '</ul></nav>' +
       /* 抽屜的「會員登入」outline 鈕先隱藏（暫時用不到）；要還原時在加入會員後補回：
@@ -511,6 +522,12 @@
       var variant = this.getAttribute("variant") === "v1" ? "v1" : "v2";
       var current = window.location.pathname.split("/").pop() || "index.html";
       var lang = englishPages[current] ? "en" : "zh";
+      /* 搜尋面板文案與區塊順序交給 main.js（結果依八區分組排序） */
+      window.TIRI_SEARCH = {
+        lang: lang,
+        strings: uiStrings[lang],
+        sections: (lang === "en" ? navigationEn : navigation).map(function (item) { return item.label; })
+      };
       this.style.display = "contents";
       this.innerHTML = renderComponent(variant, lang);
       this.dataset.ready = "true";

@@ -35,7 +35,9 @@ v1/
 │   ├── main.css             # design tokens＋全部樣式
 │   ├── legacy-content.css   # 原站內容元素在 V1 內的樣式（標題/相簿/多欄/表單/按鈕）
 │   └── legacy-inline.css    # 原站版面資訊（相簿欄寬、背景圖），複製自 original/
-├── js/main.js               # 入場、count-up、篩選、抽屜、示意表單防跳頁
+├── js/main.js               # 入場、count-up、篩選、抽屜、站內搜尋、示意表單防跳頁
+├── search-index.json        # 站內搜尋索引（132 頁標題／區塊／內文），由
+│                            # _archive/scripts/v1build/build_search_index.py 掃 html/ 產出
 ├── images/                  # 全部引用圖片已複製（自足）
 └── fonts/                   # Archivo 300–700＋Roboto Mono 400/500（latin 子集，本地化）
 ```
@@ -61,3 +63,10 @@ v1/
 - 聯絡資訊與社群連結（contact＋footer；email 由 Cloudflare 保護編碼還原為 office@tiri.tw）
 
 版面與排版為改版設計提案；正式對外仍以協會公告為準。
+
+## 站內搜尋（2026-08-17）
+
+- 純前端：navbar 搜尋面板打開時載入 `search-index.json`，在瀏覽器內做子字串比對（多詞 AND、中英各搜各的索引），
+  結果即時顯示在輸入框下方、依八區分組（組序＝最佳命中分數）、預設 8 筆＋「顯示全部」；↑↓ 選取、Enter 進入、Esc 關閉。
+- `?q=關鍵字` 可直接開面板帶入查詢（可分享的搜尋連結）。
+- **改了任何頁面內容後要重跑** `.venv/bin/python _archive/scripts/v1build/build_search_index.py`，索引才會同步。
