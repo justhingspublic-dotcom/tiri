@@ -230,3 +230,7 @@
   background-blend-mode: lighten;
   border-radius: var(--radius);
 }
+
+/* LOGO／圖片白底融入紙色背景（同 partners-wall 慣例）：
+   legacy 頁的協辦、贊助 LOGO 多為白底 JPG/PNG，米白底上會浮白框 */
+.legacy-body .wsite-image img { mix-blend-mode: multiply; }
