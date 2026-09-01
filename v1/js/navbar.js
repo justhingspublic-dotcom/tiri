@@ -50,7 +50,7 @@
           ]
         }
       ],
-      figure: ["news-971146.html", "../images/hero-recap.jpg", "2025/10/23　2025 年度大會暨引領 IR 智慧新時代", "看活動回顧"]
+      figure: ["seminar181023-720761-875714-576604-415060-555931-912810-913907-260016.html", "../images/hero-recap.jpg", "2026/10/16　2026 年度大會暨 IR 新溝通時代", "看活動資訊"]
     },
     {
       href: "trainbod.html",
