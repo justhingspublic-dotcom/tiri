@@ -2035,14 +2035,14 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 /* 名冊列附肖像（有提供照片者） */
 .board-people > li.has-photo {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr);
-  column-gap: 14px;
+  grid-template-columns: 120px minmax(0, 1fr);
+  column-gap: 18px;
   align-items: start;
 }
 .board-people > li.has-photo > img {
   grid-row: 1 / span 3;
-  width: 64px;
-  height: 85px; /* 3:4 頭肩照 */
+  width: 120px;
+  height: 160px; /* 3:4 頭肩照，2026-09-08 客戶要求放大 */
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--purple-tint);

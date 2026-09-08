@@ -38,6 +38,8 @@
 .term-option[aria-selected="true"] { color: #53068c; font-weight: 600; }
 .term-option[aria-selected="true"]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #53068c; }
 .term-panel[hidden] { display: none; }
+/* 有屆次 banner（合照）時 banner 加高，讓前後排臉都進畫面 */
+.header-page .wsite-header-section.has-term-banner { height: clamp(303px, 34vw, 520px) !important; }
 .board-portraits { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 18px; margin: 0 0 34px; padding: 0 9%; list-style: none; }
 .board-portraits li { margin: 0; list-style: none; }
 .board-portraits img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
@@ -1380,7 +1382,7 @@
 </table>
 </div></div></div>
 </div>
-<div class="term-panel" data-term="2022" data-hero="../images/board-banner-2022.jpg" hidden>
+<div class="term-panel" data-term="2022" data-hero="../images/board-banner-2022.jpg" data-hero-pos="50% 15%" hidden>
 <div class="wsite-spacer tiri-inline-5"></div>
 <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
 <table class="wsite-multicol-table">
@@ -1423,7 +1425,7 @@
 </table>
 </div></div></div>
 </div>
-<div class="term-panel" data-term="2018" data-hero="../images/board-banner-2018.jpg" hidden>
+<div class="term-panel" data-term="2018" data-hero="../images/board-banner-2018.jpg" data-hero-pos="50% 15%" hidden>
 <div class="wsite-spacer tiri-inline-5"></div>
 <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
 <table class="wsite-multicol-table">
@@ -1496,8 +1498,13 @@
       panel.hidden = !on;
       if (!on) return;
       var img = panel.getAttribute("data-hero");
-      if (hero && img) hero.style.setProperty("--hero-img", "url('" + img + "')");
-      if (banner) banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+      var pos = panel.getAttribute("data-hero-pos") || "";
+      if (hero && img) { hero.style.setProperty("--hero-img", "url('" + img + "')"); hero.style.backgroundPosition = pos; }
+      if (banner) {
+        banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+        banner.style.backgroundPosition = pos;
+        banner.classList.toggle("has-term-banner", !!img);
+      }
       var text = panel.getAttribute("data-lede");
       if (lede && text) lede.textContent = text;
     });

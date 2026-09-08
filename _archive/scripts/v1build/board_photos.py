@@ -10,7 +10,7 @@
 做的事：
 1. 讀資料夾裡每張 jpg/jpeg/png，依中文姓名對到 board.html 第三屆名冊（ALIAS 處理錯別字）；
    對不到的姓名會列出來、不處理。
-2. 統一取景：用 macOS Vision 偵測人臉框，裁成 3:4 頭肩照（人臉高≈裁切高 30%、臉中心在 27% 處），
+2. 統一取景：用 macOS Vision 偵測人臉框，裁成 3:4 頭肩照（人臉高≈裁切高 27%、臉中心在 34% 處，頭頂留白），
    縮成 600×800、JPEG 82，存到 v1/images/board-2026-<slug>.jpg（slug 取自英文名，固定不變）。
    偵測不到臉時退回「從上方取景」的舊裁法並提示。
 3. 在 v1/html/board.html 與 board_en.html 的第三屆面板補上肖像：
@@ -36,7 +36,7 @@ ORIG_PAGES = {"zh": ROOT / "original/html/team2026.html", "en": ROOT / "original
 ORIG_IMG_DIR = ROOT / "original/images"
 TERM = "2026"
 W, H = 600, 800                 # 3:4 頭肩照
-FACE_FRAC, FACE_CY = 0.30, 0.27  # 人臉框高佔裁切高比例；臉中心落點（自頂端）
+FACE_FRAC, FACE_CY = 0.27, 0.34  # 人臉框高佔裁切高比例；臉中心落點（自頂端）。2026-09-08 客戶反映頭頂被截，改鬆一點
 SWIFT_SRC = Path(__file__).with_name("facedetect.swift")
 
 # 客戶檔名 → 名冊姓名

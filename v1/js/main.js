@@ -957,8 +957,13 @@
       panel.hidden = !on;
       if (!on) return;
       var img = panel.getAttribute("data-hero");
-      if (hero && img) hero.style.setProperty("--hero-img", "url('" + img + "')");
-      if (banner) banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+      var pos = panel.getAttribute("data-hero-pos") || "";
+      if (hero && img) { hero.style.setProperty("--hero-img", "url('" + img + "')"); hero.style.backgroundPosition = pos; }
+      if (banner) {
+        banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+        banner.style.backgroundPosition = pos;
+        banner.classList.toggle("has-term-banner", !!img);
+      }
       var text = panel.getAttribute("data-lede");
       if (lede && text) lede.textContent = text;
     });
