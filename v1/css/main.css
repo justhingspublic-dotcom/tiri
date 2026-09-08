@@ -1862,8 +1862,11 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 
 /* 首長 spotlight：左肖像右職稱。肖像原檔僅 272×408，故上限 240px 不放大 */
 .board-lead {
+  /* 首長肖像寬度＝名冊卡片寬度（6 欄同一算式），客戶要求一樣大 */
+  --portrait-gap: clamp(14px, 1.6vw, 20px);
+  --portrait-w: calc((100% - 5 * var(--portrait-gap)) / 6);
   display: grid;
-  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  grid-template-columns: var(--portrait-w) minmax(0, 1fr);
   gap: clamp(24px, 3.5vw, 56px);
   align-items: center;
   padding-block: clamp(28px, 4vw, 48px);
@@ -1874,7 +1877,6 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 .board-lead img {
   display: block;
   width: 100%;
-  max-width: 240px;
   height: auto;
   aspect-ratio: 3 / 4; /* 與第三屆頭肩照統一；舊 2:3 肖像以 cover 微裁 */
   object-fit: cover;
@@ -2052,8 +2054,14 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 }
 .board-people > li.has-photo .also { margin-bottom: 4px; }
 .board-people > li.has-photo .name { font-size: 16px; }
-@media (max-width: 1100px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-@media (max-width: 700px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1100px) {
+  .board-people:has(> li.has-photo) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .board-lead { --portrait-w: calc((100% - 3 * var(--portrait-gap)) / 4); }
+}
+@media (max-width: 700px) {
+  .board-people:has(> li.has-photo) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .board-lead { --portrait-w: calc((100% - 2 * var(--portrait-gap)) / 3); }
+}
 
 /* 歷屆沿革索引 */
 .board-terms { border-top: 1px solid var(--line); }
@@ -2082,7 +2090,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 @media (max-width: 620px) {
   .board-lead, .board-lead.no-photo { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .board-lead.no-photo::before { display: none; }
-  .board-lead img { max-width: 180px; }
+  .board-lead img { width: var(--portrait-w); }
   .board-people:not(:has(> li.has-photo)) { grid-template-columns: minmax(0, 1fr); }
 }
 
