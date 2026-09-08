@@ -25,7 +25,10 @@ NAVBAR_JS = V1 / "js" / "navbar.js"
 OUT = V1 / "search-index.json"
 
 BODY_LIMIT = 3000          # 每頁內文上限（字元）；夠找到文章內文，又控住檔案大小
-SKIP = {"search.html", "login.html"}
+SKIP = {"search.html", "login.html",
+        # 理監事各屆已併入 board.html／board_en.html（?term=），舊網址僅剩轉址殼
+        "team2018.html", "team2022.html", "team2026.html",
+        "team_en-2018.html", "team_en-2022.html", "team_en-2026.html"}
 
 # 未列在導覽中的頁面 → 依頁首 eyebrow 歸區
 EYEBROW_ZH = {

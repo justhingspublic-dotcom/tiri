@@ -15,8 +15,7 @@
           label: "協會",
           links: [
             ["about.html", "協會使命", "創會緣起、願景與協會定位"],
-            ["team2026.html", "第三屆理監事成員", "現任理監事名單"],
-            ["board.html", "歷屆理監事", "第一屆至第三屆名冊"],
+            ["board.html", "理監事成員", "現任與歷屆名冊，下拉切換屆次"],
             ["about.html#committee", "功能委員會", "各功能委員會的組成"]
           ]
         },
@@ -159,7 +158,7 @@
 
   var drawerLinks = [
     ["首頁", "index.html", []],
-    ["關於 TIRI", "about.html", [["about.html", "協會使命"], ["team2026.html", "第三屆理監事成員"], ["board.html", "歷屆理監事"], ["about.html#committee", "功能委員會"], ["services.html", "功能與服務"], ["certificate.html", "鄧白氏企業認證™"], ["partners.html", "合作夥伴"], ["contact.html", "聯絡我們"]]],
+    ["關於 TIRI", "about.html", [["about.html", "協會使命"], ["board.html", "理監事成員"], ["about.html#committee", "功能委員會"], ["services.html", "功能與服務"], ["certificate.html", "鄧白氏企業認證™"], ["partners.html", "合作夥伴"], ["contact.html", "聯絡我們"]]],
     ["活動訊息", "news.html", [["news.html", "協會消息"], ["events.html", "近期活動"], ["news-971146.html", "精彩回顧"]]],
     ["課程與服務", "trainbod.html", [["trainbod.html", "董監事進修課程"], ["trainbod-384680.html", "會計主管進修班"], ["bodperform.html", "董事會績效評估"], ["corpperform.html", "提升公司治理服務"]]],
     ["證照獎項", "certification.html", [["certification.html", "IRC 國際證照"], ["scholarshipirc.html", "IRC 贊助獎學金"], ["tiric.html", "TIRIC IR 專業實戰班"], ["mission-206783.html", "TIRI Awards"], ["mission-206783-766399.html", "TIRI 潛力進展獎"]]],
@@ -183,9 +182,7 @@
           label: "Institute",
           links: [
             ["mission_en.html", "About TIRI", "Mission, vision and objectives"],
-            ["team_en-2026.html", "Third Board of Directors", "Current board members"],
-            ["team_en-2018.html", "First Board of Directors", "Founding board members"],
-            ["team_en-2022.html", "Second Board of Directors", "Second-term board members"],
+            ["board_en.html", "Board of Directors", "Current and past boards"],
             ["committee-817915.html", "Functional Committee", "Committee organization"]
           ]
         },
@@ -328,7 +325,7 @@
 
   var drawerLinksEn = [
     ["Home", "en.html", []],
-    ["About TIRI", "mission_en.html", [["mission_en.html", "About TIRI"], ["team_en-2026.html", "Third Board of Directors"], ["team_en-2018.html", "First Board of Directors"], ["team_en-2022.html", "Second Board of Directors"], ["committee-817915.html", "Functional Committee"], ["services_en.html", "Functions and Services"], ["contact-197913.html", "Contact"]]],
+    ["About TIRI", "mission_en.html", [["mission_en.html", "About TIRI"], ["board_en.html", "Board of Directors"], ["committee-817915.html", "Functional Committee"], ["services_en.html", "Functions and Services"], ["contact-197913.html", "Contact"]]],
     ["Recap", "news-971146-722067.html", [["news-971146-722067.html", "Event Recap"], ["seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html", "2025 Annual Conference"], ["seminar181023-720761-875714-576604-415060-555931-882088-817291.html", "2024 Annual Conference"], ["seminar181023-720761-875714-576604-415060-555931-882088.html", "2023 Annual Conference"], ["seminar181023-720761-875714-576604-415060.html", "2022 Annual Conference"], ["seminar181023-720761-875714-576604.html", "2021 Annual Conference"], ["seminar181023-720761-875714.html", "2020 Annual Conference"], ["seminar181023-720761.html", "2019 Annual Conference"], ["seminar181023.html", "2018 Inaugural Conference"]]],
     ["Courses & Services", "trainbod-329824.html", [["trainbod-329824.html", "Board Member & CG Officer Education"], ["trainbod-384680-716109.html", "Accounting Executives Course"], ["bodperform-583064.html", "Board Performance Evaluation"], ["corpperform-750901.html", "Corporate Governance Service"]]],
     ["Certification & Awards", "certification-388672.html", [["certification-388672.html", "IRC©"], ["scholarshipirc-952540.html", "Sponsor for IRC©"], ["tiric-677070.html", "TIRI Elite Program"], ["mission-206783-396345-512343.html", "Awards Overview"], ["mission-206783-803349.html", "TIRI Awards"], ["mission-206783-766399-942925.html", "TIRI Progress Achievement Award"]]],
@@ -554,7 +551,7 @@
       columns: [
         { label: "關於 TIRI", links: [
           ["about.html", "協會簡介"],
-          ["team2026.html", "理監事成員"],
+          ["board.html", "理監事成員"],
           ["about.html#committee", "功能委員會"]
         ] },
         { label: "相關資訊", links: [
@@ -581,7 +578,7 @@
       columns: [
         { label: "About TIRI", links: [
           ["mission_en.html", "About TIRI"],
-          ["team_en-2026.html", "Board of Directors"],
+          ["board_en.html", "Board of Directors"],
           ["committee-817915.html", "Functional Committee"]
         ] },
         { label: "Information", links: [

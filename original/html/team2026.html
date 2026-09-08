@@ -2,7 +2,7 @@
 
 <html lang="zh_TW">
 <head>
-<title>第三屆理監事成員 - 台灣投資人關係協會</title><meta content="台灣投資人關係協會" property="og:site_name"/>
+<title>理監事成員 - 台灣投資人關係協會</title><meta content="台灣投資人關係協會" property="og:site_name"/>
 <meta content="第三屆理監事成員" property="og:title"/>
 <meta content="孫又文－ 前台灣積體電路製造股份有限公司 企業訊息處資深處長" property="og:description"/>
 <meta content="https://www.tiri.tw/uploads/1/1/9/9/119925991/editor/dr-sun_1.jpg?1533810455" property="og:image"/>
@@ -20,6 +20,34 @@
 
 
 <link href="../css/legacy.css" rel="stylesheet"/><link href="../css/legacy-inline.css" rel="stylesheet"/><link href="../css/site.css?v=20260811-en-nav" rel="stylesheet"/><link rel="icon" href="../../favicon.ico?v=20260724" type="image/x-icon">
+<style>
+/* 理監事單頁：屆次自製下拉（內容區右上角）＋第三屆肖像格 */
+.term-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 0 9%; margin-bottom: 10px; }
+.term-bar .wsite-content-title { margin-bottom: 0; }
+.term-picker { position: relative; font-family: "Poppins", sans-serif; }
+.term-trigger { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 14px 0 18px; font: inherit; font-size: 14px; letter-spacing: 0.08em; color: #4f4f4e; background: #fff; border: 1px solid #d9d9d9; border-radius: 2px; cursor: pointer; transition: border-color 0.2s ease; }
+.term-trigger:hover, .term-picker.is-open .term-trigger { border-color: #53068c; }
+.term-trigger:focus-visible { outline: 2px solid #53068c; outline-offset: 2px; }
+.term-caret { width: 16px; height: 16px; color: #53068c; transition: transform 0.2s ease; }
+.term-picker.is-open .term-caret { transform: rotate(180deg); }
+.term-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 50; min-width: 100%; width: max-content; margin: 0; padding: 6px; list-style: none; background: #fff; border: 1px solid #e5e5e5; border-radius: 2px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1); animation: term-menu-in 0.18s ease; }
+.term-menu[hidden] { display: none; }
+@keyframes term-menu-in { from { opacity: 0; transform: translateY(-4px); } }
+.term-option { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 0; padding: 9px 12px; list-style: none; font-size: 14px; line-height: 1.6; color: #717170; cursor: pointer; white-space: nowrap; }
+.term-option:hover, .term-option:focus-visible { background: rgba(83, 6, 140, 0.06); color: #4f4f4e; outline: none; }
+.term-option[aria-selected="true"] { color: #53068c; font-weight: 600; }
+.term-option[aria-selected="true"]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #53068c; }
+.term-panel[hidden] { display: none; }
+.board-portraits { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 18px; margin: 0 0 34px; padding: 0 9%; list-style: none; }
+.board-portraits li { margin: 0; list-style: none; }
+.board-portraits img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+.board-portraits .name { display: block; margin-top: 10px; color: #4f4f4e; font-weight: 600; line-height: 1.5; }
+.board-portraits .role { display: block; font-size: 13px; letter-spacing: 0.08em; color: #53068c; line-height: 1.5; }
+@media (max-width: 767px) {
+  .term-bar, .board-portraits { padding: 0; }
+  .board-portraits { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+</style>
 </head>
 <body class="header-page page-has-banner wsite-theme-light wsite-page-team2026 banner-overlay-on alternate-banner-off sticky-nav-on minicart-total-on"><div class="wrapper">
 <div class="dusk-header">
@@ -44,27 +72,9 @@
 <li class="wsite-menu-subitem-wrap wsite-nav-current" id="wsite-nav-260998366379634732">
 <a class="wsite-menu-subitem" href="team2026.html">
 <span class="wsite-menu-title">
-			第三屆理監事成員
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-586578715702572472">
-<a class="wsite-menu-subitem" href="team2018.html">
-<span class="wsite-menu-title">
-			第一屆理監事成員
+			理監事成員
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-560771643445790513">
-<a class="wsite-menu-subitem" href="team2022.html">
-<span class="wsite-menu-title">
-			第二屆理監事成員
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-273820216520762310">
 <a class="wsite-menu-subitem" href="committee.html">
@@ -99,27 +109,9 @@
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-903699946662286122">
 <a class="wsite-menu-subitem" href="team_en-2026.html">
 <span class="wsite-menu-title">
-			Third Board of Directors
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-613532220317700766">
-<a class="wsite-menu-subitem" href="team_en-2018.html">
-<span class="wsite-menu-title">
-			First Board of Directors
+			Board of Directors
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-409424011562240154">
-<a class="wsite-menu-subitem" href="team_en-2022.html">
-<span class="wsite-menu-title">
-			Second Board of Directors
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-966746179931384027">
 <a class="wsite-menu-subitem" href="committee-817915.html">
@@ -678,27 +670,9 @@
 <li class="wsite-menu-subitem-wrap wsite-nav-current" id="wsite-nav-260998366379634732">
 <a class="wsite-menu-subitem" href="team2026.html">
 <span class="wsite-menu-title">
-			第三屆理監事成員
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-586578715702572472">
-<a class="wsite-menu-subitem" href="team2018.html">
-<span class="wsite-menu-title">
-			第一屆理監事成員
+			理監事成員
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-560771643445790513">
-<a class="wsite-menu-subitem" href="team2022.html">
-<span class="wsite-menu-title">
-			第二屆理監事成員
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-273820216520762310">
 <a class="wsite-menu-subitem" href="committee.html">
@@ -733,27 +707,9 @@
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-903699946662286122">
 <a class="wsite-menu-subitem" href="team_en-2026.html">
 <span class="wsite-menu-title">
-			Third Board of Directors
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-613532220317700766">
-<a class="wsite-menu-subitem" href="team_en-2018.html">
-<span class="wsite-menu-title">
-			First Board of Directors
+			Board of Directors
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-409424011562240154">
-<a class="wsite-menu-subitem" href="team_en-2022.html">
-<span class="wsite-menu-title">
-			Second Board of Directors
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-966746179931384027">
 <a class="wsite-menu-subitem" href="committee-817915.html">
@@ -1304,7 +1260,7 @@
 <div class="banner-wrap">
 <div class="wsite-elements wsite-not-footer wsite-header-elements">
 <div class="wsite-section-wrap">
-<div class="wsite-section wsite-header-section wsite-section-bg-image tiri-inline-149">
+<div class="wsite-section wsite-header-section wsite-section-bg-image tiri-inline-149" data-term-banner>
 <div class="wsite-section-content">
 <div class="container">
 <div class="banner">
@@ -1326,6 +1282,21 @@
 <div class="wsite-section-content">
 <div class="container">
 <div class="wsite-section-elements">
+<div class="term-bar">
+<h2 class="wsite-content-title term-title"><font size="6">理監事成員</font></h2>
+<div class="term-picker" data-term-picker>
+  <button type="button" class="term-trigger" id="term-trigger" aria-haspopup="listbox" aria-expanded="false">
+    <span class="term-trigger-label" data-term-label>第三屆（現任）</span>
+    <svg class="term-caret" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <ul class="term-menu" role="listbox" aria-labelledby="term-trigger" tabindex="-1" hidden>
+    <li class="term-option" role="option" data-value="2026" aria-selected="true">第三屆（現任）</li>
+    <li class="term-option" role="option" data-value="2022" aria-selected="false">第二屆（2022–2026）</li>
+    <li class="term-option" role="option" data-value="2018" aria-selected="false">第一屆（2018–2022）</li>
+  </ul>
+</div>
+</div>
+<div class="term-panel" data-term="2026">
 <div class="wsite-spacer tiri-inline-5"></div>
 <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
 <table class="wsite-multicol-table">
@@ -1334,7 +1305,6 @@
 <td class="wsite-multicol-col tiri-inline-428">
 <div class="wsite-spacer tiri-inline-5"></div>
 </td> <td class="wsite-multicol-col tiri-inline-429">
-<h2 class="wsite-content-title"><font size="6">第三屆理監事成員</font></h2>
 <h2 class="wsite-content-title"><strong><font color="#53068c" size="5">榮譽理事長</font></strong></h2>
 <div class="paragraph"><ul><li>孫又文－ 前台灣積體電路製造股份有限公司 企業訊息處資深處長</li></ul></div>
 </td> <td class="wsite-multicol-col tiri-inline-421">
@@ -1350,6 +1320,34 @@
 </tbody>
 </table>
 </div></div></div>
+<ul class="board-portraits">
+<li><img src="../images/board-2026-jonny-kuo.jpg" alt="郭宗霖" width="600" height="800" loading="lazy"><span class="name">郭宗霖</span><span class="role">理事長</span></li>
+<li><img src="../images/board-2026-kevin-wang.jpg" alt="王恩國" width="600" height="800" loading="lazy"><span class="name">王恩國</span><span class="role">副理事長</span></li>
+<li><img src="../images/board-2026-andy-chien.jpg" alt="簡世雄" width="600" height="800" loading="lazy"><span class="name">簡世雄</span><span class="role">副理事長</span></li>
+<li><img src="../images/board-2026-jack-chang.jpg" alt="張明仁" width="600" height="800" loading="lazy"><span class="name">張明仁</span><span class="role">副理事長</span></li>
+<li><img src="../images/board-2026-nick-huang.jpg" alt="黃奕誠" width="600" height="800" loading="lazy"><span class="name">黃奕誠</span><span class="role">常務理事</span></li>
+<li><img src="../images/board-2026-fufu-shen.jpg" alt="沈馥馥" width="600" height="800" loading="lazy"><span class="name">沈馥馥</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-tina-chang.jpg" alt="張妍婷" width="600" height="800" loading="lazy"><span class="name">張妍婷</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-peter-chang.jpg" alt="張真卿" width="600" height="800" loading="lazy"><span class="name">張真卿</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-paul-yao.jpg" alt="姚文鈞" width="600" height="800" loading="lazy"><span class="name">姚文鈞</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-nancy-hsu.jpg" alt="許碧雲" width="600" height="800" loading="lazy"><span class="name">許碧雲</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-tom-huang.jpg" alt="黃英記" width="600" height="800" loading="lazy"><span class="name">黃英記</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-nan-hao-lin.jpg" alt="林男和" width="600" height="800" loading="lazy"><span class="name">林男和</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-cash-hong.jpg" alt="洪健凱" width="600" height="800" loading="lazy"><span class="name">洪健凱</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-vincent-jhao.jpg" alt="趙元祥" width="600" height="800" loading="lazy"><span class="name">趙元祥</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-allround-chang.jpg" alt="張登溪" width="600" height="800" loading="lazy"><span class="name">張登溪</span><span class="role">理事</span></li>
+<li><img src="../images/board-2026-emily-tu.jpg" alt="涂蕙蘭" width="600" height="800" loading="lazy"><span class="name">涂蕙蘭</span><span class="role">常務監事</span></li>
+<li><img src="../images/board-2026-echo-wan.jpg" alt="萬心寧" width="600" height="800" loading="lazy"><span class="name">萬心寧</span><span class="role">監事</span></li>
+<li><img src="../images/board-2026-julia-chen.jpg" alt="陳珮瑛" width="600" height="800" loading="lazy"><span class="name">陳珮瑛</span><span class="role">監事</span></li>
+<li><img src="../images/board-2026-paul-w-t-yeh.jpg" alt="葉文燦" width="600" height="800" loading="lazy"><span class="name">葉文燦</span><span class="role">監事</span></li>
+<li><img src="../images/board-2026-kc-cheng.jpg" alt="鄭可人" width="600" height="800" loading="lazy"><span class="name">鄭可人</span><span class="role">監事</span></li>
+<li><img src="../images/board-2026-david-yang.jpg" alt="楊朝榮" width="600" height="800" loading="lazy"><span class="name">楊朝榮</span><span class="role">榮譽顧問</span></li>
+<li><img src="../images/board-2026-jacky-chou.jpg" alt="周德雲" width="600" height="800" loading="lazy"><span class="name">周德雲</span><span class="role">榮譽顧問</span></li>
+<li><img src="../images/board-2026-freddie-liu.jpg" alt="劉詩亮" width="600" height="800" loading="lazy"><span class="name">劉詩亮</span><span class="role">榮譽顧問</span></li>
+<li><img src="../images/board-2026-frank-wang.jpg" alt="王沈銘" width="600" height="800" loading="lazy"><span class="name">王沈銘</span><span class="role">榮譽顧問</span></li>
+<li><img src="../images/board-2026-kevin-yu.jpg" alt="余凱文" width="600" height="800" loading="lazy"><span class="name">余凱文</span><span class="role">首席顧問</span></li>
+<li><img src="../images/board-2026-judy-hsu.jpg" alt="許育綾" width="600" height="800" loading="lazy"><span class="name">許育綾</span><span class="role">秘書長</span></li>
+</ul>
 <div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
 <table class="wsite-multicol-table">
 <tbody class="wsite-multicol-tbody">
@@ -1383,6 +1381,185 @@
 </tbody>
 </table>
 </div></div></div>
+</div>
+<div class="term-panel" data-term="2022" data-hero="../images/board-banner-2022.jpg" hidden>
+<div class="wsite-spacer tiri-inline-5"></div>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
+<table class="wsite-multicol-table">
+<tbody class="wsite-multicol-tbody">
+<tr class="wsite-multicol-tr">
+<td class="wsite-multicol-col tiri-inline-420">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> <td class="wsite-multicol-col tiri-inline-421">
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">榮譽理事長</font></strong></h2>
+<div class="paragraph"><ul><li>孫又文－ 前台灣積體電路製造股份有限公司 企業訊息處資深處長</li></ul></div>
+</td>  <td class="wsite-multicol-col tiri-inline-420">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> </tr>
+</tbody>
+</table>
+</div></div></div>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
+<table class="wsite-multicol-table">
+<tbody class="wsite-multicol-tbody">
+<tr class="wsite-multicol-tr">
+<td class="wsite-multicol-col tiri-inline-422">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> <td class="wsite-multicol-col tiri-inline-423">
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">理事長</font></strong></h2>
+<div class="paragraph"><ul><li><span>郭宗霖－</span>鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事​</li></ul></div>
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">副理事長</font></strong></h2>
+<div class="paragraph"><ul><li>王恩國－東友科技股份有限公司 副董事長​</li></ul></div>
+<h2 class="wsite-content-title"><font color="#53068c">理事會成員</font></h2>
+<div class="paragraph"><span>常務理事：</span><ul><li>郭宗霖－<span>鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事​</span></li><li>王恩國－東友科技股份有限公司 副董事長​</li><li>劉詩亮－TPK 宸鴻光電科技股份有限公司 資深副總經理 策略長暨代理發言人</li><li>簡世雄－東元電機股份有限公司 公司治理中心處長暨發言人</li><li>張明仁－新加坡商睿智先鋒有限公司 財務長​​​</li></ul> <span>理事：</span><ul><li>沈馥馥－中華電信股份有限公司 前財務處副總暨代理發言人</li><li>張妍婷－仁寶電腦工業股份有限公司 投資人關係暨品牌辦公室資深處長, 代理發言人</li><li>張真卿－立隆電子工業股份有限公司 董事長特助暨發言人</li><li>黃奕誠－鴻海精密股份有限公司 投資人關係暨永續委員會經理</li><li>許碧雲－桓達科技股份有限公司 總經理特助暨發言人</li><li>黃英記－矽創電子 投資人關係暨永續辦公室處長</li><li>林男和－旗山龍鳳食品股份有限公司 總經理</li><li>洪健凱－經寶精密控股股份有限公司 投資人關係部經理</li><li>藍世旻－安格科技股份有限公司 總經理</li><li>王沈銘－1919食物銀行 特約顧問</li></ul></div>
+<h2 class="wsite-content-title"><font color="#53068c">監事會成員</font></h2>
+<div class="paragraph"><span>常務監事：</span><ul><li>涂蕙蘭－台灣投資人關係協會 常務監事</li></ul> <span>監事：</span><ul><li>萬心寧－圓裕企業股份有限公司 獨立董事</li><li>姚文鈞－全漢企業股份有限公司 董事長特別助理暨發言人</li><li>陳珮瑛－力銘永續發展股份有限公司 永續長</li><li>葉文燦－宇峻奧汀科技股份有限公司 管理處協理暨發言人</li></ul></div>
+<h2 class="wsite-content-title"><font color="#53068c">顧問</font></h2>
+<div class="paragraph">榮譽顧問<ul><li>​楊朝榮 － 中華民國證券期貨分析協會理事及聯茂、虎航、泰博等公司獨立董事</li><li>周德雲－矽創電子股份有限公司  前策略投資顧問</li></ul>首席顧問<ul><li>余凱文 － 自2004年以來台灣投資人關係的推動者和革新者</li></ul></div>
+<h2 class="wsite-content-title"><font color="#53068c">秘書處</font></h2>
+<div class="paragraph">秘書長<ul><li>許育綾</li></ul></div>
+<div class="paragraph"><strong><span class="tiri-inline-418">*本會於2022年7月8日召開會員大會選出第二屆理、監事。</span></strong></div>
+</td>  <td class="wsite-multicol-col tiri-inline-427">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> </tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
+<div class="term-panel" data-term="2018" data-hero="../images/board-banner-2018.jpg" hidden>
+<div class="wsite-spacer tiri-inline-5"></div>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
+<table class="wsite-multicol-table">
+<tbody class="wsite-multicol-tbody">
+<tr class="wsite-multicol-tr">
+<td class="wsite-multicol-col tiri-inline-410">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> <td class="wsite-multicol-col tiri-inline-411">
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap tiri-inline-3">
+<table class="wsite-multicol-table">
+<tbody class="wsite-multicol-tbody">
+<tr class="wsite-multicol-tr">
+<td class="wsite-multicol-col tiri-inline-412">
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">榮譽理事長</font></strong></h2>
+<div class="paragraph"><ul><li>孫又文－ 台灣積體電路製造股份有限公司 企業訊息處資深處長</li></ul></div>
+</td>  </tr>
+</tbody>
+</table>
+</div></div></div>
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">理事長</font></strong></h2>
+<div class="paragraph"><ul><li><span>沈馥馥－中華電信 公共事務處協理暨代理發言人</span></li></ul></div>
+<h2 class="wsite-content-title"><strong><font color="#53068c" size="5">副理事長</font></strong></h2>
+<div class="paragraph"><ul><li><span>郭宗霖－霹靂國際 財務長暨代理發言人</span></li></ul></div>
+
+<h2 class="wsite-content-title"><font color="#53068c">理事會成員</font></h2>
+
+<div class="paragraph tiri-inline-64"><span>常務理事：</span><ul><li><span>沈馥馥－中華電信 公共事務處協理暨代理發言人</span></li><li><span>郭宗霖－霹靂國際 財務長暨代理發言人</span></li><li><span>劉詩亮－TPK 資深副總經理 策略長暨代理發言人</span></li><li><span>周德雲－矽創電子 資深處長暨發言人</span></li><li><span>張明仁－</span>新源生物科技 財務副總​</li></ul><span>理事：</span><ul><li>​<span>呂軍甫－京鼎精密 發言人</span></li><li><span>張真卿－立隆電子 董事長特助暨發言人</span></li><li><span>簡世雄－東元電機 公司治理中心處長暨發言人</span></li><li><span>藍世旻－安格科技 總經理暨發言人</span></li><li><span>許碧雲－桓達科技 總經理特助暨發言人</span></li><li><span>黃英記－</span>矽創電子 投資人關係暨永續發展資深經理</li><li><span>林男和－</span>全球創新技術產業交流協會 理事長​</li><li><span>烏恩婷－</span>瑞鼎科技 資深專案經理​</li><li><span>張妍婷－仁寶電腦 投資人關係部 副處長</span></li></ul></div>
+<hr class="tiri-inline-65"/>
+<h2 class="wsite-content-title"><font color="#53068c">監事會成員</font></h2>
+
+<div class="paragraph tiri-inline-64"><span>常務監事：</span><ul><li><span>洪健凱－經寶精密 投資人關係經理</span></li></ul><span>監事：</span><ul><li><span>萬心寧－台驊國際 總經理暨發言人</span></li><li>呂政達－威強電 <span>前</span>財務長暨發言人</li><li>涂蕙蘭－精英電腦(股) 資深經理暨代理發言人</li><li>徐美華－雅茗天地 投資人關係高級經理<span>暨</span>代理發言人</li></ul></div>
+<hr class="tiri-inline-65"/>
+<h2 class="wsite-content-title"><font color="#53068c">顧問</font></h2>
+<div class="paragraph">榮譽顧問<ul><li>余宛如 － 前立法委員</li><li>楊朝榮 － 中華民國證券分析協會 常務理事及研究發展委員會召集人<br/></li></ul>首席顧問<ul><li>余凱文 － 自2004年以來台灣投資人關係的推動者和革新者</li></ul></div>
+<h2 class="wsite-content-title"><font color="#53068c">秘書處</font></h2>
+<div class="paragraph">秘書長<ul><li>邱榮振</li></ul></div>
+<div class="paragraph"><strong><span class="tiri-inline-418">*本會於2018年5月30日召開會員大會並選出第一屆理、監事。</span></strong></div>
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> <td class="wsite-multicol-col tiri-inline-419">
+<div class="wsite-spacer tiri-inline-5"></div>
+</td> </tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
+<script>
+(function () {
+  var picker = document.querySelector("[data-term-picker]");
+  if (!picker) return;
+  var trigger = picker.querySelector(".term-trigger");
+  var label = picker.querySelector("[data-term-label]");
+  var menu = picker.querySelector(".term-menu");
+  var options = Array.prototype.slice.call(menu.querySelectorAll("[role='option']"));
+  var hero = document.querySelector("[data-term-hero]");       /* v1：CSS 變數 --hero-img */
+  var banner = document.querySelector("[data-term-banner]");   /* original：background-image */
+  var lede = document.querySelector("[data-term-lede]");
+  var panels = document.querySelectorAll(".term-panel");
+
+  function optionFor(term) {
+    return options.filter(function (o) { return o.getAttribute("data-value") === term; })[0];
+  }
+
+  function apply(term) {
+    var option = optionFor(term);
+    if (!option) return false;
+    panels.forEach(function (panel) {
+      var on = panel.getAttribute("data-term") === term;
+      panel.hidden = !on;
+      if (!on) return;
+      var img = panel.getAttribute("data-hero");
+      if (hero && img) hero.style.setProperty("--hero-img", "url('" + img + "')");
+      if (banner) banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+      var text = panel.getAttribute("data-lede");
+      if (lede && text) lede.textContent = text;
+    });
+    options.forEach(function (o) { o.setAttribute("aria-selected", o === option ? "true" : "false"); });
+    label.textContent = option.textContent.trim();
+    var url = new URL(window.location.href);
+    url.searchParams.set("term", term);
+    history.replaceState(null, "", url);
+    return true;
+  }
+
+  function focusOption(target) {
+    options.forEach(function (o) { o.tabIndex = o === target ? 0 : -1; });
+    target.focus();
+  }
+  function open() {
+    if (!menu.hidden) return;
+    menu.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+    picker.classList.add("is-open");
+    focusOption(menu.querySelector("[aria-selected='true']") || options[0]);
+  }
+  function close(refocus) {
+    if (menu.hidden) return;
+    menu.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+    picker.classList.remove("is-open");
+    if (refocus) trigger.focus();
+  }
+  function choose(option) {
+    apply(option.getAttribute("data-value"));
+    close(true);
+  }
+
+  trigger.addEventListener("click", function () { menu.hidden ? open() : close(false); });
+  trigger.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); open(); }
+  });
+  options.forEach(function (o, i) {
+    o.tabIndex = -1;
+    o.addEventListener("click", function () { choose(o); });
+    o.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); focusOption(options[Math.min(i + 1, options.length - 1)]); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); focusOption(options[Math.max(i - 1, 0)]); }
+      else if (e.key === "Home") { e.preventDefault(); focusOption(options[0]); }
+      else if (e.key === "End") { e.preventDefault(); focusOption(options[options.length - 1]); }
+      else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(o); }
+      else if (e.key === "Escape") { e.preventDefault(); close(true); }
+      else if (e.key === "Tab") { close(false); }
+    });
+  });
+  document.addEventListener("click", function (e) { if (!picker.contains(e.target)) close(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(false); });
+
+  var wanted = new URLSearchParams(window.location.search).get("term") || window.location.hash.replace("#", "");
+  if (!apply(wanted)) {
+    var preset = menu.querySelector("[aria-selected='true']") || options[0];
+    apply(preset.getAttribute("data-value"));
+  }
+})();
+</script>
 <div class="wsite-spacer tiri-inline-5"></div>
 </div>
 </div>
@@ -1424,27 +1601,9 @@
 <li class="wsite-menu-subitem-wrap wsite-nav-current" id="wsite-nav-260998366379634732">
 <a class="wsite-menu-subitem" href="team2026.html">
 <span class="wsite-menu-title">
-			第三屆理監事成員
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-586578715702572472">
-<a class="wsite-menu-subitem" href="team2018.html">
-<span class="wsite-menu-title">
-			第一屆理監事成員
+			理監事成員
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-560771643445790513">
-<a class="wsite-menu-subitem" href="team2022.html">
-<span class="wsite-menu-title">
-			第二屆理監事成員
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-273820216520762310">
 <a class="wsite-menu-subitem" href="committee.html">
@@ -1479,27 +1638,9 @@
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-903699946662286122">
 <a class="wsite-menu-subitem" href="team_en-2026.html">
 <span class="wsite-menu-title">
-			Third Board of Directors
-		</span><span class="wsite-menu-arrow">&gt;</span>
-</a>
-<div class="wsite-menu-wrap tiri-inline-1">
-<ul class="wsite-menu">
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-613532220317700766">
-<a class="wsite-menu-subitem" href="team_en-2018.html">
-<span class="wsite-menu-title">
-			First Board of Directors
+			Board of Directors
 		</span>
 </a>
-</li>
-<li class="wsite-menu-subitem-wrap" id="wsite-nav-409424011562240154">
-<a class="wsite-menu-subitem" href="team_en-2022.html">
-<span class="wsite-menu-title">
-			Second Board of Directors
-		</span>
-</a>
-</li>
-</ul>
-</div>
 </li>
 <li class="wsite-menu-subitem-wrap" id="wsite-nav-966746179931384027">
 <a class="wsite-menu-subitem" href="committee-817915.html">

@@ -931,3 +931,91 @@
     });
   });
 })();
+
+/* ---- 理監事屆次自製下拉（board.html／board_en.html）：listbox 鍵盤可操作，?term=2018 可直連 ---- */
+(function () {
+  var picker = document.querySelector("[data-term-picker]");
+  if (!picker) return;
+  var trigger = picker.querySelector(".term-trigger");
+  var label = picker.querySelector("[data-term-label]");
+  var menu = picker.querySelector(".term-menu");
+  var options = Array.prototype.slice.call(menu.querySelectorAll("[role='option']"));
+  var hero = document.querySelector("[data-term-hero]");       /* v1：CSS 變數 --hero-img */
+  var banner = document.querySelector("[data-term-banner]");   /* original：background-image */
+  var lede = document.querySelector("[data-term-lede]");
+  var panels = document.querySelectorAll(".term-panel");
+
+  function optionFor(term) {
+    return options.filter(function (o) { return o.getAttribute("data-value") === term; })[0];
+  }
+
+  function apply(term) {
+    var option = optionFor(term);
+    if (!option) return false;
+    panels.forEach(function (panel) {
+      var on = panel.getAttribute("data-term") === term;
+      panel.hidden = !on;
+      if (!on) return;
+      var img = panel.getAttribute("data-hero");
+      if (hero && img) hero.style.setProperty("--hero-img", "url('" + img + "')");
+      if (banner) banner.style.backgroundImage = img ? "url('" + img + "')" : "";
+      var text = panel.getAttribute("data-lede");
+      if (lede && text) lede.textContent = text;
+    });
+    options.forEach(function (o) { o.setAttribute("aria-selected", o === option ? "true" : "false"); });
+    label.textContent = option.textContent.trim();
+    var url = new URL(window.location.href);
+    url.searchParams.set("term", term);
+    history.replaceState(null, "", url);
+    return true;
+  }
+
+  function focusOption(target) {
+    options.forEach(function (o) { o.tabIndex = o === target ? 0 : -1; });
+    target.focus();
+  }
+  function open() {
+    if (!menu.hidden) return;
+    menu.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+    picker.classList.add("is-open");
+    focusOption(menu.querySelector("[aria-selected='true']") || options[0]);
+  }
+  function close(refocus) {
+    if (menu.hidden) return;
+    menu.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+    picker.classList.remove("is-open");
+    if (refocus) trigger.focus();
+  }
+  function choose(option) {
+    apply(option.getAttribute("data-value"));
+    close(true);
+  }
+
+  trigger.addEventListener("click", function () { menu.hidden ? open() : close(false); });
+  trigger.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); open(); }
+  });
+  options.forEach(function (o, i) {
+    o.tabIndex = -1;
+    o.addEventListener("click", function () { choose(o); });
+    o.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); focusOption(options[Math.min(i + 1, options.length - 1)]); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); focusOption(options[Math.max(i - 1, 0)]); }
+      else if (e.key === "Home") { e.preventDefault(); focusOption(options[0]); }
+      else if (e.key === "End") { e.preventDefault(); focusOption(options[options.length - 1]); }
+      else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(o); }
+      else if (e.key === "Escape") { e.preventDefault(); close(true); }
+      else if (e.key === "Tab") { close(false); }
+    });
+  });
+  document.addEventListener("click", function (e) { if (!picker.contains(e.target)) close(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(false); });
+
+  var wanted = new URLSearchParams(window.location.search).get("term") || window.location.hash.replace("#", "");
+  if (!apply(wanted)) {
+    var preset = menu.querySelector("[aria-selected='true']") || options[0];
+    apply(preset.getAttribute("data-value"));
+  }
+})();

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>歷屆理監事｜台灣投資人關係協會 TIRI</title>
-<meta name="description" content="台灣投資人關係協會歷屆理監事名冊：第一屆至第三屆。">
+<title>理監事成員｜台灣投資人關係協會 TIRI</title>
+<meta name="description" content="台灣投資人關係協會理監事成員名冊：第一屆至第三屆，可切換屆次。">
 <link rel="stylesheet" href="../fonts/fonts.css">
-<link rel="stylesheet" href="../css/main.css?v=20260817c">
-<script src="../js/navbar.js?v=20260817" defer></script>
+<link rel="stylesheet" href="../css/main.css?v=20260908">
+<script src="../js/navbar.js?v=20260908" defer></script>
 <link rel="icon" href="../favicon.ico?v=20260724" type="image/x-icon">
 </head>
 <body>
@@ -30,45 +30,284 @@
 <tiri-navbar variant="v1"></tiri-navbar>
 
 <main id="main">
-  <section class="page-hero has-photo" style="--hero-img: url('../images/hero-taipei-night.jpg')">
+  <section class="page-hero has-photo" style="--hero-img: url('../images/hero-taipei-night.jpg')" data-term-hero>
     <div class="container">
       <p class="eyebrow">About TIRI</p>
-      <h1>歷屆理監事</h1>
-      <p class="lede">協會自 2018 年成立以來，每四年由會員大會選出理、監事。以下為歷屆名冊。</p>
+      <h1>理監事成員</h1>
+      <p class="lede" data-term-lede>本會於 2026 年 3 月 20 日 召開會員大會選出第三屆理、監事。</p>
     </div>
   </section>
 
   <section class="page-section">
     <div class="container">
-      <ul class="board-terms" data-reveal-group>
-        <li class="reveal">
-          <a href="team2026.html">
-            <span class="term">第三屆</span>
-            <span class="who">郭宗霖<span>理事長・鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</span></span>
-            <span class="meta">2026.03.20 選任・25 位理監事</span>
-          </a>
-        </li>
-        <li class="reveal">
-          <a href="team2022.html">
-            <span class="term">第二屆</span>
-            <span class="who">郭宗霖<span>理事長・鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</span></span>
-            <span class="meta">2022.07.08 選任・22 位理監事</span>
-          </a>
-        </li>
-        <li class="reveal">
-          <a href="team2018.html">
-            <span class="term">第一屆</span>
-            <span class="who">沈馥馥<span>理事長・中華電信 公共事務處協理暨代理發言人</span></span>
-            <span class="meta">2018.05.30 選任・23 位理監事</span>
-          </a>
-        </li>
-      </ul>
+      <div class="term-bar">
+        <span class="term-bar-label">屆次</span>
+        <div class="term-picker" data-term-picker>
+          <button type="button" class="term-trigger" id="term-trigger" aria-haspopup="listbox" aria-expanded="false">
+            <span class="term-trigger-label" data-term-label>第三屆（現任）</span>
+            <svg class="term-caret" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="term-menu" role="listbox" aria-labelledby="term-trigger" tabindex="-1" hidden>
+            <li class="term-option" role="option" data-value="2026" aria-selected="true">第三屆（現任）</li>
+            <li class="term-option" role="option" data-value="2022" aria-selected="false">第二屆（2022–2026）</li>
+            <li class="term-option" role="option" data-value="2018" aria-selected="false">第一屆（2018–2022）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="term-panel" data-term="2026" data-hero="../images/hero-taipei-night.jpg" data-lede="本會於 2026 年 3 月 20 日 召開會員大會選出第三屆理、監事。">
+      <div class="board-lead reveal">
+        <figure><img src="../images/board-sun-2026.jpg" alt="孫又文" width="272" height="408" loading="lazy"></figure>
+        <div>
+          <p class="role">榮譽理事長</p>
+          <p class="name">孫又文</p>
+          <p class="title">前台灣積體電路製造股份有限公司 企業訊息處資深處長</p>
+        </div>
+      </div>
+      <div class="board-lead reveal">
+        <figure><img src="../images/board-2026-jonny-kuo.jpg" alt="郭宗霖" width="600" height="800" loading="lazy"></figure>
+        <div>
+          <p class="role">理事長</p>
+          <p class="name">郭宗霖</p>
+          <p class="title">鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</p>
+        </div>
+      </div>
+      <section class="board-group">
+        <h2 class="reveal">副理事長</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-kevin-wang.jpg" alt="王恩國" width="600" height="800" loading="lazy"><p class="name">王恩國</p><p class="title">南昌菱光科技有限公司董事長、今皓實業股份有限公司獨立董事</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-andy-chien.jpg" alt="簡世雄" width="600" height="800" loading="lazy"><p class="name">簡世雄</p><p class="title">東元電機股份有限公司 公司治理中心處長暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-jack-chang.jpg" alt="張明仁" width="600" height="800" loading="lazy"><p class="name">張明仁</p><p class="title">新加坡商睿智先鋒有限公司 財務長</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-jonny-kuo.jpg" alt="郭宗霖" width="600" height="800" loading="lazy"><span class="also">兼理事長</span><p class="name">郭宗霖</p><p class="title">鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-kevin-wang.jpg" alt="王恩國" width="600" height="800" loading="lazy"><span class="also">兼副理事長</span><p class="name">王恩國</p><p class="title">南昌菱光科技有限公司董事長、今皓實業股份有限公司獨立董事</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-andy-chien.jpg" alt="簡世雄" width="600" height="800" loading="lazy"><span class="also">兼副理事長</span><p class="name">簡世雄</p><p class="title">東元電機股份有限公司 公司治理中心處長暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-jack-chang.jpg" alt="張明仁" width="600" height="800" loading="lazy"><span class="also">兼副理事長</span><p class="name">張明仁</p><p class="title">新加坡商睿智先鋒有限公司 財務長</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-nick-huang.jpg" alt="黃奕誠" width="600" height="800" loading="lazy"><p class="name">黃奕誠</p><p class="title">鴻海精密股份有限公司 投資人關係暨永續委員會經理</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-fufu-shen.jpg" alt="沈馥馥" width="600" height="800" loading="lazy"><p class="name">沈馥馥</p><p class="title">中華電信股份有限公司 前財務處副總暨代理發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-tina-chang.jpg" alt="張妍婷" width="600" height="800" loading="lazy"><p class="name">張妍婷</p><p class="title">仁寶電腦工業股份有限公司 投資人關係暨品牌辦公室資深處長、代理發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-peter-chang.jpg" alt="張真卿" width="600" height="800" loading="lazy"><p class="name">張真卿</p><p class="title">立隆電子工業股份有限公司 董事長特助暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-paul-yao.jpg" alt="姚文鈞" width="600" height="800" loading="lazy"><p class="name">姚文鈞</p><p class="title">全漢企業股份有限公司 董事長特別助理暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-nancy-hsu.jpg" alt="許碧雲" width="600" height="800" loading="lazy"><p class="name">許碧雲</p><p class="title">桓達科技股份有限公司 總經理特助暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-tom-huang.jpg" alt="黃英記" width="600" height="800" loading="lazy"><p class="name">黃英記</p><p class="title">矽創電子股份有限公司 投資人關係暨永續辦公室處長</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-nan-hao-lin.jpg" alt="林男和" width="600" height="800" loading="lazy"><p class="name">林男和</p><p class="title">旗山龍鳳食品股份有限公司 總經理</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-cash-hong.jpg" alt="洪健凱" width="600" height="800" loading="lazy"><p class="name">洪健凱</p><p class="title">經寶精密控股股份有限公司 投資人關係部經理</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-vincent-jhao.jpg" alt="趙元祥" width="600" height="800" loading="lazy"><p class="name">趙元祥</p><p class="title">群聯電子股份有限公司 董事長特助</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-allround-chang.jpg" alt="張登溪" width="600" height="800" loading="lazy"><p class="name">張登溪</p><p class="title">大井泵浦工業股份有限公司 財務長</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-emily-tu.jpg" alt="涂蕙蘭" width="600" height="800" loading="lazy"><p class="name">涂蕙蘭</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-echo-wan.jpg" alt="萬心寧" width="600" height="800" loading="lazy"><p class="name">萬心寧</p><p class="title">圓裕企業股份有限公司 獨立董事</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-julia-chen.jpg" alt="陳珮瑛" width="600" height="800" loading="lazy"><p class="name">陳珮瑛</p><p class="title">永創數智股份有限公司 資深顧問</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-paul-w-t-yeh.jpg" alt="葉文燦" width="600" height="800" loading="lazy"><p class="name">葉文燦</p><p class="title">宇峻奧汀科技股份有限公司 管理處協理暨發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-kc-cheng.jpg" alt="鄭可人" width="600" height="800" loading="lazy"><p class="name">鄭可人</p><p class="title">佳能企業 投資人關係經理暨永續發展暨風險管理執行委員會委員</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">榮譽顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-david-yang.jpg" alt="楊朝榮" width="600" height="800" loading="lazy"><p class="name">楊朝榮</p><p class="title">中華民國證券期貨分析協會理事及聯茂、虎航、泰博等公司獨立董事</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-jacky-chou.jpg" alt="周德雲" width="600" height="800" loading="lazy"><p class="name">周德雲</p><p class="title">矽創電子股份有限公司 前策略投資顧問</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-freddie-liu.jpg" alt="劉詩亮" width="600" height="800" loading="lazy"><p class="name">劉詩亮</p><p class="title">TPK 宸鴻光電科技股份有限公司 資深副總經理策略長暨代理發言人</p></li>
+        <li class="reveal has-photo"><img src="../images/board-2026-frank-wang.jpg" alt="王沈銘" width="600" height="800" loading="lazy"><p class="name">王沈銘</p><p class="title">1919 食物銀行 特約顧問</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">首席顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-kevin-yu.jpg" alt="余凱文" width="600" height="800" loading="lazy"><p class="name">余凱文</p><p class="title">自 2004 年以來台灣投資人關係的推動者和革新者</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">秘書處</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal has-photo"><img src="../images/board-2026-judy-hsu.jpg" alt="許育綾" width="600" height="800" loading="lazy"><p class="name">許育綾</p><p class="title">秘書長</p></li>
+        </ul>
+      </section>
+      </div>
+      <div class="term-panel" data-term="2022" data-hero="../images/hero-board-2022.jpg" data-lede="本會於 2022 年 7 月 8 日 召開會員大會選出第二屆理、監事。" hidden>
+      <div class="board-lead no-photo reveal">
+        <div>
+          <p class="role">榮譽理事長</p>
+          <p class="name">孫又文</p>
+          <p class="title">前台灣積體電路製造股份有限公司 企業訊息處資深處長</p>
+        </div>
+      </div>
+      <div class="board-lead no-photo reveal">
+        <div>
+          <p class="role">理事長</p>
+          <p class="name">郭宗霖</p>
+          <p class="title">鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</p>
+        </div>
+      </div>
+      <section class="board-group">
+        <h2 class="reveal">副理事長</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">王恩國</p><p class="title">東友科技股份有限公司 副董事長</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><span class="also">兼理事長</span><p class="name">郭宗霖</p><p class="title">鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事</p></li>
+        <li class="reveal"><span class="also">兼副理事長</span><p class="name">王恩國</p><p class="title">東友科技股份有限公司 副董事長</p></li>
+        <li class="reveal"><p class="name">劉詩亮</p><p class="title">TPK 宸鴻光電科技股份有限公司 資深副總經理 策略長暨代理發言人</p></li>
+        <li class="reveal"><p class="name">簡世雄</p><p class="title">東元電機股份有限公司 公司治理中心處長暨發言人</p></li>
+        <li class="reveal"><p class="name">張明仁</p><p class="title">新加坡商睿智先鋒有限公司 財務長</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">沈馥馥</p><p class="title">中華電信股份有限公司 前財務處副總暨代理發言人</p></li>
+        <li class="reveal"><p class="name">張妍婷</p><p class="title">仁寶電腦工業股份有限公司 投資人關係暨品牌辦公室資深處長、代理發言人</p></li>
+        <li class="reveal"><p class="name">張真卿</p><p class="title">立隆電子工業股份有限公司 董事長特助暨發言人</p></li>
+        <li class="reveal"><p class="name">黃奕誠</p><p class="title">鴻海精密股份有限公司 投資人關係暨永續委員會經理</p></li>
+        <li class="reveal"><p class="name">許碧雲</p><p class="title">桓達科技股份有限公司 總經理特助暨發言人</p></li>
+        <li class="reveal"><p class="name">黃英記</p><p class="title">矽創電子 投資人關係暨永續辦公室處長</p></li>
+        <li class="reveal"><p class="name">林男和</p><p class="title">旗山龍鳳食品股份有限公司 總經理</p></li>
+        <li class="reveal"><p class="name">洪健凱</p><p class="title">經寶精密控股股份有限公司 投資人關係部經理</p></li>
+        <li class="reveal"><p class="name">藍世旻</p><p class="title">安格科技股份有限公司 總經理</p></li>
+        <li class="reveal"><p class="name">王沈銘</p><p class="title">1919 食物銀行 特約顧問</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">涂蕙蘭</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">萬心寧</p><p class="title">圓裕企業股份有限公司 獨立董事</p></li>
+        <li class="reveal"><p class="name">姚文鈞</p><p class="title">全漢企業股份有限公司 董事長特別助理暨發言人</p></li>
+        <li class="reveal"><p class="name">陳珮瑛</p><p class="title">力銘永續發展股份有限公司 永續長</p></li>
+        <li class="reveal"><p class="name">葉文燦</p><p class="title">宇峻奧汀科技股份有限公司 管理處協理暨發言人</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">榮譽顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">楊朝榮</p><p class="title">中華民國證券期貨分析協會理事及聯茂、虎航、泰博等公司獨立董事</p></li>
+        <li class="reveal"><p class="name">周德雲</p><p class="title">矽創電子股份有限公司 前策略投資顧問</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">首席顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">余凱文</p><p class="title">自 2004 年以來台灣投資人關係的推動者和革新者</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">秘書處</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">許育綾</p><p class="title">秘書長</p></li>
+        </ul>
+      </section>
+      </div>
+      <div class="term-panel" data-term="2018" data-hero="../images/hero-board-2018.jpg" data-lede="本會於 2018 年 5 月 30 日 召開會員大會選出第一屆理、監事。" hidden>
+      <div class="board-lead no-photo reveal">
+        <div>
+          <p class="role">榮譽理事長</p>
+          <p class="name">孫又文</p>
+          <p class="title">台灣積體電路製造股份有限公司 企業訊息處資深處長</p>
+        </div>
+      </div>
+      <div class="board-lead no-photo reveal">
+        <div>
+          <p class="role">理事長</p>
+          <p class="name">沈馥馥</p>
+          <p class="title">中華電信 公共事務處協理暨代理發言人</p>
+        </div>
+      </div>
+      <section class="board-group">
+        <h2 class="reveal">副理事長</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">郭宗霖</p><p class="title">霹靂國際 財務長暨代理發言人</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><span class="also">兼理事長</span><p class="name">沈馥馥</p><p class="title">中華電信 公共事務處協理暨代理發言人</p></li>
+        <li class="reveal"><span class="also">兼副理事長</span><p class="name">郭宗霖</p><p class="title">霹靂國際 財務長暨代理發言人</p></li>
+        <li class="reveal"><p class="name">劉詩亮</p><p class="title">TPK 資深副總經理 策略長暨代理發言人</p></li>
+        <li class="reveal"><p class="name">周德雲</p><p class="title">矽創電子 資深處長暨發言人</p></li>
+        <li class="reveal"><p class="name">張明仁</p><p class="title">新源生物科技 財務副總</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">理事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">呂軍甫</p><p class="title">京鼎精密 發言人</p></li>
+        <li class="reveal"><p class="name">張真卿</p><p class="title">立隆電子 董事長特助暨發言人</p></li>
+        <li class="reveal"><p class="name">簡世雄</p><p class="title">東元電機 公司治理中心處長暨發言人</p></li>
+        <li class="reveal"><p class="name">藍世旻</p><p class="title">安格科技 總經理暨發言人</p></li>
+        <li class="reveal"><p class="name">許碧雲</p><p class="title">桓達科技 總經理特助暨發言人</p></li>
+        <li class="reveal"><p class="name">黃英記</p><p class="title">矽創電子 投資人關係暨永續發展資深經理</p></li>
+        <li class="reveal"><p class="name">林男和</p><p class="title">全球創新技術產業交流協會 理事長</p></li>
+        <li class="reveal"><p class="name">烏恩婷</p><p class="title">瑞鼎科技 資深專案經理</p></li>
+        <li class="reveal"><p class="name">張妍婷</p><p class="title">仁寶電腦 投資人關係部 副處長</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">常務監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">洪健凱</p><p class="title">經寶精密 投資人關係經理</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">監事</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">萬心寧</p><p class="title">台驊國際 總經理暨發言人</p></li>
+        <li class="reveal"><p class="name">呂政達</p><p class="title">威強電 前財務長暨發言人</p></li>
+        <li class="reveal"><p class="name">涂蕙蘭</p><p class="title">精英電腦(股) 資深經理暨代理發言人</p></li>
+        <li class="reveal"><p class="name">徐美華</p><p class="title">雅茗天地 投資人關係高級經理暨代理發言人</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">榮譽顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">余宛如</p><p class="title">前立法委員</p></li>
+        <li class="reveal"><p class="name">楊朝榮</p><p class="title">中華民國證券分析協會 常務理事及研究發展委員會召集人</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">首席顧問</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">余凱文</p><p class="title">自 2004 年以來台灣投資人關係的推動者和革新者</p></li>
+        </ul>
+      </section>
+      <section class="board-group">
+        <h2 class="reveal">秘書處</h2>
+        <ul class="board-people" data-reveal-group>
+        <li class="reveal"><p class="name">邱榮振</p><p class="title">秘書長</p></li>
+        </ul>
+      </section>
+      </div>
     </div>
   </section>
 </main>
 
 <tiri-footer></tiri-footer>
 
-<script src="../js/main.js?v=20260817c" defer></script>
+<script src="../js/main.js?v=20260908" defer></script>
 </body>
 </html>

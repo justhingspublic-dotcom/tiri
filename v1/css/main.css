@@ -1876,6 +1876,9 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   width: 100%;
   max-width: 240px;
   height: auto;
+  aspect-ratio: 3 / 4; /* 與第三屆頭肩照統一；舊 2:3 肖像以 cover 微裁 */
+  object-fit: cover;
+  object-position: 50% 25%;
   border-radius: var(--radius);
   background: var(--purple-tint);
 }
@@ -1901,6 +1904,9 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 }
 /* 沒有肖像可用時保留肖像欄寬，讓文字與上一位首長對齊 */
 .board-lead.no-photo::before { content: ""; }
+/* 整頁都沒有肖像時（第一、二屆）取消空欄，讓文字貼齊左緣 */
+:is(.container, .term-panel):not(:has(.board-lead > figure)) .board-lead.no-photo { grid-template-columns: minmax(0, 1fr); }
+:is(.container, .term-panel):not(:has(.board-lead > figure)) .board-lead.no-photo::before { content: none; }
 
 /* 分組名冊 */
 .board-group { padding-block: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
@@ -1958,6 +1964,89 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 }
 .board-figure.is-set { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 900px; }
 .board-figure.is-set img { max-width: 100%; }
+
+/* 理監事屆次下拉：內容區右上角、自製樣式（不用原生 select），不做第二層索引頁 */
+.term-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: clamp(20px, 3vw, 32px);
+}
+.term-bar-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: var(--ink-45); }
+.term-picker { position: relative; }
+.term-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 14px 0 16px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.3s var(--ease);
+}
+.term-trigger:hover, .term-picker.is-open .term-trigger { border-color: var(--ink-45); }
+.term-trigger:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.term-caret { width: 16px; height: 16px; color: var(--ink-45); transition: transform 0.3s var(--ease); }
+.term-picker.is-open .term-caret { transform: rotate(180deg); }
+.term-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  min-width: 100%;
+  width: max-content;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(23, 20, 31, 0.1);
+  animation: term-menu-in 0.18s var(--ease);
+}
+.term-menu[hidden] { display: none; }
+@keyframes term-menu-in { from { opacity: 0; transform: translateY(-4px); } }
+.term-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 12px;
+  font-size: 14.5px;
+  color: var(--ink-80);
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.term-option:hover, .term-option:focus-visible { background: var(--purple-tint); color: var(--ink); outline: none; }
+.term-option[aria-selected="true"] { color: var(--purple); font-weight: 500; }
+.term-option[aria-selected="true"]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--purple); }
+.term-panel[hidden] { display: none; }
+.term-panel { animation: term-in 0.5s var(--ease); }
+@keyframes term-in { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .term-panel, .term-menu { animation: none; } }
+
+/* 名冊列附肖像（有提供照片者） */
+.board-people > li.has-photo {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: start;
+}
+.board-people > li.has-photo > img {
+  grid-row: 1 / span 3;
+  width: 64px;
+  height: 85px; /* 3:4 頭肩照 */
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--purple-tint);
+}
 
 /* 歷屆沿革索引 */
 .board-terms { border-top: 1px solid var(--line); }
