@@ -1863,7 +1863,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 /* 首長 spotlight：左肖像右職稱。肖像原檔僅 272×408，故上限 240px 不放大 */
 .board-lead {
   display: grid;
-  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr); /* 首長肖像要大於名冊卡片（4 欄約 300px） */
   gap: clamp(24px, 3.5vw, 56px);
   align-items: center;
   padding-block: clamp(28px, 4vw, 48px);
@@ -1874,7 +1874,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 .board-lead img {
   display: block;
   width: 100%;
-  max-width: 240px;
+  max-width: 360px;
   height: auto;
   aspect-ratio: 3 / 4; /* 與第三屆頭肩照統一；舊 2:3 肖像以 cover 微裁 */
   object-fit: cover;
@@ -2082,7 +2082,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 @media (max-width: 620px) {
   .board-lead, .board-lead.no-photo { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .board-lead.no-photo::before { display: none; }
-  .board-lead img { max-width: 180px; }
+  .board-lead img { max-width: 240px; } /* 手機卡片 2 欄約 160px，首長仍較大 */
   .board-people:not(:has(> li.has-photo)) { grid-template-columns: minmax(0, 1fr); }
 }
 
