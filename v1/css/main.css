@@ -1863,7 +1863,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 /* 首長 spotlight：左肖像右職稱。肖像原檔僅 272×408，故上限 240px 不放大 */
 .board-lead {
   display: grid;
-  grid-template-columns: minmax(0, 360px) minmax(0, 1fr); /* 首長肖像要大於名冊卡片（4 欄約 300px） */
+  grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
   gap: clamp(24px, 3.5vw, 56px);
   align-items: center;
   padding-block: clamp(28px, 4vw, 48px);
@@ -1874,7 +1874,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 .board-lead img {
   display: block;
   width: 100%;
-  max-width: 360px;
+  max-width: 240px;
   height: auto;
   aspect-ratio: 3 / 4; /* 與第三屆頭肩照統一；舊 2:3 肖像以 cover 微裁 */
   object-fit: cover;
@@ -2032,10 +2032,10 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 @keyframes term-in { from { opacity: 0; transform: translateY(8px); } }
 @media (prefers-reduced-motion: reduce) { .term-panel, .term-menu { animation: none; } }
 
-/* 有肖像的名冊：肖像卡格（客戶偏好 original 版的排法），分組標題保留；無肖像的屆次維持文字列 */
+/* 有肖像的名冊：肖像卡格，尺寸比照 original 版（6 欄），分組標題保留；無肖像的屆次維持文字列 */
 .board-people:has(> li.has-photo) {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(26px, 3vw, 40px) clamp(16px, 2vw, 28px);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(22px, 2.5vw, 32px) clamp(14px, 1.6vw, 20px);
   border-top: 0;
   padding-top: 4px;
 }
@@ -2051,9 +2051,9 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   background: var(--purple-tint);
 }
 .board-people > li.has-photo .also { margin-bottom: 4px; }
-.board-people > li.has-photo .name { font-size: 17px; }
-@media (max-width: 1100px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 700px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.board-people > li.has-photo .name { font-size: 16px; }
+@media (max-width: 1100px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .board-people:has(> li.has-photo) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 歷屆沿革索引 */
 .board-terms { border-top: 1px solid var(--line); }
@@ -2082,7 +2082,7 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 @media (max-width: 620px) {
   .board-lead, .board-lead.no-photo { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .board-lead.no-photo::before { display: none; }
-  .board-lead img { max-width: 240px; } /* 手機卡片 2 欄約 160px，首長仍較大 */
+  .board-lead img { max-width: 180px; }
   .board-people:not(:has(> li.has-photo)) { grid-template-columns: minmax(0, 1fr); }
 }
 
