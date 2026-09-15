@@ -10,3 +10,7 @@ server/submissions.db
 server/server.log
 tiri-key
 tiri-key.pub
+
+# 客戶原始素材與網站快照（太大，已處理進 v1／outputs 紀錄）
+2理監事成員/
+outputs/*/source/before-v1/
