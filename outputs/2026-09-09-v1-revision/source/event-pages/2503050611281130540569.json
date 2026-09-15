@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2503050611281130540569",
+  "local_label": "05.09 2025 贏在資本市場：投資人關係創造企業價值的秘密武器 董監進修課程 線上 →",
+  "id": "2503050611281130540569",
+  "source_title": "05/09（五）【TIRI線上董事、公司治理主管進修課程】 贏在資本市場：投資人關係創造企業價值的秘密武器｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2503310805282068016093.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "05/09（五）【TIRI線上董事、公司治理主管進修課程】 贏在資本市場：投資人關係創造企業價值的秘密武器",
+      "image": "https://static.accupass.com/eventbanner/2503310805282068016093.jpg",
+      "startDate": "2025-05-09T14:00:00+08:00",
+      "endDate": "2025-05-09T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在當今瞬息萬變的資本市場中，優秀的投資人關係（IR）不僅能增強企業形象，更能有效提升企業價值。誠摯邀請您參加我們的講座，深入了解如何透過投資人關係策略，幫助企業在資本市場中搶佔先機。",
+      "performer": {
+        "@type": "Person",
+        "name": "王沈銘"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台中市408南屯區環中路四段2號",
+        "name": "潮港城國際美食館"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2503050611281130540569.jpg"
+}

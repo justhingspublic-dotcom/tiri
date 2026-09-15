@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2606090943198559132000",
+  "local_label": "09.10 2026 職場霸凌防治新制簡介 報名中 線上 →",
+  "id": "2606090943198559132000",
+  "source_title": "09/10 【TIRI線上董事、公司治理主管進修課程】職場霸凌防治新制簡介｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2608070950251584371768.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "09/10 【TIRI線上董事、公司治理主管進修課程】職場霸凌防治新制簡介",
+      "image": "https://static.accupass.com/eventbanner/2608070950251584371768.jpg",
+      "startDate": "2026-09-10T14:00:00+08:00",
+      "endDate": "2026-09-10T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "隨著《職業安全衛生法》修正及職場霸凌防治新制正式上路，企業應如何建立完善的防治制度、降低勞資爭議風險，已成為管理者不可忽視的重要課題。\n\n本課程將從最新法令修正背景出發，深入解析《職場霸凌防治措施準則》之重點內容，協助企業了解職場霸凌的定義、認定原則、防治措施、申訴調查程序及相關罰則，建立符合法規要求的管理制度，打造尊重、友善且安全的職場文化。",
+      "performer": {
+        "@type": "Person",
+        "name": "郭維翰"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2606090943198559132000.jpg"
+}

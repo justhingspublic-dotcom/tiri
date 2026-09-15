@@ -1,0 +1,111 @@
+{
+  "sourcePath": "/Users/jonathanyu/Desktop/Travail/Justhings/投資人協會 TIRI/ref/官網/新官網-資料/文件/5證照獎項/TIRI Awards獎項/歷年潛力進展獎得獎名單.xlsx",
+  "sha256": "0a22c801b2b25a4f3edf9ceec1882bf310f85280969345cc1c08f08410e9397e",
+  "sheet": "2025(第一屆)",
+  "ranges": [
+    "A1:B12",
+    "E1:F12"
+  ],
+  "groups": [
+    {
+      "market": "TWSE",
+      "heading": "上市公司市值300E以下市值成長前10名",
+      "rows": [
+        {
+          "code": "4583",
+          "name": "台灣精銳"
+        },
+        {
+          "code": "6558",
+          "name": "興能高"
+        },
+        {
+          "code": "5234",
+          "name": "達興材料"
+        },
+        {
+          "code": "4576",
+          "name": "大銀微系統"
+        },
+        {
+          "code": "8028",
+          "name": "昇陽半導體"
+        },
+        {
+          "code": "8021",
+          "name": "尖點"
+        },
+        {
+          "code": "2480",
+          "name": "敦陽科"
+        },
+        {
+          "code": "1419",
+          "name": "新紡"
+        },
+        {
+          "code": "6206",
+          "name": "飛捷"
+        },
+        {
+          "code": "6183",
+          "name": "關貿"
+        }
+      ]
+    },
+    {
+      "market": "TPEx",
+      "heading": "上櫃公司市值100E以下市值成長前10名",
+      "rows": [
+        {
+          "code": "5314",
+          "name": "世紀*"
+        },
+        {
+          "code": "6499",
+          "name": "益安"
+        },
+        {
+          "code": "4971",
+          "name": "IET-KY"
+        },
+        {
+          "code": "8111",
+          "name": "立碁"
+        },
+        {
+          "code": "3434",
+          "name": "哲固"
+        },
+        {
+          "code": "6728",
+          "name": "上洋"
+        },
+        {
+          "code": "4303",
+          "name": "信立"
+        },
+        {
+          "code": "3147",
+          "name": "大綜"
+        },
+        {
+          "code": "3709",
+          "name": "鑫聯大投控"
+        },
+        {
+          "code": "3663",
+          "name": "鑫科"
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "source": "conversation",
+    "note": "那得獎就是20",
+    "recordedAt": "2026-09-15T01:38:00Z",
+    "firstEditionStatus": "winners",
+    "secondEditionStatus": "nominees",
+    "secondEditionNote": "使用者認為第二屆尚未得獎，但不確定；本輪維持入選。"
+  }
+}

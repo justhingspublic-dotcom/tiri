@@ -1,0 +1,154 @@
+Traceback (most recent call last):
+  File "/Users/jonathanyu/Desktop/Travail/Justhings/投資人協會 TIRI/WEB DEMO/outputs/2026-09-14-v1-review-round8/launch_review.py", line 21, in <module>
+    ThreadingHTTPServer(('127.0.0.1',4173),partial(Handler,directory=str(ROOT))).serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 48] Address already in use
+127.0.0.1 - - [15/Sep/2026 09:31:56] "GET /v1/html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:31:56] "GET /v1/html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:05] "GET /v1/html/mission-206783-766399.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:05] "GET /v1/html/mission-206783-766399.html?term=2025 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/html/mission-206783-766399.html?term=2026 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:32:06] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:03] "GET /v1/images/awards/awards-2025-progress-twse.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:03] "GET /v1/images/awards/awards-2025-progress-tpex.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/html/mission-206783-766399.html?term=2025 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/images/awards/awards-2025-progress-twse.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:07] "GET /v1/images/awards/awards-2025-progress-tpex.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:33:53] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:28] "GET /v1/html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:28] "GET /v1/html/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/html/mission-206783-766399.html?term=2025&review=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:37] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/images/awards/awards-2025-progress-twse.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:42:38] "GET /v1/images/awards/awards-2025-progress-tpex.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/html/mission-206783-766399-942925.html?review=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/images/hero-taipei-night.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_1-2cda13b.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:10] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/html/mission-206783-766399.html?term=2025&review=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/awards/awards-2025-progress-twse.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/awards/awards-2025-progress-tpex.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/html/join.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/round6.css?v=20260914-r6 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/js/forms.js?v=20260805-testapi HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/review-r2/partnership-signing.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:19] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/html/mission-206783-766399.html?term=2025&review=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/fonts/fonts.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/css/main.css?v=20260817c HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/css/revision.css?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/css/review-fixes.css?v=20260910-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/js/navbar.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/js/main.js?v=20260909 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/images/awards/awards-progress-certificate.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/js/review-anchor.js?v=20260910-r8 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/fonts/archivo-300-700-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/fonts/robotomono-500-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/fonts/robotomono-400-latin.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/images/uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/images/tiri-logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/images/awards/awards-2025-progress-twse.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:24] "GET /v1/images/awards/awards-2025-progress-tpex.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:36] "GET /outputs/2026-09-15-v1-review-round9/%E7%AC%AC%E4%B9%9D%E8%BC%AA%E8%A4%87%E6%AA%A2.html?test=1 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:36] "GET /outputs/2026-09-15-v1-review-round9/recheck.css?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:36] "GET /outputs/2026-09-15-v1-review-round9/recheck.js?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:44] "GET /outputs/2026-09-15-v1-review-round9/%E7%AC%AC%E4%B9%9D%E8%BC%AA%E8%A4%87%E6%AA%A2.html?test=1 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:44] "GET /outputs/2026-09-15-v1-review-round9/recheck.css?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:44] "GET /outputs/2026-09-15-v1-review-round9/recheck.js?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:43:44] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:33] "GET /outputs/2026-09-15-v1-review-round9/%E7%AC%AC%E4%B9%9D%E8%BC%AA%E8%A4%87%E6%AA%A2.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:33] "GET /outputs/2026-09-15-v1-review-round9/recheck.css?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:33] "GET /outputs/2026-09-15-v1-review-round9/recheck.js?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:37] "GET /outputs/2026-09-15-v1-review-round9/%E7%AC%AC%E4%B9%9D%E8%BC%AA%E8%A4%87%E6%AA%A2.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:37] "GET /outputs/2026-09-15-v1-review-round9/recheck.css?v=20260915-r9 HTTP/1.1" 200 -
+127.0.0.1 - - [15/Sep/2026 09:44:37] "GET /outputs/2026-09-15-v1-review-round9/recheck.js?v=20260915-r9 HTTP/1.1" 200 -

@@ -1,0 +1,1538 @@
+[
+  {
+    "check": "04 nine course image cards",
+    "passed": true
+  },
+  {
+    "check": "18 three inhouse photos replaced",
+    "passed": true
+  },
+  {
+    "check": "19 eight distinct category photos",
+    "passed": true
+  },
+  {
+    "check": "board.html preserves 2018",
+    "passed": true
+  },
+  {
+    "check": "board.html preserves 2022",
+    "passed": true
+  },
+  {
+    "check": "board.html third term appointments",
+    "passed": true
+  },
+  {
+    "check": "board.html third term portraits preserved",
+    "passed": true
+  },
+  {
+    "check": "board_en.html preserves 2018",
+    "passed": true
+  },
+  {
+    "check": "board_en.html preserves 2022",
+    "passed": true
+  },
+  {
+    "check": "board_en.html third term appointments",
+    "passed": true
+  },
+  {
+    "check": "board_en.html third term portraits preserved",
+    "passed": true
+  },
+  {
+    "check": "27 certificates redirect to IRC",
+    "passed": true
+  },
+  {
+    "check": "27 five scholarship content sections retained",
+    "passed": true
+  },
+  {
+    "check": "bodperform.html flow is actual PNG",
+    "passed": true
+  },
+  {
+    "check": "bodperform.html original step wording preserved",
+    "passed": true
+  },
+  {
+    "check": "corpperform.html flow is actual PNG",
+    "passed": true
+  },
+  {
+    "check": "corpperform.html original step wording preserved",
+    "passed": true
+  },
+  {
+    "check": "29 video preserved with poster",
+    "passed": true
+  },
+  {
+    "check": "05 client logos applied",
+    "passed": true
+  },
+  {
+    "check": "39 benefit terms retained",
+    "passed": true
+  },
+  {
+    "check": "32 roster counts are 20 nominees and 10 winners",
+    "passed": true
+  },
+  {
+    "check": "32 all company names and codes preserved",
+    "passed": true
+  },
+  {
+    "check": "14 all 153 event records retained",
+    "passed": true
+  },
+  {
+    "check": "14 non-linked records have no fake arrow",
+    "passed": true
+  },
+  {
+    "check": "07 no duplicate body photos",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2608261303411628089416.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2606030231432413091530.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2603250817453657304220.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2606090943198559132000.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2606090713311189619869.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2606090713505065155660.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2604280250332201551990.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2606260918131108816118.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html 2604270930529671242830.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html mz.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html writepath.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html notified.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html mpinfo.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html businessweekly.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html hubhotel.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html hi.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html discovered.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html interinfo.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html pwc.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html kpmg.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html ey.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html theicons.png",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset index.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html A09-corporate-building.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html hero-chart.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html hero-board-2022.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html professional-training.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html collaboration.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html financial-analysis.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html business-team.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html seminar-room.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html awards-trophy.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html A04-capital-market.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html media-interview.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html hero-annual-forum.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset about.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html mz.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html writepath.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html notified.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html mpinfo.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html businessweekly.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html hubhotel.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html hi.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html discovered.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html interinfo.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html pwc.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html kpmg.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html ey.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html theicons.png",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset partners.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html legacy-inline.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html legacy-content.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2606090943198559132000.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2606090713311189619869.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2606090713505065155660.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2604280250332201551990.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2606260918131108816118.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2604270930529671242830.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2605260911061471544493.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2603300309452070120683.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html 2604160937224373100000.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html corporate-training.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html business-team.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html remote-work.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html document-review.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html hero-annual-forum.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html A09-corporate-building.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html financial-analysis.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html B06-contract.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html A06-esg-solar.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html B02-security.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html media-interview.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html forms.js",
+    "passed": true
+  },
+  {
+    "check": "local asset trainbod.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html tiric-2025-class.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html collaboration.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset benefit.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html board-2026-fufu-shen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html media-interview.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A04-capital-market.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html business-team.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html hero-chart.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html professional-training.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A02-financial-report.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html remote-work.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A06-esg-solar.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html hero-annual-forum.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html financial-analysis.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html document-review.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html green-hands.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A08-media-communication.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A04-capital-market.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html online-learning.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html collaboration.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html one-to-one.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A02-financial-report.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html hero-chart.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A09-corporate-building.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html corporate-training.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html A07-office-interior.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html financial-analysis.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html hero-taipei-night.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html board-2026-freddie-liu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html tiri-annual-2025-7th-zh.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html tiri-annual-2024-6th-zh.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html tiri-annual-2023-5th-zh.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset knowledge.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html legacy-inline.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html legacy-content.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html seminar-room.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html awards-trophy.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html A04-capital-market.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html media-interview.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html hero-annual-forum.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html legacy-inline.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html legacy-content.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html media-interview.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html seminar-room.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html awards-trophy.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html A04-capital-market.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html hero-annual-forum.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset committee-media.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html uploads-1-1-9-9-119925991-published-1961937585-70dc9aad-9820cf5.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html uploads-1-1-9-9-119925991-published-2025-12-05-140230-02c0c8f7-4cc4454.png",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certificate.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html forms.js",
+    "passed": true
+  },
+  {
+    "check": "local asset join.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html legacy-inline.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html legacy-content.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html board-flow.png",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html forms.js",
+    "passed": true
+  },
+  {
+    "check": "local asset bodperform.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html legacy-inline.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html legacy-content.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html governance-flow.png",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html forms.js",
+    "passed": true
+  },
+  {
+    "check": "local asset corpperform.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-poster.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-wang-ta-jen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-chang-yen-ting.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-kuo-tsung-lin.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-hsu-pi-yun.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-kao-cheng-hsing.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-shen-fu-fu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-chang-ming-jen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-chien-shih-hsiung.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-hu-heng-shih.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html lect-huang-kuo-ming.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-class.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-students.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-group-1.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-group-2.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-lecturers-1.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html tiric-2025-lecturers-2.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html uploads-1-1-9-9-119925991-published-2026-04-28-205933-1240b90e-b522fb6.png",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html forms.js",
+    "passed": true
+  },
+  {
+    "check": "local asset tiric.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-sun-2026.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-andy-chien.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jack-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-andy-chien.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jack-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nick-huang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-fufu-shen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tina-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-peter-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-paul-yao.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nancy-hsu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tom-huang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nan-hao-lin.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-cash-hong.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-vincent-jhao.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-allround-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-emily-tu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-echo-wan.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-julia-chen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-paul-w-t-yeh.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kc-cheng.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-david-yang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jacky-chou.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-freddie-liu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-frank-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-yu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-judy-hsu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-sun-2026.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-freddie-liu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-andy-chien.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jack-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-fufu-shen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tina-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-peter-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nick-huang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nancy-hsu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tom-huang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nan-hao-lin.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-cash-hong.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-frank-wang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-emily-tu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-echo-wan.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-paul-yao.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-julia-chen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-paul-w-t-yeh.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-david-yang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jacky-chou.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-yu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-judy-hsu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-sun-2026.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-fufu-shen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-fufu-shen.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jonny-kuo.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-freddie-liu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jacky-chou.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-jack-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-peter-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-andy-chien.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nancy-hsu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tom-huang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-nan-hao-lin.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-tina-chang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-cash-hong.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-echo-wan.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-emily-tu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-david-yang.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html board-2026-kevin-yu.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset board.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-twse-irc1a_orig-55876da.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-twse-irc2a_orig-e7ac6ef.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-twse-irc3a_orig-02b15f0.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-editor-ir-irc-1a-c3f01560-5f99075.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-editor-irc-52afef03-f435002.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html uploads-1-1-9-9-119925991-editor-2007021611362084116216-059a2540-e5a096d.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset certification.html review-anchor.js",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html fonts.css",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html main.css",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html navbar.js",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html favicon.ico",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html revision.css",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html review-fixes.css",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html uploads-1-1-9-9-119925991-442238112_orig-e4d6a15.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html awards-2025-progress-twse.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html awards-2025-progress-tpex.jpg",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html main.js",
+    "passed": true
+  },
+  {
+    "check": "local asset mission-206783-766399.html review-anchor.js",
+    "passed": true
+  }
+]

@@ -1,0 +1,469 @@
+{
+  "source_version": "tiri-v1-review-20260909-r1",
+  "exportedAt": "2026-09-10T02:30:27.855Z",
+  "source_sha256": "245fcb3bf6245e118ba329a041106e8f6bebe5e1505a985d86f53b92549556d7",
+  "source_file": "TIRI-v1-驗收結果-2.json",
+  "raw_confirmed_count": 19,
+  "partially_accepted": {
+    "08": "第一、二屆版型已確認",
+    "29": "影片已確認；封面待補"
+  },
+  "groups": {
+    "accepted": [
+      "01",
+      "03",
+      "09",
+      "11",
+      "13",
+      "15",
+      "16",
+      "21",
+      "26",
+      "28",
+      "30",
+      "31",
+      "33",
+      "34",
+      "35",
+      "36",
+      "38",
+      "40"
+    ],
+    "followup": [
+      "02",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "10",
+      "12",
+      "14",
+      "18",
+      "19",
+      "22",
+      "24",
+      "27",
+      "29",
+      "32",
+      "37",
+      "39"
+    ],
+    "unreviewed": [],
+    "waiting": [
+      "17",
+      "20",
+      "23",
+      "25",
+      "41"
+    ]
+  },
+  "website_edits_in_this_review": false,
+  "items": [
+    {
+      "id": "01",
+      "title": "「會員中心」改「會員服務」",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T01:39:38.425Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "02",
+      "title": "Footer 指定入口改「會員登入」",
+      "deliveredStatus": "ready",
+      "note": "會員登入先不要有功能 不過頁面可以先留著 等到時候要做的時候再把功能加上去 所以footer那邊幫我改成先放純文字就好",
+      "updatedAt": "2026-09-10T01:41:18.954Z",
+      "reviewStatus": "followup",
+      "nextAction": "Footer「會員登入」改成不可點擊的純文字；登入頁保留，登入功能延後製作。",
+      "dependencies": null
+    },
+    {
+      "id": "03",
+      "title": "首頁 6,300＋的單位改為「人」",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T01:41:38.829Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "04",
+      "title": "首頁只留指定三個主內容區塊",
+      "deliveredStatus": "ready",
+      "confirmed": false,
+      "updatedAt": "2026-09-10T01:51:23.875Z",
+      "note": "線上課程的內頁（查看更多） 設計應該要對齊首頁那樣的樣式",
+      "reviewStatus": "followup",
+      "nextAction": "從首頁線上課程「所有課程／查看更多」進入的課程列表，改成與首頁課程卡片一致的樣式。現有目的地是 trainbod.html#open；需核對圖片、日期、資訊層級及手機排列。",
+      "dependencies": null
+    },
+    {
+      "id": "05",
+      "title": "合作夥伴內容、官網連結與 Logo",
+      "deliveredStatus": "partial",
+      "note": "logo我有更新了 ref的中的「官網」資料夾\n你找找看 然後這一項到時候再重新確認一次",
+      "updatedAt": "2026-09-10T01:49:19.880Z",
+      "reviewStatus": "followup",
+      "nextAction": "已找到合作夥伴 LOGO 資料夾的 15 個檔案。核對品牌、展示分類、名稱與官網，將 AI／PSD／PDF／PS 等來源轉成適合網頁的圖檔後套用首頁及合作夥伴頁，再整項驗收。",
+      "dependencies": null
+    },
+    {
+      "id": "06",
+      "title": "全站情境圖片的主題與來源整理",
+      "deliveredStatus": "ready",
+      "confirmed": false,
+      "updatedAt": "2026-09-10T01:52:08.178Z",
+      "note": "圖片如果有確認是cc free那沒問題\n但是有圖片重複使用的問題 我覺得那個賤狗客戶會靠邀\n\n另外圖片有放到「人」的部分 對方有明確說要以東亞臉孔為主（整個web中所有圖片都是）",
+      "reviewStatus": "followup",
+      "nextAction": "全站人物情境圖以東亞臉孔為主，逐頁減少重複使用，保持圖片與各頁主題相符。逐張核對可用授權、尺寸、來源與裁切；本案實拍及人物專訪仍須對應正確活動／本人。",
+      "dependencies": null
+    },
+    {
+      "id": "07",
+      "title": "協會簡介改為左圖右文",
+      "deliveredStatus": "ready",
+      "note": "一樣 圖片要改東亞臉孔 然後看能不能盡量不重用",
+      "updatedAt": "2026-09-10T01:52:24.577Z",
+      "reviewStatus": "followup",
+      "nextAction": "協會簡介配圖依 06 換成以東亞人物為主、符合各段內容的照片，盡量避免同頁和其他主要頁面重複。",
+      "dependencies": null
+    },
+    {
+      "id": "08",
+      "title": "理監事名冊與表格版型",
+      "deliveredStatus": "partial",
+      "note": "一二屆沒問題\n第三屆它有說什麼現在這樣的「圖片」呈現方式ok\n但是公司職稱又希望更清楚顯示（就是說分開所以我不懂他意思）",
+      "updatedAt": "2026-09-10T01:53:59.778Z",
+      "reviewStatus": "followup",
+      "nextAction": "第一、二屆版型已獲文字確認。第三屆保留照片卡片，將公司名稱與職稱分開呈現；兼任者逐組配對公司／職稱。這是對留言的版面解讀，尚未完成第三屆新版驗收；7 位歷屆照片仍待補。",
+      "dependencies": null
+    },
+    {
+      "id": "09",
+      "title": "點「理監事」直接顯示第三屆，省去中間選擇頁",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T01:53:13.385Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "10",
+      "title": "五個功能委員會總覽",
+      "deliveredStatus": "ready",
+      "note": "媒體委員會圖片改成一個人在採訪另一個人的樣子 一樣要東亞臉孔",
+      "updatedAt": "2026-09-10T01:54:38.630Z",
+      "reviewStatus": "followup",
+      "nextAction": "媒體委員會改用一人採訪另一人的情境，人物以東亞臉孔為主；同步總覽、媒體內頁及其他委員會交叉入口中的同一張圖。",
+      "dependencies": null
+    },
+    {
+      "id": "11",
+      "title": "五個委員會內頁、名冊及切換",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T01:55:11.534Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": "本項內頁與名冊已通過；10 更換媒體委員會圖時，相關內頁配圖仍需檢查。"
+    },
+    {
+      "id": "12",
+      "title": "鄧白氏雙標章更換 ESG Banner",
+      "deliveredStatus": "ready",
+      "note": "鄧白氏他是說希望是什麼綠植 什麼小朋友的手什麼鬼的\n圖片再重新找找",
+      "updatedAt": "2026-09-10T02:06:43.533Z",
+      "reviewStatus": "followup",
+      "nextAction": "鄧白氏 Banner 重新選圖，候選方向是綠植、孩童雙手／照顧幼苗的永續意象。留言尚未指定確切構圖，按此方向製作候選；新人物圖同樣遵守 06。",
+      "dependencies": null
+    },
+    {
+      "id": "13",
+      "title": "活動列表左側放 Banner，直接連 Accupass",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:07:10.318Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": "列表版型與 Accupass 直連已通過；缺圖和無目的頁的歷史列集中追蹤 14。"
+    },
+    {
+      "id": "14",
+      "title": "近期活動整合到活動訊息",
+      "deliveredStatus": "ready",
+      "note": "這部分我不太懂 再解釋一次給我\n然後我有看到缺圖",
+      "updatedAt": "2026-09-10T02:08:13.982Z",
+      "reviewStatus": "followup",
+      "nextAction": "說明近期活動與活動訊息合併的入口差異，逐筆處理活動列表缺圖並核對目的頁。已查到 19 筆未配圖，其中 12 筆是無目的頁的 article，卻顯示「活動花絮 →」，需一併修正。",
+      "dependencies": null
+    },
+    {
+      "id": "15",
+      "title": "活動紀錄日期放大",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:08:45.467Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "16",
+      "title": "「精彩回顧」統一改「活動花絮」",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:09:45.028Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "17",
+      "title": "活動花絮列表的新排版",
+      "deliveredStatus": "waiting",
+      "reviewStatus": "waiting",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "18",
+      "title": "到府授課三個特色各加圖",
+      "deliveredStatus": "ready",
+      "note": "一樣 圖片要改東亞人為主",
+      "updatedAt": "2026-09-10T02:10:20.215Z",
+      "reviewStatus": "followup",
+      "nextAction": "到府授課三特色圖片依 06 調整，以東亞人物為主，符合內容多元／到府服務／時間彈性，重新檢查裁切與重複使用。",
+      "dependencies": null
+    },
+    {
+      "id": "19",
+      "title": "七類課程改八大主題，每類配圖",
+      "deliveredStatus": "ready",
+      "note": "一樣 圖片要改東亞人為主",
+      "updatedAt": "2026-09-10T02:10:26.537Z",
+      "reviewStatus": "followup",
+      "nextAction": "八大課程主題保留正確課綱與分類，配圖依 06 調整；人物以東亞臉孔為主，逐類貼合內容並減少重複。",
+      "dependencies": null
+    },
+    {
+      "id": "20",
+      "title": "董監事課程 Banner",
+      "deliveredStatus": "waiting",
+      "reviewStatus": "waiting",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "21",
+      "title": "會計主管 Banner 換成手按計算機",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:10:49.909Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "22",
+      "title": "董事會績效評估四步驟流程圖",
+      "deliveredStatus": "ready",
+      "note": "這個圖 我要的是直接製作圖片 看起來要華麗一點\n不是用程式碼做",
+      "updatedAt": "2026-09-10T02:11:51.391Z",
+      "reviewStatus": "followup",
+      "nextAction": "四步驟流程改成直接製作的正式圖片，增加視覺設計感。以原需求「企業自評 → 協會書審 → 實地訪談 → 擬撰報告」核對文字；不沿用 HTML／CSS 步驟卡作為交付圖。",
+      "dependencies": null
+    },
+    {
+      "id": "23",
+      "title": "董事會績效評估 Banner",
+      "deliveredStatus": "waiting",
+      "reviewStatus": "waiting",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "24",
+      "title": "提升公司治理六步驟流程圖",
+      "deliveredStatus": "ready",
+      "note": "這個圖 我要的是直接製作圖片 看起來要華麗一點\n不是用程式碼做",
+      "updatedAt": "2026-09-10T02:12:03.340Z",
+      "reviewStatus": "followup",
+      "nextAction": "六步驟流程改成直接製作的正式圖片，與 22 統一設計。保留提出申請、提交文件、現況評估、公司訪談、提出改善策略及規劃、後續諮詢六步及正確順序。",
+      "dependencies": null
+    },
+    {
+      "id": "25",
+      "title": "提升公司治理 Banner",
+      "deliveredStatus": "waiting",
+      "reviewStatus": "waiting",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "26",
+      "title": "「證照獎項」拆成「證照」與「獎項」",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:12:08.858Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": "證照／獎項分類拆分已通過；27 的證照主入口及下拉項目另調整。"
+    },
+    {
+      "id": "27",
+      "title": "IRC 證照介紹與贊助獎學金整合",
+      "deliveredStatus": "ready",
+      "confirmed": false,
+      "updatedAt": "2026-09-10T02:15:55.612Z",
+      "note": "IRC 贊助獎學金 這個區塊的排版不太好看\n然後這邊有點錯誤 我希望點擊證照不要有中間頁\n\n然後nav的下拉選單應該就是只剩下國際證照跟專業實戰班",
+      "reviewStatus": "followup",
+      "nextAction": "重排 IRC 贊助獎學金；點「證照」略過中間總覽頁，下拉只留「國際證照」「專業實戰班」。按現有內容及新版 Excel，建議主入口直接進 IRC certification.html，實戰班進 tiric.html，中英文與手機入口同步。",
+      "dependencies": null
+    },
+    {
+      "id": "28",
+      "title": "縮小 TIRIC 講師照片",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:16:04.852Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "29",
+      "title": "TIRIC 白底影片與播放入口",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:30:13.264Z",
+      "note": "白底影片ok 但是播放前沒有圖片",
+      "reviewStatus": "followup",
+      "nextAction": "白底影片本身已確認通過；補上播放前顯示的封面圖。已確認目前 video 沒有 poster；可從這支影片選清楚、有標題的畫格作封面，檢查尚未播放時及手機載入畫面。",
+      "dependencies": null
+    },
+    {
+      "id": "30",
+      "title": "TIRIC 回顧改年度／屆次下拉",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:30:21.718Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "31",
+      "title": "TIRI Awards 屆次按鈕改下拉",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:17:05.468Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "32",
+      "title": "潛力進展獎屆次下拉與歷屆內容",
+      "deliveredStatus": "partial",
+      "note": "潛力進展獎 下面公司的排版有點亂",
+      "updatedAt": "2026-09-10T02:17:34.302Z",
+      "reviewStatus": "followup",
+      "nextAction": "重排潛力進展獎企業名單，對齊代碼、公司名称及行距，處理長名稱換行。保留 2025 得獎／2026 入選差異與屆次切換；缺少的正式資料另追蹤 32-B。",
+      "dependencies": null
+    },
+    {
+      "id": "33",
+      "title": "TIRI Awards 使用整排獎座 Banner",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:18:28.185Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "34",
+      "title": "潛力進展獎使用指定獎狀 Banner",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:18:35.279Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "35",
+      "title": "知識資源每篇文章加主題圖片",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:18:56.663Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": "本項文章配圖交付已通過；06 是全站新要求，若此區人物圖或重複圖被更換，新圖片需再驗收，不改寫本輪通過紀錄。"
+    },
+    {
+      "id": "36",
+      "title": "知識資源加入頁內搜尋",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:19:01.245Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "37",
+      "title": "加入會員更換 Banner",
+      "deliveredStatus": "ready",
+      "note": "加入會員的圖片不太好 我覺得應該是要那中可能在簽合約啊什麼之類的\n用到人的話要記得用東亞面孔",
+      "updatedAt": "2026-09-10T02:19:40.866Z",
+      "reviewStatus": "followup",
+      "nextAction": "加入會員 Banner 改為簽署合約／合作協議情境；若畫面有人物，以東亞臉孔為主，檢查橫幅與手機裁切。",
+      "dependencies": null
+    },
+    {
+      "id": "38",
+      "title": "「會員專屬優惠」改「會員權利」",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:19:51.911Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "39",
+      "title": "會員權利兩大區塊左側加圖",
+      "deliveredStatus": "ready",
+      "confirmed": false,
+      "updatedAt": "2026-09-10T02:22:44.842Z",
+      "note": "首先 圖片一樣要放東亞面孔\n再來 我覺得左邊跟右邊高度不一致有點怪\n有沒有什麼調整方式\n標題我也希望放在圖片上方",
+      "reviewStatus": "followup",
+      "nextAction": "兩個會員權利區塊的標題放到圖片上方；人物圖片依 06 更新。重排左右欄以改善高度落差，合作夥伴優惠整理成清楚分組，保留完整條件與連結。",
+      "dependencies": null
+    },
+    {
+      "id": "40",
+      "title": "中英文年刊列表直接顯示封面",
+      "deliveredStatus": "ready",
+      "confirmed": true,
+      "updatedAt": "2026-09-10T02:23:34.548Z",
+      "reviewStatus": "accepted",
+      "nextAction": null,
+      "dependencies": null
+    },
+    {
+      "id": "41",
+      "title": "年刊 Banner",
+      "deliveredStatus": "waiting",
+      "reviewStatus": "waiting",
+      "nextAction": null,
+      "dependencies": null
+    }
+  ]
+}

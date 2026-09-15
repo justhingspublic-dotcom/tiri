@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=team2026.html?term=2018">
+<link rel="canonical" href="team2026.html">
+<title>第一屆（2018–2022） - 理監事成員</title>
+<script>location.replace("team2026.html?term=2018");</script>
+</head>
+<body>
+<p>本頁已併入「理監事成員」，正在帶您前往 第一屆（2018–2022）… <a href="team2026.html?term=2018">理監事成員</a></p>
+</body>
+</html>

@@ -1,0 +1,126 @@
+[
+  {
+    "brand": "mz",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/13.MZ LOGO.png",
+    "file": "v1/images/review-r3/logos/mz.png",
+    "clip": [
+      0.0,
+      0.0,
+      742.5,
+      378.0
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "writepath",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/雲翻譯-LOGO.png",
+    "file": "v1/images/review-r3/logos/writepath.png",
+    "clip": [
+      0.0,
+      0.0,
+      520.5,
+      189.75
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "notified",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/10.Notified Logo.ai",
+    "file": "v1/images/review-r3/logos/notified.png",
+    "clip": [
+      347.6258850097656,
+      347.5996398925781,
+      2173.2080078125,
+      1436.77685546875
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "mpinfo",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/倍力logo.ai",
+    "file": "v1/images/review-r3/logos/mpinfo.png",
+    "clip": [
+      91.52420043945312,
+      17.99810028076172,
+      408.4761962890625,
+      101.77550506591797
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "businessweekly",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/3.商周-LOGO.ai",
+    "file": "v1/images/review-r3/logos/businessweekly.png",
+    "clip": [
+      174.0,
+      320.0,
+      439.0,
+      472.0
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "hubhotel",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/旅居文旅LOGO.ps",
+    "file": "v1/images/review-r3/logos/hubhotel.png",
+    "clip": [
+      110.0,
+      58.0,
+      328.0,
+      126.0
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "hi",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/Hi家教-LOGO.png",
+    "file": "v1/images/review-r3/logos/hi.png",
+    "clip": [
+      0.0,
+      0.0,
+      750.0,
+      343.5
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "discovered",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/找到了/logo.png",
+    "file": "v1/images/review-r3/logos/discovered.png",
+    "clip": [
+      0.0,
+      0.0,
+      522.0,
+      373.67999267578125
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "interinfo",
+    "source": "ref/官網/新官網-資料/文件/1首頁/合作夥伴LOGO/英特內_logo.ai",
+    "file": "v1/images/review-r3/logos/interinfo.png",
+    "clip": [
+      132.0,
+      185.0,
+      410.0,
+      266.0
+    ],
+    "license": "客戶提供的品牌素材，限本專案展示；非 CC0",
+    "processing": "保留原始 PNG alpha／原向量檔透明匯出"
+  },
+  {
+    "brand": "amazing",
+    "source": "https://amazing888.com.tw/",
+    "file": "v1/images/review-r3/logos/amazing.svg",
+    "processing": "官網原 SVG 路徑，採原 CSS 色碼 #b33046；原生透明向量",
+    "license": "品牌標誌，供本專案介紹合作夥伴；非 CC0"
+  }
+]

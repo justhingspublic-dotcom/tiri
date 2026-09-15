@@ -1,0 +1,48 @@
+{
+  "url": "https://www.accupass.com/event/2409050929225982307170",
+  "local_label": "11.12 2024 企業永續策略與投資人關係 董監進修課程 新竹 →",
+  "id": "2409050929225982307170",
+  "source_title": "11/12【TIRI董事、公司治理主管進修課程】企業永續策略與投資人關係｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2410070809271540540900.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "11/12【TIRI董事、公司治理主管進修課程】企業永續策略與投資人關係",
+      "image": "https://static.accupass.com/eventbanner/2410070809271540540900.jpg",
+      "startDate": "2024-11-12T14:00:00+08:00",
+      "endDate": "2024-11-12T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "在當前快速變化的全球市場中，企業的永續策略與投資人關係已成為關鍵議題。本次活動將深入探討企業如何制定和實施有效的永續策略，並成功管理與投資人的關係，以實現長期穩定的增長，詳細解析如何有效應對國際永續準則，確保企業符合全球標準，提升透明度與信任度。另外也將探討如何通過科學的智慧財產布局，助力企業在市場中脫穎而出，推動永續創新。從智慧財產的保護與管理到戰略性布局，他將揭示企業如何利用智慧財產的力量，引領行業趨勢並實現長期發展。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "邱琬茹"
+        },
+        {
+          "@type": "Person",
+          "name": "曾于哲"
+        },
+        {
+          "@type": "Person",
+          "name": "黃國洲"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣新竹縣竹北市光明六路東一段265號",
+        "name": "新竹豐邑喜來登飯店"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2409050929225982307170.jpg"
+}

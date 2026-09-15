@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2606090713505065155660",
+  "local_label": "08.14 2026 台湾日系企業における取締役・監査役の法的責任と税務リスクの実務 報名中 線上 →",
+  "id": "2606090713505065155660",
+  "source_title": "08/14【TIRI 取締役ー講座（オンライン）】台湾日系企業における取締役・監査役の法的責任と税務リスクの実務｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2606110524317220647260.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "08/14【TIRI 取締役ー講座（オンライン）】台湾日系企業における取締役・監査役の法的責任と税務リスクの実務",
+      "image": "https://static.accupass.com/eventbanner/2606110524317220647260.jpg",
+      "startDate": "2026-08-14T13:00:00+08:00",
+      "endDate": "2026-08-14T16:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "台湾日系企業における取締役・監査役の法的責任と税務リスクの実務\n講師：誠遠ビジネス法律事務所　周 泰維 パートナー弁護士",
+      "performer": {
+        "@type": "Person",
+        "name": "周泰維(シュウ タイイ)"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2606090713505065155660.jpg"
+}

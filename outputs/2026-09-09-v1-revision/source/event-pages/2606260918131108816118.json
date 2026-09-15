@@ -1,0 +1,33 @@
+{
+  "url": "https://www.accupass.com/event/2606260918131108816118",
+  "local_label": "07.24 2026 家族企業的治理與傳承：家族憲章、股權控制與家族信託的法律架構 董監進修課程 線上 →",
+  "id": "2606260918131108816118",
+  "source_title": "07/24【TIRI線上董事、公司治理主管進修課程】家族企業的治理與傳承：家族憲章、股權控制與家族信託的法律架構｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2606260934431846043630.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "07/24【TIRI線上董事、公司治理主管進修課程】家族企業的治理與傳承：家族憲章、股權控制與家族信託的法律架構",
+      "image": "https://static.accupass.com/eventbanner/2606260934431846043630.jpg",
+      "startDate": "2026-07-24T14:00:00+08:00",
+      "endDate": "2026-07-24T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "本課程從家族企業傳承實務出發，解析家族治理面臨的法律、文化與制度挑戰，並深入探討家族憲章、股權架構設計及家族信託等重要工具，協助企業建立制度化治理架構，從「人治」走向「制度治理」，確保企業控制權穩定、降低家族衝突風險，並提升世代傳承成功率。\n\n課程結合理論架構與實務案例，提供董監事、公司治理主管及企業經營者規劃接班與傳承制度的重要參考。",
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2606260918131108816118.jpg"
+}

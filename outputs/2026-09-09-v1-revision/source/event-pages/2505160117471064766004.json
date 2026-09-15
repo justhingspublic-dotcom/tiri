@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2505160117471064766004",
+  "local_label": "11.07 2025 Stakeholder Engagement and Relationship Management 活動 線上 →",
+  "id": "2505160117471064766004",
+  "source_title": "11/07 - Stakeholder Engagement and Relationship Management｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2506250629425888395230.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "11/07 - Stakeholder Engagement and Relationship Management",
+      "image": "https://static.accupass.com/eventbanner/2506250629425888395230.jpg",
+      "startDate": "2025-11-07T09:00:00+08:00",
+      "endDate": "2025-11-07T12:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "“Enagaging with Taiwanese stakeholders—executives, regulators, partners, and employees—through culturally adaptive communication and stakeholder management strategies.\"",
+      "performer": {
+        "@type": "Person",
+        "name": "Joyce LIN　"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市南港區經貿二路198號8樓之1",
+        "name": "（今皓實業股份有限公司大會議室）"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2505160117471064766004.jpg"
+}

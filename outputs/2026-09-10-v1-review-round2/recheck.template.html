@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="light">
+  <title>TIRI v1｜第二輪複檢</title>
+  <link rel="stylesheet" href="recheck.css?v=20260910-r7">
+</head>
+<body>
+<a class="skip" href="#review-list">跳到複檢項目</a>
+<main>
+  <header>
+    <div class="masthead"><span class="brand">TIRI <span>v1</span></span><span>驗收工作區 · 2026.09.10</span></div>
+    <div class="heading"><div><p class="eyebrow">REVIEW / 02</p><h1>第二輪複檢</h1><p class="intro">依你第一輪複檢結果再次修改。41 項完整保留，25 項沿用通過；這次新意見、實際改動與歷次回覆都可對照。</p></div><div class="export-actions"><button id="export" class="primary">匯出複檢結果 ↓</button><button id="import">匯入複檢紀錄</button><input id="import-file" type="file" accept=".json,application/json" hidden></div></div>
+    <div class="stats" aria-label="複檢進度">
+      <div><strong id="remaining">11</strong><span>待複檢</span></div>
+      <div><strong id="rechecked">0</strong><span>本輪已通過</span></div>
+      <div><strong id="accepted">25</strong><span>此前已通過</span></div>
+      <div><strong id="waiting">5</strong><span>仍等資料</span></div>
+    </div>
+    <p class="delivery-notice"><strong>目前進度</strong><span id="delivery-notice">本輪修改與先前通過紀錄都已整理。</span></p>
+    <details class="help"><summary>勾選如何保存？</summary><p>自動保存在目前這個瀏覽器。同一台電腦可用 Chrome、Safari 等外部瀏覽器開啟這個網址；換瀏覽器時，先匯出，再到另一個瀏覽器匯入。檢查完請把匯出的 JSON 檔傳給我。</p><p>第二輪的勾選獨立保存，不會覆蓋第一輪。原已通過 25 項預先勾選；11 項需要你再次檢查。部分完成項目請先閱讀保留事項，勾選只代表認可本輪明列的交付內容。</p></details>
+  </header>
+  <section class="workspace" aria-label="項目篩選">
+    <div class="toolbar"><div class="filters" role="group" aria-label="複檢篩選"><button data-filter="todo" aria-pressed="true">待複檢 <span>11</span></button><button data-filter="done" aria-pressed="false">本輪已通過 <span>0</span></button><button data-filter="accepted" aria-pressed="false">原已通過 <span>25</span></button><button data-filter="waiting" aria-pressed="false">等資料 <span>5</span></button><button data-filter="all" aria-pressed="false">全部 <span>41</span></button></div><div class="search"><label for="search">搜尋項目</label><input id="search" type="search" placeholder="編號、頁面或修改內容" autocomplete="off"></div></div>
+    <div class="list-meta"><p id="result-count" role="status" aria-live="polite"></p><p id="save-status" role="status" aria-live="polite">自動儲存於此瀏覽器</p></div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <div id="review-list" tabindex="-1"></div>
+    <div class="empty" id="empty" hidden><h2>這裡目前沒有項目</h2><p id="empty-message">換個篩選條件，或清除搜尋文字。</p><button id="show-all">查看全部項目</button></div>
+  </section>
+  <footer><p>檢查完成後，匯出結果並把 JSON 檔傳給我。</p><button id="export-bottom" class="primary">匯出複檢結果 ↓</button><div class="footer-links"><a href="本輪修改紀錄.md" target="_blank" rel="noopener">本輪修改紀錄 ↗</a><a href="圖片來源與處理紀錄.md" target="_blank" rel="noopener">圖片來源與處理 ↗</a><a href="../2026-09-10-v1-review-round1/第一輪複檢.html" target="_blank" rel="noopener">第一輪複檢頁 ↗</a><a href="../2026-09-09-v1-revision/驗收入口.html" target="_blank" rel="noopener">最初驗收頁 ↗</a><a href="開啟複檢.command" download>下載本機開啟捷徑</a></div></footer>
+</main>
+<noscript><p>請啟用 JavaScript 才能勾選、儲存與匯出複檢結果。</p></noscript>
+<script id="review-data" type="application/json">__RECHECK_DATA__</script>
+<script src="recheck.js?v=20260910-r7"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "url": "https://www.accupass.com/event/2401300755491092007449",
+  "local_label": "03.22 2024 台灣再生能源市場暨綠色金融現況及趨勢 董監進修課程 線上 →",
+  "id": "2401300755491092007449",
+  "source_title": "3/22【TIRI線上董事、公司治理主管進修課程】台灣再生能源市場暨綠色金融現況及趨勢｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2401300904292454096050.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "3/22【TIRI線上董事、公司治理主管進修課程】台灣再生能源市場暨綠色金融現況及趨勢",
+      "image": "https://static.accupass.com/eventbanner/2401300904292454096050.jpg",
+      "startDate": "2024-03-22T14:00:00+08:00",
+      "endDate": "2024-03-22T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "探索台灣再生能源市場與綠色金融的未來趨勢！本課將深入研究全球及台灣再生能源趨勢，以及台灣資本市場綠色金融政策規劃。透過專家分享和案例分析，帶您了解市場發展動向，探索投資機會，共同開啟可持續未來的大門。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "廖容翎"
+        },
+        {
+          "@type": "Person",
+          "name": "張瑞婷"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2401300755491092007449.jpg"
+}

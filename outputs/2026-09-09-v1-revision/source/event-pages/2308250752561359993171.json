@@ -1,0 +1,48 @@
+{
+  "url": "https://www.accupass.com/event/2308250752561359993171",
+  "local_label": "09.26 2023 輿論共振-投資人關係、媒體、政府的合作之道 董監進修課程 台北 →",
+  "id": "2308250752561359993171",
+  "source_title": "9/26（二）【焦點論壇(可申報3小時董事、治理主管進修時數)】輿論共振-投資人關係、媒體、政府的合作之道｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2309070750191953493687.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "9/26（二）【焦點論壇(可申報3小時董事、治理主管進修時數)】輿論共振-投資人關係、媒體、政府的合作之道",
+      "image": "https://static.accupass.com/eventbanner/2309070750191953493687.jpg",
+      "startDate": "2023-09-26T14:00:00+08:00",
+      "endDate": "2023-09-26T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "IR的關注可引導資金流向，PR的準確報導有助於形塑公眾觀點、化解危機，GR（政府關係）則為可營造持續發展環境。但這三塊領域的專業在過去並未有效結合，殊為可惜。\n\n有鑑於此，本論壇邀請具實務經驗的IR、PR、GR領域三位專家，先以自身在併購案、媒體經營、危機處理的實例案例做主題分享，再以座談會方式探討如何有效整合，是國內少見的主題方向。\n\n座位有限，錯過機會不再，敬請盡速報名。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "余佳璋"
+        },
+        {
+          "@type": "Person",
+          "name": "王恩國"
+        },
+        {
+          "@type": "Person",
+          "name": "張美慧"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區東興路8號15樓",
+        "name": "統一綜合證券15樓國際會議廳"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2308250752561359993171.jpg"
+}

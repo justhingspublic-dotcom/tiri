@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "tiric.html",
+    "knowledge.html",
+    "benefit.html",
+    "about.html",
+    "trainbod.html",
+    "committee.html",
+    "committee-certification.html",
+    "committee-awards.html",
+    "committee-professional.html",
+    "committee-media.html",
+    "committee-outreach.html"
+  ],
+  "committeeBanners": [
+    {
+      "page": "committee-certification.html",
+      "image": "../images/seminar-room.jpg"
+    },
+    {
+      "page": "committee-awards.html",
+      "image": "../images/awards/awards-trophy.jpg"
+    },
+    {
+      "page": "committee-professional.html",
+      "image": "../images/revision/A04-capital-market.jpg"
+    },
+    {
+      "page": "committee-media.html",
+      "image": "../images/review-r2/media-interview.jpg"
+    },
+    {
+      "page": "committee-outreach.html",
+      "image": "../images/hero-annual-forum.jpg"
+    }
+  ]
+}

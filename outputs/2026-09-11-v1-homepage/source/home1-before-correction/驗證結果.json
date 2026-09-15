@@ -1,0 +1,52 @@
+{
+  "verifiedAt": "2026-09-11T02:54:12.927446+00:00",
+  "checks": {
+    ".stats preserved": true,
+    "#events preserved": true,
+    "#courses preserved": true,
+    "#partners preserved": true,
+    "originalHeroWordingPreserved": true,
+    "threeSlides": true,
+    "uniqueElementIds": true,
+    "imageExists ../images/event-2025-conference-official.jpg": true,
+    "imageExists ../images/review-r5/board-training-collage-nine.png": true,
+    "imageExists ../images/review-r2/business-team.jpg": true,
+    "originalImagesUnchanged": true,
+    "mapUsesOfficialEmbed": true,
+    "mapHasTitleAndLazyLoading": true,
+    "original41ReviewItemsUnchanged": true,
+    "newItemsReady": true,
+    "correctReviewCounts": true,
+    "embeddedDataMatches": true,
+    "reviewLinksResolve": true
+  },
+  "missingReviewLinks": [],
+  "browser": {
+    "desktop": {
+      "width": 1280,
+      "threeSlidesVisible": true,
+      "autoplayObserved": true,
+      "manualSelectionPauses": true,
+      "keyboardEndSelectsThird": true,
+      "keyboardRightWrapsToFirst": true,
+      "inactiveSlidesHidden": true
+    },
+    "mobile": {
+      "widthsChecked": [
+        390,
+        320
+      ],
+      "horizontalOverflow": false,
+      "collageContain": true,
+      "swipeAdvancesSlide": true,
+      "reducedMotionDisablesAutoplay": true,
+      "responsiveContactSingleColumn": true
+    },
+    "googleMap": {
+      "chromeDesktop": "實際顯示地圖、重慶南路一段 57 號地址與標記",
+      "codexInApp": "ERR_BLOCKED_BY_CLIENT；請使用外部瀏覽器驗收",
+      "externalMapLinkVerified": true
+    },
+    "testBrowserOverridesRestored": true
+  }
+}

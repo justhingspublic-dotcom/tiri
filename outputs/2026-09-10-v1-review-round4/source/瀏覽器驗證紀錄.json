@@ -1,0 +1,28 @@
+{
+  "desktop": {
+    "viewportWidth": 1280,
+    "cardWidth": 281.52,
+    "imageHeight": 187.68,
+    "columns": 4,
+    "imagesLoaded": true,
+    "horizontalOverflow": false
+  },
+  "mobile": {
+    "viewportWidth": 390,
+    "cardWidth": 163,
+    "columns": 2,
+    "imagesLoaded": true,
+    "headingRowsAligned": true,
+    "horizontalOverflow": false
+  },
+  "reviewTest": {
+    "records": 41,
+    "priorConfirmed": 35,
+    "testConfirmed": 1,
+    "historyEntries": 164,
+    "notePersistsAfterReopen": true,
+    "checkboxPersistsAfterReopen": true,
+    "exportRound": 4,
+    "testIsolatedFromUser": true
+  }
+}

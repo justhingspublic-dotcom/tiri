@@ -1,0 +1,70 @@
+[
+  {
+    "name": "MZ Asia",
+    "url": "https://www.mz-asia.com/index_tc.html",
+    "status": 200,
+    "final_url": "https://www.mz-asia.com/index_tc.html",
+    "title": "MZ Asia"
+  },
+  {
+    "name": "雲翻譯",
+    "url": "https://www.writepath.co/tw",
+    "status": 200,
+    "final_url": "https://www.writepath.co/",
+    "title": "WritePath"
+  },
+  {
+    "name": "精彩創意整合行銷",
+    "url": "http://www.amazing888.com.tw/",
+    "status": 200,
+    "final_url": "https://amazing888.com.tw/",
+    "title": "精彩創意整合行銷 | 精彩創意整合行銷"
+  },
+  {
+    "name": "Notified",
+    "url": "http://www.notified.com",
+    "error": "timed out"
+  },
+  {
+    "name": "倍力資訊",
+    "url": "https://www.mpinfo.com.tw/tw",
+    "status": 200,
+    "final_url": "https://www.mpinfo.com.tw/tw",
+    "title": "Home - M-Power 倍力資訊"
+  },
+  {
+    "name": "商業周刊",
+    "url": "https://www.businessweekly.com.tw/event/mitu/",
+    "status": 200,
+    "final_url": "https://campaign.businessweekly.com.tw/bw/756",
+    "title": "【商周集團 重要公告】網站與系統服務中斷說明"
+  },
+  {
+    "name": "旅居文旅集團",
+    "url": "https://group.hubhotel.com.tw/",
+    "status": 200,
+    "final_url": "https://group.hubhotel.com.tw/",
+    "title": "Home - 旅居文旅集團 | 官網保證最低價，加購高鐵車票享優惠！"
+  },
+  {
+    "name": "Hi 家教線上課程",
+    "url": "http://www.hi-tr.com/",
+    "status": 200,
+    "final_url": "https://www.hi-tr.com/",
+    "title": "Hi家教｜英文線上課程推薦-13年多種線上外語專家-上萬學員推薦"
+  },
+  {
+    "name": "找到了旅行社",
+    "url": "https://sunshinetravel.com.tw/",
+    "status": 200,
+    "final_url": "https://discoveredtravel.com.tw/",
+    "title": "找到了旅行社（找到了旅遊）｜官方網站"
+  },
+  {
+    "name": "英特內軟體",
+    "url": "https://www.interinfo.com.tw/servlet/jform?file=web_interinfow.pkg&locale=TW&init_func=INTERINFO",
+    "status": 200,
+    "final_url": "https://www.interinfo.com.tw/servlet/jform?file=web_interinfow.pkg&locale=TW&init_func=INTERINFO",
+    "title": "Interinfo || 英特內軟體股份有限公司"
+  }
+]

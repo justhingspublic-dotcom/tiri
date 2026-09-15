@@ -1,0 +1,2998 @@
+{
+ "publishEvents": [
+  {
+   "eventIdNumber": "2606090713505065155660",
+   "photoUrl": "https://static.accupass.com/eventbanner/2606110524317220647260_P520x260.jpg",
+   "name": "08/14【TIRI 取締役ー講座（オンライン）】台湾日系企業における取締役・監査役の法的責任と税務リスクの実務",
+   "startDateTime": "2026-08-14T05:00:00",
+   "endDateTime": "2026-08-14T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 120,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2606090713311189619869",
+   "photoUrl": "https://static.accupass.com/eventbanner/2606110533481768704254_P520x260.jpg",
+   "name": "08/21【TIRI 取締役ー講座（オンライン）】日系企業の台湾投資に関する法律要点",
+   "startDateTime": "2026-08-21T05:00:00",
+   "endDateTime": "2026-08-21T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 144,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2606090943198559132000",
+   "photoUrl": "https://static.accupass.com/eventbanner/2608070950251584371768_P520x260.jpg",
+   "name": "09/10 【TIRI線上董事、公司治理主管進修課程】職場霸凌防治新制簡介",
+   "startDateTime": "2026-09-10T06:00:00",
+   "endDateTime": "2026-09-10T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 38,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  }
+ ],
+ "expiredEvents": [
+  {
+   "eventIdNumber": "2604280250332201551990",
+   "photoUrl": "https://static.accupass.com/eventbanner/2605120936098565706520_P520x260.jpg",
+   "name": "08/07【TIRI線上董事、公司治理主管進修課程】AI 時代的領導人影響力建構：從個人聲量到全球信任資產",
+   "startDateTime": "2026-08-07T06:00:00",
+   "endDateTime": "2026-08-07T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 524,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2606260918131108816118",
+   "photoUrl": "https://static.accupass.com/eventbanner/2606260934431846043630_P520x260.jpg",
+   "name": "07/24【TIRI線上董事、公司治理主管進修課程】家族企業的治理與傳承：家族憲章、股權控制與家族信託的法律架構",
+   "startDateTime": "2026-07-24T06:00:00",
+   "endDateTime": "2026-07-24T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 144,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2604270930529671242830",
+   "photoUrl": "https://static.accupass.com/eventbanner/2605260426201372114778_P520x260.jpg",
+   "name": "07/17【TIRI線上董事、公司治理主管進修課程】台廠的歐盟數位供應鏈合規法遵挑戰與對策",
+   "startDateTime": "2026-07-17T06:00:00",
+   "endDateTime": "2026-07-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 524,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2606030231432413091530",
+   "photoUrl": "https://static.accupass.com/eventbanner/2607010134287452722190_P520x260.jpg",
+   "name": "07/15 (三) 公司治理再進化：AI驅動治理效能與價值提升",
+   "startDateTime": "2026-07-15T06:00:00",
+   "endDateTime": "2026-07-15T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 768,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2605260911061471544493",
+   "photoUrl": "https://static.accupass.com/eventbanner/2606030100291251591390_P520x260.jpg",
+   "name": "07/09【TIRI線上董事、公司治理主管進修課程】從曝光到影響力：出海布局下的全球溝通策略與 AI 時代的企業價值塑造",
+   "startDateTime": "2026-07-09T06:00:00",
+   "endDateTime": "2026-07-09T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 262,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603300309452070120683",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603310658031498991566_P520x260.jpg",
+   "name": "06/12【TIRI線上董事、公司治理主管進修課程】證券不法案例與董監責任",
+   "startDateTime": "2026-06-12T06:00:00",
+   "endDateTime": "2026-06-12T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 339,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2604160937224373100000",
+   "photoUrl": "https://static.accupass.com/eventbanner/2605060536372110417737_P520x260.jpg",
+   "name": "06/09【TIRI線上董事、公司治理主管進修課程】IFRS 18 新準則之影響與實務解析",
+   "startDateTime": "2026-06-09T06:00:00",
+   "endDateTime": "2026-06-09T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 268,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2604160937472753329780",
+   "photoUrl": "https://static.accupass.com/eventbanner/2605260707582005144858_P520x260.jpg",
+   "name": "06/03【TIRI線上董事、公司治理主管進修課程】永續供應鏈與盡職調查：從合規到競爭力的轉型策略",
+   "startDateTime": "2026-06-03T06:00:00",
+   "endDateTime": "2026-06-03T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 108,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2605180619212809037840",
+   "photoUrl": "https://static.accupass.com/eventbanner/2605200636029758707680_P520x260.jpg",
+   "name": "線上說明會 - TIRIC 2026 IR 專業實戰班",
+   "startDateTime": "2026-05-28T08:00:00",
+   "endDateTime": "2026-05-28T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 137,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603310128591582112105",
+   "photoUrl": "https://static.accupass.com/eventbanner/2604020357293465468190_P520x260.jpg",
+   "name": "05/22【TIRI線上董事、公司治理主管進修課程】化解永續焦慮! 看懂未來十年ESG大趨勢",
+   "startDateTime": "2026-05-22T06:00:00",
+   "endDateTime": "2026-05-22T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 340,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603250817453657304220",
+   "photoUrl": "https://static.accupass.com/eventbanner/2604010647361788012750_P520x260.jpg",
+   "name": "TIRI 台灣投資人關係協會- 05/15 IR專業交流晚宴",
+   "startDateTime": "2026-05-15T11:00:00",
+   "endDateTime": "2026-05-15T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 402,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603060733582014313649",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603060825291021148495_P520x260.jpg",
+   "name": "05/15【TIRI線上董事、公司治理主管進修課程】台灣資本市場簡介",
+   "startDateTime": "2026-05-15T06:00:00",
+   "endDateTime": "2026-05-15T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 251,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603020140052056927658",
+   "photoUrl": "https://static.accupass.com/eventbanner/2604080125247548041290_P520x260.jpg",
+   "name": "05/08【TIRI線上暨實體董事、公司治理主管進修課程】面對國際新情勢，台灣的機遇與挑戰",
+   "startDateTime": "2026-05-08T06:00:00",
+   "endDateTime": "2026-05-08T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 319,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603240753502630075280",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603240814384614773050_P520x260.jpg",
+   "name": "04/24 【TIRI線上董事、公司治理主管進修課程】AI與新興科技應用案例",
+   "startDateTime": "2026-04-24T06:00:00",
+   "endDateTime": "2026-04-24T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 260,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603090142221509496435",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603090301431156627494_P520x260.jpg",
+   "name": "04/17【TIRI線上董事、公司治理主管進修課程】AI 與機器學習(ML)的價值創造：把技術變成企業的獲利引擎",
+   "startDateTime": "2026-04-17T06:00:00",
+   "endDateTime": "2026-04-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 403,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2602250617355439008600",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603030659161577050590_P520x260.jpg",
+   "name": "04/09【TIRI線上董事、公司治理主管進修課程】董事會如何掌握另類投資的風險與機會",
+   "startDateTime": "2026-04-09T06:00:00",
+   "endDateTime": "2026-04-09T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 318,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2603060614359737329870",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603090139231052395036_P520x260.jpg",
+   "name": "04/08（三）【台中場 主題餐會】下一場產業革命：無人載具如何重塑國家安全與全球供應鏈",
+   "startDateTime": "2026-04-08T10:00:00",
+   "endDateTime": "2026-04-08T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 0,
+   "pageView": 245,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2602260236131352630162",
+   "photoUrl": "https://static.accupass.com/eventbanner/2603020942391058546621_P520x260.jpg",
+   "name": "03/24【TIRI線上董事、公司治理主管進修課程】如何從財報發現企業經營弊端",
+   "startDateTime": "2026-03-24T06:00:00",
+   "endDateTime": "2026-03-24T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 252,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2601210508461951179754",
+   "photoUrl": "https://static.accupass.com/eventbanner/2601210629435391175470_P520x260.jpg",
+   "name": "03/06【TIRI線上董事、公司治理主管進修課程】公司治理與新版ESG評鑑之因應",
+   "startDateTime": "2026-03-06T06:00:00",
+   "endDateTime": "2026-03-06T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 365,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2512020244517592567850",
+   "photoUrl": "https://static.accupass.com/eventbanner/2512040919101732017212_P520x260.jpg",
+   "name": "01/16【TIRI線上董事、公司治理主管進修課程】董事會視角的永續報告書：從監督到價值創造的治理實務",
+   "startDateTime": "2026-01-16T06:00:00",
+   "endDateTime": "2026-01-16T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 1242,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2511071010039595600140",
+   "photoUrl": "https://static.accupass.com/eventbanner/2511120646121430972729_P520x260.jpg",
+   "name": "12/18【TIRI線上董事、公司治理主管進修課程】說出永續價值：ESG故事力與銀齡策略",
+   "startDateTime": "2025-12-18T06:00:00",
+   "endDateTime": "2025-12-18T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 1925,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2509190930571905392080",
+   "photoUrl": "https://static.accupass.com/eventbanner/2509230933341865033763_P520x260.jpg",
+   "name": "12/05【TIRI線上董事、公司治理主管進修課程】從 AI 浪潮看 2026 資安挑戰與治理策略",
+   "startDateTime": "2025-12-05T06:00:00",
+   "endDateTime": "2025-12-05T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 1957,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2509300306275712395370",
+   "photoUrl": "https://static.accupass.com/eventbanner/2509300331461023441147_P520x260.jpg",
+   "name": "11/21【TIRI線上董事、公司治理主管進修課程】家族傳承稅務新觀念",
+   "startDateTime": "2025-11-21T06:00:00",
+   "endDateTime": "2025-11-21T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 1196,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2505160117471064766004",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506250629425888395230_P520x260.jpg",
+   "name": "11/07 - Stakeholder Engagement and Relationship Management",
+   "startDateTime": "2025-11-07T01:00:00",
+   "endDateTime": "2025-11-07T04:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 853,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2507300135099501459330",
+   "photoUrl": "https://static.accupass.com/eventbanner/2510150654451702716740_P520x260.jpg",
+   "name": "10/23_TIRI 2025年度大會暨引領IR智慧新時代",
+   "startDateTime": "2025-10-23T06:00:00",
+   "endDateTime": "2025-10-23T10:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 13,
+   "pageView": 2753,
+   "tags": [
+    {
+     "name": "交流講座"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2508140522268919558650",
+   "photoUrl": "https://static.accupass.com/eventbanner/2508140626101747509580_P520x260.jpg",
+   "name": "10/17 【TIRI線上董事、公司治理主管進修課程】公司治理新時代的領袖資產管理",
+   "startDateTime": "2025-10-17T06:00:00",
+   "endDateTime": "2025-10-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 883,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2509110112482090672711",
+   "photoUrl": "https://static.accupass.com/eventbanner/2509110250361257860497_P520x260.jpg",
+   "name": "10/08 【TIRI線上董事、公司治理主管進修課程】企業數位轉型—AI與新興科技應用案例",
+   "startDateTime": "2025-10-08T06:00:00",
+   "endDateTime": "2025-10-08T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 783,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2507140257431371459936",
+   "photoUrl": "https://static.accupass.com/eventbanner/2507230224352893256860_P520x260.jpg",
+   "name": "10/03【TIRI線上董事、公司治理主管進修課程】企業轉型新思維：數位科技與永續發展",
+   "startDateTime": "2025-10-03T06:00:00",
+   "endDateTime": "2025-10-03T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 809,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2507140257544908421030",
+   "photoUrl": "https://static.accupass.com/eventbanner/2508290802266769334380_P520x260.jpg",
+   "name": "09/26【TIRI線上董事、公司治理主管進修課程】Just Say No！職場侵害OUT，DEI職場IN──法說、學說、務實說之職場不法侵害（性騷擾＋職場霸凌）案例解析與預防舉措",
+   "startDateTime": "2025-09-26T06:00:00",
+   "endDateTime": "2025-09-26T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 686,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2507140258033771771110",
+   "photoUrl": "https://static.accupass.com/eventbanner/2509080744031792868723_P520x260.jpg",
+   "name": "09/17【TIRI線上董事、公司治理主管進修課程】公司治理與證券法規",
+   "startDateTime": "2025-09-17T06:00:00",
+   "endDateTime": "2025-09-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 867,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2506240759061659163191",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506270450262111635571_P520x260.jpg",
+   "name": "08/29【TIRI 取締役ー講座（オンライン）】台湾において日本人取締役・監査役が認識すべき税務リスク",
+   "startDateTime": "2025-08-29T05:00:00",
+   "endDateTime": "2025-08-29T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 563,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2505230137011342180120",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506250211302109949740_P520x260.jpg",
+   "name": "08/22【TIRI董事、公司治理主管進修課程】企業、投資人、媒體三贏的新聞溝通策略",
+   "startDateTime": "2025-08-22T06:00:00",
+   "endDateTime": "2025-08-22T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 731,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2506130320041601970921",
+   "photoUrl": "https://static.accupass.com/eventbanner/2507100158354089540530_P520x260.jpg",
+   "name": "08/21（四）【台中場 主題餐會】投資人與經理人需知暨台灣資本市場簡介",
+   "startDateTime": "2025-08-21T10:00:00",
+   "endDateTime": "2025-08-21T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 3,
+   "pageView": 513,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2506240759362140611839",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506270434482060961630_P520x260.jpg",
+   "name": "08/06【TIRI 取締役ー講座（オンライン）】在台企業における日本人取締役・監査役が留意すべき法的ポイント",
+   "startDateTime": "2025-08-06T05:00:00",
+   "endDateTime": "2025-08-06T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 488,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2506020853152120590255",
+   "photoUrl": "https://static.accupass.com/eventbanner/2507030532278446394200_P520x260.jpg",
+   "name": "07/25【TIRI線上董事、公司治理主管進修課程】企業的社會影響力：從觀念到行動",
+   "startDateTime": "2025-07-25T06:00:00",
+   "endDateTime": "2025-07-25T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 539,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2503210208061610778404",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506230839131898490750_P520x260.jpg",
+   "name": "07/10【TIRI線上董事、公司治理主管進修課程】公司治理新近實務案例分析 (含性別平等工作法)",
+   "startDateTime": "2025-07-10T06:00:00",
+   "endDateTime": "2025-07-10T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 778,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2504170545101013836085",
+   "photoUrl": "https://static.accupass.com/eventbanner/2504180532161754731111_P520x260.jpg",
+   "name": "06/27（五）【TIRI線上董事、公司治理主管進修課程】未來思考導向的策略規劃",
+   "startDateTime": "2025-06-27T06:00:00",
+   "endDateTime": "2025-06-27T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taichung City",
+   "likeCount": 1,
+   "pageView": 409,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2506060905071342609716",
+   "photoUrl": "https://static.accupass.com/eventbanner/2506110258081319798952_P520x260.jpg",
+   "name": "06/24（二）全球永續價值鏈論壇：供應鏈淨零的策略與實踐",
+   "startDateTime": "2025-06-24T05:30:00",
+   "endDateTime": "2025-06-24T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 6,
+   "pageView": 1307,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2503180223508301997040",
+   "photoUrl": "https://static.accupass.com/eventbanner/2505050244481578425022_P520x260.jpg",
+   "name": "06/19（四）IR全球化：媒體策略與新聞新機遇",
+   "startDateTime": "2025-06-19T06:00:00",
+   "endDateTime": "2025-06-19T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 1710,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2502060139431017310373",
+   "photoUrl": "https://static.accupass.com/eventbanner/2502060803191375593968_P520x260.jpg",
+   "name": "06/13【TIRI線上董事、公司治理主管進修課程】企業在AI轉型中的領先策略",
+   "startDateTime": "2025-06-13T06:00:00",
+   "endDateTime": "2025-06-13T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 634,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501170802541980663181",
+   "photoUrl": "https://static.accupass.com/eventbanner/2501220648357068797470_P520x260.jpg",
+   "name": "05/23【TIRI線上董事、公司治理主管進修課程】企業公關與危機溝通",
+   "startDateTime": "2025-05-23T06:00:00",
+   "endDateTime": "2025-05-23T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 659,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2504250815381699044750",
+   "photoUrl": "https://static.accupass.com/eventbanner/2504280744321885845779_P520x260.jpg",
+   "name": "TIRI 台灣投資人關係協會- 05/16 IR專業交流晚宴",
+   "startDateTime": "2025-05-16T11:00:00",
+   "endDateTime": "2025-05-16T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 876,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2503050611281130540569",
+   "photoUrl": "https://static.accupass.com/eventbanner/2503310805282068016093_P520x260.jpg",
+   "name": "05/09（五）【TIRI線上董事、公司治理主管進修課程】 贏在資本市場：投資人關係創造企業價值的秘密武器",
+   "startDateTime": "2025-05-09T06:00:00",
+   "endDateTime": "2025-05-09T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taichung City",
+   "likeCount": 2,
+   "pageView": 520,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2503170242471180477094",
+   "photoUrl": "https://static.accupass.com/eventbanner/2504100225551502774281_P520x260.jpg",
+   "name": "4/23【TIRI線上暨實體董事、公司治理主管進修課程】全球秩序變遷下台灣的未來",
+   "startDateTime": "2025-04-23T06:00:00",
+   "endDateTime": "2025-04-23T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 415,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501060801551679278706",
+   "photoUrl": "https://static.accupass.com/eventbanner/2501060826211204027239_P520x260.jpg",
+   "name": "03/28【TIRI線上董事、公司治理主管進修課程】ESG 與品牌溝通",
+   "startDateTime": "2025-03-28T06:00:00",
+   "endDateTime": "2025-03-28T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 507,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501160831251997447626",
+   "photoUrl": "https://static.accupass.com/eventbanner/2502200935201986036269_P520x260.jpg",
+   "name": "03/25（二）迎戰 AI 變革與資安風險，企業如何走向新時代？",
+   "startDateTime": "2025-03-25T05:00:00",
+   "endDateTime": "2025-03-25T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 1508,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501150732394471115950",
+   "photoUrl": "https://static.accupass.com/eventbanner/2502110326441134285284_P520x260.jpg",
+   "name": "3/21【TIRI線上董事、公司治理主管進修課程】深度節能與深度減量",
+   "startDateTime": "2025-03-21T06:00:00",
+   "endDateTime": "2025-03-21T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 328,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501090058031660512333",
+   "photoUrl": "https://static.accupass.com/eventbanner/2501160849031343697404_P520x260.jpg",
+   "name": "02/21（五）【台中場 主題餐會】2025年投資展望策略暨高階管理者的勞動法實務指南分享",
+   "startDateTime": "2025-02-21T10:00:00",
+   "endDateTime": "2025-02-21T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 2,
+   "pageView": 327,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2501030214084203862260",
+   "photoUrl": "https://static.accupass.com/eventbanner/2501070656187655357970_P520x260.jpg",
+   "name": "2/21【TIRI線上董事、公司治理主管進修課程】企業永續-從焦慮到策略",
+   "startDateTime": "2025-02-21T06:00:00",
+   "endDateTime": "2025-02-21T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 570,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2409060824308935832170",
+   "photoUrl": "https://static.accupass.com/eventbanner/2409110128002050645640_P520x260.jpg",
+   "name": "12/13【TIRI線上董事、公司治理主管進修課程】職場性騷擾防治",
+   "startDateTime": "2024-12-13T06:00:00",
+   "endDateTime": "2024-12-13T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 628,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2411210913099980434300",
+   "photoUrl": "https://static.accupass.com/eventbanner/2411281304271070692964_P520x260.jpg",
+   "name": "12/10（二）2025新機遇：AI與永續轉型的雙重挑戰",
+   "startDateTime": "2024-12-10T06:00:00",
+   "endDateTime": "2024-12-10T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 1333,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2408290602361963077719",
+   "photoUrl": "https://static.accupass.com/eventbanner/2409090153279848888840_P520x260.jpg",
+   "name": "11/29【TIRI線上董事、公司治理主管進修課程】漫談資安治理的盲點與對策",
+   "startDateTime": "2024-11-29T06:00:00",
+   "endDateTime": "2024-11-29T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 859,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2407260516281481149188",
+   "photoUrl": "https://static.accupass.com/eventbanner/2407300944174588119780_P520x260.jpg",
+   "name": "11/22【TIRI 取締役ー講座（オンライン）】日本企業による台湾におけるM&A（企業の合併・買収）の法的概念を解説",
+   "startDateTime": "2024-11-22T05:00:00",
+   "endDateTime": "2024-11-22T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 277,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2407241444021130384205",
+   "photoUrl": "https://static.accupass.com/eventbanner/2407300941471211761106_P520x260.jpg",
+   "name": "11/15【TIRI 取締役ー講座（オンライン）】日本企業が台湾に投資する際に注意すべき法律・税金問題",
+   "startDateTime": "2024-11-15T05:00:00",
+   "endDateTime": "2024-11-15T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 328,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2409050929225982307170",
+   "photoUrl": "https://static.accupass.com/eventbanner/2410070809271540540900_P520x260.jpg",
+   "name": "11/12【TIRI董事、公司治理主管進修課程】企業永續策略與投資人關係",
+   "startDateTime": "2024-11-12T06:00:00",
+   "endDateTime": "2024-11-12T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Hsinchu County",
+   "likeCount": 0,
+   "pageView": 1103,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2406210622034272819070",
+   "photoUrl": "https://static.accupass.com/eventbanner/2409050909421851177742_P520x260.jpg",
+   "name": "10/18【TIRI線上董事、公司治理主管進修課程】品牌溝通與利害關係人管理",
+   "startDateTime": "2024-10-18T06:00:00",
+   "endDateTime": "2024-10-18T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 646,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2406070311037454831220",
+   "photoUrl": "https://static.accupass.com/eventbanner/2409190950452000005800_P520x260.jpg",
+   "name": "9/20 【TIRI線上董事、公司治理主管進修課程】營業秘密及資訊安全實務與證券法規",
+   "startDateTime": "2024-09-20T06:00:00",
+   "endDateTime": "2024-09-20T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 598,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2408130628145639679210",
+   "photoUrl": "https://static.accupass.com/eventbanner/2408130908272389851570_P520x260.jpg",
+   "name": "09/12 (四) TIRI X 鴻海【面對股東行動主義必學的四大心法】",
+   "startDateTime": "2024-09-12T06:00:00",
+   "endDateTime": "2024-09-12T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 862,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2406140109542669571510",
+   "photoUrl": "https://static.accupass.com/eventbanner/2408070155301443732327_P520x260.jpg",
+   "name": "8/30【TIRI線上暨實體董事、公司治理主管進修課程】嵌入永續架構的循環經濟：從循環經濟國際規範到農業與工業的交付整合",
+   "startDateTime": "2024-08-30T06:00:00",
+   "endDateTime": "2024-08-30T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 413,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2407090820484503339080",
+   "photoUrl": "https://static.accupass.com/eventbanner/2407110223101657579283_P520x260.jpg",
+   "name": "TIRI 台灣投資人關係協會- 7/31 IR專業交流晚宴",
+   "startDateTime": "2024-07-31T11:00:00",
+   "endDateTime": "2024-07-31T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 339,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2401100821021272048986",
+   "photoUrl": "https://static.accupass.com/eventbanner/2401100852311642447070_P520x260.jpg",
+   "name": "6/21【TIRI線上董事、公司治理主管進修課程】資產傳承與節稅的布局",
+   "startDateTime": "2024-06-21T06:00:00",
+   "endDateTime": "2024-06-21T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 390,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2403130333382668580730",
+   "photoUrl": "https://static.accupass.com/eventbanner/2404180101281943234853_P520x260.jpg",
+   "name": "5/24【TIRI線上暨實體董事、公司治理主管進修課程】美中台強力對抗下的台商未來",
+   "startDateTime": "2024-05-24T06:00:00",
+   "endDateTime": "2024-05-24T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 610,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2401100630311522685801",
+   "photoUrl": "https://static.accupass.com/eventbanner/2404100546371490733933_P520x260.jpg",
+   "name": "4/19（五）【TIRI線上董事、公司治理主管進修課程】國內外併購實務大解析",
+   "startDateTime": "2024-04-19T06:00:00",
+   "endDateTime": "2024-04-19T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 614,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2401300755491092007449",
+   "photoUrl": "https://static.accupass.com/eventbanner/2401300904292454096050_P520x260.jpg",
+   "name": "3/22【TIRI線上董事、公司治理主管進修課程】台灣再生能源市場暨綠色金融現況及趨勢",
+   "startDateTime": "2024-03-22T06:00:00",
+   "endDateTime": "2024-03-22T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 474,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2401051022031964286832",
+   "photoUrl": "https://static.accupass.com/eventbanner/2401110904401771256886_P520x260.jpg",
+   "name": "2/23【TIRI線上董事、公司治理主管進修課程】企業績效提升的密碼-成本分析與綠色供應鏈",
+   "startDateTime": "2024-02-23T06:00:00",
+   "endDateTime": "2024-02-23T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 374,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307171102231831444330",
+   "photoUrl": "https://static.accupass.com/eventbanner/2308170341458934037390_P520x260.jpg",
+   "name": "12/22（五）【TIRI線上董事、公司治理主管進修課程】2023年新版公司治理暨董事會績效評鑑實務解析",
+   "startDateTime": "2023-12-22T06:00:00",
+   "endDateTime": "2023-12-22T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 1036,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2311090601041427791561",
+   "photoUrl": "https://static.accupass.com/eventbanner/2312010253501692105607_P520x260.jpg",
+   "name": "12/15（五）【焦點論壇(可申報3小時董事、治理主管進修時數)】企業面對永續投資的溝通管理",
+   "startDateTime": "2023-12-15T06:00:00",
+   "endDateTime": "2023-12-15T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 732,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307170855511576946557",
+   "photoUrl": "https://static.accupass.com/eventbanner/2308010722482338104270_P520x260.jpg",
+   "name": "11/24（五）【TIRI線上董事、公司治理主管進修課程】如何用 Excel進行企業估值及IR工作管理",
+   "startDateTime": "2023-11-24T06:00:00",
+   "endDateTime": "2023-11-24T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 690,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307170816069171162030",
+   "photoUrl": "https://static.accupass.com/eventbanner/2307180544363596824760_P520x260.jpg",
+   "name": "10/20（五）【TIRI線上董事、公司治理主管進修課程】如何運用智慧財產權管理制度提升公司治理",
+   "startDateTime": "2023-10-20T06:00:00",
+   "endDateTime": "2023-10-20T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 588,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2308250752561359993171",
+   "photoUrl": "https://static.accupass.com/eventbanner/2309070750191953493687_P520x260.jpg",
+   "name": "9/26（二）【焦點論壇(可申報3小時董事、治理主管進修時數)】輿論共振-投資人關係、媒體、政府的合作之道",
+   "startDateTime": "2023-09-26T06:00:00",
+   "endDateTime": "2023-09-26T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 711,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307270250021793452460",
+   "photoUrl": "https://static.accupass.com/eventbanner/2308020227052031629200_P520x260.jpg",
+   "name": "9/17（日）【台中場 主題餐會】企業金融好夥伴 - 全國農業金庫的企金和農貸",
+   "startDateTime": "2023-09-17T10:30:00",
+   "endDateTime": "2023-09-17T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 2,
+   "pageView": 282,
+   "tags": [
+    {
+     "name": "董事"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307170755411972366830",
+   "photoUrl": "https://static.accupass.com/eventbanner/2308070155494701573000_P520x260.jpg",
+   "name": "9/14（四）【TIRI線上董事、公司治理主管進修課程】台灣企業併購實務",
+   "startDateTime": "2023-09-14T06:00:00",
+   "endDateTime": "2023-09-14T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 559,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307060820341227582939",
+   "photoUrl": "https://static.accupass.com/eventbanner/2307110207591877504004_P520x260.jpg",
+   "name": "8/17【TIRI線上董事、公司治理主管進修課程】受控外國企業(CFC)&全球反避稅",
+   "startDateTime": "2023-08-17T06:00:00",
+   "endDateTime": "2023-08-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 336,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307060241096409589860",
+   "photoUrl": "https://static.accupass.com/eventbanner/2307060233351002231463_P520x260.jpg",
+   "name": "8/13【TIRI主題餐會 台中】景氣循環和股市投資★可申報董事、公司治理主管進修時數",
+   "startDateTime": "2023-08-13T10:30:00",
+   "endDateTime": "2023-08-13T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 2,
+   "pageView": 251,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2306300927321644373735",
+   "photoUrl": "https://static.accupass.com/eventbanner/2308021011181013094184_P520x260.jpg",
+   "name": "8/9【TIRI主題餐會 台北】數位世代下的危機處理★可申報董事、公司治理主管進修時數",
+   "startDateTime": "2023-08-09T10:30:00",
+   "endDateTime": "2023-08-09T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 468,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2307060848535293216650",
+   "photoUrl": "https://static.accupass.com/eventbanner/2307070923498185177320_P520x260.jpg",
+   "name": "7/31【TIRI線上董事、公司治理主管進修課程】數位經濟時代，企業如何創新，突破獲利能力",
+   "startDateTime": "2023-07-31T06:00:00",
+   "endDateTime": "2023-07-31T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 404,
+   "tags": [
+    {
+     "name": "進修課程"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2305240816031458186411",
+   "photoUrl": "https://static.accupass.com/eventbanner/2305250224551666231496_P520x260.jpg",
+   "name": "6/30【TIRI線上董事、公司治理主管進修課程】媒體經營與危機管理 系列",
+   "startDateTime": "2023-06-30T06:00:00",
+   "endDateTime": "2023-06-30T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 483,
+   "tags": [
+    {
+     "name": "董事進修，公司治理主管進修，危機管理，公共關係，媒體經營"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2304270305212192163320",
+   "photoUrl": "https://static.accupass.com/eventbanner/2305220727251163898222_P520x260.jpg",
+   "name": "5/28【台中講座餐會】疫後振興特別預算補助企業創新轉型計畫",
+   "startDateTime": "2023-05-28T10:30:00",
+   "endDateTime": "2023-05-28T12:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taichung City",
+   "likeCount": 2,
+   "pageView": 299,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2304210402044253590580",
+   "photoUrl": "https://static.accupass.com/eventbanner/2304270944448818677390_P520x260.jpg",
+   "name": "5/26【線上授課】 董監事(含獨立)、公司治理主管進修「從股東行動主義看ESG發展趨勢」",
+   "startDateTime": "2023-05-26T06:00:00",
+   "endDateTime": "2023-05-26T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 718,
+   "tags": [
+    {
+     "name": "線上授課"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2304180315424065663950",
+   "photoUrl": "https://static.accupass.com/eventbanner/2304240610198327219110_P520x260.jpg",
+   "name": "5/19【台北講座餐會】落實投資人關係 收穫IR證照",
+   "startDateTime": "2023-05-19T11:00:00",
+   "endDateTime": "2023-05-19T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 464,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2304101042146152048180",
+   "photoUrl": "https://static.accupass.com/eventbanner/2303150939428526771010_P520x260.jpg",
+   "name": "【TIRI 趨勢講座】中國政經新情勢-企業如何因應美中台關係的變化",
+   "startDateTime": "2023-04-14T06:00:00",
+   "endDateTime": "2023-04-14T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 137,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2303130938022091367133",
+   "photoUrl": "https://static.accupass.com/eventbanner/2303150939428526771010_P520x260.jpg",
+   "name": "【TIRI 趨勢講座】中國政經新情勢-企業如何因應美中台關係的變化",
+   "startDateTime": "2023-04-10T06:00:00",
+   "endDateTime": "2023-04-10T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 523,
+   "tags": [],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2211170940462038453675",
+   "photoUrl": "https://static.accupass.com/eventbanner/2211170936301474814614_P520x260.jpg",
+   "name": "12/21【線上授課】 董監事(含獨立)、公司治理主管進修「營業秘密保護大作戰」",
+   "startDateTime": "2022-12-21T06:00:00",
+   "endDateTime": "2022-12-21T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 386,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2210260716281804928140",
+   "photoUrl": "https://static.accupass.com/eventbanner/2210260712521991208266_P520x260.jpg",
+   "name": "12/7【線上授課】 董監事(含獨立)、公司治理主管進修「財務報告責任與風險管理」",
+   "startDateTime": "2022-12-07T05:30:00",
+   "endDateTime": "2022-12-07T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 889,
+   "tags": [
+    {
+     "name": "董事資訊權   董監事課程認證   公司治理   公司治理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2210260355511348141228",
+   "photoUrl": "https://static.accupass.com/eventbanner/2211020651475986386730_P520x260.jpg",
+   "name": "11/29【線上授課】 董監事(含獨立)、公司治理主管進修「數位化趨勢下的家族企業傳承策略」 ",
+   "startDateTime": "2022-11-29T05:30:00",
+   "endDateTime": "2022-11-29T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 484,
+   "tags": [
+    {
+     "name": "董事資訊權   董監事課程認證   公司治理   公司治理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2210270400067931443620",
+   "photoUrl": "https://static.accupass.com/eventbanner/2211090659191313596512_P520x260.jpg",
+   "name": "11/25【線上授課】 董監事(含獨立)、公司治理主管進修「台灣企業併購實務」",
+   "startDateTime": "2022-11-25T06:00:00",
+   "endDateTime": "2022-11-25T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 724,
+   "tags": [
+    {
+     "name": "董事資訊權   董監事課程認證   公司治理   公司治理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2209270840226690437400",
+   "photoUrl": "https://static.accupass.com/eventbanner/2210120159021381400076_P520x260.jpg",
+   "name": "10/25【線上授課】 董監事(含獨立)、公司治理主管進修 「董事會該關心的ESG核心議題」",
+   "startDateTime": "2022-10-25T06:00:00",
+   "endDateTime": "2022-10-25T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 1025,
+   "tags": [
+    {
+     "name": "線上授課"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2209081029521742046611",
+   "photoUrl": "https://static.accupass.com/eventbanner/2209081026581691257365_P520x260.jpg",
+   "name": "10/19【線上授課】 董監事(含獨立)、公司治理主管進修 「我國永續發展債券發展與實務分享」",
+   "startDateTime": "2022-10-19T05:30:00",
+   "endDateTime": "2022-10-19T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 685,
+   "tags": [
+    {
+     "name": "線上授課"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2210030832511749086992",
+   "photoUrl": "https://static.accupass.com/eventbanner/2210051121507383204630_P520x260.jpg",
+   "name": "10/17【線上研討會 企業永續實務系列－如何落地執行ESG】TIRI X 台灣證交所 X CMoney",
+   "startDateTime": "2022-10-17T06:00:00",
+   "endDateTime": "2022-10-17T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 20,
+   "pageView": 1610,
+   "tags": [
+    {
+     "name": "台灣證交所"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2207210756068027196780",
+   "photoUrl": "https://static.accupass.com/eventbanner/2207210754341943669098_P520x260.jpg",
+   "name": "9/30 【TIRI 線上講座】IRO對資本市場的觀念重塑",
+   "startDateTime": "2022-09-30T06:00:00",
+   "endDateTime": "2022-09-30T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 611,
+   "tags": [
+    {
+     "name": "資本市場"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2207270744342388581690",
+   "photoUrl": "https://static.accupass.com/eventbanner/2207281036286607493670_P520x260.jpg",
+   "name": "9/14~9/16 IR實務系列課程 （本課程符合董監事(含獨立)、公司治理主管進修）",
+   "startDateTime": "2022-09-14T06:00:00",
+   "endDateTime": "2022-09-16T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 979,
+   "tags": [
+    {
+     "name": "irtc 企業經理人研訓中心"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2208111052393552066730",
+   "photoUrl": "https://static.accupass.com/eventbanner/2208111050461915321359_P520x260.jpg",
+   "name": "9/7【線上授課】 董監事(含獨立)、公司治理主管進修 「全球最低稅負之國內應對策略」",
+   "startDateTime": "2022-09-07T05:30:00",
+   "endDateTime": "2022-09-07T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 532,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2207210656511323067406",
+   "photoUrl": "https://static.accupass.com/eventbanner/2207210654064308219900_P520x260.jpg",
+   "name": "8/26 【TIRI 線上講座】機構投資者如何對企業估值",
+   "startDateTime": "2022-08-26T06:00:00",
+   "endDateTime": "2022-08-26T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 591,
+   "tags": [
+    {
+     "name": "＃線上講座"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2206300855131454019643",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206300853151804447724_P520x260.jpg",
+   "name": "8/22【線上授課】 董監事(含獨立)、公司治理主管進修 永續金融及投資ESG化趨勢",
+   "startDateTime": "2022-08-22T05:30:00",
+   "endDateTime": "2022-08-22T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 689,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2206020730391573035796",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206020953277402846680_P520x260.jpg",
+   "name": "8/19【線上授課】 董監事(含獨立)、公司治理主管進修 「斷鏈還是鍛煉？危機如何變轉機？」",
+   "startDateTime": "2022-08-19T06:00:00",
+   "endDateTime": "2022-08-19T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 465,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2205260729461897471759",
+   "photoUrl": "https://static.accupass.com/eventbanner/2205260727552047480574_P520x260.jpg",
+   "name": "8/18【線上授課】 董監事(含獨立)、公司治理主管進修 「企業永續經營－完美接班與資產傳承實務解析」",
+   "startDateTime": "2022-08-18T06:00:00",
+   "endDateTime": "2022-08-18T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 700,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2206280838404003958290",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206280836183282272540_P520x260.jpg",
+   "name": "8/10【線上授課】 董監事(含獨立)、公司治理主管進修 「淨零碳排跨域管理實務」",
+   "startDateTime": "2022-08-10T05:30:00",
+   "endDateTime": "2022-08-10T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 684,
+   "tags": [
+    {
+     "name": "董事資訊權   董監事課程認證   公司治理   公司治理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2207120556081239853858",
+   "photoUrl": "https://static.accupass.com/eventbanner/2207121044381039246595_P520x260.jpg",
+   "name": "【國際級大師研討會】企業IR實務及IRO工作解析",
+   "startDateTime": "2022-08-05T05:30:00",
+   "endDateTime": "2022-08-05T08:10:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 1183,
+   "tags": [
+    {
+     "name": "IR實務分析研討"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2206201004571556151777",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206201002308144364430_P520x260.jpg",
+   "name": "7/20【線上授課】 董監事(含獨立)、公司治理主管進修 「商業法院對董事會運作及董事執行職務之影響」",
+   "startDateTime": "2022-07-20T05:30:00",
+   "endDateTime": "2022-07-20T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 601,
+   "tags": [
+    {
+     "name": "董事資訊權   董監事課程認證   公司治理   公司治理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2206010904201505992530",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206020815271227651180_P520x260.jpg",
+   "name": "7/15【線上授課】 董監事(含獨立)、公司治理主管進修 「ESG的趨勢及疫情環境談全球及台灣稅制改革及企業稅務治理」",
+   "startDateTime": "2022-07-15T06:00:00",
+   "endDateTime": "2022-07-15T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 471,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2204210928471859795600",
+   "photoUrl": "https://static.accupass.com/eventbanner/2206300852181229563090_P520x260.jpg",
+   "name": " 7/6【線上授課】 董監事(含獨立)、公司治理主管進修 「智慧財產權管理-智財訴訟實務」",
+   "startDateTime": "2022-07-06T05:30:00",
+   "endDateTime": "2022-07-06T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 605,
+   "tags": [
+    {
+     "name": "台灣數位治理協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2204210817522539158710",
+   "photoUrl": "https://static.accupass.com/eventbanner/2204221058252701848930_P520x260.jpg",
+   "name": "6/22【線上授課】 董監事(含獨立)、公司治理主管進修 「審計與薪酬委員會之運作實務」",
+   "startDateTime": "2022-06-22T05:30:00",
+   "endDateTime": "2022-06-22T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 784,
+   "tags": [
+    {
+     "name": "台灣數位治理協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2204210743363132746800",
+   "photoUrl": "https://static.accupass.com/eventbanner/2205100858021516904733_P520x260.jpg",
+   "name": "【線上授課】5月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2022-05-23T05:30:00",
+   "endDateTime": "2022-05-23T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 716,
+   "tags": [
+    {
+     "name": "台灣數位治理協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2111190802051393559250",
+   "photoUrl": "https://static.accupass.com/eventbanner/2201140620418853741530_P520x260.jpg",
+   "name": "【ESG實務講座】企業如何執行低碳ESG轉型計畫？",
+   "startDateTime": "2022-01-18T06:00:00",
+   "endDateTime": "2022-01-18T08:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 11,
+   "pageView": 1328,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2111230720504006007310",
+   "photoUrl": "https://static.accupass.com/eventbanner/2111250337241813767634_P520x260.jpg",
+   "name": "【線上授課】12月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-12-28T06:00:00",
+   "endDateTime": "2021-12-28T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 752,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2111010634011056284348",
+   "photoUrl": "https://static.accupass.com/eventbanner/2111010823452052470480_P520x260.jpg",
+   "name": "【線上授課】11月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-11-26T06:00:00",
+   "endDateTime": "2021-11-26T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 580,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2109140349182026445422",
+   "photoUrl": "https://static.accupass.com/eventbanner/2109270238307004491080_P520x260.jpg",
+   "name": "【線上授課】10月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-10-21T06:00:00",
+   "endDateTime": "2021-10-29T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 882,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2108310808471075371183",
+   "photoUrl": "https://static.accupass.com/eventbanner/2108310749001880523619_P520x260.jpg",
+   "name": "【線上授課】9月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-09-30T06:00:00",
+   "endDateTime": "2021-09-30T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Online",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 514,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2107091040028474520310",
+   "photoUrl": "https://static.accupass.com/eventbanner/2107191208232353074150_P520x260.jpg",
+   "name": "【線上授課】8月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-08-27T06:00:00",
+   "endDateTime": "2021-08-27T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 610,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2105201052531886237695",
+   "photoUrl": "https://static.accupass.com/eventbanner/2107280919031308632042_P520x260.jpg",
+   "name": "【線上授課】7月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-07-29T06:00:00",
+   "endDateTime": "2021-07-30T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 1293,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2104220400571186318543",
+   "photoUrl": "https://static.accupass.com/eventbanner/2105030655571600362393_P520x260.jpg",
+   "name": "【線上授課】5~6月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2021-05-28T06:00:00",
+   "endDateTime": "2021-06-18T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 503,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2103180313471398328078",
+   "photoUrl": "https://static.accupass.com/eventbanner/2103190730517452978020_P520x260.jpg",
+   "name": "TIRI講座－ESG及董事會績效評估最佳實務",
+   "startDateTime": "2021-05-04T06:30:00",
+   "endDateTime": "2021-05-04T09:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 6,
+   "pageView": 963,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2101250722481742833645",
+   "photoUrl": "https://static.accupass.com/eventbanner/2102011118181086470951_P520x260.jpg",
+   "name": "上市櫃公司專業經理人必上的十堂課",
+   "startDateTime": "2021-03-24T06:00:00",
+   "endDateTime": "2021-05-26T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 6,
+   "pageView": 2029,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2011251059252009852227",
+   "photoUrl": "https://static.accupass.com/eventbanner/2012020626402044172109_P520x260.jpg",
+   "name": "【線上授課】12月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2020-12-29T06:00:00",
+   "endDateTime": "2020-12-30T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 808,
+   "tags": [
+    {
+     "name": "irtc 企業經理人研訓中心"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2009111047229466889170",
+   "photoUrl": "https://static.accupass.com/eventbanner/2010070628521928243290_P520x260.jpg",
+   "name": "【線上授課】10~11月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2020-10-21T06:00:00",
+   "endDateTime": "2020-11-19T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "",
+   "likeCount": 1,
+   "pageView": 1847,
+   "tags": [
+    {
+     "name": "irtc 企業經理人研訓中心"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2008060620281532997931",
+   "photoUrl": "https://static.accupass.com/eventbanner/2008060427181758440305_P520x260.jpg",
+   "name": "【投資人關係實務講座】從IR走進企業決策層",
+   "startDateTime": "2020-09-01T06:30:00",
+   "endDateTime": "2020-09-01T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 1361,
+   "tags": [
+    {
+     "name": "irtc"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2006160351177732114120",
+   "photoUrl": "https://static.accupass.com/eventbanner/2006121152345616312820_P520x260.jpg",
+   "name": "【線上授課】7~9月董監事（含獨立）、公司治理主管進修",
+   "startDateTime": "2020-07-22T06:00:00",
+   "endDateTime": "2020-09-02T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "",
+   "likeCount": 0,
+   "pageView": 998,
+   "tags": [
+    {
+     "name": "TIRI台灣投資人關係協會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2004160753121894436997",
+   "photoUrl": "https://static.accupass.com/eventbanner/2004160731505812095010_P520x260.jpg",
+   "name": "【線上授課】 5、6月 董監事(含獨立)、公司治理主管進修 系列課程",
+   "startDateTime": "2020-05-15T06:00:00",
+   "endDateTime": "2020-06-04T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Pending",
+   "location": "",
+   "likeCount": 0,
+   "pageView": 729,
+   "tags": [
+    {
+     "name": "線上進修"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2002060724251913235689",
+   "photoUrl": "https://static.accupass.com/eventbanner/2003180239336096104060_P520x260.jpg",
+   "name": "完美危機處理SOP",
+   "startDateTime": "2020-04-24T01:30:00",
+   "endDateTime": "2020-04-24T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 1251,
+   "tags": [
+    {
+     "name": "商業"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "2002050259022213300450",
+   "photoUrl": "https://static.accupass.com/eventbanner/2002170351217573933970_P520x260.jpg",
+   "name": "透過媒體及資本市場打造企業價值（已取消）",
+   "startDateTime": "2020-03-24T01:30:00",
+   "endDateTime": "2020-03-25T08:30:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 337,
+   "tags": [
+    {
+     "name": "資本市場"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1909110535293663550930",
+   "photoUrl": "https://static.accupass.com/eventbanner/1909110533316456384790_P520x260.jpg",
+   "name": "智財管理新思惟-運用AI智能平台協助智財管理（已停辦）",
+   "startDateTime": "2019-10-25T06:00:00",
+   "endDateTime": "2019-10-25T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 1,
+   "pageView": 417,
+   "tags": [
+    {
+     "name": "智財管理"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1909100800522027576943",
+   "photoUrl": "https://static.accupass.com/eventbanner/1909201005581472126348_P520x260.jpg",
+   "name": "藝術品欣賞與投資講座",
+   "startDateTime": "2019-10-17T11:00:00",
+   "endDateTime": "2019-10-17T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 3,
+   "pageView": 747,
+   "tags": [
+    {
+     "name": "學習"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1909161221197878822000",
+   "photoUrl": "https://static.accupass.com/eventbanner/1909170327341207495691_P520x260.jpg",
+   "name": "從企業社會責任（CSR）中發現公司價值",
+   "startDateTime": "2019-10-07T11:00:00",
+   "endDateTime": "2019-10-07T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 4,
+   "pageView": 630,
+   "tags": [
+    {
+     "name": "學習"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1907110336111512661650",
+   "photoUrl": "https://static.accupass.com/userupload/1907310132411859900450_P520x260.jpg",
+   "name": "8/23(台北)董事會股東會完全解析課程",
+   "startDateTime": "2019-08-23T06:00:00",
+   "endDateTime": "2019-08-23T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 2,
+   "pageView": 721,
+   "tags": [
+    {
+     "name": "董事會  股東會"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1906141010111969465968",
+   "photoUrl": "https://static.accupass.com/userupload/1906201012361260702595_P520x260.jpg",
+   "name": "7/31(台北) TIRI 雙主題講座－國內外併購實務大解析／ESG、年報雙語化趨勢與重要性",
+   "startDateTime": "2019-07-31T11:15:00",
+   "endDateTime": "2019-07-31T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 5,
+   "pageView": 1212,
+   "tags": [
+    {
+     "name": "講師分享"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1906271041331443852617",
+   "photoUrl": "https://static.accupass.com/userupload/1906280221191860031230_P520x260.jpg",
+   "name": "7/31(台南)-董事資訊權與公司配合義務之範圍及實務分析",
+   "startDateTime": "2019-07-31T06:00:00",
+   "endDateTime": "2019-07-31T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Tainan City",
+   "likeCount": 0,
+   "pageView": 423,
+   "tags": [
+    {
+     "name": "董事資訊權"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1906250958571845189036",
+   "photoUrl": "https://static.accupass.com/userupload/1906280220411863132747_P520x260.jpg",
+   "name": "7/29(新竹)-公司治理人員的權責與挑戰",
+   "startDateTime": "2019-07-29T06:00:00",
+   "endDateTime": "2019-07-29T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Hsinchu City",
+   "likeCount": 0,
+   "pageView": 631,
+   "tags": [
+    {
+     "name": "董事資訊權"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1906271032011576566070",
+   "photoUrl": "https://static.accupass.com/userupload/1906280219091010800106_P520x260.jpg",
+   "name": "7/17(台北)-董事資訊權",
+   "startDateTime": "2019-07-17T06:00:00",
+   "endDateTime": "2019-07-17T09:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 957,
+   "tags": [
+    {
+     "name": "董事資訊權"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  },
+  {
+   "eventIdNumber": "1905201012201467286744",
+   "photoUrl": "https://static.accupass.com/userupload/610b7910c14a4920ac6ed4709a6f4ac1_P520x260.jpg",
+   "name": "TIRI雙主題講座",
+   "startDateTime": "2019-05-30T11:00:00",
+   "endDateTime": "2019-05-30T13:00:00",
+   "timeZone": 8.0,
+   "isExternalLink": false,
+   "redirectUrl": "",
+   "linkUrl": "",
+   "eventPlaceType": "Offline",
+   "location": "Taipei City",
+   "likeCount": 0,
+   "pageView": 544,
+   "tags": [
+    {
+     "name": "講師分享"
+    }
+   ],
+   "isAD": false,
+   "advertIdNumber": "",
+   "utm": null
+  }
+ ]
+}

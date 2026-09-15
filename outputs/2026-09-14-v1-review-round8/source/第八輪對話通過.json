@@ -1,0 +1,9 @@
+{
+  "id": "17",
+  "confirmed": true,
+  "deliveryRevision": "20260914-r8b",
+  "confirmationSource": "conversation",
+  "note": "Ok我已打勾",
+  "recordedAt": "2026-09-14T09:23:35Z",
+  "timeMeaning": "記錄對話確認的時間；未讀取使用者瀏覽器中實際打勾時間"
+}

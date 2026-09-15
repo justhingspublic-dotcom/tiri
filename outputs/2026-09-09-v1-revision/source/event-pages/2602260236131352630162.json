@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2602260236131352630162",
+  "local_label": "03.24 2026 如何從財報發現企業經營弊端 董監進修課程 線上 →",
+  "id": "2602260236131352630162",
+  "source_title": "03/24【TIRI線上董事、公司治理主管進修課程】如何從財報發現企業經營弊端｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2603020942391058546621.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "03/24【TIRI線上董事、公司治理主管進修課程】如何從財報發現企業經營弊端",
+      "image": "https://static.accupass.com/eventbanner/2603020942391058546621.jpg",
+      "startDate": "2026-03-24T14:00:00+08:00",
+      "endDate": "2026-03-24T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "財務報表不只是數字的呈現，更是企業經營狀況的縮影。\n本課程將帶領學員透過系統化的分析方法，拆解財報背後的關鍵訊號，辨識潛藏的經營風險與異常徵兆。\n\n從「財務數字是否真的看得出問題？」出發，逐步探討如何透過指標變化、結構異常與趨勢分析，找出企業可能面臨的經營盲點與潛在弊端。並進一步說明，當問題浮現後，決策者或專業人士應如何因應與行動。\n\n透過實際案例討論與情境解析，強化判讀能力與風險敏感度，培養從數字洞察企業本質的專業視角。",
+      "performer": {
+        "@type": "Person",
+        "name": "胡碩勻"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2602260236131352630162.jpg"
+}

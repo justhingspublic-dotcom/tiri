@@ -1,0 +1,54 @@
+{
+  "revision": "20260911-home2",
+  "request": "只輪播圖片，保留原文字，移除下方控制。",
+  "static": {
+    "originalHeroContentExactMatch": true,
+    "contactDomUnchanged": true,
+    "otherHomeSectionsUnchanged": true,
+    "backgroundImageCount": 3,
+    "heroControlCount": 0,
+    "javascriptSyntax": "passed",
+    "reviewOther42ItemsUnchanged": true
+  },
+  "browser": {
+    "browser": "Chrome",
+    "desktopViewport": [
+      1440,
+      1000
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "narrowViewport": [
+      320,
+      740
+    ],
+    "overflow": false,
+    "observedImageIndices": [
+      0,
+      2,
+      0,
+      1
+    ],
+    "originalTextAndCtasFixed": true,
+    "reducedMotion": {
+      "startIndex": 1,
+      "endIndex": 1,
+      "automaticRotationStopped": true
+    },
+    "consoleNote": "Chrome navigation logged one ViewTransition opt-in disabled InvalidStateError; no homepage carousel script error observed."
+  },
+  "review": {
+    "item": "42",
+    "revision": "20260911-home2",
+    "confirmed": false,
+    "historyEntries": 2,
+    "counts": {
+      "accepted": 37,
+      "ready": 2,
+      "waiting": 4
+    }
+  },
+  "previousVerification": "source/home1-before-correction/驗證結果.json"
+}

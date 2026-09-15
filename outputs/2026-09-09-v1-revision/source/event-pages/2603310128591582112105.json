@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2603310128591582112105",
+  "local_label": "05.22 2026 化解永續焦慮! 看懂未來十年ESG大趨勢 董監進修課程 線上 →",
+  "id": "2603310128591582112105",
+  "source_title": "05/22【TIRI線上董事、公司治理主管進修課程】化解永續焦慮! 看懂未來十年ESG大趨勢｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2604020357293465468190.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "05/22【TIRI線上董事、公司治理主管進修課程】化解永續焦慮! 看懂未來十年ESG大趨勢",
+      "image": "https://static.accupass.com/eventbanner/2604020357293465468190.jpg",
+      "startDate": "2026-05-22T14:00:00+08:00",
+      "endDate": "2026-05-22T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在氣候變遷與全球局勢動盪下，企業正面臨日益升高的「永續焦慮」。本課程從CSR到ESG的演進出發，帶您掌握未來十年的關鍵趨勢，涵蓋淨零減碳、氣候調適、生物多樣性、人權與公正轉型等重要議題，同時解析循環經濟、碳信用與永續行銷中的「漂綠」風險。面對人工智慧發展與地緣政治不確定性，課程亦將提供實務觀點，協助企業降低風險、強化韌性，將永續轉化為成長動能。",
+      "performer": {
+        "@type": "Person",
+        "name": "高宜凡"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2603310128591582112105.jpg"
+}

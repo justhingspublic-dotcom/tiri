@@ -1,0 +1,16 @@
+{
+  "total": 45,
+  "accepted": 44,
+  "ready": [
+    "17"
+  ],
+  "newlyAccepted": [
+    "23",
+    "25"
+  ],
+  "historyPreserved": true,
+  "sourceUnchanged": true,
+  "recapHtmlChangesOnlyScriptVersion": true,
+  "localLinksPassed": 71,
+  "httpPassed": 5
+}

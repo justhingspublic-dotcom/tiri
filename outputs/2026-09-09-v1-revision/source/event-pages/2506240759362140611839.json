@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2506240759362140611839",
+  "local_label": "08.06 2025 在台企業における日本人取締役・監査役が留意すべき法的ポイント 董監進修・日本語 線上 →",
+  "id": "2506240759362140611839",
+  "source_title": "08/06【TIRI 取締役ー講座（オンライン）】在台企業における日本人取締役・監査役が留意すべき法的ポイント｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2506270434482060961630.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "08/06【TIRI 取締役ー講座（オンライン）】在台企業における日本人取締役・監査役が留意すべき法的ポイント",
+      "image": "https://static.accupass.com/eventbanner/2506270434482060961630.jpg",
+      "startDate": "2025-08-06T13:00:00+08:00",
+      "endDate": "2025-08-06T16:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在台企業における日本人取締役・監査役が留意すべき法的ポイント\n講師：誠遠ビジネス法律事務所　周 泰維 パートナー弁護士",
+      "performer": {
+        "@type": "Person",
+        "name": "周泰維(シュウ タイイ)"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2506240759362140611839.jpg"
+}

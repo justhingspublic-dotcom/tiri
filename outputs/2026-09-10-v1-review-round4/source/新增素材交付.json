@@ -1,0 +1,18 @@
+{
+  "id": "20",
+  "receivedAt": "2026-09-10T06:05:11.754949+00:00",
+  "sourceFolder": "ref/官網/新官網-資料/文件/4課程與服務/董監事進修課程圖片",
+  "sourceNote": "客戶提供董監事進修照片，請協助做拼接 Banner，降低單一人物的突出程度。使用者補充：九張全部放入，正面照片也保留。",
+  "updates": {
+    "reviewStatus": "followup",
+    "deliveryStatus": "ready",
+    "deliveryRevision": "20260910-r10-nine-photo",
+    "currentFocus": "董監事進修：九張照片拼接 Banner",
+    "route": "trainbod.html#training-banner",
+    "currentChange": "收到 9 張照片，已全部拼成九宮格 Banner，正面照片亦保留；中英文頁同步套用，桌機與手機完整呈現九張畫面。正式 PNG 與三張拼接初稿已存入「新官網-設計」。",
+    "currentCheck": "查看中英文董監事進修頁頂端：九張照片是否都有出現、人物比例是否合適、標題是否清楚；手機版應保留整張拼接，不裁成單一人物。",
+    "assistantResponse": "依最新指示採九張全放。以內建圖片編輯工具分兩步拼接；原始照片檔案保留，設計資料夾另外存放完成圖。兩項已通過的流程圖與董事會流程手機版亦一併整理。",
+    "deliveryLimit": "",
+    "nextAction": ""
+  }
+}

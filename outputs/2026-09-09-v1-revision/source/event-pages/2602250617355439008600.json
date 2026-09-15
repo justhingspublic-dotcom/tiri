@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2602250617355439008600",
+  "local_label": "04.09 2026 董事會如何掌握另類投資的風險與機會 董監進修課程 線上 →",
+  "id": "2602250617355439008600",
+  "source_title": "04/09【TIRI線上董事、公司治理主管進修課程】董事會如何掌握另類投資的風險與機會｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2603030659161577050590.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "04/09【TIRI線上董事、公司治理主管進修課程】董事會如何掌握另類投資的風險與機會",
+      "image": "https://static.accupass.com/eventbanner/2603030659161577050590.jpg",
+      "startDate": "2026-04-09T14:00:00+08:00",
+      "endDate": "2026-04-09T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在全球資本市場波動加劇與傳統資產報酬壓縮的環境下，另類投資已成為企業資產配置的重要選項。本課程從董事會治理與監督角度出發，解析另類投資的市場規模與發展趨勢，深入說明創投（VC）、私募股權（PE）與對沖基金（Hedge Funds）的運作邏輯與風險結構，並結合資產配置框架、風險評估方法及七大歷史教訓，協助董事會建立兼顧報酬與風險控管的決策思維。講師林家振具企業領導、國際金融業與私募基金實務經驗，將以策略高度與市場案例，帶領學員掌握另類投資的機會與挑戰。",
+      "performer": {
+        "@type": "Person",
+        "name": "林家振"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2602250617355439008600.jpg"
+}

@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/1909161221197878822000",
+  "local_label": "10.07 2019 從企業社會責任（CSR）中發現公司價值 活動 台北 →",
+  "id": "1909161221197878822000",
+  "source_title": "從企業社會責任（CSR）中發現公司價值｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/1909170327341207495691.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "從企業社會責任（CSR）中發現公司價值",
+      "image": "https://static.accupass.com/eventbanner/1909170327341207495691.jpg",
+      "startDate": "2019-10-07T19:00:00+08:00",
+      "endDate": "2019-10-07T21:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "鑿於現今企業的 CSR（企業社會責任）活動多流於形式，TIRI 台灣投資人關係協會於10/7主辦『從企業社會責任(CSR)中發現公司價值』講座，分享除了慈善與公益目的外，CSR 如何同時創造商業價值。\n\n本次講座由 經濟部中小企業處指導、KPMG 安侯永續發展顧問股份有限公司協辦，是國內上市櫃公司及資本市場從業人員學習及交流的最佳機會，座位有限，欲報從速！",
+      "performer": {
+        "@type": "Person",
+        "name": "黃正忠"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區民生東路四段54號4樓",
+        "name": "華南永昌證券會議室"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/1909161221197878822000.jpg"
+}

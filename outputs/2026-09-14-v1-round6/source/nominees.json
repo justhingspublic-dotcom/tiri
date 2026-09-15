@@ -1,0 +1,4284 @@
+{
+  "2022": [
+    {
+      "zh": "上市巨型股",
+      "en": "Listed giant-sized companies",
+      "rows": [
+        {
+          "code": "1101",
+          "zh": "台泥",
+          "en": "TCC",
+          "sourceCell": "A2"
+        },
+        {
+          "code": "1216",
+          "zh": "統一",
+          "en": "UNI-PRESIDENT",
+          "sourceCell": "A3"
+        },
+        {
+          "code": "1301",
+          "zh": "台塑",
+          "en": "FPC",
+          "sourceCell": "A4"
+        },
+        {
+          "code": "1303",
+          "zh": "南亞",
+          "en": "NPC",
+          "sourceCell": "A5"
+        },
+        {
+          "code": "2002",
+          "zh": "中鋼",
+          "en": "CSC",
+          "sourceCell": "A6"
+        },
+        {
+          "code": "2303",
+          "zh": "聯電",
+          "en": "UMC",
+          "sourceCell": "A7"
+        },
+        {
+          "code": "2308",
+          "zh": "台達電",
+          "en": "DELTA",
+          "sourceCell": "A8"
+        },
+        {
+          "code": "2317",
+          "zh": "鴻海",
+          "en": "HON HAI",
+          "sourceCell": "A9"
+        },
+        {
+          "code": "2330",
+          "zh": "台積電",
+          "en": "TSMC",
+          "sourceCell": "A10"
+        },
+        {
+          "code": "2357",
+          "zh": "華碩",
+          "en": "ASUSTEK",
+          "sourceCell": "A11"
+        },
+        {
+          "code": "2382",
+          "zh": "廣達",
+          "en": "QCI",
+          "sourceCell": "A12"
+        },
+        {
+          "code": "2395",
+          "zh": "研華",
+          "en": "Advantech",
+          "sourceCell": "A13"
+        },
+        {
+          "code": "2412",
+          "zh": "中華電",
+          "en": "CHT",
+          "sourceCell": "A14"
+        },
+        {
+          "code": "2454",
+          "zh": "聯發科",
+          "en": "MediaTek",
+          "sourceCell": "A15"
+        },
+        {
+          "code": "2603",
+          "zh": "長榮",
+          "en": "EMC",
+          "sourceCell": "A16"
+        },
+        {
+          "code": "2609",
+          "zh": "陽明",
+          "en": "YMTC",
+          "sourceCell": "A17"
+        },
+        {
+          "code": "2615",
+          "zh": "萬海",
+          "en": "WANHAI",
+          "sourceCell": "A18"
+        },
+        {
+          "code": "2881",
+          "zh": "富邦金",
+          "en": "Fubon Financial",
+          "sourceCell": "A19"
+        },
+        {
+          "code": "2882",
+          "zh": "國泰金",
+          "en": "CATHAY FHC",
+          "sourceCell": "A20"
+        },
+        {
+          "code": "2883",
+          "zh": "開發金",
+          "en": "CDF",
+          "sourceCell": "A21"
+        },
+        {
+          "code": "2884",
+          "zh": "玉山金",
+          "en": "E.S.F.H",
+          "sourceCell": "A22"
+        },
+        {
+          "code": "2885",
+          "zh": "元大金",
+          "en": "Yuanta Group",
+          "sourceCell": "A23"
+        },
+        {
+          "code": "2886",
+          "zh": "兆豐金",
+          "en": "MEGA FHC",
+          "sourceCell": "A24"
+        },
+        {
+          "code": "2887",
+          "zh": "台新金",
+          "en": "TS Holdings",
+          "sourceCell": "A25"
+        },
+        {
+          "code": "2891",
+          "zh": "中信金",
+          "en": "CTBC HOLDING",
+          "sourceCell": "A26"
+        },
+        {
+          "code": "2892",
+          "zh": "第一金",
+          "en": "FFHC",
+          "sourceCell": "A27"
+        },
+        {
+          "code": "2912",
+          "zh": "統一超",
+          "en": "PCSC",
+          "sourceCell": "A28"
+        },
+        {
+          "code": "3008",
+          "zh": "大立光",
+          "en": "LARGAN",
+          "sourceCell": "A29"
+        },
+        {
+          "code": "3037",
+          "zh": "欣興",
+          "en": "UNIMICRON",
+          "sourceCell": "A30"
+        },
+        {
+          "code": "3711",
+          "zh": "日月光投控",
+          "en": "ASEH",
+          "sourceCell": "A31"
+        }
+      ]
+    },
+    {
+      "zh": "上市大型股",
+      "en": "Listed large-sized companies",
+      "rows": [
+        {
+          "code": "1560",
+          "zh": "中砂",
+          "en": "KINIK",
+          "sourceCell": "E2"
+        },
+        {
+          "code": "1605",
+          "zh": "華新",
+          "en": "WALSIN",
+          "sourceCell": "E3"
+        },
+        {
+          "code": "2014",
+          "zh": "中鴻",
+          "en": "CHUNG HUNG",
+          "sourceCell": "E4"
+        },
+        {
+          "code": "2344",
+          "zh": "華邦電",
+          "en": "WEC",
+          "sourceCell": "E5"
+        },
+        {
+          "code": "2457",
+          "zh": "飛宏",
+          "en": "PHIHONG",
+          "sourceCell": "E6"
+        },
+        {
+          "code": "2481",
+          "zh": "強茂",
+          "en": "PANJIT",
+          "sourceCell": "E7"
+        },
+        {
+          "code": "2498",
+          "zh": "宏達電",
+          "en": "HTC",
+          "sourceCell": "E8"
+        },
+        {
+          "code": "2606",
+          "zh": "裕民",
+          "en": "U-MING",
+          "sourceCell": "E9"
+        },
+        {
+          "code": "2607",
+          "zh": "榮運",
+          "en": "EITC",
+          "sourceCell": "E10"
+        },
+        {
+          "code": "2610",
+          "zh": "華航",
+          "en": "CAL",
+          "sourceCell": "E11"
+        },
+        {
+          "code": "2614",
+          "zh": "東森",
+          "en": "EMIC",
+          "sourceCell": "E12"
+        },
+        {
+          "code": "2618",
+          "zh": "長榮航",
+          "en": "EVAAIR",
+          "sourceCell": "E13"
+        },
+        {
+          "code": "2637",
+          "zh": "慧洋-KY",
+          "en": "WISDOM",
+          "sourceCell": "E14"
+        },
+        {
+          "code": "3006",
+          "zh": "晶豪科",
+          "en": "ESMT",
+          "sourceCell": "E15"
+        },
+        {
+          "code": "3017",
+          "zh": "奇鋐",
+          "en": "AVC",
+          "sourceCell": "E16"
+        },
+        {
+          "code": "3034",
+          "zh": "聯詠",
+          "en": "NOVATEK",
+          "sourceCell": "E17"
+        },
+        {
+          "code": "3035",
+          "zh": "智原",
+          "en": "Faraday",
+          "sourceCell": "E18"
+        },
+        {
+          "code": "3189",
+          "zh": "景碩",
+          "en": "KINSUS",
+          "sourceCell": "E19"
+        },
+        {
+          "code": "3443",
+          "zh": "創意",
+          "en": "GUC",
+          "sourceCell": "E20"
+        },
+        {
+          "code": "3481",
+          "zh": "群創",
+          "en": "INX",
+          "sourceCell": "E21"
+        },
+        {
+          "code": "3532",
+          "zh": "台勝科",
+          "en": "FST",
+          "sourceCell": "E22"
+        },
+        {
+          "code": "3545",
+          "zh": "敦泰",
+          "en": "FocalTech",
+          "sourceCell": "E23"
+        },
+        {
+          "code": "3583",
+          "zh": "辛耘",
+          "en": "Scientech",
+          "sourceCell": "E24"
+        },
+        {
+          "code": "3596",
+          "zh": "智易",
+          "en": "Arcadyan",
+          "sourceCell": "E25"
+        },
+        {
+          "code": "3665",
+          "zh": "貿聯-KY",
+          "en": "BHI (BizLink)",
+          "sourceCell": "E26"
+        },
+        {
+          "code": "3708",
+          "zh": "上緯投控",
+          "en": "Swancor",
+          "sourceCell": "E27"
+        },
+        {
+          "code": "4927",
+          "zh": "泰鼎-KY",
+          "en": "Apex",
+          "sourceCell": "E28"
+        },
+        {
+          "code": "4961",
+          "zh": "天鈺",
+          "en": "FITIPOWER",
+          "sourceCell": "E29"
+        },
+        {
+          "code": "6443",
+          "zh": "元晶",
+          "en": "TSEC",
+          "sourceCell": "E30"
+        },
+        {
+          "code": "8028",
+          "zh": "昇陽半導體",
+          "en": "PSI",
+          "sourceCell": "E31"
+        }
+      ]
+    },
+    {
+      "zh": "上市中小型股",
+      "en": "Listed small and medium-sized companies",
+      "rows": [
+        {
+          "code": "1108",
+          "zh": "幸福",
+          "en": "LUCKY CEMENT",
+          "sourceCell": "I2"
+        },
+        {
+          "code": "1525",
+          "zh": "江申",
+          "en": "KSC",
+          "sourceCell": "I3"
+        },
+        {
+          "code": "1727",
+          "zh": "中華化",
+          "en": "CHCIW",
+          "sourceCell": "I4"
+        },
+        {
+          "code": "1733",
+          "zh": "五鼎",
+          "en": "ApexBio",
+          "sourceCell": "I5"
+        },
+        {
+          "code": "1762",
+          "zh": "中化生",
+          "en": "CCSB",
+          "sourceCell": "I6"
+        },
+        {
+          "code": "1817",
+          "zh": "凱撒衛",
+          "en": "SANITAR",
+          "sourceCell": "I7"
+        },
+        {
+          "code": "2017",
+          "zh": "官田鋼",
+          "en": "Quintain Steel",
+          "sourceCell": "I8"
+        },
+        {
+          "code": "2022",
+          "zh": "聚亨",
+          "en": "TYCOONS",
+          "sourceCell": "I9"
+        },
+        {
+          "code": "2417",
+          "zh": "圓剛",
+          "en": "AVERMEDIA",
+          "sourceCell": "I10"
+        },
+        {
+          "code": "2442",
+          "zh": "新美齊",
+          "en": "JEAN",
+          "sourceCell": "I11"
+        },
+        {
+          "code": "2613",
+          "zh": "中櫃",
+          "en": "CCTC",
+          "sourceCell": "I12"
+        },
+        {
+          "code": "2630",
+          "zh": "亞航",
+          "en": "AACL",
+          "sourceCell": "I13"
+        },
+        {
+          "code": "2642",
+          "zh": "宅配通",
+          "en": "Pelican",
+          "sourceCell": "I14"
+        },
+        {
+          "code": "2722",
+          "zh": "夏都",
+          "en": "Chateau",
+          "sourceCell": "I15"
+        },
+        {
+          "code": "2748",
+          "zh": "雲品",
+          "en": "FDC",
+          "sourceCell": "I16"
+        },
+        {
+          "code": "2816",
+          "zh": "旺旺保",
+          "en": "UNION INS.",
+          "sourceCell": "I17"
+        },
+        {
+          "code": "2852",
+          "zh": "第一保",
+          "en": "FIRST INS",
+          "sourceCell": "I18"
+        },
+        {
+          "code": "3013",
+          "zh": "晟銘電",
+          "en": "UNEEC",
+          "sourceCell": "I19"
+        },
+        {
+          "code": "3038",
+          "zh": "全台",
+          "en": "EDT",
+          "sourceCell": "I20"
+        },
+        {
+          "code": "3094",
+          "zh": "聯傑",
+          "en": "DAVICOM",
+          "sourceCell": "I21"
+        },
+        {
+          "code": "3167",
+          "zh": "大量",
+          "en": "TA LIANG",
+          "sourceCell": "I22"
+        },
+        {
+          "code": "3311",
+          "zh": "閎暉",
+          "en": "Silitech",
+          "sourceCell": "I23"
+        },
+        {
+          "code": "3591",
+          "zh": "艾笛森",
+          "en": "EDISON OPTO",
+          "sourceCell": "I24"
+        },
+        {
+          "code": "3669",
+          "zh": "圓展",
+          "en": "Aver",
+          "sourceCell": "I25"
+        },
+        {
+          "code": "3679",
+          "zh": "新至陞",
+          "en": "Nishoku",
+          "sourceCell": "I26"
+        },
+        {
+          "code": "5225",
+          "zh": "東科-KY",
+          "en": "EASTECH",
+          "sourceCell": "I27"
+        },
+        {
+          "code": "5515",
+          "zh": "建國",
+          "en": "CHIEN KUO",
+          "sourceCell": "I28"
+        },
+        {
+          "code": "5521",
+          "zh": "工信",
+          "en": "KSECO",
+          "sourceCell": "I29"
+        },
+        {
+          "code": "6288",
+          "zh": "聯嘉",
+          "en": "EOI",
+          "sourceCell": "I30"
+        },
+        {
+          "code": "6641",
+          "zh": "基士德-KY",
+          "en": "GSD-KY",
+          "sourceCell": "I31"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃大型股",
+      "en": "Large-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "3141",
+          "zh": "晶宏",
+          "en": "UltraChip",
+          "sourceCell": "M2"
+        },
+        {
+          "code": "3265",
+          "zh": "台星科",
+          "en": "WST",
+          "sourceCell": "M3"
+        },
+        {
+          "code": "3324",
+          "zh": "雙鴻",
+          "en": "AURAS",
+          "sourceCell": "M4"
+        },
+        {
+          "code": "3455",
+          "zh": "由田",
+          "en": "UTECHZONE",
+          "sourceCell": "M5"
+        },
+        {
+          "code": "3491",
+          "zh": "昇達科",
+          "en": "UMT",
+          "sourceCell": "M6"
+        },
+        {
+          "code": "3526",
+          "zh": "凡甲",
+          "en": "ALLTOP",
+          "sourceCell": "M7"
+        },
+        {
+          "code": "3529",
+          "zh": "力旺",
+          "en": "eMemory",
+          "sourceCell": "M8"
+        },
+        {
+          "code": "3552",
+          "zh": "同致",
+          "en": "TUNG THIH",
+          "sourceCell": "M9"
+        },
+        {
+          "code": "3558",
+          "zh": "神準",
+          "en": "Senao Networks",
+          "sourceCell": "M10"
+        },
+        {
+          "code": "3624",
+          "zh": "光頡",
+          "en": "VIKING",
+          "sourceCell": "M11"
+        },
+        {
+          "code": "3675",
+          "zh": "德微",
+          "en": "Eris Tech",
+          "sourceCell": "M12"
+        },
+        {
+          "code": "3687",
+          "zh": "歐買尬",
+          "en": "OMG",
+          "sourceCell": "M13"
+        },
+        {
+          "code": "3707",
+          "zh": "漢磊",
+          "en": "EPISIL",
+          "sourceCell": "M14"
+        },
+        {
+          "code": "4116",
+          "zh": "明基醫",
+          "en": "BMTC",
+          "sourceCell": "M15"
+        },
+        {
+          "code": "4162",
+          "zh": "智擎",
+          "en": "PEI",
+          "sourceCell": "M16"
+        },
+        {
+          "code": "5009",
+          "zh": "榮剛",
+          "en": "GMTC",
+          "sourceCell": "M17"
+        },
+        {
+          "code": "5309",
+          "zh": "系統電",
+          "en": "SG",
+          "sourceCell": "M18"
+        },
+        {
+          "code": "5483",
+          "zh": "中美晶",
+          "en": "SAS",
+          "sourceCell": "M19"
+        },
+        {
+          "code": "6111",
+          "zh": "大宇資",
+          "en": "SFG",
+          "sourceCell": "M20"
+        },
+        {
+          "code": "6150",
+          "zh": "撼訊",
+          "en": "Tul",
+          "sourceCell": "M21"
+        },
+        {
+          "code": "6182",
+          "zh": "合晶",
+          "en": "WAFER WORKS",
+          "sourceCell": "M22"
+        },
+        {
+          "code": "6187",
+          "zh": "萬潤",
+          "en": "ALL RING",
+          "sourceCell": "M23"
+        },
+        {
+          "code": "6411",
+          "zh": "晶焱",
+          "en": "Amazing",
+          "sourceCell": "M24"
+        },
+        {
+          "code": "6485",
+          "zh": "點序",
+          "en": "Asolid",
+          "sourceCell": "M25"
+        },
+        {
+          "code": "6509",
+          "zh": "聚和",
+          "en": "HOPAX",
+          "sourceCell": "M26"
+        },
+        {
+          "code": "6679",
+          "zh": "鈺太",
+          "en": "ZILLTEK",
+          "sourceCell": "M27"
+        },
+        {
+          "code": "8044",
+          "zh": "網家",
+          "en": "PChome online",
+          "sourceCell": "M28"
+        },
+        {
+          "code": "8054",
+          "zh": "安國",
+          "en": "Alcor Micro",
+          "sourceCell": "M29"
+        },
+        {
+          "code": "8069",
+          "zh": "元太",
+          "en": "EIH",
+          "sourceCell": "M30"
+        },
+        {
+          "code": "8183",
+          "zh": "精星",
+          "en": "ITC",
+          "sourceCell": "M31"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃中小型股",
+      "en": "Small and medium-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1784",
+          "zh": "訊聯",
+          "en": "BIONET CORP.",
+          "sourceCell": "Q2"
+        },
+        {
+          "code": "2063",
+          "zh": "世鎧",
+          "en": "SHEH KAI",
+          "sourceCell": "Q3"
+        },
+        {
+          "code": "3234",
+          "zh": "光環",
+          "en": "TrueLight",
+          "sourceCell": "Q4"
+        },
+        {
+          "code": "3354",
+          "zh": "律勝",
+          "en": "MICROCOSM",
+          "sourceCell": "Q5"
+        },
+        {
+          "code": "3564",
+          "zh": "其陽",
+          "en": "AEWIN",
+          "sourceCell": "Q6"
+        },
+        {
+          "code": "3567",
+          "zh": "逸昌",
+          "en": "ETREND",
+          "sourceCell": "Q7"
+        },
+        {
+          "code": "3623",
+          "zh": "富晶通",
+          "en": "TTI",
+          "sourceCell": "Q8"
+        },
+        {
+          "code": "3625",
+          "zh": "西勝",
+          "en": "C-TECH",
+          "sourceCell": "Q9"
+        },
+        {
+          "code": "3628",
+          "zh": "盈正",
+          "en": "ABLEREX",
+          "sourceCell": "Q10"
+        },
+        {
+          "code": "3672",
+          "zh": "康聯訊",
+          "en": "CTS",
+          "sourceCell": "Q11"
+        },
+        {
+          "code": "3684",
+          "zh": "榮昌",
+          "en": "Grand-Tek",
+          "sourceCell": "Q12"
+        },
+        {
+          "code": "3685",
+          "zh": "元創精密",
+          "en": "TAC",
+          "sourceCell": "Q13"
+        },
+        {
+          "code": "4102",
+          "zh": "永日",
+          "en": "YUNGZIP",
+          "sourceCell": "Q14"
+        },
+        {
+          "code": "4173",
+          "zh": "久裕",
+          "en": "ARICH",
+          "sourceCell": "Q15"
+        },
+        {
+          "code": "4523",
+          "zh": "永彰",
+          "en": "Everbrite",
+          "sourceCell": "Q16"
+        },
+        {
+          "code": "4702",
+          "zh": "中美實",
+          "en": "ALLIED",
+          "sourceCell": "Q17"
+        },
+        {
+          "code": "4714",
+          "zh": "永捷",
+          "en": "UB",
+          "sourceCell": "Q18"
+        },
+        {
+          "code": "4945",
+          "zh": "陞達科技",
+          "en": "Sentelic",
+          "sourceCell": "Q19"
+        },
+        {
+          "code": "4995",
+          "zh": "晶達",
+          "en": "Litemax",
+          "sourceCell": "Q20"
+        },
+        {
+          "code": "5291",
+          "zh": "邑昇",
+          "en": "EISO",
+          "sourceCell": "Q21"
+        },
+        {
+          "code": "5493",
+          "zh": "三聯",
+          "en": "Sanlien",
+          "sourceCell": "Q22"
+        },
+        {
+          "code": "6156",
+          "zh": "松上",
+          "en": "SONG SHANG",
+          "sourceCell": "Q23"
+        },
+        {
+          "code": "6248",
+          "zh": "沛波",
+          "en": "TMP",
+          "sourceCell": "Q24"
+        },
+        {
+          "code": "6270",
+          "zh": "倍微",
+          "en": "PCT",
+          "sourceCell": "Q25"
+        },
+        {
+          "code": "6506",
+          "zh": "雙邦",
+          "en": "SBI",
+          "sourceCell": "Q26"
+        },
+        {
+          "code": "6514",
+          "zh": "芮特-KY",
+          "en": "RTI",
+          "sourceCell": "Q27"
+        },
+        {
+          "code": "8043",
+          "zh": "蜜望實",
+          "en": "3H",
+          "sourceCell": "Q28"
+        },
+        {
+          "code": "8096",
+          "zh": "擎亞",
+          "en": "CoAsia",
+          "sourceCell": "Q29"
+        },
+        {
+          "code": "8107",
+          "zh": "大億金茂",
+          "en": "KENMOS",
+          "sourceCell": "Q30"
+        },
+        {
+          "code": "8111",
+          "zh": "立碁",
+          "en": "LIGITEK",
+          "sourceCell": "Q31"
+        }
+      ]
+    }
+  ],
+  "2023": [
+    {
+      "zh": "上市巨型股",
+      "en": "Listed giant-sized companies",
+      "rows": [
+        {
+          "code": "1101",
+          "zh": "台泥",
+          "en": "TCC",
+          "sourceCell": "A2"
+        },
+        {
+          "code": "1216",
+          "zh": "統一",
+          "en": "UNI-PRESIDENT",
+          "sourceCell": "A3"
+        },
+        {
+          "code": "1590",
+          "zh": "亞德客-KY",
+          "en": "AIRTAC",
+          "sourceCell": "A4"
+        },
+        {
+          "code": "2002",
+          "zh": "中鋼",
+          "en": "CSC",
+          "sourceCell": "A5"
+        },
+        {
+          "code": "2301",
+          "zh": "光寶科",
+          "en": "LTC",
+          "sourceCell": "A6"
+        },
+        {
+          "code": "2303",
+          "zh": "聯電",
+          "en": "UMC",
+          "sourceCell": "A7"
+        },
+        {
+          "code": "2308",
+          "zh": "台達電",
+          "en": "DELTA",
+          "sourceCell": "A8"
+        },
+        {
+          "code": "2317",
+          "zh": "鴻海",
+          "en": "HON HAI",
+          "sourceCell": "A9"
+        },
+        {
+          "code": "2327",
+          "zh": "國巨",
+          "en": "YAGEO",
+          "sourceCell": "A10"
+        },
+        {
+          "code": "2330",
+          "zh": "台積電",
+          "en": "TSMC",
+          "sourceCell": "A11"
+        },
+        {
+          "code": "2357",
+          "zh": "華碩",
+          "en": "ASUSTEK",
+          "sourceCell": "A12"
+        },
+        {
+          "code": "2382",
+          "zh": "廣達",
+          "en": "QCI",
+          "sourceCell": "A13"
+        },
+        {
+          "code": "2408",
+          "zh": "南亞科",
+          "en": "NTC",
+          "sourceCell": "A14"
+        },
+        {
+          "code": "2412",
+          "zh": "中華電",
+          "en": "CHT",
+          "sourceCell": "A15"
+        },
+        {
+          "code": "2454",
+          "zh": "聯發科",
+          "en": "MediaTek",
+          "sourceCell": "A16"
+        },
+        {
+          "code": "2609",
+          "zh": "陽明",
+          "en": "YMTC",
+          "sourceCell": "A17"
+        },
+        {
+          "code": "2618",
+          "zh": "長榮航",
+          "en": "EVA AIR",
+          "sourceCell": "A18"
+        },
+        {
+          "code": "2882",
+          "zh": "國泰金",
+          "en": "CATHAY FHC",
+          "sourceCell": "A19"
+        },
+        {
+          "code": "2883",
+          "zh": "開發金",
+          "en": "CDF",
+          "sourceCell": "A20"
+        },
+        {
+          "code": "2884",
+          "zh": "玉山金",
+          "en": "E.S.F.H",
+          "sourceCell": "A21"
+        },
+        {
+          "code": "2886",
+          "zh": "兆豐金",
+          "en": "MEGA FHC",
+          "sourceCell": "A22"
+        },
+        {
+          "code": "2891",
+          "zh": "中信金",
+          "en": "CTBC HOLDING",
+          "sourceCell": "A23"
+        },
+        {
+          "code": "2892",
+          "zh": "第一金",
+          "en": "FFHC",
+          "sourceCell": "A24"
+        },
+        {
+          "code": "3034",
+          "zh": "聯詠",
+          "en": "NOVATEK",
+          "sourceCell": "A25"
+        },
+        {
+          "code": "3037",
+          "zh": "欣興",
+          "en": "UNIMICRON",
+          "sourceCell": "A26"
+        },
+        {
+          "code": "3231",
+          "zh": "緯創",
+          "en": "Wistron",
+          "sourceCell": "A27"
+        },
+        {
+          "code": "3443",
+          "zh": "創意",
+          "en": "GUC",
+          "sourceCell": "A28"
+        },
+        {
+          "code": "3711",
+          "zh": "日月光投控",
+          "en": "ASEH",
+          "sourceCell": "A29"
+        },
+        {
+          "code": "4904",
+          "zh": "遠傳",
+          "en": "Far EasTone",
+          "sourceCell": "A30"
+        }
+      ]
+    },
+    {
+      "zh": "上市大型股",
+      "en": "Listed large-sized companies",
+      "rows": [
+        {
+          "code": "1477",
+          "zh": "聚陽",
+          "en": "Makalot",
+          "sourceCell": "E2"
+        },
+        {
+          "code": "1504",
+          "zh": "東元",
+          "en": "TECO",
+          "sourceCell": "E3"
+        },
+        {
+          "code": "1605",
+          "zh": "華新",
+          "en": "WALSIN",
+          "sourceCell": "E4"
+        },
+        {
+          "code": "1609",
+          "zh": "大亞",
+          "en": "TA YA",
+          "sourceCell": "E5"
+        },
+        {
+          "code": "1905",
+          "zh": "華紙",
+          "en": "CHP",
+          "sourceCell": "E6"
+        },
+        {
+          "code": "2201",
+          "zh": "裕隆",
+          "en": "YL",
+          "sourceCell": "E7"
+        },
+        {
+          "code": "2371",
+          "zh": "大同",
+          "en": "TATUNG COMPANY",
+          "sourceCell": "E8"
+        },
+        {
+          "code": "2383",
+          "zh": "台光電",
+          "en": "EMC",
+          "sourceCell": "E9"
+        },
+        {
+          "code": "2457",
+          "zh": "飛宏",
+          "en": "PHIHONG",
+          "sourceCell": "E10"
+        },
+        {
+          "code": "2498",
+          "zh": "宏達電",
+          "en": "HTC",
+          "sourceCell": "E11"
+        },
+        {
+          "code": "2603",
+          "zh": "長榮",
+          "en": "EMC",
+          "sourceCell": "E12"
+        },
+        {
+          "code": "2610",
+          "zh": "華航",
+          "en": "CAL",
+          "sourceCell": "E13"
+        },
+        {
+          "code": "2634",
+          "zh": "漢翔",
+          "en": "AIDC",
+          "sourceCell": "E14"
+        },
+        {
+          "code": "2748",
+          "zh": "雲品",
+          "en": "FDC",
+          "sourceCell": "E15"
+        },
+        {
+          "code": "3006",
+          "zh": "晶豪科",
+          "en": "ESMT",
+          "sourceCell": "E16"
+        },
+        {
+          "code": "3017",
+          "zh": "奇鋐",
+          "en": "AVC",
+          "sourceCell": "E17"
+        },
+        {
+          "code": "3029",
+          "zh": "零壹",
+          "en": "ZERO ONE",
+          "sourceCell": "E18"
+        },
+        {
+          "code": "3035",
+          "zh": "智原",
+          "en": "Faraday",
+          "sourceCell": "E19"
+        },
+        {
+          "code": "3189",
+          "zh": "景碩",
+          "en": "KINSUS",
+          "sourceCell": "E20"
+        },
+        {
+          "code": "3454",
+          "zh": "晶睿",
+          "en": "VIVOTEK",
+          "sourceCell": "E21"
+        },
+        {
+          "code": "3665",
+          "zh": "貿聯-KY",
+          "en": "BHI (BizLink)",
+          "sourceCell": "E22"
+        },
+        {
+          "code": "4919",
+          "zh": "新唐",
+          "en": "NTC",
+          "sourceCell": "E23"
+        },
+        {
+          "code": "4961",
+          "zh": "天鈺",
+          "en": "FITIPOWER",
+          "sourceCell": "E24"
+        },
+        {
+          "code": "4968",
+          "zh": "立積",
+          "en": "Richwave",
+          "sourceCell": "E25"
+        },
+        {
+          "code": "6282",
+          "zh": "康舒",
+          "en": "Acbel",
+          "sourceCell": "E26"
+        },
+        {
+          "code": "6285",
+          "zh": "啟碁",
+          "en": "WNC",
+          "sourceCell": "E27"
+        },
+        {
+          "code": "6414",
+          "zh": "樺漢",
+          "en": "ENNOCONN",
+          "sourceCell": "E28"
+        },
+        {
+          "code": "6443",
+          "zh": "元晶",
+          "en": "TSEC",
+          "sourceCell": "E29"
+        },
+        {
+          "code": "6806",
+          "zh": "森崴能源",
+          "en": "SHINFOX ENERGY",
+          "sourceCell": "E30"
+        },
+        {
+          "code": "8016",
+          "zh": "矽創",
+          "en": "Sitronix",
+          "sourceCell": "E31"
+        }
+      ]
+    },
+    {
+      "zh": "上市中小型股",
+      "en": "Listed small and medium-sized companies",
+      "rows": [
+        {
+          "code": "1233",
+          "zh": "天仁",
+          "en": "Ten Ren",
+          "sourceCell": "I2"
+        },
+        {
+          "code": "1467",
+          "zh": "南緯",
+          "en": "TEX-RAY",
+          "sourceCell": "I3"
+        },
+        {
+          "code": "1727",
+          "zh": "中華化",
+          "en": "CHCIW",
+          "sourceCell": "I4"
+        },
+        {
+          "code": "1817",
+          "zh": "凱撒衛",
+          "en": "SANITAR",
+          "sourceCell": "I5"
+        },
+        {
+          "code": "2022",
+          "zh": "聚亨",
+          "en": "TYCOONS",
+          "sourceCell": "I6"
+        },
+        {
+          "code": "2442",
+          "zh": "新美齊",
+          "en": "JEAN",
+          "sourceCell": "I7"
+        },
+        {
+          "code": "2613",
+          "zh": "中櫃",
+          "en": "CCTC",
+          "sourceCell": "I8"
+        },
+        {
+          "code": "3094",
+          "zh": "聯傑",
+          "en": "DAVICOM",
+          "sourceCell": "I9"
+        },
+        {
+          "code": "3311",
+          "zh": "閎暉",
+          "en": "Silitech",
+          "sourceCell": "I10"
+        },
+        {
+          "code": "3591",
+          "zh": "艾笛森",
+          "en": "EDISON OPTO",
+          "sourceCell": "I11"
+        },
+        {
+          "code": "3669",
+          "zh": "圓展",
+          "en": "Aver",
+          "sourceCell": "I12"
+        },
+        {
+          "code": "4720",
+          "zh": "德淵",
+          "en": "TEX YEAR",
+          "sourceCell": "I13"
+        },
+        {
+          "code": "5225",
+          "zh": "東科-KY",
+          "en": "EASTECH",
+          "sourceCell": "I14"
+        },
+        {
+          "code": "5515",
+          "zh": "建國",
+          "en": "CHIEN KUO",
+          "sourceCell": "I15"
+        },
+        {
+          "code": "5521",
+          "zh": "工信",
+          "en": "KSECO",
+          "sourceCell": "I16"
+        },
+        {
+          "code": "6449",
+          "zh": "鈺邦",
+          "en": "APAQ",
+          "sourceCell": "I17"
+        },
+        {
+          "code": "6671",
+          "zh": "三能-KY",
+          "en": "San Neng-KY",
+          "sourceCell": "I18"
+        },
+        {
+          "code": "8021",
+          "zh": "尖點",
+          "en": "Topoint",
+          "sourceCell": "I19"
+        },
+        {
+          "code": "9919",
+          "zh": "康那香",
+          "en": "KNH",
+          "sourceCell": "I20"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃大型股",
+      "en": "Large-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1584",
+          "zh": "精剛",
+          "en": "STC",
+          "sourceCell": "M2"
+        },
+        {
+          "code": "3078",
+          "zh": "僑威",
+          "en": "CWT",
+          "sourceCell": "M3"
+        },
+        {
+          "code": "3081",
+          "zh": "聯亞",
+          "en": "LandMark",
+          "sourceCell": "M4"
+        },
+        {
+          "code": "3141",
+          "zh": "晶宏",
+          "en": "UltraChip",
+          "sourceCell": "M5"
+        },
+        {
+          "code": "3289",
+          "zh": "宜特",
+          "en": "IST",
+          "sourceCell": "M6"
+        },
+        {
+          "code": "3558",
+          "zh": "神準",
+          "en": "Senao Networks",
+          "sourceCell": "M7"
+        },
+        {
+          "code": "3624",
+          "zh": "光頡",
+          "en": "VIKING",
+          "sourceCell": "M8"
+        },
+        {
+          "code": "3675",
+          "zh": "德微",
+          "en": "Eris Tech",
+          "sourceCell": "M9"
+        },
+        {
+          "code": "3680",
+          "zh": "家登",
+          "en": "Gudeng",
+          "sourceCell": "M10"
+        },
+        {
+          "code": "4114",
+          "zh": "健喬",
+          "en": "SYNMOSA",
+          "sourceCell": "M11"
+        },
+        {
+          "code": "4162",
+          "zh": "智擎",
+          "en": "PEI",
+          "sourceCell": "M12"
+        },
+        {
+          "code": "4953",
+          "zh": "緯軟",
+          "en": "WITS",
+          "sourceCell": "M13"
+        },
+        {
+          "code": "4979",
+          "zh": "華星光",
+          "en": "LuxNet",
+          "sourceCell": "M14"
+        },
+        {
+          "code": "5009",
+          "zh": "榮剛",
+          "en": "GMTC",
+          "sourceCell": "M15"
+        },
+        {
+          "code": "5289",
+          "zh": "宜鼎",
+          "en": "Innodisk",
+          "sourceCell": "M16"
+        },
+        {
+          "code": "5425",
+          "zh": "台半",
+          "en": "TSC",
+          "sourceCell": "M17"
+        },
+        {
+          "code": "6138",
+          "zh": "茂達",
+          "en": "ANPEC",
+          "sourceCell": "M18"
+        },
+        {
+          "code": "6180",
+          "zh": "橘子",
+          "en": "GAMANIA",
+          "sourceCell": "M19"
+        },
+        {
+          "code": "6188",
+          "zh": "廣明",
+          "en": "QSI",
+          "sourceCell": "M20"
+        },
+        {
+          "code": "6231",
+          "zh": "系微",
+          "en": "Insyde",
+          "sourceCell": "M21"
+        },
+        {
+          "code": "6244",
+          "zh": "茂迪",
+          "en": "MOTECH",
+          "sourceCell": "M22"
+        },
+        {
+          "code": "6274",
+          "zh": "台燿",
+          "en": "tuc",
+          "sourceCell": "M23"
+        },
+        {
+          "code": "6279",
+          "zh": "胡連",
+          "en": "HU LANE",
+          "sourceCell": "M24"
+        },
+        {
+          "code": "6290",
+          "zh": "良維",
+          "en": "LONGWELL",
+          "sourceCell": "M25"
+        },
+        {
+          "code": "6411",
+          "zh": "晶焱",
+          "en": "Amazing",
+          "sourceCell": "M26"
+        },
+        {
+          "code": "6472",
+          "zh": "保瑞",
+          "en": "Bora",
+          "sourceCell": "M27"
+        },
+        {
+          "code": "6643",
+          "zh": "M31",
+          "en": "M31",
+          "sourceCell": "M28"
+        },
+        {
+          "code": "6732",
+          "zh": "昇佳電子",
+          "en": "sensortek",
+          "sourceCell": "M29"
+        },
+        {
+          "code": "6741",
+          "zh": "91APP*-KY",
+          "en": "91APP",
+          "sourceCell": "M30"
+        },
+        {
+          "code": "8358",
+          "zh": "金居",
+          "en": "CO-TECH",
+          "sourceCell": "M31"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃中小型股",
+      "en": "Small and medium-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1336",
+          "zh": "台翰",
+          "en": "TAIHAN",
+          "sourceCell": "Q2"
+        },
+        {
+          "code": "1813",
+          "zh": "寶利徠",
+          "en": "Polylite",
+          "sourceCell": "Q3"
+        },
+        {
+          "code": "2947",
+          "zh": "振宇五金",
+          "en": "Zhen Yu",
+          "sourceCell": "Q4"
+        },
+        {
+          "code": "3086",
+          "zh": "華義",
+          "en": "WAYI",
+          "sourceCell": "Q5"
+        },
+        {
+          "code": "3118",
+          "zh": "進階",
+          "en": "LEVEL",
+          "sourceCell": "Q6"
+        },
+        {
+          "code": "3234",
+          "zh": "光環",
+          "en": "TrueLight",
+          "sourceCell": "Q7"
+        },
+        {
+          "code": "3489",
+          "zh": "森寶",
+          "en": "Sun Brothers",
+          "sourceCell": "Q8"
+        },
+        {
+          "code": "3567",
+          "zh": "逸昌",
+          "en": "ETREND",
+          "sourceCell": "Q9"
+        },
+        {
+          "code": "3623",
+          "zh": "富晶通",
+          "en": "TTI",
+          "sourceCell": "Q10"
+        },
+        {
+          "code": "3685",
+          "zh": "元創精密",
+          "en": "TAC",
+          "sourceCell": "Q11"
+        },
+        {
+          "code": "4102",
+          "zh": "永日",
+          "en": "YUNGZIP",
+          "sourceCell": "Q12"
+        },
+        {
+          "code": "4160",
+          "zh": "創源",
+          "en": "GGA",
+          "sourceCell": "Q13"
+        },
+        {
+          "code": "4173",
+          "zh": "久裕",
+          "en": "ARICH",
+          "sourceCell": "Q14"
+        },
+        {
+          "code": "4188",
+          "zh": "安克",
+          "en": "AmCad",
+          "sourceCell": "Q15"
+        },
+        {
+          "code": "4568",
+          "zh": "科際精密",
+          "en": "KOGE",
+          "sourceCell": "Q16"
+        },
+        {
+          "code": "4702",
+          "zh": "中美實",
+          "en": "ALLIED",
+          "sourceCell": "Q17"
+        },
+        {
+          "code": "4767",
+          "zh": "誠泰科技",
+          "en": "CHETAY",
+          "sourceCell": "Q18"
+        },
+        {
+          "code": "4945",
+          "zh": "陞達科技",
+          "en": "Sentelic",
+          "sourceCell": "Q19"
+        },
+        {
+          "code": "4972",
+          "zh": "湯石照明",
+          "en": "TONS",
+          "sourceCell": "Q20"
+        },
+        {
+          "code": "4995",
+          "zh": "晶達",
+          "en": "Litemax",
+          "sourceCell": "Q21"
+        },
+        {
+          "code": "5364",
+          "zh": "力麗店",
+          "en": "LEALEA HOTELS",
+          "sourceCell": "Q22"
+        },
+        {
+          "code": "6248",
+          "zh": "沛波",
+          "en": "TMP",
+          "sourceCell": "Q23"
+        },
+        {
+          "code": "6270",
+          "zh": "倍微",
+          "en": "PCT",
+          "sourceCell": "Q24"
+        },
+        {
+          "code": "6425",
+          "zh": "易發",
+          "en": "EFC",
+          "sourceCell": "Q25"
+        },
+        {
+          "code": "6496",
+          "zh": "科懋",
+          "en": "Excelsior",
+          "sourceCell": "Q26"
+        },
+        {
+          "code": "6615",
+          "zh": "慧智",
+          "en": "SOFIVA",
+          "sourceCell": "Q27"
+        },
+        {
+          "code": "6662",
+          "zh": "樂斯科",
+          "en": "BioLASCO",
+          "sourceCell": "Q28"
+        },
+        {
+          "code": "8089",
+          "zh": "康全電訊",
+          "en": "Comtrend",
+          "sourceCell": "Q29"
+        },
+        {
+          "code": "8096",
+          "zh": "擎亞",
+          "en": "CoAsia",
+          "sourceCell": "Q30"
+        },
+        {
+          "code": "8176",
+          "zh": "智捷",
+          "en": "ZCOM",
+          "sourceCell": "Q31"
+        }
+      ]
+    }
+  ],
+  "2024": [
+    {
+      "zh": "上市巨型股",
+      "en": "Listed giant-sized companies",
+      "rows": [
+        {
+          "code": "1216",
+          "zh": "統一",
+          "en": "UNI-PRESIDENT",
+          "sourceCell": "A2"
+        },
+        {
+          "code": "1301",
+          "zh": "台塑",
+          "en": "FPC",
+          "sourceCell": "A3"
+        },
+        {
+          "code": "2301",
+          "zh": "光寶科",
+          "en": "LTC",
+          "sourceCell": "A4"
+        },
+        {
+          "code": "2303",
+          "zh": "聯電",
+          "en": "UMC",
+          "sourceCell": "A5"
+        },
+        {
+          "code": "2308",
+          "zh": "台達電",
+          "en": "DELTA",
+          "sourceCell": "A6"
+        },
+        {
+          "code": "2317",
+          "zh": "鴻海",
+          "en": "HON HAI",
+          "sourceCell": "A7"
+        },
+        {
+          "code": "2330",
+          "zh": "台積電",
+          "en": "TSMC",
+          "sourceCell": "A8"
+        },
+        {
+          "code": "2345",
+          "zh": "智邦",
+          "en": "ACCTON",
+          "sourceCell": "A9"
+        },
+        {
+          "code": "2356",
+          "zh": "英業達",
+          "en": "INVENTEC",
+          "sourceCell": "A10"
+        },
+        {
+          "code": "2357",
+          "zh": "華碩",
+          "en": "ASUSTEK",
+          "sourceCell": "A11"
+        },
+        {
+          "code": "2379",
+          "zh": "瑞昱",
+          "en": "RT",
+          "sourceCell": "A12"
+        },
+        {
+          "code": "2382",
+          "zh": "廣達",
+          "en": "QCI",
+          "sourceCell": "A13"
+        },
+        {
+          "code": "2408",
+          "zh": "南亞科",
+          "en": "NTC",
+          "sourceCell": "A14"
+        },
+        {
+          "code": "2454",
+          "zh": "聯發科",
+          "en": "MediaTek",
+          "sourceCell": "A15"
+        },
+        {
+          "code": "2603",
+          "zh": "長榮",
+          "en": "EMC",
+          "sourceCell": "A16"
+        },
+        {
+          "code": "2609",
+          "zh": "陽明",
+          "en": "YMTC",
+          "sourceCell": "A17"
+        },
+        {
+          "code": "2615",
+          "zh": "萬海",
+          "en": "WANHAI",
+          "sourceCell": "A18"
+        },
+        {
+          "code": "2618",
+          "zh": "長榮航",
+          "en": "EVA AIR",
+          "sourceCell": "A19"
+        },
+        {
+          "code": "2882",
+          "zh": "國泰金",
+          "en": "CATHAY FHC",
+          "sourceCell": "A20"
+        },
+        {
+          "code": "2883",
+          "zh": "開發金",
+          "en": "CDF",
+          "sourceCell": "A21"
+        },
+        {
+          "code": "2884",
+          "zh": "玉山金",
+          "en": "E.S.F.H",
+          "sourceCell": "A22"
+        },
+        {
+          "code": "2885",
+          "zh": "元大金",
+          "en": "Yuanta Group",
+          "sourceCell": "A23"
+        },
+        {
+          "code": "2891",
+          "zh": "中信金",
+          "en": "CTBC HOLDING",
+          "sourceCell": "A24"
+        },
+        {
+          "code": "3017",
+          "zh": "奇鋐",
+          "en": "AVC",
+          "sourceCell": "A25"
+        },
+        {
+          "code": "3034",
+          "zh": "聯詠",
+          "en": "NOVATEK",
+          "sourceCell": "A26"
+        },
+        {
+          "code": "3037",
+          "zh": "欣興",
+          "en": "UNIMICRON",
+          "sourceCell": "A27"
+        },
+        {
+          "code": "3231",
+          "zh": "緯創",
+          "en": "Wistron",
+          "sourceCell": "A28"
+        },
+        {
+          "code": "3443",
+          "zh": "創意",
+          "en": "GUC",
+          "sourceCell": "A29"
+        },
+        {
+          "code": "3711",
+          "zh": "日月光投控",
+          "en": "ASEH",
+          "sourceCell": "A30"
+        },
+        {
+          "code": "4938",
+          "zh": "和碩",
+          "en": "Pegatron",
+          "sourceCell": "A31"
+        },
+        {
+          "code": "5871",
+          "zh": "中租-KY",
+          "en": "Chailease",
+          "sourceCell": "A32"
+        },
+        {
+          "code": "6669",
+          "zh": "緯穎",
+          "en": "Wiwynn",
+          "sourceCell": "A33"
+        }
+      ]
+    },
+    {
+      "zh": "上市大型股",
+      "en": "Listed large-sized companies",
+      "rows": [
+        {
+          "code": "1609",
+          "zh": "大亞",
+          "en": "TA YA",
+          "sourceCell": "E2"
+        },
+        {
+          "code": "2329",
+          "zh": "華泰",
+          "en": "OSE",
+          "sourceCell": "E3"
+        },
+        {
+          "code": "2353",
+          "zh": "宏碁",
+          "en": "ACER",
+          "sourceCell": "E4"
+        },
+        {
+          "code": "2354",
+          "zh": "鴻準",
+          "en": "FTC",
+          "sourceCell": "E5"
+        },
+        {
+          "code": "2371",
+          "zh": "大同",
+          "en": "TATUNG COMPANY",
+          "sourceCell": "E6"
+        },
+        {
+          "code": "2383",
+          "zh": "台光電",
+          "en": "EMC",
+          "sourceCell": "E7"
+        },
+        {
+          "code": "3005",
+          "zh": "神基",
+          "en": "Getac",
+          "sourceCell": "E8"
+        },
+        {
+          "code": "3035",
+          "zh": "智原",
+          "en": "Faraday",
+          "sourceCell": "E9"
+        },
+        {
+          "code": "3036",
+          "zh": "文曄",
+          "en": "WT",
+          "sourceCell": "E10"
+        },
+        {
+          "code": "3044",
+          "zh": "健鼎",
+          "en": "Tripod",
+          "sourceCell": "E11"
+        },
+        {
+          "code": "3376",
+          "zh": "新日興",
+          "en": "SZS",
+          "sourceCell": "E12"
+        },
+        {
+          "code": "3481",
+          "zh": "群創",
+          "en": "INX",
+          "sourceCell": "E13"
+        },
+        {
+          "code": "3533",
+          "zh": "嘉澤",
+          "en": "LOTES",
+          "sourceCell": "E14"
+        },
+        {
+          "code": "3706",
+          "zh": "神達",
+          "en": "MHC",
+          "sourceCell": "E15"
+        },
+        {
+          "code": "6213",
+          "zh": "聯茂",
+          "en": "ITEQ",
+          "sourceCell": "E16"
+        },
+        {
+          "code": "6285",
+          "zh": "啟碁",
+          "en": "WNC",
+          "sourceCell": "E17"
+        },
+        {
+          "code": "6414",
+          "zh": "樺漢",
+          "en": "ENNOCONN",
+          "sourceCell": "E18"
+        },
+        {
+          "code": "6472",
+          "zh": "保瑞",
+          "en": "Bora",
+          "sourceCell": "E19"
+        },
+        {
+          "code": "6806",
+          "zh": "森崴能源",
+          "en": "SHINFOX ENERGY",
+          "sourceCell": "E20"
+        },
+        {
+          "code": "8112",
+          "zh": "至上",
+          "en": "Supreme",
+          "sourceCell": "E21"
+        },
+        {
+          "code": "8210",
+          "zh": "勤誠",
+          "en": "CHENBRO",
+          "sourceCell": "E22"
+        },
+        {
+          "code": "9958",
+          "zh": "世紀鋼",
+          "en": "CIS",
+          "sourceCell": "E23"
+        }
+      ]
+    },
+    {
+      "zh": "上市中小型股",
+      "en": "Listed small and medium-sized companies",
+      "rows": [
+        {
+          "code": "2331",
+          "zh": "精英",
+          "en": "ECS",
+          "sourceCell": "I2"
+        },
+        {
+          "code": "2351",
+          "zh": "順德",
+          "en": "SDI",
+          "sourceCell": "I3"
+        },
+        {
+          "code": "2355",
+          "zh": "敬鵬",
+          "en": "CHIN-POON",
+          "sourceCell": "I4"
+        },
+        {
+          "code": "2365",
+          "zh": "昆盈",
+          "en": "KYE",
+          "sourceCell": "I5"
+        },
+        {
+          "code": "2515",
+          "zh": "中工",
+          "en": "BES",
+          "sourceCell": "I6"
+        },
+        {
+          "code": "2613",
+          "zh": "中櫃",
+          "en": "CCTC",
+          "sourceCell": "I7"
+        },
+        {
+          "code": "2630",
+          "zh": "亞航",
+          "en": "AACL",
+          "sourceCell": "I8"
+        },
+        {
+          "code": "3006",
+          "zh": "晶豪科",
+          "en": "ESMT",
+          "sourceCell": "I9"
+        },
+        {
+          "code": "3013",
+          "zh": "晟銘電",
+          "en": "UNEEC",
+          "sourceCell": "I10"
+        },
+        {
+          "code": "3014",
+          "zh": "聯陽",
+          "en": "ITE",
+          "sourceCell": "I11"
+        },
+        {
+          "code": "3033",
+          "zh": "威健",
+          "en": "Weikeng",
+          "sourceCell": "I12"
+        },
+        {
+          "code": "3062",
+          "zh": "建漢",
+          "en": "CyberTAN",
+          "sourceCell": "I13"
+        },
+        {
+          "code": "3545",
+          "zh": "敦泰",
+          "en": "FocalTech",
+          "sourceCell": "I14"
+        },
+        {
+          "code": "3583",
+          "zh": "辛耘",
+          "en": "Scientech",
+          "sourceCell": "I15"
+        },
+        {
+          "code": "3708",
+          "zh": "上緯投控",
+          "en": "Swancor",
+          "sourceCell": "I16"
+        },
+        {
+          "code": "3712",
+          "zh": "永崴投控",
+          "en": "FITH",
+          "sourceCell": "I17"
+        },
+        {
+          "code": "3715",
+          "zh": "定穎投控",
+          "en": "Dynamic Holding",
+          "sourceCell": "I18"
+        },
+        {
+          "code": "4566",
+          "zh": "時碩工業",
+          "en": "GLOBAL TEK",
+          "sourceCell": "I19"
+        },
+        {
+          "code": "4746",
+          "zh": "台耀",
+          "en": "FRMSL",
+          "sourceCell": "I20"
+        },
+        {
+          "code": "4968",
+          "zh": "立積",
+          "en": "Richwave",
+          "sourceCell": "I21"
+        },
+        {
+          "code": "5521",
+          "zh": "工信",
+          "en": "KSECO",
+          "sourceCell": "I22"
+        },
+        {
+          "code": "5608",
+          "zh": "四維航",
+          "en": "S. W.",
+          "sourceCell": "I23"
+        },
+        {
+          "code": "6120",
+          "zh": "達運",
+          "en": "DARWIN",
+          "sourceCell": "I24"
+        },
+        {
+          "code": "6189",
+          "zh": "豐藝",
+          "en": "Promate",
+          "sourceCell": "I25"
+        },
+        {
+          "code": "6438",
+          "zh": "迅得",
+          "en": "SAA",
+          "sourceCell": "I26"
+        },
+        {
+          "code": "6443",
+          "zh": "元晶",
+          "en": "TSEC",
+          "sourceCell": "I27"
+        },
+        {
+          "code": "6449",
+          "zh": "鈺邦",
+          "en": "APAQ",
+          "sourceCell": "I28"
+        },
+        {
+          "code": "8028",
+          "zh": "昇陽半導體",
+          "en": "PSI",
+          "sourceCell": "I29"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃大型股",
+      "en": "Large-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "3081",
+          "zh": "聯亞",
+          "en": "LandMark",
+          "sourceCell": "M2"
+        },
+        {
+          "code": "3163",
+          "zh": "波若威",
+          "en": "Browave",
+          "sourceCell": "M3"
+        },
+        {
+          "code": "3260",
+          "zh": "威剛",
+          "en": "ADATA",
+          "sourceCell": "M4"
+        },
+        {
+          "code": "3289",
+          "zh": "宜特",
+          "en": "IST",
+          "sourceCell": "M5"
+        },
+        {
+          "code": "3363",
+          "zh": "上詮",
+          "en": "FOCI",
+          "sourceCell": "M6"
+        },
+        {
+          "code": "3548",
+          "zh": "兆利",
+          "en": "JARLLY",
+          "sourceCell": "M7"
+        },
+        {
+          "code": "5426",
+          "zh": "振發",
+          "en": "CF",
+          "sourceCell": "M8"
+        },
+        {
+          "code": "5443",
+          "zh": "均豪",
+          "en": "GPM",
+          "sourceCell": "M9"
+        },
+        {
+          "code": "6125",
+          "zh": "廣運",
+          "en": "KENMEC",
+          "sourceCell": "M10"
+        },
+        {
+          "code": "6187",
+          "zh": "萬潤",
+          "en": "ALL RING",
+          "sourceCell": "M11"
+        },
+        {
+          "code": "6188",
+          "zh": "廣明",
+          "en": "QSI",
+          "sourceCell": "M12"
+        },
+        {
+          "code": "6223",
+          "zh": "旺矽",
+          "en": "MPI",
+          "sourceCell": "M13"
+        },
+        {
+          "code": "6231",
+          "zh": "系微",
+          "en": "Insyde",
+          "sourceCell": "M14"
+        },
+        {
+          "code": "6274",
+          "zh": "台燿",
+          "en": "tuc",
+          "sourceCell": "M15"
+        },
+        {
+          "code": "6643",
+          "zh": "M31",
+          "en": "M31",
+          "sourceCell": "M16"
+        },
+        {
+          "code": "8054",
+          "zh": "安國",
+          "en": "Alcor Micro",
+          "sourceCell": "M17"
+        },
+        {
+          "code": "8936",
+          "zh": "國統",
+          "en": "KTI",
+          "sourceCell": "M18"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃中小型股",
+      "en": "Small and medium-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1336",
+          "zh": "台翰",
+          "en": "TAIHAN",
+          "sourceCell": "Q2"
+        },
+        {
+          "code": "1813",
+          "zh": "寶利徠",
+          "en": "Polylite",
+          "sourceCell": "Q3"
+        },
+        {
+          "code": "3118",
+          "zh": "進階",
+          "en": "LEVEL",
+          "sourceCell": "Q4"
+        },
+        {
+          "code": "3685",
+          "zh": "元創精密",
+          "en": "TAC",
+          "sourceCell": "Q5"
+        },
+        {
+          "code": "4102",
+          "zh": "永日",
+          "en": "YUNGZIP",
+          "sourceCell": "Q6"
+        },
+        {
+          "code": "4173",
+          "zh": "久裕",
+          "en": "ARICH",
+          "sourceCell": "Q7"
+        },
+        {
+          "code": "4188",
+          "zh": "安克",
+          "en": "AmCad",
+          "sourceCell": "Q8"
+        },
+        {
+          "code": "4433",
+          "zh": "興采",
+          "en": "Singtex",
+          "sourceCell": "Q9"
+        },
+        {
+          "code": "4568",
+          "zh": "科際精密",
+          "en": "KOGE",
+          "sourceCell": "Q10"
+        },
+        {
+          "code": "4702",
+          "zh": "中美實",
+          "en": "ALLIED",
+          "sourceCell": "Q11"
+        },
+        {
+          "code": "4767",
+          "zh": "誠泰科技",
+          "en": "CHETAY",
+          "sourceCell": "Q12"
+        },
+        {
+          "code": "4972",
+          "zh": "湯石照明",
+          "en": "TONS",
+          "sourceCell": "Q13"
+        },
+        {
+          "code": "5202",
+          "zh": "力新",
+          "en": "NewSoft",
+          "sourceCell": "Q14"
+        },
+        {
+          "code": "5245",
+          "zh": "智晶",
+          "en": "WSI",
+          "sourceCell": "Q15"
+        },
+        {
+          "code": "5364",
+          "zh": "力麗店",
+          "en": "LEALEA HOTELS",
+          "sourceCell": "Q16"
+        },
+        {
+          "code": "5703",
+          "zh": "亞都",
+          "en": "Landis Taipei",
+          "sourceCell": "Q17"
+        },
+        {
+          "code": "5878",
+          "zh": "台名",
+          "en": "TABC",
+          "sourceCell": "Q18"
+        },
+        {
+          "code": "6241",
+          "zh": "易通展",
+          "en": "AMIGO",
+          "sourceCell": "Q19"
+        },
+        {
+          "code": "6457",
+          "zh": "紘康",
+          "en": "HYCON",
+          "sourceCell": "Q20"
+        },
+        {
+          "code": "6496",
+          "zh": "科懋",
+          "en": "Excelsior",
+          "sourceCell": "Q21"
+        },
+        {
+          "code": "6506",
+          "zh": "雙邦",
+          "en": "SBI",
+          "sourceCell": "Q22"
+        },
+        {
+          "code": "6615",
+          "zh": "慧智",
+          "en": "SOFIVA",
+          "sourceCell": "Q23"
+        },
+        {
+          "code": "6661",
+          "zh": "威健生技",
+          "en": "WELGENE",
+          "sourceCell": "Q24"
+        },
+        {
+          "code": "6662",
+          "zh": "樂斯科",
+          "en": "BioLASCO",
+          "sourceCell": "Q25"
+        },
+        {
+          "code": "8176",
+          "zh": "智捷",
+          "en": "ZCOM",
+          "sourceCell": "Q26"
+        },
+        {
+          "code": "8450",
+          "zh": "霹靂",
+          "en": "PILI",
+          "sourceCell": "Q27"
+        }
+      ]
+    }
+  ],
+  "2025": [
+    {
+      "zh": "上市巨型股",
+      "en": "Listed giant-sized companies",
+      "rows": [
+        {
+          "code": "1216",
+          "zh": "統一",
+          "en": "UNI-PRESIDENT",
+          "sourceCell": "A2"
+        },
+        {
+          "code": "1301",
+          "zh": "台塑",
+          "en": "FPC",
+          "sourceCell": "A3"
+        },
+        {
+          "code": "2002",
+          "zh": "中鋼",
+          "en": "CSC",
+          "sourceCell": "A4"
+        },
+        {
+          "code": "2301",
+          "zh": "光寶科",
+          "en": "LTC",
+          "sourceCell": "A5"
+        },
+        {
+          "code": "2303",
+          "zh": "聯電",
+          "en": "UMC",
+          "sourceCell": "A6"
+        },
+        {
+          "code": "2308",
+          "zh": "台達電",
+          "en": "DELTA",
+          "sourceCell": "A7"
+        },
+        {
+          "code": "2317",
+          "zh": "鴻海",
+          "en": "HON HAI",
+          "sourceCell": "A8"
+        },
+        {
+          "code": "2327",
+          "zh": "國巨",
+          "en": "YAGEO",
+          "sourceCell": "A9"
+        },
+        {
+          "code": "2330",
+          "zh": "台積電",
+          "en": "TSMC",
+          "sourceCell": "A10"
+        },
+        {
+          "code": "2357",
+          "zh": "華碩",
+          "en": "ASUSTEK",
+          "sourceCell": "A11"
+        },
+        {
+          "code": "2379",
+          "zh": "瑞昱",
+          "en": "RT",
+          "sourceCell": "A12"
+        },
+        {
+          "code": "2382",
+          "zh": "廣達",
+          "en": "QCI",
+          "sourceCell": "A13"
+        },
+        {
+          "code": "2383",
+          "zh": "台光電",
+          "en": "EMC",
+          "sourceCell": "A14"
+        },
+        {
+          "code": "2454",
+          "zh": "聯發科",
+          "en": "MediaTek",
+          "sourceCell": "A15"
+        },
+        {
+          "code": "2603",
+          "zh": "長榮",
+          "en": "EMC",
+          "sourceCell": "A16"
+        },
+        {
+          "code": "2609",
+          "zh": "陽明",
+          "en": "YMTC",
+          "sourceCell": "A17"
+        },
+        {
+          "code": "2615",
+          "zh": "萬海",
+          "en": "WANHAI",
+          "sourceCell": "A18"
+        },
+        {
+          "code": "2618",
+          "zh": "長榮航",
+          "en": "EVAAIR",
+          "sourceCell": "A19"
+        },
+        {
+          "code": "2882",
+          "zh": "國泰金",
+          "en": "CATHAY FHC",
+          "sourceCell": "A20"
+        },
+        {
+          "code": "2883",
+          "zh": "凱基金",
+          "en": "KGI Financial",
+          "sourceCell": "A21"
+        },
+        {
+          "code": "2885",
+          "zh": "元大金",
+          "en": "Yuanta Group",
+          "sourceCell": "A22"
+        },
+        {
+          "code": "2890",
+          "zh": "永豐金",
+          "en": "SINOPACHOLDINGS",
+          "sourceCell": "A23"
+        },
+        {
+          "code": "2891",
+          "zh": "中信金",
+          "en": "CTBC HOLDING",
+          "sourceCell": "A24"
+        },
+        {
+          "code": "3017",
+          "zh": "奇鋐",
+          "en": "AVC",
+          "sourceCell": "A25"
+        },
+        {
+          "code": "3034",
+          "zh": "聯詠",
+          "en": "NOVATEK",
+          "sourceCell": "A26"
+        },
+        {
+          "code": "3045",
+          "zh": "台灣大",
+          "en": "TWM",
+          "sourceCell": "A27"
+        },
+        {
+          "code": "3231",
+          "zh": "緯創",
+          "en": "Wistron",
+          "sourceCell": "A28"
+        },
+        {
+          "code": "3661",
+          "zh": "世芯-KY",
+          "en": "Alchip",
+          "sourceCell": "A29"
+        },
+        {
+          "code": "3711",
+          "zh": "日月光投控",
+          "en": "ASEH",
+          "sourceCell": "A30"
+        },
+        {
+          "code": "5871",
+          "zh": "中租-KY",
+          "en": "Chailease",
+          "sourceCell": "A31"
+        },
+        {
+          "code": "6669",
+          "zh": "緯穎",
+          "en": "Wiwynn",
+          "sourceCell": "A32"
+        }
+      ]
+    },
+    {
+      "zh": "上市大型股",
+      "en": "Listed large-sized companies",
+      "rows": [
+        {
+          "code": "1560",
+          "zh": "中砂",
+          "en": "KINIK",
+          "sourceCell": "E2"
+        },
+        {
+          "code": "2027",
+          "zh": "大成鋼",
+          "en": "TC",
+          "sourceCell": "E3"
+        },
+        {
+          "code": "2049",
+          "zh": "上銀",
+          "en": "HIWIN",
+          "sourceCell": "E4"
+        },
+        {
+          "code": "2344",
+          "zh": "華邦電",
+          "en": "WEC",
+          "sourceCell": "E5"
+        },
+        {
+          "code": "2354",
+          "zh": "鴻準",
+          "en": "FTC",
+          "sourceCell": "E6"
+        },
+        {
+          "code": "2360",
+          "zh": "致茂",
+          "en": "CHROMA",
+          "sourceCell": "E7"
+        },
+        {
+          "code": "2371",
+          "zh": "大同",
+          "en": "TATUNG COMPANY",
+          "sourceCell": "E8"
+        },
+        {
+          "code": "2408",
+          "zh": "南亞科",
+          "en": "NTC",
+          "sourceCell": "E9"
+        },
+        {
+          "code": "2449",
+          "zh": "京元電子",
+          "en": "KYEC",
+          "sourceCell": "E10"
+        },
+        {
+          "code": "2498",
+          "zh": "宏達電",
+          "en": "HTC",
+          "sourceCell": "E11"
+        },
+        {
+          "code": "2606",
+          "zh": "裕民",
+          "en": "U-MING",
+          "sourceCell": "E12"
+        },
+        {
+          "code": "2634",
+          "zh": "漢翔",
+          "en": "AIDC",
+          "sourceCell": "E13"
+        },
+        {
+          "code": "2637",
+          "zh": "慧洋-KY",
+          "en": "WISDOM",
+          "sourceCell": "E14"
+        },
+        {
+          "code": "3035",
+          "zh": "智原",
+          "en": "Faraday",
+          "sourceCell": "E15"
+        },
+        {
+          "code": "3037",
+          "zh": "欣興",
+          "en": "UNIMICRON",
+          "sourceCell": "E16"
+        },
+        {
+          "code": "3443",
+          "zh": "創意",
+          "en": "GUC",
+          "sourceCell": "E17"
+        },
+        {
+          "code": "3481",
+          "zh": "群創",
+          "en": "INX",
+          "sourceCell": "E18"
+        },
+        {
+          "code": "3665",
+          "zh": "貿聯-KY",
+          "en": "BHI (BizLink)",
+          "sourceCell": "E19"
+        },
+        {
+          "code": "3706",
+          "zh": "神達",
+          "en": "MHC",
+          "sourceCell": "E20"
+        },
+        {
+          "code": "4583",
+          "zh": "台灣精銳",
+          "en": "APEXDYNA",
+          "sourceCell": "E21"
+        },
+        {
+          "code": "6446",
+          "zh": "藥華藥",
+          "en": "PEC",
+          "sourceCell": "E22"
+        },
+        {
+          "code": "6472",
+          "zh": "保瑞",
+          "en": "Bora",
+          "sourceCell": "E23"
+        },
+        {
+          "code": "6781",
+          "zh": "AES-KY",
+          "en": "AES-KY",
+          "sourceCell": "E24"
+        },
+        {
+          "code": "8210",
+          "zh": "勤誠",
+          "en": "CHENBRO",
+          "sourceCell": "E25"
+        }
+      ]
+    },
+    {
+      "zh": "上市中小型股",
+      "en": "Listed small and medium-sized companies",
+      "rows": [
+        {
+          "code": "2328",
+          "zh": "廣宇",
+          "en": "PI",
+          "sourceCell": "I2"
+        },
+        {
+          "code": "2332",
+          "zh": "友訊",
+          "en": "D-LINK",
+          "sourceCell": "I3"
+        },
+        {
+          "code": "2351",
+          "zh": "順德",
+          "en": "SDI",
+          "sourceCell": "I4"
+        },
+        {
+          "code": "2365",
+          "zh": "昆盈",
+          "en": "KYE",
+          "sourceCell": "I5"
+        },
+        {
+          "code": "2439",
+          "zh": "美律",
+          "en": "MERRY",
+          "sourceCell": "I6"
+        },
+        {
+          "code": "2455",
+          "zh": "全新",
+          "en": "VPEC",
+          "sourceCell": "I7"
+        },
+        {
+          "code": "2630",
+          "zh": "亞航",
+          "en": "AACL",
+          "sourceCell": "I8"
+        },
+        {
+          "code": "3006",
+          "zh": "晶豪科",
+          "en": "ESMT",
+          "sourceCell": "I9"
+        },
+        {
+          "code": "3583",
+          "zh": "辛耘",
+          "en": "Scientech",
+          "sourceCell": "I10"
+        },
+        {
+          "code": "3715",
+          "zh": "定穎投控",
+          "en": "Dynamic Holding",
+          "sourceCell": "I11"
+        },
+        {
+          "code": "4576",
+          "zh": "大銀微系統",
+          "en": "HMC",
+          "sourceCell": "I12"
+        },
+        {
+          "code": "4968",
+          "zh": "立積",
+          "en": "Richwave",
+          "sourceCell": "I13"
+        },
+        {
+          "code": "5234",
+          "zh": "達興材料",
+          "en": "DAXIN",
+          "sourceCell": "I14"
+        },
+        {
+          "code": "5388",
+          "zh": "中磊",
+          "en": "Sercomm",
+          "sourceCell": "I15"
+        },
+        {
+          "code": "6112",
+          "zh": "邁達特",
+          "en": "Metaage",
+          "sourceCell": "I16"
+        },
+        {
+          "code": "6206",
+          "zh": "飛捷",
+          "en": "FLYTECH",
+          "sourceCell": "I17"
+        },
+        {
+          "code": "6214",
+          "zh": "精誠",
+          "en": "SYSTEX",
+          "sourceCell": "I18"
+        },
+        {
+          "code": "6558",
+          "zh": "興能高",
+          "en": "SYNST",
+          "sourceCell": "I19"
+        },
+        {
+          "code": "8028",
+          "zh": "昇陽半導體",
+          "en": "PSI",
+          "sourceCell": "I20"
+        },
+        {
+          "code": "8374",
+          "zh": "羅昇",
+          "en": "ACE PILLAR",
+          "sourceCell": "I21"
+        },
+        {
+          "code": "9802",
+          "zh": "鈺齊-KY",
+          "en": "Fulgent Sun",
+          "sourceCell": "I22"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃大型股",
+      "en": "Large-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1785",
+          "zh": "光洋科",
+          "en": "Solar",
+          "sourceCell": "M2"
+        },
+        {
+          "code": "3081",
+          "zh": "聯亞",
+          "en": "LandMark",
+          "sourceCell": "M3"
+        },
+        {
+          "code": "3105",
+          "zh": "穩懋",
+          "en": "WIN",
+          "sourceCell": "M4"
+        },
+        {
+          "code": "3211",
+          "zh": "順達",
+          "en": "Dynapack",
+          "sourceCell": "M5"
+        },
+        {
+          "code": "3227",
+          "zh": "原相",
+          "en": "PXI",
+          "sourceCell": "M6"
+        },
+        {
+          "code": "3260",
+          "zh": "威剛",
+          "en": "ADATA",
+          "sourceCell": "M7"
+        },
+        {
+          "code": "3264",
+          "zh": "欣銓",
+          "en": "Ardentec",
+          "sourceCell": "M8"
+        },
+        {
+          "code": "3324",
+          "zh": "雙鴻",
+          "en": "AURAS",
+          "sourceCell": "M9"
+        },
+        {
+          "code": "3363",
+          "zh": "上詮",
+          "en": "FOCI",
+          "sourceCell": "M10"
+        },
+        {
+          "code": "3374",
+          "zh": "精材",
+          "en": "Xintec",
+          "sourceCell": "M11"
+        },
+        {
+          "code": "3529",
+          "zh": "力旺",
+          "en": "eMemory",
+          "sourceCell": "M12"
+        },
+        {
+          "code": "3558",
+          "zh": "神準",
+          "en": "Senao Networks",
+          "sourceCell": "M13"
+        },
+        {
+          "code": "3680",
+          "zh": "家登",
+          "en": "Gudeng",
+          "sourceCell": "M14"
+        },
+        {
+          "code": "5274",
+          "zh": "信驊",
+          "en": "ASPEED",
+          "sourceCell": "M15"
+        },
+        {
+          "code": "5314",
+          "zh": "世紀*",
+          "en": "Myson",
+          "sourceCell": "M16"
+        },
+        {
+          "code": "5371",
+          "zh": "中光電",
+          "en": "Coretronic",
+          "sourceCell": "M17"
+        },
+        {
+          "code": "5443",
+          "zh": "均豪",
+          "en": "GPM",
+          "sourceCell": "M18"
+        },
+        {
+          "code": "6125",
+          "zh": "廣運",
+          "en": "KENMEC",
+          "sourceCell": "M19"
+        },
+        {
+          "code": "6187",
+          "zh": "萬潤",
+          "en": "ALL RING",
+          "sourceCell": "M20"
+        },
+        {
+          "code": "6223",
+          "zh": "旺矽",
+          "en": "MPI",
+          "sourceCell": "M21"
+        },
+        {
+          "code": "6231",
+          "zh": "系微",
+          "en": "Insyde",
+          "sourceCell": "M22"
+        },
+        {
+          "code": "6245",
+          "zh": "立端",
+          "en": "Lanner",
+          "sourceCell": "M23"
+        },
+        {
+          "code": "6274",
+          "zh": "台燿",
+          "en": "tuc",
+          "sourceCell": "M24"
+        },
+        {
+          "code": "6510",
+          "zh": "精測",
+          "en": "CHPT",
+          "sourceCell": "M25"
+        },
+        {
+          "code": "6643",
+          "zh": "M31",
+          "en": "M31",
+          "sourceCell": "M26"
+        },
+        {
+          "code": "8054",
+          "zh": "安國",
+          "en": "Alcor Micro",
+          "sourceCell": "M27"
+        },
+        {
+          "code": "8234",
+          "zh": "新漢",
+          "en": "NEXCOM",
+          "sourceCell": "M28"
+        },
+        {
+          "code": "8299",
+          "zh": "群聯",
+          "en": "Phison",
+          "sourceCell": "M29"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃中小型股",
+      "en": "Small and medium-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "1584",
+          "zh": "精鋼",
+          "en": "STC",
+          "sourceCell": "Q2"
+        },
+        {
+          "code": "2641",
+          "zh": "正德",
+          "en": "Franbo Lines",
+          "sourceCell": "Q3"
+        },
+        {
+          "code": "3088",
+          "zh": "艾訊",
+          "en": "AXIOMTEK",
+          "sourceCell": "Q4"
+        },
+        {
+          "code": "3128",
+          "zh": "昇銳",
+          "en": "HI SHARP",
+          "sourceCell": "Q5"
+        },
+        {
+          "code": "3147",
+          "zh": "大綜",
+          "en": "JETWELL",
+          "sourceCell": "Q6"
+        },
+        {
+          "code": "3294",
+          "zh": "英濟",
+          "en": "Megaforce",
+          "sourceCell": "Q7"
+        },
+        {
+          "code": "3323",
+          "zh": "加百裕",
+          "en": "Celxpert",
+          "sourceCell": "Q8"
+        },
+        {
+          "code": "3434",
+          "zh": "哲固",
+          "en": "ACULA",
+          "sourceCell": "Q9"
+        },
+        {
+          "code": "3546",
+          "zh": "宇峻",
+          "en": "USERJOY",
+          "sourceCell": "Q10"
+        },
+        {
+          "code": "3548",
+          "zh": "兆利",
+          "en": "JARLLY",
+          "sourceCell": "Q11"
+        },
+        {
+          "code": "3594",
+          "zh": "磐儀",
+          "en": "ARBOR",
+          "sourceCell": "Q12"
+        },
+        {
+          "code": "3663",
+          "zh": "鑫科",
+          "en": "TTMC",
+          "sourceCell": "Q13"
+        },
+        {
+          "code": "3689",
+          "zh": "湧德",
+          "en": "UDE",
+          "sourceCell": "Q14"
+        },
+        {
+          "code": "3709",
+          "zh": "鑫聯大投控",
+          "en": "Trigold",
+          "sourceCell": "Q15"
+        },
+        {
+          "code": "4303",
+          "zh": "信立",
+          "en": "HSINLI",
+          "sourceCell": "Q16"
+        },
+        {
+          "code": "4533",
+          "zh": "協易機",
+          "en": "SEYI",
+          "sourceCell": "Q17"
+        },
+        {
+          "code": "4549",
+          "zh": "桓達",
+          "en": "FineTek",
+          "sourceCell": "Q18"
+        },
+        {
+          "code": "4971",
+          "zh": "IET-KY",
+          "en": "IET",
+          "sourceCell": "Q19"
+        },
+        {
+          "code": "4974",
+          "zh": "亞泰",
+          "en": "ATII",
+          "sourceCell": "Q20"
+        },
+        {
+          "code": "5202",
+          "zh": "力新",
+          "en": "NewSoft",
+          "sourceCell": "Q21"
+        },
+        {
+          "code": "5309",
+          "zh": "系統電",
+          "en": "SG",
+          "sourceCell": "Q22"
+        },
+        {
+          "code": "6546",
+          "zh": "正基",
+          "en": "AMPAK",
+          "sourceCell": "Q23"
+        },
+        {
+          "code": "6683",
+          "zh": "雍智科技",
+          "en": "KSMT",
+          "sourceCell": "Q24"
+        },
+        {
+          "code": "6752",
+          "zh": "叡揚",
+          "en": "GSS",
+          "sourceCell": "Q25"
+        },
+        {
+          "code": "6829",
+          "zh": "千附精密",
+          "en": "CFPREC",
+          "sourceCell": "Q26"
+        },
+        {
+          "code": "7402",
+          "zh": "邑錡",
+          "en": "Brinno",
+          "sourceCell": "Q27"
+        },
+        {
+          "code": "8064",
+          "zh": "東捷",
+          "en": "CONTREL",
+          "sourceCell": "Q28"
+        },
+        {
+          "code": "8089",
+          "zh": "康全電訊",
+          "en": "Comtrend",
+          "sourceCell": "Q29"
+        },
+        {
+          "code": "8111",
+          "zh": "立碁",
+          "en": "LIGITEK",
+          "sourceCell": "Q30"
+        },
+        {
+          "code": "8147",
+          "zh": "正淩",
+          "en": "NEXTRON",
+          "sourceCell": "Q31"
+        },
+        {
+          "code": "8155",
+          "zh": "博智",
+          "en": "ACCL",
+          "sourceCell": "Q32"
+        },
+        {
+          "code": "8383",
+          "zh": "千附",
+          "en": "ChenFull",
+          "sourceCell": "Q33"
+        }
+      ]
+    }
+  ],
+  "2026": [
+    {
+      "zh": "上市巨型股",
+      "en": "Listed giant-sized companies",
+      "rows": [
+        {
+          "code": "1303",
+          "zh": "南亞",
+          "en": "NPC",
+          "sourceCell": "A2"
+        },
+        {
+          "code": "2301",
+          "zh": "光寶科",
+          "en": "LTC",
+          "sourceCell": "A3"
+        },
+        {
+          "code": "2303",
+          "zh": "聯電",
+          "en": "UMC",
+          "sourceCell": "A4"
+        },
+        {
+          "code": "2337",
+          "zh": "旺宏",
+          "en": "Macronix",
+          "sourceCell": "A5"
+        },
+        {
+          "code": "2344",
+          "zh": "華邦電",
+          "en": "WEC",
+          "sourceCell": "A6"
+        },
+        {
+          "code": "2356",
+          "zh": "英業達",
+          "en": "INVENTEC",
+          "sourceCell": "A7"
+        },
+        {
+          "code": "2357",
+          "zh": "華碩",
+          "en": "ASUSTEK",
+          "sourceCell": "A8"
+        },
+        {
+          "code": "2379",
+          "zh": "瑞昱",
+          "en": "RT",
+          "sourceCell": "A9"
+        },
+        {
+          "code": "2382",
+          "zh": "廣達",
+          "en": "QCI",
+          "sourceCell": "A10"
+        },
+        {
+          "code": "2383",
+          "zh": "台光電",
+          "en": "EMC",
+          "sourceCell": "A11"
+        },
+        {
+          "code": "2408",
+          "zh": "南亞科",
+          "en": "NTC",
+          "sourceCell": "A12"
+        },
+        {
+          "code": "2409",
+          "zh": "友達",
+          "en": "AUO",
+          "sourceCell": "A13"
+        },
+        {
+          "code": "2454",
+          "zh": "聯發科",
+          "en": "MediaTek",
+          "sourceCell": "A14"
+        },
+        {
+          "code": "2603",
+          "zh": "長榮",
+          "en": "EMC",
+          "sourceCell": "A15"
+        },
+        {
+          "code": "3036",
+          "zh": "文曄",
+          "en": "WT",
+          "sourceCell": "A16"
+        },
+        {
+          "code": "3037",
+          "zh": "欣興",
+          "en": "UNIMICRON",
+          "sourceCell": "A17"
+        },
+        {
+          "code": "3189",
+          "zh": "景碩",
+          "en": "KINSUS",
+          "sourceCell": "A18"
+        },
+        {
+          "code": "3231",
+          "zh": "緯創",
+          "en": "Wistron",
+          "sourceCell": "A19"
+        },
+        {
+          "code": "3443",
+          "zh": "創意",
+          "en": "GUC",
+          "sourceCell": "A20"
+        },
+        {
+          "code": "3481",
+          "zh": "群創",
+          "en": "INX",
+          "sourceCell": "A21"
+        },
+        {
+          "code": "3653",
+          "zh": "健策",
+          "en": "JENTECH",
+          "sourceCell": "A22"
+        },
+        {
+          "code": "3661",
+          "zh": "世芯-KY",
+          "en": "Alchip",
+          "sourceCell": "A23"
+        },
+        {
+          "code": "3665",
+          "zh": "貿聯-KY",
+          "en": "BHI (BizLink)",
+          "sourceCell": "A24"
+        },
+        {
+          "code": "4958",
+          "zh": "臻鼎-KY",
+          "en": "ZDT",
+          "sourceCell": "A25"
+        },
+        {
+          "code": "6239",
+          "zh": "力成",
+          "en": "PTI",
+          "sourceCell": "A26"
+        },
+        {
+          "code": "6669",
+          "zh": "緯穎",
+          "en": "Wiwynn",
+          "sourceCell": "A27"
+        },
+        {
+          "code": "6770",
+          "zh": "力積電",
+          "en": "PSMC",
+          "sourceCell": "A28"
+        },
+        {
+          "code": "8046",
+          "zh": "南電",
+          "en": "N.P.C",
+          "sourceCell": "A29"
+        }
+      ]
+    },
+    {
+      "zh": "上市大型股",
+      "en": "Listed large-sized companies",
+      "rows": [
+        {
+          "code": "1560",
+          "zh": "中砂",
+          "en": "KINIK",
+          "sourceCell": "B2"
+        },
+        {
+          "code": "1717",
+          "zh": "長興",
+          "en": "ETERNAL",
+          "sourceCell": "B3"
+        },
+        {
+          "code": "2049",
+          "zh": "上銀",
+          "en": "HIWIN",
+          "sourceCell": "B4"
+        },
+        {
+          "code": "2312",
+          "zh": "金寶",
+          "en": "KINPO",
+          "sourceCell": "B5"
+        },
+        {
+          "code": "2377",
+          "zh": "微星",
+          "en": "MSI",
+          "sourceCell": "B6"
+        },
+        {
+          "code": "2451",
+          "zh": "創見",
+          "en": "Transcend",
+          "sourceCell": "B7"
+        },
+        {
+          "code": "2455",
+          "zh": "全新",
+          "en": "VPEC",
+          "sourceCell": "B8"
+        },
+        {
+          "code": "2467",
+          "zh": "志聖",
+          "en": "CSUN",
+          "sourceCell": "B9"
+        },
+        {
+          "code": "3006",
+          "zh": "晶豪科",
+          "en": "ESMT",
+          "sourceCell": "B10"
+        },
+        {
+          "code": "3035",
+          "zh": "智原",
+          "en": "Faraday",
+          "sourceCell": "B11"
+        },
+        {
+          "code": "3042",
+          "zh": "晶技",
+          "en": "TXC",
+          "sourceCell": "B12"
+        },
+        {
+          "code": "3563",
+          "zh": "牧德",
+          "en": "MACHVISION",
+          "sourceCell": "B13"
+        },
+        {
+          "code": "3714",
+          "zh": "富采",
+          "en": "ENNOSTAR",
+          "sourceCell": "B14"
+        },
+        {
+          "code": "3715",
+          "zh": "定穎投控",
+          "en": "Dynamic Holding",
+          "sourceCell": "B15"
+        },
+        {
+          "code": "4919",
+          "zh": "新唐",
+          "en": "NTC",
+          "sourceCell": "B16"
+        },
+        {
+          "code": "6213",
+          "zh": "聯茂",
+          "en": "ITEQ",
+          "sourceCell": "B17"
+        },
+        {
+          "code": "6257",
+          "zh": "矽格",
+          "en": "SIGURD",
+          "sourceCell": "B18"
+        },
+        {
+          "code": "6271",
+          "zh": "同欣電",
+          "en": "THEIL",
+          "sourceCell": "B19"
+        },
+        {
+          "code": "6282",
+          "zh": "康舒",
+          "en": "Acbel",
+          "sourceCell": "B20"
+        },
+        {
+          "code": "6285",
+          "zh": "啟碁",
+          "en": "WNC",
+          "sourceCell": "B21"
+        },
+        {
+          "code": "6531",
+          "zh": "愛普*",
+          "en": "AP Memory",
+          "sourceCell": "B22"
+        },
+        {
+          "code": "8021",
+          "zh": "尖點",
+          "en": "Topoint",
+          "sourceCell": "B23"
+        },
+        {
+          "code": "8028",
+          "zh": "昇陽半導體",
+          "en": "PSI",
+          "sourceCell": "B24"
+        },
+        {
+          "code": "8039",
+          "zh": "台虹",
+          "en": "TAIFLEX",
+          "sourceCell": "B25"
+        },
+        {
+          "code": "8112",
+          "zh": "至上",
+          "en": "Supreme",
+          "sourceCell": "B26"
+        },
+        {
+          "code": "8150",
+          "zh": "南茂",
+          "en": "ChipMOS",
+          "sourceCell": "B27"
+        },
+        {
+          "code": "8210",
+          "zh": "勤誠",
+          "en": "CHENBRO",
+          "sourceCell": "B28"
+        },
+        {
+          "code": "8422",
+          "zh": "可寧衛*",
+          "en": "Cleanaway",
+          "sourceCell": "B29"
+        }
+      ]
+    },
+    {
+      "zh": "上市中小型股",
+      "en": "Listed small and medium-sized companies",
+      "rows": [
+        {
+          "code": "1309",
+          "zh": "台達化",
+          "en": "TTC",
+          "sourceCell": "C2"
+        },
+        {
+          "code": "1711",
+          "zh": "永光",
+          "en": "EVERLIGHT",
+          "sourceCell": "C3"
+        },
+        {
+          "code": "1727",
+          "zh": "中華化",
+          "en": "CHCIW",
+          "sourceCell": "C4"
+        },
+        {
+          "code": "2233",
+          "zh": "宇隆",
+          "en": "TURVO",
+          "sourceCell": "C5"
+        },
+        {
+          "code": "2328",
+          "zh": "廣宇",
+          "en": "PI",
+          "sourceCell": "C6"
+        },
+        {
+          "code": "2355",
+          "zh": "敬鵬",
+          "en": "CHIN-POON",
+          "sourceCell": "C7"
+        },
+        {
+          "code": "2375",
+          "zh": "凱美",
+          "en": "KAIMEI",
+          "sourceCell": "C8"
+        },
+        {
+          "code": "2419",
+          "zh": "仲琦",
+          "en": "H.T.",
+          "sourceCell": "C9"
+        },
+        {
+          "code": "2426",
+          "zh": "鼎元",
+          "en": "TYNTEK",
+          "sourceCell": "C10"
+        },
+        {
+          "code": "2457",
+          "zh": "飛宏",
+          "en": "PHIHONG",
+          "sourceCell": "C11"
+        },
+        {
+          "code": "2489",
+          "zh": "瑞軒",
+          "en": "AMTRAN",
+          "sourceCell": "C12"
+        },
+        {
+          "code": "3033",
+          "zh": "威健",
+          "en": "Weikeng",
+          "sourceCell": "C13"
+        },
+        {
+          "code": "3062",
+          "zh": "建漢",
+          "en": "CyberTAN",
+          "sourceCell": "C14"
+        },
+        {
+          "code": "3138",
+          "zh": "耀登",
+          "en": "Auden",
+          "sourceCell": "C15"
+        },
+        {
+          "code": "3605",
+          "zh": "宏致",
+          "en": "ACES",
+          "sourceCell": "C16"
+        },
+        {
+          "code": "3645",
+          "zh": "達邁",
+          "en": "TMT",
+          "sourceCell": "C17"
+        },
+        {
+          "code": "4756",
+          "zh": "大銀微系統",
+          "en": "HMC",
+          "sourceCell": "C18"
+        },
+        {
+          "code": "4722",
+          "zh": "國精化",
+          "en": "QPC",
+          "sourceCell": "C19"
+        },
+        {
+          "code": "4927",
+          "zh": "泰鼎-KY",
+          "en": "Apex",
+          "sourceCell": "C20"
+        },
+        {
+          "code": "4949",
+          "zh": "有成精密",
+          "en": "WIN WIN",
+          "sourceCell": "C21"
+        },
+        {
+          "code": "4960",
+          "zh": "誠美材",
+          "en": "CMMT",
+          "sourceCell": "C22"
+        },
+        {
+          "code": "5388",
+          "zh": "中磊",
+          "en": "Sercomm",
+          "sourceCell": "C23"
+        },
+        {
+          "code": "6443",
+          "zh": "元晶",
+          "en": "TSEC",
+          "sourceCell": "C24"
+        },
+        {
+          "code": "6456",
+          "zh": "GIS-KY",
+          "en": "GIS",
+          "sourceCell": "C25"
+        },
+        {
+          "code": "6672",
+          "zh": "騰輝電子-KY",
+          "en": "Ventec",
+          "sourceCell": "C26"
+        },
+        {
+          "code": "8103",
+          "zh": "瀚荃",
+          "en": "CviLux",
+          "sourceCell": "C27"
+        },
+        {
+          "code": "8271",
+          "zh": "宇瞻",
+          "en": "Apacer",
+          "sourceCell": "C28"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃大型股",
+      "en": "Large-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "3081",
+          "zh": "聯亞",
+          "en": "LandMark",
+          "sourceCell": "D2"
+        },
+        {
+          "code": "3105",
+          "zh": "穩懋",
+          "en": "WIN",
+          "sourceCell": "D3"
+        },
+        {
+          "code": "3211",
+          "zh": "順達",
+          "en": "Dynapack",
+          "sourceCell": "D4"
+        },
+        {
+          "code": "3260",
+          "zh": "威剛",
+          "en": "ADATA",
+          "sourceCell": "D5"
+        },
+        {
+          "code": "3264",
+          "zh": "欣銓",
+          "en": "Ardentec",
+          "sourceCell": "D6"
+        },
+        {
+          "code": "3324",
+          "zh": "雙鴻",
+          "en": "AURAS",
+          "sourceCell": "D7"
+        },
+        {
+          "code": "3357",
+          "zh": "臺慶科",
+          "en": "TAI-TECH",
+          "sourceCell": "D8"
+        },
+        {
+          "code": "3363",
+          "zh": "上詮",
+          "en": "FOCI",
+          "sourceCell": "D9"
+        },
+        {
+          "code": "3374",
+          "zh": "精材",
+          "en": "Xintec",
+          "sourceCell": "D10"
+        },
+        {
+          "code": "3491",
+          "zh": "昇達科",
+          "en": "UMT",
+          "sourceCell": "D11"
+        },
+        {
+          "code": "3680",
+          "zh": "家登",
+          "en": "Gudeng",
+          "sourceCell": "D12"
+        },
+        {
+          "code": "3707",
+          "zh": "漢磊",
+          "en": "EPISIL",
+          "sourceCell": "D13"
+        },
+        {
+          "code": "4971",
+          "zh": "IET-KY",
+          "en": "IET",
+          "sourceCell": "D14"
+        },
+        {
+          "code": "5289",
+          "zh": "宜鼎",
+          "en": "Innodisk",
+          "sourceCell": "D15"
+        },
+        {
+          "code": "5351",
+          "zh": "鈺創",
+          "en": "Etron",
+          "sourceCell": "D16"
+        },
+        {
+          "code": "5425",
+          "zh": "台半",
+          "en": "TSC",
+          "sourceCell": "D17"
+        },
+        {
+          "code": "6417",
+          "zh": "頎邦",
+          "en": "CHIPBOND",
+          "sourceCell": "D18"
+        },
+        {
+          "code": "6173",
+          "zh": "信昌電",
+          "en": "P.D.C.",
+          "sourceCell": "D19"
+        },
+        {
+          "code": "6182",
+          "zh": "合晶",
+          "en": "WAFER WORKS",
+          "sourceCell": "D20"
+        },
+        {
+          "code": "6187",
+          "zh": "萬潤",
+          "en": "ALL RING",
+          "sourceCell": "D21"
+        },
+        {
+          "code": "6274",
+          "zh": "台燿",
+          "en": "tuc",
+          "sourceCell": "D22"
+        },
+        {
+          "code": "6290",
+          "zh": "良維",
+          "en": "LONGWELL",
+          "sourceCell": "D23"
+        },
+        {
+          "code": "8086",
+          "zh": "宏捷科",
+          "en": "AWSC",
+          "sourceCell": "D24"
+        },
+        {
+          "code": "8299",
+          "zh": "群聯",
+          "en": "Phison",
+          "sourceCell": "D25"
+        }
+      ]
+    },
+    {
+      "zh": "上櫃中小型股",
+      "en": "Small and medium-sized companies listed on the OTC",
+      "rows": [
+        {
+          "code": "2641",
+          "zh": "正德",
+          "en": "Franbo Lines",
+          "sourceCell": "E2"
+        },
+        {
+          "code": "3141",
+          "zh": "晶宏",
+          "en": "UltraChip",
+          "sourceCell": "E3"
+        },
+        {
+          "code": "3219",
+          "zh": "倚強科",
+          "en": "Aethertek",
+          "sourceCell": "E4"
+        },
+        {
+          "code": "3317",
+          "zh": "尼克森",
+          "en": "NIKO-SEM",
+          "sourceCell": "E5"
+        },
+        {
+          "code": "3323",
+          "zh": "加百裕",
+          "en": "Celxpert",
+          "sourceCell": "E6"
+        },
+        {
+          "code": "3388",
+          "zh": "崇越電",
+          "en": "TTC",
+          "sourceCell": "E7"
+        },
+        {
+          "code": "3444",
+          "zh": "利機",
+          "en": "NICHING",
+          "sourceCell": "E8"
+        },
+        {
+          "code": "3483",
+          "zh": "力致",
+          "en": "FCN",
+          "sourceCell": "E9"
+        },
+        {
+          "code": "3548",
+          "zh": "兆利",
+          "en": "JARLLY",
+          "sourceCell": "E10"
+        },
+        {
+          "code": "3663",
+          "zh": "鑫科",
+          "en": "TTMC",
+          "sourceCell": "E11"
+        },
+        {
+          "code": "4533",
+          "zh": "協易機",
+          "en": "SEYI",
+          "sourceCell": "E12"
+        },
+        {
+          "code": "4951",
+          "zh": "精拓科",
+          "en": "Fintek",
+          "sourceCell": "E13"
+        },
+        {
+          "code": "5299",
+          "zh": "杰力",
+          "en": "EMC",
+          "sourceCell": "E14"
+        },
+        {
+          "code": "6015",
+          "zh": "宏遠證",
+          "en": "HORIZON Sec.",
+          "sourceCell": "E15"
+        },
+        {
+          "code": "6126",
+          "zh": "信音",
+          "en": "SINGATRON",
+          "sourceCell": "E16"
+        },
+        {
+          "code": "6143",
+          "zh": "振曜",
+          "en": "NETRONIX, INC.",
+          "sourceCell": "E17"
+        },
+        {
+          "code": "6208",
+          "zh": "日揚",
+          "en": "Htc",
+          "sourceCell": "E18"
+        },
+        {
+          "code": "6227",
+          "zh": "茂綸",
+          "en": "Macnica Galaxy",
+          "sourceCell": "E19"
+        },
+        {
+          "code": "6270",
+          "zh": "倍微",
+          "en": "PCT",
+          "sourceCell": "E20"
+        },
+        {
+          "code": "6275",
+          "zh": "元山",
+          "en": "Y.S.TECH",
+          "sourceCell": "E21"
+        },
+        {
+          "code": "6411",
+          "zh": "晶焱",
+          "en": "Amazing",
+          "sourceCell": "E22"
+        },
+        {
+          "code": "6432",
+          "zh": "今展科",
+          "en": "ARLITECH",
+          "sourceCell": "E23"
+        },
+        {
+          "code": "6509",
+          "zh": "聚和",
+          "en": "HOPAX",
+          "sourceCell": "E24"
+        },
+        {
+          "code": "6538",
+          "zh": "倉和",
+          "en": "Brave Screen",
+          "sourceCell": "E25"
+        },
+        {
+          "code": "6716",
+          "zh": "應廣",
+          "en": "PDK",
+          "sourceCell": "E26"
+        },
+        {
+          "code": "6761",
+          "zh": "穩得",
+          "en": "Wendell",
+          "sourceCell": "E27"
+        },
+        {
+          "code": "7402",
+          "zh": "邑錡",
+          "en": "Brinno",
+          "sourceCell": "E28"
+        },
+        {
+          "code": "8111",
+          "zh": "立碁",
+          "en": "LIGITEK",
+          "sourceCell": "E29"
+        },
+        {
+          "code": "8147",
+          "zh": "正淩",
+          "en": "NEXTRON",
+          "sourceCell": "E30"
+        },
+        {
+          "code": "8240",
+          "zh": "華宏",
+          "en": "WAH HONG",
+          "sourceCell": "E31"
+        },
+        {
+          "code": "8383",
+          "zh": "千附",
+          "en": "ChenFull",
+          "sourceCell": "E32"
+        }
+      ]
+    }
+  ]
+}

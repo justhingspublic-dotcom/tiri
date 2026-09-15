@@ -1,0 +1,1964 @@
+[
+  {
+    "file": "ref/官網/新官網-資料/文件/0天+地的內容/天+地的內容.xlsx",
+    "before_sha256": "fdfb7a933c815792b9b6e26d035e8e63d67317aa126b84a884c067d248371386",
+    "after_sha256": "3497fd0b1dcb8aa935f1d70e8b0c1a8f1a1a295fba9cdba9a4a15a04857d024d",
+    "changes": [
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A1",
+        "before": {
+          "ref": "A1",
+          "value": "搜尋"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A10",
+        "before": {
+          "ref": "A10",
+          "value": "加入會員"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A13",
+        "before": {
+          "ref": "A13",
+          "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A3",
+        "before": {
+          "ref": "A3",
+          "value": "TIRI LOGO"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A6",
+        "before": {
+          "ref": "A6",
+          "value": "TIRI LOGO"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A7",
+        "before": {
+          "ref": "A7",
+          "value": "電話、地址、mail"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A9",
+        "before": {
+          "ref": "A9",
+          "value": "聯絡TIRI"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B1",
+        "before": {
+          "ref": "B1",
+          "value": "FB"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B3",
+        "before": {
+          "ref": "B3",
+          "value": "關於TIRI"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B6",
+        "before": {
+          "ref": "B6",
+          "value": "關於TIRI"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B7",
+        "before": {
+          "ref": "B7",
+          "value": "協會簡介"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B8",
+        "before": {
+          "ref": "B8",
+          "value": "理監事成員"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B9",
+        "before": {
+          "ref": "B9",
+          "value": "功能委員會"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C1",
+        "before": {
+          "ref": "C1",
+          "value": "領英"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C10",
+        "before": {
+          "ref": "C10",
+          "value": "專業分享"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C3",
+        "before": {
+          "ref": "C3",
+          "value": "活動訊息"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C6",
+        "before": {
+          "ref": "C6",
+          "value": "相關資訊"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C7",
+        "before": {
+          "ref": "C7",
+          "value": "活動訊息"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C8",
+        "before": {
+          "ref": "C8",
+          "value": "課程與服務"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C9",
+        "before": {
+          "ref": "C9",
+          "value": "證照獎項"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D1",
+        "before": {
+          "ref": "D1",
+          "value": "LINE"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D3",
+        "before": {
+          "ref": "D3",
+          "value": "課程與服務"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D6",
+        "before": {
+          "ref": "D6",
+          "value": "會員服務"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D7",
+        "before": {
+          "ref": "D7",
+          "value": "加入會員"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D8",
+        "before": {
+          "ref": "D8",
+          "value": "會員專屬優惠"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "E1",
+        "before": {
+          "ref": "E1",
+          "value": "YU"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "E3",
+        "before": {
+          "ref": "E3",
+          "value": "證照獎項"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "F1",
+        "before": {
+          "ref": "F1",
+          "value": "信箱"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "F3",
+        "before": {
+          "ref": "F3",
+          "value": "專業分享"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "G1",
+        "before": {
+          "ref": "G1",
+          "value": "中英文切換"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "G3",
+        "before": {
+          "ref": "G3",
+          "value": "會員服務"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "H3",
+        "before": {
+          "ref": "H3",
+          "value": "年刊下載"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "I3",
+        "before": {
+          "ref": "I3",
+          "value": "會員登入"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "state",
+        "before": "visible",
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "merged_ranges",
+        "before": [],
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "images",
+        "before": [],
+        "after": null
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A1",
+        "before": null,
+        "after": {
+          "ref": "A1",
+          "value": "搜尋"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A10",
+        "before": null,
+        "after": {
+          "ref": "A10",
+          "value": "加入會員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A13",
+        "before": null,
+        "after": {
+          "ref": "A13",
+          "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A18",
+        "before": null,
+        "after": {
+          "ref": "A18",
+          "value": "搜尋"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A20",
+        "before": null,
+        "after": {
+          "ref": "A20",
+          "value": "TIRI LOGO"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A23",
+        "before": null,
+        "after": {
+          "ref": "A23",
+          "value": "TIRI LOGO"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A24",
+        "before": null,
+        "after": {
+          "ref": "A24",
+          "value": "電話、地址、mail"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A26",
+        "before": null,
+        "after": {
+          "ref": "A26",
+          "value": "聯絡TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A27",
+        "before": null,
+        "after": {
+          "ref": "A27",
+          "value": "加入會員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A3",
+        "before": null,
+        "after": {
+          "ref": "A3",
+          "value": "TIRI LOGO"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A30",
+        "before": null,
+        "after": {
+          "ref": "A30",
+          "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A6",
+        "before": null,
+        "after": {
+          "ref": "A6",
+          "value": "TIRI LOGO"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A7",
+        "before": null,
+        "after": {
+          "ref": "A7",
+          "value": "電話、地址、mail"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "A9",
+        "before": null,
+        "after": {
+          "ref": "A9",
+          "value": "聯絡TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B1",
+        "before": null,
+        "after": {
+          "ref": "B1",
+          "value": "FB"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B18",
+        "before": null,
+        "after": {
+          "ref": "B18",
+          "value": "FB"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B20",
+        "before": null,
+        "after": {
+          "ref": "B20",
+          "value": "關於TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B23",
+        "before": null,
+        "after": {
+          "ref": "B23",
+          "value": "關於TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B24",
+        "before": null,
+        "after": {
+          "ref": "B24",
+          "value": "協會簡介"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B25",
+        "before": null,
+        "after": {
+          "ref": "B25",
+          "value": "理監事成員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B26",
+        "before": null,
+        "after": {
+          "ref": "B26",
+          "value": "功能委員會"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B3",
+        "before": null,
+        "after": {
+          "ref": "B3",
+          "value": "關於TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B6",
+        "before": null,
+        "after": {
+          "ref": "B6",
+          "value": "關於TIRI"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B7",
+        "before": null,
+        "after": {
+          "ref": "B7",
+          "value": "協會簡介"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B8",
+        "before": null,
+        "after": {
+          "ref": "B8",
+          "value": "理監事成員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "B9",
+        "before": null,
+        "after": {
+          "ref": "B9",
+          "value": "功能委員會"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C1",
+        "before": null,
+        "after": {
+          "ref": "C1",
+          "value": "領英"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C10",
+        "before": null,
+        "after": {
+          "ref": "C10",
+          "value": "專業分享"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C18",
+        "before": null,
+        "after": {
+          "ref": "C18",
+          "value": "領英"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C20",
+        "before": null,
+        "after": {
+          "ref": "C20",
+          "value": "活動訊息"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C23",
+        "before": null,
+        "after": {
+          "ref": "C23",
+          "value": "相關資訊"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C24",
+        "before": null,
+        "after": {
+          "ref": "C24",
+          "value": "活動訊息"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C25",
+        "before": null,
+        "after": {
+          "ref": "C25",
+          "value": "課程與服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C26",
+        "before": null,
+        "after": {
+          "ref": "C26",
+          "value": "證照獎項"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C27",
+        "before": null,
+        "after": {
+          "ref": "C27",
+          "value": "專業分享"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C3",
+        "before": null,
+        "after": {
+          "ref": "C3",
+          "value": "活動訊息"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C6",
+        "before": null,
+        "after": {
+          "ref": "C6",
+          "value": "相關資訊"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C7",
+        "before": null,
+        "after": {
+          "ref": "C7",
+          "value": "活動訊息"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C8",
+        "before": null,
+        "after": {
+          "ref": "C8",
+          "value": "課程與服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "C9",
+        "before": null,
+        "after": {
+          "ref": "C9",
+          "value": "證照獎項"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D1",
+        "before": null,
+        "after": {
+          "ref": "D1",
+          "value": "LINE"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D18",
+        "before": null,
+        "after": {
+          "ref": "D18",
+          "value": "LINE"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D20",
+        "before": null,
+        "after": {
+          "ref": "D20",
+          "value": "課程與服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D23",
+        "before": null,
+        "after": {
+          "ref": "D23",
+          "value": "會員服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D24",
+        "before": null,
+        "after": {
+          "ref": "D24",
+          "value": "加入會員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D25",
+        "before": null,
+        "after": {
+          "ref": "D25",
+          "value": "會員專屬優惠"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D3",
+        "before": null,
+        "after": {
+          "ref": "D3",
+          "value": "課程與服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D6",
+        "before": null,
+        "after": {
+          "ref": "D6",
+          "value": "會員服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D7",
+        "before": null,
+        "after": {
+          "ref": "D7",
+          "value": "加入會員"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "D8",
+        "before": null,
+        "after": {
+          "ref": "D8",
+          "value": "會員專屬優惠"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "E1",
+        "before": null,
+        "after": {
+          "ref": "E1",
+          "value": "YU"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "E18",
+        "before": null,
+        "after": {
+          "ref": "E18",
+          "value": "YU"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "E20",
+        "before": null,
+        "after": {
+          "ref": "E20",
+          "value": "證照獎項"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "E3",
+        "before": null,
+        "after": {
+          "ref": "E3",
+          "value": "證照獎項"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "F1",
+        "before": null,
+        "after": {
+          "ref": "F1",
+          "value": "信箱"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "F18",
+        "before": null,
+        "after": {
+          "ref": "F18",
+          "value": "信箱"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "F20",
+        "before": null,
+        "after": {
+          "ref": "F20",
+          "value": "專業分享"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "F3",
+        "before": null,
+        "after": {
+          "ref": "F3",
+          "value": "專業分享"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "G1",
+        "before": null,
+        "after": {
+          "ref": "G1",
+          "value": "中英文切換"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "G18",
+        "before": null,
+        "after": {
+          "ref": "G18",
+          "value": "中英文切換"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "G20",
+        "before": null,
+        "after": {
+          "ref": "G20",
+          "value": "會員服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "G3",
+        "before": null,
+        "after": {
+          "ref": "G3",
+          "value": "會員服務"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "H20",
+        "before": null,
+        "after": {
+          "ref": "H20",
+          "value": "年刊下載"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "H3",
+        "before": null,
+        "after": {
+          "ref": "H3",
+          "value": "年刊下載"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "cells",
+        "ref": "I3",
+        "before": null,
+        "after": {
+          "ref": "I3",
+          "value": "會員登入"
+        }
+      },
+      {
+        "sheet": "工作表",
+        "field": "state",
+        "before": null,
+        "after": "visible"
+      },
+      {
+        "sheet": "工作表",
+        "field": "merged_ranges",
+        "before": null,
+        "after": []
+      },
+      {
+        "sheet": "工作表",
+        "field": "images",
+        "before": null,
+        "after": []
+      }
+    ],
+    "media_changes": [],
+    "current_workbook": {
+      "file": "ref/官網/新官網-資料/文件/0天+地的內容/天+地的內容.xlsx",
+      "sha256": "3497fd0b1dcb8aa935f1d70e8b0c1a8f1a1a295fba9cdba9a4a15a04857d024d",
+      "sheets": [
+        {
+          "name": "工作表",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "搜尋"
+            },
+            {
+              "ref": "B1",
+              "value": "FB"
+            },
+            {
+              "ref": "C1",
+              "value": "領英"
+            },
+            {
+              "ref": "D1",
+              "value": "LINE"
+            },
+            {
+              "ref": "E1",
+              "value": "YU"
+            },
+            {
+              "ref": "F1",
+              "value": "信箱"
+            },
+            {
+              "ref": "G1",
+              "value": "中英文切換"
+            },
+            {
+              "ref": "A3",
+              "value": "TIRI LOGO"
+            },
+            {
+              "ref": "B3",
+              "value": "關於TIRI"
+            },
+            {
+              "ref": "C3",
+              "value": "活動訊息"
+            },
+            {
+              "ref": "D3",
+              "value": "課程與服務"
+            },
+            {
+              "ref": "E3",
+              "value": "證照獎項"
+            },
+            {
+              "ref": "F3",
+              "value": "專業分享"
+            },
+            {
+              "ref": "G3",
+              "value": "會員服務"
+            },
+            {
+              "ref": "H3",
+              "value": "年刊下載"
+            },
+            {
+              "ref": "I3",
+              "value": "會員登入"
+            },
+            {
+              "ref": "A6",
+              "value": "TIRI LOGO"
+            },
+            {
+              "ref": "B6",
+              "value": "關於TIRI"
+            },
+            {
+              "ref": "C6",
+              "value": "相關資訊"
+            },
+            {
+              "ref": "D6",
+              "value": "會員服務"
+            },
+            {
+              "ref": "A7",
+              "value": "電話、地址、mail"
+            },
+            {
+              "ref": "B7",
+              "value": "協會簡介"
+            },
+            {
+              "ref": "C7",
+              "value": "活動訊息"
+            },
+            {
+              "ref": "D7",
+              "value": "加入會員"
+            },
+            {
+              "ref": "B8",
+              "value": "理監事成員"
+            },
+            {
+              "ref": "C8",
+              "value": "課程與服務"
+            },
+            {
+              "ref": "D8",
+              "value": "會員專屬優惠"
+            },
+            {
+              "ref": "A9",
+              "value": "聯絡TIRI"
+            },
+            {
+              "ref": "B9",
+              "value": "功能委員會"
+            },
+            {
+              "ref": "C9",
+              "value": "證照獎項"
+            },
+            {
+              "ref": "A10",
+              "value": "加入會員"
+            },
+            {
+              "ref": "C10",
+              "value": "專業分享"
+            },
+            {
+              "ref": "A13",
+              "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+            },
+            {
+              "ref": "A18",
+              "value": "搜尋"
+            },
+            {
+              "ref": "B18",
+              "value": "FB"
+            },
+            {
+              "ref": "C18",
+              "value": "領英"
+            },
+            {
+              "ref": "D18",
+              "value": "LINE"
+            },
+            {
+              "ref": "E18",
+              "value": "YU"
+            },
+            {
+              "ref": "F18",
+              "value": "信箱"
+            },
+            {
+              "ref": "G18",
+              "value": "中英文切換"
+            },
+            {
+              "ref": "A20",
+              "value": "TIRI LOGO"
+            },
+            {
+              "ref": "B20",
+              "value": "關於TIRI"
+            },
+            {
+              "ref": "C20",
+              "value": "活動訊息"
+            },
+            {
+              "ref": "D20",
+              "value": "課程與服務"
+            },
+            {
+              "ref": "E20",
+              "value": "證照獎項"
+            },
+            {
+              "ref": "F20",
+              "value": "專業分享"
+            },
+            {
+              "ref": "G20",
+              "value": "會員服務"
+            },
+            {
+              "ref": "H20",
+              "value": "年刊下載"
+            },
+            {
+              "ref": "A23",
+              "value": "TIRI LOGO"
+            },
+            {
+              "ref": "B23",
+              "value": "關於TIRI"
+            },
+            {
+              "ref": "C23",
+              "value": "相關資訊"
+            },
+            {
+              "ref": "D23",
+              "value": "會員服務"
+            },
+            {
+              "ref": "A24",
+              "value": "電話、地址、mail"
+            },
+            {
+              "ref": "B24",
+              "value": "協會簡介"
+            },
+            {
+              "ref": "C24",
+              "value": "活動訊息"
+            },
+            {
+              "ref": "D24",
+              "value": "加入會員"
+            },
+            {
+              "ref": "B25",
+              "value": "理監事成員"
+            },
+            {
+              "ref": "C25",
+              "value": "課程與服務"
+            },
+            {
+              "ref": "D25",
+              "value": "會員專屬優惠"
+            },
+            {
+              "ref": "A26",
+              "value": "聯絡TIRI"
+            },
+            {
+              "ref": "B26",
+              "value": "功能委員會"
+            },
+            {
+              "ref": "C26",
+              "value": "證照獎項"
+            },
+            {
+              "ref": "A27",
+              "value": "加入會員"
+            },
+            {
+              "ref": "C27",
+              "value": "專業分享"
+            },
+            {
+              "ref": "A30",
+              "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [],
+          "images": []
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/1首頁/首頁內容.xlsx",
+    "before_sha256": "dc2371b5fba973ebdb91e8daaff7e30d4d05fcd13c8464ee9710b00fe71951c1",
+    "after_sha256": "eda97ee30ef710ac39464464d5086bcee4d4d47b1c84981653c24835edc4e34a",
+    "changes": [
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A1",
+        "before": {
+          "ref": "A1",
+          "value": "全球IR連結"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A10",
+        "before": {
+          "ref": "A10",
+          "value": "活動訊息"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A11",
+        "before": {
+          "ref": "A11",
+          "value": "線上課程"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A12",
+        "before": {
+          "ref": "A12",
+          "value": "合作夥伴"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A16",
+        "before": {
+          "ref": "A16",
+          "value": "參考網站 : https://www.teeia.org.tw/tw"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A2",
+        "before": {
+          "ref": "A2",
+          "value": "16國"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B1",
+        "before": {
+          "ref": "B1",
+          "value": "會員數"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "B2",
+        "before": {
+          "ref": "B2",
+          "value": "369+人"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C1",
+        "before": {
+          "ref": "C1",
+          "value": "董事會評估"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "C2",
+        "before": {
+          "ref": "C2",
+          "value": "230+家"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D1",
+        "before": {
+          "ref": "D1",
+          "value": "課程講座"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "D2",
+        "before": {
+          "ref": "D2",
+          "value": "6300+場"
+        },
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "state",
+        "before": "visible",
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "merged_ranges",
+        "before": [],
+        "after": null
+      },
+      {
+        "sheet": "工作表1",
+        "field": "images",
+        "before": [
+          {
+            "file": "workbook-media/02/image1.png",
+            "row_1based": 4,
+            "col_1based": 1
+          }
+        ],
+        "after": null
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A1",
+        "before": null,
+        "after": {
+          "ref": "A1",
+          "value": "全球IR連結"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A10",
+        "before": null,
+        "after": {
+          "ref": "A10",
+          "value": "活動訊息"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A11",
+        "before": null,
+        "after": {
+          "ref": "A11",
+          "value": "線上課程"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A12",
+        "before": null,
+        "after": {
+          "ref": "A12",
+          "value": "合作夥伴"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A16",
+        "before": null,
+        "after": {
+          "ref": "A16",
+          "value": "參考網站 : https://www.teeia.org.tw/tw"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "A2",
+        "before": null,
+        "after": {
+          "ref": "A2",
+          "value": "16國"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "B1",
+        "before": null,
+        "after": {
+          "ref": "B1",
+          "value": "會員數"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "B2",
+        "before": null,
+        "after": {
+          "ref": "B2",
+          "value": "369+人"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "C1",
+        "before": null,
+        "after": {
+          "ref": "C1",
+          "value": "董事會評估"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "C2",
+        "before": null,
+        "after": {
+          "ref": "C2",
+          "value": "230+家"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "D1",
+        "before": null,
+        "after": {
+          "ref": "D1",
+          "value": "課程講座"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "cells",
+        "ref": "D2",
+        "before": null,
+        "after": {
+          "ref": "D2",
+          "value": "6300+人"
+        }
+      },
+      {
+        "sheet": "中文",
+        "field": "state",
+        "before": null,
+        "after": "visible"
+      },
+      {
+        "sheet": "中文",
+        "field": "merged_ranges",
+        "before": null,
+        "after": []
+      },
+      {
+        "sheet": "中文",
+        "field": "images",
+        "before": null,
+        "after": [
+          {
+            "file": "workbook-media/02/image1.png",
+            "row_1based": 4,
+            "col_1based": 1
+          }
+        ]
+      }
+    ],
+    "media_changes": [],
+    "current_workbook": {
+      "file": "ref/官網/新官網-資料/文件/1首頁/首頁內容.xlsx",
+      "sha256": "eda97ee30ef710ac39464464d5086bcee4d4d47b1c84981653c24835edc4e34a",
+      "sheets": [
+        {
+          "name": "中文",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "全球IR連結"
+            },
+            {
+              "ref": "B1",
+              "value": "會員數"
+            },
+            {
+              "ref": "C1",
+              "value": "董事會評估"
+            },
+            {
+              "ref": "D1",
+              "value": "課程講座"
+            },
+            {
+              "ref": "A2",
+              "value": "16國"
+            },
+            {
+              "ref": "B2",
+              "value": "369+人"
+            },
+            {
+              "ref": "C2",
+              "value": "230+家"
+            },
+            {
+              "ref": "D2",
+              "value": "6300+人"
+            },
+            {
+              "ref": "A10",
+              "value": "活動訊息"
+            },
+            {
+              "ref": "A11",
+              "value": "線上課程"
+            },
+            {
+              "ref": "A12",
+              "value": "合作夥伴"
+            },
+            {
+              "ref": "A16",
+              "value": "參考網站 : https://www.teeia.org.tw/tw"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [],
+          "images": [
+            {
+              "file": "workbook-media/02/image1.png",
+              "row_1based": 4,
+              "col_1based": 1
+            }
+          ]
+        }
+      ],
+      "media": [
+        {
+          "part": "xl/media/image1.png",
+          "file": "workbook-media/02/image1.png"
+        }
+      ]
+    }
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/2關於TIRI/1協會簡介/簡介.xlsx",
+    "before_sha256": "23ffe5f3f7f9a43f90033e8d5186dd852a98728d52a756bf3f30cacb75df160c",
+    "after_sha256": "e538de682f206dfb1e1e98876e1b0363284df8ae3cb16943f1bfa821aec3d719",
+    "changes": [],
+    "media_changes": [],
+    "current_workbook": {
+      "file": "ref/官網/新官網-資料/文件/2關於TIRI/1協會簡介/簡介.xlsx",
+      "sha256": "e538de682f206dfb1e1e98876e1b0363284df8ae3cb16943f1bfa821aec3d719",
+      "sheets": [
+        {
+          "name": "工作表1",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "中文"
+            },
+            {
+              "ref": "B1",
+              "value": "英文"
+            },
+            {
+              "ref": "A2",
+              "value": "法定名稱\n社團法人台灣投資人關係協會\n統一編號：72976985\n創會緣起\n1962年臺灣證券交易所正式開業，台灣資本市場發展至今已逾60年。台灣投資人關係協會由一群資本市場的有志之士共同成立，致力代表台灣與全球資本市場接軌，同時提升IR從業人員之專業與地位，改善現況！\n成立宗旨\nTIRI 台灣投資人關係協會 (Taiwan Investor Relations Institute)\n是專為台灣上市櫃、興櫃、公開發行、創櫃公司，負責經營團隊、股東、證券分析師、資本市場和主管機關之間溝通的企業經理人而設的專業協會，致力推進台灣投資人關係的實踐及其成員的專業能力和地位，並加強與國際資本市場接軌。"
+            },
+            {
+              "ref": "B2",
+              "value": "Objectives\nTaiwan Investor Relations Institute (TIRI) was established to serve as a communication platform for the management teams, shareholders, securities analysts, capital markets, and governing agencies that work with listed companies at stock exchanges, over-the-counter markets, and emerging markets, as well as companies planning public offerings and non-public innovative companies. We seek to advance investor relations in Taiwan and the professional capacity and positioning of our members, and international capital market communication."
+            },
+            {
+              "ref": "A4",
+              "value": "任務與核心願景\n本協會致力於建立台灣資本市場、上市櫃公司、國內外投資機構與主管機關的專業交流平台。我們以「提升台灣投資人關係（IR）專業水準、促進資本市場雙向溝通」為核心，積極推動 IR 實務交流、人才培育與公司治理，並致力協助台灣企業接軌國際資本市場，提升企業價值與全球能見度，共創資本市場榮景。"
+            },
+            {
+              "ref": "A6",
+              "value": "專業培訓與人才發展\n我們提供完善的職涯與專業技能支持體系，助力資本市場人才升級。\n\n專業培訓課程：針對資本市場動態、ESG 永續發展與 IR 實務需求，規劃董監事及 IR 從業人員進修課程。\n專業考試與證照：推動投資人關係（IR）專業認證機制，提升從業人員的專業價值與國際公信力。\n就業指導中心：媒合上市櫃公司 IR 與財務人才需求，提供會員企業優質的招募管道與求職者職涯輔導。"
+            },
+            {
+              "ref": "A8",
+              "value": "專業交流與資本市場拓展\n透過豐富的實體與線上活動，活絡企業與投資圈網絡，極大化企業價值。\n\n跨界交流平台：定期舉辦分區月會、IR 實務座談會及多元會員交流活動，串聯全台 IR 專業人士。\n年度大會暨評鑑：召開年度大會及 IR 專業研討會，並舉辦「IR 大獎 (IR Awards)」等年度評鑑與頒獎典禮，表揚投資人關係卓越之企業與個人。\n國外交流：組團參與國際 IR 組織活動交流，協助企業拓展海外投資人網絡與國際商機。"
+            },
+            {
+              "ref": "A10",
+              "value": "知識智庫與資源共享\n匯集資本市場最新動態與法規資訊，作為會員決策與實務操作的堅實後盾。\n\n年報、出版物及電子報：發行協會年報、IR 專業出版物及電子報，提供即時法規動態與市場資訊。\n雲端知識庫：整合國內外 IR 最佳實務與相關產品服務資源，讓會員隨時掌握關鍵知識。"
+            },
+            {
+              "ref": "A12",
+              "value": "配合主管機關推動之交流服務\n本協會期許成為上市櫃公司與主管機關（如金管會、證交所、櫃買中心等）間的良性溝通平台，協助傳遞業界實務經驗，共同促進台灣資本市場的穩健發展：\n\n協助政策宣導與推廣：配合主管機關推動資本市場新制與公司治理藍圖，協助辦理相關宣導活動，鼓勵會員企業落實法規要求，共同提升市場資訊透明度。\n\n促進實務交流與對話：配合資本市場發展脈動，適時舉辦座談會與研討會，邀請主管機關代表蒞臨指導。透過業界的實務經驗分享，增進公私部門間的理解與雙向互動。\n\n彙整實務洞察提供參考：透過定期的 IR 與資本市場相關調查，客觀彙整上市櫃公司在實務運作上的現況與市場回饋，期能作為主管機關未來規劃相關配套措施時的實務參考資訊。"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [],
+          "images": []
+        },
+        {
+          "name": "工作表2",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A3",
+              "value": "參考網址 : https://www.teeia.org.tw/tw/about/introduction"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [],
+          "images": []
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/3活動訊息/1最新消息/消息活動.xlsx",
+    "before_sha256": "861944dfe8b4dacef10a384678bc4268520608df727890926eff4ec34e129d16",
+    "after_sha256": "e90183df71bf7585e8e2d3f132034deab4d98801b4928490e0729e9c32318201",
+    "changes": [
+      {
+        "sheet": "工作表1",
+        "field": "cells",
+        "ref": "A10",
+        "before": null,
+        "after": {
+          "ref": "A10",
+          "value": "https://www.accupass.com/organizer/detail/1905200944211623899120"
+        }
+      },
+      {
+        "sheet": "工作表1",
+        "field": "hyperlinks",
+        "ref": "A10",
+        "before": null,
+        "after": {
+          "ref": "A10",
+          "target": "https://www.accupass.com/organizer/detail/1905200944211623899120"
+        }
+      }
+    ],
+    "media_changes": [],
+    "current_workbook": {
+      "file": "ref/官網/新官網-資料/文件/3活動訊息/1最新消息/消息活動.xlsx",
+      "sha256": "e90183df71bf7585e8e2d3f132034deab4d98801b4928490e0729e9c32318201",
+      "sheets": [
+        {
+          "name": "工作表1",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "時間"
+            },
+            {
+              "ref": "B1",
+              "value": "活動名稱"
+            },
+            {
+              "ref": "C1",
+              "value": "內容介紹"
+            },
+            {
+              "ref": "A2",
+              "value": "2026.10.16"
+            },
+            {
+              "ref": "B2",
+              "value": "2026 年度大會暨 IR新溝通時代"
+            },
+            {
+              "ref": "C2",
+              "value": "邁入2026年，TIRI 將以「IR 新溝通時代」為大會主題，呼應股東行動主義、散戶影響力提升與 AI 帶來的互動變革。本屆大會邀集國內外產官學專家，聚焦「從資訊揭露到價值對話」，期盼攜手企業探討創新溝通策略，深化投資人的長期信任，共創企業長遠價值。"
+            },
+            {
+              "ref": "A5",
+              "value": "TIRI過往活動連結 : https://www.accupass.com/organizer/detail/1905200944211623899120"
+            },
+            {
+              "ref": "A7",
+              "value": "呈現方式可參考 :https://www.teeia.org.tw/tw/news?cate=cate1&page=1"
+            },
+            {
+              "ref": "A8",
+              "value": "https://www.cisanet.org.tw/News?page=1"
+            },
+            {
+              "ref": "A10",
+              "value": "https://www.accupass.com/organizer/detail/1905200944211623899120"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [
+            {
+              "ref": "A10",
+              "target": "https://www.accupass.com/organizer/detail/1905200944211623899120"
+            }
+          ],
+          "images": []
+        }
+      ],
+      "media": []
+    }
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/5證照獎項/證照獎項.xlsx",
+    "before_sha256": "eee74876a107cf5b4c0628824dda4fe02604d2df72f1cff75c26f036a1825f7d",
+    "after_sha256": "ae621b746f8eb812ce46619f51860d8d8ff84ac19d0054724edf4ae32f773cd4",
+    "changes": [
+      {
+        "sheet": "證照",
+        "field": "hyperlinks",
+        "ref": "A2",
+        "before": null,
+        "after": {
+          "ref": "A2",
+          "target": "https://www.tiri.tw/html/certification.html"
+        }
+      },
+      {
+        "sheet": "證照",
+        "field": "hyperlinks",
+        "ref": "A7",
+        "before": null,
+        "after": {
+          "ref": "A7",
+          "target": "https://www.tiri.tw/html/tiric.html"
+        }
+      }
+    ],
+    "media_changes": [],
+    "current_workbook": {
+      "file": "ref/官網/新官網-資料/文件/5證照獎項/證照獎項.xlsx",
+      "sha256": "ae621b746f8eb812ce46619f51860d8d8ff84ac19d0054724edf4ae32f773cd4",
+      "sheets": [
+        {
+          "name": "證照",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "中文"
+            },
+            {
+              "ref": "B1",
+              "value": "英文"
+            },
+            {
+              "ref": "A2",
+              "value": "https://www.tiri.tw/html/certification.html"
+            },
+            {
+              "ref": "B2",
+              "value": "https://www.tiri.tw/html/certification-388672.html"
+            },
+            {
+              "ref": "A4",
+              "value": "https://www.tiri.tw/html/scholarshipirc.html"
+            },
+            {
+              "ref": "B4",
+              "value": "https://www.tiri.tw/html/scholarshipirc-952540.html"
+            },
+            {
+              "ref": "A6",
+              "value": "TIRIC專業實戰課程"
+            },
+            {
+              "ref": "A7",
+              "value": "https://www.tiri.tw/html/tiric.html"
+            },
+            {
+              "ref": "B7",
+              "value": "https://www.tiri.tw/html/tiric-677070.html"
+            },
+            {
+              "ref": "A9",
+              "value": "2025 TIRIC回顧"
+            },
+            {
+              "ref": "A10",
+              "value": "放照片"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [
+            {
+              "ref": "A2",
+              "target": "https://www.tiri.tw/html/certification.html"
+            },
+            {
+              "ref": "A4",
+              "target": "https://www.tiri.tw/html/scholarshipirc.html"
+            },
+            {
+              "ref": "A7",
+              "target": "https://www.tiri.tw/html/tiric.html"
+            }
+          ],
+          "images": []
+        },
+        {
+          "name": "獎項",
+          "state": "visible",
+          "cells": [
+            {
+              "ref": "A1",
+              "value": "中文"
+            },
+            {
+              "ref": "B1",
+              "value": "英文"
+            },
+            {
+              "ref": "A2",
+              "value": "https://www.tiri.tw/html/mission-206783-396345.html"
+            },
+            {
+              "ref": "B2",
+              "value": "https://www.tiri.tw/html/mission-206783-396345-512343.html"
+            },
+            {
+              "ref": "A5",
+              "value": "由於TIRI Aawards今年是第5屆，我要像理監事的頁面那樣呈現，能夠一屆一屆呈現出來"
+            }
+          ],
+          "merged_ranges": [],
+          "hyperlinks": [],
+          "images": []
+        }
+      ],
+      "media": []
+    }
+  }
+]

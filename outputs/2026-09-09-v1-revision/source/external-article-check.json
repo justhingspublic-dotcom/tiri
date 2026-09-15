@@ -1,0 +1,39 @@
+[
+  {
+    "url": "http://www.accounting.org.tw/flptopic.aspx?f=202",
+    "status": 200,
+    "final_url": "https://www.accounting.org.tw/flptopic.aspx?f=202",
+    "title": "\r\n\t會計研究月刊\r\n",
+    "matched_keywords": [
+      "資本市場最佳",
+      "上市"
+    ]
+  },
+  {
+    "url": "http://www.accounting.org.tw/lnktopic.aspx?n=1131",
+    "status": 200,
+    "final_url": "https://www.accounting.org.tw/lnktopic.aspx?n=1131",
+    "title": "\r\n\t會計研究月刊\r\n",
+    "matched_keywords": [
+      "霹靂"
+    ]
+  },
+  {
+    "url": "http://www.accounting.org.tw/lnktopic.aspx?n=1130&fbclid=IwAR2YHfO8i9NO39EOMD0T-w0-2Tkf7u7WdbAZqGKgMH-H5e1jEVU-hUpvAbA",
+    "status": 200,
+    "final_url": "https://www.accounting.org.tw/lnktopic.aspx?n=1130&fbclid=IwAR2YHfO8i9NO39EOMD0T-w0-2Tkf7u7WdbAZqGKgMH-H5e1jEVU-hUpvAbA",
+    "title": "\r\n\t會計研究月刊\r\n",
+    "matched_keywords": [
+      "上市"
+    ]
+  },
+  {
+    "url": "https://www.wealth.com.tw/home/articles/19090",
+    "status": 200,
+    "final_url": "https://www.wealth.com.tw/articles/0dff6b25-9ae8-4dd4-90eb-b0ab7e07179f",
+    "title": "財訊-掌握趨勢、投資未來｜最懂投資的財經媒體-財訊雙週刊",
+    "matched_keywords": [],
+    "browser_title": "投資人關係專家劉詩亮：籌資遇困境 企業先惦惦自己斤兩",
+    "browser_verified": true
+  }
+]

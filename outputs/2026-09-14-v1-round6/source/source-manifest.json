@@ -1,0 +1,28 @@
+[
+  {
+    "file": "/Users/jonathanyu/Desktop/Travail/Justhings/投資人協會 TIRI/ref/官網/新官網-資料/文件/5證照獎項/TIRI Awards獎項/歷年TIRI_Awards入圍名單.xlsx",
+    "sha256": "b5601e08165902ee90cb9a97ab0b31664f52e305c6e62c852211745a15339da0",
+    "sheets": [
+      "2022(第一屆)",
+      "2023(第二屆)",
+      "2024(第三屆)",
+      "2025(第四屆)",
+      "2026(第五屆)"
+    ]
+  },
+  {
+    "file": "/Users/jonathanyu/Desktop/Travail/Justhings/投資人協會 TIRI/ref/官網/新官網-資料/文件/5證照獎項/TIRI Awards獎項/歷年潛力進展獎得獎名單.xlsx",
+    "sha256": "0a22c801b2b25a4f3edf9ceec1882bf310f85280969345cc1c08f08410e9397e",
+    "sheets": [
+      "2025(第一屆)",
+      "2026(第二屆)"
+    ]
+  },
+  {
+    "file": "/Users/jonathanyu/Desktop/Travail/Justhings/投資人協會 TIRI/ref/官網/新官網-資料/文件/7會員服務/會員類別總表.xlsx",
+    "sha256": "f232c2dde79b2763b4da04e736d4f9e886eb24a2eb7d2bebe088701e335be96f",
+    "sheets": [
+      "會員類別總表"
+    ]
+  }
+]

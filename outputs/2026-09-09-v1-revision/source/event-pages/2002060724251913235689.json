@@ -1,0 +1,43 @@
+{
+  "url": "https://www.accupass.com/event/2002060724251913235689",
+  "local_label": "04.24 2020 完美危機處理SOP 活動 台北 →",
+  "id": "2002060724251913235689",
+  "source_title": "完美危機處理SOP｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2003180239336096104060.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "完美危機處理SOP",
+      "image": "https://static.accupass.com/eventbanner/2003180239336096104060.jpg",
+      "startDate": "2020-04-24T09:30:00+08:00",
+      "endDate": "2020-04-24T16:30:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "當危機降臨時，不論是企業或個人都可能會面臨鋪天蓋地、十萬火急的媒體及法律的問題，如何在極短的時間與極大的壓力煎熬下，遵循事前建立的SOP流程，同時隨著當下的狀況應對調整，該不該發言，該講些什麼，這些都是企業高層及媒體公關、投資人關係經理人必須學習的課題。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "胡恒士"
+        },
+        {
+          "@type": "Person",
+          "name": "蘇維國"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市東興路8號15樓（統一證券會議室）"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2002060724251913235689.jpg"
+}

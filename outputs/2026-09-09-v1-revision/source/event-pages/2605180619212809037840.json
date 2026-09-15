@@ -1,0 +1,76 @@
+{
+  "url": "https://www.accupass.com/event/2605180619212809037840",
+  "local_label": "05.28 2026 線上說明會 - TIRIC 2026 IR 專業實戰班 TIRIC 台北 →",
+  "id": "2605180619212809037840",
+  "source_title": "線上說明會 - TIRIC 2026 IR 專業實戰班｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2605200636029758707680.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "線上說明會 - TIRIC 2026 IR 專業實戰班",
+      "image": "https://static.accupass.com/eventbanner/2605200636029758707680.jpg",
+      "startDate": "2026-05-28T16:00:00+08:00",
+      "endDate": "2026-05-28T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "在全球資本市場持續演進與ESG要求日益提升的趨勢下，投資人關係（IR）已從傳統資訊揭露，轉型為結合財務溝通、公司治理與策略管理的核心職能。\n本課程邀集具備豐富實務經驗之專業講師授課，並導入國際投資人關係架構，提供企業中高階管理者一個深化專業、拓展視野及促進交流的平台，以因應企業在成長與轉型過程中的多元挑戰。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "郭宗霖"
+        },
+        {
+          "@type": "Person",
+          "name": "高正興"
+        },
+        {
+          "@type": "Person",
+          "name": "王達人"
+        },
+        {
+          "@type": "Person",
+          "name": "張明仁"
+        },
+        {
+          "@type": "Person",
+          "name": "沈馥馥"
+        },
+        {
+          "@type": "Person",
+          "name": "簡世雄"
+        },
+        {
+          "@type": "Person",
+          "name": "張妍婷"
+        },
+        {
+          "@type": "Person",
+          "name": "許碧雲"
+        },
+        {
+          "@type": "Person",
+          "name": "胡恒士"
+        },
+        {
+          "@type": "Person",
+          "name": "黃國銘"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市中正區重慶南路一段57號13樓之13",
+        "name": "此說明會採線上非實體"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2605180619212809037840.jpg"
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><title>年份選單焦點回歸檢查</title>
+<section data-recap>
+  <div data-recap-picker>
+    <button class="term-trigger" value="all"><span data-recap-year-value>全部</span></button>
+    <ul class="term-menu" hidden>
+      <li role="option" data-year="all" tabindex="-1">全部</li>
+      <li role="option" data-year="2025" tabindex="-1">2025</li>
+    </ul>
+  </div>
+  <input id="recap-search"><span id="recap-count"></span>
+  <a class="recap-card" data-recap-year="2025" data-recap-title="2025">2025 活動</a>
+  <p class="recap-empty" hidden>無結果</p>
+</section>
+<button id="run">執行焦點回歸檢查</button><pre id="result"></pre>
+<script>
+const loaded = new Promise(resolve => {
+  const script = document.createElement('script');
+  script.src = new URLSearchParams(location.search).has('before')
+    ? '../before-toggle-fix/recap-round7.js'
+    : '../../../../v1/js/recap-round7.js?v=20260914-r8b';
+  script.onload = resolve;
+  document.head.append(script);
+});
+document.getElementById('run').addEventListener('click', async () => {
+  await loaded;
+  const trigger = document.querySelector('.term-trigger');
+  const menu = document.querySelector('.term-menu');
+  const option = document.querySelector('[data-year="2025"]');
+  const checks = [];
+  // Reproduce the browser sequence where pointer interaction blurs to no element.
+  trigger.click();
+  checks.push(['open', !menu.hidden]);
+  document.activeElement.blur();
+  trigger.click();
+  checks.push(['same trigger closes after null-relatedTarget blur', menu.hidden]);
+  document.getElementById('recap-search').click();
+  trigger.click();
+  document.activeElement.blur();
+  option.click();
+  checks.push(['option selects and closes', menu.hidden && trigger.value === '2025']);
+  trigger.click();
+  document.getElementById('recap-search').focus();
+  checks.push(['external keyboard focus closes', menu.hidden]);
+  document.getElementById('result').textContent = JSON.stringify({passed:checks.every(check => check[1]),checks}, null, 2);
+});
+</script></html>

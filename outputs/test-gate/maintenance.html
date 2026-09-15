@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>網站維護中</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    background: #f5f5f4;
+    color: #1c1917;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #e7e5e4;
+    border-radius: 8px;
+    padding: 48px 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 12px; }
+  p { font-size: 14px; color: #78716c; line-height: 1.7; margin-bottom: 28px; }
+  form { display: flex; flex-direction: column; gap: 12px; }
+  input {
+    font-size: 15px;
+    padding: 10px 14px;
+    border: 1px solid #d6d3d1;
+    border-radius: 6px;
+    outline: none;
+    text-align: center;
+  }
+  input:focus { border-color: #57534e; }
+  button {
+    font-size: 15px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #1c1917;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover { background: #44403c; }
+  .error { color: #b91c1c; font-size: 13px; margin-top: 12px; display: none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>網站維護中</h1>
+    <p>本網站目前進行維護作業，暫停對外開放。<br>如有存取需求，請輸入通行密碼。</p>
+    <form id="gate">
+      <input type="password" id="pw" placeholder="請輸入密碼" autocomplete="off" autofocus>
+      <button type="submit">進入網站</button>
+    </form>
+    <div class="error" id="err">密碼錯誤，請重新輸入。</div>
+  </div>
+<script>
+document.getElementById('gate').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var pw = document.getElementById('pw').value.trim();
+  if (!pw) return;
+  document.cookie = 'tiri_auth=' + encodeURIComponent(pw) + '; path=/; max-age=604800; secure; samesite=lax';
+  fetch('/index.html', { cache: 'no-store' }).then(function (resp) {
+    if (resp.redirected) {
+      document.getElementById('err').style.display = 'block';
+      document.getElementById('pw').value = '';
+      document.getElementById('pw').focus();
+    } else {
+      location.href = '/html/index.html';
+    }
+  });
+});
+</script>
+</body>
+</html>

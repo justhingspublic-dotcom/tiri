@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2406210622034272819070",
+  "local_label": "10.18 2024 品牌溝通與利害關係人管理 董監進修課程 線上 →",
+  "id": "2406210622034272819070",
+  "source_title": "10/18【TIRI線上董事、公司治理主管進修課程】品牌溝通與利害關係人管理｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2409050909421851177742.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "10/18【TIRI線上董事、公司治理主管進修課程】品牌溝通與利害關係人管理",
+      "image": "https://static.accupass.com/eventbanner/2409050909421851177742.jpg",
+      "startDate": "2024-10-18T14:00:00+08:00",
+      "endDate": "2024-10-18T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在當今高度競爭和快速變化的市場環境中，品牌溝通與利害關係人管理已成為企業成功的重要因素。企業需要有效地傳達其品牌價值，並與內外部利害關係人保持積極的互動，以增強品牌聲譽和市場競爭力。",
+      "performer": {
+        "@type": "Person",
+        "name": "林祐蘭"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2406210622034272819070.jpg"
+}

@@ -1,0 +1,50 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '../ref/官網/新官網-資料/文件/5證照獎項/TIRIC課程介紹影片(白底).mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    creation_time   : 2026-03-10T22:39:03.000000Z
+  Duration: 00:00:38.84, start: 0.000000, bitrate: 49610 kb/s
+  Stream #0:0[0x1](zho): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        creation_time   : 2026-03-10T22:39:03.000000Z
+        handler_name    : Core Media Audio
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 3840x2160, 49392 kb/s, SAR 1:1 DAR 16:9, 29.97 fps, 29.97 tbr, 30k tbn (default)
+      Metadata:
+        creation_time   : 2026-03-10T22:39:03.000000Z
+        handler_name    : Core Media Video
+        vendor_id       : [0][0][0][0]
+Input #1, mov,mp4,m4a,3gp,3g2,mj2, from 'v1/videos/tiric-intro.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+  Duration: 00:00:38.85, start: 0.000000, bitrate: 2379 kb/s
+  Stream #1:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2242 kb/s, 29.97 fps, 29.97 tbr, 30k tbn (default)
+      Metadata:
+        handler_name    : Core Media Video
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+  Stream #1:1[0x2](zho): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Core Media Audio
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 (h264) -> scale:default
+  Stream #1:0 (h264) -> setsar:default
+  ssim:default -> Stream #0:0 (wrapped_avframe)
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: isommp41mp42
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: wrapped_avframe, yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 29.97 fps, 29.97 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 wrapped_avframe
+frame=   59 fps=0.0 q=-0.0 size=N/A time=00:00:01.96 bitrate=N/A speed=3.86x    frame=  131 fps=129 q=-0.0 size=N/A time=00:00:04.37 bitrate=N/A speed=4.31x    frame=  202 fps=133 q=-0.0 size=N/A time=00:00:06.74 bitrate=N/A speed=4.44x    frame=  279 fps=138 q=-0.0 size=N/A time=00:00:09.30 bitrate=N/A speed=4.61x    frame=  376 fps=149 q=-0.0 size=N/A time=00:00:12.54 bitrate=N/A speed=4.96x    frame=  482 fps=159 q=-0.0 size=N/A time=00:00:16.08 bitrate=N/A speed=5.29x    frame=  577 fps=163 q=-0.0 size=N/A time=00:00:19.25 bitrate=N/A speed=5.43x    frame=  683 fps=168 q=-0.0 size=N/A time=00:00:22.78 bitrate=N/A speed=5.62x    frame=  779 fps=171 q=-0.0 size=N/A time=00:00:25.99 bitrate=N/A speed=5.69x    frame=  870 fps=172 q=-0.0 size=N/A time=00:00:29.02 bitrate=N/A speed=5.72x    frame=  967 fps=173 q=-0.0 size=N/A time=00:00:32.26 bitrate=N/A speed=5.78x    frame= 1030 fps=169 q=-0.0 size=N/A time=00:00:34.36 bitrate=N/A speed=5.64x    frame= 1105 fps=167 q=-0.0 size=N/A time=00:00:36.87 bitrate=N/A speed=5.59x    [Parsed_ssim_3 @ 0x828d892c0] SSIM Y:0.982306 (17.521855) U:0.988120 (19.251782) V:0.988145 (19.260806) All:0.984248 (18.026746)
+[out#0/null @ 0x828c44600] video:500KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame= 1164 fps=168 q=-0.0 Lsize=N/A time=00:00:38.83 bitrate=N/A speed=5.62x    

@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2408290602361963077719",
+  "local_label": "11.29 2024 漫談資安治理的盲點與對策 董監進修課程 線上 →",
+  "id": "2408290602361963077719",
+  "source_title": "11/29【TIRI線上董事、公司治理主管進修課程】漫談資安治理的盲點與對策｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2409090153279848888840.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "11/29【TIRI線上董事、公司治理主管進修課程】漫談資安治理的盲點與對策",
+      "image": "https://static.accupass.com/eventbanner/2409090153279848888840.jpg",
+      "startDate": "2024-11-29T14:00:00+08:00",
+      "endDate": "2024-11-29T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在數位化時代，資安威脅日益增長，企業和組織面臨的挑戰愈加複雜。有效的資安治理已成為確保組織運營穩定及數據安全的關鍵。然而，許多組織在資安治理上仍存在一些盲點，這些盲點如果未能被及時發現和解決，將可能引發重大安全風險。",
+      "performer": {
+        "@type": "Person",
+        "name": "游定森"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2408290602361963077719.jpg"
+}

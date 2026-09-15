@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2507140257544908421030",
+  "local_label": "09.26 2025 Just Say No！職場侵害OUT，DEI職場IN──法說、學說、務實說之職場不法侵害（性騷擾＋職場霸凌）案例解析與預防舉措 董監進修課程 線上 →",
+  "id": "2507140257544908421030",
+  "source_title": "09/26【TIRI線上董事、公司治理主管進修課程】Just Say No！職場侵害OUT，DEI職場IN──法說、學說、務實說之職場不法侵害（性騷擾＋職場霸凌）案例解析與預防舉措｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2508290802266769334380.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "09/26【TIRI線上董事、公司治理主管進修課程】Just Say No！職場侵害OUT，DEI職場IN──法說、學說、務實說之職場不法侵害（性騷擾＋職場霸凌）案例解析與預防舉措",
+      "image": "https://static.accupass.com/eventbanner/2508290802266769334380.jpg",
+      "startDate": "2025-09-26T14:00:00+08:00",
+      "endDate": "2025-09-26T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "面對日益嚴峻的職場不法侵害議題，企業不僅需強化內部治理，更必須深刻理解性騷擾與職場霸凌的法律定義與風險邊界。本課程從法院實務案例出發，結合法學見解與企業實務，全面剖析常見的肢體暴力、言語暴力、情緒性舉措、濫權與性騷擾等情形，並進一步釐清哪些行為未構成霸凌、調查與判斷標準，以及行為人與雇主可能面臨的法律責任。",
+      "performer": {
+        "@type": "Person",
+        "name": "沈以軒"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2507140257544908421030.jpg"
+}

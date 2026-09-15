@@ -1,0 +1,25 @@
+{
+  "items": 41,
+  "accepted": 35,
+  "ready": [
+    "10"
+  ],
+  "waiting": [
+    "17",
+    "20",
+    "23",
+    "25",
+    "41"
+  ],
+  "historyEntriesPerItem": 4,
+  "committeePages": 5,
+  "imageCards": 20,
+  "preserved": [
+    "all prior histories and replies",
+    "original image files",
+    "five third-round banners",
+    "committee rosters",
+    "all unrelated page content"
+  ],
+  "checks": "passed"
+}

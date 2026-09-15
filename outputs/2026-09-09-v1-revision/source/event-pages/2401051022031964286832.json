@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2401051022031964286832",
+  "local_label": "02.23 2024 企業績效提升的密碼-成本分析與綠色供應鏈 董監進修課程 線上 →",
+  "id": "2401051022031964286832",
+  "source_title": "2/23【TIRI線上董事、公司治理主管進修課程】企業績效提升的密碼-成本分析與綠色供應鏈｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2401110904401771256886.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "2/23【TIRI線上董事、公司治理主管進修課程】企業績效提升的密碼-成本分析與綠色供應鏈",
+      "image": "https://static.accupass.com/eventbanner/2401110904401771256886.jpg",
+      "startDate": "2024-02-23T14:00:00+08:00",
+      "endDate": "2024-02-23T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在數位經濟時代，企業須有明智的決策，同時落實碳足跡和綠色供應鏈管理。本課程將帶您了解，數位轉型組織改造與職能提升如何影響績效提升，為企業未來發展奠定基礎",
+      "performer": {
+        "@type": "Person",
+        "name": "劉彥伯"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2401051022031964286832.jpg"
+}

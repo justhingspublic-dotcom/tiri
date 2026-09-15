@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-09-10T06:08:17.835419+00:00",
+  "checks": {
+    "originalNinePhotosUnchanged": true,
+    "nineOriginalPhotosRecorded": true,
+    "bannerDesignMatchesWebsite": true,
+    "提升公司治理服務流程-正式版.png matches accepted website asset": true,
+    "董事會績效評估流程-手機直式.png matches accepted website asset": true,
+    "董事會績效評估流程-正式橫式.png matches accepted website asset": true,
+    "trainbod.html hero wording unchanged": true,
+    "trainbod.html uses nine-photo asset": true,
+    "trainbod.html rest of page unchanged": true,
+    "trainbod-329824.html hero wording unchanged": true,
+    "trainbod-329824.html uses nine-photo asset": true,
+    "trainbod-329824.html rest of page unchanged": true,
+    "existingCSSRetained": true,
+    "all41ItemsRetained": true,
+    "other40ReviewItemsUnchanged": true,
+    "allReviewHistoriesRetained": true,
+    "correctCounts": true,
+    "item20ReadyForReview": true,
+    "item10StillUserConfirmed": true
+  },
+  "statusCounts": {
+    "accepted": 36,
+    "ready": 1,
+    "waiting": 4
+  },
+  "browserObservations": {
+    "desktopChinese": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "naturalImageSize": [
+        1774,
+        887
+      ],
+      "objectFit": "contain",
+      "horizontalOverflow": false,
+      "visualReview": "九張完整呈現，標題可讀。"
+    },
+    "mobileChinese": {
+      "viewport": [
+        390,
+        844
+      ],
+      "objectFit": "contain",
+      "horizontalOverflow": false,
+      "visualReview": "九張完整呈現，標題位於拼接圖下方，導覽正常。"
+    },
+    "desktopEnglish": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "objectFit": "contain",
+      "horizontalOverflow": false,
+      "visualReview": "九張完整呈現，英文標題可讀。"
+    },
+    "mobileEnglish": {
+      "viewport": [
+        390,
+        844
+      ],
+      "objectFit": "contain",
+      "horizontalOverflow": false,
+      "visualReview": "九張完整呈現，英文長標題位於拼接圖下方，沒有遮住照片。"
+    },
+    "reviewPage": {
+      "url": "http://localhost:4173/outputs/2026-09-10-v1-review-round4/第四輪複檢.html?build=nine-photo",
+      "accepted": 36,
+      "ready": 1,
+      "waiting": 4,
+      "visibleItem": "20",
+      "bannerCheckboxChecked": false,
+      "bannerLink": "http://localhost:4173/v1/html/trainbod.html?review=20260910-r10-nine-photo#training-banner"
+    }
+  }
+}

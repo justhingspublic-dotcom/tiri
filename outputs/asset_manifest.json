@@ -1,0 +1,74 @@
+{
+ "tiric_2025_recap": [
+  "tiric-2025-class.jpg",
+  "tiric-2025-students.jpg",
+  "tiric-2025-group-1.jpg",
+  "tiric-2025-group-2.jpg",
+  "tiric-2025-lecturers-1.jpg",
+  "tiric-2025-lecturers-2.jpg"
+ ],
+ "tiric_lecturers": [
+  {
+   "name": "張妍婷",
+   "file": "lect-chang-yen-ting.jpg"
+  },
+  {
+   "name": "張明仁",
+   "file": "lect-chang-ming-jen.jpg"
+  },
+  {
+   "name": "沈馥馥",
+   "file": "lect-shen-fu-fu.jpg"
+  },
+  {
+   "name": "王達人",
+   "file": "lect-wang-ta-jen.jpg"
+  },
+  {
+   "name": "簡世雄",
+   "file": "lect-chien-shih-hsiung.jpg"
+  },
+  {
+   "name": "胡恒士",
+   "file": "lect-hu-heng-shih.jpg"
+  },
+  {
+   "name": "許碧雲",
+   "file": "lect-hsu-pi-yun.jpg"
+  },
+  {
+   "name": "郭宗霖",
+   "file": "lect-kuo-tsung-lin.jpg"
+  },
+  {
+   "name": "高正興",
+   "file": "lect-kao-cheng-hsing.jpg"
+  },
+  {
+   "name": "黃國銘",
+   "file": "lect-huang-kuo-ming.jpg"
+  }
+ ],
+ "awards_photos": [
+  "awards-2022-twse.jpg",
+  "awards-2022-tpex.jpg",
+  "awards-2023-twse-1.jpg",
+  "awards-2023-twse-2.jpg",
+  "awards-2023-tpex-1.jpg",
+  "awards-2023-tpex-2.jpg",
+  "awards-2024-twse-1.jpg",
+  "awards-2024-twse-2.jpg",
+  "awards-2024-tpex-1.jpg",
+  "awards-2024-tpex-2.jpg",
+  "awards-2025-twse.jpg",
+  "awards-2025-tpex.jpg",
+  "awards-2025-progress-twse.jpg",
+  "awards-2025-progress-tpex.jpg",
+  "awards-trophy.jpg",
+  "awards-progress-certificate.jpg"
+ ],
+ "application_forms": {
+  "個人預備會員": "files/tiri-application-individual.docx",
+  "團體會員": "files/tiri-application-group.docx"
+ }
+}

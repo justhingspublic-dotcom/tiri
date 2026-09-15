@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2307060848535293216650",
+  "local_label": "07.31 2023 數位經濟時代，企業如何創新，突破獲利能力 董監進修課程 線上 →",
+  "id": "2307060848535293216650",
+  "source_title": "7/31【TIRI線上董事、公司治理主管進修課程】數位經濟時代，企業如何創新，突破獲利能力｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2307070923498185177320.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "7/31【TIRI線上董事、公司治理主管進修課程】數位經濟時代，企業如何創新，突破獲利能力",
+      "image": "https://static.accupass.com/eventbanner/2307070923498185177320.jpg",
+      "startDate": "2023-07-31T14:00:00+08:00",
+      "endDate": "2023-07-31T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "數位經濟時代帶來機遇和挑戰，本課程深入探討數位轉型、工業4.0、人工智慧。及成功企業的創新模式，助您在數位時代實現突破性的獲利能力!",
+      "performer": {
+        "@type": "Person",
+        "name": "劉彥伯"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2307060848535293216650.jpg"
+}

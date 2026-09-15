@@ -1,0 +1,44 @@
+{
+  "url": "https://www.accupass.com/event/2103180313471398328078",
+  "local_label": "05.04 2021 TIRI講座－ESG及董事會績效評估最佳實務 講座 台北 →",
+  "id": "2103180313471398328078",
+  "source_title": "TIRI講座－ESG及董事會績效評估最佳實務｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2103190730517452978020.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "TIRI講座－ESG及董事會績效評估最佳實務",
+      "image": "https://static.accupass.com/eventbanner/2103190730517452978020.jpg",
+      "startDate": "2021-05-04T14:30:00+08:00",
+      "endDate": "2021-05-04T17:30:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "由 TIRI 台灣投資人關係協會主辦。本次活動由程淑芬 投資長分享ESG之價值及外部關注的重要議題；也邀請郭宗霖 財務長分享董事會績效評估的實務探討，透過實際案例來與各位分享，讓各位來參加的學長姊都能有個美好的體驗。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "程淑芬"
+        },
+        {
+          "@type": "Person",
+          "name": "郭宗霖"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市民生東路四段54號4樓大會議室",
+        "name": "華南永昌證券民生分行"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2103180313471398328078.jpg"
+}

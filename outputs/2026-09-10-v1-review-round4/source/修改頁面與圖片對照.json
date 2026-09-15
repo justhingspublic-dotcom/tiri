@@ -1,0 +1,102 @@
+[
+  {
+    "page": "committee-certification.html",
+    "target": "committee-awards.html",
+    "image": "../images/awards/awards-trophy.jpg"
+  },
+  {
+    "page": "committee-certification.html",
+    "target": "committee-professional.html",
+    "image": "../images/revision/A04-capital-market.jpg"
+  },
+  {
+    "page": "committee-certification.html",
+    "target": "committee-media.html",
+    "image": "../images/review-r2/media-interview.jpg"
+  },
+  {
+    "page": "committee-certification.html",
+    "target": "committee-outreach.html",
+    "image": "../images/hero-annual-forum.jpg"
+  },
+  {
+    "page": "committee-awards.html",
+    "target": "committee-certification.html",
+    "image": "../images/seminar-room.jpg"
+  },
+  {
+    "page": "committee-awards.html",
+    "target": "committee-professional.html",
+    "image": "../images/revision/A04-capital-market.jpg"
+  },
+  {
+    "page": "committee-awards.html",
+    "target": "committee-media.html",
+    "image": "../images/review-r2/media-interview.jpg"
+  },
+  {
+    "page": "committee-awards.html",
+    "target": "committee-outreach.html",
+    "image": "../images/hero-annual-forum.jpg"
+  },
+  {
+    "page": "committee-professional.html",
+    "target": "committee-certification.html",
+    "image": "../images/seminar-room.jpg"
+  },
+  {
+    "page": "committee-professional.html",
+    "target": "committee-awards.html",
+    "image": "../images/awards/awards-trophy.jpg"
+  },
+  {
+    "page": "committee-professional.html",
+    "target": "committee-media.html",
+    "image": "../images/review-r2/media-interview.jpg"
+  },
+  {
+    "page": "committee-professional.html",
+    "target": "committee-outreach.html",
+    "image": "../images/hero-annual-forum.jpg"
+  },
+  {
+    "page": "committee-media.html",
+    "target": "committee-certification.html",
+    "image": "../images/seminar-room.jpg"
+  },
+  {
+    "page": "committee-media.html",
+    "target": "committee-awards.html",
+    "image": "../images/awards/awards-trophy.jpg"
+  },
+  {
+    "page": "committee-media.html",
+    "target": "committee-professional.html",
+    "image": "../images/revision/A04-capital-market.jpg"
+  },
+  {
+    "page": "committee-media.html",
+    "target": "committee-outreach.html",
+    "image": "../images/hero-annual-forum.jpg"
+  },
+  {
+    "page": "committee-outreach.html",
+    "target": "committee-certification.html",
+    "image": "../images/seminar-room.jpg"
+  },
+  {
+    "page": "committee-outreach.html",
+    "target": "committee-awards.html",
+    "image": "../images/awards/awards-trophy.jpg"
+  },
+  {
+    "page": "committee-outreach.html",
+    "target": "committee-professional.html",
+    "image": "../images/revision/A04-capital-market.jpg"
+  },
+  {
+    "page": "committee-outreach.html",
+    "target": "committee-media.html",
+    "image": "../images/review-r2/media-interview.jpg"
+  }
+]

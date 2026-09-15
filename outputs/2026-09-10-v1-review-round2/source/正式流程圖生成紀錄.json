@@ -1,0 +1,23 @@
+{
+  "method": "built-in image_gen",
+  "outputs": [
+    {
+      "key": "board-formal",
+      "prompt": "Create an actual finished PROFESSIONAL corporate process chart IMAGE in Traditional Chinese for Taiwan Investor Relations Institute website. Landscape 2048x640. Sophisticated consulting/report graphic, purple #59396b, ivory #faf9fb, restrained muted gold hairline accents, exact aligned rectangular step boxes, thin straight arrows, elegant modern CJK sans serif type, generous whitespace. NOT cartoon, NO illustrations, NO people, NO objects, NO icons, NO 3D, NO drop shadows, NO gradients, NO decorative scenery. This must look like an executive annual report process table, not an infographic illustration. Only the following exact text, perfectly typeset: title『董事會績效評估流程』. Four steps in ONE horizontal row, left to right:『01』『企業自評』 → 『02』『協會書審』 → 『03』『實地訪談』 → 『04』『擬撰報告』. Use large clearly readable Chinese step labels, smaller step numbers. Clear arrows outside between all four boxes. Thin gold rule below title. No other text or logo.",
+      "file": "v1/images/review-r3/board-formal.png",
+      "output_hint": "Generated images are saved to /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d as /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d/exec-44fb0da7-a475-4d38-9d1e-bd68e02d7d44.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "key": "board-formal-mobile",
+      "prompt": "Create an actual finished PROFESSIONAL corporate process chart IMAGE in Traditional Chinese. Portrait 1024x1536 for mobile website. Ivory background, refined dark purple typography, restrained muted gold hairline accents. FOUR perfectly aligned equal width RECTANGULAR boxes in ONE VERTICAL column linked by thin straight downward arrows. Executive consulting/report design. NOT cartoon. NO illustrations, NO people, NO objects, NO icons, NO 3D, NO shadows, NO gradients. Exact Traditional Chinese text only: title『董事會績效評估流程』, then rows『01 企業自評』『02 協會書審』『03 實地訪談』『04 擬撰報告』. Large clear labels left aligned, number column in pale purple, thin purple outlines. Generous margins. No other text or logo.",
+      "file": "v1/images/review-r3/board-formal-mobile.png",
+      "output_hint": "Generated images are saved to /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d as /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d/exec-d203fa69-51d8-49bc-ab4f-c4191b0caf5c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "key": "governance-formal",
+      "prompt": "Create a finished PROFESSIONAL corporate service process chart IMAGE in Traditional Chinese. Portrait 1024x1536 suitable for executive report and website. Refined ivory #faf9fb background, dark purple #59396b, a muted gold hairline below the title, very restrained polished corporate visual style. SIX identical wide RECTANGULAR rows in ONE VERTICAL column, linked with thin straight downward arrows. A pale purple number cell on the left of each row, large crisp left-aligned Traditional Chinese labels in the main white cell. Lots of whitespace yet readable at mobile size. NO cartoons, NO illustrations, NO people, NO icons, NO objects, NO 3D, NO shadows, NO gradients. Only these exact words, with NO extra subtitle: title『提升公司治理服務流程』. Step 01『受輔導公司提出申請』; Step 02『受輔導公司提交所需文件』; Step 03『協會評估受輔導公司現況』; Step 04『至受輔導公司訪談』; Step 05『協會提出治理提升策略及規劃』; Step 06『提供後續諮詢服務』. Preserve verbatim Chinese characters. Number and label stay inside every box, arrows outside. No footer or logo.",
+      "file": "v1/images/review-r3/governance-formal.png",
+      "output_hint": "Generated images are saved to /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d as /Users/jonathanyu/.codex/generated_images/01a0855a-8986-7150-9ae6-2e8b674dfc9d/exec-5916768d-2155-40e6-9f45-a74d8e87a0f0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

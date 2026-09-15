@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2411210913099980434300",
+  "local_label": "12.10 2024 2025新機遇：AI與永續轉型的雙重挑戰 活動 台北 →",
+  "id": "2411210913099980434300",
+  "source_title": "12/10（二）2025新機遇：AI與永續轉型的雙重挑戰｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2411281304271070692964.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "12/10（二）2025新機遇：AI與永續轉型的雙重挑戰",
+      "image": "https://static.accupass.com/eventbanner/2411281304271070692964.jpg",
+      "startDate": "2024-12-10T14:00:00+08:00",
+      "endDate": "2024-12-10T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "在永續浪潮下，永續轉型推動著全球產業持續創新，企業如何實現ESG的落地應用、責任經營，已成為時代趨勢。\n本次活動特別邀請西門子、微軟、台達能源、鴻海與天下雜誌等ESG產業領導企業，共同探討當今企業面對AI與永續轉型的雙重挑戰！歡迎產業先進踴躍參與！\n抓住未來趨勢的契機，讓我們攜手打造永續與創新的企業未來！",
+      "performer": {
+        "@type": "Person",
+        "name": "郭宗霖"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市大安區金華街187號",
+        "name": "政大公企中心 10樓 A1034室"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2411210913099980434300.jpg"
+}

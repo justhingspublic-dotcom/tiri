@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TIRI v1 圖片候選預覽</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;color:#211c2b;background:#f7f5f1;line-height:1.65;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}a{color:#642286;text-underline-offset:4px}:focus-visible{outline:3px solid #7c3ead;outline-offset:4px}
+main{max-width:1320px;margin:0 auto;padding:58px 28px 64px}header{max-width:850px;margin-bottom:36px}.brand{font-size:13px;font-weight:650;letter-spacing:.12em;color:#6c3986}
+h1{font-size:clamp(28px,4vw,44px);line-height:1.25;font-weight:600;margin:14px 0 20px;letter-spacing:-.03em}p{margin:0 0 14px}header p{color:#57525d;font-size:17px}
+.nav{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;margin-top:22px}.filterbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;border-top:1px solid #dcd6df;border-bottom:1px solid #dcd6df;margin-bottom:28px}
+label{font-size:14px}select{font:inherit;color:inherit;min-height:44px;padding:8px 35px 8px 12px;border:1px solid #a79daf;background:white;margin-left:12px;border-radius:3px}.count{font-size:14px;color:#645c6b}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.card{min-width:0;background:white;border:1px solid #e5dfe8;border-radius:4px;overflow:hidden}.card[hidden]{display:none}
+.photo{display:block;background:#eee9e4}.photo img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;display:block}.card-body{padding:22px}.eyebrow{font-size:12px;color:#725086;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}.eyebrow span{color:#6b6271}
+h2{font-size:22px;font-weight:600;line-height:1.35;margin:12px 0 8px}.role{font-size:14px;font-weight:600;color:#655075}.card-body>p:not(.role){font-size:14px;color:#5d5663;min-height:92px}.meta{font-size:12px;color:#6e6873;margin-top:18px}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:13px}.links a{min-height:32px;display:flex;align-items:center}
+.next{margin-top:38px;padding:24px;border-left:3px solid #6c3986;background:#efeaf2;font-size:15px}.next strong{display:block;margin-bottom:8px}.next p:last-child{margin-bottom:0}footer{margin-top:30px;font-size:13px;color:#746d7a}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){main{padding:32px 18px}.grid{grid-template-columns:1fr}.filterbar{align-items:flex-start;flex-direction:column}.card-body>p:not(.role){min-height:0}select{max-width:230px}}
+</style></head><body><main>
+<header><div class="brand">TIRI / V1 REVISION / 2026.09.09</div><h1>把圖片對上頁面主題。</h1>
+<p>第一輪 9 張 CC0 候選，附適用頁面、作者與授權來源。點圖片可放大，選圖時可以直接回覆編號。</p>
+<p>目前是 960px 預覽；正式使用時再下載同一作品的原尺寸檔。這份是選圖整理，尚未套用到 v1。</p>
+<div class="nav"><a href="修改清單.md">41 項修改清單</a><a href="圖片選用表.md">各頁配圖與待補素材</a><a href="source/2026-09-09-v1-meeting-notes.pdf">原始會議備忘錄</a></div></header>
+<div class="filterbar"><label for="theme">依主題查看<select id="theme"><option value="">全部主題</option><option>財務與會計</option><option>企業與治理</option><option>資本市場</option><option>課程與交流</option><option>ESG</option><option>媒體與溝通</option></select></label><div class="count" role="status" aria-live="polite">顯示 9 張候選</div></div>
+<div class="grid"><article class="card" data-theme="財務與會計">
+      <a class="photo" href="candidates/A01-accounting.jpg" target="_blank" aria-label="放大 手按計算機與財務作業"><img src="candidates/A01-accounting.jpg" alt="手按計算機與財務作業" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A01 · 財務與會計 <span>主題吻合</span></div>
+      <h2>手按計算機與財務作業</h2><p class="role">會計主管 Banner</p><p>實際有人操作計算機，符合筆記指定動作。色調偏暖、設備較舊；橫幅以手和計算機為主，保留可讀的標題區。</p>
+      <div class="meta">Wilfred Iven · 原圖 3785 × 2514<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/accounting-finance-JONMP7TPGK" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="財務與會計">
+      <a class="photo" href="candidates/A02-financial-report.jpg" target="_blank" aria-label="放大 財務圖表與計算機"><img src="candidates/A02-financial-report.jpg" alt="財務圖表與計算機" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A02 · 財務與會計 <span>主題吻合</span></div>
+      <h2>財務圖表與計算機</h2><p class="role">財稅法律課程、財務文章</p><p>黑白照片與 v1 的暖白、墨黑、紫色容易搭配。適合財報／會計主題卡片；沒有手部操作，因此不取代 A01 的具體需求。</p>
+      <div class="meta">Negative Space · 原圖 5472 × 3648<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="企業與治理">
+      <a class="photo" href="candidates/A03-business-meeting.jpg" target="_blank" aria-label="放大 企業團隊討論"><img src="candidates/A03-business-meeting.jpg" alt="企業團隊討論" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A03 · 企業與治理 <span>可用於主題卡片</span></div>
+      <h2>企業團隊討論</h2><p class="role">企業管理、併購實務、到府服務</p><p>穿著正式、互動自然，適合企業協商與工作討論。以一般情境圖呈現，人物不作為 TIRI 講師或委員介紹。</p>
+      <div class="meta">Direct Media · 原圖 6720 × 4480<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/business-meeting-SSKSJIBMMP" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="資本市場">
+      <a class="photo" href="candidates/A04-capital-market.jpg" target="_blank" aria-label="放大 資本市場行情分析"><img src="candidates/A04-capital-market.jpg" alt="資本市場行情分析" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A04 · 資本市場 <span>主題吻合</span></div>
+      <h2>資本市場行情分析</h2><p class="role">資本市場文章、協會簡介配圖</p><p>股票圖表和筆電直接對應資本市場；適合文章縮圖或簡介側圖。主體在左，橫幅需避免裁掉螢幕上的圖表。</p>
+      <div class="meta">Negative Space · 原圖 3888 × 2592<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/stockmarket-charts-G3YOGRBLF3" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="課程與交流">
+      <a class="photo" href="candidates/A05-online-learning.jpg" target="_blank" aria-label="放大 專業人士線上交流"><img src="candidates/A05-online-learning.jpg" alt="專業人士線上交流" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A05 · 課程與交流 <span>可用於主題卡片</span></div>
+      <h2>專業人士線上交流</h2><p class="role">線上課程、時間彈性、會員服務</p><p>視訊對談的手勢與電腦符合線上授課場景。與 A03 屬同一拍攝系列，同一頁建議擇一，避免反覆出現同一人物。</p>
+      <div class="meta">Direct Media · 原圖 6720 × 4480<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/video-meeting-NDASNYJJ6P" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="ESG">
+      <a class="photo" href="candidates/A06-esg-solar.jpg" target="_blank" aria-label="放大 再生能源與企業永續"><img src="candidates/A06-esg-solar.jpg" alt="再生能源與企業永續" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A06 · ESG <span>主題吻合</span></div>
+      <h2>再生能源與企業永續</h2><p class="role">鄧白氏 ESG Banner、ESG 主題</p><p>太陽能板、植栽與自然光同時呈現科技和環境，適合作為 ESG 環境面情境照。Banner 保留面板與上方天空，避免只剩一般風景。</p>
+      <div class="meta">Matt Bango · 原圖 8192 × 5464<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/solar-panels-EFYB8VJXNT" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="企業與治理">
+      <a class="photo" href="candidates/A07-office-interior.jpg" target="_blank" aria-label="放大 企業辦公與會議空間"><img src="candidates/A07-office-interior.jpg" alt="企業辦公與會議空間" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A07 · 企業與治理 <span>備選</span></div>
+      <h2>企業辦公與會議空間</h2><p class="role">到府服務配圖備選</p><p>具有企業空間感，但較接近共享辦公環境。可用於到府服務情境；不列為正式董事會評估 Banner 的首選。</p>
+      <div class="meta">Matt Moloney · 原圖 6000 × 4000<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/office-interior-NSQTXCLWQ5" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="媒體與溝通">
+      <a class="photo" href="candidates/A08-media-communication.jpg" target="_blank" aria-label="放大 媒體溝通與發言"><img src="candidates/A08-media-communication.jpg" alt="媒體溝通與發言" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A08 · 媒體與溝通 <span>主題吻合</span></div>
+      <h2>媒體溝通與發言</h2><p class="role">媒體與危機管理、媒體委員會</p><p>專業麥克風與留白直接對應媒體、發言及內容製作；不含現場人物，方便用在主題卡片。錄音室風格，並非 TIRI 活動實拍。</p>
+      <div class="meta">donterase · 原圖 4896 × 3264<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/microphone-equipment-UOVOJOP3UK" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article><article class="card" data-theme="企業與治理">
+      <a class="photo" href="candidates/A09-corporate-building.jpg" target="_blank" aria-label="放大 企業建築與專業形象"><img src="candidates/A09-corporate-building.jpg" alt="企業建築與專業形象" width="960" height="640" loading="lazy"></a>
+      <div class="card-body"><div class="eyebrow">A09 · 企業與治理 <span>可作 Banner 候選</span></div>
+      <h2>企業建築與專業形象</h2><p class="role">加入會員 Banner、協會簡介</p><p>橫式、上方暗部留白充足，適合搭配白色頁面標題；比一般握手照更接近企業受眾。這是一般企業形象情境照，不標成 TIRI 辦公室。</p>
+      <div class="meta">Verne Ho · 原圖 4657 × 3105<br>CC0 1.0 · 2026-09-09 核對</div>
+      <div class="links"><a href="https://stocksnap.io/photo/office-building-7HRFNYC7GU" target="_blank" rel="noopener">作品與原圖下載 ↗</a><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">查看授權 ↗</a></div></div></article></div>
+<aside class="next"><strong>後續配圖方向已整理</strong><p>資訊安全主題與誠信經營的專屬照片還需補找；治理 Banner 等客戶提出方向。27 篇知識文章先檢查原圖、年刊封面與受訪者照片，再用主題情境圖補足。</p><p>TIRI Awards 獎座、潛力進展獎獎狀、TIRIC 人像與六本中英文年刊已有本機素材，使用本案檔案即可。</p></aside>
+<footer>每張候選的作品頁均已核對 CC0 連結。<a href="https://stocksnap.io/license" target="_blank" rel="noopener">StockSnap 授權說明</a> · <a href="圖片來源紀錄.json">完整來源紀錄</a></footer>
+</main><script>const select=document.querySelector('#theme');select.addEventListener('change',()=>{let count=0;document.querySelectorAll('.card').forEach(card=>{card.hidden=Boolean(select.value&&card.dataset.theme!==select.value);if(!card.hidden)count++;});document.querySelector('.count').textContent=`顯示 ${count} 張候選`;});</script></body></html>

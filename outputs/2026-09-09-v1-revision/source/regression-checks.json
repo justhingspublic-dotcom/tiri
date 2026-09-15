@@ -1,0 +1,221 @@
+[
+  {
+    "check": "Existing form fields preserved",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "check": "All supplied workbook sheets inventoried",
+    "passed": true,
+    "detail": {
+      "workbooks": 15,
+      "sheets": 33
+    }
+  },
+  {
+    "check": "Historic board members retained in both languages",
+    "passed": true,
+    "detail": {
+      "records": 53,
+      "missing": []
+    }
+  },
+  {
+    "check": "board.html historic table structure",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "board_en.html historic table structure",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "證照委員會 names and navigation",
+    "passed": true,
+    "detail": [
+      "張妍婷",
+      "張明仁",
+      "黃英記"
+    ]
+  },
+  {
+    "check": "獎項委員會 names and navigation",
+    "passed": true,
+    "detail": [
+      "劉詩亮",
+      "周德雲",
+      "黃英記"
+    ]
+  },
+  {
+    "check": "專業委員會 names and navigation",
+    "passed": true,
+    "detail": [
+      "簡世雄",
+      "陳珮瑛",
+      "涂蕙蘭",
+      "許碧雲"
+    ]
+  },
+  {
+    "check": "媒體委員會 names and navigation",
+    "passed": true,
+    "detail": [
+      "王恩國",
+      "王沈銘",
+      "陳珮瑛"
+    ]
+  },
+  {
+    "check": "推廣委員會 names and navigation",
+    "passed": true,
+    "detail": [
+      "林男和",
+      "洪健凱",
+      "姚文鈞"
+    ]
+  },
+  {
+    "check": "Home section sequence",
+    "passed": true,
+    "detail": [
+      "活動訊息",
+      "線上課程",
+      "合作夥伴"
+    ]
+  },
+  {
+    "check": "Home excludes courses from events",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Home ten partner links",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Course brochure has eight current subjects",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Event history covers 2018–2026 with 153 records",
+    "passed": true,
+    "detail": {
+      "2026": 24,
+      "2025": 29,
+      "2024": 17,
+      "2023": 18,
+      "2022": 23,
+      "2021": 10,
+      "2020": 8,
+      "2019": 18,
+      "2018": 6
+    }
+  },
+  {
+    "check": "Accupass banners link to matching event ID",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Four evaluation steps",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Six governance steps",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Five Awards panels",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Progress 2025 ten winners / 2026 twenty nominees",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "TIRIC single local video and real recap year",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "All 27 articles have images and unique targets",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "Local article card titles match destination headings",
+    "passed": true,
+    "detail": []
+  },
+  {
+    "check": "5th_report-516844.html three correct language covers",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "PDF tiri-annual-2025-7th-zh.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 63,
+      "bytes": 27676156
+    }
+  },
+  {
+    "check": "PDF tiri-annual-2024-6th-zh.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 62,
+      "bytes": 7232143
+    }
+  },
+  {
+    "check": "PDF tiri-annual-2023-5th-zh.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 64,
+      "bytes": 15936628
+    }
+  },
+  {
+    "check": "5th_report-665763.html three correct language covers",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "check": "PDF tiri-annual-2025-7th-en.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 63,
+      "bytes": 30227373
+    }
+  },
+  {
+    "check": "PDF tiri-annual-2024-6th-en.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 62,
+      "bytes": 7497942
+    }
+  },
+  {
+    "check": "PDF tiri-annual-2023-5th-en.pdf",
+    "passed": true,
+    "detail": {
+      "pages": 60,
+      "bytes": 18966665
+    }
+  },
+  {
+    "check": "v1 static references",
+    "passed": true,
+    "detail": "HTML files checked: 143\nCSS files checked: 5\nMissing local references: 0\nTIRI production runtime references: 0\n"
+  }
+]

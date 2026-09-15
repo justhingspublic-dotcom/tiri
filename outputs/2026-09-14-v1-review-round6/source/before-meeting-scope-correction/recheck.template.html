@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="light" name="color-scheme"/>
+<title>TIRI v1｜第六輪複檢</title>
+<link href="recheck.css?v=20260914-r6" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#review-list">跳到複檢項目</a>
+<main>
+<header>
+<div class="masthead"><span class="brand">TIRI <span>v1</span></span><span>驗收工作區 · 2026.09.14</span></div>
+<div class="heading"><div><p class="eyebrow">REVIEW / 06</p><h1>第六輪複檢</h1><p class="intro">本輪 6 項可複檢：活動花絮、兩張服務 Banner、年刊 Banner、會員總表、五年 Awards 入圍名單。原先 39 項已通過與歷次留言保留，全部共 45 項。</p></div><div class="export-actions"><button class="primary" id="export">匯出複檢結果 ↓</button><button id="import">匯入複檢紀錄</button><input accept=".json,application/json" hidden="" id="import-file" type="file"/></div></div>
+<div aria-label="複檢進度" class="stats">
+<div><strong id="remaining">6</strong><span>待複檢</span></div>
+<div><strong id="rechecked">0</strong><span>本輪已通過</span></div>
+<div><strong id="accepted">39</strong><span>此前已通過</span></div>
+<div><strong id="waiting">0</strong><span>等資料主項目</span></div>
+</div>
+
+<p class="delivery-notice"><strong>目前進度</strong><span id="delivery-notice">本輪修改與先前通過紀錄都已整理。</span></p>
+<details class="help"><summary>勾選如何保存？</summary><p>自動保存在目前這個瀏覽器。同一台電腦可用 Chrome、Safari 等外部瀏覽器開啟這個網址；換瀏覽器時，先匯出，再到另一個瀏覽器匯入。檢查完請把匯出的 JSON 檔傳給我。</p><p>第六輪獨立保存，不覆蓋前五輪。原有 39 項已通過並預先勾選，包括對話確認的 10、20、42 與 43。新交付的 6 項等你檢查，尚未替你打勾。</p></details>
+<details class="help client-confirmations" id="client-confirmations"><summary>需要向客戶確認：2 個名單問題＋2 類歷史素材</summary><p>會員與 Awards 新表都已收到；原先四項版型／Banner 已做出本輪初稿。下列確認集中處理資料範圍與歷史缺件。</p><h3>2025 潛力進展獎的正式得主範圍</h3><p>新表列上市 10 家、上櫃 10 家，共 20 家；舊得主表與現站為上市 7 家、上櫃 3 家，共 10 家。請確認：以新 20 家取代原得主，還是 20 家為入選、10 家為得獎而分開呈現？</p><h3>2026 潛力進展獎的名稱</h3><p>新表 20 家的股票代碼與網站相同。請確認這份表是否為正式得獎結果，網站是否由「入選企業」改為「得獎企業」？</p><h3>歷屆理監事 7 位照片</h3><p>余宛如、呂政達、呂軍甫、徐美華、烏恩婷、藍世旻、邱榮振：如需顯示個別照片，請補圖；若無補圖，請確認沿用目前已通過的文字／表格呈現。</p><h3>17 筆早期活動原圖</h3><p>請依下方完整清單補對應活動原圖；若無原圖，請確認沿用目前文字呈現。這是已通過活動列表中的素材缺件，與本輪 17 活動花絮新版型分開追蹤。</p><p><a href="需要向客戶確認.md" rel="noopener" target="_blank">查看可直接轉貼的完整詢問清單（含 17 筆活動） ↗</a></p><p>本輪 17、23、25、41 請看初稿是否採用；可採用就直接結案，不再要求重交資料。若要換方向，再請提供具體修改或替代參考。</p></details></header>
+<section aria-label="項目篩選" class="workspace">
+<div class="toolbar"><div aria-label="複檢篩選" class="filters" role="group"><button aria-pressed="true" data-filter="todo">待複檢 <span>6</span></button><button aria-pressed="false" data-filter="done">本輪已通過 <span>0</span></button><button aria-pressed="false" data-filter="accepted">原已通過 <span>39</span></button><button aria-pressed="false" data-filter="waiting">等資料 <span>0</span></button><button aria-pressed="false" data-filter="all">全部 <span>45</span></button></div><div class="search"><label for="search">搜尋項目</label><input autocomplete="off" id="search" placeholder="編號、頁面或修改內容" type="search"/></div></div>
+<div class="list-meta"><p aria-live="polite" id="result-count" role="status"></p><p aria-live="polite" id="save-status" role="status">自動儲存於此瀏覽器</p></div>
+<p class="error" hidden="" id="error" role="alert"></p>
+<div id="review-list" tabindex="-1"></div>
+<div class="empty" hidden="" id="empty"><h2>這裡目前沒有項目</h2><p id="empty-message">換個篩選條件，或清除搜尋文字。</p><button id="show-all">查看全部項目</button></div>
+</section>
+<footer><p>檢查完成後，匯出結果並把 JSON 檔傳給我。</p><button class="primary" id="export-bottom">匯出複檢結果 ↓</button><div class="footer-links"><a href="../2026-09-11-v1-review-round5/第五輪複檢.html" rel="noopener" target="_blank">第五輪複檢頁 ↗</a><a href="剩餘待辦與補件.md" rel="noopener" target="_blank">剩餘待辦與補件 ↗</a><a href="本輪修改紀錄.md" rel="noopener" target="_blank">本輪修改紀錄 ↗</a><a href="圖片來源與處理紀錄.md" rel="noopener" target="_blank">圖片來源與處理 ↗</a><a href="../2026-09-10-v1-review-round4/第四輪複檢.html">第四輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round3/第三輪複檢.html" rel="noopener" target="_blank">第三輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round2/第二輪複檢.html" rel="noopener" target="_blank">第二輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round1/第一輪複檢.html" rel="noopener" target="_blank">第一輪複檢頁 ↗</a><a href="../2026-09-09-v1-revision/驗收入口.html" rel="noopener" target="_blank">最初驗收頁 ↗</a><a download="" href="開啟複檢.command">下載本機開啟捷徑</a></div></footer>
+</main>
+<noscript><p>請啟用 JavaScript 才能勾選、儲存與匯出複檢結果。</p></noscript>
+<script id="review-data" type="application/json">__RECHECK_DATA__</script>
+<script src="recheck.js?v=20260914-r6"></script>
+</body>
+</html>

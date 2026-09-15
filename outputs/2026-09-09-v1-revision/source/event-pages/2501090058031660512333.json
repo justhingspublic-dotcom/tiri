@@ -1,0 +1,44 @@
+{
+  "url": "https://www.accupass.com/event/2501090058031660512333",
+  "local_label": "02.21 2025 2025年投資展望策略暨高階管理者的勞動法實務指南分享 活動 台中 →",
+  "id": "2501090058031660512333",
+  "source_title": "02/21（五）【台中場 主題餐會】2025年投資展望策略暨高階管理者的勞動法實務指南分享｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2501160849031343697404.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "02/21（五）【台中場 主題餐會】2025年投資展望策略暨高階管理者的勞動法實務指南分享",
+      "image": "https://static.accupass.com/eventbanner/2501160849031343697404.jpg",
+      "startDate": "2025-02-21T18:00:00+08:00",
+      "endDate": "2025-02-21T21:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "掌握勞動法與2025年證券市場投資策略，與業界專家沈以軒律師和張清榮總經理一起打造合規與成功的企業未來！",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "張清榮"
+        },
+        {
+          "@type": "Person",
+          "name": "沈以軒"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台中市408南屯區環中路四段2號",
+        "name": "潮港城國際美食館"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2501090058031660512333.jpg"
+}

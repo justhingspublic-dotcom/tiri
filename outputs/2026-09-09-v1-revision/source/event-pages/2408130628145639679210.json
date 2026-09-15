@@ -1,0 +1,34 @@
+{
+  "url": "https://www.accupass.com/event/2408130628145639679210",
+  "local_label": "09.12 2024 TIRI X 鴻海【面對股東行動主義必學的四大心法】 活動 台北 →",
+  "id": "2408130628145639679210",
+  "source_title": "09/12 (四) TIRI X 鴻海【面對股東行動主義必學的四大心法】｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2408130908272389851570.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "09/12 (四) TIRI X 鴻海【面對股東行動主義必學的四大心法】",
+      "image": "https://static.accupass.com/eventbanner/2408130908272389851570.jpg",
+      "startDate": "2024-09-12T14:00:00+08:00",
+      "endDate": "2024-09-12T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "股東行動主義（Shareholder Activism）是指股東或投資者積極參與公司治理和經營決策，目的是促使公司改變其政策、策略或治理結構，以實現他們的利益或推動公司改進。\n\n面對股東行動主義時，適當的心態和策略對於企業的長期成功至關重要，透由專業領域先進們，來與大家分享實際案例、提升台灣市場在國際評鑑升等、站穩腳步。\n\n座位有限，錯過機會不再，敬請盡速報名。",
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區東興路8號15樓",
+        "name": "統一綜合證券國際會議廳"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2408130628145639679210.jpg"
+}

@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2501030214084203862260",
+  "local_label": "02.21 2025 企業永續-從焦慮到策略 董監進修課程 線上 →",
+  "id": "2501030214084203862260",
+  "source_title": "2/21【TIRI線上董事、公司治理主管進修課程】企業永續-從焦慮到策略｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2501070656187655357970.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "2/21【TIRI線上董事、公司治理主管進修課程】企業永續-從焦慮到策略",
+      "image": "https://static.accupass.com/eventbanner/2501070656187655357970.jpg",
+      "startDate": "2025-02-21T14:00:00+08:00",
+      "endDate": "2025-02-21T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "隨著全球對環境、社會及公司治理（ESG）的關注日益增加，企業不僅面臨日益嚴峻的法規要求與市場壓力，也在實現永續目標的過程中感受到不小的挑戰與焦慮。本課程以「從焦慮到策略」為主題，旨在協助企業領袖與相關專業人士將永續挑戰轉化為可執行的策略，透過實際案例與專家分享，深入探討如何有效平衡企業目標與永續發展之間的矛盾。",
+      "performer": {
+        "@type": "Person",
+        "name": "陳珮瑛 博士"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2501030214084203862260.jpg"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "year": "2023",
+    "lang": "en",
+    "pdf": "../files/annual/tiri-annual-2023-5th-en.pdf",
+    "cover": "../images/annual/tiri-annual-2023-5th-en.jpg",
+    "pages": 60,
+    "bytes": 18966665
+  },
+  {
+    "year": "2023",
+    "lang": "zh",
+    "pdf": "../files/annual/tiri-annual-2023-5th-zh.pdf",
+    "cover": "../images/annual/tiri-annual-2023-5th-zh.jpg",
+    "pages": 64,
+    "bytes": 15936628
+  },
+  {
+    "year": "2024",
+    "lang": "en",
+    "pdf": "../files/annual/tiri-annual-2024-6th-en.pdf",
+    "cover": "../images/annual/tiri-annual-2024-6th-en.jpg",
+    "pages": 62,
+    "bytes": 7497942
+  },
+  {
+    "year": "2024",
+    "lang": "zh",
+    "pdf": "../files/annual/tiri-annual-2024-6th-zh.pdf",
+    "cover": "../images/annual/tiri-annual-2024-6th-zh.jpg",
+    "pages": 62,
+    "bytes": 7232143
+  },
+  {
+    "year": "2025",
+    "lang": "en",
+    "pdf": "../files/annual/tiri-annual-2025-7th-en.pdf",
+    "cover": "../images/annual/tiri-annual-2025-7th-en.jpg",
+    "pages": 63,
+    "bytes": 30227373
+  },
+  {
+    "year": "2025",
+    "lang": "zh",
+    "pdf": "../files/annual/tiri-annual-2025-7th-zh.pdf",
+    "cover": "../images/annual/tiri-annual-2025-7th-zh.jpg",
+    "pages": 63,
+    "bytes": 27676156
+  }
+]

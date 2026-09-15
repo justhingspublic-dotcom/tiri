@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2603060733582014313649",
+  "local_label": "05.15 2026 台灣資本市場簡介 董監進修課程 線上 →",
+  "id": "2603060733582014313649",
+  "source_title": "05/15【TIRI線上董事、公司治理主管進修課程】台灣資本市場簡介｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2603060825291021148495.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "05/15【TIRI線上董事、公司治理主管進修課程】台灣資本市場簡介",
+      "image": "https://static.accupass.com/eventbanner/2603060825291021148495.jpg",
+      "startDate": "2026-05-15T14:00:00+08:00",
+      "endDate": "2026-05-15T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "掌握台灣資本市場特色，從股息殖利率、散戶活躍到媒體與法人角色，洞悉外資、投信與被動基金布局，企業也能善用投顧、媒體與適度負債策略，調整心態迎接市場波動，打造長期競爭力與投資優勢。",
+      "performer": {
+        "@type": "Person",
+        "name": "莊正賢"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2603060733582014313649.jpg"
+}

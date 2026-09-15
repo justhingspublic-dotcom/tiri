@@ -1,0 +1,48 @@
+{
+  "url": "https://www.accupass.com/event/2608261303411628089416",
+  "local_label": "2026.10.16 2026 年度大會暨 IR 新溝通時代",
+  "id": "2608261303411628089416",
+  "source_title": "2026/10/16- TIRI 2026年度大會暨IR新溝通時代｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2608310256405981075440.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "2026/10/16- TIRI 2026年度大會暨IR新溝通時代",
+      "image": "https://static.accupass.com/eventbanner/2608310256405981075440.jpg",
+      "startDate": "2026-10-16T14:00:00+08:00",
+      "endDate": "2026-10-16T18:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "當 IR 從「資訊揭露」走向「價值對話」，企業如何讓市場真正理解價值，並建立長期信任？\n\n2026 TIRI 年度大會暨 IR 新溝通時代，邀集國內外產官學及資本市場專家，聚焦新時代 IR 溝通趨勢與實務，並舉辦 2026 TIRI Awards，共同探索企業與投資人溝通的下一步。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "陳脩文"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniela Peeva"
+        },
+        {
+          "@type": "Person",
+          "name": "Oscar Yasar"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市中山區中山北路二段39巷3號",
+        "name": "台北晶華酒店 3樓宴會A廳"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2608261303411628089416.jpg"
+}

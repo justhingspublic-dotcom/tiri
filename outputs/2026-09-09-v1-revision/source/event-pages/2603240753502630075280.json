@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2603240753502630075280",
+  "local_label": "04.24 2026 AI與新興科技應用案例 董監進修課程 線上 →",
+  "id": "2603240753502630075280",
+  "source_title": "04/24 【TIRI線上董事、公司治理主管進修課程】AI與新興科技應用案例｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2603240814384614773050.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "04/24 【TIRI線上董事、公司治理主管進修課程】AI與新興科技應用案例",
+      "image": "https://static.accupass.com/eventbanner/2603240814384614773050.jpg",
+      "startDate": "2026-04-24T14:00:00+08:00",
+      "endDate": "2026-04-24T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "AI、大數據、雲端、生成式科技正快速改變產業版圖，企業該如何因應？\n本課程將帶您掌握最新趨勢，透過實務案例了解數位轉型的關鍵策略，協助企業創造新價值！",
+      "performer": {
+        "@type": "Person",
+        "name": "陳純德"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2603240753502630075280.jpg"
+}

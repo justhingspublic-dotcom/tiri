@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2603300309452070120683",
+  "local_label": "06.12 2026 證券不法案例與董監責任 董監進修課程 線上 →",
+  "id": "2603300309452070120683",
+  "source_title": "06/12【TIRI線上董事、公司治理主管進修課程】證券不法案例與董監責任｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2603310658031498991566.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "06/12【TIRI線上董事、公司治理主管進修課程】證券不法案例與董監責任",
+      "image": "https://static.accupass.com/eventbanner/2603310658031498991566.jpg",
+      "startDate": "2026-06-12T14:00:00+08:00",
+      "endDate": "2026-06-12T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "本課程聚焦證券不法之核心議題，解析投保法修正重點，並透過案例說明內線交易、財報不實、操縱市場及掏空公司等行為之法律責任，協助董監事掌握風險界線；同時納入ESG資訊揭露與永續報告書編製重點，強化企業治理與永續發展能力。",
+      "performer": {
+        "@type": "Person",
+        "name": "王士豪"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2603300309452070120683.jpg"
+}

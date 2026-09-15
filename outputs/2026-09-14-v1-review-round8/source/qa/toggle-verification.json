@@ -1,0 +1,20 @@
+{
+  "revision": "20260914-r8b",
+  "accepted": 44,
+  "pending": [
+    "17"
+  ],
+  "existingApprovalsUnchanged": true,
+  "feedbackPreserved": true,
+  "regressionWithOldScript": false,
+  "regressionWithFixedScript": true,
+  "manualChecks": [
+    "Chinese trigger toggle",
+    "Chinese option selection",
+    "Escape",
+    "English trigger toggle",
+    "English option selection",
+    "outside click",
+    "Tab to search"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2307170816069171162030",
+  "local_label": "10.20 2023 如何運用智慧財產權管理制度提升公司治理 董監進修課程 線上 →",
+  "id": "2307170816069171162030",
+  "source_title": "10/20（五）【TIRI線上董事、公司治理主管進修課程】如何運用智慧財產權管理制度提升公司治理｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2307180544363596824760.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "10/20（五）【TIRI線上董事、公司治理主管進修課程】如何運用智慧財產權管理制度提升公司治理",
+      "image": "https://static.accupass.com/eventbanner/2307180544363596824760.jpg",
+      "startDate": "2023-10-20T14:00:00+08:00",
+      "endDate": "2023-10-20T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "運用智慧財產權管理，提升公司治理！深入研究智慧財產權重要性，保護知識資產，增加商業競爭力。適合企業家、管理者和法律專業人士。成為智慧財產權管理專家，能力升級，強化您在公司治理領域的競爭優勢！",
+      "performer": {
+        "@type": "Person",
+        "name": "黃國銘"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2307170816069171162030.jpg"
+}

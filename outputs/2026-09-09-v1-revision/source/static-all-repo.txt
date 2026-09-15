@@ -1,0 +1,37 @@
+
+> tiri-static-redesign-baseline@1.0.0 check
+> python3 _archive/scripts/check_static_site.py
+
+HTML files checked: 421
+CSS files checked: 25
+Missing local references: 29
+server/templates/base.html -> /favicon.ico
+server/templates/base.html -> /static/css/cms/base.css?v=20260727b
+server/templates/base.html -> /static/css/cms/b_tokens.css?v=20260727b
+server/templates/base.html -> /static/css/brand.css?v=20260730b
+server/templates/base.html -> /static/css/cms/b_admin.css?v=20260729f
+server/templates/base.html -> /static/css/b/dropdown.css?v=20260727a
+server/templates/base.html -> /static/css/guide.css?v=20260730e
+server/templates/base.html -> /static/js/b/dropdown.js?v=20260727a
+server/templates/base.html -> /static/js/cms/dialogs.js?v=20260729
+server/templates/base.html -> /static/js/cms/spa.js?v=20260729a
+server/templates/base.html -> /static/tiri-logo.png?v=20260727b
+server/templates/base.html -> /static/guide/smtp-card.png?v=20260730
+server/templates/base.html -> /static/guide/test-card.png?v=20260730
+server/templates/dashboard.html -> /admin/inbox
+server/templates/inbox.html -> /admin/export.csv?form={{ slug }}
+server/templates/inbox.html -> /admin/inbox{{ '?form=' + f.slug if f.slug }}
+server/templates/login.html -> /favicon.ico
+server/templates/login.html -> /static/css/cms/b_tokens.css?v=20260727a
+server/templates/login.html -> /static/css/brand.css?v=20260730b
+server/templates/login.html -> /static/css/cms/b_admin.css?v=20260729f
+server/templates/login.html -> /static/css/cms/login.css?v=20260729b
+server/templates/login.html -> /static/tiri-logo.png?v=20260727a
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Ultralight.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Thin.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Light.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Regular.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Medium.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Semibold.otf
+server/static/css/cms/b_admin.css -> ../../assets/fonts/pingfang-tc/PingFangTC-Semibold.otf
+TIRI production runtime references: 0

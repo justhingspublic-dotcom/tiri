@@ -1,0 +1,43 @@
+{
+  "url": "https://www.accupass.com/event/2605260911061471544493",
+  "local_label": "07.09 2026 從曝光到影響力：出海布局下的全球溝通策略與 AI 時代的企業價值塑造 董監進修課程 線上 →",
+  "id": "2605260911061471544493",
+  "source_title": "07/09【TIRI線上董事、公司治理主管進修課程】從曝光到影響力：出海布局下的全球溝通策略與 AI 時代的企業價值塑造｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2606030100291251591390.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "07/09【TIRI線上董事、公司治理主管進修課程】從曝光到影響力：出海布局下的全球溝通策略與 AI 時代的企業價值塑造",
+      "image": "https://static.accupass.com/eventbanner/2606030100291251591390.jpg",
+      "startDate": "2026-07-09T14:00:00+08:00",
+      "endDate": "2026-07-09T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "企業出海，不只是提升曝光，更是建立國際市場的信任與影響力。本課程將帶您掌握全球溝通策略核心，從 Owned／Paid／Earned Media 的整合布局，到如何打造能被國際媒體、投資人與分析師理解的企業敘事，同時解析 AI 時代下從 SEO 到 AEO 的品牌與 IR 新思維，協助企業強化全球能見度與長期價值。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "邱宗泰"
+        },
+        {
+          "@type": "Person",
+          "name": "黄佳欣"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2605260911061471544493.jpg"
+}

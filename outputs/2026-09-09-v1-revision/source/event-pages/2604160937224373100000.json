@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2604160937224373100000",
+  "local_label": "06.09 2026 IFRS 18 新準則之影響與實務解析 董監進修課程 線上 →",
+  "id": "2604160937224373100000",
+  "source_title": "06/09【TIRI線上董事、公司治理主管進修課程】IFRS 18 新準則之影響與實務解析｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2605060536372110417737.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "06/09【TIRI線上董事、公司治理主管進修課程】IFRS 18 新準則之影響與實務解析",
+      "image": "https://static.accupass.com/eventbanner/2605060536372110417737.jpg",
+      "startDate": "2026-06-09T14:00:00+08:00",
+      "endDate": "2026-06-09T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "IFRS 18 即將上路，將大幅改變財務報表的表達與溝通方式，特別是損益表結構、現金流量分類及管理階層績效指標（MPM）揭露，對企業決策與資訊呈現影響深遠。\n\n本課程聚焦準則核心與實務應用，解析損益表新架構與分類邏輯、現金流量表修正，並說明對合併報表、內部流程及財會系統之影響，同時探討財務比率、績效評估與溝通策略的變化，協助企業順利因應新制。",
+      "performer": {
+        "@type": "Person",
+        "name": "陳麗雲"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2604160937224373100000.jpg"
+}

@@ -1,0 +1,20 @@
+{
+  "total": 45,
+  "accepted": 42,
+  "ready": [
+    "17",
+    "23",
+    "25"
+  ],
+  "changed": [
+    "17",
+    "25"
+  ],
+  "historyPreserved": true,
+  "rawFileUnchanged": true,
+  "productionPages": 4,
+  "recapCardsUnchanged": true,
+  "servicePageBodyUnchanged": true,
+  "localLinksChecked": 70,
+  "httpChecksPassed": 7
+}

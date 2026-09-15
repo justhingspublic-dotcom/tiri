@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/1909110535293663550930",
+  "local_label": "10.25 2019 智財管理新思惟-運用AI智能平台協助智財管理（已停辦） 活動 台北 →",
+  "id": "1909110535293663550930",
+  "source_title": "智財管理新思惟-運用AI智能平台協助智財管理（已停辦）｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/1909110533316456384790.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "智財管理新思惟-運用AI智能平台協助智財管理（已停辦）",
+      "image": "https://static.accupass.com/eventbanner/1909110533316456384790.jpg",
+      "startDate": "2019-10-25T14:00:00+08:00",
+      "endDate": "2019-10-25T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "美中貿易戰凸顯「智財保護」在國際貿易間具有重要的談判地位，唯有完善的智財政策，才能有效拓展、維護國際間貿易競爭之平等地位。 新興科技帶動人工智能、區塊鏈應用等技術提升，然而，如何運用人工智慧解讀全球專利大數據，藉以協助企業專利布局、研發選題、投資併購等決策，為值得深思的議題。",
+      "performer": {
+        "@type": "Person",
+        "name": "鄭淑芬"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區民生東路四段54號5樓",
+        "name": "華南永昌證券"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/1909110535293663550930.jpg"
+}

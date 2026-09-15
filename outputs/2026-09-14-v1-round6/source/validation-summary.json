@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-14",
+  "changedPages": 14,
+  "reviewItems": 45,
+  "previouslyAccepted": 39,
+  "ready": [
+    "17",
+    "23",
+    "25",
+    "41",
+    "44",
+    "45"
+  ],
+  "static": "All inherited histories and 39 approvals retained; new preview paths/anchors and local resources resolve; HTTP 200 for all review links; membership fee source checked; source nomination rows mapped to DOM in both languages.",
+  "browser": {
+    "recap": "2025 filter produces 1 card; unmatched search produces 0 with empty state; 11 zh / 10 en preserved",
+    "awards": "Both language year selectors verified: 2022 150 / 2023 138 / 2024 125 / 2025 136 / 2026 138; zh disclosure opens",
+    "responsive": "All 14 changed pages at 390px have no document horizontal overflow; desktop table, nominees, 3 banners and review inspected; review 390px also no overflow",
+    "review": "6 ready / 39 prior / 45 total; test-only checkbox+note survive reload; JSON download checked on disk; Chrome export imported successfully into IAB test session; accepted-item filtering and history checked; formal page untouched with 6 ready",
+    "warnings": "Chrome reports ViewTransition opt-in disabled during automated navigation. Rendering and controls completed; no round6.js or recheck.js application exceptions observed. Chrome automated file chooser lacked file URL access, so import tested successfully in IAB instead."
+  },
+  "sources": "Read-only audited workbooks; explicit merged ranges expanded; no source xlsx edited.",
+  "pending": "2025 Progress 20 vs 10 winner scope; 2026 winner status; historical 7 portraits and 17 event photos (or acceptance of text presentation)."
+}

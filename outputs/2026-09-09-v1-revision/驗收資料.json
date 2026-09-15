@@ -1,0 +1,330 @@
+[
+  {
+    "id": "01",
+    "title": "「會員中心」改「會員服務」",
+    "route": "index.html",
+    "status": "ready",
+    "change": "桌機、手機及搜尋分類同步為「會員服務」。",
+    "note": "中文桌機與手機頁面已讀取；搜尋索引同步。"
+  },
+  {
+    "id": "02",
+    "title": "Footer 指定入口改「會員登入」",
+    "route": "index.html",
+    "status": "ready",
+    "change": "Footer 會員服務欄改為會員登入，連到登入頁。",
+    "note": "品牌欄的加入會員入口仍保留。"
+  },
+  {
+    "id": "03",
+    "title": "首頁 6,300＋的單位改為「人」",
+    "route": "index.html",
+    "status": "ready",
+    "change": "核對原有統計顯示為 6300＋人。",
+    "note": "這是既有內容驗證，沒有重複計為新增功能。"
+  },
+  {
+    "id": "04",
+    "title": "首頁只留指定三個主內容區塊",
+    "route": "index.html",
+    "status": "ready",
+    "change": "首頁主內容依序活動訊息、線上課程、合作夥伴；保留 Banner 與統計。",
+    "note": "活動區 3 筆非課程活動；線上課程 6 筆；合作夥伴 10 家。"
+  },
+  {
+    "id": "05",
+    "title": "合作夥伴內容、官網連結與 Logo",
+    "route": "partners.html",
+    "status": "partial",
+    "change": "05-A：10 家合作夥伴名稱、展示區與官網連結完成。",
+    "note": "05-B 正式 Logo 待補。商周官網目前導向其系統中斷公告；本案不替外部網站填假內容。"
+  },
+  {
+    "id": "06",
+    "title": "全站情境圖片的主題與來源整理",
+    "route": "knowledge.html",
+    "status": "ready",
+    "change": "本輪 13 張 CC0 情境圖已套用，另使用原活動、協會實拍及年刊封面。",
+    "note": "Banner 用 1920px；A02 側圖 1440px；A03–A09 為 960px 卡片／側圖，未取得平台最高解析度。完整來源、尺寸及頁面對照已保存。"
+  },
+  {
+    "id": "07",
+    "title": "協會簡介改為左圖右文",
+    "route": "about.html",
+    "status": "ready",
+    "change": "協會簡介 7 段改左圖右文，約 4:6；手機圖上文下。",
+    "note": "保留原有段落內容，使用符合段落的企業、市場與協會實拍。"
+  },
+  {
+    "id": "08",
+    "title": "理監事名冊與表格版型",
+    "route": "board.html?term=2022",
+    "status": "partial",
+    "change": "08-A/B/C：第一、二屆中英文照片表格、姓名及公司／職稱分欄完成。",
+    "note": "08-D 尚缺 7 位照片：余宛如、呂政達、呂軍甫、徐美華、烏恩婷、藍世旻、邱榮振。第三屆維持原展示。"
+  },
+  {
+    "id": "09",
+    "title": "點「理監事」直接顯示第三屆，省去中間選擇頁",
+    "route": "board.html",
+    "status": "ready",
+    "change": "各理監事入口直接顯示第三屆；頁內可切換第一、二屆。",
+    "note": "第三屆預設及第一、二屆切換實測；以鍵盤 End / Enter 選取第一屆通過。"
+  },
+  {
+    "id": "10",
+    "title": "五個功能委員會總覽",
+    "route": "committee.html",
+    "status": "ready",
+    "change": "五個委員會改為圖文卡片，分別連到各自內頁。",
+    "note": "證照、獎項、專業、媒體、推廣五頁皆已建立。"
+  },
+  {
+    "id": "11",
+    "title": "五個委員會內頁、名冊及切換",
+    "route": "committee-professional.html",
+    "status": "ready",
+    "change": "五個委員會各有職能、四欄名冊及其他四個委員會入口。",
+    "note": "依委員會來源核對任職，沒有以第三屆理監事職称覆蓋委員會資料。"
+  },
+  {
+    "id": "12",
+    "title": "鄧白氏雙標章更換 ESG Banner",
+    "route": "certificate.html",
+    "status": "ready",
+    "change": "鄧白氏雙標章 Banner 換成屋頂太陽能 ESG 照。",
+    "note": "CC0 來源及 1920px 網站檔已記錄；保留既有證書／標章。"
+  },
+  {
+    "id": "13",
+    "title": "活動列表左側放 Banner，直接連 Accupass",
+    "route": "news.html",
+    "status": "ready",
+    "change": "活動改月份分組與橫向圖文列；Accupass 活動直接進原活動頁。",
+    "note": "取得 127 個原 Banner；4 個 2019 Accupass 頁無原圖，保留文字；歷史文章維持原文章入口。"
+  },
+  {
+    "id": "14",
+    "title": "近期活動整合到活動訊息",
+    "route": "news.html?term=2018",
+    "status": "ready",
+    "change": "最新活動與活動訊息整合；舊 events.html 轉到 news.html 並保留章節。",
+    "note": "2018–2026 共 153 筆；2018 與舊 #recap 轉址已實測。"
+  },
+  {
+    "id": "15",
+    "title": "活動紀錄日期放大",
+    "route": "news.html",
+    "status": "ready",
+    "change": "活動日期放大；月份與日期分開、層級清楚。",
+    "note": "桌機日期 34px、手機 28px；首頁日期另依版面縮為 30 / 24px。"
+  },
+  {
+    "id": "16",
+    "title": "「精彩回顧」統一改「活動花絮」",
+    "route": "news.html#recap",
+    "status": "ready",
+    "change": "「精彩回顧」同步改為「活動花絮」。",
+    "note": "v1 HTML、JS 已查無舊稱；本項只有名稱，新的花絮版型另等 17。"
+  },
+  {
+    "id": "17",
+    "title": "活動花絮列表的新排版",
+    "route": "news.html#recap",
+    "status": "waiting",
+    "change": "等待活動花絮版面參考。",
+    "note": "現有歷史內容保留，尚未實作未提供的新參考版型。"
+  },
+  {
+    "id": "18",
+    "title": "到府授課三個特色各加圖",
+    "route": "trainbod.html#inhouse",
+    "status": "ready",
+    "change": "內容多元、到府服務、時間彈性三區加入對應圖片。",
+    "note": "實際授課照片、企業空間、視訊學習；桌機三欄／手機排列已檢查。"
+  },
+  {
+    "id": "19",
+    "title": "七類課程改八大主題，每類配圖",
+    "route": "trainbod.html#inhouse",
+    "status": "ready",
+    "change": "八大課程主題依 2026/7/17 PDF 更新，加入圖片及完整課綱入口。",
+    "note": "八類名稱、範例課程與 PDF 頁碼對照完成，主下載入口也是同一版 PDF。"
+  },
+  {
+    "id": "20",
+    "title": "董監事課程 Banner",
+    "route": "trainbod.html",
+    "status": "waiting",
+    "change": "等待董監事課程正式 Banner。",
+    "note": "不影響 18、19 的課程版面與內容。"
+  },
+  {
+    "id": "21",
+    "title": "會計主管 Banner 換成手按計算機",
+    "route": "trainbod-384680.html",
+    "status": "ready",
+    "change": "會計主管 Banner 換成手按計算機的照片。",
+    "note": "1920px 網站檔；手機已確認手與計算機主體及白色標題。"
+  },
+  {
+    "id": "22",
+    "title": "董事會績效評估四步驟流程圖",
+    "route": "bodperform.html#process",
+    "status": "ready",
+    "change": "績效評估改為四步驟：企業自評、文件審查、實地訪談、出具報告。",
+    "note": "四步驟內容核對通過；手機轉為直列。Banner 另待 23。"
+  },
+  {
+    "id": "23",
+    "title": "董事會績效評估 Banner",
+    "route": "bodperform.html",
+    "status": "waiting",
+    "change": "等待董事會績效評估 Banner 方向／圖片。",
+    "note": "流程已先完成，見 22。"
+  },
+  {
+    "id": "24",
+    "title": "提升公司治理六步驟流程圖",
+    "route": "corpperform.html#process",
+    "status": "ready",
+    "change": "公司治理輔導改六步驟，順序與箭頭一致。",
+    "note": "桌機 3×2、手機直列，已實際檢查排列。Banner 另待 25。"
+  },
+  {
+    "id": "25",
+    "title": "提升公司治理 Banner",
+    "route": "corpperform.html",
+    "status": "waiting",
+    "change": "等待公司治理 Banner 方向／圖片。",
+    "note": "六步驟流程已先完成，見 24。"
+  },
+  {
+    "id": "26",
+    "title": "「證照獎項」拆成「證照」與「獎項」",
+    "route": "certificates.html",
+    "status": "ready",
+    "change": "「證照」與「獎項」拆開，中英文導覽、Footer 與總覽入口同步。",
+    "note": "中文桌機及英文手機可見獨立入口；英文桌機不同寬度尚未補做視覺巡檢。"
+  },
+  {
+    "id": "27",
+    "title": "IRC 證照介紹與贊助獎學金整合",
+    "route": "certification.html#scholarship",
+    "status": "ready",
+    "change": "IRC 證照與贊助獎學金合併於同頁，中英文同步、舊獎學金網址轉址。",
+    "note": "保留原有條件、費用與申請連結；修正手機長網址造成的橫向溢出。"
+  },
+  {
+    "id": "28",
+    "title": "縮小 TIRIC 講師照片",
+    "route": "tiric.html",
+    "status": "ready",
+    "change": "TIRIC 講師照片縮小，維持完整人像與課程主題文字。",
+    "note": "桌機 140×168、手機最大 120×145；原有 10 位講師資料保留。"
+  },
+  {
+    "id": "29",
+    "title": "TIRIC 白底影片與播放入口",
+    "route": "tiric.html#intro-video",
+    "status": "ready",
+    "change": "保留單一白底介紹影片；第二個觀看入口改回同一影片。",
+    "note": "原始 4K 與網站 1080p 全片 1,164 影格對照；SSIM 0.984248。瀏覽器實播至 34.1 秒未報錯，全長 38.846 秒。"
+  },
+  {
+    "id": "30",
+    "title": "TIRIC 回顧改年度／屆次下拉",
+    "route": "tiric.html#recap",
+    "status": "ready",
+    "change": "TIRIC 課程回顧加入屆次下拉，保留已提供的 2025 回顧。",
+    "note": "只有 2025 一項；沒有虛構其他年度。授證海報與年度大會照片保留並修正描述。"
+  },
+  {
+    "id": "31",
+    "title": "TIRI Awards 屆次按鈕改下拉",
+    "route": "mission-206783.html",
+    "status": "ready",
+    "change": "TIRI Awards 第一至第五屆按鈕改為下拉，網址保存所選屆次。",
+    "note": "五屆逐一切換實測，重整後能維持所選屆次。"
+  },
+  {
+    "id": "32",
+    "title": "潛力進展獎屆次下拉與歷屆內容",
+    "route": "mission-206783-766399.html?term=2025",
+    "status": "partial",
+    "change": "32-A：2026 第二屆與 2025 第一屆下拉，以及目前資料已完成。",
+    "note": "2025 顯示 10 家得獎企業與頒獎照；2026 是 20 家入選企業，未寫成最終得獎。32-B 待缺少／正式資料。"
+  },
+  {
+    "id": "33",
+    "title": "TIRI Awards 使用整排獎座 Banner",
+    "route": "mission-206783.html",
+    "status": "ready",
+    "change": "TIRI Awards Banner 使用指定整排獎座照。",
+    "note": "使用本案照片，保留獎座主體。"
+  },
+  {
+    "id": "34",
+    "title": "潛力進展獎使用指定獎狀 Banner",
+    "route": "mission-206783-766399.html",
+    "status": "ready",
+    "change": "潛力進展獎 Banner 使用指定桌上獎狀照。",
+    "note": "使用本案照片，非一般素材圖替代。"
+  },
+  {
+    "id": "35",
+    "title": "知識資源每篇文章加主題圖片",
+    "route": "knowledge.html",
+    "status": "ready",
+    "change": "27 篇文章加入主題圖；人物專訪核對人物；修正卡片錯篇連結。",
+    "note": "本機文章逐篇核對標題，4 個外部原文核對；圖文對照表已保存。郭宗霖人物以會計研究月刊原文與 TIRI 資料確認。"
+  },
+  {
+    "id": "36",
+    "title": "知識資源加入頁內搜尋",
+    "route": "knowledge.html",
+    "status": "ready",
+    "change": "加入頁內關鍵字搜尋、分類交集、結果數、清除及無結果提示。",
+    "note": "ESG → 2 筆；加專訪 → 0 筆；清除 → 27 筆，瀏覽器實測通過。"
+  },
+  {
+    "id": "37",
+    "title": "加入會員更換 Banner",
+    "route": "join.html",
+    "status": "ready",
+    "change": "加入會員 Banner 換企業玻璃大樓形象照。",
+    "note": "1920px CC0 網站檔，與會員／企業專業主題對應。"
+  },
+  {
+    "id": "38",
+    "title": "「會員專屬優惠」改「會員權利」",
+    "route": "benefit.html",
+    "status": "ready",
+    "change": "「會員專屬優惠」同步改為「會員權利」。",
+    "note": "頁名、各入口與 Footer 同步；v1 已查無舊稱。"
+  },
+  {
+    "id": "39",
+    "title": "會員權利兩大區塊左側加圖",
+    "route": "benefit.html",
+    "status": "ready",
+    "change": "會員權利兩大區塊改左圖右文：協會服務、合作夥伴優惠。",
+    "note": "原有服務內容及優惠條件保留；不是每一行優惠各放一圖。"
+  },
+  {
+    "id": "40",
+    "title": "中英文年刊列表直接顯示封面",
+    "route": "5th_report-516844.html#yearbooks",
+    "status": "ready",
+    "change": "2023–2025 中英文六本年刊顯示完整封面，同步知識資源年刊區。",
+    "note": "六本 PDF 可讀、年份／語言／封面／閱覽與下載目標核對一致；封面六宮格已人工檢查。"
+  },
+  {
+    "id": "41",
+    "title": "年刊 Banner",
+    "route": "5th_report-516844.html",
+    "status": "waiting",
+    "change": "等待年刊正式 Banner。",
+    "note": "六本封面列表已完成，見 40。"
+  }
+]

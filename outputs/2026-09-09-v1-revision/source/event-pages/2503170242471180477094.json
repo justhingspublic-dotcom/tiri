@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2503170242471180477094",
+  "local_label": "04.23 2025 全球秩序變遷下台灣的未來 董監進修課程 台北 →",
+  "id": "2503170242471180477094",
+  "source_title": "4/23【TIRI線上暨實體董事、公司治理主管進修課程】全球秩序變遷下台灣的未來｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2504100225551502774281.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "4/23【TIRI線上暨實體董事、公司治理主管進修課程】全球秩序變遷下台灣的未來",
+      "image": "https://static.accupass.com/eventbanner/2504100225551502774281.jpg",
+      "startDate": "2025-04-23T14:00:00+08:00",
+      "endDate": "2025-04-23T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "自從美國總統川普上任以來，迅速展現其ㄧ貫的「MAGA」政策，並加速推動國際外交與經貿戰略的調整。面對川普採取強硬的現實主義手法，加上北京當局的威嚇，台灣在國際上的處境日益艱難。爲此，TIRI特別邀請本會副理事長，同時也是廈門大學台研院講授國際關係的客座教授王恩國來爲大家分析台灣未來的生存之道，值得大家好好關注。",
+      "performer": {
+        "@type": "Person",
+        "name": "王恩國"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市南港區經貿二路198號8樓之1",
+        "name": "（今皓實業股份有限公司大會議室）"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2503170242471180477094.jpg"
+}

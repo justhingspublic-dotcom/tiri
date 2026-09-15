@@ -1,0 +1,79 @@
+{
+  "checkedOn": "2026-09-10",
+  "organizer": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+  "observedUpcoming": [
+    [
+      "2026-09-10",
+      "2606090943198559132000",
+      "09/10 【TIRI線上董事、公司治理主管進修課程】職場霸凌防治新制簡介",
+      "14:00–17:00｜線上活動"
+    ],
+    [
+      "2026-09-18",
+      "2608180816191935448591",
+      "09/18 【TIRI線上董事、公司治理主管進修課程】營業秘密暨資訊安全教育訓練---MJIB偵辦實務分享",
+      "14:00–17:00｜線上活動"
+    ],
+    [
+      "2026-10-02",
+      "2608200546411371789803",
+      "10/02 【TIRI線上董事、公司治理主管進修課程】用價值觀 & 價值，打造 AI 時代不可複製的企業核心",
+      "14:00–17:00｜線上活動"
+    ],
+    [
+      "2026-10-16",
+      "2608261303411628089416",
+      "2026/10/16- TIRI 2026年度大會暨IR新溝通時代",
+      "14:00–18:00｜台北市"
+    ],
+    [
+      "2026-10-23",
+      "2608310146174838286100",
+      "10/23【TIRI線上董事、治理主管進修課程】ESG未來主力戰場：AI的永續治理",
+      "14:00–17:00｜線上活動"
+    ],
+    [
+      "2026-11-13",
+      "2608310252071781192101",
+      "11/13【TIRI線上董事、治理主管進修課程】商業思維，惠我良多，共創未來",
+      "14:00–17:00｜線上活動"
+    ]
+  ],
+  "added": [
+    {
+      "event": "https://www.accupass.com/event/2608180816191935448591",
+      "banner": "https://static.accupass.com/eventbanner/2608200139159980537530.jpg",
+      "date": "2026-09-18",
+      "title": "09/18 【TIRI線上董事、公司治理主管進修課程】營業秘密暨資訊安全教育訓練---MJIB偵辦實務分享",
+      "source": "Accupass live organizer + original event og:image",
+      "localImage": "v1/images/review-r4/events/2608180816191935448591.jpg"
+    },
+    {
+      "event": "https://www.accupass.com/event/2608200546411371789803",
+      "banner": "https://static.accupass.com/eventbanner/2609040325471171463603.jpg",
+      "date": "2026-10-02",
+      "title": "10/02 【TIRI線上董事、公司治理主管進修課程】用價值觀 & 價值，打造 AI 時代不可複製的企業核心",
+      "source": "Accupass live organizer + original event og:image",
+      "localImage": "v1/images/review-r4/events/2608200546411371789803.jpg"
+    },
+    {
+      "event": "https://www.accupass.com/event/2608310146174838286100",
+      "banner": "https://static.accupass.com/eventbanner/2608310229597602325580.jpg",
+      "date": "2026-10-23",
+      "title": "10/23【TIRI線上董事、治理主管進修課程】ESG未來主力戰場：AI的永續治理",
+      "source": "Accupass live organizer + original event og:image",
+      "localImage": "v1/images/review-r4/events/2608310146174838286100.jpg"
+    },
+    {
+      "event": "https://www.accupass.com/event/2608310252071781192101",
+      "banner": "https://static.accupass.com/eventbanner/2608310629592800572990.jpg",
+      "date": "2026-11-13",
+      "title": "11/13【TIRI線上董事、治理主管進修課程】商業思維，惠我良多，共創未來",
+      "source": "Accupass live organizer + original event og:image",
+      "localImage": "v1/images/review-r4/events/2608310252071781192101.jpg"
+    }
+  ],
+  "rule": "date > today in Asia/Taipei; today and earlier stay in archive",
+  "originalCount": 153,
+  "totalCount": 157
+}

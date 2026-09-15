@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2401100821021272048986",
+  "local_label": "06.21 2024 資產傳承與節稅的布局 董監進修課程 線上 →",
+  "id": "2401100821021272048986",
+  "source_title": "6/21【TIRI線上董事、公司治理主管進修課程】資產傳承與節稅的布局｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2401100852311642447070.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "6/21【TIRI線上董事、公司治理主管進修課程】資產傳承與節稅的布局",
+      "image": "https://static.accupass.com/eventbanner/2401100852311642447070.jpg",
+      "startDate": "2024-06-21T14:00:00+08:00",
+      "endDate": "2024-06-21T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "這是一堂完整的合法贈與及遺產繼承講座，將讓你掌握贈與節稅的實務操作分享最新的資產傳承策略和節稅技巧，並且了解如何減少稅務負擔，讓您的資產得以最有效運用。",
+      "performer": {
+        "@type": "Person",
+        "name": "胡碩勻"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2401100821021272048986.jpg"
+}

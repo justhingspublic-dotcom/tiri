@@ -1,0 +1,60 @@
+{
+  "url": "https://www.accupass.com/event/2503180223508301997040",
+  "local_label": "06.19 2025 IR全球化：媒體策略與新聞新機遇 活動 台北 →",
+  "id": "2503180223508301997040",
+  "source_title": "06/19（四）IR全球化：媒體策略與新聞新機遇｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2505050244481578425022.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "06/19（四）IR全球化：媒體策略與新聞新機遇",
+      "image": "https://static.accupass.com/eventbanner/2505050244481578425022.jpg",
+      "startDate": "2025-06-19T14:00:00+08:00",
+      "endDate": "2025-06-19T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "探索媒體策略的新趨勢，抓住全球化的新聞機遇。本次活動將匯聚行業專家，共同探討創新方式，助力投資人關係(IR)的全球化推進，讓企業聲音跨越地域界限，走向世界。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "郭宗霖"
+        },
+        {
+          "@type": "Person",
+          "name": " 胡恒士 "
+        },
+        {
+          "@type": "Person",
+          "name": "黄佳欣 "
+        },
+        {
+          "@type": "Person",
+          "name": "邱宗泰"
+        },
+        {
+          "@type": "Person",
+          "name": "許慈雅"
+        },
+        {
+          "@type": "Person",
+          "name": "葉怡鈴"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區東興路8號15樓",
+        "name": "統一證券國際會議廳"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2503180223508301997040.jpg"
+}

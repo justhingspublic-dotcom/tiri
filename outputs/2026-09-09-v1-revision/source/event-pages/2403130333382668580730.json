@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2403130333382668580730",
+  "local_label": "05.24 2024 美中台強力對抗下的台商未來 董監進修課程 台北 →",
+  "id": "2403130333382668580730",
+  "source_title": "5/24【TIRI線上暨實體董事、公司治理主管進修課程】美中台強力對抗下的台商未來｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2404180101281943234853.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "5/24【TIRI線上暨實體董事、公司治理主管進修課程】美中台強力對抗下的台商未來",
+      "image": "https://static.accupass.com/eventbanner/2404180101281943234853.jpg",
+      "startDate": "2024-05-24T14:00:00+08:00",
+      "endDate": "2024-05-24T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "在當今全球政治舞台上，美中台之間的緊張關係正在形塑著商業環境的格局，尤其對於台灣的企業而言，這意味著巨大的挑戰和機遇。面對著地緣政治的變動、供應鏈的不穩定性以及市場需求的轉變，台商必須靈活應對並制定適切的戰略以確保未來的成功。\n本次課程將邀請對於中國政經情勢分析企業併購實務經驗豐富的王恩國教授為我們講述，將深入探討美中台強力對抗下的台商未來走向，從政治、經濟、企業策略等多個角度出發，幫助學員全面了解局勢、掌握趨勢，並提供實用的戰略指導，以應對日益複雜的商業環境。",
+      "performer": {
+        "@type": "Person",
+        "name": "王恩國"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市中山區大直街69號K602教室",
+        "name": "實踐大學K棟研究大樓"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2403130333382668580730.jpg"
+}

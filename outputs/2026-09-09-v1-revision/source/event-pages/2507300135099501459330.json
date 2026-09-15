@@ -1,0 +1,48 @@
+{
+  "url": "https://www.accupass.com/event/2507300135099501459330",
+  "local_label": "10.23 2025 _TIRI 2025年度大會暨引領IR智慧新時代 年度大會 台北 →",
+  "id": "2507300135099501459330",
+  "source_title": "10/23_TIRI 2025年度大會暨引領IR智慧新時代｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2510150654451702716740.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "10/23_TIRI 2025年度大會暨引領IR智慧新時代",
+      "image": "https://static.accupass.com/eventbanner/2510150654451702716740.jpg",
+      "startDate": "2025-10-23T14:00:00+08:00",
+      "endDate": "2025-10-23T18:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "TIRI 2025 年度大會「引領 IR 智慧新時代」將於 10 月 23 日在台北遠東香格里拉飯店登場，主題為「智慧驅動未來、IR 共創新時代」，聚焦資本市場趨勢與投資人關係專業精進。\n活動將舉辦 2025 TIRI Awards 頒獎、TIRC 專業分享，並邀請 S&P Global、Bloomberg、Extel 分享市場洞察，協助企業掌握趨勢、優化 IR 策略與價值傳遞。\n大會亮點為深度專業交流與高含金量分享，為 IR 專業人士打造年度必參盛會。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "李家榮"
+        },
+        {
+          "@type": "Person",
+          "name": "林彥君"
+        },
+        {
+          "@type": "Person",
+          "name": "朱雅卉 "
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市大安區敦化南路二段201號",
+        "name": "台北香格里拉 遠東3樓宴會廳"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2507300135099501459330.jpg"
+}

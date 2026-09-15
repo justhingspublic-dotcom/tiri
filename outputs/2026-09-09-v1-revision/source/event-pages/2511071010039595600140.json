@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2511071010039595600140",
+  "local_label": "12.18 2025 說出永續價值：ESG故事力與銀齡策略 董監進修課程 線上 →",
+  "id": "2511071010039595600140",
+  "source_title": "12/18【TIRI線上董事、公司治理主管進修課程】說出永續價值：ESG故事力與銀齡策略｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2511120646121430972729.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "12/18【TIRI線上董事、公司治理主管進修課程】說出永續價值：ESG故事力與銀齡策略",
+      "image": "https://static.accupass.com/eventbanner/2511120646121430972729.jpg",
+      "startDate": "2025-12-18T14:00:00+08:00",
+      "endDate": "2025-12-18T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "永續治理的核心，不僅在於制度設計與報告揭露，更在於能否以真實且動人的方式，說出企業的價值與信念。當ESG逐漸成為企業經營的共通語言，如何避免「形式化」、「漂綠化」，便仰賴領導者具備將永續理念轉化為故事的能力。本課程以「說出永續價值」為主軸，結合ESG溝通策略與銀齡轉型的前瞻視野，帶領主管從人本敘事出發，重新思考企業與社會的關係。透過案例解析與實務演練，協助學員學會以故事展現永續行動、以關懷回應高齡與照顧議題，讓企業不僅被看見，更能被理解、被信任。",
+      "performer": {
+        "@type": "Person",
+        "name": "劉亦中"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2511071010039595600140.jpg"
+}

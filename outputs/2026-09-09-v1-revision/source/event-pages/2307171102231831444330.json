@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2307171102231831444330",
+  "local_label": "12.22 2023 2023年新版公司治理暨董事會績效評鑑實務解析 董監進修課程 線上 →",
+  "id": "2307171102231831444330",
+  "source_title": "12/22（五）【TIRI線上董事、公司治理主管進修課程】2023年新版公司治理暨董事會績效評鑑實務解析｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2308170341458934037390.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "12/22（五）【TIRI線上董事、公司治理主管進修課程】2023年新版公司治理暨董事會績效評鑑實務解析",
+      "image": "https://static.accupass.com/eventbanner/2308170341458934037390.jpg",
+      "startDate": "2023-12-22T14:00:00+08:00",
+      "endDate": "2023-12-22T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "深入解析2023新版公司治理暨董事會績效評鑑。卓越實務洞見，助您掌握核心要點。立即加入，紮實提升治理專業！",
+      "performer": {
+        "@type": "Person",
+        "name": "郭宗霖"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2307171102231831444330.jpg"
+}

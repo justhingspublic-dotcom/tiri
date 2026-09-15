@@ -1,0 +1,342 @@
+{
+  "passed": 84,
+  "total": 84,
+  "checks": [
+    {
+      "check": "41 unique review items",
+      "passed": true
+    },
+    {
+      "check": "All 25 prior approvals retained",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 01",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 02",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 03",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 04",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 05",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 06",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 07",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 08",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 09",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 10",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 11",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 12",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 13",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 14",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 15",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 16",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 17",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 18",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 19",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 20",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 21",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 22",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 23",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 24",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 25",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 26",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 27",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 28",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 29",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 30",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 31",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 32",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 33",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 34",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 35",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 36",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 37",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 38",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 39",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 40",
+      "passed": true
+    },
+    {
+      "check": "Review note and confirmation retained 41",
+      "passed": true
+    },
+    {
+      "check": "Same five waiting items",
+      "passed": true
+    },
+    {
+      "check": "Ten linked logos index.html",
+      "passed": true
+    },
+    {
+      "check": "Ten linked logos partners.html",
+      "passed": true
+    },
+    {
+      "check": "Exact ten benefit partners",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 1",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 2",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 3",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 4",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 5",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 6",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 7",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 8",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 9",
+      "passed": true
+    },
+    {
+      "check": "Benefit terms and official link unchanged 10",
+      "passed": true
+    },
+    {
+      "check": "Accepted page text preserved board.html",
+      "passed": true
+    },
+    {
+      "check": "Accepted page text preserved board_en.html",
+      "passed": true
+    },
+    {
+      "check": "Accepted page text preserved certification.html",
+      "passed": true
+    },
+    {
+      "check": "Accepted page text preserved certification-388672.html",
+      "passed": true
+    },
+    {
+      "check": "Accepted page text preserved mission-206783-766399.html",
+      "passed": true
+    },
+    {
+      "check": "Committee roster preserved committee-certification.html",
+      "passed": true
+    },
+    {
+      "check": "Four committee links without repeated photos committee-certification.html",
+      "passed": true
+    },
+    {
+      "check": "Committee roster preserved committee-awards.html",
+      "passed": true
+    },
+    {
+      "check": "Four committee links without repeated photos committee-awards.html",
+      "passed": true
+    },
+    {
+      "check": "Committee roster preserved committee-professional.html",
+      "passed": true
+    },
+    {
+      "check": "Four committee links without repeated photos committee-professional.html",
+      "passed": true
+    },
+    {
+      "check": "Committee roster preserved committee-media.html",
+      "passed": true
+    },
+    {
+      "check": "Four committee links without repeated photos committee-media.html",
+      "passed": true
+    },
+    {
+      "check": "Committee roster preserved committee-outreach.html",
+      "passed": true
+    },
+    {
+      "check": "Four committee links without repeated photos committee-outreach.html",
+      "passed": true
+    },
+    {
+      "check": "Original flow labels board-flow",
+      "passed": true
+    },
+    {
+      "check": "Flow text intact board-flow",
+      "passed": true
+    },
+    {
+      "check": "Flow text intact board-flow-mobile",
+      "passed": true
+    },
+    {
+      "check": "Original flow labels governance-flow",
+      "passed": true
+    },
+    {
+      "check": "Flow text intact governance-flow",
+      "passed": true
+    },
+    {
+      "check": "Flow text intact governance-flow-mobile",
+      "passed": true
+    },
+    {
+      "check": "Ten lecturer frames",
+      "passed": true
+    },
+    {
+      "check": "Lecturer names and topics unchanged",
+      "passed": true
+    },
+    {
+      "check": "Approved TIRIC video and poster unchanged",
+      "passed": true
+    },
+    {
+      "check": "153 activity records retained",
+      "passed": true
+    },
+    {
+      "check": "17 actual missing original images disclosed",
+      "passed": true
+    },
+    {
+      "check": "All v1 local referenced files exist",
+      "passed": true
+    }
+  ]
+}

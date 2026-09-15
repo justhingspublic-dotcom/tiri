@@ -1,0 +1,1453 @@
+[
+  {
+    "term": "2022",
+    "zh": {
+      "name": "孫又文",
+      "title": "前台灣積體電路製造股份有限公司 企業訊息處資深處長",
+      "role": "榮譽理事長",
+      "jobs": [
+        [
+          "前台灣積體電路製造股份有限公司",
+          "企業訊息處資深處長"
+        ]
+      ],
+      "photo": "../images/board-sun-2026.jpg"
+    },
+    "en": {
+      "name": "Elizabeth Sun",
+      "title": "TSMC — Senior Director of Corporate Communications Division",
+      "role": "Honorary Chairman",
+      "jobs": [
+        [
+          "TSMC",
+          "Senior Director of Corporate Communications Division"
+        ]
+      ],
+      "photo": "../images/board-sun-2026.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "郭宗霖",
+      "title": "鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事",
+      "role": "理事長",
+      "jobs": [
+        [
+          "鴻勝會計師事務所",
+          "執業會計師"
+        ],
+        [
+          "大井泵浦工業股份有限公司",
+          "董事"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    },
+    "en": {
+      "name": "Jonny Kuo",
+      "title": "Certified Public Accountant at BigWin CPA Firm; Director at Walrus Pump Co., Ltd.",
+      "role": "Chairman",
+      "jobs": [
+        [
+          "BigWin CPA Firm",
+          "Certified Public Accountant"
+        ],
+        [
+          "Walrus Pump Co., Ltd.",
+          "Director"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "王恩國",
+      "title": "東友科技股份有限公司 副董事長",
+      "role": "副理事長",
+      "jobs": [
+        [
+          "東友科技股份有限公司",
+          "副董事長"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-wang.jpg"
+    },
+    "en": {
+      "name": "Kevin Wang",
+      "title": "TECO Image Systems Co., Ltd. — Vice Chairman",
+      "role": "Vice Chairman",
+      "jobs": [
+        [
+          "TECO Image Systems Co., Ltd.",
+          "Vice Chairman"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-wang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "郭宗霖",
+      "title": "鴻勝會計師事務所執業會計師暨大井泵浦工業股份有限公司董事",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "鴻勝會計師事務所",
+          "執業會計師"
+        ],
+        [
+          "大井泵浦工業股份有限公司",
+          "董事"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    },
+    "en": {
+      "name": "Jonny Kuo",
+      "title": "CPA, CSIA at BigWin CPA Firm; Director of Walrus Pump Co., Ltd.",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "BigWin CPA Firm",
+          "Certified Public Accountant"
+        ],
+        [
+          "Walrus Pump Co., Ltd.",
+          "Director"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "王恩國",
+      "title": "東友科技股份有限公司 副董事長",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "東友科技股份有限公司",
+          "副董事長"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-wang.jpg"
+    },
+    "en": {
+      "name": "Kevin Wang",
+      "title": "TECO Image Systems Co., Ltd. — Vice Chairman",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "TECO Image Systems Co., Ltd.",
+          "Vice Chairman"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-wang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "劉詩亮",
+      "title": "TPK 宸鴻光電科技股份有限公司 資深副總經理 策略長暨代理發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "TPK 宸鴻光電科技股份有限公司",
+          "資深副總經理 策略長暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-freddie-liu.jpg"
+    },
+    "en": {
+      "name": "Freddie Liu",
+      "title": "TPK Holding Co., Ltd. — Chief Strategy Officer and Deputy Spokesman",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "TPK Holding Co., Ltd.",
+          "Chief Strategy Officer and Deputy Spokesman"
+        ]
+      ],
+      "photo": "../images/board-2026-freddie-liu.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "簡世雄",
+      "title": "東元電機股份有限公司 公司治理中心處長暨發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "東元電機股份有限公司",
+          "公司治理中心處長暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-andy-chien.jpg"
+    },
+    "en": {
+      "name": "Andy Chien",
+      "title": "TECO Electric & Machinery Co., Ltd. — Spokesman & Director of Corporate Governance Center",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "TECO Electric & Machinery Co., Ltd.",
+          "Spokesman & Director of Corporate Governance Center"
+        ]
+      ],
+      "photo": "../images/board-2026-andy-chien.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "張明仁",
+      "title": "新加坡商睿智先鋒有限公司 財務長",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "新加坡商睿智先鋒有限公司",
+          "財務長"
+        ]
+      ],
+      "photo": "../images/board-2026-jack-chang.jpg"
+    },
+    "en": {
+      "name": "Jack M. Chang",
+      "title": "TURBONEXT.AI — CFO",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "TURBONEXT.AI",
+          "CFO"
+        ]
+      ],
+      "photo": "../images/board-2026-jack-chang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "沈馥馥",
+      "title": "中華電信股份有限公司 前財務處副總暨代理發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "中華電信股份有限公司",
+          "前財務處副總暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    },
+    "en": {
+      "name": "Fu-Fu Shen",
+      "title": "Chunghwa Telecom Co., Ltd. — Former Deputy Spokesperson & VP of Public Affairs Department",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Chunghwa Telecom Co., Ltd.",
+          "Former Deputy Spokesperson & VP of Public Affairs Department"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "張妍婷",
+      "title": "仁寶電腦工業股份有限公司 投資人關係暨品牌辦公室資深處長、代理發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "仁寶電腦工業股份有限公司",
+          "投資人關係暨品牌辦公室資深處長、代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-tina-chang.jpg"
+    },
+    "en": {
+      "name": "Tina Chang",
+      "title": "Compal Electronics, Inc. — Senior Director, Investor Relations & Branding Office, Deputy Spokesperson",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Compal Electronics, Inc.",
+          "Senior Director, Investor Relations & Branding Office, Deputy Spokesperson"
+        ]
+      ],
+      "photo": "../images/board-2026-tina-chang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "張真卿",
+      "title": "立隆電子工業股份有限公司 董事長特助暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "立隆電子工業股份有限公司",
+          "董事長特助暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-peter-chang.jpg"
+    },
+    "en": {
+      "name": "Peter Chang",
+      "title": "Lelon Electronics Corp. — Spokesman & Assistant to the President",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Lelon Electronics Corp.",
+          "Spokesman & Assistant to the President"
+        ]
+      ],
+      "photo": "../images/board-2026-peter-chang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "黃奕誠",
+      "title": "鴻海精密股份有限公司 投資人關係暨永續委員會經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "鴻海精密股份有限公司",
+          "投資人關係暨永續委員會經理"
+        ]
+      ],
+      "photo": "../images/board-2026-nick-huang.jpg"
+    },
+    "en": {
+      "name": "Nick Huang",
+      "title": "Hon Hai Precision Industry Co., Ltd. — Manager of Investor Relations, Head of the Sustainability Committee Office",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Hon Hai Precision Industry Co., Ltd.",
+          "Manager of Investor Relations, Head of the Sustainability Committee Office"
+        ]
+      ],
+      "photo": "../images/board-2026-nick-huang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "許碧雲",
+      "title": "桓達科技股份有限公司 總經理特助暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "桓達科技股份有限公司",
+          "總經理特助暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-nancy-hsu.jpg"
+    },
+    "en": {
+      "name": "Nancy Hsu",
+      "title": "FineTek Co., Ltd. — Special Assistant to the Managing Director & Spokesperson",
+      "role": "Directors",
+      "jobs": [
+        [
+          "FineTek Co., Ltd.",
+          "Special Assistant to the Managing Director & Spokesperson"
+        ]
+      ],
+      "photo": "../images/board-2026-nancy-hsu.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "黃英記",
+      "title": "矽創電子 投資人關係暨永續辦公室處長",
+      "role": "理事",
+      "jobs": [
+        [
+          "矽創電子",
+          "投資人關係暨永續辦公室處長"
+        ]
+      ],
+      "photo": "../images/board-2026-tom-huang.jpg"
+    },
+    "en": {
+      "name": "Tom Huang",
+      "title": "Sitronix Technology Corp. — Investor Relations and ESG Office Director",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Sitronix Technology Corp.",
+          "Investor Relations and ESG Office Director"
+        ]
+      ],
+      "photo": "../images/board-2026-tom-huang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "林男和",
+      "title": "旗山龍鳳食品股份有限公司 總經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "旗山龍鳳食品股份有限公司",
+          "總經理"
+        ]
+      ],
+      "photo": "../images/board-2026-nan-hao-lin.jpg"
+    },
+    "en": {
+      "name": "Nan-Hao Lin",
+      "title": "Chi Shan Long Feng Food Co., Ltd. — General Manager",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Chi Shan Long Feng Food Co., Ltd.",
+          "General Manager"
+        ]
+      ],
+      "photo": "../images/board-2026-nan-hao-lin.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "洪健凱",
+      "title": "經寶精密控股股份有限公司 投資人關係部經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "經寶精密控股股份有限公司",
+          "投資人關係部經理"
+        ]
+      ],
+      "photo": "../images/board-2026-cash-hong.jpg"
+    },
+    "en": {
+      "name": "Cash Hong",
+      "title": "JPP Holding Company Limited — Investor Relations Specialist",
+      "role": "Directors",
+      "jobs": [
+        [
+          "JPP Holding Company Limited",
+          "Investor Relations Specialist"
+        ]
+      ],
+      "photo": "../images/board-2026-cash-hong.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "藍世旻",
+      "title": "安格科技股份有限公司 總經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "安格科技股份有限公司",
+          "總經理"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Ant Lan",
+      "title": "ALGOLTEK, Inc. — General Manager",
+      "role": "Directors",
+      "jobs": [
+        [
+          "ALGOLTEK, Inc.",
+          "General Manager"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "王沈銘",
+      "title": "1919 食物銀行 特約顧問",
+      "role": "理事",
+      "jobs": [
+        [
+          "1919 食物銀行",
+          "特約顧問"
+        ]
+      ],
+      "photo": "../images/board-2026-frank-wang.jpg"
+    },
+    "en": {
+      "name": "Frank Wang",
+      "title": "1919 Food Bank — Special Consultant",
+      "role": "Directors",
+      "jobs": [
+        [
+          "1919 Food Bank",
+          "Special Consultant"
+        ]
+      ],
+      "photo": "../images/board-2026-frank-wang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "涂蕙蘭",
+      "title": "",
+      "role": "常務監事",
+      "jobs": [
+        [
+          "—",
+          "—"
+        ]
+      ],
+      "photo": "../images/board-2026-emily-tu.jpg"
+    },
+    "en": {
+      "name": "Emily Tu",
+      "title": "",
+      "role": "Executive Supervisor",
+      "jobs": [
+        [
+          "—",
+          "—"
+        ]
+      ],
+      "photo": "../images/board-2026-emily-tu.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "萬心寧",
+      "title": "圓裕企業股份有限公司 獨立董事",
+      "role": "監事",
+      "jobs": [
+        [
+          "圓裕企業股份有限公司",
+          "獨立董事"
+        ]
+      ],
+      "photo": "../images/board-2026-echo-wan.jpg"
+    },
+    "en": {
+      "name": "Echo Wan",
+      "title": "Complex Micro Interconnection Co., Ltd. — Independent Director",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "Complex Micro Interconnection Co., Ltd.",
+          "Independent Director"
+        ]
+      ],
+      "photo": "../images/board-2026-echo-wan.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "姚文鈞",
+      "title": "全漢企業股份有限公司 董事長特別助理暨發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "全漢企業股份有限公司",
+          "董事長特別助理暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-paul-yao.jpg"
+    },
+    "en": {
+      "name": "Paul Yao",
+      "title": "FSP Technology Inc. — Special Assistant to the Chairman & Spokesman",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "FSP Technology Inc.",
+          "Special Assistant to the Chairman & Spokesman"
+        ]
+      ],
+      "photo": "../images/board-2026-paul-yao.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "陳珮瑛",
+      "title": "力銘永續發展股份有限公司 永續長",
+      "role": "監事",
+      "jobs": [
+        [
+          "力銘永續發展股份有限公司",
+          "永續長"
+        ]
+      ],
+      "photo": "../images/board-2026-julia-chen.jpg"
+    },
+    "en": {
+      "name": "Julia Chen",
+      "title": "Liming-ESG Corporation",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "Liming-ESG Corporation",
+          "Chief Sustainability Officer"
+        ]
+      ],
+      "photo": "../images/board-2026-julia-chen.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "葉文燦",
+      "title": "宇峻奧汀科技股份有限公司 管理處協理暨發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "宇峻奧汀科技股份有限公司",
+          "管理處協理暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-paul-w-t-yeh.jpg"
+    },
+    "en": {
+      "name": "Paul W.T. Yeh",
+      "title": "Userjoy Technology Co., Ltd. — Management Office Associate and Spokesperson",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "Userjoy Technology Co., Ltd.",
+          "Management Office Associate and Spokesperson"
+        ]
+      ],
+      "photo": "../images/board-2026-paul-w-t-yeh.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "楊朝榮",
+      "title": "中華民國證券期貨分析協會理事及聯茂、虎航、泰博等公司獨立董事",
+      "role": "榮譽顧問",
+      "jobs": [
+        [
+          "中華民國證券期貨分析協會",
+          "理事"
+        ],
+        [
+          "聯茂、虎航、泰博等公司",
+          "獨立董事"
+        ]
+      ],
+      "photo": "../images/board-2026-david-yang.jpg"
+    },
+    "en": {
+      "name": "David Yang",
+      "title": "Securities Analysts Association, Chinese Taipei — Director; Independent Director of ITEQ, Tigerair Taiwan and TaiDoc",
+      "role": "Honorary Advisors",
+      "jobs": [
+        [
+          "Securities Analysts Association, Chinese Taipei",
+          "Director; Independent Director of ITEQ, Tigerair Taiwan and TaiDoc"
+        ]
+      ],
+      "photo": "../images/board-2026-david-yang.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "周德雲",
+      "title": "矽創電子股份有限公司 前策略投資顧問",
+      "role": "榮譽顧問",
+      "jobs": [
+        [
+          "矽創電子股份有限公司",
+          "前策略投資顧問"
+        ]
+      ],
+      "photo": "../images/board-2026-jacky-chou.jpg"
+    },
+    "en": {
+      "name": "Jacky Chou",
+      "title": "Sitronix Technology Corporation — Former Strategic Investment Advisor",
+      "role": "Honorary Advisors",
+      "jobs": [
+        [
+          "Sitronix Technology Corporation",
+          "Former Strategic Investment Advisor"
+        ]
+      ],
+      "photo": "../images/board-2026-jacky-chou.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "余凱文",
+      "title": "自 2004 年以來台灣投資人關係的推動者和革新者",
+      "role": "首席顧問",
+      "jobs": [
+        [
+          "—",
+          "自 2004 年以來台灣投資人關係的推動者和革新者"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-yu.jpg"
+    },
+    "en": {
+      "name": "Kevin Yu",
+      "title": "Promoter and innovator of investor relations in Taiwan since 2004",
+      "role": "Chief Advisor",
+      "jobs": [
+        [
+          "—",
+          "Promoter and innovator of investor relations in Taiwan since 2004"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-yu.jpg"
+    }
+  },
+  {
+    "term": "2022",
+    "zh": {
+      "name": "許育綾",
+      "title": "秘書長",
+      "role": "秘書處",
+      "jobs": [
+        [
+          "—",
+          "秘書長"
+        ]
+      ],
+      "photo": "../images/board-2026-judy-hsu.jpg"
+    },
+    "en": {
+      "name": "Judy Hsu",
+      "title": "Secretary General",
+      "role": "Secretariat",
+      "jobs": [
+        [
+          "—",
+          "Secretary General"
+        ]
+      ],
+      "photo": "../images/board-2026-judy-hsu.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "孫又文",
+      "title": "台灣積體電路製造股份有限公司 企業訊息處資深處長",
+      "role": "榮譽理事長",
+      "jobs": [
+        [
+          "台灣積體電路製造股份有限公司",
+          "企業訊息處資深處長"
+        ]
+      ],
+      "photo": "../images/board-sun-2026.jpg"
+    },
+    "en": {
+      "name": "Elizabeth Sun",
+      "title": "TSMC — Senior Director of Corporate Communications Division",
+      "role": "Honorary Chairman",
+      "jobs": [
+        [
+          "TSMC",
+          "Senior Director of Corporate Communications Division"
+        ]
+      ],
+      "photo": "../images/board-sun-2026.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "沈馥馥",
+      "title": "中華電信 公共事務處協理暨代理發言人",
+      "role": "理事長",
+      "jobs": [
+        [
+          "中華電信",
+          "公共事務處協理暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    },
+    "en": {
+      "name": "Fu-Fu Shen",
+      "title": "Chunghwa Telecom Co., Ltd. — Deputy Spokesperson & Assistant VP of Public Affairs Department",
+      "role": "Chairman",
+      "jobs": [
+        [
+          "Chunghwa Telecom Co., Ltd.",
+          "Deputy Spokesperson & Assistant VP of Public Affairs Department"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "郭宗霖",
+      "title": "霹靂國際 財務長暨代理發言人",
+      "role": "副理事長",
+      "jobs": [
+        [
+          "霹靂國際",
+          "財務長暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    },
+    "en": {
+      "name": "Jonny Kuo",
+      "title": "Pili International Multimedia Co., Ltd. — Deputy Spokesman & CFO",
+      "role": "Vice Chairman",
+      "jobs": [
+        [
+          "Pili International Multimedia Co., Ltd.",
+          "Deputy Spokesman & CFO"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "沈馥馥",
+      "title": "中華電信 公共事務處協理暨代理發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "中華電信",
+          "公共事務處協理暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    },
+    "en": {
+      "name": "Fu-Fu Shen",
+      "title": "Chunghwa Telecom Co., Ltd. — Deputy Spokesperson & Assistant VP of Public Affairs Department",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "Chunghwa Telecom Co., Ltd.",
+          "Deputy Spokesperson & Assistant VP of Public Affairs Department"
+        ]
+      ],
+      "photo": "../images/board-2026-fufu-shen.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "郭宗霖",
+      "title": "霹靂國際 財務長暨代理發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "霹靂國際",
+          "財務長暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    },
+    "en": {
+      "name": "Jonny Kuo",
+      "title": "Pili International Multimedia Co., Ltd. — Deputy Spokesman & CFO",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "Pili International Multimedia Co., Ltd.",
+          "Deputy Spokesman & CFO"
+        ]
+      ],
+      "photo": "../images/board-2026-jonny-kuo.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "劉詩亮",
+      "title": "TPK 資深副總經理 策略長暨代理發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "TPK",
+          "資深副總經理 策略長暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-freddie-liu.jpg"
+    },
+    "en": {
+      "name": "Freddie Liu",
+      "title": "TPK Holding Co., Ltd. — Chief Strategy Officer and Deputy Spokesman",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "TPK Holding Co., Ltd.",
+          "Chief Strategy Officer and Deputy Spokesman"
+        ]
+      ],
+      "photo": "../images/board-2026-freddie-liu.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "周德雲",
+      "title": "矽創電子 資深處長暨發言人",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "矽創電子",
+          "資深處長暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-jacky-chou.jpg"
+    },
+    "en": {
+      "name": "Jacky Chou",
+      "title": "Sitronix Technology Corporation — Spokesman & Senior Director",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "Sitronix Technology Corporation",
+          "Spokesman & Senior Director"
+        ]
+      ],
+      "photo": "../images/board-2026-jacky-chou.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "張明仁",
+      "title": "新源生物科技 財務副總",
+      "role": "常務理事",
+      "jobs": [
+        [
+          "新源生物科技",
+          "財務副總"
+        ]
+      ],
+      "photo": "../images/board-2026-jack-chang.jpg"
+    },
+    "en": {
+      "name": "Jack M. Chang",
+      "title": "Allgenesis Biotherapeutics Inc. — Vice President of Finance",
+      "role": "Executive Directors",
+      "jobs": [
+        [
+          "Allgenesis Biotherapeutics Inc.",
+          "Vice President of Finance"
+        ]
+      ],
+      "photo": "../images/board-2026-jack-chang.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "呂軍甫",
+      "title": "京鼎精密 發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "京鼎精密",
+          "發言人"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Stanley Lu",
+      "title": "Foxsemicon Integrated Technology Inc. — Spokesman",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Foxsemicon Integrated Technology Inc.",
+          "Spokesman"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "張真卿",
+      "title": "立隆電子 董事長特助暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "立隆電子",
+          "董事長特助暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-peter-chang.jpg"
+    },
+    "en": {
+      "name": "Peter Chang",
+      "title": "Lelon Electronics Corp. — Spokesman & Assistant to the President",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Lelon Electronics Corp.",
+          "Spokesman & Assistant to the President"
+        ]
+      ],
+      "photo": "../images/board-2026-peter-chang.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "簡世雄",
+      "title": "東元電機 公司治理中心處長暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "東元電機",
+          "公司治理中心處長暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-andy-chien.jpg"
+    },
+    "en": {
+      "name": "Andy Chien",
+      "title": "TECO Electric & Machinery Co., Ltd. — Deputy Spokesman & Deputy Director of Corporate Governance Center",
+      "role": "Directors",
+      "jobs": [
+        [
+          "TECO Electric & Machinery Co., Ltd.",
+          "Deputy Spokesman & Deputy Director of Corporate Governance Center"
+        ]
+      ],
+      "photo": "../images/board-2026-andy-chien.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "藍世旻",
+      "title": "安格科技 總經理暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "安格科技",
+          "總經理暨發言人"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Ant Lan",
+      "title": "ALGOLTEK, Inc. — General Manager & Spokesman",
+      "role": "Directors",
+      "jobs": [
+        [
+          "ALGOLTEK, Inc.",
+          "General Manager & Spokesman"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "許碧雲",
+      "title": "桓達科技 總經理特助暨發言人",
+      "role": "理事",
+      "jobs": [
+        [
+          "桓達科技",
+          "總經理特助暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-nancy-hsu.jpg"
+    },
+    "en": {
+      "name": "Nancy Hsu",
+      "title": "FineTek Co., Ltd. — Special Assistant to the Managing Director & Spokesperson",
+      "role": "Directors",
+      "jobs": [
+        [
+          "FineTek Co., Ltd.",
+          "Special Assistant to the Managing Director & Spokesperson"
+        ]
+      ],
+      "photo": "../images/board-2026-nancy-hsu.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "黃英記",
+      "title": "矽創電子 投資人關係暨永續發展資深經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "矽創電子",
+          "投資人關係暨永續發展資深經理"
+        ]
+      ],
+      "photo": "../images/board-2026-tom-huang.jpg"
+    },
+    "en": {
+      "name": "Tom Huang",
+      "title": "Sitronix Technology Corporation — Senior Manager of IR & Sustainability",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Sitronix Technology Corporation",
+          "Senior Manager of IR & Sustainability"
+        ]
+      ],
+      "photo": "../images/board-2026-tom-huang.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "林男和",
+      "title": "全球創新技術產業交流協會 理事長",
+      "role": "理事",
+      "jobs": [
+        [
+          "全球創新技術產業交流協會",
+          "理事長"
+        ]
+      ],
+      "photo": "../images/board-2026-nan-hao-lin.jpg"
+    },
+    "en": {
+      "name": "Nan-Hao Lin",
+      "title": "Cross Straits New Technology Association — Chairman",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Cross Straits New Technology Association",
+          "Chairman"
+        ]
+      ],
+      "photo": "../images/board-2026-nan-hao-lin.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "烏恩婷",
+      "title": "瑞鼎科技 資深專案經理",
+      "role": "理事",
+      "jobs": [
+        [
+          "瑞鼎科技",
+          "資深專案經理"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Entien Wu",
+      "title": "瑞鼎科技 — Senior Project Manager",
+      "role": "Directors",
+      "jobs": [
+        [
+          "瑞鼎科技",
+          "Senior Project Manager"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "張妍婷",
+      "title": "仁寶電腦 投資人關係部 副處長",
+      "role": "理事",
+      "jobs": [
+        [
+          "仁寶電腦",
+          "投資人關係部 副處長"
+        ]
+      ],
+      "photo": "../images/board-2026-tina-chang.jpg"
+    },
+    "en": {
+      "name": "Tina Chang",
+      "title": "Compal Electronics, Inc. — Deputy Director, Investor Relations",
+      "role": "Directors",
+      "jobs": [
+        [
+          "Compal Electronics, Inc.",
+          "Deputy Director, Investor Relations"
+        ]
+      ],
+      "photo": "../images/board-2026-tina-chang.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "洪健凱",
+      "title": "經寶精密 投資人關係經理",
+      "role": "常務監事",
+      "jobs": [
+        [
+          "經寶精密",
+          "投資人關係經理"
+        ]
+      ],
+      "photo": "../images/board-2026-cash-hong.jpg"
+    },
+    "en": {
+      "name": "Cash Hong",
+      "title": "JPP Holding Company Limited — Investor Relations Specialist",
+      "role": "Executive Supervisor",
+      "jobs": [
+        [
+          "JPP Holding Company Limited",
+          "Investor Relations Specialist"
+        ]
+      ],
+      "photo": "../images/board-2026-cash-hong.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "萬心寧",
+      "title": "台驊國際 總經理暨發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "台驊國際",
+          "總經理暨發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-echo-wan.jpg"
+    },
+    "en": {
+      "name": "Echo Wan",
+      "title": "T3EX Global Holdings Corp. — General Manager and Spokesperson",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "T3EX Global Holdings Corp.",
+          "General Manager and Spokesperson"
+        ]
+      ],
+      "photo": "../images/board-2026-echo-wan.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "呂政達",
+      "title": "威強電 前財務長暨發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "威強電",
+          "前財務長暨發言人"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Jack Lu",
+      "title": "IEI Integration Corp. — Former CFO & Spokesman",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "IEI Integration Corp.",
+          "Former CFO & Spokesman"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "涂蕙蘭",
+      "title": "精英電腦(股) 資深經理暨代理發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "精英電腦(股)",
+          "資深經理暨代理發言人"
+        ]
+      ],
+      "photo": "../images/board-2026-emily-tu.jpg"
+    },
+    "en": {
+      "name": "Emily Tu",
+      "title": "Elitegroup Computer Systems — Deputy Spokesman & Senior Manager",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "Elitegroup Computer Systems",
+          "Deputy Spokesman & Senior Manager"
+        ]
+      ],
+      "photo": "../images/board-2026-emily-tu.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "徐美華",
+      "title": "雅茗天地 投資人關係高級經理暨代理發言人",
+      "role": "監事",
+      "jobs": [
+        [
+          "雅茗天地",
+          "投資人關係高級經理暨代理發言人"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Selina Hsu",
+      "title": "Yummy Town (Cayman) Holdings Corporation — Senior Manager of Investor Relations & Deputy Spokesperson",
+      "role": "Supervisors",
+      "jobs": [
+        [
+          "Yummy Town (Cayman) Holdings Corporation",
+          "Senior Manager of Investor Relations & Deputy Spokesperson"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "余宛如",
+      "title": "前立法委員",
+      "role": "榮譽顧問",
+      "jobs": [
+        [
+          "—",
+          "前立法委員"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Wan-ju Yu",
+      "title": "Former Legislator",
+      "role": "Honorary Advisors",
+      "jobs": [
+        [
+          "—",
+          "Former Legislator"
+        ]
+      ],
+      "photo": null
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "楊朝榮",
+      "title": "中華民國證券分析協會 常務理事及研究發展委員會召集人",
+      "role": "榮譽顧問",
+      "jobs": [
+        [
+          "中華民國證券分析協會",
+          "常務理事及研究發展委員會召集人"
+        ]
+      ],
+      "photo": "../images/board-2026-david-yang.jpg"
+    },
+    "en": {
+      "name": "David Yang",
+      "title": "Securities Analysts Association — Executive Director",
+      "role": "Honorary Advisors",
+      "jobs": [
+        [
+          "Securities Analysts Association",
+          "Executive Director"
+        ]
+      ],
+      "photo": "../images/board-2026-david-yang.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "余凱文",
+      "title": "自 2004 年以來台灣投資人關係的推動者和革新者",
+      "role": "首席顧問",
+      "jobs": [
+        [
+          "—",
+          "自 2004 年以來台灣投資人關係的推動者和革新者"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-yu.jpg"
+    },
+    "en": {
+      "name": "Kevin Yu",
+      "title": "Promoter and innovator of investor relations in Taiwan since 2004",
+      "role": "Chief Advisor",
+      "jobs": [
+        [
+          "—",
+          "Promoter and innovator of investor relations in Taiwan since 2004"
+        ]
+      ],
+      "photo": "../images/board-2026-kevin-yu.jpg"
+    }
+  },
+  {
+    "term": "2018",
+    "zh": {
+      "name": "邱榮振",
+      "title": "秘書長",
+      "role": "秘書處",
+      "jobs": [
+        [
+          "—",
+          "秘書長"
+        ]
+      ],
+      "photo": null
+    },
+    "en": {
+      "name": "Jonathan",
+      "title": "Secretary General",
+      "role": "Secretariat",
+      "jobs": [
+        [
+          "—",
+          "Secretary General"
+        ]
+      ],
+      "photo": null
+    }
+  }
+]

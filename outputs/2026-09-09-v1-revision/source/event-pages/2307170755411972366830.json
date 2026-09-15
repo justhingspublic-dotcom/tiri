@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2307170755411972366830",
+  "local_label": "09.14 2023 台灣企業併購實務 董監進修課程 線上 →",
+  "id": "2307170755411972366830",
+  "source_title": "9/14（四）【TIRI線上董事、公司治理主管進修課程】台灣企業併購實務｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2308070155494701573000.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "9/14（四）【TIRI線上董事、公司治理主管進修課程】台灣企業併購實務",
+      "image": "https://static.accupass.com/eventbanner/2308070155494701573000.jpg",
+      "startDate": "2023-09-14T14:00:00+08:00",
+      "endDate": "2023-09-14T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "學習台灣企業併購實務，瞭解併購類型、惡意併購分析及企業經營權保衛戰實務。掌握併購法律法規、策略及案例，培養在併購環境下的企業決策能力與風險評估技巧。",
+      "performer": {
+        "@type": "Person",
+        "name": "王恩國"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2307170755411972366830.jpg"
+}

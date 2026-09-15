@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2601210508461951179754",
+  "local_label": "03.06 2026 公司治理與新版ESG評鑑之因應 董監進修課程 線上 →",
+  "id": "2601210508461951179754",
+  "source_title": "03/06【TIRI線上董事、公司治理主管進修課程】公司治理與新版ESG評鑑之因應｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2601210629435391175470.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "03/06【TIRI線上董事、公司治理主管進修課程】公司治理與新版ESG評鑑之因應",
+      "image": "https://static.accupass.com/eventbanner/2601210629435391175470.jpg",
+      "startDate": "2026-03-06T14:00:00+08:00",
+      "endDate": "2026-03-06T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "在瞬息萬變的商業環境中，良好的公司治理與永續策略已成為企業競爭力的關鍵。本課程將帶您深入理解公司治理的核心理念、架構與演進，並聚焦新版 ESG 評鑑的實務因應策略。\n\n課程同時涵蓋環境、社會及治理三大面向，並結合永續發展行動方案，協助企業打造可落實的治理與永續管理體系，提升董事會決策效能，掌握企業永續發展的先機。",
+      "performer": {
+        "@type": "Person",
+        "name": "李俊德"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2601210508461951179754.jpg"
+}

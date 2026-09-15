@@ -1,0 +1,33 @@
+PASS Existing form fields preserved
+PASS All supplied workbook sheets inventoried
+PASS Historic board members retained in both languages
+PASS board.html historic table structure
+PASS board_en.html historic table structure
+PASS 證照委員會 names and navigation
+PASS 獎項委員會 names and navigation
+PASS 專業委員會 names and navigation
+PASS 媒體委員會 names and navigation
+PASS 推廣委員會 names and navigation
+PASS Home section sequence
+PASS Home excludes courses from events
+PASS Home ten partner links
+PASS Course brochure has eight current subjects
+PASS Event history covers 2018–2026 with 153 records
+PASS Accupass banners link to matching event ID
+PASS Four evaluation steps
+PASS Six governance steps
+PASS Five Awards panels
+PASS Progress 2025 ten winners / 2026 twenty nominees
+PASS TIRIC single local video and real recap year
+PASS All 27 articles have images and unique targets
+PASS Local article card titles match destination headings
+PASS 5th_report-516844.html three correct language covers
+PASS PDF tiri-annual-2025-7th-zh.pdf
+PASS PDF tiri-annual-2024-6th-zh.pdf
+PASS PDF tiri-annual-2023-5th-zh.pdf
+PASS 5th_report-665763.html three correct language covers
+PASS PDF tiri-annual-2025-7th-en.pdf
+PASS PDF tiri-annual-2024-6th-en.pdf
+PASS PDF tiri-annual-2023-5th-en.pdf
+PASS v1 static references
+Local anchor issues: 1 (see source/anchor-audit.json)

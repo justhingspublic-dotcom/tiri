@@ -1,0 +1,60 @@
+{
+  "url": "https://www.accupass.com/event/2506060905071342609716",
+  "local_label": "06.24 2025 全球永續價值鏈論壇：供應鏈淨零的策略與實踐 活動 台北 →",
+  "id": "2506060905071342609716",
+  "source_title": "06/24（二）全球永續價值鏈論壇：供應鏈淨零的策略與實踐｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2506110258081319798952.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "06/24（二）全球永續價值鏈論壇：供應鏈淨零的策略與實踐",
+      "image": "https://static.accupass.com/eventbanner/2506110258081319798952.jpg",
+      "startDate": "2025-06-24T13:30:00+08:00",
+      "endDate": "2025-06-24T16:30:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "本次論壇聚焦「全球供應鏈永續發展趨勢」，透過開場引言剖析國際趨勢與挑戰，並邀請產業先行者分享實際減碳策略與IFRS S1/S2準則的導入經驗，深入探討標準如何轉化為企業日常營運的具體行動。此外，高峰對談將匯聚不同領域觀點，探討跨產業合作推動供應鏈淨零、循環經濟如何融入價值鏈管理，以及永續策略如何兼顧環境與商業韌性。這場聚焦實踐與落地的交流平臺，將是您掌握永續供應鏈未來趨勢、尋求轉型靈感與策略夥伴的重要契機。讓我們在挑戰中尋找突破，共同邁向淨零永續的新篇章。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "郭宗霖"
+        },
+        {
+          "@type": "Person",
+          "name": "洪榮聰"
+        },
+        {
+          "@type": "Person",
+          "name": "陳沛銘"
+        },
+        {
+          "@type": "Person",
+          "name": "Edoardo AUTERI"
+        },
+        {
+          "@type": "Person",
+          "name": "高宜凡"
+        },
+        {
+          "@type": "Person",
+          "name": "熊毅晰"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市大安區金華街187號",
+        "name": "政大公企中心 10樓 A1034室"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2506060905071342609716.jpg"
+}

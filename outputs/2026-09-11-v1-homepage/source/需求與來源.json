@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-09-11T02:43:14.822554+00:00",
+  "request": "昨天討論的首頁內容變少，banner圖可以幫我作為輪播方式，呈現首頁圖+董監事課程圖+績效評估圖，謝謝。\n另外首頁的聯絡我們，請增加google 地圖喔！",
+  "images": [
+    {
+      "path": "v1/images/event-2025-conference-official.jpg",
+      "sha256": "728625fed334aee1d7771311bf297545740a9d96ac31874e537ef8c187d82c36"
+    },
+    {
+      "path": "v1/images/review-r5/board-training-collage-nine.png",
+      "sha256": "1daa3b613839f4775178f70381db689fd4b3599d43073cc322a3c61a026c5b64"
+    },
+    {
+      "path": "v1/images/review-r2/business-team.jpg",
+      "sha256": "78a4ab5915de88cee4d404f7b0efad2e1e790b92a4cc3d06c9ea0ec3d89164ac"
+    }
+  ],
+  "addressSource": "https://www.tiri.tw/html/contact.html",
+  "address": "台北市中正區重慶南路一段57號13樓之13",
+  "mapCoordinatesSource": "v1/html/contact.html",
+  "coordinates": [
+    25.0446169,
+    121.513388
+  ],
+  "scope": "首頁三張輪播及首頁聯絡資訊地圖。績效評估沿用目前頁面圖片，第 23 項正式 Banner 補件狀態保留。"
+}

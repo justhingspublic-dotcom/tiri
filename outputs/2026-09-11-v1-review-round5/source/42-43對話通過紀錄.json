@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-09-11T03:27:24.568461+00:00",
+  "source": "conversation",
+  "userMessage": "ｏk以上兩點複檢通過",
+  "acceptedItems": [
+    {
+      "id": "42",
+      "title": "首頁三張 Banner 輪播",
+      "deliveryRevision": "20260911-home2"
+    },
+    {
+      "id": "43",
+      "title": "首頁聯絡我們加入 Google 地圖",
+      "deliveryRevision": "20260911-home1"
+    }
+  ],
+  "counts": {
+    "accepted": 39,
+    "ready": 0,
+    "waiting": 4
+  }
+}

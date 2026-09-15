@@ -1,0 +1,1198 @@
+[
+  {
+    "file": "ref/官網/新官網-資料/文件/0天+地的內容/天+地的內容.xlsx",
+    "sha256": "fdfb7a933c815792b9b6e26d035e8e63d67317aa126b84a884c067d248371386",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "搜尋"
+          },
+          {
+            "ref": "B1",
+            "value": "FB"
+          },
+          {
+            "ref": "C1",
+            "value": "領英"
+          },
+          {
+            "ref": "D1",
+            "value": "LINE"
+          },
+          {
+            "ref": "E1",
+            "value": "YU"
+          },
+          {
+            "ref": "F1",
+            "value": "信箱"
+          },
+          {
+            "ref": "G1",
+            "value": "中英文切換"
+          },
+          {
+            "ref": "A3",
+            "value": "TIRI LOGO"
+          },
+          {
+            "ref": "B3",
+            "value": "關於TIRI"
+          },
+          {
+            "ref": "C3",
+            "value": "活動訊息"
+          },
+          {
+            "ref": "D3",
+            "value": "課程與服務"
+          },
+          {
+            "ref": "E3",
+            "value": "證照獎項"
+          },
+          {
+            "ref": "F3",
+            "value": "專業分享"
+          },
+          {
+            "ref": "G3",
+            "value": "會員服務"
+          },
+          {
+            "ref": "H3",
+            "value": "年刊下載"
+          },
+          {
+            "ref": "I3",
+            "value": "會員登入"
+          },
+          {
+            "ref": "A6",
+            "value": "TIRI LOGO"
+          },
+          {
+            "ref": "B6",
+            "value": "關於TIRI"
+          },
+          {
+            "ref": "C6",
+            "value": "相關資訊"
+          },
+          {
+            "ref": "D6",
+            "value": "會員服務"
+          },
+          {
+            "ref": "A7",
+            "value": "電話、地址、mail"
+          },
+          {
+            "ref": "B7",
+            "value": "協會簡介"
+          },
+          {
+            "ref": "C7",
+            "value": "活動訊息"
+          },
+          {
+            "ref": "D7",
+            "value": "加入會員"
+          },
+          {
+            "ref": "B8",
+            "value": "理監事成員"
+          },
+          {
+            "ref": "C8",
+            "value": "課程與服務"
+          },
+          {
+            "ref": "D8",
+            "value": "會員專屬優惠"
+          },
+          {
+            "ref": "A9",
+            "value": "聯絡TIRI"
+          },
+          {
+            "ref": "B9",
+            "value": "功能委員會"
+          },
+          {
+            "ref": "C9",
+            "value": "證照獎項"
+          },
+          {
+            "ref": "A10",
+            "value": "加入會員"
+          },
+          {
+            "ref": "C10",
+            "value": "專業分享"
+          },
+          {
+            "ref": "A13",
+            "value": "聯絡TIRI請參考網址: https://www.teeia.org.tw/tw/contact"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/1首頁/首頁內容.xlsx",
+    "sha256": "dc2371b5fba973ebdb91e8daaff7e30d4d05fcd13c8464ee9710b00fe71951c1",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "全球IR連結"
+          },
+          {
+            "ref": "B1",
+            "value": "會員數"
+          },
+          {
+            "ref": "C1",
+            "value": "董事會評估"
+          },
+          {
+            "ref": "D1",
+            "value": "課程講座"
+          },
+          {
+            "ref": "A2",
+            "value": "16國"
+          },
+          {
+            "ref": "B2",
+            "value": "369+人"
+          },
+          {
+            "ref": "C2",
+            "value": "230+家"
+          },
+          {
+            "ref": "D2",
+            "value": "6300+場"
+          },
+          {
+            "ref": "A10",
+            "value": "活動訊息"
+          },
+          {
+            "ref": "A11",
+            "value": "線上課程"
+          },
+          {
+            "ref": "A12",
+            "value": "合作夥伴"
+          },
+          {
+            "ref": "A16",
+            "value": "參考網站 : https://www.teeia.org.tw/tw"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": [
+          {
+            "file": "workbook-media/02/image1.png",
+            "row_1based": 4,
+            "col_1based": 1
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "part": "xl/media/image1.png",
+        "file": "workbook-media/02/image1.png"
+      }
+    ]
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/2關於TIRI/1協會簡介/簡介.xlsx",
+    "sha256": "23ffe5f3f7f9a43f90033e8d5186dd852a98728d52a756bf3f30cacb75df160c",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "法定名稱\n社團法人台灣投資人關係協會\n統一編號：72976985\n創會緣起\n1962年臺灣證券交易所正式開業，台灣資本市場發展至今已逾60年。台灣投資人關係協會由一群資本市場的有志之士共同成立，致力代表台灣與全球資本市場接軌，同時提升IR從業人員之專業與地位，改善現況！\n成立宗旨\nTIRI 台灣投資人關係協會 (Taiwan Investor Relations Institute)\n是專為台灣上市櫃、興櫃、公開發行、創櫃公司，負責經營團隊、股東、證券分析師、資本市場和主管機關之間溝通的企業經理人而設的專業協會，致力推進台灣投資人關係的實踐及其成員的專業能力和地位，並加強與國際資本市場接軌。"
+          },
+          {
+            "ref": "B2",
+            "value": "Objectives\nTaiwan Investor Relations Institute (TIRI) was established to serve as a communication platform for the management teams, shareholders, securities analysts, capital markets, and governing agencies that work with listed companies at stock exchanges, over-the-counter markets, and emerging markets, as well as companies planning public offerings and non-public innovative companies. We seek to advance investor relations in Taiwan and the professional capacity and positioning of our members, and international capital market communication."
+          },
+          {
+            "ref": "A4",
+            "value": "任務與核心願景\n本協會致力於建立台灣資本市場、上市櫃公司、國內外投資機構與主管機關的專業交流平台。我們以「提升台灣投資人關係（IR）專業水準、促進資本市場雙向溝通」為核心，積極推動 IR 實務交流、人才培育與公司治理，並致力協助台灣企業接軌國際資本市場，提升企業價值與全球能見度，共創資本市場榮景。"
+          },
+          {
+            "ref": "A6",
+            "value": "專業培訓與人才發展\n我們提供完善的職涯與專業技能支持體系，助力資本市場人才升級。\n\n專業培訓課程：針對資本市場動態、ESG 永續發展與 IR 實務需求，規劃董監事及 IR 從業人員進修課程。\n專業考試與證照：推動投資人關係（IR）專業認證機制，提升從業人員的專業價值與國際公信力。\n就業指導中心：媒合上市櫃公司 IR 與財務人才需求，提供會員企業優質的招募管道與求職者職涯輔導。"
+          },
+          {
+            "ref": "A8",
+            "value": "專業交流與資本市場拓展\n透過豐富的實體與線上活動，活絡企業與投資圈網絡，極大化企業價值。\n\n跨界交流平台：定期舉辦分區月會、IR 實務座談會及多元會員交流活動，串聯全台 IR 專業人士。\n年度大會暨評鑑：召開年度大會及 IR 專業研討會，並舉辦「IR 大獎 (IR Awards)」等年度評鑑與頒獎典禮，表揚投資人關係卓越之企業與個人。\n國外交流：組團參與國際 IR 組織活動交流，協助企業拓展海外投資人網絡與國際商機。"
+          },
+          {
+            "ref": "A10",
+            "value": "知識智庫與資源共享\n匯集資本市場最新動態與法規資訊，作為會員決策與實務操作的堅實後盾。\n\n年報、出版物及電子報：發行協會年報、IR 專業出版物及電子報，提供即時法規動態與市場資訊。\n雲端知識庫：整合國內外 IR 最佳實務與相關產品服務資源，讓會員隨時掌握關鍵知識。"
+          },
+          {
+            "ref": "A12",
+            "value": "配合主管機關推動之交流服務\n本協會期許成為上市櫃公司與主管機關（如金管會、證交所、櫃買中心等）間的良性溝通平台，協助傳遞業界實務經驗，共同促進台灣資本市場的穩健發展：\n\n協助政策宣導與推廣：配合主管機關推動資本市場新制與公司治理藍圖，協助辦理相關宣導活動，鼓勵會員企業落實法規要求，共同提升市場資訊透明度。\n\n促進實務交流與對話：配合資本市場發展脈動，適時舉辦座談會與研討會，邀請主管機關代表蒞臨指導。透過業界的實務經驗分享，增進公私部門間的理解與雙向互動。\n\n彙整實務洞察提供參考：透過定期的 IR 與資本市場相關調查，客觀彙整上市櫃公司在實務運作上的現況與市場回饋，期能作為主管機關未來規劃相關配套措施時的實務參考資訊。"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "工作表2",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A3",
+            "value": "參考網址 : https://www.teeia.org.tw/tw/about/introduction"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/2關於TIRI/2理監事成員/理監事成員.xlsx",
+    "sha256": "10f804d0d9e7131927567cb4ba0037cb68328bdac664d6f96c7a62054ed4e205",
+    "sheets": [
+      {
+        "name": "第一屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/team2018.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "第二屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A3",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A4",
+            "value": "https://www.tiri.tw/html/team2022.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A4",
+            "target": "https://www.tiri.tw/html/team2022.html"
+          }
+        ],
+        "images": []
+      },
+      {
+        "name": "第三屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/team2026.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "參考網站",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "https://www.teeia.org.tw/tw/about/supervisor"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A2",
+            "target": "https://www.teeia.org.tw/tw/about/supervisor"
+          }
+        ],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/2關於TIRI/3功能委員會/委員會.xlsx",
+    "sha256": "c37ae28283f470e531e66434736bede2d19537a88181be1594c3b8eb855234b2",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/committee.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "工作表2",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A3",
+            "value": "參考網站: https://www.teeia.org.tw/tw/about/committee"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/2關於TIRI/4鄧白氏企業認證™雙標章/鄧白氏雙標章.xlsx",
+    "sha256": "09e7130beaacd82c31e49371fcd66c516d46fa68fbb04a6ff53ebcecba24361e",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/certificate.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/3活動訊息/1最新消息/消息活動.xlsx",
+    "sha256": "861944dfe8b4dacef10a384678bc4268520608df727890926eff4ec34e129d16",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "時間"
+          },
+          {
+            "ref": "B1",
+            "value": "活動名稱"
+          },
+          {
+            "ref": "C1",
+            "value": "內容介紹"
+          },
+          {
+            "ref": "A2",
+            "value": "2026.10.16"
+          },
+          {
+            "ref": "B2",
+            "value": "2026 年度大會暨 IR新溝通時代"
+          },
+          {
+            "ref": "C2",
+            "value": "邁入2026年，TIRI 將以「IR 新溝通時代」為大會主題，呼應股東行動主義、散戶影響力提升與 AI 帶來的互動變革。本屆大會邀集國內外產官學專家，聚焦「從資訊揭露到價值對話」，期盼攜手企業探討創新溝通策略，深化投資人的長期信任，共創企業長遠價值。"
+          },
+          {
+            "ref": "A5",
+            "value": "TIRI過往活動連結 : https://www.accupass.com/organizer/detail/1905200944211623899120"
+          },
+          {
+            "ref": "A7",
+            "value": "呈現方式可參考 :https://www.teeia.org.tw/tw/news?cate=cate1&page=1"
+          },
+          {
+            "ref": "A8",
+            "value": "https://www.cisanet.org.tw/News?page=1"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/3活動訊息/2活動花絮/精采回顧.xlsx",
+    "sha256": "ad4ad81ec0840212e4376ec8f5518e218735d2edad23b74199f96e8d70eb7197",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "請參照網址:https://www.tiri.tw/html/news-971146.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/news-971146-722067.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/4課程與服務/課程與服務總表.xlsx",
+    "sha256": "b2e50968610645444d51c3ad0260fb3af553fdc10ff7b46c04e30eda39878cd6",
+    "sheets": [
+      {
+        "name": "課程與服務",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "請參照網址https://www.tiri.tw/html/trainbod.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/trainbod-329824.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "B2",
+            "target": "https://www.tiri.tw/html/trainbod-329824.html"
+          }
+        ],
+        "images": []
+      },
+      {
+        "name": "董監事進修課程",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "董監事進修課程"
+          },
+          {
+            "ref": "A2",
+            "value": "可申報上市上櫃公司董事、公司治理主管年度進修時數"
+          },
+          {
+            "ref": "A4",
+            "value": "最新系列課程－線上公開班"
+          },
+          {
+            "ref": "A5",
+            "value": "參照網址https://www.accupass.com/organizer/detail/1905200944211623899120"
+          },
+          {
+            "ref": "A7",
+            "value": "到府授課－企業專班"
+          },
+          {
+            "ref": "A8",
+            "value": "用課程類別分"
+          },
+          {
+            "ref": "A10",
+            "value": "參考網址https://www.tax.com.tw/ClassList.aspx?web=10"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "【課程分享​】會計主管進修班",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/trainbod-384680.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/trainbod-384680-716109.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "董事會績效評估",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/bodperform.html"
+          },
+          {
+            "ref": "A3",
+            "value": "流程圖請重新設計"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "提升公司治理",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/corpperform.html"
+          },
+          {
+            "ref": "A3",
+            "value": "輔導流程圖重新設計"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A2",
+            "target": "https://www.tiri.tw/html/corpperform.html"
+          }
+        ],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/5證照獎項/TIRI Awards獎項/歷年得主名單.xlsx",
+    "sha256": "73fa4312dca9d8a7c30d1a1b3c0c31618e4e193850b9a34c29c3daf35b477a4e",
+    "sheets": [
+      {
+        "name": "2022",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "獲獎名單\n上市巨型股－最佳投資人關係企業 \n台灣積體電路製造股份有限公司\n上市巨型股－最佳投資人關係專業人員\n蘇志凱 處長（台灣積體電路製造股份有限公司）\n上市大型股－最佳投資人關係企業\n創意電子股份有限公司\n上市大型股－最佳投資人關係專業人員\n林新洲 副處長（創意電子股份有限公司）\n上市中小型股－最佳投資人關係企業 \n雲品國際酒店股份有限公司\n上市中小型股－最佳投資人關係專業人員\n張啟訓 總經理特助（尖點科技股份有限公司）\n上櫃大型股－最佳投資人關係企業 \n元太科技工業股份有限公司\n上櫃大型股－最佳投資人關係專業人員\n于紹庭 營運長暨發言人（群聯電子股份有限公司） \n上櫃中小型股－最佳投資人關係企業 \n東生華製藥股份有限公司\n上櫃中小型股－最佳投資人關係專業人員\n共兩位同列最高票\n王鵬程 財務長（擎亞電子股份有限公司）\n黃淑平 經理（東生華製藥股份有限公司）"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "2023",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "獲獎名單"
+          },
+          {
+            "ref": "A2",
+            "value": "上市巨型股－最佳投資人關係企業 \n台灣積體電路製造股份有限公司\n上市巨型股－最佳投資人關係專業人員\n蘇志凱 處長（台灣積體電路製造股份有限公司）"
+          },
+          {
+            "ref": "A3",
+            "value": "上市大型股－最佳投資人關係企業\n矽創電子股份有限公司\n上市大型股－最佳投資人關係專業人員\n黃英記 永續發展處長暨發言人（矽創電子股份有限公司）"
+          },
+          {
+            "ref": "A4",
+            "value": "上市中小型股－最佳投資人關係企業 \n尖點科技股份有限公司\n上市中小型股－最佳投資人關係專業人員\n張啟訓 總經理特助（尖點科技股份有限公司）"
+          },
+          {
+            "ref": "A5",
+            "value": "上櫃大型股－最佳投資人關係企業 \n昇佳電子股份有限公司\n上櫃大型股－最佳投資人關係專業人員\n黃英記 投資人關係資深經理（昇佳電子股份有限公司）"
+          },
+          {
+            "ref": "A6",
+            "value": "上櫃中小型股－最佳投資人關係企業 \n陞達股份有限公司\n上櫃中小型股－最佳投資人關係專業人員\n許詩詮 財務長 (陞達股份有限公司)"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "2024",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "獲獎名單"
+          },
+          {
+            "ref": "A2",
+            "value": "上市巨型股－最佳投資人關係企業 \n台灣積體電路製造股份有限公司\n上市巨型股－最佳投資人關係專業人員\n蘇志凱 處長（台灣積體電路製造股份有限公司）"
+          },
+          {
+            "ref": "A3",
+            "value": "上市大型股－最佳投資人關係企業\n勤誠興業股份有限公司\n上市大型股－最佳投資人關係專業人員\n蔡佩頴 投資人關係經理（勤誠興業股份有限公司）"
+          },
+          {
+            "ref": "A4",
+            "value": "上市中小型股－最佳投資人關係企業 \n順德工業股份有限公司\n上市中小型股－最佳投資人關係專業人員\n陳朝興 副總經理暨發言人（順德工業股份有限公司）"
+          },
+          {
+            "ref": "A5",
+            "value": "上櫃大型股－最佳投資人關係企業 \n萬潤科技股份有限公司\n上櫃大型股－最佳投資人關係專業人員\n盧慧萱 董事長特助暨發言人（萬潤科技股份有限公司）"
+          },
+          {
+            "ref": "A6",
+            "value": "上櫃中小型股－最佳投資人關係企業 \n霹靂國際多媒體股份有限公司\n上櫃中小型股－最佳投資人關係專業人員\n黃文章 董事長 (霹靂國際多媒體股份有限公司)"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "2025",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "獲獎名單"
+          },
+          {
+            "ref": "B1",
+            "value": "潛力進展獎名單"
+          },
+          {
+            "ref": "A2",
+            "value": "上市巨型股－最佳投資人關係企業 \n台達電子工業股份有限公司\n上市巨型股－最佳投資人關係專業人員\n劉致遠 投資人關係經理（台達電子工業股份有限公司）"
+          },
+          {
+            "ref": "B2",
+            "value": "上市中小型股組\n6558\t興能高科技股份有限公司 SYNergy ScienTech Corp.\n5234\t達興材料股份有限公司 Daxin Materials Corporation\n4576\t大銀微系統股份有限公司 HIWIN MIKROSYSTEM CORP.\n8028\t昇陽國際半導體股份有限公司 Phoenix Silicon International Corporation\n2480\t敦陽科技股份有限公司 STARK TECHNOLOGY, INC.\n6183\t關貿網路股份有限公司 TRADE-VAN INFORMATION SERVICES CO.\n6206\t飛捷科技股份有限公司 FLYTECH TECHNOLOGY CO.,LTD."
+          },
+          {
+            "ref": "A3",
+            "value": "上市大型股－最佳投資人關係企業\n勤誠興業股份有限公司\n上市大型股－最佳投資人關係專業人員\n蔡佩頴 投資人關係經理（勤誠興業股份有限公司）"
+          },
+          {
+            "ref": "B3",
+            "value": "上櫃中小型股組\n4971\t英特磊科技股份有限公司 IntelliEPI Inc.\n6728\t上洋產業股份有限公司 UP YOUNG CORNERSTONE CORP.\n3663\t鑫科材料科技股份有限公司 THINTECH MATERIALS TECHNOLOGY CO., LTD."
+          },
+          {
+            "ref": "A4",
+            "value": "上市中小型股－最佳投資人關係企業 \n全新光電科技股份有限公司\n上市中小型股－最佳投資人關係專業人員\n蔣志青 財務處處長（全新光電科技股份有限公司）"
+          },
+          {
+            "ref": "A5",
+            "value": "上櫃大型股－最佳投資人關係企業 \n雙鴻科技股份有限公司\n上櫃大型股－最佳投資人關係專業人員\n陳玉玲 董事長室經理（雙鴻科技股份有限公司）"
+          },
+          {
+            "ref": "A6",
+            "value": "上櫃中小型股－最佳投資人關係企業 \n兆利科技工業股份有限公司\n上櫃中小型股－最佳投資人關係專業人員\n廖奕竣 代理發言人 (兆利科技工業股份有限公司)"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "2026",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "TIRI Awards"
+          },
+          {
+            "ref": "B2",
+            "value": "TIRI Awards"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/mission-206783.html"
+          },
+          {
+            "ref": "B3",
+            "value": "https://www.tiri.tw/html/mission-206783-766399-942925.html"
+          },
+          {
+            "ref": "A6",
+            "value": "TIRI 潛力進展獎"
+          },
+          {
+            "ref": "B6",
+            "value": " TIRI Progress Achievement Award"
+          },
+          {
+            "ref": "A7",
+            "value": "https://www.tiri.tw/html/mission-206783-766399.html"
+          },
+          {
+            "ref": "B7",
+            "value": "https://www.tiri.tw/html/mission-206783-803349.html"
+          },
+          {
+            "ref": "A15",
+            "value": "參照網址  https://justhingspublic-dotcom.github.io/tiri/v1/html/mission-206783.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/5證照獎項/證照獎項.xlsx",
+    "sha256": "eee74876a107cf5b4c0628824dda4fe02604d2df72f1cff75c26f036a1825f7d",
+    "sheets": [
+      {
+        "name": "證照",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/certification.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/certification-388672.html"
+          },
+          {
+            "ref": "A4",
+            "value": "https://www.tiri.tw/html/scholarshipirc.html"
+          },
+          {
+            "ref": "B4",
+            "value": "https://www.tiri.tw/html/scholarshipirc-952540.html"
+          },
+          {
+            "ref": "A6",
+            "value": "TIRIC專業實戰課程"
+          },
+          {
+            "ref": "A7",
+            "value": "https://www.tiri.tw/html/tiric.html"
+          },
+          {
+            "ref": "B7",
+            "value": "https://www.tiri.tw/html/tiric-677070.html"
+          },
+          {
+            "ref": "A9",
+            "value": "2025 TIRIC回顧"
+          },
+          {
+            "ref": "A10",
+            "value": "放照片"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A4",
+            "target": "https://www.tiri.tw/html/scholarshipirc.html"
+          }
+        ],
+        "images": []
+      },
+      {
+        "name": "獎項",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/mission-206783-396345.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/mission-206783-396345-512343.html"
+          },
+          {
+            "ref": "A5",
+            "value": "由於TIRI Aawards今年是第5屆，我要像理監事的頁面那樣呈現，能夠一屆一屆呈現出來"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/6專業分享/知識分享.xlsx",
+    "sha256": "2cbf9779d10eb23891642c86afd7c1c43010139d4f8c9d97a677379dd5ae9f5f",
+    "sheets": [
+      {
+        "name": "知識分享",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/news-387131-325944-831518.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/news-387131-325944-831518-306343.html"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/news-387131-325944.html"
+          },
+          {
+            "ref": "B3",
+            "value": "https://www.tiri.tw/html/news-387131-325944-897961.html"
+          },
+          {
+            "ref": "A4",
+            "value": "https://www.tiri.tw/html/2356035370-277843933339333297022010738263.html"
+          },
+          {
+            "ref": "B4",
+            "value": "https://www.tiri.tw/html/exclusive-interview-ndash-founding-chairman-fu-fu-shen.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "NIRI  IR Update 精選文章",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://www.tiri.tw/html/irupdatestc.html"
+          },
+          {
+            "ref": "B2",
+            "value": "https://www.tiri.tw/html/irupdatestc-146678.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/7會員服務/會員.xlsx",
+    "sha256": "6a41fa5cd2ff2372ab971f968f94b8de022a526a67fea690cba97a460d75bc72",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "中文"
+          },
+          {
+            "ref": "B1",
+            "value": "英文"
+          },
+          {
+            "ref": "A2",
+            "value": "https://justhingspublic-dotcom.github.io/tiri/v1/html/membership.html"
+          },
+          {
+            "ref": "A5",
+            "value": "可參考網站 https://www.teeia.org.tw/tw/member/join?member_join=option2"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "ref/官網/新官網-資料/文件/8年刊下載/歷年年刊.xlsx",
+    "sha256": "cd57099ef664fec2425f021237f73a1feb8e6045cb1e8ed5a78615b5b1c74953",
+    "sheets": [
+      {
+        "name": "工作表1",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A1",
+            "value": "2023"
+          },
+          {
+            "ref": "B1",
+            "value": "https://drive.google.com/drive/folders/1lSHJdtQ1P1z1Uk5RDTihK3cIlSNMrXfB?usp=sharing"
+          },
+          {
+            "ref": "A2",
+            "value": "2024"
+          },
+          {
+            "ref": "B2",
+            "value": "https://drive.google.com/drive/folders/1ZRbGzwg4IOPPMnIDZHqhyH4gK1ACfxMG?usp=drive_link"
+          },
+          {
+            "ref": "A3",
+            "value": "2025"
+          },
+          {
+            "ref": "B3",
+            "value": "https://drive.google.com/drive/folders/1R1QOeNYyv3NC4yEmvvNMVB_m_TuNf_5f?usp=drive_link"
+          },
+          {
+            "ref": "A4",
+            "value": "2026"
+          },
+          {
+            "ref": "A6",
+            "value": "參考網站 https://www.collins.com.tw/pages/39/%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A%E6%9B%B8/%E6%B0%B8%E7%BA%8C%E5%A0%B1%E5%91%8A"
+          },
+          {
+            "ref": "A7",
+            "value": "https://www.chenbro.com/zh-TW/sustainability-report"
+          },
+          {
+            "ref": "A8",
+            "value": "https://www.esunfhc.com/zh-tw/esg/resource-center/report"
+          },
+          {
+            "ref": "A9",
+            "value": "https://ir.ctbcholding.com/c/index"
+          },
+          {
+            "ref": "A10",
+            "value": "點開就能在網站上觀看檔案"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      }
+    ],
+    "media": []
+  },
+  {
+    "file": "WEB DEMO/2理監事成員/理監事成員.xlsx",
+    "sha256": "10f804d0d9e7131927567cb4ba0037cb68328bdac664d6f96c7a62054ed4e205",
+    "sheets": [
+      {
+        "name": "第一屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/team2018.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "第二屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A3",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A4",
+            "value": "https://www.tiri.tw/html/team2022.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A4",
+            "target": "https://www.tiri.tw/html/team2022.html"
+          }
+        ],
+        "images": []
+      },
+      {
+        "name": "第三屆",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "內容請參照以下網址"
+          },
+          {
+            "ref": "A3",
+            "value": "https://www.tiri.tw/html/team2026.html"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [],
+        "images": []
+      },
+      {
+        "name": "參考網站",
+        "state": "visible",
+        "cells": [
+          {
+            "ref": "A2",
+            "value": "https://www.teeia.org.tw/tw/about/supervisor"
+          }
+        ],
+        "merged_ranges": [],
+        "hyperlinks": [
+          {
+            "ref": "A2",
+            "target": "https://www.teeia.org.tw/tw/about/supervisor"
+          }
+        ],
+        "images": []
+      }
+    ],
+    "media": []
+  }
+]

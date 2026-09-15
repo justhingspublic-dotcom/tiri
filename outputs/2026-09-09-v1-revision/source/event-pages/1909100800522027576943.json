@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/1909100800522027576943",
+  "local_label": "10.17 2019 藝術品欣賞與投資講座 講座 台北 →",
+  "id": "1909100800522027576943",
+  "source_title": "藝術品欣賞與投資講座｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/1909201005581472126348.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "藝術品欣賞與投資講座",
+      "image": "https://static.accupass.com/eventbanner/1909201005581472126348.jpg",
+      "startDate": "2019-10-17T19:00:00+08:00",
+      "endDate": "2019-10-17T21:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "內行看門道，外行看熱鬧～\n\n第26屆「ART TAIPEI 2019台北國際藝術博覽會」網羅世界各地超過141家畫廊作品。TIRI 台灣投資人關係協會與 TAGA中華民國畫廊協會特別藉會前的「VIP貴賓預展」，由畫廊協會秘書長介紹藝博會及藝術投資、看展門道，並由專業導覽員為您講解、介紹會場展品。\n\n不僅帶您走入藝術的世界，更透過藝術品與投資的結合，激發出更多商業價值及連結。",
+      "performer": {
+        "@type": "Person",
+        "name": "游文玫博士"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市信義區信義路五段5號",
+        "name": "集合地點：台北世貿一館信義路入口，請務必於18:55前抵達"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/1909100800522027576943.jpg"
+}

@@ -1,0 +1,43 @@
+{
+  "url": "https://www.accupass.com/event/2407241444021130384205",
+  "local_label": "11.15 2024 日本企業が台湾に投資する際に注意すべき法律・税金問題 董監進修・日本語 線上 →",
+  "id": "2407241444021130384205",
+  "source_title": "11/15【TIRI 取締役ー講座（オンライン）】日本企業が台湾に投資する際に注意すべき法律・税金問題｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2407300941471211761106.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "11/15【TIRI 取締役ー講座（オンライン）】日本企業が台湾に投資する際に注意すべき法律・税金問題",
+      "image": "https://static.accupass.com/eventbanner/2407300941471211761106.jpg",
+      "startDate": "2024-11-15T13:00:00+08:00",
+      "endDate": "2024-11-15T16:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "日本企業が台湾に投資する際に注意すべき法律や税金問題には、外国投資法、税務協定、労働法、環境規制などが含まれます。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "周泰維(シュウ タイイ)"
+        },
+        {
+          "@type": "Person",
+          "name": "黃若清(コウジャクセイ)"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2407241444021130384205.jpg"
+}

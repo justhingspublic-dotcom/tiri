@@ -1,0 +1,38 @@
+{
+  "url": "https://www.accupass.com/event/2307270250021793452460",
+  "local_label": "09.17 2023 企業金融好夥伴 - 全國農業金庫的企金和農貸 活動 台中 →",
+  "id": "2307270250021793452460",
+  "source_title": "9/17（日）【台中場 主題餐會】企業金融好夥伴 - 全國農業金庫的企金和農貸｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2308020227052031629200.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "9/17（日）【台中場 主題餐會】企業金融好夥伴 - 全國農業金庫的企金和農貸",
+      "image": "https://static.accupass.com/eventbanner/2308020227052031629200.jpg",
+      "startDate": "2023-09-17T18:30:00+08:00",
+      "endDate": "2023-09-17T21:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "探討全國農業金庫作為企業金融夥伴所提供的優勢和價值，為企業量身打造的創新金融解決方案，如何透過靈活的農貸政策，創新的金融產品和專業服務，幫助企業實現資金高效運用，為您的企業發展持續注入活力!",
+      "performer": {
+        "@type": "Person",
+        "name": "吳明敏"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台中市408南屯區環中路四段2號",
+        "name": "潮港城國際美食館"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2307270250021793452460.jpg"
+}

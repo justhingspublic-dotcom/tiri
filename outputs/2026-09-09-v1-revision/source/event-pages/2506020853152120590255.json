@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2506020853152120590255",
+  "local_label": "07.25 2025 企業的社會影響力：從觀念到行動 董監進修課程 線上 →",
+  "id": "2506020853152120590255",
+  "source_title": "07/25【TIRI線上董事、公司治理主管進修課程】企業的社會影響力：從觀念到行動｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2507030532278446394200.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "07/25【TIRI線上董事、公司治理主管進修課程】企業的社會影響力：從觀念到行動",
+      "image": "https://static.accupass.com/eventbanner/2507030532278446394200.jpg",
+      "startDate": "2025-07-25T14:00:00+08:00",
+      "endDate": "2025-07-25T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "無論您是企業領導者、永續發展主管、品牌經理或 IR/CSR 專業人員，本課程都將協助您從觀念躍升至行動，共創企業與社會的雙贏未來。",
+      "performer": {
+        "@type": "Person",
+        "name": "戚衛欣"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2506020853152120590255.jpg"
+}

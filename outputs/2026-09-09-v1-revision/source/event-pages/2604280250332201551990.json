@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2604280250332201551990",
+  "local_label": "08.07 2026 AI 時代的領導人影響力建構：從個人聲量到全球信任資產 董監進修課程 線上 →",
+  "id": "2604280250332201551990",
+  "source_title": "08/07【TIRI線上董事、公司治理主管進修課程】AI 時代的領導人影響力建構：從個人聲量到全球信任資產｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2605120936098565706520.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "08/07【TIRI線上董事、公司治理主管進修課程】AI 時代的領導人影響力建構：從個人聲量到全球信任資產",
+      "image": "https://static.accupass.com/eventbanner/2605120936098565706520.jpg",
+      "startDate": "2026-08-07T14:00:00+08:00",
+      "endDate": "2026-08-07T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "課程將結合領導人 IP 戰略、全球資訊場域布局、AI 可讀取內容建構，以及企業聲譽治理思維，協助董事會、高階主管與品牌決策者，打造兼具國際能見度與市場信任度的領導人影響力體系。透過系統化策略與前瞻視角，讓企業不只是被看見，更能被全球市場持續信任與選擇。",
+      "performer": {
+        "@type": "Person",
+        "name": "Harry Hsu 許復"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2604280250332201551990.jpg"
+}

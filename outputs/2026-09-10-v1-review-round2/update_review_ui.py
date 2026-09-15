@@ -1,0 +1,33 @@
+from pathlib import Path
+p=Path(__file__).resolve().parent
+f=p/'recheck.js';s=f.read_text()
+s=s.replace("first-review' : 'not-reviewed'","first-recheck' : 'not-reviewed'")
+s=s.replace("accepted:'第一輪已通過', ready:'可複檢'","accepted:'此前已通過', partial:'部分完成・可先檢查', ready:'可複檢'")
+s=s.replace("item.firstReview.note, records[item.id]?.note", "item.firstReview.note, item.previousRecheck.note, records[item.id]?.note")
+s=s.replace("${item.currentChange ? '這次已實際修改的內容'", "${item.reviewStatus === 'accepted' ? '此前已完成並通過的內容' : item.currentChange ? '這次已實際修改的內容'")
+s=s.replace("${item.assistantExplanation ?", "${item.assistantResponse ? `<section class=\"explanation\"><h3>這次我的回覆</h3><p>${escapeText(item.assistantResponse)}</p></section>` : ''}${item.previousRecheck.note ? `<section class=\"original\"><h3>你第一輪複檢的留言</h3><blockquote>${escapeText(item.previousRecheck.note)}</blockquote></section>` : ''}<details class=\"prior-work\"><summary>第一輪複檢交付與確認紀錄</summary><p>${escapeText(item.reviewHistory[1].deliveredChange || '沿用第一輪已交付內容')}</p><p>${escapeText(item.reviewHistory[1].check || '')}</p><p>你的確認：${item.previousRecheck.confirmed ? '已通過' : '尚未通過'}</p>${item.reviewHistory[1].deliveryLimit ? `<p>當時保留事項：${escapeText(item.reviewHistory[1].deliveryLimit)}</p>` : ''}</details>${item.assistantExplanation ?",1)
+s=s.replace('沿用你第一輪的確認','沿用你這次匯出的通過紀錄')
+s=s.replace('你第一輪的原留言','你第一輪驗收的原留言')
+s=s.replace('上一輪完成內容與檢查紀錄','最初交付內容與檢查紀錄')
+s=s.replace('18 項第一輪已通過紀錄完整保留。','${acceptedIds.length} 項此前已通過紀錄完整保留。')
+start=s.index("  $('delivery-notice').textContent =")
+end=s.index("\n  document.querySelectorAll('[data-filter]')",start)
+s=s[:start]+"  const partialCount = items.filter(item => item.deliveryStatus === 'partial').length;\n  $('delivery-notice').textContent = `${readyCount} 項已實際修改、可複檢${partialCount ? `；${partialCount} 項部分完成，限制已寫在卡片內` : ''}。${acceptedIds.length} 項已通過紀錄與歷次留言完整保留；${waitingItems.length} 項仍等資料。`;"+s[end:]
+s=s.replace('firstReview:item.firstReview, partialApproval:item.partialApproval,','firstReview:item.firstReview, partialApproval:item.partialApproval,\n        previousRecheck:item.previousRecheck, reviewHistory:item.reviewHistory, assistantResponse:item.assistantResponse, dependency:item.dependency,')
+s=s.replace('TIRI-v1-第一輪複檢結果.json','TIRI-v1-第二輪複檢結果.json')
+s=s.replace('原始第一輪驗收已經帶入','第一輪複檢結果已經帶入')
+s=s.replace('version:data.version, sourceVersion:data.sourceVersion,','version:data.version, round:2, sourceVersion:data.sourceVersion,')
+f.write_text(s)
+f=p/'recheck.template.html';s=f.read_text().replace('第一輪複檢','第二輪複檢').replace('REVIEW / 01','REVIEW / 02').replace('20260910-r2-actual','20260910-r3-round2')
+s=s.replace('第一輪已通過','此前已通過').replace('>18<','>11<')
+s=s.replace('<strong id="accepted">11</strong>','<strong id="accepted">25</strong>').replace('原已通過 <span>11</span>','原已通過 <span>25</span>')
+s=s.replace('18 項已實際更新到 v1；各項列出本輪修改、檢查方式與保留事項。','本輪修改與先前通過紀錄都已整理。')
+s=s.replace('41 項完整保留：已完成的內容、你的原留言、我的回覆與修改方向，都能在這裡對照、打勾和補充意見。','依你第一輪複檢結果再次修改。41 項完整保留，25 項沿用通過；這次新意見、實際改動與歷次回覆都可對照。')
+s=s.replace('原本通過的項目與舊留言會保留。29 已加上播放前封面；05 已套用新 Logo，這次可重新檢查。勾選只代表通過本輪明列的修改，缺少的原素材仍保留在清單。','第二輪的勾選獨立保存，不會覆蓋第一輪。原已通過 25 項預先勾選；11 項需要你再次檢查。部分完成項目請先閱讀保留事項，勾選只代表認可本輪明列的交付內容。')
+start=s.index('<div class="footer-links">');end=s.index('</div></footer>',start)
+s=s[:start]+'<div class="footer-links"><a href="本輪修改紀錄.md" target="_blank" rel="noopener">本輪修改紀錄 ↗</a><a href="圖片來源與處理紀錄.md" target="_blank" rel="noopener">圖片來源與處理 ↗</a><a href="../2026-09-10-v1-review-round1/第一輪複檢.html" target="_blank" rel="noopener">第一輪複檢頁 ↗</a><a href="../2026-09-09-v1-revision/驗收入口.html" target="_blank" rel="noopener">最初驗收頁 ↗</a><a href="開啟複檢.command" download>下載本機開啟捷徑</a>'+s[end:]
+f.write_text(s)
+for n in ['launch_review.py','開啟複檢.command']:
+ f=p/n;f.write_text(f.read_text().replace('2026-09-10-v1-review-round1','2026-09-10-v1-review-round2').replace('第一輪複檢.html','第二輪複檢.html'))
+with (p/'recheck.css').open('a') as f:f.write('\n.badge.partial{background:#fff0d7;color:#785313}.original blockquote{white-space:pre-wrap}.explanation p,.action-text,.current-check p{white-space:pre-line}\n')
+print('Updated second recheck UI and history export.')

@@ -1,0 +1,52 @@
+{
+  "url": "https://www.accupass.com/event/2002050259022213300450",
+  "local_label": "03.24 2020 透過媒體及資本市場打造企業價值（已取消） 活動 台北 →",
+  "id": "2002050259022213300450",
+  "source_title": "透過媒體及資本市場打造企業價值（已取消）｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2002170351217573933970.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "透過媒體及資本市場打造企業價值（已取消）",
+      "image": "https://static.accupass.com/eventbanner/2002170351217573933970.jpg",
+      "startDate": "2020-03-24T09:30:00+08:00",
+      "endDate": "2020-03-25T16:30:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "企業經營除腳踏實地做好本業，若能妥善利用資本市場及媒體借力使力，可讓企業成長事半功倍。然許多企業因不了解故敬而遠之，錯失透過資本市場資源擴大營運或度過危機的機會；也可能在需要媒體力量化解誤會或行銷宣傳時乏人問津，徒呼負負。",
+      "performer": [
+        {
+          "@type": "Person",
+          "name": "胡恒士"
+        },
+        {
+          "@type": "Person",
+          "name": "莊正賢"
+        },
+        {
+          "@type": "Person",
+          "name": "張志暉"
+        },
+        {
+          "@type": "Person",
+          "name": "郭宗霖"
+        }
+      ],
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區民生東路4段54號5樓",
+        "name": "華南永昌綜合證券教室"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2002050259022213300450.jpg"
+}

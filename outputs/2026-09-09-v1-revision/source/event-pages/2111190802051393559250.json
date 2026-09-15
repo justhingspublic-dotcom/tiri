@@ -1,0 +1,34 @@
+{
+  "url": "https://www.accupass.com/event/2111190802051393559250",
+  "local_label": "01.18 2022 企業如何執行低碳ESG轉型計畫？ 講座 台北 →",
+  "id": "2111190802051393559250",
+  "source_title": "【ESG實務講座】企業如何執行低碳ESG轉型計畫？｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2201140620418853741530.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "【ESG實務講座】企業如何執行低碳ESG轉型計畫？",
+      "image": "https://static.accupass.com/eventbanner/2201140620418853741530.jpg",
+      "startDate": "2022-01-18T14:00:00+08:00",
+      "endDate": "2022-01-18T16:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "description": "TIRI 台灣投資人關係協會經證券交易所及櫃買中心核准，即日起開辦線上進修課程，協助上市櫃企業輕鬆完成法定進修時數認證。 可另外配合企業時間包班，讓您股東會、董事會、董監事進修一次搞定。 請電洽：02-2325-8508 陳先生 LINE ID：0975196694",
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市松山區民生東路四段54號5樓",
+        "name": "請從民生東路4段56巷進入"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2111190802051393559250.jpg"
+}

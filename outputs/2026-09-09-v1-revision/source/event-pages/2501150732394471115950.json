@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2501150732394471115950",
+  "local_label": "03.21 2025 深度節能與深度減量 董監進修課程 線上 →",
+  "id": "2501150732394471115950",
+  "source_title": "3/21【TIRI線上董事、公司治理主管進修課程】深度節能與深度減量｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2502110326441134285284.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "3/21【TIRI線上董事、公司治理主管進修課程】深度節能與深度減量",
+      "image": "https://static.accupass.com/eventbanner/2502110326441134285284.jpg",
+      "startDate": "2025-03-21T14:00:00+08:00",
+      "endDate": "2025-03-21T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "1、了解政策背景：掌握台灣及國際節能減碳政策趨勢，如 IEA 能源效率改善目標及 2050 淨零轉型。\n2、認識節能措施：學習ESCO模式、設備管理、家電汰舊換新補助及儲能技術應用。\n3、掌握碳減量技術：解析碳減量方法與申請碳權的方案與作法。\n4、實務應用：提供企業與個人可執行的節能策略與減量方法。",
+      "performer": {
+        "@type": "Person",
+        "name": "楊聰榮"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市中正區重慶南路一段57號14樓會議室"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2501150732394471115950.jpg"
+}

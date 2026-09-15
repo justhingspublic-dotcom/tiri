@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2509300306275712395370",
+  "local_label": "11.21 2025 家族傳承稅務新觀念 董監進修課程 線上 →",
+  "id": "2509300306275712395370",
+  "source_title": "11/21【TIRI線上董事、公司治理主管進修課程】家族傳承稅務新觀念｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2509300331461023441147.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "11/21【TIRI線上董事、公司治理主管進修課程】家族傳承稅務新觀念",
+      "image": "https://static.accupass.com/eventbanner/2509300331461023441147.jpg",
+      "startDate": "2025-11-21T14:00:00+08:00",
+      "endDate": "2025-11-21T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "本課程以「家族傳承稅務新觀念」為核心，結合實務案例與最新法規，深入探討資產傳承、稅務規劃及家族企業治理的關鍵議題。透過國內外企業案例解析，讓企業家與專業人士掌握全球反避稅趨勢、資產配置策略，以及台灣新公司法帶來的傳承新契機，協助企業家在傳承與創新間找到最優解方。",
+      "performer": {
+        "@type": "Person",
+        "name": "胡碩勻"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2509300306275712395370.jpg"
+}

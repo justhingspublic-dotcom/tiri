@@ -1,0 +1,343 @@
+[
+  {
+    "id": "A01",
+    "key": "accounting",
+    "file": "f93067af653b27e4.jpg",
+    "title": "手按計算機與財務作業",
+    "author": "Wilfred Iven",
+    "slug": "accounting-finance-JONMP7TPGK",
+    "resolution": "3785 × 2514",
+    "theme": "財務與會計",
+    "role": "會計主管 Banner",
+    "priority": "主題吻合",
+    "note": "實際有人操作計算機，符合筆記指定動作。色調偏暖、設備較舊；橫幅以手和計算機為主，保留可讀的標題區。",
+    "source_url": "https://stocksnap.io/photo/accounting-finance-JONMP7TPGK",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "已保存同圖 2560px 來源檔，視覺比對與 StockSnap 圖片一致；CC0 依據為 StockSnap 作者作品頁，下載位置為公開鏡像。",
+    "preview": "candidates/A01-accounting.jpg",
+    "website_file": "v1/images/revision/A01-accounting.jpg",
+    "website_dimensions": [
+      1920,
+      1276
+    ],
+    "website_bytes": 323619,
+    "used_pages": [
+      "trainbod-384680.html"
+    ],
+    "sha256": "f0987df91a5c7c5609e9aa3b3a3f7a2bce1e9db159550ec51344fb8a8dfa5989",
+    "saved_source": "source/A01-original-2560.jpg",
+    "saved_source_dimensions": [
+      2560,
+      1700
+    ],
+    "download_url": "https://www.sienkiewicz-kancelaria.com.pl/wp-content/uploads/2016/07/JONMP7TPGK-2-scaled.jpg"
+  },
+  {
+    "id": "A02",
+    "key": "financial-report",
+    "file": "9784221d4afc6a5f.jpg",
+    "title": "財務圖表與計算機",
+    "author": "Negative Space",
+    "slug": "calculator-numbers-Y2GUBQIPXD",
+    "resolution": "5472 × 3648",
+    "theme": "財務與會計",
+    "role": "財稅法律課程、財務文章",
+    "priority": "主題吻合",
+    "note": "黑白照片與 v1 的暖白、墨黑、紫色容易搭配。適合財報／會計主題卡片；沒有手部操作，因此不取代 A01 的具體需求。",
+    "source_url": "https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "已保存同圖 2560px 來源檔，視覺比對與 StockSnap 圖片一致；CC0 依據為 StockSnap 作者作品頁，下載位置為公開鏡像。",
+    "preview": "candidates/A02-financial-report.jpg",
+    "website_file": "v1/images/revision/A02-financial-report.jpg",
+    "website_dimensions": [
+      1440,
+      960
+    ],
+    "website_bytes": 107056,
+    "used_pages": [
+      "about.html",
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "6f7548c2d4ac3f350163f05b13479fd4e237fc1c04012e08907ce675c63b8750",
+    "saved_source": "source/A02-original-2560.jpg",
+    "saved_source_dimensions": [
+      2560,
+      1707
+    ],
+    "download_url": "https://www.sienkiewicz-kancelaria.com.pl/wp-content/uploads/2015/12/Y2GUBQIPXD-1-scaled.jpg"
+  },
+  {
+    "id": "A03",
+    "key": "business-meeting",
+    "file": "a2695738fb0eb5d0.jpg",
+    "title": "企業團隊討論",
+    "author": "Direct Media",
+    "slug": "business-meeting-SSKSJIBMMP",
+    "resolution": "6720 × 4480",
+    "theme": "企業與治理",
+    "role": "企業管理、併購實務、到府服務",
+    "priority": "可用於主題卡片",
+    "note": "穿著正式、互動自然，適合企業協商與工作討論。以一般情境圖呈現，人物不作為 TIRI 講師或委員介紹。",
+    "source_url": "https://stocksnap.io/photo/business-meeting-SSKSJIBMMP",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A03-business-meeting.jpg",
+    "website_file": "v1/images/revision/A03-business-meeting.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 438337,
+    "used_pages": [
+      "about.html",
+      "benefit.html",
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "5ccf4c2ce759ff6dc51850dfe4e3f21745bbfa4ea744301bff0bd180b54779fd",
+    "saved_source": "candidates/A03-business-meeting.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A04",
+    "key": "capital-market",
+    "file": "d69d2b9bd6642674.jpg",
+    "title": "資本市場行情分析",
+    "author": "Negative Space",
+    "slug": "stockmarket-charts-G3YOGRBLF3",
+    "resolution": "3888 × 2592",
+    "theme": "資本市場",
+    "role": "資本市場文章、協會簡介配圖",
+    "priority": "主題吻合",
+    "note": "股票圖表和筆電直接對應資本市場；適合文章縮圖或簡介側圖。主體在左，橫幅需避免裁掉螢幕上的圖表。",
+    "source_url": "https://stocksnap.io/photo/stockmarket-charts-G3YOGRBLF3",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A04-capital-market.jpg",
+    "website_file": "v1/images/revision/A04-capital-market.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 50678,
+    "used_pages": [
+      "about.html",
+      "committee-awards.html",
+      "committee-certification.html",
+      "committee-media.html",
+      "committee-outreach.html",
+      "committee-professional.html",
+      "committee.html",
+      "knowledge.html"
+    ],
+    "sha256": "f08f2517e508302b378ab3c7b3add0f059eb9c936564b70d1ac761d179ae478f",
+    "saved_source": "candidates/A04-capital-market.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A05",
+    "key": "online-learning",
+    "file": "66facc93affe0ce2.jpg",
+    "title": "專業人士線上交流",
+    "author": "Direct Media",
+    "slug": "video-meeting-NDASNYJJ6P",
+    "resolution": "6720 × 4480",
+    "theme": "課程與交流",
+    "role": "線上課程、時間彈性、會員服務",
+    "priority": "可用於主題卡片",
+    "note": "視訊對談的手勢與電腦符合線上授課場景。與 A03 屬同一拍攝系列，同一頁建議擇一，避免反覆出現同一人物。",
+    "source_url": "https://stocksnap.io/photo/video-meeting-NDASNYJJ6P",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A05-online-learning.jpg",
+    "website_file": "v1/images/revision/A05-online-learning.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 476302,
+    "used_pages": [
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "f2895d740900798f07abf0ddb6870de0dd0e666268d95bec8866c808342fe9a7",
+    "saved_source": "candidates/A05-online-learning.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A06",
+    "key": "esg-solar",
+    "file": "0385a95337370cf7.jpg",
+    "title": "再生能源與企業永續",
+    "author": "Matt Bango",
+    "slug": "solar-panels-EFYB8VJXNT",
+    "resolution": "8192 × 5464",
+    "theme": "ESG",
+    "role": "鄧白氏 ESG Banner、ESG 主題",
+    "priority": "主題吻合",
+    "note": "太陽能板、植栽與自然光同時呈現科技和環境，適合作為 ESG 環境面情境照。Banner 保留面板與上方天空，避免只剩一般風景。",
+    "source_url": "https://stocksnap.io/photo/solar-panels-EFYB8VJXNT",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A06-esg-solar.jpg",
+    "website_file": "v1/images/revision/A06-esg-solar.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 629588,
+    "used_pages": [
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "82b2989d53c42b1626ab303583b7c54cf9c1e26c7cb4b63ede322add80c777e6",
+    "saved_source": "candidates/A06-esg-solar.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A07",
+    "key": "office-interior",
+    "file": "c6982a0fe00ce305.jpg",
+    "title": "企業辦公與會議空間",
+    "author": "Matt Moloney",
+    "slug": "office-interior-NSQTXCLWQ5",
+    "resolution": "6000 × 4000",
+    "theme": "企業與治理",
+    "role": "到府服務配圖備選",
+    "priority": "備選",
+    "note": "具有企業空間感，但較接近共享辦公環境。可用於到府服務情境；不列為正式董事會評估 Banner 的首選。",
+    "source_url": "https://stocksnap.io/photo/office-interior-NSQTXCLWQ5",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A07-office-interior.jpg",
+    "website_file": "v1/images/revision/A07-office-interior.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 578684,
+    "used_pages": [
+      "trainbod.html"
+    ],
+    "sha256": "1a934e25e50a0ab44958dbef867459478443abb20e9807b5abdd7b0e8aa02f97",
+    "saved_source": "candidates/A07-office-interior.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A08",
+    "key": "media-communication",
+    "file": "7471e79687426996.jpg",
+    "title": "媒體溝通與發言",
+    "author": "donterase",
+    "slug": "microphone-equipment-UOVOJOP3UK",
+    "resolution": "4896 × 3264",
+    "theme": "媒體與溝通",
+    "role": "媒體與危機管理、媒體委員會",
+    "priority": "主題吻合",
+    "note": "專業麥克風與留白直接對應媒體、發言及內容製作；不含現場人物，方便用在主題卡片。錄音室風格，並非 TIRI 活動實拍。",
+    "source_url": "https://stocksnap.io/photo/microphone-equipment-UOVOJOP3UK",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A08-media-communication.jpg",
+    "website_file": "v1/images/revision/A08-media-communication.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 263885,
+    "used_pages": [
+      "about.html",
+      "committee-awards.html",
+      "committee-certification.html",
+      "committee-media.html",
+      "committee-outreach.html",
+      "committee-professional.html",
+      "committee.html",
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "4f83ce0f9e77db855db2fe3aaf64d5c8dd3376feb6266c127166ffb6a18f925c",
+    "saved_source": "candidates/A08-media-communication.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  },
+  {
+    "id": "A09",
+    "key": "corporate-building",
+    "file": "ae91111bd5dbf48e.jpg",
+    "title": "企業建築與專業形象",
+    "author": "Verne Ho",
+    "slug": "office-building-7HRFNYC7GU",
+    "resolution": "4657 × 3105",
+    "theme": "企業與治理",
+    "role": "加入會員 Banner、協會簡介",
+    "priority": "可作 Banner 候選",
+    "note": "橫式、上方暗部留白充足，適合搭配白色頁面標題；比一般握手照更接近企業受眾。這是一般企業形象情境照，不標成 TIRI 辦公室。",
+    "source_url": "https://stocksnap.io/photo/office-building-7HRFNYC7GU",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verified_on": "2026-09-09",
+    "verification": "已查看作品頁 CC0 連結及下載預覽，已人工視覺檢視。",
+    "download_status": "目前保存 960px 檔，已用於實際卡片／側圖並核對顯示；未取回平台列示的最高解析度。不可用作大幅印刷或全寬 Banner 原稿。",
+    "preview": "candidates/A09-corporate-building.jpg",
+    "website_file": "v1/images/revision/A09-corporate-building.jpg",
+    "website_dimensions": [
+      960,
+      640
+    ],
+    "website_bytes": 56119,
+    "used_pages": [
+      "about.html",
+      "knowledge.html",
+      "trainbod.html"
+    ],
+    "sha256": "c484e0c121e89936de3769adefdc89f5019cdba2c950160dc148c9c8e588beee",
+    "saved_source": "candidates/A09-corporate-building.jpg",
+    "saved_source_dimensions": [
+      960,
+      640
+    ]
+  }
+]

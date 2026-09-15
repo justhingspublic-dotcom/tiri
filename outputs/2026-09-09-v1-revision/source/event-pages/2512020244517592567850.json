@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2512020244517592567850",
+  "local_label": "01.16 2026 董事會視角的永續報告書：從監督到價值創造的治理實務 董監進修課程 線上 →",
+  "id": "2512020244517592567850",
+  "source_title": "01/16【TIRI線上董事、公司治理主管進修課程】董事會視角的永續報告書：從監督到價值創造的治理實務｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2512040919101732017212.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "01/16【TIRI線上董事、公司治理主管進修課程】董事會視角的永續報告書：從監督到價值創造的治理實務",
+      "image": "https://static.accupass.com/eventbanner/2512040919101732017212.jpg",
+      "startDate": "2026-01-16T14:00:00+08:00",
+      "endDate": "2026-01-16T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "永續不再是趨勢，而是董事會的核心戰略。本課程以最快的方式，帶您掌握全球揭露框架、董事會監督要點與報告書治理機制，並透過策略對話示範永續如何真正影響企業競爭力。讓董事在最短時間內，把永續轉化為企業成長的決策力。",
+      "performer": {
+        "@type": "Person",
+        "name": "張文政"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2512020244517592567850.jpg"
+}

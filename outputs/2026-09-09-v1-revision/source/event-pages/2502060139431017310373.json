@@ -1,0 +1,37 @@
+{
+  "url": "https://www.accupass.com/event/2502060139431017310373",
+  "local_label": "06.13 2025 企業在AI轉型中的領先策略 董監進修課程 線上 →",
+  "id": "2502060139431017310373",
+  "source_title": "06/13【TIRI線上董事、公司治理主管進修課程】企業在AI轉型中的領先策略｜ACCUPASS",
+  "image_url": "https://static.accupass.com/eventbanner/2502060803191375593968.jpg",
+  "structured": [
+    {
+      "@type": "Event",
+      "name": "06/13【TIRI線上董事、公司治理主管進修課程】企業在AI轉型中的領先策略",
+      "image": "https://static.accupass.com/eventbanner/2502060803191375593968.jpg",
+      "startDate": "2025-06-13T14:00:00+08:00",
+      "endDate": "2025-06-13T17:00:00+08:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "description": "聚焦於AI技術如何重塑企業競爭格局，並探討成功轉型的關鍵策略。幫助企業領導者掌握趨勢、制定前瞻策略，保持競爭優勢。",
+      "performer": {
+        "@type": "Person",
+        "name": "林家振"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "台灣台北市重慶南路一段57號13樓之13"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "TIRI 台灣投資人關係協會",
+        "url": "https://www.accupass.com/organizer/detail/1905200944211623899120",
+        "logo": "https://static.accupass.com/userupload/420a64905be24a1f91c396afc980f4b3.jpg",
+        "email": "office@tiri.tw"
+      },
+      "@context": "https://schema.org"
+    }
+  ],
+  "ok": true,
+  "image": "../images/events/2502060139431017310373.jpg"
+}

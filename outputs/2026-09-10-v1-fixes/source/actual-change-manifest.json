@@ -1,0 +1,722 @@
+[
+  {
+    "file": "v1/css/review-fixes.css",
+    "before": "fe9b44a3456299db5c7e8554055d5bd27d2f77966d6ad24158243706d0731484",
+    "after": "a13b082de7fd579498a55e208a6863b44daf605ca3b157cdfd1b8232072ebd47"
+  },
+  {
+    "file": "v1/js/navbar.js",
+    "before": "1d5edbccf444d48bcd34b2be59b547262c183b4552eb184a19c7b2269478c4d6",
+    "after": "8c4ca647f03b9bf64a193549ecff0177e6c8fa01a568d2c1ad71bd9e02eb15b1"
+  },
+  {
+    "file": "v1/html/7th_report-848158-214091.html",
+    "before": "9ea0d7de8768961d6ebbf33a835de368c437adc60b0567eff3ce8ec05f984ef8",
+    "after": "bcad4e6a5c90f0ab3471824f2936468dc5715b2017894f7a305dd57e4e6e57f6"
+  },
+  {
+    "file": "v1/html/tiric-2025.html",
+    "before": "07281a969c71c3de8695deb32f52b94b96f4f7ef373b0fd91f2ad5e0d75b6470",
+    "after": "c7d617c5966c393e73eab1007fb5431fca301cca62e5d088770eeaba017a0025"
+  },
+  {
+    "file": "v1/html/200820.html",
+    "before": "e1c290afb70de6a89bf06fa36f40176f8e8bf126e3ef198995cfba4e428c32a1",
+    "after": "e1ea5705e695c85e682645323ccb3344a15595155a3c269d60ce7f87b556f5ba"
+  },
+  {
+    "file": "v1/html/join.html",
+    "before": "08eb4e29e808218d2181e08058d54f49b591fd353b1f4c552c7bfb78fd6d8c01",
+    "after": "e521e413c97c9682a9c68f853b64d85d8dfe15318e6c12a5e00d34ecd6de57e4"
+  },
+  {
+    "file": "v1/html/irupdatestc.html",
+    "before": "d4fd24412f151fe5037e523a53abde87b390b69b4b9e143b7221868b193bd569",
+    "after": "adaf7c4c3f45e263eb0d0e8617998d1fd101ab8e1a593d2557416c0abb51c7b6"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788-437493-227986-882851.html",
+    "before": "d1609f5312319e68b0e2579b334a6a40f4eeef4b9e7b6d8d6a8fbd0038dff942",
+    "after": "b9a70bb4b29ee009d697131a4e85ec88faa9c893a619f06c8fb9102c37c8c1c3"
+  },
+  {
+    "file": "v1/html/news-121049-387853-531971.html",
+    "before": "93ea4c1c8be7aecffb7f7dbbc6c1b33cb205246234d39b4ab129723567bdfd44",
+    "after": "1afd81242b329e40e02362d3d6bfa546049f3c06d46dd6a0196a0a7bf952533d"
+  },
+  {
+    "file": "v1/html/committee-certification.html",
+    "before": "379fc52cd15c856f4c17df9f0803d911bf2dcdd6fa626b493737596c331e2aa0",
+    "after": "29983a39fafcaa8656056f5abf720d7793a21d9f45eb9ecedf7d32d3b8bc4f0b"
+  },
+  {
+    "file": "v1/html/6th_report-665763-570037.html",
+    "before": "7e8274a2780bd6ecf56fadf6f763c20c170debfc034db182295e96c2812be8c6",
+    "after": "e4a58d1954de9a804a5c1f5bafa902073dad9d55a4644490c8b2915d98916724"
+  },
+  {
+    "file": "v1/html/team_en-2022.html",
+    "before": "7a57a4679e8046d4a30884cbd823b5eecfb6d7bcc6d57b767cd93015a2b1ddb4",
+    "after": "d649738f8941f033ecc6d69b519aa68b8cba1065b5a6306978aaba711071d8b2"
+  },
+  {
+    "file": "v1/html/committee-professional.html",
+    "before": "ac7827e311f867cc4fa4e893c3dab643988c1dc90444c01d0db071d885d09c29",
+    "after": "c85e8f70d5c2de21a1f1c0d0b47e7bbfe33f7ccdd7f56562db1b908de9dd16fb"
+  },
+  {
+    "file": "v1/html/team_en-2018.html",
+    "before": "9063da6b0b63925751886957e1835d198293d0f68424d6274c86eb6d6bd4b4ba",
+    "after": "3587237ff39adeff0944c462f90fbad5b8135b41e59eb04e73a56bf66c44388b"
+  },
+  {
+    "file": "v1/html/trainbod-384680.html",
+    "before": "4bd8d3c0c0b64ac37ef19e23b9dde4b3235c56ca228b044097b269cdc56abdb1",
+    "after": "a72402d1f53825c8f887ee0a8e7929a4ad9c592de4e6198f3eba900a787d4fe8"
+  },
+  {
+    "file": "v1/html/200729.html",
+    "before": "6c937e747328ce000b992ca3b314b0e5a072d43cf4677daf21d55db436a1479c",
+    "after": "9b9dbcfea60bb92afcb1022c068f9203c750c19fff864dd0803807faba3c0a88"
+  },
+  {
+    "file": "v1/html/seminar181023-222929.html",
+    "before": "b5e473345675e34b07ded3155f28f5407d5278f77d8b44a3703f4168ae704deb",
+    "after": "b3c4b7de5c6dfd06df10d9375b8483a99b713f58183d242b36071e5969d8149b"
+  },
+  {
+    "file": "v1/html/tiric.html",
+    "before": "cc6d81331979a6a247d4e95a8afc8f36e6c3f59a250012ab86531a18f9abf569",
+    "after": "2056ab783ec05f66a9e875cc9cb5e36a7a8e3ef1cf90e5efda04617bd0559427"
+  },
+  {
+    "file": "v1/html/corpperform-750901.html",
+    "before": "8a2cf28dea4504ac11b2114a632fda2f76d0d5d490a55381474b55d6ad610430",
+    "after": "ea767c9dd57b4348665ae1748a63d6b329c7ff5fcb70402b5ad8a80e3d8e47e1"
+  },
+  {
+    "file": "v1/html/3931838913_3329029256-2.html",
+    "before": "f702ac779ebee22256678319b1262581da2621375bfbbe67d26386c2bcdf78e6",
+    "after": "c8355ee497276ad6abd324e84ee2e4bf9935b16e4b5ec9c75a56a682ecb22402"
+  },
+  {
+    "file": "v1/html/20201014.html",
+    "before": "e40f0aee3d34f0073653f91813d532b2e00cbae274d681ebd856e3edb4695076",
+    "after": "92b1dcffedd6776ecaf8fea23a0a558dd744942d81dfcf2d4eabefa025a56639"
+  },
+  {
+    "file": "v1/html/news-971146-722067.html",
+    "before": "80be7445c29067c4c8498b406ac37130e7b444c02cb3ff61f447d518f423d4f3",
+    "after": "078b4ece167e01b6eb60dff7ed5fc1ad0fbda502af3e3b76d7569080d896c48a"
+  },
+  {
+    "file": "v1/html/index.html",
+    "before": "26644963685b79a5c58c7ea6e9fa37b238a270fc8a2c987e11356a3f911f0385",
+    "after": "23495dfac2ed13c068f7106e91812131a6573b5366162c0e8a807a7725f76392"
+  },
+  {
+    "file": "v1/html/certification-388672.html",
+    "before": "83ef2f9c9b74162a40532494cf51f125a87a6e5d714c9cbc3abef081ccfb71e8",
+    "after": "7af4fa76182fddace4e6437ef417c531ac1f4b666b13f38559c2de1f5e054810"
+  },
+  {
+    "file": "v1/html/seminar181023-720761.html",
+    "before": "393b7899f265d47ee66bb77c0d7cc5387141ab2ea2ea9552094a89171b7a72fd",
+    "after": "d04f12652333b428c96ac5f434e25da641aaf4143328f01d30e5496cc0e6664a"
+  },
+  {
+    "file": "v1/html/team2022.html",
+    "before": "fb374841e4960f39d76501075f0dc83317da7d399650ee6fcd375b1f98b4bc30",
+    "after": "be39639a4ca67c57f3df0fcbda920ed0475436ab414845a5e61bba5a7eaa65ef"
+  },
+  {
+    "file": "v1/html/irupdatestc-146678.html",
+    "before": "1d344199c0af0eef22802a753f081200aeefe86141fe7e06a902a45ad9c5bf4a",
+    "after": "ef4ecee65a4a00aedb3fddb7dae53675f3adabb451fb69f6ae9faa91f9a079fa"
+  },
+  {
+    "file": "v1/html/knowledge.html",
+    "before": "3ea8549363bb6462ebc98bcba7bade3575069f65349fd5cf1be5118850eeed9f",
+    "after": "d4fe299309a6c11ba733cfe208c863cb5ff35095358bf76e9aea46bde0a7a3e0"
+  },
+  {
+    "file": "v1/html/team2018.html",
+    "before": "733877bd827a599efb0b04eeda13d8286f16515aae61db337b8cf0c9d96e4073",
+    "after": "450b2dda40b342f99109f088471c3097f543b1b4164aa5667ae7947d04760d59"
+  },
+  {
+    "file": "v1/html/3931838913_3329029256.html",
+    "before": "1cffb0cd5a921110d51dcf26284e6e3d7e9e8f3aac79eccccf6a5f93876d41bb",
+    "after": "90d1d3d4280d6636bf56776b9bc2876d6d66b1b2549e5765eb5240097756169f"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788-437493-227986-882851-675084.html",
+    "before": "790aba8b19bd9ab03294b0651230a9c1a96c28f43272c2b475ccf47b59ce5378",
+    "after": "05033070536cc2a220ec23d3d77557dd521d0ce05b1c2b9e0e466dc64501380e"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-381268.html",
+    "before": "9ea58b2c67d1ba6cfde2009ef32fb2e0b1a8152705f83c45521c23e905d6ca8e",
+    "after": "83b9a4c2ad00666abaa09e6ba7fd73ed06eca64d1e07f3ca384c87a533536086"
+  },
+  {
+    "file": "v1/html/mission-206783-803349.html",
+    "before": "4ffc2eb096147e0e785def42fed301621ef82b0d129703141a7b5f28960b7d35",
+    "after": "07800abdf8b7414e3f312ecf950f10f3553b95caf394b262884c119aee76e780"
+  },
+  {
+    "file": "v1/html/benefit.html",
+    "before": "709ba1969404f23ffb6e13308feb5e8435eef8b56e025eb32711f72025654a0c",
+    "after": "b0bf46534cf962aa81bcda199e90485df105dfc42981ea1ca8b666504ecfc713"
+  },
+  {
+    "file": "v1/html/2019109-esg33287eps2151627171373253520165281387503600121209323182592834920296942355924433389112523736039201542777031574.html",
+    "before": "bfd387bdac8c70372f8502fd7d35a0e6f9561f5ab77274ef0e954fcad3b42667",
+    "after": "756dadf97c6d0b72b82730ea0859f39509bc6ccee385714876104c3650896746"
+  },
+  {
+    "file": "v1/html/about.html",
+    "before": "88a1950224a9d8e2b6fd1bf3e1357282c07cb5c6abaac2f9de1e19a33b8b3dea",
+    "after": "8a5713d75359fa6645d43857e71b907b3de5eb9e30c1ad5781780f976b052ea1"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788-437493.html",
+    "before": "d478185909c712a703c96e387ce4ac6152ca7aed45bf7ee57b0b6b41423fbd0d",
+    "after": "98128910842f2dfa5a929c6350917f6b23d230de32251a111beab5486e04cc30"
+  },
+  {
+    "file": "v1/html/exclusive-interview-ndash-founding-chairman-fu-fu-shen.html",
+    "before": "369d8f31dd5f4ed416e7f09da5ab8cc5dc56a4a3a7ee53238b75bf6663fd3ec8",
+    "after": "405968fe6c46d986007652a9ed2a564e7b8207dfeeacb689020c8c388a478423"
+  },
+  {
+    "file": "v1/html/200820-329013-817724.html",
+    "before": "f20ef5912bf88019e2228006ca45b4bdae55760c4002a5c5fb75754f3ce83b03",
+    "after": "b6d87d6f4fddb7d80a49290af80c90edb5fcbdd70d59750bcd20857fee42e910"
+  },
+  {
+    "file": "v1/html/certificates_en.html",
+    "before": "399091a266a1423aaac3a1e29bea33c1265d586e3f942626e68800a836d50132",
+    "after": "68740ced17a2a4555cba88aec656371e795759c02b1e3d8c1dc01f62108f4437"
+  },
+  {
+    "file": "v1/html/contact.html",
+    "before": "6d0621969e300289e33cb014c03c305da976a06f71566bdba5b39ad0d93011ae",
+    "after": "a963eae84224ab112b27ec6cf3bad47cdf1190077a9e4a813999cf222d46d0b1"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788-437493-227986.html",
+    "before": "29d081c44c264a0b030fc36b45411a72bc3f171e8d1b8012d4ae6afb497f4d06",
+    "after": "d3eedc1e7df6cb8fe8580716a2853c847631f97a57db1f6f9fed5ed58b90f47a"
+  },
+  {
+    "file": "v1/html/certification.html",
+    "before": "523b8f5d65b8e0cd80a9684cd8913861d76947ebd369ddf16fc06dbf86a5b54b",
+    "after": "4d9fea4bc20c3e6ba43a8156b1ef3bbd243814fe0b14156b2ca7bf8440355a98"
+  },
+  {
+    "file": "v1/html/20220220.html",
+    "before": "014529189d22d664c879675bfa18c213a431cf3e5d73182f2e177592c2e50cca",
+    "after": "0e5d55ef0a865eb0b889cd09b6bdeaa29340c58b0306375894c1e05e5d83229a"
+  },
+  {
+    "file": "v1/html/200820-329013-824046-958610-755387-403807-395679-538357.html",
+    "before": "53cb698253339901d6464b1409bd30b414698913cda2e3784127052eb6feb287",
+    "after": "0283418a91a321ca1f081d504c5184525cf3c1cbb9b2b08660abe9820723952c"
+  },
+  {
+    "file": "v1/html/mission-206783-766399-942925.html",
+    "before": "f54d89b502258243776b9a5955f7789dd654fe91a4c1df2651733f8e41e095ac",
+    "after": "324b18902d5fbce03c22c10cc3e0fc2a1e537d9c2e78bdcbc38e5dd94a629102"
+  },
+  {
+    "file": "v1/html/mission-206783-396345.html",
+    "before": "eca6e5a5b9df87204acabfe6ed02d911e61ee156a684b1700b81662e19f9f3a4",
+    "after": "3be151a2ff78cccaf8e466c9323a7497f36922b6de197725a2a98dfecead2712"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-882088-817291.html",
+    "before": "d8da8537d0e97794093d18594a80798fb4e64bd88e090c24af6fec5684d19c3a",
+    "after": "e6bab6c86620d2b203d3dee0c6ba8ec098680db4483b0195b3e6260ad8e178f1"
+  },
+  {
+    "file": "v1/html/5th_report-665763.html",
+    "before": "feb31d51c1c38ea536369adef4c421b64d13e2054042fed8aecf974bcb6acecd",
+    "after": "eca35e9021fab8db4ecdb0dfae3c344a0de3bed16e6332eab6cf9469ca9a5800"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-912810.html",
+    "before": "76e3705644cb137fdf287fa1f39d5edc0fab78a7844ce10699218d0b0bac6d21",
+    "after": "a99f8dfb9ceb8fb68a8803bb74e611297e341fcac90d2ba2294365c1c3f676e3"
+  },
+  {
+    "file": "v1/html/200826.html",
+    "before": "4015ebaa34dff2cbf6bab4318c39b938e930be69950b1e24b829ce54e3393e2e",
+    "after": "8f0a2923fb73e0d954e7cfc66c240c5cd9b232905e922edf0520f2c2b5b2d21f"
+  },
+  {
+    "file": "v1/html/news-121049-387853.html",
+    "before": "cc0d2db36fe7e320ae7265fe9b6e0897dde6a7d7d4bc16b3e357383467c36ffa",
+    "after": "51211c495813fe231f02607d8c1840dec8510c104823b8ca2d25bf907dda43c9"
+  },
+  {
+    "file": "v1/html/membership-249817-957999.html",
+    "before": "22c747c9aa59dfc6441b24c964178155d7c6aff06be98f8cc35142aa9163cb98",
+    "after": "8ac47bb076b610849ae852399cda481d9f822004d7d451ee867972612c71180a"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html",
+    "before": "e7f42abf0fcef38e61859139b5cd0f9dd65a8474fb4612325e2d58131f6f263a",
+    "after": "52af5f30b4e41157763eabe2b12c85bd793e7c2d5ab86f14b0c8a7853d076032"
+  },
+  {
+    "file": "v1/html/200918.html",
+    "before": "1b3b4fa960063aa2768b2c34be0d26e85faf9014fb99444df688c880b358c177",
+    "after": "59d48542033e71fab57a3b523682eae5f24d2d53805a063a885abd41fed5c070"
+  },
+  {
+    "file": "v1/html/2019082720225269892779424314314353339122909252373603920154383642041865292315612151627794205702290920844208493836420418.html",
+    "before": "026718bc78e2c3fd453cb7e1cf53b0b33af7d83e28f00066135b162429576083",
+    "after": "cafa43e9aa8bee842a0e4f578ad124221f2095cf2ffad9002c4055cb2d3e5b73"
+  },
+  {
+    "file": "v1/html/membership-567311.html",
+    "before": "eec9bdb5e09497a44bc173dda307b63d7783c0691a78eca96d4a13bae74917f6",
+    "after": "bbb15ae5c73017b26c5644035855b32f4f84715c598dae16efe5962a745c8837"
+  },
+  {
+    "file": "v1/html/191118.html",
+    "before": "c5bf8fda7a8621697f64f52d8cfe4595681b764cdc242621d25bb4023afc3689",
+    "after": "f4a25f9f67e10937b08fd24f6bdd2f1f5d7264df736a95c315c210ad1b424c5b"
+  },
+  {
+    "file": "v1/html/20200220-35657201322515212300356572104826381212093861726376210021230123560273966529336328370963827228317368903328736039353382597221512652881997865289.html",
+    "before": "f9ff753325e35d9172da9658c40441f128f2d7fd8535e67576ea63b8dc8d1c88",
+    "after": "cbf6540fe760e94dbbaac1706d914678f6cd6b7f8da71501d1ec5d1701d7d44f"
+  },
+  {
+    "file": "v1/html/certificate.html",
+    "before": "301387945c5a24b3c3d86ab80640e43853e34f7fce80db8b57de356cb04780a2",
+    "after": "239160f61c195426f81350425bb96fc4ed16c5a27632bc7b2f2d78cba97dba03"
+  },
+  {
+    "file": "v1/html/login.html",
+    "before": "4597e75083664001935133b3243fb443cac3117876c454d99834d157fd160bdf",
+    "after": "ebc35cd9c4669e3bcbb3e364cdffe4440a36444f4f6920123b89f3f44172ca4f"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604.html",
+    "before": "27519f5e69a30abb5dec4e27851faea9c9c84ec71536f83d99b575c8d6fee23b",
+    "after": "b6bd4c25bccd4c661117f62188f275cb492d6fcdf1fe29d3a323d18c98ddd660"
+  },
+  {
+    "file": "v1/html/5th_report-516844.html",
+    "before": "1bd9853014cc22c939492cc683ff0b8925f9941920425b33626e2c1b6b66c18f",
+    "after": "a48fd189238a948e7778e4797daa5d245bee861dc13c1fc51bad9c76d5cb9c04"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-912810-913907.html",
+    "before": "23d7e36e9f2fdfb3b0616dc038d2e0abc77f048d27c0865bb198e6a005d943ba",
+    "after": "cc8a4bdd36782af912d7351a4036d6ae7a570c2bfcadfa4cd386d1c4dcc97b8a"
+  },
+  {
+    "file": "v1/html/committee-awards.html",
+    "before": "aa59aa3a6235f1a60c6878182f10a801a2d89f6970fca490377d5b12016cc892",
+    "after": "3215e5b51626f35591938519feecce197eb72a83a2e9d06e6f603fbda4d0f9d9"
+  },
+  {
+    "file": "v1/html/news-971146-917927.html",
+    "before": "7b6bf4ab9bbfcf14e8012f787740806240e7c828786b5648043ae7084a158346",
+    "after": "1cf081afac060416375d0c0e565cec9a980c953ca8b130350c545ad4965dbbd8"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-207865.html",
+    "before": "a49f5e7ece4a588dcf43dd328d1a6f0f17274fc3fa240567c68001e2bf86d348",
+    "after": "9126b0a0f41fb684242708211832f6a51616ee3196412f8c632c8f35f519e576"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714.html",
+    "before": "934774cfa03eb8d8c363664327a7433292cd3c12737dd6dc6af22c25fe1341e0",
+    "after": "f25875a98199bac8c9d2c36f2cb9c408a607fba3e526300bcd87419177d0cc63"
+  },
+  {
+    "file": "v1/html/news.html",
+    "before": "16b82fefc25d44630204c1acc59782e82112e3d1fbd801d5d39d903e1846a4d3",
+    "after": "7c719724bc2a1762b5a788cafacac54e63323058906602c15b360c55202d87cc"
+  },
+  {
+    "file": "v1/html/200820-329013-824046-958610-755387-403807.html",
+    "before": "a2c7a2e9c24b3ae6465959e6cfeb17414aa7f11112919384902760b51a0a9a01",
+    "after": "5795d4e2de9dcfc2046019526cb93d24d43ef07bf5169ebe62e0fc36c6c1ac5f"
+  },
+  {
+    "file": "v1/html/contact-197913.html",
+    "before": "d03a74c05d5f66e66be591727b89c876072d31858c3131bc5ab82dc3f291f9fd",
+    "after": "1ab19f23990d25c282028f1ba8d781f606998220a360da90c6def25453b11738"
+  },
+  {
+    "file": "v1/html/200812.html",
+    "before": "df8550ea13e80bce0f4ca6fe7fd569637aa7afa9cfcd63a2b1ae6ac0f3158983",
+    "after": "ac0bafa939f98439d1bfe0d0bed27959fbe5905d516f1a498a75a22e812a007c"
+  },
+  {
+    "file": "v1/html/20220220-676125.html",
+    "before": "8c9794ea6b81622435b0aa200c680215db4cb5ed56ac79e432a381f640fa5a85",
+    "after": "c2160e20838183cf2cbf337c592843e81001741a30aebc6db106188bfa3b74de"
+  },
+  {
+    "file": "v1/html/mission.html",
+    "before": "05cd32bfa9dc119ce6b79e3d5c4c4be0253fee4c69741575e4379cc9a1eb9552",
+    "after": "277cdfef027727ede1506e25505ba9bfc0469e144c11589b4514cf034f2f242d"
+  },
+  {
+    "file": "v1/html/team_en-2026.html",
+    "before": "c72e522c65a7aac0ea38cbaffaa33fb5051e52422ac5c54aa18d4ab6e034082f",
+    "after": "10399789a9bb18360a8b6e9e65726dd4dfe59364078c268a7e801c767f387aca"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060.html",
+    "before": "d53faa0a52464621ef92865f40ff9a7053ae3210b0eb2353b038cd0fb4742536",
+    "after": "09850f7f0efbf2f13638a4d1329a6fa0877959d5634b9a278f441993a8ef5b5a"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788-642793.html",
+    "before": "bf543d94dd949859f7ec20f36d3a0ac2519586b546a05f34ff6d5bd1f2e0ef28",
+    "after": "9f9be88022a53d580c128f871c69f95876acaea6eccda2d35eae0b4dfb34b6ba"
+  },
+  {
+    "file": "v1/html/101712300255522131920225269893147829229211473328724066225802072920540123013561124231.html",
+    "before": "edc0fc760ea539665f919c8525c747224112c25253dbd26a2ae12174a9ab0623",
+    "after": "73db484c5820e5f30c9bdf91f8147f70fa599e8de29fad8893005473eb67a01f"
+  },
+  {
+    "file": "v1/html/mission-206783.html",
+    "before": "8372afebbf201f97ffa655def8766f4604d35cdcc5d679ca759bdd5569028f8d",
+    "after": "828261c193bb20715c394b82fa56d047b23be694e58096700c199e96a16d1ff5"
+  },
+  {
+    "file": "v1/html/5th_report-848158.html",
+    "before": "6c1fe68667e52291f74e76e3a622ac0f0793cbdc4ea70a38399832933656ae73",
+    "after": "61ab17cf2f4e6212815eea318b1b293720c1af3e8b9603263418872b62bc1f2c"
+  },
+  {
+    "file": "v1/html/20240409-8902-8909-8906-8913.html",
+    "before": "98aca7ea469c7e3f59afea873b0817871b5e547be63c3bf3d70aa573d5561de6",
+    "after": "9d86fcd555146bd60923e5243f9d309984e45851f14c15b789d43ac342786b85"
+  },
+  {
+    "file": "v1/html/en.html",
+    "before": "c1a9ce5de5dfd52cac17a9eb4e1b705f35a98ae3bf5cf2013b8bd8f7e09b2658",
+    "after": "ee6a733ebae687acc70c8162fcd7a0b4fec51822d5bd4747d8e5a905e718bf2b"
+  },
+  {
+    "file": "v1/html/mission-206783-396345-512343.html",
+    "before": "976c94f88f8bc05f95428df3f8747d7d80e7f2c10aaa46fe39dddd94fe4a4f29",
+    "after": "392fd32da6c8c11077629bca31421d305ddbe459fea4460614bee23d753df460"
+  },
+  {
+    "file": "v1/html/join-342161.html",
+    "before": "48d5fa1a0795617b8dc137ea5645b92f98a78520130db8ad428811e1d3ab8912",
+    "after": "aa85b4493fe0f4ee70fbb7069fb57dd9a32f979bb9a47e9f5a507b67d8206264"
+  },
+  {
+    "file": "v1/html/mission-206783-766399.html",
+    "before": "0080dc9bf32f915c05338975d215582e83006b3cc8289c88c6cee54cd15263c0",
+    "after": "b011725883c50525b8b141823710d4ddf427cfe1e421e0b0c6216c28d6d16e46"
+  },
+  {
+    "file": "v1/html/news-387131-325944.html",
+    "before": "153e0f5a0946b8903d34f9966198d188180f439cb6f327f98bc1ef2eb1fc4db5",
+    "after": "5857a11895693604f817a0d396a81ecd668700e79644197ce0bbe43090738302"
+  },
+  {
+    "file": "v1/html/trainbod-918148.html",
+    "before": "f74730660fb603bdd1dd59b5200625840020394c0bd59d638a2731a613ea0fd4",
+    "after": "eb9d28a869df8e64be6ff4c8fb1c6cbaad1fac9ca2b0296b381704733bd2927d"
+  },
+  {
+    "file": "v1/html/trainbod-329824.html",
+    "before": "ed0994a86fa997b8d21ef83bc172ac7d1e8d5da3fb8e55e87878e94a44bcd7e7",
+    "after": "693c5940fcda7d8748c9a01fd58d7e7ffc0562f640893ba3763970459433add8"
+  },
+  {
+    "file": "v1/html/tiric-677070.html",
+    "before": "83653a572c86a09b12a13a52c1b6ddd21c563948a5611dd1803fd5aac9b44363",
+    "after": "af30c24d1f965d28d5f74b6c844cfceba1d6381546b2b028b1dcb6febfaf2554"
+  },
+  {
+    "file": "v1/html/news-971146.html",
+    "before": "db5872b5ef787aedd9402f66b0b690c90d7b63fbc9637dc3f48b322cac5e85ad",
+    "after": "3d230f40b9fb142a8205abc481141adc2efda41583c4246e849c58e321026b4e"
+  },
+  {
+    "file": "v1/html/200820-329013-824046-958610.html",
+    "before": "031f02ec2c2901f2e4a43fdea2ca47feda7ae5f9891234b336a83553673b1231",
+    "after": "0e97ee6a5526949cae5e70fb48e40cf74ad438522358e5ea9e4438a54bddef97"
+  },
+  {
+    "file": "v1/html/membership-249817.html",
+    "before": "125f190009ab823a3808253ae286dbf88e1182b709cbe52bb03834086f49a941",
+    "after": "0b2a0c33b6bd1b8c7d0105bbadc9d33a3e6e9561d864a4324d0c77cc00247104"
+  },
+  {
+    "file": "v1/html/certificates.html",
+    "before": "4cc2d2e29d7fcad258500f46cc3b25f65c487c4fd95ea1bbc375081e58d72dd0",
+    "after": "ee327e860781dabe1986d5a0c37517463084261245137fe359d233fd720f19c9"
+  },
+  {
+    "file": "v1/html/news-121049-387853-940827.html",
+    "before": "a5ea6afe9cc0abe553af9186c00042761b3826d58589dd46da2c52fa876b6ea4",
+    "after": "bd3bb5f58d1431d3a6b5d4ca9e0e7f906c4e208b69ac63bb8fabf482ffa7880d"
+  },
+  {
+    "file": "v1/html/committee-817915.html",
+    "before": "3af95f7f719c4fc196de50e79f906eb9288540a3b54707d897873654f28e2152",
+    "after": "82fa11ccfd0bd3725441d29351a9161075b2bcd21047866d70e8d05f7168dc3b"
+  },
+  {
+    "file": "v1/html/200820-329013-824046-958610-755387-403807-395679.html",
+    "before": "0995f4a4892b4c80e9ebc2db40cea9da7c4243b669e9b1daad8ca719e0339759",
+    "after": "28b2a38eb817c42128518b3ecf4a5d95d6cb4ec81bd914f40dbf6288f5015a5d"
+  },
+  {
+    "file": "v1/html/corpperform.html",
+    "before": "e45cf8350f6b30badf06caff3f033b582bbcdec2b4f8681263db3f562bbf125c",
+    "after": "6a561479bc8d24bc17a9bf6a2a5ffcf169c0c35e756ff0b876d101df5c15f670"
+  },
+  {
+    "file": "v1/html/partners.html",
+    "before": "3689d0a2d8f5977986290c64930d0124f6d91ae8cfc3c707f715e16e34208c76",
+    "after": "e8e9f4d3a0593c690fa5d6cd05924bfdc36ab78a715d2ae1dc1cf247749e777a"
+  },
+  {
+    "file": "v1/html/news-387131.html",
+    "before": "fb4d61d8fa3df31348886487db2bcda6cf8300f17b1feef3ab8114bdbffa5599",
+    "after": "90fd7d8166751e62d5a454ea8a613122b293cee54af935f99d993caac04fabb4"
+  },
+  {
+    "file": "v1/html/20240409-8922-8927.html",
+    "before": "97bab4b69783911256f316796c1374a2de757bae41f6711abc4c024e7d669479",
+    "after": "1035e5440c021d3d95f325559d4b227a4d92b5541f2c44c26e522b3f61291de8"
+  },
+  {
+    "file": "v1/html/news-387131-325944-831518-306343.html",
+    "before": "6f5d2e95753f67a969b2302816305b0093ec95e98d7648d1056a7afa782e6b00",
+    "after": "c84a3b8f9acafcd9a5d1aaddd13e865f034456c109a45b67c23698af2107b7d7"
+  },
+  {
+    "file": "v1/html/trainbod.html",
+    "before": "7539cc0e6807b599aef7efdb5ff7980a7fcec02664253511489a0f4afd0a89b9",
+    "after": "63aa9c7ba160e331ef10ace8101e6d103b01aa6174e258715b0a1a9d2541af48"
+  },
+  {
+    "file": "v1/html/board.html",
+    "before": "7cbb9196d3205bebf42e6890a5c9586d9b328a0574d5c14acce994659b29de08",
+    "after": "424ec5134d6c5d038447d2589651813063b80c21db66f72b9f5526b2d2d5a2c6"
+  },
+  {
+    "file": "v1/html/committee.html",
+    "before": "41561c9ee0e75a29d62a87e7cca3bf938811efd38dd7cf9b48d7297cee819dd1",
+    "after": "887fb8b73b1e93709fab675f74b6b3fb9b4cd414f8f83b31d2941611bbf7405f"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-474910.html",
+    "before": "b981ab8597cf4ec26b8263f97a12498a4e96151d7ec15d4614d85e8352dfb117",
+    "after": "6d0ce65cf58b30ebb53296982d8c794e076a819c72e2cea02053258bd558f4a6"
+  },
+  {
+    "file": "v1/html/team2026.html",
+    "before": "e778798289772ce6b5d0eaf0df86e0da909a20b2261f06cd3d53cde20292b08c",
+    "after": "b8803207bca71a65b1e86e3ec2c095504a696f8d3ca7725d62894798900eb7f8"
+  },
+  {
+    "file": "v1/html/news-387131-325944-831518.html",
+    "before": "03f34e7947259beb700cf97b044193b90fa8e41d5a63a82265585f2f349170cb",
+    "after": "ec76e2ea82551585f7d15dae6e0ab6897dd9f28e2e4d757871461a502f63affe"
+  },
+  {
+    "file": "v1/html/news-387131-325944-897961.html",
+    "before": "af0975a473ad880dfb64436fa943ba1fda6792fb9274e1fdb78f2146ae4db45f",
+    "after": "0d12aa9362a58f68a33ac8ab0784706805948d0be8808ed8060598379272b770"
+  },
+  {
+    "file": "v1/html/20201014-270153.html",
+    "before": "fc9abacb9e82aa34139922c6a196d5c8634448539448db543b119b45d3c5007d",
+    "after": "87160f4fb1edf7da56025fe561db3b1cced66ae4f222185a866d4268f3b93b28"
+  },
+  {
+    "file": "v1/html/200820-329013-824046-958610-755387.html",
+    "before": "2b77cc8d2bf070c4e3a2d88f0f76009e6cbebd1a5e5d65a5ccd5a6b66dd748c0",
+    "after": "fc89bd9616bce89134feb15bc2391c469d4c85d99436005f3f2c73a4c5f4f720"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-882088.html",
+    "before": "685a1193e7a00f54de353c999403a4581e9f7ef0b1a3929efd868d1ec888a3a4",
+    "after": "b3a8c7bef07d1fe12799072ba88ddccb726cc3a84c79aee5ab764ae41a891c54"
+  },
+  {
+    "file": "v1/html/search.html",
+    "before": "9ca7ea7ba43e3ab77ff4af24a8021288aff12904ecd82b4a337cfb0c9462a812",
+    "after": "197299819a0cd5a9bfc470d3621e0cceb59eaa7a94a6b0b2c794bc929f1b8e65"
+  },
+  {
+    "file": "v1/html/20191126-199782406627331202252698924180360012257733521259912127024120352112183938988.html",
+    "before": "020429d47caaf243d1dbffc72069e3a3842afbbd4c8eb2d13f8ac12b37c84768",
+    "after": "b54fbe0f37795291ea1950912cc8f7349c1e5c86cabed5596426ee7d65cad1c0"
+  },
+  {
+    "file": "v1/html/mission_en.html",
+    "before": "1b02d4df85ede378e8f0b883c4d5b948f6060d5d262a962405b1483b5bbfabf3",
+    "after": "8142b12ea145293e91526c18176aeb4b74cf14a6fbedbd264e31ae8e6b7a2c1e"
+  },
+  {
+    "file": "v1/html/20190615-3565720132251521230035657210482638121209386172637621002123012084421496278352970223560273966529325237360392015438364204183826365288iro65289303402403720316.html",
+    "before": "8ebcf641f0a799c57ae86551f364c0e704931f69319b5f347aca4edd53f65bb6",
+    "after": "8fbcb29916ab4a2e94d5305f13b11c5717c7d23b4a3e13681efe9197f4deb927"
+  },
+  {
+    "file": "v1/html/200930.html",
+    "before": "02b9113890592c0d07a683ce65a00944c19bef684627b9386bc91e364ae08f44",
+    "after": "cf57c11bab2459579a07702694803e34e8653e7038ab2cdcf24ff6d7a3fb0fec"
+  },
+  {
+    "file": "v1/html/services.html",
+    "before": "1b5e3ed1c2167e5cc92fe8d154de79460dfc1f9a239c164b92084b95cdbd0221",
+    "after": "3b1c4a4f9be602ad6f014984ce89b3f5769ae5f6d8262447531f3fd264118b28"
+  },
+  {
+    "file": "v1/html/events.html",
+    "before": "7345c390054d1c1f786e927e5c3d771d621bbd5f0856e8fcfb343f9cd5d1b7ef",
+    "after": "c6a06ba3e8cbae84a8ef3dc694905fecb782f040d5dee57f5e3fd267addab0c2"
+  },
+  {
+    "file": "v1/html/committee-outreach.html",
+    "before": "476a737eecfeca75d470d088138e5ee11841c8cfc39f3fed8e379629c264face",
+    "after": "efff4e6391b55e59e66c080634e0dce152e60539ff0c239538e6cc0e6e1a0407"
+  },
+  {
+    "file": "v1/html/committee-media.html",
+    "before": "ed5f5e2c879588119579049ad2470703b2524ceacdcc38fae0951138d0c21254",
+    "after": "e7618ba5c7d975bf9e42a773f7585b38b840dfab5f3f7c3e026b7b5c6665e0ad"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931-912810-913907-260016.html",
+    "before": "c830c0649c1d87efb8aa14f5822eb98df7e43fdaece9b8e021419886ac1963b0",
+    "after": "56aebdb25922470b49ab692449b4c70fc87bbf04a6654b0ed3bcbc68be693f6c"
+  },
+  {
+    "file": "v1/html/bodperform.html",
+    "before": "eaf6f70c83df6d6568ef3280ef05a9cc3f75a6f1ec47faca54d1533c1e225b38",
+    "after": "d07997821b7403ac1fc28bc4a25c6fd77be011cb26188730bd4ed8e01118aff8"
+  },
+  {
+    "file": "v1/html/20220220-676125-724788.html",
+    "before": "9ca15469c0fb9b81ae19d292f32e766e6d2268ffc54a55c68b4242671df15a5c",
+    "after": "c5e4593c3781626a68af764bf0f9e6a83b7e017a2267eda9cca734f668861f84"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-845427.html",
+    "before": "4acafd1b44c353e593a9c2917f517eec297974233a8143334cd37968c90b916e",
+    "after": "16e1c24378593024376ac337a5ff1ea29fbae08aa74af880bfc8ba3dcec4f4b3"
+  },
+  {
+    "file": "v1/html/membership.html",
+    "before": "e276ddc4007e997fc827896afa44cdc0d63792fb813e0f9387903d7e2474ded9",
+    "after": "59ff6b041a4163a9e61612cf9bd4391c6dad9deaafca0f9af46f1cf7e1946d63"
+  },
+  {
+    "file": "v1/html/2356035370-277843933339333297022010738263.html",
+    "before": "7a236c234945406b9802d6a17c9fc2247a2624ce37f1e7f72e4249cdb2367f51",
+    "after": "a07d64a8c50fb13365d7d2cd9035b0ce81683cefa9f84dda442deded884ed220"
+  },
+  {
+    "file": "v1/html/200820-329013.html",
+    "before": "c4cc9e5883679d48a245337bb639fda584e07efa88b6dea0eb3715ec570e591d",
+    "after": "7a5a1c5b50266f08be1cbcc5328302bfcba50a90760f8f0199a75f1fcf946c97"
+  },
+  {
+    "file": "v1/html/services_en.html",
+    "before": "27ddb7d5c25cbaab80f28c819837251620a1bd2b2855d54c36172edef10ccb3a",
+    "after": "68b893e25171d37e0950b5219139cbd3ce96e01251e90c933558f65b69c833ca"
+  },
+  {
+    "file": "v1/html/7th_report-665763-570037-304514.html",
+    "before": "e75d8494e0925c69f2b032150882fc483f06633772014bb5f1a8ed9771966a3a",
+    "after": "9e59f3d48a9559cdbe0c6e9e3909bf8397e09686c3092031b84c3c5ffa85a24b"
+  },
+  {
+    "file": "v1/html/scholarshipirc-952540.html",
+    "before": "a53719bba27cd1745db8d6c628f4d7c84fb49a7085aa7d4e686da098ce060d73",
+    "after": "edeb157b68987250f9729ee72c96f10323b27b9abd76c6638542c2c30d915d85"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-555931.html",
+    "before": "a6d09b7e343fb9342821a4df292ccf4ec65a0ce2bb7279a1032e4ffb608d8661",
+    "after": "540fcfafaaa6b2e53c440a102c93fba7ae94b602156091956ac4332e91c690f8"
+  },
+  {
+    "file": "v1/html/benefit-499886.html",
+    "before": "76677fc55c79b44d3d18075c3404c63c66f4c57b5def8a4ee200d8f046216473",
+    "after": "c131559800d7fffa42bec5126775cde6e151bcc7d22bc22d7e7939cc9398bf7b"
+  },
+  {
+    "file": "v1/html/trainbod-384680-716109.html",
+    "before": "c3e85f1d7c4dab7e54bfdaa0cc4f012fe3b1cb0831d2645dfa6d427db613a36b",
+    "after": "8891ae7ee9b10792af6a7a61a1c614430b8cf2aad6e93760f7a71131affc185e"
+  },
+  {
+    "file": "v1/html/seminar181023-720761-875714-576604-415060-391523.html",
+    "before": "bfc405c35b26df0f90f41c180da65fb55235bc8b78a93d85d8aef39eaeff5847",
+    "after": "f25a1968e29616afab07a55588009eae8270dc4b93c13f4c7b2a8cf033330a20"
+  },
+  {
+    "file": "v1/html/bodperform-583064.html",
+    "before": "16848ca21557bb9ae607f9c59dfc7a69e634cf56ac3b3c8b008ead1cf60029dc",
+    "after": "19fbdc69d8a11fa29ebb896883017d383e2248cf439c15e646a1c0db61ed67f2"
+  },
+  {
+    "file": "v1/html/scholarshipirc.html",
+    "before": "69db197b582ccf6c73494e5fdb10430c90bc3d17a2f70be0cfcfda15c3e9511b",
+    "after": "c38d759f447aa0dfd11fe3c308b6e435a6834a580acc8f36e5c3bc4083bb8fc1"
+  },
+  {
+    "file": "v1/html/5th_report-665763-570037-605322.html",
+    "before": "1134fd3a752452ffaa6f7dbdd99b689d4463278b5ba6dd40c9352298ea0ae991",
+    "after": "2184e4c189b354f2fe7331823f56f62fde75912c87b43bf70328e72835bbc089"
+  },
+  {
+    "file": "v1/html/200820-329013-824046.html",
+    "before": "feaf2c16e1a3c82fc465d959dcebf952cba756d5014de1855b7126324ff7f03d",
+    "after": "c136870f05e191818184976cc5477952bad55aaae90537fc8b021b123fbfa147"
+  },
+  {
+    "file": "v1/html/seminar181023.html",
+    "before": "2dc52bcd6618c7e488fa02e0fa3ecfadfdafa4d7ae50d2906878e50657b7bc67",
+    "after": "8a0ce323ffceb9b1ea184b4ddc99250f856f5c8f31eb788d4c15abdf715f5add"
+  },
+  {
+    "file": "v1/html/news-121049-699781.html",
+    "before": "8fd9dc23b4823f7e8748cae9cdf58ca1f0f52a9fae2258cc62ba101b7d3c64df",
+    "after": "0f615b6b5f700e933ef5d4fb2729501f21900cea03cb73385597884f40b260e4"
+  },
+  {
+    "file": "v1/html/news-121049.html",
+    "before": "88990d7aea774f3edda926fe4fba1fc77ebde1a119837fdb1920e26d7777ed0f",
+    "after": "9b3d81cdccc946c199801d111c184ecc2e407a7b47991815cbdf72be3bc754c5"
+  },
+  {
+    "file": "v1/html/5th_report.html",
+    "before": "10893af2489ef117c0eba87c30a49a1d81771eadd333bb61a2a885c267d110eb",
+    "after": "8db0b8b3cbdd559cd3c5c877ea249ecc95f2e9c92a189915a676f80827602645"
+  },
+  {
+    "file": "v1/html/20200420-35657201322515212300356572104826381212093861726376210021230123560273966529336328370963827228317368903328736039353382597221512652881997865289.html",
+    "before": "ed4f0c77c406c4ebf84133398f4e9f6955eee6b4fbd3a37da3f7e72c4310f7a1",
+    "after": "968a44775d46cdb254db81538353c9dfbd3729511575e5261a01999b1088adbf"
+  },
+  {
+    "file": "v1/html/board_en.html",
+    "before": "03d736180b560d5cafb79877a865ebd558e173fa652ab27446eff98eb8482fc7",
+    "after": "3f83d2fb958f554452e330f1358c17a6d5213146ee589bd203b3a0d93c29809f"
+  }
+]
