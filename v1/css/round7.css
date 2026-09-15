@@ -1,0 +1,30 @@
+/* Seventh review: match the site's year picker and blend diagram paper. */
+.recap-toolbar .term-trigger,
+.recap-toolbar input[type="search"] {
+  box-sizing: border-box;
+  height: 50px;
+  min-height: 50px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.recap-toolbar .term-trigger { min-width: 150px; width: 100%; justify-content: space-between; }
+.recap-toolbar .term-trigger:hover,
+.recap-toolbar .term-picker.is-open .term-trigger,
+.recap-toolbar input[type="search"]:hover { border-color: var(--ink-45); }
+.recap-toolbar input[type="search"]:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.recap-year-label { display: block; font-size: 13px; margin-bottom: 8px; }
+.recap-toolbar .term-menu { left: 0; right: auto; max-height: 300px; overflow-y: auto; overscroll-behavior: contain; }
+.recap-toolbar .term-caret { flex-shrink: 0; }
+.flow-figure, .flow-figure > a, .flow-figure picture { background: transparent; }
+.flow-figure .flow-image {
+  background: transparent;
+  /* Normalize the PNGs' near-white paper before blending with the page. */
+  filter: brightness(1.05);
+  mix-blend-mode: multiply;
+}

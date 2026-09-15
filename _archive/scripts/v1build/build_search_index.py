@@ -27,6 +27,7 @@ OUT = V1 / "search-index.json"
 BODY_LIMIT = 3000          # 每頁內文上限（字元）；夠找到文章內文，又控住檔案大小
 SKIP = {"search.html", "login.html",
         # 理監事各屆已併入 board.html／board_en.html（?term=），舊網址僅剩轉址殼
+        "events.html", "scholarshipirc.html", "scholarshipirc-952540.html",
         "team2018.html", "team2022.html", "team2026.html",
         "team_en-2018.html", "team_en-2022.html", "team_en-2026.html"}
 
@@ -40,9 +41,9 @@ EYEBROW_ZH = {
     "News & Events": "活動訊息",
     "About TIRI": "關於 TIRI",
     "Partners & Sponsors": "關於 TIRI",
-    "Membership": "會員中心",
-    "Member Area": "會員中心",
-    "Join TIRI": "會員中心",
+    "Membership": "會員服務",
+    "Member Area": "會員服務",
+    "Join TIRI": "會員服務",
 }
 EYEBROW_EN = {
     "IR Knowledge": "IR Library",
@@ -126,7 +127,7 @@ def build():
         eyebrow = clean_text(eyebrow_el).replace("&amp;", "&") if eyebrow_el else ""
 
         table = EYEBROW_EN if lang == "en" else EYEBROW_ZH
-        section = nav[lang].get(path.name) or table.get(eyebrow) or ("Home" if lang == "en" else "首頁")
+        section = nav[lang].get(path.name) or ("關於 TIRI" if lang == "zh" and path.name.startswith("committee-") else None) or table.get(eyebrow) or ("Home" if lang == "en" else "首頁")
 
         # 內文：去掉 h1／eyebrow／hero 區塊避免標題重複出現在摘要開頭
         if main:

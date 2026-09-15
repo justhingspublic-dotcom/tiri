@@ -1,0 +1,49 @@
+/* Homepage: only the decorative background images rotate. */
+.hero.hero-photo.home-carousel {
+  background: #211b29;
+  isolation: isolate;
+  overflow: hidden;
+}
+.home-carousel__images, .home-slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.home-carousel__images { z-index: 0; }
+.home-slide { opacity: 0; transition: opacity 700ms ease; }
+.home-slide.is-active { opacity: 1; }
+.home-slide::before {
+  content: "";
+  position: absolute;
+  inset: -28px;
+  background: var(--slide-image) center / cover;
+  filter: blur(24px);
+  opacity: .7;
+}
+.home-slide__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.home-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(23,20,31,.46) 0%, rgba(23,20,31,.56) 55%, rgba(23,20,31,.86) 100%);
+}
+.home-carousel > .container { position: relative; z-index: 2; }
+.home-contact { border-top: 1px solid var(--line); background: #f1edf3; scroll-margin-top: 120px; }
+.home-contact__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); align-items: start; gap: clamp(32px, 6vw, 88px); }
+.home-contact h2 { margin: 12px 0 28px; }
+.home-contact__details { margin: 0; }
+.home-contact__details > div { margin-top: 20px; }
+.home-contact dt { color: var(--ink-64); font-size: 12px; letter-spacing: .08em; margin-bottom: 6px; }
+.home-contact dd { margin: 0; font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
+.home-contact__access { margin: 24px 0; color: var(--ink-64); font-size: 14px; line-height: 1.8; }
+.home-contact__map { min-width: 0; }
+.home-contact__map .map-frame { height: 400px; aspect-ratio: auto; border: 1px solid #d9d0df; background: #e5e0e8; }
+.home-contact__map iframe { display: block; }
+.home-contact__map > p { margin-top: 14px; text-align: right; }
+@media (max-width: 760px) {
+  .home-contact__grid { grid-template-columns: 1fr; gap: 32px; }
+  .home-contact__map .map-frame { height: 320px; }
+}
+@media (prefers-reduced-motion: reduce) { .home-slide { transition: none; } }

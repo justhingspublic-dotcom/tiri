@@ -4,334 +4,1060 @@
   /* 第一層 1~8 對應共用資料夾「1首頁～8年刊下載」，分組沿用原站架構 */
   var navigation = [
     {
-      href: "index.html",
-      label: "首頁"
+      "href": "index.html",
+      "label": "首頁"
     },
     {
-      href: "about.html",
-      label: "關於 TIRI",
-      columns: [
+      "href": "about.html",
+      "label": "關於 TIRI",
+      "columns": [
         {
-          label: "協會",
-          links: [
-            ["about.html", "協會使命", "創會緣起、願景與協會定位"],
-            ["board.html", "理監事成員", "現任與歷屆名冊，下拉切換屆次"],
-            ["about.html#committee", "功能委員會", "各功能委員會的組成"]
+          "label": "協會",
+          "links": [
+            [
+              "about.html",
+              "協會使命",
+              "創會緣起、願景與協會定位"
+            ],
+            [
+              "board.html",
+              "理監事成員",
+              "現任與歷屆名冊，下拉切換屆次"
+            ],
+            [
+              "committee.html",
+              "功能委員會",
+              "各功能委員會的組成"
+            ]
           ]
         },
         {
-          label: "服務與聯繫",
-          links: [
-            ["services.html", "功能與服務", "培訓、證照、評鑑、研究調查等 12 項服務"],
-            ["certificate.html", "鄧白氏企業認證™", "D-U-N-S® 環球編碼 65-851-5060"],
-            ["partners.html", "合作夥伴", "年度大會贊助單位與會員優惠夥伴"],
-            ["contact.html", "聯絡我們", "(02) 2381-9248・台北市中正區重慶南路一段 57 號"]
+          "label": "服務與聯繫",
+          "links": [
+            [
+              "services.html",
+              "功能與服務",
+              "培訓、證照、評鑑、研究調查等 12 項服務"
+            ],
+            [
+              "certificate.html",
+              "鄧白氏企業認證™",
+              "D-U-N-S® 環球編碼 65-851-5060"
+            ],
+            [
+              "partners.html",
+              "合作夥伴",
+              "年度大會贊助單位與會員優惠夥伴"
+            ],
+            [
+              "contact.html",
+              "聯絡我們",
+              "(02) 2381-9248・台北市中正區重慶南路一段 57 號"
+            ]
           ]
         }
       ],
-      figure: ["about.html", "../images/hero-annual-forum.jpg", "專為上市櫃、興櫃、公開發行與創櫃公司經理人而設的專業協會，致力推進台灣投資人關係的實踐。", "認識協會"]
+      "figure": [
+        "about.html",
+        "../images/hero-annual-forum.jpg",
+        "專為上市櫃、興櫃、公開發行與創櫃公司經理人而設的專業協會，致力推進台灣投資人關係的實踐。",
+        "認識協會"
+      ]
     },
     {
-      href: "news.html",
-      label: "活動訊息",
-      columns: [
+      "href": "news.html",
+      "label": "活動訊息",
+      "columns": [
         {
-          label: "消息與活動",
-          links: [
-            ["news.html", "協會消息", "協會公告、課程講座與產業參與紀錄"],
-            ["events.html", "近期活動", "即將登場的大會、課程與講座"]
+          "label": "消息與活動",
+          "links": [
+            [
+              "news.html",
+              "活動訊息",
+              "協會公告、課程講座與產業參與紀錄"
+            ]
           ]
         },
         {
-          label: "回顧",
-          links: [
-            ["news-971146.html", "精彩回顧", "歷屆年度大會與活動現場紀錄"]
+          "label": "回顧",
+          "links": [
+            [
+              "news-971146.html",
+              "活動花絮",
+              "歷屆年度大會與活動現場紀錄"
+            ]
           ]
         }
       ],
-      figure: ["seminar181023-720761-875714-576604-415060-555931-912810-913907-260016.html", "../images/hero-recap.jpg", "2026/10/16　2026 年度大會暨 IR 新溝通時代", "看活動資訊"]
+      "figure": [
+        "seminar181023-720761-875714-576604-415060-555931-912810-913907-260016.html",
+        "../images/hero-annual-forum.jpg",
+        "2026/10/16　2026 年度大會暨 IR 新溝通時代",
+        "看活動資訊"
+      ]
     },
     {
-      href: "trainbod.html",
-      label: "課程與服務",
-      columns: [
+      "href": "trainbod.html",
+      "label": "課程與服務",
+      "columns": [
         {
-          label: "進修課程",
-          links: [
-            ["trainbod.html", "董監事進修課程", "可折抵董監事與公司治理主管進修時數"],
-            ["trainbod-384680.html", "會計主管進修班", "會計主管繼續進修課程分享"]
+          "label": "進修課程",
+          "links": [
+            [
+              "trainbod.html",
+              "董監事進修課程",
+              "可折抵董監事與公司治理主管進修時數"
+            ],
+            [
+              "trainbod-384680.html",
+              "會計主管進修班",
+              "會計主管繼續進修課程分享"
+            ]
           ]
         },
         {
-          label: "治理服務",
-          links: [
-            ["bodperform.html", "董事會績效評估", "外部評估服務，團體會員享 85 折"],
-            ["corpperform.html", "提升公司治理服務", "團體會員享 8 折優惠"]
+          "label": "治理服務",
+          "links": [
+            [
+              "bodperform.html",
+              "董事會績效評估",
+              "外部評估服務，團體會員享 85 折"
+            ],
+            [
+              "corpperform.html",
+              "提升公司治理服務",
+              "團體會員享 8 折優惠"
+            ]
           ]
         }
       ],
-      figure: ["trainbod.html", "../images/seminar-room.jpg", "董監事進修、董事會績效評估與提升公司治理──協會的核心課程與治理服務。", "查看課程"]
+      "figure": [
+        "trainbod.html",
+        "../images/seminar-room.jpg",
+        "董監事進修、董事會績效評估與提升公司治理──協會的核心課程與治理服務。",
+        "查看課程"
+      ]
     },
     {
-      href: "certification.html",
-      label: "證照獎項",
-      columns: [
+      "href": "certification.html",
+      "label": "證照",
+      "columns": [
         {
-          label: "專業證照",
-          links: [
-            ["certification.html", "IRC 國際證照", "NIRI 專業證照，會員報名省 200 美元"],
-            ["scholarshipirc.html", "IRC 贊助獎學金", "填寫申請表取得贊助資格"],
-            ["tiric.html", "TIRIC IR 專業實戰班", "採 NIRI 授權教材繁體中文版"]
+          "label": "專業證照",
+          "links": [
+            [
+              "certification.html",
+              "國際證照",
+              "NIRI 專業證照，會員報名省 200 美元"
+            ],
+            [
+              "tiric.html",
+              "專業實戰班",
+              "採 NIRI 授權教材繁體中文版"
+            ]
           ]
         },
         {
-          label: "獎項",
-          links: [
-            ["mission-206783.html", "TIRI Awards", "第五屆投票啟動，邀請投資圈與媒體參與"],
-            ["mission-206783-766399.html", "TIRI 潛力進展獎", "表揚中小型企業的 IR 進步標竿"]
+          "label": "",
+          "links": []
+        }
+      ],
+      "figure": [
+        "certification.html",
+        "../images/seminar-room.jpg",
+        "國際證照、贊助獎學金與 IR 專業實戰課程。",
+        "查看證照"
+      ]
+    },
+    {
+      "href": "mission-206783-396345.html",
+      "label": "獎項",
+      "columns": [
+        {
+          "label": "獎項",
+          "links": [
+            [
+              "mission-206783.html",
+              "TIRI Awards",
+              "第五屆投票啟動，邀請投資圈與媒體參與"
+            ],
+            [
+              "mission-206783-766399.html",
+              "TIRI 潛力進展獎",
+              "表揚中小型企業的 IR 進步標竿"
+            ]
+          ]
+        },
+        {
+          "label": "",
+          "links": []
+        }
+      ],
+      "figure": [
+        "mission-206783.html",
+        "../images/awards/awards-trophy.jpg",
+        "肯定企業投資人關係實踐與專業成就。",
+        "查看獎項"
+      ]
+    },
+    {
+      "href": "knowledge.html",
+      "label": "專業分享",
+      "columns": [
+        {
+          "label": "刊物與專欄",
+          "links": [
+            [
+              "knowledge.html",
+              "知識總覽",
+              "專欄、精選文章與專訪的完整入口"
+            ],
+            [
+              "news-387131-325944.html",
+              "證券雙月刊專欄",
+              "證交所「證券服務雙月刊」歷期專欄"
+            ]
+          ]
+        },
+        {
+          "label": "文章與專訪",
+          "links": [
+            [
+              "news-387131-325944-831518.html",
+              "專文分享",
+              "會員與講者的主題分享文章"
+            ],
+            [
+              "irupdatestc.html",
+              "NIRI IR Update 精選",
+              "2019–2020 與 NIRI 合作中文化的精選文章"
+            ],
+            [
+              "2356035370-277843933339333297022010738263.html",
+              "專訪 沈馥馥理事長",
+              "專訪中華電信代理發言人沈馥馥協理"
+            ]
           ]
         }
       ],
-      figure: ["certification.html", "../images/event-awards.jpg", "IRC 國際證照與 TIRI Awards──IR 專業能力與企業成就的雙重肯定。", "了解 IRC 證照"]
+      "figure": [
+        "knowledge.html",
+        "../images/review-r2/media-interview.jpg",
+        "證交所「證券服務雙月刊」專欄、NIRI IR Update 精選、專文與專訪──台灣 IR 的知識庫。",
+        "前往專業分享"
+      ]
     },
     {
-      href: "knowledge.html",
-      label: "專業分享",
-      columns: [
+      "href": "membership.html",
+      "label": "會員服務",
+      "columns": [
         {
-          label: "刊物與專欄",
-          links: [
-            ["knowledge.html", "知識總覽", "專欄、精選文章與專訪的完整入口"],
-            ["news-387131-325944.html", "證券雙月刊專欄", "證交所「證券服務雙月刊」歷期專欄"]
+          "label": "會員",
+          "links": [
+            [
+              "membership.html",
+              "會員類別與會費",
+              "個人與團體會員的類別與費用"
+            ],
+            [
+              "benefit.html",
+              "會員權利",
+              "課程、證照與治理服務的專屬折扣"
+            ],
+            [
+              "join.html",
+              "加入會員",
+              "申請流程、入會表單與匯款資訊"
+            ]
           ]
         },
         {
-          label: "文章與專訪",
-          links: [
-            ["news-387131-325944-831518.html", "專文分享", "會員與講者的主題分享文章"],
-            ["irupdatestc.html", "NIRI IR Update 精選", "2019–2020 與 NIRI 合作中文化的精選文章"],
-            ["2356035370-277843933339333297022010738263.html", "專訪 沈馥馥理事長", "專訪中華電信代理發言人沈馥馥協理"]
+          "label": "贊助機制",
+          "links": [
+            [
+              "partners.html#sponsor",
+              "贊助方案",
+              "企業贊助方案說明"
+            ]
           ]
         }
       ],
-      figure: ["knowledge.html", "../images/hero-talk.jpg", "證交所「證券服務雙月刊」專欄、NIRI IR Update 精選、專文與專訪──台灣 IR 的知識庫。", "前往專業分享"]
+      "figure": [
+        "join.html",
+        "../images/review-r2/partnership-signing.jpg",
+        "個人首次入會 NT$8,000（入會費 2,000＋常年會費 6,000），隔年起每年 NT$6,000。",
+        "加入會員"
+      ]
     },
     {
-      href: "membership.html",
-      label: "會員中心",
-      columns: [
+      "href": "5th_report-516844.html",
+      "label": "年刊下載",
+      "columns": [
         {
-          label: "會員",
-          links: [
-            ["membership.html", "會員類別與會費", "個人與團體會員的類別與費用"],
-            ["benefit.html", "會員專屬優惠", "課程、證照與治理服務的專屬折扣"],
-            ["join.html", "加入會員", "申請流程、入會表單與匯款資訊"]
+          "label": "歷年年刊",
+          "links": [
+            [
+              "5th_report-516844.html",
+              "年刊簡介",
+              "創始於 2024 年，每年出刊一次"
+            ],
+            [
+              "5th_report.html",
+              "5 周年年刊",
+              "協會成立五周年年刊"
+            ],
+            [
+              "5th_report-848158.html",
+              "6 周年年刊",
+              "協會成立六周年年刊"
+            ],
+            [
+              "7th_report-848158-214091.html",
+              "7 周年年刊",
+              "協會成立七周年年刊"
+            ]
           ]
         },
         {
-          label: "贊助機制",
-          links: [
-            ["partners.html#sponsor", "贊助方案", "企業贊助方案說明"]
-          ]
+          "label": "",
+          "links": []
         }
       ],
-      figure: ["join.html", "../images/hero-handshake.jpg", "個人首次入會 NT$8,000（入會費 2,000＋常年會費 6,000），隔年起每年 NT$6,000。", "加入會員"]
-    },
-    {
-      href: "5th_report-516844.html",
-      label: "年刊下載",
-      columns: [
-        {
-          label: "歷年年刊",
-          links: [
-            ["5th_report-516844.html", "年刊簡介", "創始於 2024 年，每年出刊一次"],
-            ["5th_report.html", "5 周年年刊", "協會成立五周年年刊"],
-            ["5th_report-848158.html", "6 周年年刊", "協會成立六周年年刊"],
-            ["7th_report-848158-214091.html", "7 周年年刊", "協會成立七周年年刊"]
-          ]
-        },
-        { label: "", links: [] }
-      ],
-      figure: ["5th_report-516844.html", "../images/hero-chart.jpg", "TIRI 年刊收錄年度活動成果與 IR 觀點，線上閱覽與下載。", "下載年刊"]
+      "figure": [
+        "5th_report-516844.html",
+        "../images/hero-chart.jpg",
+        "TIRI 年刊收錄年度活動成果與 IR 觀點，線上閱覽與下載。",
+        "下載年刊"
+      ]
     }
   ];
 
   var drawerLinks = [
-    ["首頁", "index.html", []],
-    ["關於 TIRI", "about.html", [["about.html", "協會使命"], ["board.html", "理監事成員"], ["about.html#committee", "功能委員會"], ["services.html", "功能與服務"], ["certificate.html", "鄧白氏企業認證™"], ["partners.html", "合作夥伴"], ["contact.html", "聯絡我們"]]],
-    ["活動訊息", "news.html", [["news.html", "協會消息"], ["events.html", "近期活動"], ["news-971146.html", "精彩回顧"]]],
-    ["課程與服務", "trainbod.html", [["trainbod.html", "董監事進修課程"], ["trainbod-384680.html", "會計主管進修班"], ["bodperform.html", "董事會績效評估"], ["corpperform.html", "提升公司治理服務"]]],
-    ["證照獎項", "certification.html", [["certification.html", "IRC 國際證照"], ["scholarshipirc.html", "IRC 贊助獎學金"], ["tiric.html", "TIRIC IR 專業實戰班"], ["mission-206783.html", "TIRI Awards"], ["mission-206783-766399.html", "TIRI 潛力進展獎"]]],
-    ["專業分享", "knowledge.html", [["knowledge.html", "知識總覽"], ["news-387131-325944.html", "證券雙月刊專欄"], ["news-387131-325944-831518.html", "專文分享"], ["irupdatestc.html", "NIRI IR Update 精選"], ["2356035370-277843933339333297022010738263.html", "專訪 沈馥馥理事長"]]],
-    ["會員中心", "membership.html", [["membership.html", "會員類別與會費"], ["benefit.html", "會員專屬優惠"], ["join.html", "加入會員"], ["partners.html#sponsor", "贊助方案"]]],
-    ["年刊下載", "5th_report-516844.html", [["5th_report-516844.html", "年刊簡介"], ["5th_report.html", "5 周年年刊"], ["5th_report-848158.html", "6 周年年刊"], ["7th_report-848158-214091.html", "7 周年年刊"]]]
+    [
+      "首頁",
+      "index.html",
+      []
+    ],
+    [
+      "關於 TIRI",
+      "about.html",
+      [
+        [
+          "about.html",
+          "協會使命"
+        ],
+        [
+          "board.html",
+          "理監事成員"
+        ],
+        [
+          "committee.html",
+          "功能委員會"
+        ],
+        [
+          "services.html",
+          "功能與服務"
+        ],
+        [
+          "certificate.html",
+          "鄧白氏企業認證™"
+        ],
+        [
+          "partners.html",
+          "合作夥伴"
+        ],
+        [
+          "contact.html",
+          "聯絡我們"
+        ]
+      ]
+    ],
+    [
+      "活動訊息",
+      "news.html",
+      [
+        [
+          "news.html",
+          "活動訊息"
+        ],
+        [
+          "news-971146.html",
+          "活動花絮"
+        ]
+      ]
+    ],
+    [
+      "課程與服務",
+      "trainbod.html",
+      [
+        [
+          "trainbod.html",
+          "董監事進修課程"
+        ],
+        [
+          "trainbod-384680.html",
+          "會計主管進修班"
+        ],
+        [
+          "bodperform.html",
+          "董事會績效評估"
+        ],
+        [
+          "corpperform.html",
+          "提升公司治理服務"
+        ]
+      ]
+    ],
+    [
+      "證照",
+      "certification.html",
+      [
+        [
+          "certification.html",
+          "國際證照"
+        ],
+        [
+          "tiric.html",
+          "專業實戰班"
+        ]
+      ]
+    ],
+    [
+      "獎項",
+      "mission-206783-396345.html",
+      [
+        [
+          "mission-206783.html",
+          "TIRI Awards"
+        ],
+        [
+          "mission-206783-766399.html",
+          "TIRI 潛力進展獎"
+        ]
+      ]
+    ],
+    [
+      "專業分享",
+      "knowledge.html",
+      [
+        [
+          "knowledge.html",
+          "知識總覽"
+        ],
+        [
+          "news-387131-325944.html",
+          "證券雙月刊專欄"
+        ],
+        [
+          "news-387131-325944-831518.html",
+          "專文分享"
+        ],
+        [
+          "irupdatestc.html",
+          "NIRI IR Update 精選"
+        ],
+        [
+          "2356035370-277843933339333297022010738263.html",
+          "專訪 沈馥馥理事長"
+        ]
+      ]
+    ],
+    [
+      "會員服務",
+      "membership.html",
+      [
+        [
+          "membership.html",
+          "會員類別與會費"
+        ],
+        [
+          "benefit.html",
+          "會員權利"
+        ],
+        [
+          "join.html",
+          "加入會員"
+        ],
+        [
+          "partners.html#sponsor",
+          "贊助方案"
+        ]
+      ]
+    ],
+    [
+      "年刊下載",
+      "5th_report-516844.html",
+      [
+        [
+          "5th_report-516844.html",
+          "年刊簡介"
+        ],
+        [
+          "5th_report.html",
+          "5 周年年刊"
+        ],
+        [
+          "5th_report-848158.html",
+          "6 周年年刊"
+        ],
+        [
+          "7th_report-848158-214091.html",
+          "7 周年年刊"
+        ]
+      ]
+    ]
   ];
 
   /* 英文版導覽：頁面沿用 Weebly 原站英文選單的 40 頁（檔名多為數字尾碼，非 _en），
      分組照原站英文選單層級，重排成與中文版一致的 mega-menu 結構 */
   var navigationEn = [
     {
-      href: "en.html",
-      label: "Home"
+      "href": "en.html",
+      "label": "Home"
     },
     {
-      href: "mission_en.html",
-      label: "About TIRI",
-      columns: [
+      "href": "mission_en.html",
+      "label": "About TIRI",
+      "columns": [
         {
-          label: "Institute",
-          links: [
-            ["mission_en.html", "About TIRI", "Mission, vision and objectives"],
-            ["board_en.html", "Board of Directors", "Current and past boards"],
-            ["committee-817915.html", "Functional Committee", "Committee organization"]
+          "label": "Institute",
+          "links": [
+            [
+              "mission_en.html",
+              "About TIRI",
+              "Mission, vision and objectives"
+            ],
+            [
+              "board_en.html",
+              "Board of Directors",
+              "Current and past boards"
+            ],
+            [
+              "committee-817915.html",
+              "Functional Committee",
+              "Committee organization"
+            ]
           ]
         },
         {
-          label: "Services & Contact",
-          links: [
-            ["services_en.html", "Functions and Services", "Training, certification, evaluation and research"],
-            ["contact-197913.html", "Contact", "(02) 2381-9248・office@tiri.tw"]
+          "label": "Services & Contact",
+          "links": [
+            [
+              "services_en.html",
+              "Functions and Services",
+              "Training, certification, evaluation and research"
+            ],
+            [
+              "contact-197913.html",
+              "Contact",
+              "(02) 2381-9248・office@tiri.tw"
+            ]
           ]
         }
       ],
-      figure: ["mission_en.html", "../images/hero-annual-forum.jpg", "A professional institute dedicated to advancing investor relations practice in Taiwan.", "About TIRI"]
+      "figure": [
+        "mission_en.html",
+        "../images/hero-annual-forum.jpg",
+        "A professional institute dedicated to advancing investor relations practice in Taiwan.",
+        "About TIRI"
+      ]
     },
     {
-      href: "news-971146-722067.html",
-      label: "Recap",
-      columns: [
+      "href": "news-971146-722067.html",
+      "label": "Recap",
+      "columns": [
         {
-          label: "Recap",
-          links: [
-            ["news-971146-722067.html", "Event Recap", "Highlights from past annual conferences"],
-            ["seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html", "2025 Annual Conference", "Leading a Smart New Era of IR"],
-            ["seminar181023-720761-875714-576604-415060-555931-882088-817291.html", "2024 Annual Conference", "Global Vision: Co-Creating a New Era for IR"],
-            ["seminar181023-720761-875714-576604-415060-555931-882088.html", "2023 Annual Conference", "Annual Conference and International Forum"]
+          "label": "Recap",
+          "links": [
+            [
+              "news-971146-722067.html",
+              "Event Recap",
+              "Highlights from past annual conferences"
+            ],
+            [
+              "seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html",
+              "2025 Annual Conference",
+              "Leading a Smart New Era of IR"
+            ],
+            [
+              "seminar181023-720761-875714-576604-415060-555931-882088-817291.html",
+              "2024 Annual Conference",
+              "Global Vision: Co-Creating a New Era for IR"
+            ],
+            [
+              "seminar181023-720761-875714-576604-415060-555931-882088.html",
+              "2023 Annual Conference",
+              "Annual Conference and International Forum"
+            ]
           ]
         },
         {
-          label: "Earlier Conferences",
-          links: [
-            ["seminar181023-720761-875714-576604-415060.html", "2022 Annual Conference", "Annual Conference and International Forum"],
-            ["seminar181023-720761-875714-576604.html", "2021 Annual Conference", "The Future of ESG is NOW"],
-            ["seminar181023-720761-875714.html", "2020 Annual Conference", "Launch Ceremony of TIRI IR Awards"],
-            ["seminar181023-720761.html", "2019 Annual Conference", "Asia Investor Relations Connection"],
-            ["seminar181023.html", "2018 Inaugural Conference", "Inaugural Conference and Master Forum"]
+          "label": "Earlier Conferences",
+          "links": [
+            [
+              "seminar181023-720761-875714-576604-415060.html",
+              "2022 Annual Conference",
+              "Annual Conference and International Forum"
+            ],
+            [
+              "seminar181023-720761-875714-576604.html",
+              "2021 Annual Conference",
+              "The Future of ESG is NOW"
+            ],
+            [
+              "seminar181023-720761-875714.html",
+              "2020 Annual Conference",
+              "Launch Ceremony of TIRI IR Awards"
+            ],
+            [
+              "seminar181023-720761.html",
+              "2019 Annual Conference",
+              "Asia Investor Relations Connection"
+            ],
+            [
+              "seminar181023.html",
+              "2018 Inaugural Conference",
+              "Inaugural Conference and Master Forum"
+            ]
           ]
         }
       ],
-      figure: ["news-971146-722067.html", "../images/hero-recap.jpg", "2025/10/23　2025 Annual Conference: Leading a Smart New Era of IR", "View Recap"]
+      "figure": [
+        "news-971146-722067.html",
+        "../images/hero-annual-forum.jpg",
+        "2025/10/23　2025 Annual Conference: Leading a Smart New Era of IR",
+        "View Recap"
+      ]
     },
     {
-      href: "trainbod-329824.html",
-      label: "Courses & Services",
-      columns: [
+      "href": "trainbod-329824.html",
+      "label": "Courses & Services",
+      "columns": [
         {
-          label: "Continuing Education",
-          links: [
-            ["trainbod-329824.html", "Board Member & CG Officer Education", "Continuing education for board members and corporate governance officers"],
-            ["trainbod-384680-716109.html", "Accounting Executives Course", "Course sharing: continuing education for accounting executives"]
+          "label": "Continuing Education",
+          "links": [
+            [
+              "trainbod-329824.html",
+              "Board Member & CG Officer Education",
+              "Continuing education for board members and corporate governance officers"
+            ],
+            [
+              "trainbod-384680-716109.html",
+              "Accounting Executives Course",
+              "Course sharing: continuing education for accounting executives"
+            ]
           ]
         },
         {
-          label: "Governance Services",
-          links: [
-            ["bodperform-583064.html", "Board Performance Evaluation", "External board performance evaluation service"],
-            ["corpperform-750901.html", "Corporate Governance Service", "Service for enhancing corporate governance"]
+          "label": "Governance Services",
+          "links": [
+            [
+              "bodperform-583064.html",
+              "Board Performance Evaluation",
+              "External board performance evaluation service"
+            ],
+            [
+              "corpperform-750901.html",
+              "Corporate Governance Service",
+              "Service for enhancing corporate governance"
+            ]
           ]
         }
       ],
-      figure: ["trainbod-329824.html", "../images/seminar-room.jpg", "Continuing education, board evaluation and corporate governance services.", "View Courses"]
+      "figure": [
+        "trainbod-329824.html",
+        "../images/seminar-room.jpg",
+        "Continuing education, board evaluation and corporate governance services.",
+        "View Courses"
+      ]
     },
     {
-      href: "certification-388672.html",
-      label: "Certification & Awards",
-      columns: [
+      "href": "certification-388672.html",
+      "label": "Certification",
+      "columns": [
         {
-          label: "Certification",
-          links: [
-            ["certification-388672.html", "IRC©", "NIRI's international investor relations certification"],
-            ["scholarshipirc-952540.html", "Sponsor for IRC©", "Sponsorship for IRC© candidates"],
-            ["tiric-677070.html", "TIRI Elite Program", "Executive-level IR practical elite program"]
+          "label": "Certification",
+          "links": [
+            [
+              "certification-388672.html",
+              "IRC©",
+              "NIRI's international investor relations certification"
+            ],
+            [
+              "tiric-677070.html",
+              "TIRI Elite Program",
+              "Executive-level IR practical elite program"
+            ]
           ]
         },
         {
-          label: "Awards",
-          links: [
-            ["mission-206783-396345-512343.html", "Awards Overview", "About the TIRI award programs"],
-            ["mission-206783-803349.html", "TIRI Awards", "Annual investor relations awards"],
-            ["mission-206783-766399-942925.html", "TIRI Progress Achievement Award", "Recognizing IR progress of small and mid-cap companies"]
+          "label": "",
+          "links": []
+        }
+      ],
+      "figure": [
+        "certification-388672.html",
+        "../images/seminar-room.jpg",
+        "International IR certification and practical training.",
+        "View Certification"
+      ]
+    },
+    {
+      "href": "mission-206783-396345-512343.html",
+      "label": "Awards",
+      "columns": [
+        {
+          "label": "Awards",
+          "links": [
+            [
+              "mission-206783-396345-512343.html",
+              "Awards Overview",
+              "About the TIRI award programs"
+            ],
+            [
+              "mission-206783-803349.html",
+              "TIRI Awards",
+              "Annual investor relations awards"
+            ],
+            [
+              "mission-206783-766399-942925.html",
+              "TIRI Progress Achievement Award",
+              "Recognizing IR progress of small and mid-cap companies"
+            ]
+          ]
+        },
+        {
+          "label": "",
+          "links": []
+        }
+      ],
+      "figure": [
+        "mission-206783-803349.html",
+        "../images/awards/awards-trophy.jpg",
+        "Recognizing excellence in investor relations.",
+        "View Awards"
+      ]
+    },
+    {
+      "href": "news-387131-325944-831518-306343.html",
+      "label": "IR Library",
+      "columns": [
+        {
+          "label": "Publications",
+          "links": [
+            [
+              "news-387131-325944-897961.html",
+              "TWSE BIMONTHLY",
+              "Columns from the TWSE Securities Service bimonthly"
+            ],
+            [
+              "irupdatestc-146678.html",
+              "NIRI Selected",
+              "Selected articles from NIRI IR Update"
+            ]
+          ]
+        },
+        {
+          "label": "Articles & Interviews",
+          "links": [
+            [
+              "news-387131-325944-831518-306343.html",
+              "Article Sharing",
+              "Articles from members and speakers"
+            ],
+            [
+              "exclusive-interview-ndash-founding-chairman-fu-fu-shen.html",
+              "Exclusive Interview",
+              "Founding Chairman Fu-Fu Shen"
+            ]
           ]
         }
       ],
-      figure: ["certification-388672.html", "../images/event-awards.jpg", "IRC© certification and TIRI Awards — recognition for IR professionals and companies.", "About IRC©"]
+      "figure": [
+        "news-387131-325944-831518-306343.html",
+        "../images/review-r2/media-interview.jpg",
+        "Columns, selected articles and interviews — Taiwan's IR knowledge base.",
+        "Visit IR Library"
+      ]
     },
     {
-      href: "news-387131-325944-831518-306343.html",
-      label: "IR Library",
-      columns: [
+      "href": "membership-567311.html",
+      "label": "Membership",
+      "columns": [
         {
-          label: "Publications",
-          links: [
-            ["news-387131-325944-897961.html", "TWSE BIMONTHLY", "Columns from the TWSE Securities Service bimonthly"],
-            ["irupdatestc-146678.html", "NIRI Selected", "Selected articles from NIRI IR Update"]
+          "label": "Membership",
+          "links": [
+            [
+              "membership-567311.html",
+              "Membership",
+              "Membership categories and fees"
+            ],
+            [
+              "membership-249817-957999.html",
+              "Membership Service",
+              "Services for TIRI members"
+            ],
+            [
+              "benefit-499886.html",
+              "Membership Benefits",
+              "Discounts on courses, certification and services"
+            ],
+            [
+              "join-342161.html",
+              "Join TIRI",
+              "Application process and membership form"
+            ]
           ]
         },
         {
-          label: "Articles & Interviews",
-          links: [
-            ["news-387131-325944-831518-306343.html", "Article Sharing", "Articles from members and speakers"],
-            ["exclusive-interview-ndash-founding-chairman-fu-fu-shen.html", "Exclusive Interview", "Founding Chairman Fu-Fu Shen"]
-          ]
+          "label": "",
+          "links": []
         }
       ],
-      figure: ["news-387131-325944-831518-306343.html", "../images/hero-talk.jpg", "Columns, selected articles and interviews — Taiwan's IR knowledge base.", "Visit IR Library"]
+      "figure": [
+        "join-342161.html",
+        "../images/review-r2/partnership-signing.jpg",
+        "Join TIRI and enjoy member benefits across courses, certification and services.",
+        "Join TIRI"
+      ]
     },
     {
-      href: "membership-567311.html",
-      label: "Membership",
-      columns: [
+      "href": "5th_report-665763.html",
+      "label": "Anniversary",
+      "columns": [
         {
-          label: "Membership",
-          links: [
-            ["membership-567311.html", "Membership", "Membership categories and fees"],
-            ["membership-249817-957999.html", "Membership Service", "Services for TIRI members"],
-            ["benefit-499886.html", "Membership Benefits", "Discounts on courses, certification and services"],
-            ["join-342161.html", "Join TIRI", "Application process and membership form"]
+          "label": "Anniversary Reports",
+          "links": [
+            [
+              "5th_report-665763.html",
+              "Anniversary",
+              "TIRI anniversary annual reports"
+            ],
+            [
+              "5th_report-665763-570037-605322.html",
+              "5th Anniversary",
+              "5th anniversary annual report"
+            ],
+            [
+              "6th_report-665763-570037.html",
+              "6th Anniversary",
+              "6th anniversary annual report"
+            ],
+            [
+              "7th_report-665763-570037-304514.html",
+              "7th Anniversary",
+              "7th anniversary annual report"
+            ]
           ]
         },
-        { label: "", links: [] }
-      ],
-      figure: ["join-342161.html", "../images/hero-handshake.jpg", "Join TIRI and enjoy member benefits across courses, certification and services.", "Join TIRI"]
-    },
-    {
-      href: "5th_report-665763.html",
-      label: "Anniversary",
-      columns: [
         {
-          label: "Anniversary Reports",
-          links: [
-            ["5th_report-665763.html", "Anniversary", "TIRI anniversary annual reports"],
-            ["5th_report-665763-570037-605322.html", "5th Anniversary", "5th anniversary annual report"],
-            ["6th_report-665763-570037.html", "6th Anniversary", "6th anniversary annual report"],
-            ["7th_report-665763-570037-304514.html", "7th Anniversary", "7th anniversary annual report"]
-          ]
-        },
-        { label: "", links: [] }
+          "label": "",
+          "links": []
+        }
       ],
-      figure: ["5th_report-665763.html", "../images/hero-chart.jpg", "TIRI anniversary reports — annual activities and IR insights, read online or download.", "View Reports"]
+      "figure": [
+        "5th_report-665763.html",
+        "../images/hero-chart.jpg",
+        "TIRI anniversary reports — annual activities and IR insights, read online or download.",
+        "View Reports"
+      ]
     }
   ];
 
   var drawerLinksEn = [
-    ["Home", "en.html", []],
-    ["About TIRI", "mission_en.html", [["mission_en.html", "About TIRI"], ["board_en.html", "Board of Directors"], ["committee-817915.html", "Functional Committee"], ["services_en.html", "Functions and Services"], ["contact-197913.html", "Contact"]]],
-    ["Recap", "news-971146-722067.html", [["news-971146-722067.html", "Event Recap"], ["seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html", "2025 Annual Conference"], ["seminar181023-720761-875714-576604-415060-555931-882088-817291.html", "2024 Annual Conference"], ["seminar181023-720761-875714-576604-415060-555931-882088.html", "2023 Annual Conference"], ["seminar181023-720761-875714-576604-415060.html", "2022 Annual Conference"], ["seminar181023-720761-875714-576604.html", "2021 Annual Conference"], ["seminar181023-720761-875714.html", "2020 Annual Conference"], ["seminar181023-720761.html", "2019 Annual Conference"], ["seminar181023.html", "2018 Inaugural Conference"]]],
-    ["Courses & Services", "trainbod-329824.html", [["trainbod-329824.html", "Board Member & CG Officer Education"], ["trainbod-384680-716109.html", "Accounting Executives Course"], ["bodperform-583064.html", "Board Performance Evaluation"], ["corpperform-750901.html", "Corporate Governance Service"]]],
-    ["Certification & Awards", "certification-388672.html", [["certification-388672.html", "IRC©"], ["scholarshipirc-952540.html", "Sponsor for IRC©"], ["tiric-677070.html", "TIRI Elite Program"], ["mission-206783-396345-512343.html", "Awards Overview"], ["mission-206783-803349.html", "TIRI Awards"], ["mission-206783-766399-942925.html", "TIRI Progress Achievement Award"]]],
-    ["IR Library", "news-387131-325944-831518-306343.html", [["news-387131-325944-897961.html", "TWSE BIMONTHLY"], ["irupdatestc-146678.html", "NIRI Selected"], ["news-387131-325944-831518-306343.html", "Article Sharing"], ["exclusive-interview-ndash-founding-chairman-fu-fu-shen.html", "Exclusive Interview"]]],
-    ["Membership", "membership-567311.html", [["membership-567311.html", "Membership"], ["membership-249817-957999.html", "Membership Service"], ["benefit-499886.html", "Membership Benefits"], ["join-342161.html", "Join TIRI"]]],
-    ["Anniversary", "5th_report-665763.html", [["5th_report-665763.html", "Anniversary"], ["5th_report-665763-570037-605322.html", "5th Anniversary"], ["6th_report-665763-570037.html", "6th Anniversary"], ["7th_report-665763-570037-304514.html", "7th Anniversary"]]]
+    [
+      "Home",
+      "en.html",
+      []
+    ],
+    [
+      "About TIRI",
+      "mission_en.html",
+      [
+        [
+          "mission_en.html",
+          "About TIRI"
+        ],
+        [
+          "board_en.html",
+          "Board of Directors"
+        ],
+        [
+          "committee-817915.html",
+          "Functional Committee"
+        ],
+        [
+          "services_en.html",
+          "Functions and Services"
+        ],
+        [
+          "contact-197913.html",
+          "Contact"
+        ]
+      ]
+    ],
+    [
+      "Recap",
+      "news-971146-722067.html",
+      [
+        [
+          "news-971146-722067.html",
+          "Event Recap"
+        ],
+        [
+          "seminar181023-720761-875714-576604-415060-555931-912810-913907-187124.html",
+          "2025 Annual Conference"
+        ],
+        [
+          "seminar181023-720761-875714-576604-415060-555931-882088-817291.html",
+          "2024 Annual Conference"
+        ],
+        [
+          "seminar181023-720761-875714-576604-415060-555931-882088.html",
+          "2023 Annual Conference"
+        ],
+        [
+          "seminar181023-720761-875714-576604-415060.html",
+          "2022 Annual Conference"
+        ],
+        [
+          "seminar181023-720761-875714-576604.html",
+          "2021 Annual Conference"
+        ],
+        [
+          "seminar181023-720761-875714.html",
+          "2020 Annual Conference"
+        ],
+        [
+          "seminar181023-720761.html",
+          "2019 Annual Conference"
+        ],
+        [
+          "seminar181023.html",
+          "2018 Inaugural Conference"
+        ]
+      ]
+    ],
+    [
+      "Courses & Services",
+      "trainbod-329824.html",
+      [
+        [
+          "trainbod-329824.html",
+          "Board Member & CG Officer Education"
+        ],
+        [
+          "trainbod-384680-716109.html",
+          "Accounting Executives Course"
+        ],
+        [
+          "bodperform-583064.html",
+          "Board Performance Evaluation"
+        ],
+        [
+          "corpperform-750901.html",
+          "Corporate Governance Service"
+        ]
+      ]
+    ],
+    [
+      "Certification",
+      "certification-388672.html",
+      [
+        [
+          "certification-388672.html",
+          "IRC©"
+        ],
+        [
+          "tiric-677070.html",
+          "TIRI Elite Program"
+        ]
+      ]
+    ],
+    [
+      "Awards",
+      "mission-206783-396345-512343.html",
+      [
+        [
+          "mission-206783-396345-512343.html",
+          "Awards Overview"
+        ],
+        [
+          "mission-206783-803349.html",
+          "TIRI Awards"
+        ],
+        [
+          "mission-206783-766399-942925.html",
+          "TIRI Progress Achievement Award"
+        ]
+      ]
+    ],
+    [
+      "IR Library",
+      "news-387131-325944-831518-306343.html",
+      [
+        [
+          "news-387131-325944-897961.html",
+          "TWSE BIMONTHLY"
+        ],
+        [
+          "irupdatestc-146678.html",
+          "NIRI Selected"
+        ],
+        [
+          "news-387131-325944-831518-306343.html",
+          "Article Sharing"
+        ],
+        [
+          "exclusive-interview-ndash-founding-chairman-fu-fu-shen.html",
+          "Exclusive Interview"
+        ]
+      ]
+    ],
+    [
+      "Membership",
+      "membership-567311.html",
+      [
+        [
+          "membership-567311.html",
+          "Membership"
+        ],
+        [
+          "membership-249817-957999.html",
+          "Membership Service"
+        ],
+        [
+          "benefit-499886.html",
+          "Membership Benefits"
+        ],
+        [
+          "join-342161.html",
+          "Join TIRI"
+        ]
+      ]
+    ],
+    [
+      "Anniversary",
+      "5th_report-665763.html",
+      [
+        [
+          "5th_report-665763.html",
+          "Anniversary"
+        ],
+        [
+          "5th_report-665763-570037-605322.html",
+          "5th Anniversary"
+        ],
+        [
+          "6th_report-665763-570037.html",
+          "6th Anniversary"
+        ],
+        [
+          "7th_report-665763-570037-304514.html",
+          "7th Anniversary"
+        ]
+      ]
+    ]
   ];
 
   /* 介面文字（依頁面語言切換；連結資料另見 navigation / navigationEn） */
@@ -552,17 +1278,18 @@
         { label: "關於 TIRI", links: [
           ["about.html", "協會簡介"],
           ["board.html", "理監事成員"],
-          ["about.html#committee", "功能委員會"]
+          ["committee.html", "功能委員會"]
         ] },
         { label: "相關資訊", links: [
           ["news.html", "活動訊息"],
           ["trainbod.html", "課程與服務"],
-          ["certification.html", "證照獎項"],
+          ["certification.html", "證照"],
+          ["mission-206783-396345.html", "獎項"],
           ["knowledge.html", "專業分享"]
         ] },
         { label: "會員服務", links: [
-          ["join.html", "加入會員"],
-          ["benefit.html", "會員專屬優惠"]
+          [null, "會員登入"],
+          ["benefit.html", "會員權利"]
         ] }
       ],
       copyright: 'Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a>'
@@ -584,7 +1311,8 @@
         { label: "Information", links: [
           ["news-971146-722067.html", "Event Recap"],
           ["trainbod-329824.html", "Courses & Services"],
-          ["certification-388672.html", "Certification & Awards"],
+          ["certification-388672.html", "Certification"],
+          ["mission-206783-396345-512343.html", "Awards"],
           ["news-387131-325944-831518-306343.html", "IR Library"]
         ] },
         { label: "Membership", links: [
@@ -601,10 +1329,10 @@
     var cols = d.columns.map(function (col) {
       return '<div class="footer-col"><h3>' + col.label + '</h3><ul>' +
         col.links.map(function (link) {
-          return '<li><a href="' + link[0] + '">' + link[1] + '</a></li>';
+          return link[0] ? '<li><a href="' + link[0] + '">' + link[1] + '</a></li>' : '<li><span class="footer-label">' + link[1] + '</span></li>';
         }).join("") + '</ul></div>';
     }).join("");
-    return '<footer class="site-footer"><div class="container">' +
+    return '<footer class="site-footer" id="footer"><div class="container">' +
       '<div class="footer-grid">' +
       '<div class="footer-brand">' +
       '<img src="../images/tiri-logo.png" alt="TIRI 台灣投資人關係協會" width="120" height="71">' +

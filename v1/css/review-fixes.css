@@ -1,0 +1,113 @@
+/* First review corrections — 2026-09-10. */
+.footer-label{display:inline-block;padding:4px 0;color:inherit}
+.course-review-cards img{object-fit:contain;background:#fff}
+.board-appointments{display:grid;gap:12px;margin-top:12px;text-align:left;width:100%}
+.board-appointment{border-top:1px solid var(--line);padding-top:11px;min-width:0}
+.board-appointment .company{font-size:14px;font-weight:600;line-height:1.65;color:var(--ink);margin:0}
+.board-appointment .position{font-size:13px;line-height:1.65;color:var(--ink-64);margin:4px 0 0}
+.board-lead .board-appointment .company{font-size:18px}.board-lead .board-appointment .position{font-size:16px}
+.board-group .has-photo{align-items:stretch}.board-appointment p{overflow-wrap:anywhere}
+.scholarship-layout{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:44px 60px;padding-block:26px}
+.scholarship-intro h2{font-size:clamp(28px,4vw,42px);margin:10px 0 24px}.scholarship-layout p,.scholarship-layout .paragraph{line-height:1.9}
+.scholarship-facts{display:grid;grid-template-columns:1fr;align-content:center;background:#f1eaf5;padding:30px 34px;gap:25px}
+.scholarship-facts span{display:block;color:var(--ink-64);font-size:14px}.scholarship-facts strong{display:block;font-size:38px;color:var(--purple);font-weight:500;line-height:1.5}.scholarship-facts small{font-size:18px}
+.scholarship-application,.scholarship-details,.scholarship-why{grid-column:1/-1}.scholarship-layout h3{font-size:23px;font-weight:500;margin-bottom:22px}
+.scholarship-application ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:0}
+.scholarship-application li{border-top:2px solid var(--purple);padding-top:20px;font-size:15px;line-height:1.8;overflow-wrap:anywhere}
+.scholarship-step-number{display:block;font-family:var(--mono);font-size:28px;color:var(--purple);margin-bottom:12px}
+.scholarship-layout a{color:var(--purple);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.scholarship-details{display:grid;grid-template-columns:2fr 1fr;gap:50px;border-top:1px solid var(--line);padding-top:30px}.scholarship-details ul{padding-left:20px;line-height:1.9}.scholarship-details li{margin:8px 0}
+.scholarship-why{border-top:1px solid var(--line);padding-top:18px}.scholarship-why summary{cursor:pointer;font-size:18px;padding:12px 0}.scholarship-why .paragraph{max-width:960px;margin-top:16px}
+.progress-rosters{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:36px;width:100%;max-width:none!important}
+.progress-rosters .roster{min-width:0;background:#f6f4f7;padding:28px;border-top:3px solid var(--purple)}
+.progress-rosters h3{font-size:22px;line-height:1.5;margin:0 0 22px}.progress-rosters h3 small{display:block;color:var(--ink-64);font-size:13px;margin-top:6px;font-weight:400}
+.progress-rosters .roster ul{list-style:none;padding:0}.progress-rosters .roster li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:15px;align-items:start;border-top:1px solid var(--line);padding:15px 0;font-size:16px;line-height:1.7}
+.progress-rosters .code{font-family:var(--mono);font-size:14px;padding-top:2px;color:var(--purple)}.award-company{min-width:0;overflow-wrap:anywhere}.award-company small{display:block;color:var(--ink-64);font-size:12px;line-height:1.6;margin-top:4px}
+.benefit-review-section{padding:50px 0;border-top:1px solid var(--line)}.benefit-review-section:first-child{padding-top:0;border:0}.benefit-review-heading{margin-bottom:26px}.benefit-review-heading h2{font-size:clamp(26px,3.5vw,38px);margin:8px 0 16px}.benefit-review-heading .note{max-width:870px;line-height:1.8}
+.benefit-overview{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:42px;align-items:start}.benefit-overview>img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.benefit-overview>.benefit-rows{margin:0}.benefit-overview dt{font-size:18px}.benefit-overview dd{font-size:15px;line-height:1.85}
+.benefit-partner-index{display:grid;grid-template-columns:1fr 1fr;gap:12px}.benefit-partner-index a{display:flex;align-items:center;justify-content:space-between;padding:17px 18px;min-height:61px;background:#f3edf6;gap:12px;color:var(--purple);font-size:15px}.benefit-partner-index a:hover{background:#e9ddef}
+.benefit-offers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px;margin-top:40px}.benefit-offers-grid>div{display:block;border-top:2px solid var(--purple);padding:20px 0;scroll-margin-top:130px}.benefit-offers-grid dt{font-size:19px;margin-bottom:12px}.benefit-offers-grid dd{margin:0;font-size:15px;line-height:1.9}
+.flow-image{display:block;width:100%;height:auto}.flow-figure{margin:30px 0}.flow-figure>a{display:block}.flow-figure figcaption{font-size:13px;color:var(--ink-64);margin-top:14px}.flow-text-equivalent{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(max-width:900px){.scholarship-layout{gap:30px}.scholarship-application ol{grid-template-columns:repeat(2,minmax(0,1fr))}.benefit-overview{gap:28px}.benefit-partner-index a{font-size:14px;padding:13px 14px}.progress-rosters{gap:22px}.progress-rosters .roster{padding:22px}}
+@media(max-width:640px){.scholarship-layout,.scholarship-details,.benefit-overview,.benefit-offers-grid,.progress-rosters{grid-template-columns:minmax(0,1fr)!important}.scholarship-application ol{grid-template-columns:1fr}.scholarship-facts{grid-template-columns:1fr 1fr;padding:24px;gap:18px}.scholarship-facts strong{font-size:27px}.scholarship-facts small{font-size:14px}.benefit-review-section{padding-block:36px}.benefit-overview>img{aspect-ratio:3/2}.benefit-offers-grid{gap:10px}.progress-rosters .roster li{grid-template-columns:48px minmax(0,1fr)}.board-appointments{text-align:left}.board-lead .board-appointment .company{font-size:16px}.board-lead .board-appointment .position{font-size:14px}}
+.partner-logo-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0 64px}
+.partner-logo-grid>a,.partner-logo-item{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#fff;padding:28px 18px;text-align:center;text-decoration:none;color:var(--ink);font-size:13px;transition:background .2s}
+.partner-logo-grid>a:hover{background:#f5f0f7}.partner-logo-grid img{width:100%;height:76px;object-fit:contain}.partner-wordmark{height:76px;display:flex;align-items:center;font-size:19px}.partner-logo-grid>a:focus-visible{outline:3px solid var(--purple);outline-offset:-3px}
+@media(max-width:900px){.partner-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.partner-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-logo-grid>a,.partner-logo-item{padding:20px 12px}.partner-logo-grid img{height:64px}}
+.event-banner-row.archive-text-row{grid-template-columns:70px minmax(0,1fr);gap:24px;min-height:110px;padding:26px 20px;background:linear-gradient(90deg,#f3eef5,transparent 75%)}
+.event-banner-row.archive-text-row time{font-family:var(--font-serif,serif);color:var(--purple);font-size:36px}.event-banner-row.archive-text-row h3{font-size:19px}.event-banner-row.archive-text-row>div{grid-column:auto}
+article.archive-text-row{cursor:default}.event-banner-row.archive-text-row p{font-size:13px}
+@media(max-width:640px){.event-banner-row.archive-text-row{grid-template-columns:40px minmax(0,1fr);gap:14px;padding:20px 12px}.event-banner-row.archive-text-row h3{font-size:17px}}
+/* Second recheck — 2026-09-10. */
+.footer-col a,.footer-col .footer-label,.footer-brand .footer-brand-links a{font-size:14.5px;font-weight:400;line-height:1.7}
+.partner-logo-grid>a{background:#f6f3f7}.partner-logo-grid img{height:76px;object-fit:contain}
+.committee-feature.committee-introduction{grid-template-columns:1fr;border-left:3px solid var(--purple);padding:8px 0 8px 28px;max-width:900px}
+.committee-more .revision-card{padding:24px;background:#f5f1f7;border-top:1px solid #d9cedf}.committee-more .revision-card h3{margin-top:10px}
+.scene-portrait-safe{object-fit:contain!important;object-position:center!important;background:#f0edf1}
+.scene-full-frame{object-fit:contain!important;object-position:center!important;background:#f0edf1}
+.photo-story>img{object-fit:contain;background:#f0edf1}
+.partner-offer-list{display:block;margin:40px 0 0;border-top:1px solid #cfbfd9}
+.partner-offer-list>.partner-offer{display:grid;grid-template-columns:minmax(190px,1fr) minmax(0,3fr);gap:40px;margin:0;padding:30px 0;border-bottom:1px solid #ded3e4;scroll-margin-top:120px}
+.partner-identity{display:grid;grid-template-columns:30px 1fr;gap:12px 16px;align-content:start;margin:0}
+.partner-identity .partner-number{font-family:var(--mono);font-size:12px;color:#91799f;padding-top:5px}
+.partner-identity img{width:100%;max-width:160px;height:64px;object-fit:contain;object-position:left center}
+.partner-identity a{grid-column:2;font-size:16px;line-height:1.65;margin:0}
+.partner-offer-list .partner-terms{margin:0;font-size:15px;line-height:2;min-width:0}
+.partner-offer-list .offer-summary{display:table;background:#efe7f3;color:#5a396e;padding:6px 14px;margin:0 0 14px;font-weight:500;font-size:16px;line-height:1.7}
+.offer-label{display:block;color:#897591;font-size:12px;letter-spacing:.08em;margin-bottom:6px}
+.professional-flow{max-width:100%}.flow-figure:has(img[src*="governance-flow"]){max-width:750px;margin-inline:auto}
+.news-recent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px}
+.news-recent-card{display:flex;flex-direction:column;border:1px solid #ded4e4;background:#faf8fb;min-width:0;text-decoration:none}
+.news-recent-card:hover{border-color:var(--purple)}.news-recent-card img{width:100%;aspect-ratio:2/1;object-fit:contain;background:white;height:auto}
+.news-recent-card>div{padding:22px}.news-recent-card time{display:block;color:var(--purple);font-family:var(--mono);font-size:15px;margin-bottom:14px}
+.news-recent-card h3{font-size:21px;line-height:1.6;font-weight:500}.news-recent-card p{font-size:13px;line-height:1.7;margin-top:16px;color:var(--ink-64)}
+.news-archive .month-group{position:relative;border-left:1px solid #d9cde0;padding-left:32px;margin-left:8px}
+.news-archive .month-group:before{content:'';position:absolute;left:-5px;top:28px;width:9px;height:9px;border-radius:50%;background:var(--purple)}
+.news-archive .month-heading{padding-top:20px}.news-archive .event-banner-row img{object-fit:contain;background:#fff}.news-empty{color:var(--ink-64);padding:24px 0}
+@media(max-width:900px){.news-recent-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-offer-list>.partner-offer{gap:26px;grid-template-columns:180px minmax(0,1fr)}}
+@media(max-width:640px){.news-recent-grid{grid-template-columns:1fr}.partner-offer-list>.partner-offer{grid-template-columns:1fr;gap:20px;padding:26px 0}.partner-identity{grid-template-columns:28px 120px minmax(0,1fr);align-items:center}.partner-identity a{grid-column:3;font-size:15px}.partner-identity img{max-width:120px;height:56px}.partner-terms{padding-left:0}.news-archive .month-group{padding-left:16px;margin-left:5px}.news-recent-card h3{font-size:19px}.committee-feature.committee-introduction{padding-left:20px}}
+.lecturer-photo-frame{width:140px;height:168px;max-width:100%;display:flex;align-items:flex-end;justify-content:center;background:#f3eff5;border:1px solid #ded3e4;border-radius:4px;overflow:hidden;isolation:isolate}
+.lecturer-grid .lecturer-photo-frame img{width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;background:transparent;aspect-ratio:auto}
+.lecturer-grid .white-backdrop-blend{mix-blend-mode:multiply}
+@media(max-width:640px){.lecturer-photo-frame{width:120px;height:145px}}
+.flow-figure.flow-governance{max-width:740px;margin-inline:auto}
+
+/* Third recheck: same-image blurred backdrops, complete foreground photos. */
+
+.blurred-photo{position:relative;display:block;isolation:isolate;overflow:hidden;background:#f0edf1;width:100%;min-width:0}
+.blurred-photo::before,.committee-banner::before{content:"";position:absolute;inset:-22px;background-image:var(--scene-image);background-size:cover;background-position:center;filter:blur(18px);pointer-events:none;z-index:0}
+.blurred-photo>img{position:relative;z-index:1;display:block;width:100%!important;height:100%!important;max-width:100%;margin:0!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:transparent!important;mix-blend-mode:normal}
+.story-photo,.benefit-photo{aspect-ratio:4/3}
+.feature-photo,.card-photo{aspect-ratio:3/2}
+.feature-photo{margin-bottom:24px}
+.article-photo{height:200px;margin-bottom:20px}
+.lecturer-photo-frame.blurred-photo{width:140px;height:168px}
+.lecturer-photo-frame.blurred-photo::before{filter:blur(12px);inset:-15px}
+.page-hero.committee-banner{isolation:isolate;overflow:hidden;background:#272331}
+.committee-banner::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(23,20,31,.4),rgba(23,20,31,.18) 38%,rgba(23,20,31,.84));pointer-events:none}
+.committee-banner-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;z-index:1}
+.committee-banner>.container{position:relative;z-index:3}
+@media(max-width:640px){.lecturer-photo-frame.blurred-photo{width:120px;height:145px}.benefit-photo{aspect-ratio:3/2}}
+
+/* Fourth recheck: smaller image-and-text related committee cards. */
+
+.committee-more .revision-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.committee-more .revision-card{padding:0 0 20px;background:transparent;border-top:0;border-bottom:1px solid var(--line)}
+.committee-more .revision-card>.blurred-photo{padding:0;aspect-ratio:3/2}
+.committee-more .revision-card>div:not(.blurred-photo){padding-top:16px}
+.committee-more .revision-card h3{font-size:20px;margin:8px 0;line-height:1.45}
+.committee-more .revision-card p{font-size:14px;line-height:1.75}
+.committee-more .revision-card .eyebrow{font-size:11px;line-height:1.6}
+.committee-more .revision-card:focus-visible{outline:2px solid var(--purple);outline-offset:5px}
+@media(max-width:960px){.committee-more .revision-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:640px){.committee-more{margin-top:48px}.committee-more .revision-cards{gap:24px 16px}.committee-more .revision-card h3{font-size:18px}.committee-more .revision-card>div:not(.blurred-photo){padding-top:12px}.committee-more .revision-card .eyebrow{min-height:3.2em}}
+
+/* Director education: keep all nine photos visible, including on phones. */
+
+.page-hero.training-collage-hero{isolation:isolate;overflow:hidden;background:#211b29}
+.training-collage-hero::before{content:"";position:absolute;inset:-28px;background-image:var(--hero-img);background-size:cover;background-position:center;filter:blur(24px);opacity:.6;z-index:0;pointer-events:none}
+.training-collage-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;z-index:1}
+.training-collage-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,20,31,.48),rgba(23,20,31,.1) 40%,rgba(23,20,31,.84));z-index:2;pointer-events:none}
+.training-collage-hero>.container{position:relative;z-index:3}
+@media(max-width:640px){body:has(.training-collage-hero) .page-hero.training-collage-hero{min-height:520px}.training-collage-image{object-position:center 42%}.training-collage-hero::after{background:linear-gradient(180deg,rgba(23,20,31,.55),rgba(23,20,31,.05) 34%,rgba(23,20,31,.9) 80%)} }

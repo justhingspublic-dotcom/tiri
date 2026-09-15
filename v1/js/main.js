@@ -219,6 +219,7 @@
     }
 
     /* 事件路徑上有可捲動的容器（搜尋結果、下拉面板…）→ 交給原生。
+       有 overscroll-behavior 的容器即使到達邊界，也不把滾輪轉成整頁捲動。
        觸控板一秒可發上百個 wheel，getComputedStyle 走訪只在 target 改變或超過 250ms 才重做，
        其餘只讀 scrollTop 判斷該方向還能不能捲。 */
     var scrollableCache = { target: null, until: 0, containers: [], locked: false };
@@ -226,8 +227,12 @@
     function findScrollableContainers(node) {
       var found = [];
       while (node && node !== document.body && node !== document.documentElement && node.nodeType === 1) {
-        var oy = getComputedStyle(node).overflowY;
-        if ((oy === "auto" || oy === "scroll" || oy === "overlay") && node.scrollHeight > node.clientHeight + 1) found.push(node);
+        var style = getComputedStyle(node);
+        var oy = style.overflowY;
+        var contained = style.overscrollBehaviorY === "contain" || style.overscrollBehaviorY === "none";
+        if ((oy === "auto" || oy === "scroll" || oy === "overlay") && (contained || node.scrollHeight > node.clientHeight + 1)) {
+          found.push({ node: node, contained: contained });
+        }
         node = node.parentNode;
       }
       return found;
@@ -242,10 +247,11 @@
       scrollableCache.locked = h === "hidden" || b === "hidden" || h === "clip" || b === "clip";
     }
 
-    function containerCanScroll(deltaY) {
+    function containerOwnsScroll(deltaY) {
       var list = scrollableCache.containers;
       for (var i = 0; i < list.length; i++) {
-        var node = list[i];
+        if (list[i].contained) return true;
+        var node = list[i].node;
         if (deltaY < 0 ? node.scrollTop > 0 : node.scrollTop + node.clientHeight < node.scrollHeight - 1) return true;
       }
       return false;
@@ -257,7 +263,7 @@
       var now = event.timeStamp || performance.now();
       if (event.target !== scrollableCache.target || now > scrollableCache.until) refreshScrollableCache(event.target, now);
       if (scrollableCache.locked) return;
-      if (containerCanScroll(event.deltaY)) { stopInertia(); return; }
+      if (containerOwnsScroll(event.deltaY)) { stopInertia(); return; }
 
       var dy = event.deltaY;
       if (event.deltaMode === 1) dy *= 40;                       /* lines → px */
@@ -893,16 +899,37 @@
   var filterButtons = document.querySelectorAll(".filter-btn");
   var insightCards = document.querySelectorAll(".insight-card[data-category], .event-item[data-category]");
   var filterTimer = null;
+  var librarySearch = document.querySelector('[data-library-search]');
+  var libraryCount = document.querySelector('[data-library-count]');
+  var libraryEmpty = document.querySelector('[data-library-empty]');
+  function currentCategory() {
+    var selected = document.querySelector('.filter-btn[aria-pressed="true"]');
+    return selected ? selected.getAttribute('data-filter') : 'all';
+  }
+  if (librarySearch) {
+    librarySearch.addEventListener('input', function () { applyFilter(currentCategory()); });
+    document.querySelector('[data-library-clear]').addEventListener('click', function () {
+      librarySearch.value = '';
+      filterButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-filter') === 'all')); });
+      applyFilter('all'); librarySearch.focus();
+    });
+    applyFilter('all');
+  }
 
   function applyFilter(category) {
     function swap() {
+      var count = 0;
+      var query = librarySearch ? librarySearch.value.trim().toLocaleLowerCase() : "";
       insightCards.forEach(function (card) {
-        var match = category === "all" || card.getAttribute("data-category") === category;
+        var match = (category === "all" || card.getAttribute("data-category") === category) && (!query || card.textContent.toLocaleLowerCase().includes(query));
+        if (match) count++;
         card.classList.toggle("is-hidden", !match);
       });
       insightCards.forEach(function (card) {
         card.classList.remove("is-hiding");
       });
+      if (libraryCount) libraryCount.textContent = "共 " + count + " 篇文章";
+      if (libraryEmpty) libraryEmpty.hidden = count !== 0;
     }
 
     if (reduceMotion) {
@@ -1018,7 +1045,7 @@
   document.addEventListener("click", function (e) { if (!picker.contains(e.target)) close(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(false); });
 
-  var wanted = new URLSearchParams(window.location.search).get("term") || window.location.hash.replace("#", "");
+  var wanted = new URLSearchParams(window.location.search).get("term") || window.location.hash.replace(/^#(?:edition-)?/, "");
   if (!apply(wanted)) {
     var preset = menu.querySelector("[aria-selected='true']") || options[0];
     apply(preset.getAttribute("data-value"));
