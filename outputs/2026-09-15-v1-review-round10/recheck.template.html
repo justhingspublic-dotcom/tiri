@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="light" name="color-scheme"/>
+<title>TIRI v1｜第十輪複檢</title>
+<link href="recheck.css?v=20260915-r10b" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#review-list">跳到複檢項目</a>
+<main>
+<header>
+<div class="masthead"><span class="brand">TIRI <span>v1</span></span><span>驗收工作區 · 2026.09.15</span></div>
+<div class="heading"><div><p class="eyebrow">REVIEW / 10</p><h1>第十輪複檢</h1><p class="intro">第 32 項第一屆 20 家正式得獎名單，以及第 46 項 The Icons 中文會員優惠與 Logo 均已確認通過。英文正式資料等待客戶提供，其餘 44 項維持通過。</p></div><div class="export-actions"><button class="primary" id="export">匯出複檢結果 ↓</button><button id="import">匯入複檢紀錄</button><input accept=".json,application/json" hidden="" id="import-file" type="file"/></div></div>
+<div aria-label="複檢進度" class="stats">
+<div><strong id="remaining">0</strong><span>待複檢</span></div>
+<div><strong id="rechecked">2</strong><span>本輪已通過</span></div>
+<div><strong id="accepted">44</strong><span>此前已通過</span></div>
+<div><strong id="waiting">0</strong><span>等資料主項目</span></div>
+</div>
+<p class="delivery-notice"><strong>目前進度</strong><span id="delivery-notice">本輪修改與先前通過紀錄都已整理。</span></p>
+<details class="help"><summary>勾選如何保存？</summary><p>自動保存在目前這個瀏覽器。同一台電腦可用 Chrome、Safari 等外部瀏覽器開啟這個網址；換瀏覽器時，先匯出，再到另一個瀏覽器匯入。檢查完請把匯出的 JSON 檔傳給我。</p><p>第 32 項與第 46 項本輪交付內容已依使用者對話確認通過；其餘 44 項沿用已通過紀錄。</p></details>
+<details class="help client-confirmations" id="client-confirmations"><summary>本輪 2 項已確認通過</summary><p>32：第一屆潛力進展獎 20 家正式得獎企業已通過；第二屆維持入選。</p><p>46：The Icons 中文會員優惠與 Logo 正片疊底已通過。</p><p>英文說明等待客戶正式提供；英文頁目前維持原本 10 家，未使用自行翻譯內容。</p></details></header>
+<section aria-label="項目篩選" class="workspace">
+<div class="toolbar"><div aria-label="複檢篩選" class="filters" role="group"><button aria-pressed="false" data-filter="todo">待複檢 <span>0</span></button><button aria-pressed="true" data-filter="done">本輪已通過 <span>2</span></button><button aria-pressed="false" data-filter="accepted">原已通過 <span>44</span></button><button aria-pressed="false" data-filter="waiting">等資料 <span>0</span></button><button aria-pressed="false" data-filter="all">全部 <span>46</span></button></div><div class="search"><label for="search">搜尋項目</label><input autocomplete="off" id="search" placeholder="編號、頁面或修改內容" type="search"/></div></div>
+<div class="list-meta"><p aria-live="polite" id="result-count" role="status"></p><p aria-live="polite" id="save-status" role="status">自動儲存於此瀏覽器</p></div>
+<p class="error" hidden="" id="error" role="alert"></p>
+<div id="review-list" tabindex="-1"></div>
+<div class="empty" hidden="" id="empty"><h2>這裡目前沒有項目</h2><p id="empty-message">換個篩選條件，或清除搜尋文字。</p><button id="show-all">查看全部項目</button></div>
+</section>
+<footer><p>檢查完成後，匯出結果並把 JSON 檔傳給我。</p><button class="primary" id="export-bottom">匯出複檢結果 ↓</button><div class="footer-links"><a href="../2026-09-15-v1-review-round9/第九輪複檢.html" rel="noopener" target="_blank">第九輪複檢頁 ↗</a><a href="../2026-09-14-v1-review-round8/第八輪複檢.html" rel="noopener" target="_blank">第八輪複檢頁 ↗</a><a href="../2026-09-14-v1-review-round7/第七輪複檢.html" rel="noopener" target="_blank">第七輪複檢頁 ↗</a><a href="../2026-09-14-v1-review-round6/第六輪複檢.html" rel="noopener" target="_blank">第六輪複檢頁 ↗</a><a href="../2026-09-11-v1-review-round5/第五輪複檢.html" rel="noopener" target="_blank">第五輪複檢頁 ↗</a><a href="剩餘待辦與補件.md" rel="noopener" target="_blank">剩餘待辦與補件 ↗</a><a href="本輪修改紀錄.md" rel="noopener" target="_blank">本輪修改紀錄 ↗</a><a href="圖片來源與處理紀錄.md" rel="noopener" target="_blank">圖片來源與處理 ↗</a><a href="../2026-09-10-v1-review-round4/第四輪複檢.html">第四輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round3/第三輪複檢.html" rel="noopener" target="_blank">第三輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round2/第二輪複檢.html" rel="noopener" target="_blank">第二輪複檢頁 ↗</a><a href="../2026-09-10-v1-review-round1/第一輪複檢.html" rel="noopener" target="_blank">第一輪複檢頁 ↗</a><a href="../2026-09-09-v1-revision/驗收入口.html" rel="noopener" target="_blank">最初驗收頁 ↗</a><a download="" href="開啟複檢.command">下載本機開啟捷徑</a><a href="實作備註-最後檢視.md" rel="noopener" target="_blank">實作備註（最後再看） ↗</a></div></footer>
+</main>
+<noscript><p>請啟用 JavaScript 才能勾選、儲存與匯出複檢結果。</p></noscript>
+<script id="review-data" type="application/json">__RECHECK_DATA__</script>
+<script src="recheck.js?v=20260915-r10b"></script>
+</body>
+</html>

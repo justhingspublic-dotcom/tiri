@@ -56,7 +56,6 @@ article.archive-text-row{cursor:default}.event-banner-row.archive-text-row p{fon
 .partner-offer-list .partner-terms{margin:0;font-size:15px;line-height:2;min-width:0}
 .partner-offer-list .offer-summary{display:table;background:#efe7f3;color:#5a396e;padding:6px 14px;margin:0 0 14px;font-weight:500;font-size:16px;line-height:1.7}
 .offer-label{display:block;color:#897591;font-size:12px;letter-spacing:.08em;margin-bottom:6px}
-.partner-terms .offer-description{margin:0 0 12px}.partner-terms .offer-services{margin:0 0 14px;padding-inline-start:1.35em}.partner-terms .offer-services li+li{margin-top:8px}.partner-terms .offer-member-benefit{margin:0;padding:14px 16px;border-inline-start:3px solid var(--purple);background:#f8f4fa}
 .professional-flow{max-width:100%}.flow-figure:has(img[src*="governance-flow"]){max-width:750px;margin-inline:auto}
 .news-recent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px}
 .news-recent-card{display:flex;flex-direction:column;border:1px solid #ded4e4;background:#faf8fb;min-width:0;text-decoration:none}
@@ -70,8 +69,7 @@ article.archive-text-row{cursor:default}.event-banner-row.archive-text-row p{fon
 @media(max-width:640px){.news-recent-grid{grid-template-columns:1fr}.partner-offer-list>.partner-offer{grid-template-columns:1fr;gap:20px;padding:26px 0}.partner-identity{grid-template-columns:28px 120px minmax(0,1fr);align-items:center}.partner-identity a{grid-column:3;font-size:15px}.partner-identity img{max-width:120px;height:56px}.partner-terms{padding-left:0}.news-archive .month-group{padding-left:16px;margin-left:5px}.news-recent-card h3{font-size:19px}.committee-feature.committee-introduction{padding-left:20px}}
 .lecturer-photo-frame{width:140px;height:168px;max-width:100%;display:flex;align-items:flex-end;justify-content:center;background:#f3eff5;border:1px solid #ded3e4;border-radius:4px;overflow:hidden;isolation:isolate}
 .lecturer-grid .lecturer-photo-frame img{width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center bottom;background:transparent;aspect-ratio:auto}
-.lecturer-grid .white-backdrop-blend,
-.partner-offer .white-backdrop-blend{mix-blend-mode:multiply}
+.lecturer-grid .white-backdrop-blend{mix-blend-mode:multiply}
 @media(max-width:640px){.lecturer-photo-frame{width:120px;height:145px}}
 .flow-figure.flow-governance{max-width:740px;margin-inline:auto}
 

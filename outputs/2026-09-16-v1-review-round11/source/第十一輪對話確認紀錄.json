@@ -1,0 +1,14 @@
+{
+  "version": "tiri-v1-recheck-20260916-r11",
+  "round": 11,
+  "recordedAt": "2026-09-16T02:37:52Z",
+  "confirmationSource": "conversation",
+  "userMessage": "ok 英文版我確認沒問題",
+  "confirmed": [
+    {
+      "id": "46",
+      "scope": "The Icons Media Group 正式英文會員優惠完整通過"
+    }
+  ],
+  "summary": "目前全部 46 項均已通過。"
+}

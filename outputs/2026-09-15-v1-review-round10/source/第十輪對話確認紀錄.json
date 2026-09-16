@@ -1,0 +1,24 @@
+{
+  "version": "tiri-v1-recheck-20260915-r10b",
+  "round": 10,
+  "recordedAt": "2026-09-15T09:55:15Z",
+  "confirmationSource": "conversation",
+  "userMessage": "兩項都通過",
+  "confirmed": [
+    {
+      "id": "32",
+      "scope": "第一屆 20 家正式得獎名單完整通過"
+    },
+    {
+      "id": "46",
+      "scope": "The Icons 中文會員優惠與 Logo 正片疊底通過"
+    }
+  ],
+  "pending": [
+    {
+      "id": "46",
+      "scope": "英文正式內容",
+      "status": "等待客戶提供"
+    }
+  ]
+}
