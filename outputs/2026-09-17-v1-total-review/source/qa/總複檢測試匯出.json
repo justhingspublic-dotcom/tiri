@@ -98,16 +98,16 @@
     "record": "../2026-09-16-theicons-english/source/需求內容.md"
   },
   "testSite": {
-    "baseUrl": "https://tiri-test.justhings.com.tw/html/",
+    "baseUrl": "https://justhingspublic-dotcom.github.io/tiri/v1/html/",
     "requestedByUser": true,
-    "note": "所有頁面檢查連結均指向 tiri-test.justhings.com.tw 測試站。"
+    "note": "所有頁面檢查連結均指向 GitHub Pages 預覽站。"
   },
   "exportedAt": "2026-09-17T01:37:52.234Z",
   "items": [
     {
       "id": "01",
       "title": "「會員中心」改「會員服務」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -270,7 +270,7 @@
     {
       "id": "02",
       "title": "Footer 指定入口改「會員登入」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -436,7 +436,7 @@
     {
       "id": "03",
       "title": "首頁 6,300＋的單位改為「人」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -594,7 +594,7 @@
     {
       "id": "04",
       "title": "首頁只留指定三個主內容區塊",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -765,7 +765,7 @@
     {
       "id": "05",
       "title": "合作夥伴內容、官網連結與 Logo",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -931,7 +931,7 @@
     {
       "id": "06",
       "title": "全站情境圖片的主題與來源整理",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1102,7 +1102,7 @@
     {
       "id": "07",
       "title": "協會簡介改為左圖右文",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1272,7 +1272,7 @@
     {
       "id": "08",
       "title": "理監事名冊與表格版型",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1434,7 +1434,7 @@
     {
       "id": "09",
       "title": "點「理監事」直接顯示第三屆，省去中間選擇頁",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1592,7 +1592,7 @@
     {
       "id": "10",
       "title": "五個功能委員會總覽",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1763,7 +1763,7 @@
     {
       "id": "11",
       "title": "五個委員會內頁、名冊及切換",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -1921,7 +1921,7 @@
     {
       "id": "12",
       "title": "鄧白氏雙標章更換 ESG Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2083,7 +2083,7 @@
     {
       "id": "13",
       "title": "活動列表左側放 Banner，直接連 Accupass",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2241,7 +2241,7 @@
     {
       "id": "14",
       "title": "近期活動整合到活動訊息",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2411,7 +2411,7 @@
     {
       "id": "15",
       "title": "活動紀錄日期放大",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2569,7 +2569,7 @@
     {
       "id": "16",
       "title": "「精彩回顧」統一改「活動花絮」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2727,7 +2727,7 @@
     {
       "id": "17",
       "title": "活動花絮列表的新排版",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -2923,7 +2923,7 @@
     {
       "id": "18",
       "title": "到府授課三個特色各加圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3085,7 +3085,7 @@
     {
       "id": "19",
       "title": "七類課程改八大主題，每類配圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3247,7 +3247,7 @@
     {
       "id": "20",
       "title": "董監事課程 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3411,7 +3411,7 @@
     {
       "id": "21",
       "title": "會計主管 Banner 換成手按計算機",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3569,7 +3569,7 @@
     {
       "id": "22",
       "title": "董事會績效評估四步驟流程圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3735,7 +3735,7 @@
     {
       "id": "23",
       "title": "董事會績效評估 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -3903,7 +3903,7 @@
     {
       "id": "24",
       "title": "提升公司治理六步驟流程圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4069,7 +4069,7 @@
     {
       "id": "25",
       "title": "提升公司治理 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4245,7 +4245,7 @@
     {
       "id": "26",
       "title": "「證照獎項」拆成「證照」與「獎項」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4403,7 +4403,7 @@
     {
       "id": "27",
       "title": "IRC 證照介紹與贊助獎學金整合",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4574,7 +4574,7 @@
     {
       "id": "28",
       "title": "縮小 TIRIC 講師照片",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4732,7 +4732,7 @@
     {
       "id": "29",
       "title": "TIRIC 白底影片與播放入口",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -4895,7 +4895,7 @@
     {
       "id": "30",
       "title": "TIRIC 回顧改年度／屆次下拉",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5053,7 +5053,7 @@
     {
       "id": "31",
       "title": "TIRI Awards 屆次按鈕改下拉",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5211,7 +5211,7 @@
     {
       "id": "32",
       "title": "潛力進展獎屆次下拉與歷屆內容",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5407,7 +5407,7 @@
     {
       "id": "33",
       "title": "TIRI Awards 使用整排獎座 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5565,7 +5565,7 @@
     {
       "id": "34",
       "title": "潛力進展獎使用指定獎狀 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5723,7 +5723,7 @@
     {
       "id": "35",
       "title": "知識資源每篇文章加主題圖片",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -5881,7 +5881,7 @@
     {
       "id": "36",
       "title": "知識資源加入頁內搜尋",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6039,7 +6039,7 @@
     {
       "id": "37",
       "title": "加入會員更換 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6201,7 +6201,7 @@
     {
       "id": "38",
       "title": "「會員專屬優惠」改「會員權利」",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6359,7 +6359,7 @@
     {
       "id": "39",
       "title": "會員權利兩大區塊左側加圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6526,7 +6526,7 @@
     {
       "id": "40",
       "title": "中英文年刊列表直接顯示封面",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6684,7 +6684,7 @@
     {
       "id": "41",
       "title": "年刊 Banner",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6848,7 +6848,7 @@
     {
       "id": "42",
       "title": "首頁三張 Banner 輪播",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6856,7 +6856,7 @@
       "deliveredChange": "只讓三張背景圖片自動輪播（原首頁大會圖 → 已通過的九張董監事課程拼接圖 → 目前績效評估圖），每 6.5 秒切換。首頁原本的標題、介紹文字、探索課程與活動／了解會員價值按鈕固定保留，移除底下所有選圖、頁數、播放與左右控制。",
       "previousCheck": "",
       "currentChange": "只讓三張背景圖片自動輪播（原首頁大會圖 → 已通過的九張董監事課程拼接圖 → 目前績效評估圖），每 6.5 秒切換。首頁原本的標題、介紹文字、探索課程與活動／了解會員價值按鈕固定保留，移除底下所有選圖、頁數、播放與左右控制。",
-      "currentCheck": "在測試站開啟「首頁三張 Banner 輪播」頁面，確認內容與互動符合最終版本。",
+      "currentCheck": "在 GitHub Pages 開啟「首頁三張 Banner 輪播」頁面，確認內容與互動符合最終版本。",
       "deliveryLimit": "",
       "route": "index.html#home-banner",
       "extraLinks": [],
@@ -6946,7 +6946,7 @@
           "confirmationSource": "conversation",
           "deliveryRevision": "20260911-home2",
           "deliveredChange": "只讓三張背景圖片自動輪播（原首頁大會圖 → 已通過的九張董監事課程拼接圖 → 目前績效評估圖），每 6.5 秒切換。首頁原本的標題、介紹文字、探索課程與活動／了解會員價值按鈕固定保留，移除底下所有選圖、頁數、播放與左右控制。",
-          "check": "在測試站開啟「首頁三張 Banner 輪播」頁面，確認內容與互動符合最終版本。",
+          "check": "在 GitHub Pages 開啟「首頁三張 Banner 輪播」頁面，確認內容與互動符合最終版本。",
           "deliveryLimit": "首頁圖片輪播維持已通過版本。服務頁的績效評估 Banner 已另完成第 23 項初稿，列本輪待複檢。",
           "note": "",
           "assistantResponse": "使用者已於對話確認第 42 項「首頁三張 Banner 輪播」複檢通過，已記錄並勾選。"
@@ -6964,7 +6964,7 @@
     {
       "id": "43",
       "title": "首頁聯絡我們加入 Google 地圖",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -6972,7 +6972,7 @@
       "deliveredChange": "首頁底部新增聯絡我們，列出電話、信箱、地址、交通說明，嵌入 Google 地圖並提供開啟完整地圖及聯絡頁入口。地址已核對協會官網，嵌入碼取自 Google 地圖地址分享功能。",
       "previousCheck": "",
       "currentChange": "首頁底部新增聯絡我們，列出電話、信箱、地址、交通說明，嵌入 Google 地圖並提供開啟完整地圖及聯絡頁入口。地址已核對協會官網，嵌入碼取自 Google 地圖地址分享功能。",
-      "currentCheck": "在測試站開啟「首頁聯絡我們加入 Google 地圖」頁面，確認內容與互動符合最終版本。",
+      "currentCheck": "在 GitHub Pages 開啟「首頁聯絡我們加入 Google 地圖」頁面，確認內容與互動符合最終版本。",
       "deliveryLimit": "",
       "route": "index.html#contact",
       "extraLinks": [],
@@ -7055,7 +7055,7 @@
           "confirmationSource": "conversation",
           "deliveryRevision": "20260911-home1",
           "deliveredChange": "首頁底部新增聯絡我們，列出電話、信箱、地址、交通說明，嵌入 Google 地圖並提供開啟完整地圖及聯絡頁入口。地址已核對協會官網，嵌入碼取自 Google 地圖地址分享功能。",
-          "check": "在測試站開啟「首頁聯絡我們加入 Google 地圖」頁面，確認內容與互動符合最終版本。",
+          "check": "在 GitHub Pages 開啟「首頁聯絡我們加入 Google 地圖」頁面，確認內容與互動符合最終版本。",
           "deliveryLimit": "",
           "note": "",
           "assistantResponse": "使用者已於對話確認第 43 項「首頁聯絡我們加入 Google 地圖」複檢通過，已記錄並勾選。"
@@ -7073,7 +7073,7 @@
     {
       "id": "44",
       "title": "會員類別總表與入會說明",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -7167,7 +7167,7 @@
     {
       "id": "45",
       "title": "TIRI Awards 2022–2026 歷屆入圍名單",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
@@ -7257,7 +7257,7 @@
     {
       "id": "46",
       "title": "The Icons 會員專屬優惠",
-      "currentFocus": "測試站全站總複檢",
+      "currentFocus": "GitHub Pages 全站總複檢",
       "deliveryStatus": "ready",
       "changedThisRound": false,
       "deliveryRevision": "20260917-test-site-total",
