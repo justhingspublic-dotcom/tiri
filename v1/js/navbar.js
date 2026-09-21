@@ -45,11 +45,6 @@
               "D-U-N-S® 環球編碼 65-851-5060"
             ],
             [
-              "partners.html",
-              "合作夥伴",
-              "年度大會贊助單位與會員優惠夥伴"
-            ],
-            [
               "contact.html",
               "聯絡我們",
               "(02) 2381-9248・台北市中正區重慶南路一段 57 號"
@@ -59,7 +54,7 @@
       ],
       "figure": [
         "about.html",
-        "../images/hero-annual-forum.jpg",
+        "../images/uploads-1-1-9-9-119925991-435194_orig-8478bd6.jpg",
         "專為上市櫃、興櫃、公開發行與創櫃公司經理人而設的專業協會，致力推進台灣投資人關係的實踐。",
         "認識協會"
       ]
@@ -272,8 +267,13 @@
           ]
         },
         {
-          "label": "贊助機制",
+          "label": "合作與贊助",
           "links": [
+            [
+              "partners.html",
+              "合作夥伴",
+              "年度大會贊助單位與會員優惠夥伴"
+            ],
             [
               "partners.html#sponsor",
               "贊助方案",
@@ -361,10 +361,6 @@
         [
           "certificate.html",
           "鄧白氏企業認證™"
-        ],
-        [
-          "partners.html",
-          "合作夥伴"
         ],
         [
           "contact.html",
@@ -479,6 +475,10 @@
           "加入會員"
         ],
         [
+          "partners.html",
+          "合作夥伴"
+        ],
+        [
           "partners.html#sponsor",
           "贊助方案"
         ]
@@ -557,7 +557,7 @@
       ],
       "figure": [
         "mission_en.html",
-        "../images/hero-annual-forum.jpg",
+        "../images/uploads-1-1-9-9-119925991-435194_orig-8478bd6.jpg",
         "A professional institute dedicated to advancing investor relations practice in Taiwan.",
         "About TIRI"
       ]

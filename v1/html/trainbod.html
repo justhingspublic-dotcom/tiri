@@ -89,6 +89,23 @@
 .contact-window p { margin-top: 10px; font-size: 15.5px; line-height: 1.9; color: var(--ink-80); }
 .contact-window a { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
 
+#course-registration-form { scroll-margin-top: 160px; }
+.legacy-body .course-registration-form { max-width: none; }
+.course-registration-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+.course-registration-fields > .paragraph,
+.course-registration-fields > .wsite-form-fields-required-label { grid-column: 1 / -1; }
+.course-registration-fields > div { min-width: 0; }
+.course-registration-fields .wsite-form-field { margin: 0; }
+.course-registration-fields input[type="text"],
+.course-registration-fields input[type="email"],
+.course-registration-fields input[type="tel"],
+.course-registration-fields select,
+.course-registration-fields textarea { width: 100%; }
+
 @media (max-width: 900px) {
   .course-cats { grid-template-columns: repeat(2, 1fr); }
   .inhouse-info { grid-template-columns: 1fr; }
@@ -97,6 +114,7 @@
   .inhouse-features { grid-template-columns: 1fr; }
   .course-cats { grid-template-columns: 1fr; }
   .pay-grid { grid-template-columns: 1fr; }
+  .course-registration-fields { grid-template-columns: 1fr; }
 }
 </style>
 <link href="../css/revision.css?v=20260909" rel="stylesheet"/><link href="../css/review-fixes.css?v=20260910-r10-banner" rel="stylesheet"/></head>
@@ -150,8 +168,8 @@
 <p class="eyebrow">In-house Programs</p>
 <h2>到府授課－企業專班</h2>
 </div>
-<a class="head-link u-link" href="../documents/tiri-courses-2026-07-17.pdf" rel="noopener" target="_blank">專班課程列表（PDF）→</a>
 </div>
+<p class="sub-lede reveal">依 2026 年 7 月 17 日課程資料，提供以下八大主題。可依企業需求安排講師與課程；完整名稱、課綱及講師詳見課程列表。</p>
 <p class="inhouse-intro reveal">即日起開辦<strong>線上授課</strong>，在您的家裡或辦公室透過電腦上線，即可完成進修，歡迎洽詢本會。</p>
 <ul class="inhouse-features" data-reveal-group="">
 <li class="reveal"><div class="blurred-photo feature-photo" style='--scene-image:url("../images/review-r2/corporate-training.jpg")'><img alt="女性講師在白板前進行簡報" class="scene-portrait-safe" decoding="async" height="2880" loading="lazy" src="../images/review-r2/corporate-training.jpg" width="1920"/></div>
@@ -168,7 +186,6 @@
 </li>
 </ul>
 <h3 class="sub-head reveal">八大課程主題</h3>
-<p class="sub-lede reveal">依 2026 年 7 月 17 日課程資料，提供以下八大主題。可依企業需求安排講師與課程；完整名稱、課綱及講師詳見課程列表。</p>
 <div class="course-cats" data-reveal-group=""><div class="course-cat"><img alt="企業文件審閱情境" decoding="async" height="800" loading="lazy" src="../images/review-r2/document-review.jpg" width="1200"/><div class="cat-head"><span class="no">01</span><h4>併購實務</h4></div><ul><li>國內外併購實務大解析</li><li>台灣敵意併購及內線交易實務</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=1" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="TIRI 年度大會治理座談" decoding="async" height="733" loading="lazy" src="../images/hero-annual-forum.jpg" width="1100"/><div class="cat-head"><span class="no">02</span><h4>企業管理</h4></div><ul><li>董事會如何掌握另類投資的風險與機會</li><li>系統思考導向的組織診斷與優化</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=1" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="企業治理與組織" decoding="async" height="640" loading="lazy" src="../images/revision/A09-corporate-building.jpg" width="960"/><div class="cat-head"><span class="no">03</span><h4>公司治理</h4></div><ul><li>公司治理與新版 ESG 評鑑之因應</li><li>2026 年新版公司治理暨董事會績效評鑑實務解析</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=4" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="財務報表分析" decoding="async" height="800" loading="lazy" src="../images/review-r2/financial-analysis.jpg" width="1200"/><div class="cat-head"><span class="no">04</span><h4>財稅法律</h4></div><ul><li>跨國企業法律風險管理與公司治理觀點</li><li>企業財務資訊之解析及決策運用</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=5" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="辦公桌上的公正天秤，象徵誠信與公平經營" decoding="async" height="1067" loading="lazy" src="../images/review-r3/integrity.jpg" width="1600"/><div class="cat-head"><span class="no">05</span><h4>誠信經營</h4></div><ul><li>董事會誠信經營與反賄賂管理實務研習</li><li>上市上櫃公司誠信經營守則實務及應用</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=7" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="再生能源與永續" decoding="async" height="640" loading="lazy" src="../images/revision/A06-esg-solar.jpg" width="960"/><div class="cat-head"><span class="no">06</span><h4>ESG 議題</h4></div><ul><li>從永續報告書到 IFRS 永續揭露準則</li><li>董事會該關心的 ESG 核心議題</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=8" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="資訊網路設備" decoding="async" height="1444" loading="lazy" src="../images/revision/B02-security.jpg" width="1920"/><div class="cat-head"><span class="no">07</span><h4>資訊安全</h4></div><ul><li>漫談資安治理的盲點與對策</li><li>從 AI 浪潮看 2026 資安挑戰與治理策略</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=11" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div><div class="course-cat"><img alt="新聞採訪麥克風，象徵媒體應對與危機溝通" decoding="async" height="1064" loading="lazy" src="../images/review-r3/press-microphones.jpg" width="1600"/><div class="cat-head"><span class="no">08</span><h4>媒體與危機管理</h4></div><ul><li>企業危機管理</li><li>治理視角的公關策略</li></ul><a class="u-link" href="../documents/tiri-courses-2026-07-17.pdf#page=12" rel="noopener" target="_blank">完整課程與大綱 ↗</a></div></div>
 <div class="inhouse-info" data-reveal-group="">
 <div class="info reveal">
@@ -184,7 +201,7 @@
 <p><a href="../documents/tiri-courses-2026-07-17.pdf" rel="noopener" target="_blank">下載 2026 專班課程列表（PDF）</a></p>
 </div>
 </div>
-<p class="inhouse-cta reveal"><a class="btn btn-primary" href="contact.html">洽詢開課 <span aria-hidden="true" class="arrow">→</span></a></p>
+<p class="inhouse-cta reveal"><a class="btn btn-primary" href="#course-registration-form">洽詢開課 <span aria-hidden="true" class="arrow">→</span></a></p>
 </div>
 </section>
 <section class="page-section" id="signup" style="border-top: 1px solid var(--line);">
@@ -207,11 +224,11 @@
 <p>＊若透過活動通報名公開班課程講座，則依<a href="https://accupass.uservoice.com/knowledgebase/articles/152170" rel="noopener" target="_blank">平台規定</a>辦理。</p>
 </div>
 </div>
-<div class="legacy-body">
+<div class="legacy-body" id="course-registration-form">
 <div>
-<form action="//www.weebly.com/weebly/apps/formSubmit.php" enctype="multipart/form-data" id="form-498543481695967161" method="POST">
+<form action="//www.weebly.com/weebly/apps/formSubmit.php" class="course-registration-form" enctype="multipart/form-data" id="form-498543481695967161" method="POST">
 <div class="wsite-form-container tiri-inline-163" id="498543481695967161-form-parent">
-<ul class="formlist" id="498543481695967161-form-list">
+<ul class="formlist course-registration-fields" id="498543481695967161-form-list">
 <div class="paragraph"><span>選擇您有興趣的課程主題及時間地點，<span>我們會與您討論適合的主題及講師</span></span></div>
 <label class="wsite-form-label wsite-form-fields-required-label"><span class="form-required">*</span> 表示必填欄位</label><div><div class="wsite-form-field tiri-inline-164">
 <label class="wsite-form-label" for="input-419979218149314534">日期 <span class="form-required">*</span></label>
