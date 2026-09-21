@@ -1078,7 +1078,7 @@
       searchEmpty: "找不到「{q}」相關內容，試試其他關鍵字。",
       searchCount: "共 {n} 筆結果",
       searchLoading: "載入索引中…",
-      joinLabel: "加入會員",
+      joinLabel: "會員登入",
       joinHref: "join.html",
       navToggleLabel: "開啟選單",
       drawerLabel: "行動選單",
