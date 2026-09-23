@@ -1,12 +1,8 @@
 (function () {
   "use strict";
 
-  /* 第一層 1~8 對應共用資料夾「1首頁～8年刊下載」，分組沿用原站架構 */
+  /* 主導覽依客戶 2026/09/22 回饋重新分組：Logo 回首頁、年刊併入關於 TIRI、會員服務併入會員登入。 */
   var navigation = [
-    {
-      "href": "index.html",
-      "label": "首頁"
-    },
     {
       "href": "about.html",
       "label": "關於 TIRI",
@@ -48,6 +44,16 @@
               "contact.html",
               "聯絡我們",
               "(02) 2381-9248・台北市中正區重慶南路一段 57 號"
+            ]
+          ]
+        },
+        {
+          "label": "年刊下載",
+          "links": [
+            [
+              "5th_report-516844.html",
+              "年刊簡介",
+              "創始於 2024 年，每年出刊一次"
             ]
           ]
         }
@@ -243,8 +249,9 @@
       ]
     },
     {
-      "href": "membership.html",
-      "label": "會員服務",
+      "href": "login.html",
+      "label": "會員登入",
+      "action": true,
       "columns": [
         {
           "label": "會員",
@@ -288,56 +295,10 @@
         "個人首次入會 NT$8,000（入會費 2,000＋常年會費 6,000），隔年起每年 NT$6,000。",
         "加入會員"
       ]
-    },
-    {
-      "href": "5th_report-516844.html",
-      "label": "年刊下載",
-      "columns": [
-        {
-          "label": "歷年年刊",
-          "links": [
-            [
-              "5th_report-516844.html",
-              "年刊簡介",
-              "創始於 2024 年，每年出刊一次"
-            ],
-            [
-              "5th_report.html",
-              "5 周年年刊",
-              "協會成立五周年年刊"
-            ],
-            [
-              "5th_report-848158.html",
-              "6 周年年刊",
-              "協會成立六周年年刊"
-            ],
-            [
-              "7th_report-848158-214091.html",
-              "7 周年年刊",
-              "協會成立七周年年刊"
-            ]
-          ]
-        },
-        {
-          "label": "",
-          "links": []
-        }
-      ],
-      "figure": [
-        "5th_report-516844.html",
-        "../images/hero-chart.jpg",
-        "TIRI 年刊收錄年度活動成果與 IR 觀點，線上閱覽與下載。",
-        "下載年刊"
-      ]
     }
   ];
 
   var drawerLinks = [
-    [
-      "首頁",
-      "index.html",
-      []
-    ],
     [
       "關於 TIRI",
       "about.html",
@@ -365,6 +326,10 @@
         [
           "contact.html",
           "聯絡我們"
+        ],
+        [
+          "5th_report-516844.html",
+          "年刊簡介"
         ]
       ]
     ],
@@ -459,8 +424,8 @@
       ]
     ],
     [
-      "會員服務",
-      "membership.html",
+      "會員登入",
+      "login.html",
       [
         [
           "membership.html",
@@ -482,29 +447,8 @@
           "partners.html#sponsor",
           "贊助方案"
         ]
-      ]
-    ],
-    [
-      "年刊下載",
-      "5th_report-516844.html",
-      [
-        [
-          "5th_report-516844.html",
-          "年刊簡介"
-        ],
-        [
-          "5th_report.html",
-          "5 周年年刊"
-        ],
-        [
-          "5th_report-848158.html",
-          "6 周年年刊"
-        ],
-        [
-          "7th_report-848158-214091.html",
-          "7 周年年刊"
-        ]
-      ]
+      ],
+      true
     ]
   ];
 
@@ -832,21 +776,6 @@
               "5th_report-665763.html",
               "Anniversary",
               "TIRI anniversary annual reports"
-            ],
-            [
-              "5th_report-665763-570037-605322.html",
-              "5th Anniversary",
-              "5th anniversary annual report"
-            ],
-            [
-              "6th_report-665763-570037.html",
-              "6th Anniversary",
-              "6th anniversary annual report"
-            ],
-            [
-              "7th_report-665763-570037-304514.html",
-              "7th Anniversary",
-              "7th anniversary annual report"
             ]
           ]
         },
@@ -1043,18 +972,6 @@
         [
           "5th_report-665763.html",
           "Anniversary"
-        ],
-        [
-          "5th_report-665763-570037-605322.html",
-          "5th Anniversary"
-        ],
-        [
-          "6th_report-665763-570037.html",
-          "6th Anniversary"
-        ],
-        [
-          "7th_report-665763-570037-304514.html",
-          "7th Anniversary"
         ]
       ]
     ]
@@ -1079,7 +996,7 @@
       searchCount: "共 {n} 筆結果",
       searchLoading: "載入索引中…",
       joinLabel: "會員登入",
-      joinHref: "join.html",
+      joinHref: "login.html",
       navToggleLabel: "開啟選單",
       drawerLabel: "行動選單",
       drawerNavLabel: "行動導覽",
@@ -1143,12 +1060,16 @@
 
   function renderDesktopNav(items) {
     return items.map(function (item) {
+      var itemClass = item.action ? ' class="nav-account"' : "";
       if (!item.columns) {
-        return '<li><a href="' + item.href + '">' + item.label + '</a></li>';
+        return '<li' + itemClass + '><a href="' + item.href + '">' + item.label + '</a></li>';
       }
       var figure = item.figure;
-      return '<li><a href="' + item.href + '">' + item.label + '</a>' +
-        '<div class="menu-panel"><div class="mega-inner">' + renderColumns(item.columns) +
+      var trigger = item.action
+        ? '<button class="nav-account-trigger" type="button" aria-haspopup="true" aria-expanded="false">' + item.label + '</button>'
+        : '<a href="' + item.href + '">' + item.label + '</a>';
+      return '<li' + itemClass + '>' + trigger +
+        '<div class="menu-panel menu-cols-' + item.columns.length + '"><div class="mega-inner">' + renderColumns(item.columns) +
         '<a class="mega-figure" href="' + figure[0] + '">' +
         '<img src="' + figure[1] + '" alt="" loading="lazy" width="380" height="176">' +
         '<span class="cap">' + figure[2] + '</span><span class="cta">' + figure[3] + ' <span aria-hidden="true">→</span></span>' +
@@ -1161,7 +1082,10 @@
       var subs = item[2].map(function (link) {
         return '<a href="' + link[0] + '">' + link[1] + '</a>';
       }).join("");
-      return '<li><a class="d-main" href="' + item[1] + '">' + item[0] + ' <span class="arrow" aria-hidden="true">→</span></a><div class="subs">' + subs + '</div></li>';
+      var main = item[3]
+        ? '<button class="d-main" type="button" aria-expanded="true">' + item[0] + '</button>'
+        : '<a class="d-main" href="' + item[1] + '">' + item[0] + ' <span class="arrow" aria-hidden="true">→</span></a>';
+      return '<li>' + main + '<div class="subs">' + subs + '</div></li>';
     }).join("");
   }
 
@@ -1202,14 +1126,15 @@
       '<span class="divider" aria-hidden="true"></span>' + renderLangSwitch(lang) + '</nav>';
   }
 
-  function renderActions(variant, t) {
+  function renderActions(variant, t, lang) {
     /* 登入先隱藏（暫時用不到）；要還原時在搜尋鈕後補回：
        '<a class="login-link" href="login.html">登入</a>' */
     var tools = variant === "v2"
       ? '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel" aria-label="' + t.searchLabel + '">' + icon("i-search", 17) + '</button>'
       : "";
-    return '<div class="header-actions">' + tools +
-      '<a class="btn btn-primary btn-cta-desktop" href="' + t.joinHref + '"><span class="roll"><span>' + t.joinLabel + '</span><span aria-hidden="true">' + t.joinLabel + '</span></span></a>' +
+    var desktopCta = lang === "zh" ? "" :
+      '<a class="btn btn-primary btn-cta-desktop" href="' + t.joinHref + '"><span class="roll"><span>' + t.joinLabel + '</span><span aria-hidden="true">' + t.joinLabel + '</span></span></a>';
+    return '<div class="header-actions">' + tools + desktopCta +
       '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="' + t.navToggleLabel + '"><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></button></div>';
   }
 
@@ -1220,7 +1145,7 @@
     return '<header class="site-header" id="site-header"><div class="container">' +
       '<a class="wordmark" href="' + t.homeHref + '" aria-label="' + t.wordmarkLabel + '"><img src="../images/tiri-logo.png" alt="" width="1100" height="649"></a>' +
       '<div class="header-right">' + (variant === "v1" ? renderHeaderTop(t, lang) : "") +
-      '<div class="header-main"><nav class="main-nav" aria-label="' + t.mainNavLabel + '"><ul>' + renderDesktopNav(navItems) + '</ul></nav>' + renderActions(variant, t) + '</div></div></div>' +
+      '<div class="header-main"><nav class="main-nav" aria-label="' + t.mainNavLabel + '"><ul>' + renderDesktopNav(navItems) + '</ul></nav>' + renderActions(variant, t, lang) + '</div></div></div>' +
       '<div class="search-drop" id="search-panel"><div class="search-backdrop" data-search-close></div><div class="search-sheet"><div class="container">' +
       '<form data-demo-form role="search" aria-label="' + t.searchFormLabel + '"><label class="sr-only" for="site-search-input">' + t.searchKeyword + '</label><input id="site-search-input" type="search" name="q" placeholder="' + t.searchPlaceholder + '"><button class="search-close" type="button" aria-label="' + t.searchClose + '">' + icon("i-x", 14) + '</button><button class="btn btn-primary" type="submit">' + t.searchSubmit + '</button></form>' +
       '<div class="search-results" id="search-results" data-lang="' + lang + '"><div class="search-results-inner" role="region" aria-live="polite"></div></div>' +
@@ -1228,7 +1153,7 @@
       '<div class="drawer" id="drawer"><div class="drawer-backdrop" data-drawer-close></div><div class="drawer-panel" role="dialog" aria-modal="true" aria-label="' + t.drawerLabel + '"><nav aria-label="' + t.drawerNavLabel + '"><ul>' + renderDrawer(drawerItems) + '</ul></nav>' +
       /* 抽屜的「會員登入」outline 鈕先隱藏（暫時用不到）；要還原時在加入會員後補回：
          '<a class="btn btn-outline" href="login.html">會員登入</a>' */
-      '<div class="drawer-cta"><a class="btn btn-primary" href="' + t.joinHref + '">' + t.joinLabel + '</a></div></div></div>';
+      (lang === "zh" ? "" : '<div class="drawer-cta"><a class="btn btn-primary" href="' + t.joinHref + '">' + t.joinLabel + '</a></div>') + '</div></div>';
   }
 
   function markCurrentPage(root) {

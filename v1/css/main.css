@@ -475,6 +475,32 @@ section,
   background-size: 100% 2px;
 }
 
+/* 2026/09/22：會員服務收進「會員登入」入口，保留原 CTA 的膠囊辨識度。 */
+.main-nav li.nav-account > .nav-account-trigger {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  height: 44px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--ink);
+  background-image: none;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.main-nav li.nav-account > .nav-account-trigger:hover,
+.main-nav li.nav-account > .nav-account-trigger:focus-visible,
+.main-nav li.nav-account.is-menu-active > .nav-account-trigger {
+  color: var(--white);
+  background-color: var(--purple);
+  background-image: none;
+}
+
 /* 下拉選單：滿寬 mega panel（irclub 式）——面板自 header 直接延伸下來。
    刻意不畫上邊框：nav 與面板同為紙白，中間有線就會斷成兩塊（使用者裁決）。
    展開動畫沿用手風琴式 clip-path 由上往下摺疊。 */
@@ -497,8 +523,7 @@ section,
 }
 /* 哪個面板開著由 main.js 的 .is-menu-active 決定，不用 li:hover——
    否則滑到 header 其他區域（CTA、社群 icon、搜尋）面板就會掉下去 */
-.main-nav li.is-menu-active > .menu-panel,
-.main-nav li:focus-within > .menu-panel {
+.main-nav li.is-menu-active > .menu-panel {
   clip-path: inset(0 0 0 0);
   visibility: visible;
   transition: clip-path 0.32s var(--ease);
@@ -511,8 +536,7 @@ section,
   clip-path: inset(0 0 0 0);
   transition: none;
 }
-.site-header.is-menusettled .main-nav li.is-menu-active > .menu-panel,
-.site-header.is-menusettled .main-nav li:focus-within > .menu-panel {
+.site-header.is-menusettled .main-nav li.is-menu-active > .menu-panel {
   visibility: visible;
   transition: none;
 }
@@ -524,6 +548,11 @@ section,
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 380px;
   gap: 0 56px;
   align-items: start;
+}
+/* 「關於 TIRI」增加年刊欄後，用三個資訊欄加精選圖維持同列。 */
+.menu-panel.menu-cols-3 .mega-inner {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) 320px;
+  gap: 0 40px;
 }
 .mega-overline {
   display: block;
@@ -871,11 +900,17 @@ section,
 .drawer.is-open .drawer-panel { transform: translateX(0); }
 .drawer nav ul { display: flex; flex-direction: column; }
 .drawer nav li { border-bottom: 1px solid var(--line); }
-.drawer nav a.d-main {
+.drawer nav .d-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 16px 4px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
   font-size: 18px;
   font-weight: 500;
 }
@@ -1793,6 +1828,13 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a:hover,
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a:focus-visible,
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li > a[aria-current="page"] { color: var(--white); }
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li.nav-account > .nav-account-trigger,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li.nav-account > .nav-account-trigger:hover,
+body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .main-nav > ul > li.nav-account > .nav-account-trigger:focus-visible {
+  color: var(--ink);
+  background-color: var(--white);
+  background-image: none;
+}
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .nav-toggle .bar { background: var(--white); }
 body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):not(.is-menuopen) .header-actions .btn-primary {
   background-color: var(--white);
@@ -2405,8 +2447,23 @@ body:has(.page-hero.has-photo, .hero.hero-photo) .site-header:not(.is-scrolled):
   .hero h1 { font-size: 36px; }
   .services-list { grid-template-columns: 1fr; }
   .recap-strip a:not(:last-child)::after { margin-inline: 10px; }
-  .header-top .social-icons { display: none; }
-  .header-top .divider:has(+ .social-icons) { display: none; }
+  .header-top {
+    gap: 9px;
+    height: 40px;
+    font-size: 0;
+  }
+  .header-top .social-icons {
+    display: flex;
+    gap: 9px;
+  }
+  .header-top .social-icons a { min-height: 32px; }
+  .header-top .social-icons svg { width: 15px; height: 15px; }
+  .header-top .social-icons .roll { height: 15px; }
+  .header-top .search-toggle,
+  .header-top .lang-toggle { gap: 4px; }
+  .header-top .search-toggle svg,
+  .header-top .lang-toggle svg { flex: none; }
+  .header-top .lang-current { display: none; }
   .insights-grid { grid-template-columns: 1fr; }
   .event-item { grid-template-columns: 80px 1fr auto; gap: 14px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 8px; }

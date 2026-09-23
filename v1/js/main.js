@@ -248,6 +248,8 @@
 
       menuItems.forEach(function (item) {
         item.classList.toggle("is-menu-active", item === li);
+        var accountTrigger = item.querySelector(".nav-account-trigger");
+        if (accountTrigger) accountTrigger.setAttribute("aria-expanded", String(item === li));
       });
       clearLastHover();   // 換選單或關閉都要重置
       setMenuOpen(Boolean(li));
@@ -278,6 +280,13 @@
         }
       });
       li.addEventListener("mouseleave", function () { clearTimeout(openTimer); });
+      var accountTrigger = li.querySelector(".nav-account-trigger");
+      if (accountTrigger) {
+        accountTrigger.addEventListener("click", function () {
+          clearTimeout(openTimer);
+          setActive(li.classList.contains("is-menu-active") ? null : li);
+        });
+      }
       li.querySelectorAll(".mega-item").forEach(function (item) {
         item.addEventListener("mouseenter", function () {
           clearLastHover(li);
@@ -292,7 +301,7 @@
 
     closeMegaPanels = function () { setActive(null); };
 
-    // 鍵盤：焦點離開整個 header 才收（面板由 :focus-within 顯示）
+    // 鍵盤：焦點離開整個 header 才收；顯示狀態仍由 .is-menu-active 統一控制。
     header.addEventListener("focusin", function (e) {
       if (mainNav.contains(e.target)) {
         var li = e.target.closest("li:has(> .menu-panel)");
@@ -303,6 +312,20 @@
       if (!header.contains(e.relatedTarget)) setActive(null);
     });
   }
+
+  /* 瀏覽器上一頁可能從 BFCache 還原舊 class 與焦點；每次頁面重新顯示時
+     明確收起所有滿版選單，避免沒有 hover 卻殘留展開。 */
+  var resetMegaMenus = function () {
+    closeMegaPanels();
+    if (mainNav && mainNav.contains(document.activeElement) && document.activeElement.blur) {
+      document.activeElement.blur();
+    }
+  };
+  window.addEventListener("pageshow", resetMegaMenus);
+  window.addEventListener("pagehide", resetMegaMenus);
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) resetMegaMenus();
+  });
 
   /* ---- 行動抽屜（320ms，含背景遮罩） ---- */
   var drawer = document.getElementById("drawer");

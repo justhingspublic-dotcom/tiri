@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>TIRI v1｜82 上線前最終檢查</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17131d;
+      --muted: #6d6674;
+      --line: #e5dfe8;
+      --surface: #fff;
+      --wash: #f6f3f8;
+      --purple: #5d167f;
+      --purple-soft: #eee3f3;
+      --green: #176c46;
+      --green-soft: #e8f5ed;
+      --orange: #a85114;
+      --orange-soft: #fff0e3;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      line-height: 1.7;
+    }
+    button, textarea { font: inherit; }
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 72px; }
+    .hero {
+      padding: 36px;
+      border-radius: 26px;
+      color: #fff;
+      background: linear-gradient(135deg, #21102b 0%, #5d167f 58%, #8738a8 100%);
+      box-shadow: 0 24px 60px rgba(57, 21, 73, .18);
+    }
+    .eyebrow { margin: 0 0 8px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; opacity: .74; }
+    h1 { margin: 0; font-size: clamp(31px, 5vw, 56px); line-height: 1.12; letter-spacing: -.04em; }
+    .intro { max-width: 790px; margin: 14px 0 0; color: rgba(255,255,255,.8); }
+    .summary { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+    .summary span { padding: 5px 11px; border: 1px solid rgba(255,255,255,.24); border-radius: 999px; color: rgba(255,255,255,.9); font-size: 13px; }
+    .progress { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; margin-top: 28px; }
+    .progress-track { height: 8px; overflow: hidden; border-radius: 99px; background: rgba(255,255,255,.2); }
+    .progress-bar { width: 0; height: 100%; border-radius: inherit; background: #fff; transition: width .2s ease; }
+    .progress strong { font-size: 27px; line-height: 1; }
+    .toolbar { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin: 28px 0 16px; }
+    .toolbar p { margin: 0; color: var(--muted); }
+    .toolbar-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 16px;
+      color: var(--ink);
+      background: var(--surface);
+      cursor: pointer;
+    }
+    .button:hover { border-color: var(--purple); color: var(--purple); }
+    .group { margin-top: 30px; }
+    .group-head { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin: 0 2px 12px; }
+    .group-head h2 { margin: 0; font-size: 26px; letter-spacing: -.02em; }
+    .group-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .list { display: grid; gap: 14px; }
+    .item {
+      display: grid;
+      grid-template-columns: 58px minmax(0,1fr) 238px;
+      gap: 22px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(32, 19, 39, .045);
+    }
+    .item.is-done { border-color: #b7dcc6; background: linear-gradient(90deg, var(--green-soft), #fff 34%); }
+    .number { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px; color: var(--purple); background: var(--purple-soft); font-weight: 750; }
+    .item h3 { margin: 0; font-size: 21px; line-height: 1.35; }
+    .meta { display: inline-flex; margin-top: 7px; padding: 2px 8px; border-radius: 999px; color: var(--orange); background: var(--orange-soft); font-size: 12px; font-weight: 700; }
+    .change { margin: 8px 0 0; color: #4c4652; }
+    .check { margin: 12px 0 0; padding-left: 16px; border-left: 3px solid #c8a6d8; color: var(--muted); font-size: 14px; }
+    .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+    .open { display: block; padding: 10px 14px; border-radius: 12px; color: var(--purple); background: var(--purple-soft); text-align: center; text-decoration: none; font-weight: 680; }
+    .open:hover { background: #e4d2ed; }
+    .confirm { display: flex; gap: 9px; align-items: flex-start; cursor: pointer; font-size: 14px; font-weight: 680; }
+    .confirm input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--green); }
+    textarea { width: 100%; min-height: 76px; resize: vertical; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; }
+    textarea:focus { outline: 2px solid #d6b4e5; border-color: var(--purple); }
+    .save { margin: 18px 2px 0; color: var(--muted); font-size: 13px; }
+    .footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; align-items: center; margin-top: 22px; padding: 20px 2px; color: var(--muted); }
+    .footer p { margin: 0; }
+    @media (max-width: 780px) {
+      .shell { width: min(100% - 20px, 640px); padding-top: 10px; }
+      .hero { padding: 26px 22px; border-radius: 18px; }
+      .progress { grid-template-columns: 1fr; gap: 10px; }
+      .toolbar, .group-head { align-items: flex-start; flex-direction: column; }
+      .item { grid-template-columns: 44px minmax(0,1fr); gap: 14px; padding: 18px 16px; border-radius: 16px; }
+      .number { width: 40px; height: 40px; }
+      .actions { grid-column: 1 / -1; }
+      .item h3 { font-size: 18px; }
+      .footer { align-items: stretch; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">TIRI V1 · FINAL CHECK BEFORE SERVER 82 · 2026.09.22</p>
+      <h1>82 上線前最終檢查</h1>
+      <p class="intro">整合 9/21 與 9/22 的全部調整，共 25 項。這是一份全新的最終驗收紀錄，預設皆未勾選；每項會直接開啟 tiri-test.justhings.com.tw 測試站檢查。</p>
+      <div class="summary"><span>9/21：19 項</span><span>9/22：6 項</span><span>全部：25 項</span></div>
+      <div class="progress">
+        <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+        <strong><span id="done-count">0</span> / 25</strong>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <p id="status" role="status">尚有 25 項待檢查</p>
+      <div class="toolbar-actions">
+        <button class="button" id="reset" type="button">清除全部紀錄</button>
+        <button class="button" id="export" type="button">匯出檢查結果 ↓</button>
+      </div>
+    </div>
+
+    <div id="groups"></div>
+
+    <p class="save" id="save-status">勾選與備註會自動儲存在目前瀏覽器。</p>
+    <footer class="footer">
+      <p>完成全部 25 項後，再把 v1 放回 82。</p>
+      <button class="button" id="export-bottom" type="button">匯出檢查結果 ↓</button>
+    </footer>
+  </main>
+
+  <script>
+    (() => {
+      const groups = [
+        {
+          date: '2026.09.21',
+          label: '昨天調整',
+          note: '三次 Git 提交，19 項',
+          items: [
+            {
+              id: '01', title: '全站導覽「會員登入」',
+              change: '桌機版與手機版導覽列原本的「加入會員」已改為「會員登入」。',
+              check: '確認首頁與任一內頁的桌機、手機導覽都顯示「會員登入」，連結可正常開啟。',
+              href: 'https://tiri-test.justhings.com.tw/html/index.html?review=20260922-final#home-banner'
+            },
+            {
+              id: '02', title: '聯絡我們新增公司名稱',
+              change: '聯絡資訊新增公司全名；留言表單新增必填「公司名稱」欄位。',
+              check: '確認公司名稱顯示為「社團法人台灣投資人關係協會」，表單欄位與必填提示正常。',
+              href: 'https://tiri-test.justhings.com.tw/html/contact.html?review=20260922-final'
+            },
+            {
+              id: '03', title: '關於 TIRI 圖片與統編換行',
+              change: '關於 TIRI 改用協會現場照片，法定名稱與統一編號改為分行呈現。',
+              check: '確認圖片正確、統編沒有和法定名稱擠在同一行，桌機與手機皆清楚。',
+              href: 'https://tiri-test.justhings.com.tw/html/about.html?review=20260922-final'
+            },
+            {
+              id: '04', title: '主管機關交流服務與亞洲人物圖片',
+              change: '在「知識智庫與資源共享」後補上主管機關交流服務內容，搭配亞洲商務人物圖片。',
+              check: '確認新增段落位置正確、圖片為亞洲面孔，圖片比例與文字沒有錯位。',
+              href: 'https://tiri-test.justhings.com.tw/html/about.html?review=20260922-final#regulatory-exchange'
+            },
+            {
+              id: '05', title: '合作夥伴移到會員服務',
+              change: '導覽列中的「合作夥伴」已由「關於 TIRI」移至「會員服務」選單。',
+              check: '確認桌機與手機選單位置正確，點擊後可進入合作夥伴頁。',
+              href: 'https://tiri-test.justhings.com.tw/html/partners.html?review=20260922-final#logos'
+            },
+            {
+              id: '06', title: '合作夥伴 Logo 補齊',
+              change: '合作夥伴頁補上資誠、安侯、安永與 The Icons，目前共呈現 14 家。',
+              check: '確認四家新增 Logo 都看得到，Logo 沒被裁切，外部連結可正常開啟。',
+              href: 'https://tiri-test.justhings.com.tw/html/partners.html?review=20260922-final#logos'
+            },
+            {
+              id: '07', title: '第一屆理監事照片補齊',
+              change: '第一屆理監事新增 5 張客戶補交照片，補齊原本缺圖的成員。',
+              check: '確認切換到第一屆後，陳秋蓉、藍世明、呂俊賦、吳恩廷、余宛如照片均正確顯示。',
+              href: 'https://tiri-test.justhings.com.tw/html/board.html?review=20260922-final&term=2018'
+            },
+            {
+              id: '08', title: '功能委員會列表圖片縮小',
+              change: '功能委員會的入口卡片圖片尺寸調小，讓文字與圖片比例更合理。',
+              check: '確認所有委員會入口仍完整，圖片不搶過文字，桌機與手機排列正常。',
+              href: 'https://tiri-test.justhings.com.tw/html/committee.html?review=20260922-final'
+            },
+            {
+              id: '09', title: '媒體委員會指定照片',
+              change: '媒體委員會已換成客戶於 LINE 指定的照片。',
+              check: '確認照片內容、裁切位置與頁面主題相符。',
+              href: 'https://tiri-test.justhings.com.tw/html/committee-media.html?review=20260922-final'
+            },
+            {
+              id: '10', title: '證照委員會指定照片',
+              change: '證照委員會已換成客戶於 LINE 指定的照片。',
+              check: '確認照片內容、裁切位置與頁面主題相符。',
+              href: 'https://tiri-test.justhings.com.tw/html/committee-certification.html?review=20260922-final'
+            },
+            {
+              id: '11', title: '董事會績效評估「特色」重排',
+              change: '「實務／高效／實惠」改成三個清楚分隔的內容區塊，避免說明文字看起來接到下一個標題。',
+              check: '確認三項標題與各自說明的歸屬一眼可辨，沒有相連或錯位。',
+              href: 'https://tiri-test.justhings.com.tw/html/bodperform.html?review=20260922-final#service-features'
+            },
+            {
+              id: '12', title: 'IRC 介紹與「為何選擇 IRC」',
+              change: 'IRC 介紹只保留中文、英文兩個入口；「為何選擇 IRC」取消下拉並直接展開，標題改為大字。',
+              check: '確認兩個語言連結正確，說明內容預設展開且沒有下拉箭頭。',
+              href: 'https://tiri-test.justhings.com.tw/html/certification.html?review=20260922-final#irc-languages'
+            },
+            {
+              id: '13', title: 'IRC 贊助獎學金視覺',
+              change: '以 NT$30,000 金額為主要視覺；「2 名」改為較小、較淡的角落備註，最後字級依要求調為 15 / 14。',
+              check: '確認第一眼看到的是金額，名額仍可讀但不會搶走重點。',
+              href: 'https://tiri-test.justhings.com.tw/html/certification.html?review=20260922-final#scholarship'
+            },
+            {
+              id: '14', title: 'TIRI 課程時間與價格拆列',
+              change: '日期與時間分成兩列；課程定價 NT$120,000 與優惠價 NT$76,000 分開呈現，保留三人以上團體優惠。',
+              check: '確認四列資訊清楚、日期與金額正確，長文字在手機版不溢出。',
+              href: 'https://tiri-test.justhings.com.tw/html/tiric.html?review=20260922-final&term=2025#course-details'
+            },
+            {
+              id: '15', title: '董監事進修洽詢與表單',
+              change: '移除頁面上的課程 PDF 入口；「洽詢開課」改為導向頁內表單，表單桌機兩欄、手機單欄。',
+              check: '確認按鈕會移到表單、欄位排列正常，手機沒有橫向溢出。',
+              href: 'https://tiri-test.justhings.com.tw/html/trainbod.html?review=20260922-final#course-registration-form'
+            },
+            {
+              id: '16', title: '第五屆 TIRI Awards 與入圍名單',
+              change: '最新獎項內容改為第五屆；入圍名單依舊官網方式分成上市 3 組、上櫃 2 組並排。',
+              check: '確認第五屆不會誤跑到進展獎，五組名單分類與公司資料正確。',
+              href: 'https://tiri-test.justhings.com.tw/html/mission-206783.html?review=20260922-final&term=2025#edition-2025'
+            },
+            {
+              id: '17', title: '歷屆 TIRI Awards 移到頁尾',
+              change: '歷屆 TIRI Awards 的年度切換與內容區已移到整個獎項頁最下方。',
+              check: '確認最新屆內容先出現，向下捲動到頁尾才看到歷屆資料。',
+              href: 'https://tiri-test.justhings.com.tw/html/mission-206783.html?review=20260922-final#awards-archive'
+            },
+            {
+              id: '18', title: '潛力進展獎版面與年度內容',
+              change: '重整潛力進展獎的最新屆與歷屆層級、名單與切換版面，避免內容混在一起。',
+              check: '確認 2026 最新屆與 2025 歷屆內容分區清楚，切換後資料不串錯。',
+              href: 'https://tiri-test.justhings.com.tw/html/mission-206783-766399.html?review=20260922-final&term=2025#edition-2026'
+            },
+            {
+              id: '19', title: '首頁輪播更換 TIRI 團隊照',
+              change: '首頁輪播原本的商務會議圖，改為客戶提供的 TIRI 活動團隊合照。',
+              check: '確認輪播可看到新合照，圖片以填滿方式呈現且人物裁切合理。',
+              href: 'https://tiri-test.justhings.com.tw/html/index.html?review=20260922-final#home-banner'
+            }
+          ]
+        },
+        {
+          date: '2026.09.22',
+          label: '今天調整',
+          note: 'LINE 回饋，6 項',
+          items: [
+            {
+              id: '20', title: '協會服務優惠內容',
+              change: '移除不合適的課程合照，新增客戶提供的 10 項會員服務，並保留會員專屬優惠。',
+              check: '確認 10 項服務完整、沒有編號卡片照片，會員服務與專屬優惠層級清楚。',
+              href: 'https://tiri-test.justhings.com.tw/html/benefit.html?review=20260922-final#services'
+            },
+            {
+              id: '21', title: '合作夥伴優惠版型',
+              change: '移除 01–11 編號；改為左側 Logo、右上公司名稱與下方說明，Logo 已再置中。',
+              check: '確認每家 Logo 在左欄水平與垂直置中，名稱、說明在桌機與手機均不錯位。',
+              href: 'https://tiri-test.justhings.com.tw/html/benefit.html?review=20260922-final#benefit-partner-1'
+            },
+            {
+              id: '22', title: '會員類別頁精簡',
+              change: '移除會員類別頁下方重複的會員權利與治理服務，保留類別、資格、會費、申請說明。',
+              check: '確認必要的會員類別資訊完整，頁面不再重複顯示服務內容。',
+              href: 'https://tiri-test.justhings.com.tw/html/membership.html?review=20260922-final#membership-categories'
+            },
+            {
+              id: '23', title: '年刊版面移除灰框並置中',
+              change: '年刊封面取消灰色外框與留白，封面、年份、標題、規格和操作連結全部置中。',
+              check: '確認三本年刊都沒有灰框，卡片內所有內容維持同一中線。',
+              href: 'https://tiri-test.justhings.com.tw/html/5th_report-516844.html?review=20260922-final#archive'
+            },
+            {
+              id: '24', title: '手機版活動日期不截字',
+              change: '加寬首頁活動日期欄並調整手機版網格與字級，日期與年份可完整顯示。',
+              check: '以手機寬度確認 10.16、07.15、05.15 與年份沒有被裁切。',
+              href: 'https://tiri-test.justhings.com.tw/html/index.html?review=20260922-final#events'
+            },
+            {
+              id: '25', title: '手機版社群與聯絡圖示',
+              change: '手機頁首恢復 Facebook、LinkedIn、LINE、YouTube 與 Email 五個圖示，並壓縮間距。',
+              check: '以手機寬度確認五個圖示都可見、可點擊，頁首沒有水平溢出。',
+              href: 'https://tiri-test.justhings.com.tw/html/index.html?review=20260922-final#home-banner'
+            }
+          ]
+        }
+      ];
+
+      const version = 'tiri-v1-final-82-check-20260922-v1';
+      const key = version;
+      const root = document.getElementById('groups');
+
+      groups.forEach(group => {
+        const section = document.createElement('section');
+        section.className = 'group';
+        section.innerHTML = `<div class="group-head"><div><p class="eyebrow">${group.date}</p><h2>${group.label}</h2></div><p>${group.note}</p></div><div class="list"></div>`;
+        const list = section.querySelector('.list');
+        group.items.forEach(data => {
+          const article = document.createElement('article');
+          article.className = 'item';
+          article.dataset.id = data.id;
+          article.dataset.date = group.date;
+          article.innerHTML = `
+            <span class="number">${data.id}</span>
+            <div>
+              <h3>${data.title}</h3>
+              <span class="meta">${group.date}</span>
+              <p class="change">${data.change}</p>
+              <p class="check">請檢查：${data.check}</p>
+            </div>
+            <div class="actions">
+              <a class="open" href="${data.href}" target="_blank" rel="noopener">開啟頁面檢查 ↗</a>
+              <label class="confirm"><input type="checkbox">這項通過</label>
+              <textarea aria-label="第 ${data.id} 項檢查備註" placeholder="需要再改的地方"></textarea>
+            </div>`;
+          list.appendChild(article);
+        });
+        root.appendChild(section);
+      });
+
+      const items = [...document.querySelectorAll('.item')];
+      let records = {};
+      try { records = JSON.parse(localStorage.getItem(key) || '{}'); } catch (_) {}
+
+      function save() {
+        try {
+          localStorage.setItem(key, JSON.stringify(records));
+          document.getElementById('save-status').textContent = '已自動儲存 · ' + new Date().toLocaleTimeString('zh-TW');
+        } catch (_) {
+          document.getElementById('save-status').textContent = '瀏覽器無法儲存，請使用匯出按鈕保留結果。';
+        }
+      }
+
+      function refresh() {
+        const done = items.filter(item => item.querySelector('input').checked).length;
+        document.getElementById('done-count').textContent = done;
+        document.getElementById('progress-bar').style.width = (done / items.length * 100) + '%';
+        document.getElementById('status').textContent = done === items.length ? '25 項全部通過，可以放回 82' : `尚有 ${items.length - done} 項待檢查`;
+        items.forEach(item => item.classList.toggle('is-done', item.querySelector('input').checked));
+      }
+
+      items.forEach(item => {
+        const id = item.dataset.id;
+        const checkbox = item.querySelector('input');
+        const note = item.querySelector('textarea');
+        checkbox.checked = records[id]?.confirmed === true;
+        note.value = records[id]?.note || '';
+        checkbox.addEventListener('change', () => {
+          records[id] = { ...records[id], confirmed: checkbox.checked, note: note.value, updatedAt: new Date().toISOString() };
+          save();
+          refresh();
+        });
+        note.addEventListener('input', () => {
+          records[id] = { ...records[id], confirmed: checkbox.checked, note: note.value, updatedAt: new Date().toISOString() };
+          save();
+        });
+      });
+
+      function exportResults() {
+        const flat = groups.flatMap(group => group.items.map(item => ({ ...item, date: group.date })));
+        const result = {
+          version,
+          title: 'TIRI v1｜82 上線前最終檢查',
+          exportedAt: new Date().toISOString(),
+          summary: {
+            total: items.length,
+            confirmed: items.filter(item => item.querySelector('input').checked).length,
+            pending: items.filter(item => !item.querySelector('input').checked).length
+          },
+          items: items.map((item, index) => ({
+            id: item.dataset.id,
+            date: item.dataset.date,
+            title: flat[index].title,
+            page: flat[index].href,
+            confirmed: item.querySelector('input').checked,
+            note: item.querySelector('textarea').value,
+            updatedAt: records[item.dataset.id]?.updatedAt || null
+          }))
+        };
+        const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'TIRI-v1-82上線前最終檢查結果.json';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('export').addEventListener('click', exportResults);
+      document.getElementById('export-bottom').addEventListener('click', exportResults);
+      document.getElementById('reset').addEventListener('click', () => {
+        if (!window.confirm('確定要清除這份最終檢查的全部勾選與備註嗎？')) return;
+        records = {};
+        localStorage.removeItem(key);
+        items.forEach(item => {
+          item.querySelector('input').checked = false;
+          item.querySelector('textarea').value = '';
+        });
+        document.getElementById('save-status').textContent = '已清除全部紀錄。';
+        refresh();
+      });
+
+      refresh();
+    })();
+  </script>
+</body>
+</html>

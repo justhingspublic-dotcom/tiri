@@ -1,0 +1,49 @@
+{
+  "version": "tiri-v1-line-review-20260922",
+  "title": "TIRI v1 2026-09-22 LINE 修改驗收",
+  "exportedAt": "2026-09-22T03:19:31.250Z",
+  "items": [
+    {
+      "id": "01",
+      "title": "協會服務優惠內容",
+      "confirmed": true,
+      "note": "",
+      "updatedAt": "2026-09-22T03:17:12.010Z"
+    },
+    {
+      "id": "02",
+      "title": "合作夥伴版型",
+      "confirmed": false,
+      "note": "logo要居中對齊",
+      "updatedAt": "2026-09-22T03:17:42.778Z"
+    },
+    {
+      "id": "03",
+      "title": "會員類別頁精簡",
+      "confirmed": true,
+      "note": "",
+      "updatedAt": "2026-09-22T03:18:09.748Z"
+    },
+    {
+      "id": "04",
+      "title": "年刊封面移除灰框",
+      "confirmed": false,
+      "note": "移除灰匡後看起來不對齊 感覺應該要讓封面跟下面的文字做居中對齊",
+      "updatedAt": "2026-09-22T03:18:38.953Z"
+    },
+    {
+      "id": "05",
+      "title": "手機版活動日期不截字",
+      "confirmed": true,
+      "note": "",
+      "updatedAt": "2026-09-22T03:19:23.024Z"
+    },
+    {
+      "id": "06",
+      "title": "手機版社群與聯絡圖示",
+      "confirmed": true,
+      "note": "",
+      "updatedAt": "2026-09-22T03:19:29.600Z"
+    }
+  ]
+}
