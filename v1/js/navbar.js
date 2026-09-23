@@ -456,10 +456,6 @@
      分組照原站英文選單層級，重排成與中文版一致的 mega-menu 結構 */
   var navigationEn = [
     {
-      "href": "en.html",
-      "label": "Home"
-    },
-    {
       "href": "mission_en.html",
       "label": "About TIRI",
       "columns": [
@@ -495,6 +491,11 @@
               "contact-197913.html",
               "Contact",
               "(02) 2381-9248・office@tiri.tw"
+            ],
+            [
+              "5th_report-665763.html",
+              "Annual Report",
+              "TIRI annual reports"
             ]
           ]
         }
@@ -508,7 +509,7 @@
     },
     {
       "href": "news-971146-722067.html",
-      "label": "Recap",
+      "label": "Events",
       "columns": [
         {
           "label": "Recap",
@@ -575,7 +576,7 @@
     },
     {
       "href": "trainbod-329824.html",
-      "label": "Courses & Services",
+      "label": "Programs & Services",
       "columns": [
         {
           "label": "Continuing Education",
@@ -617,7 +618,7 @@
     },
     {
       "href": "certification-388672.html",
-      "label": "Certification",
+      "label": "Certifications",
       "columns": [
         {
           "label": "Certification",
@@ -684,7 +685,7 @@
     },
     {
       "href": "news-387131-325944-831518-306343.html",
-      "label": "IR Library",
+      "label": "Insights",
       "columns": [
         {
           "label": "Publications",
@@ -726,7 +727,8 @@
     },
     {
       "href": "membership-567311.html",
-      "label": "Membership",
+      "label": "Member Login",
+      "action": true,
       "columns": [
         {
           "label": "Membership",
@@ -764,41 +766,10 @@
         "Join TIRI and enjoy member benefits across courses, certification and services.",
         "Join TIRI"
       ]
-    },
-    {
-      "href": "5th_report-665763.html",
-      "label": "Anniversary",
-      "columns": [
-        {
-          "label": "Anniversary Reports",
-          "links": [
-            [
-              "5th_report-665763.html",
-              "Anniversary",
-              "TIRI anniversary annual reports"
-            ]
-          ]
-        },
-        {
-          "label": "",
-          "links": []
-        }
-      ],
-      "figure": [
-        "5th_report-665763.html",
-        "../images/hero-chart.jpg",
-        "TIRI anniversary reports — annual activities and IR insights, read online or download.",
-        "View Reports"
-      ]
     }
   ];
 
   var drawerLinksEn = [
-    [
-      "Home",
-      "en.html",
-      []
-    ],
     [
       "About TIRI",
       "mission_en.html",
@@ -822,11 +793,15 @@
         [
           "contact-197913.html",
           "Contact"
+        ],
+        [
+          "5th_report-665763.html",
+          "Annual Report"
         ]
       ]
     ],
     [
-      "Recap",
+      "Events",
       "news-971146-722067.html",
       [
         [
@@ -868,7 +843,7 @@
       ]
     ],
     [
-      "Courses & Services",
+      "Programs & Services",
       "trainbod-329824.html",
       [
         [
@@ -890,7 +865,7 @@
       ]
     ],
     [
-      "Certification",
+      "Certifications",
       "certification-388672.html",
       [
         [
@@ -922,7 +897,7 @@
       ]
     ],
     [
-      "IR Library",
+      "Insights",
       "news-387131-325944-831518-306343.html",
       [
         [
@@ -944,7 +919,7 @@
       ]
     ],
     [
-      "Membership",
+      "Member Login",
       "membership-567311.html",
       [
         [
@@ -963,17 +938,8 @@
           "join-342161.html",
           "Join TIRI"
         ]
-      ]
-    ],
-    [
-      "Anniversary",
-      "5th_report-665763.html",
-      [
-        [
-          "5th_report-665763.html",
-          "Anniversary"
-        ]
-      ]
+      ],
+      true
     ]
   ];
 
@@ -1029,7 +995,7 @@
 
   /* 英文頁清單由英文導覽資料推導：檔名落在清單內就渲染英文版 navbar */
   var englishPages = (function () {
-    var set = {};
+    var set = { "en.html": true };
     function add(href) {
       var file = href.split("#")[0];
       if (file) set[file] = true;
@@ -1132,9 +1098,7 @@
     var tools = variant === "v2"
       ? '<button class="search-toggle" type="button" aria-expanded="false" aria-controls="search-panel" aria-label="' + t.searchLabel + '">' + icon("i-search", 17) + '</button>'
       : "";
-    var desktopCta = lang === "zh" ? "" :
-      '<a class="btn btn-primary btn-cta-desktop" href="' + t.joinHref + '"><span class="roll"><span>' + t.joinLabel + '</span><span aria-hidden="true">' + t.joinLabel + '</span></span></a>';
-    return '<div class="header-actions">' + tools + desktopCta +
+    return '<div class="header-actions">' + tools +
       '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="' + t.navToggleLabel + '"><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></button></div>';
   }
 
@@ -1151,9 +1115,7 @@
       '<div class="search-results" id="search-results" data-lang="' + lang + '"><div class="search-results-inner" role="region" aria-live="polite"></div></div>' +
       '</div></div></div></header>' +
       '<div class="drawer" id="drawer"><div class="drawer-backdrop" data-drawer-close></div><div class="drawer-panel" role="dialog" aria-modal="true" aria-label="' + t.drawerLabel + '"><nav aria-label="' + t.drawerNavLabel + '"><ul>' + renderDrawer(drawerItems) + '</ul></nav>' +
-      /* 抽屜的「會員登入」outline 鈕先隱藏（暫時用不到）；要還原時在加入會員後補回：
-         '<a class="btn btn-outline" href="login.html">會員登入</a>' */
-      (lang === "zh" ? "" : '<div class="drawer-cta"><a class="btn btn-primary" href="' + t.joinHref + '">' + t.joinLabel + '</a></div>') + '</div></div>';
+      '</div></div>';
   }
 
   function markCurrentPage(root) {
@@ -1213,8 +1175,8 @@
           ["knowledge.html", "專業分享"]
         ] },
         { label: "會員服務", links: [
-          [null, "會員登入"],
-          ["benefit.html", "會員權利"]
+          ["join.html", "加入會員"],
+          ["benefit.html", "會員專屬優惠"]
         ] }
       ],
       copyright: 'Copyright © 2026 社團法人台灣投資人關係協會 All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a>'
@@ -1223,26 +1185,26 @@
       brandName: "Taiwan Investor Relations Institute<br>社團法人台灣投資人關係協會",
       contact: [
         "Tel: (02) 2381-9248",
-        "13F-13, No. 57, Sec. 1, Chongqing S. Rd., Zhongzheng Dist., Taipei City",
+        "Address: 13F-13, No. 57, Sec. 1, Chongqing S. Rd., Zhongzheng Dist., Taipei City",
         "Email: office@tiri.tw"
       ],
-      brandLinks: [["contact-197913.html", "Contact"], ["join-342161.html", "Join TIRI"]],
+      brandLinks: [["contact-197913.html", "Contact TIRI"], ["join-342161.html", "Join TIRI"]],
       columns: [
         { label: "About TIRI", links: [
-          ["mission_en.html", "About TIRI"],
-          ["board_en.html", "Board of Directors"],
-          ["committee-817915.html", "Functional Committee"]
+          ["mission_en.html", "About Us"],
+          ["board_en.html", "Board of Directors & Supervisors"],
+          ["committee-817915.html", "Committees"]
         ] },
-        { label: "Information", links: [
-          ["news-971146-722067.html", "Event Recap"],
-          ["trainbod-329824.html", "Courses & Services"],
-          ["certification-388672.html", "Certification"],
+        { label: "Resources", links: [
+          ["news-971146-722067.html", "Events"],
+          ["trainbod-329824.html", "Programs & Services"],
+          ["certification-388672.html", "Certifications"],
           ["mission-206783-396345-512343.html", "Awards"],
-          ["news-387131-325944-831518-306343.html", "IR Library"]
+          ["news-387131-325944-831518-306343.html", "Insights"]
         ] },
         { label: "Membership", links: [
           ["join-342161.html", "Join TIRI"],
-          ["membership-567311.html", "Membership"]
+          ["benefit-499886.html", "Membership Benefits"]
         ] }
       ],
       copyright: 'Copyright © 2026 Taiwan Investor Relations Institute. All Rights Reserved. Designed by <a href="https://www.justhings.com.tw/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Justhings</a>'
