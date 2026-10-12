@@ -10,7 +10,37 @@
 <link href="../css/main.css?v=20260923-trello-r2" rel="stylesheet"/>
 <script defer="" src="../js/navbar.js?v=20260923-trello-r2"></script>
 <link href="../favicon.ico?v=20260724" rel="icon" type="image/x-icon"/>
-<link href="../css/revision.css?v=20260909" rel="stylesheet"/><link href="../css/review-fixes.css?v=20260910-r9" rel="stylesheet"/></head>
+<link href="../css/revision.css?v=20260909" rel="stylesheet"/><link href="../css/review-fixes.css?v=20260910-r9" rel="stylesheet"/>
+<style>
+.certification-application { min-width: 0; }
+.certification-application__intro { margin-bottom: 28px; }
+.certification-application__intro h3 { margin: 0 0 12px; color: var(--ink); font-size: 20px; font-weight: 600; line-height: 1.45; }
+.certification-application__intro p { margin: 0; color: var(--ink-64); font-size: 15px; line-height: 1.8; }
+.certification-application__intro .u-link { display: inline-block; margin-top: 14px; }
+.certification-application__steps { margin: 0; padding: 0; list-style: none; }
+.certification-application__steps li { align-items: flex-start; gap: 18px; padding-block: 18px; }
+.certification-application__steps li::before { flex: 0 0 36px; padding-top: 3px; }
+.certification-application__step-content { min-width: 0; }
+.certification-application__step-content > strong { display: block; color: var(--ink); font-weight: 600; line-height: 1.55; }
+.certification-application__step-content p { margin: 5px 0 0; color: var(--ink-64); font-size: 14.5px; line-height: 1.8; }
+.certification-application__fee { margin-top: 28px; }
+.certification-application__fee > div { grid-template-columns: 52px minmax(0, 1fr); gap: 18px; }
+.certification-application__fee dd { margin: 0; line-height: 1.8; }
+.certification-resources .download-row .name { flex: 1 1 auto; min-width: 0; }
+.certification-resources .download-row .arrow-link { flex: 0 0 auto; white-space: nowrap; }
+.certification-pathways__number { display: block; margin-bottom: 7px; color: var(--purple); font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; line-height: 1; }
+.certification-pathways .benefit-rows > div { grid-template-columns: 300px minmax(0, 1fr); gap: 24px; }
+.certification-pathways .benefit-rows dt { white-space: nowrap; }
+@media (max-width: 640px) {
+  .certification-application__steps li { gap: 12px; }
+  .certification-application__steps li::before { flex-basis: 32px; }
+  .certification-application__fee > div { grid-template-columns: 1fr; gap: 4px; }
+  .certification-resources .download-row { align-items: flex-start; flex-direction: column; }
+  .certification-resources .download-row .arrow-link { margin-top: 2px; }
+  .certification-pathways .benefit-rows > div { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
 <svg aria-hidden="true" class="icon-sprite" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -31,21 +61,21 @@
 <section class="page-hero has-photo" style="--hero-img: url('../images/seminar-room.jpg')">
 <div class="container">
 
-<h1 class="reveal">IRC 國際證照</h1>
-<p class="lede reveal">NIRI 推出的投資人關係專業證照，TIRI 會員報名享 US$200 折扣。</p>
+<h1 class="reveal">(IRC)<span style="font-size: 0.5em; vertical-align: super;">®</span> 專業認證</h1>
+<p class="lede reveal">美國投資人關係協會（National Investor Relations Institute, NIRI）專業認證，TIRI會員報名享專屬折扣 US$200</p>
 </div>
 </section>
 <section class="page-section">
 <div class="container">
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Overview</p>
+
 <h2>IRC Certification</h2>
-<p class="note"><a class="u-link" href="200820-329013.html">IRC 簡介全文 →</a></p>
+<p class="note"><a class="u-link" href="200820-329013.html">(IRC)® 簡介全文</a></p>
 </div>
 <div class="reveal">
 <div class="prose">
-<p>IRC 證照是 2016 年由美國國家投資人關係協會（NIRI）推出的專業投資人關係證照。TIRI 特別與 NIRI 合作推廣 IR 最佳實務，即日起 TIRI 會員報名即可省下 200 美元報名費。</p>
+<p>IRC®（Investor Relations Charter）是由美國投資人關係協會（NIRI）推出的國際投資人關係專業認證，旨在驗證 IR 專業人士在財務、策略、溝通、資本市場及公司治理等領域的專業知識與實務能力。TIRI 與 NIRI 合作推動 IR 專業發展，TIRI 會員報考 IRC® 可享 US$200 專屬報名優惠。</p>
 </div>
 <div class="photo-grid" style="margin-top: 28px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
 <img alt="IRC 簡介（一）" height="777" loading="lazy" src="../images/uploads-1-1-9-9-119925991-twse-irc1a_orig-55876da.jpg" style="aspect-ratio: auto; object-fit: contain;" width="1100"/>
@@ -56,34 +86,50 @@
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Why IRC</p>
+
 <h2>目標與益處</h2>
 </div>
 <div class="benefit-rows reveal">
-<div><dt>IRC 目標</dt><dd>培養與驗證您對 IR 基本知識和核心原則的理解，並提升 IR 戰略概念的實踐能力。</dd></div>
+<div><dt>IRC 目標</dt><dd>驗證 IR 專業人士對投資人關係核心知識與原則的理解，以及將相關原則運用於實務與策略情境的能力。</dd></div>
 <div><dt>新任 IRO</dt><dd>快速學習所需職能。</dd></div>
 <div><dt>具經驗的 IRO</dt><dd>檢視自己的 IR 技能是否完備並與國際接軌。</dd></div>
-<div><dt>其他好處</dt><dd>快速了解國際 IR 實務；證明自身具備的知識、技能；取得國際證照，有助於晉升、求職。</dd></div>
+<div><dt>其他好處</dt><dd>快速了解國際IR實務，證明自身具備的知識、技能；取得國際專業認證，有助於展現 IR 專業能力與職涯發展。</dd></div>
 </div>
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Exam &amp; Eligibility</p>
+
+<h2>如何取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span></h2>
+</div>
+<div class="reveal certification-pathways">
+<div class="prose">
+<p>NIRI目前提供兩種取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 的途徑：</p>
+</div>
+<div class="benefit-rows" style="margin-top: 24px;">
+<div><dt><span class="certification-pathways__number">01</span>IRC Exam 路徑</dt><dd>通過 IRC Exam，並符合相關教育背景、IR工作經驗及專業領域要求。</dd></div>
+<div><dt><span class="certification-pathways__number">02</span>IRC Pathway Certificates 路徑</dt><dd>於兩年內完成 IR Foundations™ 與 IR Advanced™ 兩項證書，並符合 IRC 所要求的工作經驗等資格，可取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span>，無須另行參加 IRC Exam。</dd></div>
+</div>
+</div>
+</div>
+<div class="page-split">
+<div class="side reveal">
+
 <h2>考試與報考資格</h2>
 <p class="note">不具下列經驗者同樣可參加考試：報名時選擇「IRC Candidates」，並於通過筆試後 4 年內繳交最少 3 年的 IR 工作經驗證明即可。</p>
 </div>
 <div class="reveal">
 <div class="prose">
-<p><strong>考試進行方式</strong>：170 題選擇題，測驗時間 3 小時，以自己的電腦上網進行測驗，題型包含基礎財務數字、實務狀況模擬題等。報名後會收到 NIRI 來信，告知預計測驗時間與詳細事宜。</p>
+<p><strong>考試時間</strong>：IRC Exam 為3小時線上測驗，NIRI目前公布之 Exam Blueprint 為160題。考試內容及最新題數依 NIRI 官方公告為準。</p>
+<p><strong>考試方式</strong>：採英文電腦測驗，透過線上即時監考（Live Remote Proctoring）方式進行，可依 NIRI 規定預約考試時間。</p>
 <p><strong>報考資格</strong>：滿足以下教育和專業工作經驗選項之一——</p>
 </div>
 <ol class="step-list" style="margin-top: 16px;">
 <li>美國學士學位或同等學歷（台灣學士學位亦可），具有三年或以上作為 IR 公司專業人士或 IR 顧問的合格全職工作經驗。</li>
 <li>作為 IR 公司專業人士或 IR 顧問，具有 6 年合格的全職工作經驗。</li>
-<li>持有與 IR 實踐相關的最新證書，並具有三年或以上作為 IR 公司專業人士或 IR 顧問的合格全職工作經驗。</li>
+<li>持有與 IR 專業實務相關且有效之專業認證（例如 CPA、CFA），並具至少3年符合資格的全職 IR 工作經驗。</li>
 </ol>
 <div class="prose" style="margin-top: 28px;">
-<p>並在一家上市公司擔任 IR 企業專業人士或 IR 顧問，於以下十一個 IR 實踐領域中至少達到七個：</p>
+<p>並須具備上市公司相關 IR 實務經驗，以 IR 企業專業人士或 IR 顧問身分，在 IR Competency Framework 的11個專業領域中，至少具有7個領域的實務經驗。</p>
 </div>
 <div class="topic-chips" style="margin-top: 16px;">
 <span class="tag">01 IR 策略制定</span>
@@ -102,47 +148,54 @@
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Registration</p>
+
 <h2>報名方式與費用</h2>
-<p class="note">申請日期：隨時<br/>考試日期：報名後與 NIRI 確認</p>
+<p class="note">申請日期：隨時<br/>考試日期：完成註冊及資格確認後，可於接下來兩個月內自行安排考試時間。</p>
 </div>
-<div class="reveal">
-<ol class="step-list">
-<li>點擊 <a class="u-link" href="https://www.niri.org/certification" rel="noopener" target="_blank">www.niri.org/certification</a>，選取「START ONLINE APPLICATION」。</li>
-<li>依報名身分選擇 IRC Candidate 或 IRC。</li>
-<li>註冊／登入帳號。</li>
-<li>依網頁指示提交相關資料及文件。</li>
+<div class="reveal certification-application">
+<div class="certification-application__intro">
+<h3>最新報考資訊及考試流程</h3>
+<p>IRC® 報考資格、考試方式、費用及相關規定可能依 NIRI 最新政策調整。建議申請前先至 NIRI 官方網站確認最新資訊，再依官方指引進行申請。</p>
+<a class="u-link" href="https://www.niri.org/credentialing/certification-programs/" rel="noopener" target="_blank">IRC Certification Program</a>
+</div>
+<ol class="step-list certification-application__steps">
+<li><div class="certification-application__step-content"><strong>線上申請</strong><p>至 NIRI 官方 IRC Certification Program 頁面確認最新報考資格與考試資訊，點選 <strong>「Apply for the IRC Exam」</strong> 進行線上申請。</p></div></li>
+<li><div class="certification-application__step-content"><strong>資格確認</strong><p>完成註冊後，申請人將收到 NIRI 寄發的初步資格確認電子郵件。</p></div></li>
+<li><div class="certification-application__step-content"><strong>取得考試授權</strong><p>資格確認後，申請人將收到考試機構寄發的考試授權電子郵件，內容包含考試預約方式及線上考試所需的技術要求。</p></div></li>
+<li><div class="certification-application__step-content"><strong>自行安排考試時間</strong><p>取得考試授權後，可於註冊後 <strong>兩個月內自行選擇合適的考試日期與時間</strong>，無須於完成註冊後立即應試。</p></div></li>
+<li><div class="certification-application__step-content"><strong>收到考試確認</strong><p>完成預約後，考試機構將寄發確認電子郵件，提供確切考試時間、應試方式及相關注意事項。</p></div></li>
 </ol>
-<div class="benefit-rows" style="margin-top: 28px;">
-<div><dt>費用</dt><dd>報名費 US$1,295，TIRI 會員享 US$200 折扣。</dd></div>
+<div class="benefit-rows certification-application__fee">
+<div><dt>費用</dt><dd>IRC® Exam 報名費為 <strong>US$1,295</strong>；TIRI 與 NIRI 合作推動 IR 專業發展，<strong>TIRI 會員可享 US$200 專屬報名優惠</strong>。</dd></div>
 </div>
 </div>
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Preparation</p>
+
 <h2>考前準備</h2>
-<p class="note">建議先透過閱聽影音課程掌握從基礎到進階的 IR 知識脈絡，再搭配閱讀書面教材深化、內化相關知識。</p>
+<p class="note">IRC® Exam 以 IR 專業實務與 IR Competency Framework 為基礎。考生可依自身專業經驗與學習需求，參考 NIRI 提供的相關資源進行準備。<br/><br/>※上述資源供考生依個人需求參考使用；IRC® Exam 相關內容、規定及最新資訊，以 NIRI 官方公告為準。</p>
 </div>
-<div class="reveal">
+<div class="reveal certification-resources">
 <div class="download-row" style="border-top: 1px solid var(--line);">
-<p class="name">書面教材<small>Investor Relations Body of Knowledge／Standards of Practice for Investor Relations</small></p>
-<a class="arrow-link u-link" href="http://portal.niri.org/eweb/DynamicPage.aspx?Site=niri&amp;WebKey=f06bb4dd-8977-470d-9f4d-781cdb90f9af&amp;pager=12" rel="noopener" target="_blank">購買連結</a>
+<p class="name">參考書籍<small>Investor Relations Body of Knowledge, Second Edition（IRBoK 2e）<br/>NIRI 出版之 IR 專業參考書籍，涵蓋 11 項 IR 專業領域。TIRI 會員購買英文原文版可享專屬優惠；TIRI 並獲 NIRI 正式授權推出繁體中文版，如有需求請洽 TIRI 秘書處。</small></p>
+<a class="arrow-link u-link" href="http://portal.niri.org/eweb/DynamicPage.aspx?Site=niri&amp;WebKey=f06bb4dd-8977-470d-9f4d-781cdb90f9af&amp;pager=12" rel="noopener" target="_blank">前往 NIRI 官方書店</a>
 </div>
 <div class="download-row">
-<p class="name">線上影音課程<small>請在 "Filter By" 處選擇 IR Competency Suite</small></p>
-<a class="arrow-link u-link" href="http://niri.mycrowdwisdom.com/diweb/catalog/b/47763" rel="noopener" target="_blank">前往課程</a>
+<p class="name">線上學習資源<small>NIRI 提供的線上學習系列，以 IRBoK 為內容基礎，依 IR Competency Framework 專業領域規劃相關學習模組，可作為專業進修及 IRC® Exam 準備資源之一。</small></p>
+<a class="arrow-link u-link" href="https://www.niri.org/education-events/on-demand-learning/competency-suite/?utm_source=chatgpt.com" rel="noopener" target="_blank">了解 IR Competency Suite</a>
 </div>
 <div class="download-row">
-<p class="name">考古題<small>請在 "Filter By" 處選擇 IRC Sample Test</small></p>
-<a class="arrow-link u-link" href="http://niri.mycrowdwisdom.com/diweb/catalog/b/55562" rel="noopener" target="_blank">NIRI 官網連結</a>
+<p class="name"><strong>IRC® 範例試題</strong><small>可透過 NIRI 提供的 IRC Sample Test 熟悉考試題型與出題方式。</small></p>
+<a class="arrow-link u-link" href="https://www.niri.org/credentialing/certification-programs/preparing-to-take-the-irc-exam/?utm_source=chatgpt.com" rel="noopener" target="_blank">查看 IRC Sample Test</a>
 </div>
 </div>
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Voices</p>
+
 <h2>證照持有者<br/>經驗分享</h2>
+<p class="note">IRC® 持有者經驗分享<br/><br/>※以上內容為 IRC® 持有者取得認證時之經驗分享，現行報考資格、考試方式及相關規定請以 NIRI 官方最新公告為準。</p>
 </div>
 <div class="reveal">
 <div class="video-grid">
@@ -169,24 +222,88 @@
 </div>
 <div class="page-split">
 <div class="side reveal">
-<p class="eyebrow">Renewal</p>
-<h2>證照維護</h2>
+
+<h2>IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 認證維護</h2>
 <p class="note">歡迎聯繫本會了解更多資訊：<br/>楊小姐・(02) 2381-9248 #747<br/><a class="u-link" href="mailto:office@tiri.tw">office@tiri.tw</a></p>
 </div>
 <div class="reveal">
 <div class="prose">
-<p>每三年累積至少 30 個 PDUs（Professional Development Units）並支付更新費用，參與 TIRI 活動即可累積 PDUs。</p>
-<p><a class="u-link" href="https://reurl.cc/VNDYjA" rel="noopener" target="_blank">詳細說明</a>（請參考章節：PDU REQUIREMENTS、RENEWAL PROGRAM STRUCTURE、APPROVAL AND DENIAL OF PDUs）</p>
+<p>IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 採三年一期的認證更新制度。持有者每三年須累積至少 30 個專業發展單位（Professional Development Units, PDUs），並完成認證更新程序及繳納相關費用。其中至少 7 個 PDUs 須分別涵蓋 IR Competency Framework 中 7 個不同的專業領域。</p>
+<p>參與 TIRI 符合 NIRI PDU 認列規範之專業活動，可依相關規定申報 PDUs。最新續證規定及 PDU 認列方式，請參閱 NIRI 官方資訊。</p>
+<p><a class="u-link" href="https://www.niri.org/credentialing/certification-programs/renewing-your-irc/?utm_source=chatgpt.com" rel="noopener" target="_blank">查看 NIRI 最新 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> Renewal 規定</a></p>
 </div>
 <div class="photo-grid" style="margin-top: 28px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 640px;">
-<img alt="IRC 證照" height="102" loading="lazy" src="../images/uploads-1-1-9-9-119925991-editor-irc-52afef03-f435002.jpg" style="aspect-ratio: auto; object-fit: contain;" width="241"/>
-<img alt="IRC 證照" height="101" loading="lazy" src="../images/uploads-1-1-9-9-119925991-editor-2007021611362084116216-059a2540-e5a096d.jpg" style="aspect-ratio: auto; object-fit: contain;" width="101"/>
+<img alt="NIRI 與 IRC 標誌" height="87" loading="lazy" src="../images/NIRI-IRC_LOGO.png" style="aspect-ratio: auto; object-fit: contain;" width="273"/>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="page-section" id="scholarship"><div class="container scholarship-layout"><div class="scholarship-intro"><p class="eyebrow">IRC SCHOLARSHIP · 2024</p><h2>IRC 贊助獎學金</h2><div class="paragraph">為鼓勵及推廣投資人關係專業知識，由TIRI於2024年提供考取NIRI IRC證照者新台幣3萬元獎學金、共2個名額。無論您正尋求專業提升、還是想踏入投資人關係領域，這是您不容錯過的機會！</div></div><div class="scholarship-facts"><div class="scholarship-amount"><span>每名獎學金</span><strong>NT$30,000</strong></div><div class="scholarship-quota"><span>贊助名額</span><strong>2 <small>名</small></strong></div></div><div class="scholarship-application"><h3>申請流程</h3><div class="paragraph"><ol><li><span class="scholarship-step-number">01</span>填寫TIRI申請表，獲得贊助獎學金申請資格。<br/><a href="https://forms.gle/vzS6LHhv3KHbpJjK8" rel="noopener" target="_blank">填寫獎學金申請表 ↗</a></li><li><span class="scholarship-step-number">02</span>於NIRI網站報名IRC測驗。<br/><a href="https://portal.niri.org/eweb/DynamicPage.aspx?webcode=AGSCertApps" rel="noopener" target="_blank">前往 NIRI 報名 IRC 測驗 ↗</a></li><li><span class="scholarship-step-number">03</span>考取IRC證照後，將您的IRC電子證書、匯款帳戶Email至<a class="__cf_email__" data-cfemail="dfb0b9b9b6bcba9fabb6adb6f1aba8" href="mailto:office@tiri.tw" rel="noopener" target="_blank">office@tiri.tw</a>。</li><li><span class="scholarship-step-number">04</span>TIRI確認您獲得IRC證書後，將與您聯繫，並將新台幣3萬元贊助獎學金匯入您指定的戶頭，並於2024年度大會時邀請您至現場接受表揚。</li></ol></div></div><div class="scholarship-details"><div class="scholarship-conditions"><h3>其他說明</h3><div class="paragraph"><ul><li>獎學金名額共兩名，以先提供IRC電子證書者優先贊助，直至額滿為止。</li><li>若同一時間提供IRC證書者，則依申請時間為獎學金撥發依據。</li><li>限臺灣地區人士申請</li><li>將於此網頁公告獎學金得主姓名，以示公允。</li></ul></div></div><div class="scholarship-links" id="irc-languages"><h3>IRC介紹</h3><div class="paragraph"><ul><li><a href="certification.html" target="_blank">中文</a></li><li><a href="https://www.niri.org/certification" rel="noopener" target="_blank">英文</a></li></ul></div></div></div><div class="scholarship-why" id="why-irc"><h3>為何選擇IRC</h3><div class="paragraph">NIRI是全球最大的專業投資人關係協會，會員代表1500多家上市公司，總市值超過12萬億美元。IRC認證是由專業人員和相關方共同開發，確保在企業、機構和投資社區中，持證人擁有足夠的知識和技能。<br/><br/>投資人關係專業人士擁有高度的責任，能在組織中產生顯著的影響。這需要在財務、戰略和溝通等關鍵領域具備專業能力。獲得IRC證書表明您在投資人關係能力框架中擁有必要的知識和技能。<br/><br/>2024年6月起，投資人關係能力框架將包括十一個對執行投資人關係職能至關重要的主題領域，如投資人關係策略制定、資本市場和資本結構等。<br/>取得IRC證書，不僅是您事業的加分利器，更是投資人關係領域的專業保證。 了解更多關於IRC認證的價值，並把握這個難得的機會！<br/></div></div></div></section></main>
+<section class="page-section" id="scholarship">
+<div class="container scholarship-layout">
+<div class="scholarship-intro">
+<h2>IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 認證獎助金</h2>
+<div class="paragraph">為鼓勵台灣 IR 專業人才持續精進並與國際專業接軌，TIRI 提供取得 NIRI Investor Relations Charter（IRC）<span style="font-size: 0.5em; vertical-align: super;">®</span> 專業認證者 <strong>每名新台幣30,000元獎助金</strong>，每年度提供 <strong>2名</strong>。<br/><br/>歡迎符合資格之 IR 專業人士提出申請。</div>
+</div>
+<div class="scholarship-facts">
+<div class="scholarship-amount">
+<span>每名獎助金</span>
+<strong>NT$30,000</strong>
+</div>
+<div class="scholarship-quota">
+<span>每年度名額</span>
+<strong>2<small>名</small>
+</strong>
+</div>
+</div>
+<div class="scholarship-application">
+<h3>申請流程</h3>
+<div class="paragraph">
+<ol>
+<li>
+<span class="scholarship-step-number">01</span><strong>提出獎助申請</strong><br/>
+填寫 TIRI「IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 獎助金申請表」，完成申請登記。
+</li>
+<li>
+<span class="scholarship-step-number">02</span><strong>取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span></strong><br/>
+依 NIRI 現行規定完成 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 認證要求並取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span>。
+</li>
+<li>
+<span class="scholarship-step-number">03</span><strong>提交證明</strong><br/>
+取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 後，請將 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 電子認證證明及獎助金匯款所需資料寄至 TIRI 秘書處（<a href="mailto:office@tiri.tw">office@tiri.tw</a>）。
+</li>
+<li>
+<span class="scholarship-step-number">04</span><strong>審核與撥款</strong><br/>
+經 TIRI 審核確認符合獎助資格後，將新台幣30,000元獎助金匯入申請人指定帳戶；獲獎者並將受邀於 TIRI 年度大會接受表揚。
+</li>
+</ol>
+</div>
+</div>
+<div class="scholarship-details">
+<div class="scholarship-conditions">
+<h3>其他說明</h3>
+<div class="paragraph">每年度獎助名額共2名，每名新台幣30,000元，以完成申請並取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span>、提交完整證明文件之時間順序為認定原則，額滿為止。若於同一時間完成證明文件提交，則以原始獎助申請時間之先後順序為準。<br/><br/>本獎助計畫限臺灣地區申請人申請。獲獎名單將公布於 TIRI 官方網站。</div>
+</div>
+<div class="scholarship-links" id="irc-languages">
+<h3>IRC介紹</h3>
+<div class="paragraph">
+<ul>
+<li>
+<a href="certification.html" target="_blank">中文</a>
+</li>
+<li>
+<a href="https://www.niri.org/certification" rel="noopener" target="_blank">英文</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="scholarship-why" id="why-irc">
+<h3>為何選擇 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span></h3>
+<div class="paragraph">NIRI 是全球規模最大的專業投資人關係協會，會員所代表的上市公司超過1,500家，合計股票市值超過12兆美元。IRC<span style="font-size: 0.5em; vertical-align: super;">®</span>（Investor Relations Charter）由 NIRI 結合 IR 專業人士及相關利害關係人的實務經驗發展而成，旨在驗證持有者具備橫跨 IR 專業領域所需的知識與技能。 <a class="u-link" href="https://www.niri.org/about-niri/who-we-are/?utm_source=chatgpt.com" rel="noopener" target="_blank" title="https://www.niri.org/about-niri/who-we-are/?utm_source=chatgpt.com">NIRI</a><br/><br/>IR 專業人士在企業中肩負重要責任，需要具備財務、策略、溝通等多面向的專業能力。取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span>，代表持有者已展現 IR Competency Framework 所涵蓋之必要知識與技能。 <a class="u-link" href="https://www.niri.org/credentialing/certification-programs/?utm_source=chatgpt.com" rel="noopener" target="_blank" title="https://www.niri.org/credentialing/certification-programs/?utm_source=chatgpt.com">NIRI</a><br/><br/>NIRI 現行 IR Competency Framework 涵蓋11個 IR 專業領域，包括 IR 策略制定、企業訊息發展、投資者市場營銷與拓展、企業財務報告與分析、資本市場與資本結構、企業治理及 ESG 等。取得 IRC<span style="font-size: 0.5em; vertical-align: super;">®</span> 有助於展現 IR 專業能力與持續專業發展。</div>
+</div>
+</div>
+</section></main>
 <tiri-footer></tiri-footer>
 <script defer="" src="../js/main.js?v=20260922-login-disabled"></script>
 <script defer="" src="../js/review-anchor.js?v=20260910-r8"></script></body>
